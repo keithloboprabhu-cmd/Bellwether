@@ -32,5 +32,14 @@ Full spec: the build prompt the team pasted at project start; summary in README.
 - Flags on a fiscal year mean a value was derived or defaulted; the Data page shows them.
 
 ## Adding a policy
-Drop a YAML in `config/policies/<industry>/` (schema in `src/policyshock/policies/schema.py`).
-No code changes should be needed; the smoke test runs it on every company in the industry.
+Drop a YAML in `config/policies/<industry>/` (schema in `src/policyshock/policies/schema.py`;
+examples in `config/policies/consumer_retail/`). Params are expressions over
+`input./assumption./exposure./baseline./derived./macro./role.` names. New exposure keys go in
+`config/exposure_definitions.yaml` plus a value (with source or `source: estimate` + rationale) for
+every company in `config/exposures/<industry>.yaml`. No code changes; `tests/test_policies_smoke.py`
+runs every policy on every company in its industry.
+
+## Engine invariants (tested)
+- Channels never apply the tax rate to PTI; aggregation does it once.
+- ΔNI is measured against the model baseline PTI·(1 − t), so a zero shock gives exactly 0.
+- Ranges are oriented per company (see METHODOLOGY §2.5), not all-low/all-high.

@@ -14,7 +14,7 @@ REFRESH_COOLDOWN_S = 600  # public app: at most one live refresh per 10 minutes,
 
 
 def page_setup(title: str) -> None:
-    st.set_page_config(page_title=f"{title} · PolicyShock", page_icon="📉", layout="wide")
+    st.set_page_config(page_title=f"{title} · PolicyShock", page_icon="📉", layout="wide", initial_sidebar_state="expanded")
 
 
 @st.cache_data(ttl=86400, show_spinner="Fetching latest prices…")

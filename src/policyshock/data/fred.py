@@ -22,8 +22,11 @@ SERIES = {
     "CPIAUCSL": "CPI, all urban consumers (index)",
     "UNRATE": "Unemployment rate (%)",
     "GDPC1": "Real GDP (billions of chained 2017 $, SAAR)",
+    "PCE": "Personal consumption expenditures (billions $, SAAR)",
 }
 SNAPSHOT_FILE = SNAPSHOT_DIR / "fred.csv"
+# Names available to policy expressions as macro.<key> (see macro_context).
+MACRO_KEYS = {"fed_funds", "treasury_10y", "mortgage_30y", "unemployment", "pce_musd"}
 
 
 def fetch_series(series_id: str, start: str = "2005-01-01") -> pd.Series:
@@ -58,3 +61,15 @@ def latest_values(df: pd.DataFrame | None = None) -> dict[str, dict]:
         row = g.sort_values("date").iloc[-1]
         out[sid] = {"value": float(row["value"]), "date": row["date"].date().isoformat(), "label": SERIES.get(sid, sid)}
     return out
+
+
+def macro_context(latest: dict[str, dict] | None = None) -> dict[str, float]:
+    """Macro values exposed to policy expressions as `macro.<name>` (rates in %, $ in millions)."""
+    v = latest_values() if latest is None else latest
+    return {
+        "fed_funds": v["DFF"]["value"],
+        "treasury_10y": v["DGS10"]["value"],
+        "mortgage_30y": v["MORTGAGE30US"]["value"],
+        "unemployment": v["UNRATE"]["value"],
+        "pce_musd": v["PCE"]["value"] * 1000,  # FRED reports $ billions SAAR
+    }

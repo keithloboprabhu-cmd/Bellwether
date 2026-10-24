@@ -1,0 +1,46 @@
+id: import_tariffs
+industry: consumer_retail
+name: Import tariffs on consumer goods
+description: A tariff on imported goods raises retailers' merchandise costs; they pass part of it to shoppers, who buy a little less.
+persistence: permanent
+showcase: true
+user_inputs:
+  - key: tariff_pct
+    label: Tariff rate
+    unit: percent
+    min: 0
+    max: 100
+    step: 1
+    default: 20
+    help: Ad valorem duty on the customs value of imported goods.
+assumptions:
+  - key: pass_through
+    label: Share of the cost increase passed to shoppers (φ)
+    unit: fraction
+    low: 0.3
+    base: 0.6
+    high: 0.9
+    source: estimate
+    rationale: Amiti, Redding & Weinstein (2019) find near-complete pass-through of 2018 tariffs to import prices at the border, but Cavallo, Gopinath, Neiman & Tang (2021) find much smaller pass-through to retail shelf prices; range spans both.
+    source_url: https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: Unit elasticity as a central case for broad retail baskets; essentials are less elastic, discretionary goods more.
+channels:
+  - type: cost
+    label: Tariff on imported merchandise
+    params:
+      exposed_cost_share: exposure.us_import_share_of_cogs
+      shock_pct: input.tariff_pct / 100
+      pass_through: assumption.pass_through
+      elasticity: assumption.elasticity
+exposure_keys: [us_import_share_of_cogs]
+default_role: importer
+references:
+  - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
+  - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536

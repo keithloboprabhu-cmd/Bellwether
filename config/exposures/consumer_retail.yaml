@@ -1,0 +1,82 @@
+# Consumer & Retail company exposures. Values are fractions of total revenue / COGS.
+# M2 values are labelled estimates; milestone M3 replaces them with 10-K-cited figures where possible.
+industry: consumer_retail
+companies:
+  WMT:
+    us_consumer_revenue_share:
+      value: 0.80
+      low: 0.72
+      high: 0.83
+      source: estimate
+      rationale: Walmart U.S. plus Sam's Club U.S. are roughly four-fifths of net sales in recent 10-Ks; low end treats part of Sam's as business buyers.
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.20
+      high: 0.33
+      source: estimate
+      rationale: Walmart says about two-thirds of what it buys for the US is made, grown or assembled in the US; one-third imported × ~80% US share of COGS.
+  TGT:
+    us_consumer_revenue_share:
+      value: 0.98
+      low: 0.95
+      high: 0.99
+      source: estimate
+      rationale: All Target stores are in the US; small non-merchandise revenue (credit card profit sharing, advertising) excluded.
+    us_import_share_of_cogs:
+      value: 0.50
+      low: 0.35
+      high: 0.60
+      source: estimate
+      rationale: Discretionary-heavy mix (apparel, home, electronics, toys) is largely imported; food and essentials mostly domestic.
+  COST:
+    us_consumer_revenue_share:
+      value: 0.70
+      low: 0.60
+      high: 0.74
+      source: estimate
+      rationale: US & Puerto Rico are about three-quarters of net sales; low end strips out business members.
+    us_import_share_of_cogs:
+      value: 0.22
+      low: 0.15
+      high: 0.30
+      source: estimate
+      rationale: Food and sundries dominate the mix; roughly 30% of US merchandise imported × ~73% US share.
+  AMZN:
+    us_consumer_revenue_share:
+      value: 0.55
+      low: 0.45
+      high: 0.60
+      source: estimate
+      rationale: North America segment is about 60% of net sales; AWS and International are excluded; some North America revenue is Canada/Mexico or business.
+    us_import_share_of_cogs:
+      value: 0.15
+      low: 0.10
+      high: 0.25
+      source: estimate
+      rationale: Cost of sales includes shipping and digital content; first-party US product purchases, a large share imported, are only part of it.
+  NKE:
+    us_consumer_revenue_share:
+      value: 0.42
+      low: 0.38
+      high: 0.45
+      source: estimate
+      rationale: North America is roughly 40–45% of Nike revenue in recent 10-Ks.
+    us_import_share_of_cogs:
+      value: 0.40
+      low: 0.33
+      high: 0.45
+      source: estimate
+      rationale: Virtually all Nike products are made by contract factories outside the US; only goods sold in the US face US tariffs (~42% of revenue).
+  HD:
+    us_consumer_revenue_share:
+      value: 0.88
+      low: 0.45
+      high: 0.92
+      source: estimate
+      rationale: About 92% of sales are in the US; roughly half come from Pro customers, so the low end counts only DIY consumers.
+    us_import_share_of_cogs:
+      value: 0.37
+      low: 0.28
+      high: 0.45
+      source: estimate
+      rationale: Building materials are mostly domestic; tools, appliances, décor and fixtures are often imported.

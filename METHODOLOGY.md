@@ -45,4 +45,73 @@ Keyless `fredgraph.csv` endpoint: DFF, DGS10, MORTGAGE30US, CPIAUCSL, UNRATE, GD
 so newly filed 10-Ks, prices and macro data reach the app without manual work.
 
 ## 2. Engine
-_To be written in milestone M2._
+
+Code: `src/policyshock/engine/`. Every policy is a YAML config (`config/policies/<industry>/`) that routes
+user inputs, sourced assumptions and company exposures through one or more **channels**.
+Parameters are small arithmetic expressions over `input.*`, `assumption.*`, `exposure.*`, `baseline.*`,
+`derived.*` and `macro.*`, evaluated by a restricted parser (`expressions.py`) that only allows arithmetic,
+comparisons, conditionals and min/max/abs, so a config can never run arbitrary code.
+
+### 2.1 Baseline (latest fiscal year, $ millions)
+R revenue · C cost of revenue · EBIT operating income · Int interest · PTI pretax income ·
+t effective tax rate · S diluted shares · EPS · cm = (R − C)/R · D total debt · P price · P/E.
+Gaps are filled and flagged: a missing cm uses the industry median; a missing PTI uses EBIT − Int.
+
+### 2.2 Channels (`channels.py`)
+| Family | Type | Formula |
+|---|---|---|
+| Tax | `tax_rate` | t' = t + Δτ × domestic income share |
+| | `tax_credit` | ΔNI (after tax) = credit rate × base |
+| | `tax_revenue` | ΔOpex = R × in-scope share × rate (deductible) |
+| | `tax_timing` | full expensing: ≈0 EPS; value = PV of deferral τX(1 − AF(n,r)/n) |
+| Cost | `cost` | ΔCost = C × exposed share × shock; dp = φΔCost/R; dQ = −ε·dp; ΔR = R[(1+dp)(1+dQ) − 1]; ΔC = ΔCost(1+dQ) + C·v·dQ |
+| | `domestic_uplift` | ΔR = R × domestic share × price uplift; flow-through share to EBIT |
+| Demand | `demand_transfer` | ΔR = transfer × MPC × firm capture share × tilt; ΔEBIT = ΔR × cm |
+| | `demand_price` | ΔR = R × exposed share × (−ε × dp); ΔEBIT = ΔR × cm |
+| | `demand_volume` | ΔR = R × exposed share × ΔVolume; ΔEBIT = ΔR × cm |
+| Price | `price` | ΔR = R × exposed share × ΔPrice; ΔEBIT = ΔR × (1 − offset share) |
+| Financing | `financing_debt` | ΔInt = D × (floating + maturing share) × Δr |
+| | `bank_nii` | ΔNII = NII × sensitivity per 100 bp × Δbps/100 (falls to pretax) |
+| | `bank_capital` | value % = ratio/(ratio + Δratio) − 1, scaled by (1 − MM offset); EPS unchanged |
+| | `reit_nav` | value % = −β × Δ10yr / cap rate |
+| Government | `gov_budget` | ΔR = R × gov share × relevance × ΔBudget%; ΔEBIT = ΔR × cm × absorption |
+| | `gov_shutdown` | ΔR = −R × gov share × affected share × days/365 × (1 − recovery) |
+| | `gov_cr` | ΔR = −R × gov share × new-award share × months/12 |
+
+**Consumer transfers** are allocated by each firm's share of *all* US consumer spending
+(firm US consumer revenue ÷ FRED PCE), not by its share of the six sample companies.
+Allocating within the sample would hand the six firms 100% of the industry's spending and overstate the effect.
+
+### 2.3 Aggregation (`model.py`)
+```
+ΔEBIT = Σ channel ΔEBIT        ΔPTI = ΔEBIT − ΔInt        t' = t + Σ Δt
+ΔNI   = (PTI + ΔPTI)(1 − t') − PTI(1 − t) + Σ ΔNI_direct
+ΔEPS  = ΔNI / S                ΔEPS% = ΔEPS / reported EPS (n/m if EPS ≤ 0)
+```
+ΔNI is measured against the model's own baseline PTI(1 − t), so a zero shock gives exactly zero even though reported
+NI includes minority interests, discontinued operations and so on. The tax-rate effect is applied **once** here; channels only report Δt.
+ΔNI splits exactly into per-channel pieces: (ΔEBIT_c − ΔInt_c)(1 − t') + ΔNI_direct_c, plus PTI(t − t') assigned to the tax channels.
+
+### 2.4 Valuation (`valuation.py`), constant-multiple
+Each channel's ΔEPS is valued with its persistence: **permanent** × P/E; **one-time** × 1;
+**N years** × annuity factor at 9%. Direct value effects (REIT NAV, bank capital, tax-deferral PV) are added.
+If P/E isn't meaningful (EPS ≤ 0), a permanent change shows ΔEPS only and the implied price is "n/m".
+
+### 2.5 Ranges and tornado (`sensitivity.py`)
+Every uncertain assumption and exposure has low/base/high. **We do not run "all-low vs all-high"**, because
+a low value isn't always bad news (low pass-through hurts an importer, but low elasticity helps it). Instead:
+1. Tornado: move each driver to its low and then its high, with the others at base, and record industry ΔEPS%
+   (Σ ΔNI ÷ Σ baseline NI; Δ market value % for value-only policies).
+2. For each company, its pessimistic case sets every driver to whichever end hurt *that company*, and
+   its optimistic case to the other end. The industry range uses the same rule on the industry metric.
+Exposure drivers move every company's exposure to its own low/high together.
+
+### 2.6 Winners, losers, long/short
+Companies are ranked by implied Δprice % (ΔEPS % if n/m). Long = top, short = bottom, each with a
+one-line reason built from its dominant channel and that channel's exposure. If the long's pessimistic
+case is below the short's optimistic case, the call is labelled **low conviction**. If every company moves
+the same way, the pair is labelled a relative-value trade.
+
+## 3. Out of scope
+General-equilibrium and macro feedback, second-round competitive responses, timing within the year,
+and non-US policy. This is a first-order, partial-equilibrium model for education, not investment advice.

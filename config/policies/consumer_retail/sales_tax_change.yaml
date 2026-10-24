@@ -1,0 +1,39 @@
+id: sales_tax_change
+industry: consumer_retail
+name: Sales tax change
+description: A change in sales tax shifts the price shoppers pay; volume responds, while retailers' pre-tax prices are unchanged.
+persistence: permanent
+user_inputs:
+  - key: d_rate_pp
+    label: Change in sales tax rate
+    unit: percentage points
+    min: -10
+    max: 10
+    step: 0.25
+    default: 1
+    help: Positive raises the tax; use a negative value for a tax cut or holiday.
+assumptions:
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: Unit elasticity as a central case for broad retail baskets; essentials are less elastic, discretionary goods more.
+  - key: taxable_share
+    label: Share of US consumer sales subject to sales tax
+    unit: fraction
+    low: 0.6
+    base: 0.75
+    high: 0.9
+    source: estimate
+    rationale: Groceries and prescription drugs are exempt or taxed at reduced rates in many states, so not all sales are taxable.
+channels:
+  - type: demand_price
+    label: Shopper price change from the tax
+    params:
+      dp_consumer: input.d_rate_pp / 100
+      elasticity: assumption.elasticity
+      exposed_revenue_share: exposure.us_consumer_revenue_share * assumption.taxable_share
+exposure_keys: [us_consumer_revenue_share]

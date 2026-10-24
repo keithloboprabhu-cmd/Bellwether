@@ -1,0 +1,57 @@
+id: consumer_tax_rebate
+industry: consumer_retail
+name: Consumer tax rebate / stimulus check
+description: A one-time payment to households; part of it is spent, raising retail revenue for a year.
+persistence: one_time
+showcase: true
+user_inputs:
+  - key: amount_per_recipient
+    label: Rebate per recipient
+    unit: USD
+    min: 0
+    max: 5000
+    step: 50
+    default: 1000
+    help: The 2008 stimulus paid $300–$600 per adult plus $300 per child.
+  - key: recipients
+    label: Number of recipients
+    unit: millions
+    min: 1
+    max: 200
+    step: 1
+    default: 130
+    help: About 130 million taxpayers received the 2008 payments (Parker et al. 2013).
+assumptions:
+  - key: mpc
+    label: Share of payment spent within the year (MPC)
+    unit: fraction
+    low: 0.5
+    base: 0.7
+    high: 0.9
+    source: "Parker, Souleles, Johnson & McClelland (2013), AER 103(6): households spent ~50–90% of 2008 stimulus payments in total (12–30% on nondurables) within 3 months of receipt"
+    source_url: https://www.nber.org/papers/w16684
+  - key: goods_tilt
+    label: Retail goods' share of new spending vs. their share of all spending
+    unit: multiple
+    low: 0.6
+    base: 1.0
+    high: 1.4
+    source: estimate
+    rationale: Parker et al. find much of the durable-goods response was vehicles, which these retailers don't sell; 1.0 assumes new spending splits like all consumer spending.
+derived:
+  total_transfer_musd: input.amount_per_recipient * input.recipients
+channels:
+  - type: demand_transfer
+    label: Extra household spending
+    params:
+      total_transfer_musd: derived.total_transfer_musd
+      mpc: assumption.mpc
+      # firm's share of all US consumer spending (FRED PCE)
+      capture_share: baseline.revenue * exposure.us_consumer_revenue_share / macro.pce_musd
+      tilt: assumption.goods_tilt
+exposure_keys: [us_consumer_revenue_share]
+references:
+  - https://www.nber.org/papers/w16684
+  - https://fred.stlouisfed.org/series/PCE
+narrative:
+  extra: "Because the payment is one-time, the implied price change counts the earnings bump once rather than capitalizing it at the P/E."

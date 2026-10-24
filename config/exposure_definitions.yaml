@@ -1,0 +1,16 @@
+# One definition per company-level exposure key. Shared by Industry mode, Company mode
+# (the form shows only the keys a policy uses) and policy configs (exposure.<key>).
+# unit: fraction (0–1), usd_m ($ millions), count_m (millions), number, per_100bp.
+exposures:
+  - key: us_consumer_revenue_share
+    label: US consumer revenue share
+    unit: fraction
+    help: Share of total revenue from sales to US consumers (excludes international and B2B/cloud revenue).
+    min: 0
+    max: 1
+  - key: us_import_share_of_cogs
+    label: Imported share of cost of revenue (US operations)
+    unit: fraction
+    help: Share of total cost of revenue that is goods imported into the US, i.e. the base a US import tariff applies to.
+    min: 0
+    max: 1
