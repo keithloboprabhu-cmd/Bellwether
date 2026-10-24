@@ -61,13 +61,18 @@ def load_registry(config_dir: Path = CONFIG_DIR) -> Registry:
     universe = load_universe()
 
     defs: dict[str, ExposureDefinition] = {}
-    defs_path = config_dir / "exposure_definitions.yaml"
-    try:
-        for row in _read(defs_path).get("exposures", []):
-            d = ExposureDefinition.model_validate(row)
-            defs[d.key] = d
-    except Exception as exc:
-        errors.append(_fmt(defs_path, exc))
+    # One shared file; config/exposure_definitions.d/*.yaml is also read (used while industries
+    # are authored in parallel, then merged). A key defined twice must be defined identically.
+    def_paths = [config_dir / "exposure_definitions.yaml", *sorted((config_dir / "exposure_definitions.d").glob("*.yaml"))]
+    for defs_path in def_paths:
+        try:
+            for row in _read(defs_path).get("exposures", []):
+                d = ExposureDefinition.model_validate(row)
+                if d.key in defs and defs[d.key] != d:
+                    raise ValueError(f"exposure {d.key!r} defined differently in two files")
+                defs[d.key] = d
+        except Exception as exc:
+            errors.append(_fmt(defs_path, exc))
 
     exposures: dict[str, dict[str, ExposureValue]] = {}
     for path in sorted((config_dir / "exposures").glob("*.yaml")):
