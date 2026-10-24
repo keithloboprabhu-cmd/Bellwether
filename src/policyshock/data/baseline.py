@@ -45,6 +45,9 @@ PRETAX_TAGS = [
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
 ]
 TAX_TAGS = ["IncomeTaxExpenseBenefit"]
+# Income tax note: pretax income split by jurisdiction (domestic share drives US tax-rate effects).
+PRETAX_DOMESTIC_TAGS = ["IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic"]
+PRETAX_FOREIGN_TAGS = ["IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign"]
 NET_INCOME_TAGS = ["NetIncomeLoss", "NetIncomeLossAvailableToCommonStockholdersBasic", "ProfitLoss"]
 EPS_TAGS = ["EarningsPerShareDiluted", "EarningsPerShareBasicAndDiluted"]
 DILUTED_SHARES_TAGS = ["WeightedAverageNumberOfDilutedSharesOutstanding"]
@@ -199,6 +202,8 @@ def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) ->
     interest = _chain(facts, INTEREST_TAGS)
     pretax = _chain(facts, PRETAX_TAGS)
     tax = _chain(facts, TAX_TAGS)
+    pt_dom = _chain(facts, PRETAX_DOMESTIC_TAGS)
+    pt_for = _chain(facts, PRETAX_FOREIGN_TAGS)
     ni = _chain(facts, NET_INCOME_TAGS)
     eps = _chain(facts, EPS_TAGS, unit="USD/shares")
     dil = _chain(facts, DILUTED_SHARES_TAGS, unit="shares")
@@ -216,8 +221,14 @@ def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) ->
     sources = first_filing_for_period(facts, REVENUE_TAGS + NET_INCOME_TAGS)
 
     years: list[FiscalYear] = []
-    # A fiscal year exists if we have net income for a full-year period.
-    for end in sorted(ni, reverse=True):
+    # A fiscal year exists if we have net income for a full-year period. Companies on 52/53-week
+    # calendars sometimes tag the same year with two period ends a day or two apart (DE: Oct 31
+    # vs Nov 1); keep the one from the most recent filing and drop the near-duplicate.
+    ends: list[str] = []
+    for end in sorted(ni, key=lambda e: ni[e].filed, reverse=True):
+        if all(abs(_days(end, kept)) > 10 for kept in ends):
+            ends.append(end)
+    for end in sorted(ends, reverse=True):
         fy = FiscalYear(period_end=end, fiscal_year=fiscal_year_label(end))
         if fy.fiscal_year < min_year:
             continue
@@ -239,6 +250,8 @@ def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) ->
         put("interest_expense", interest.get(end))
         put("da", da.get(end))
         put("total_assets", _near(assets, end))
+        put("pretax_domestic", pt_dom.get(end))
+        put("pretax_foreign", pt_for.get(end))
         PTI = put("pretax_income", pretax.get(end))
         T = put("income_tax", tax.get(end))
         EBIT = put("operating_income", opinc.get(end))

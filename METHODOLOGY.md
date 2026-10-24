@@ -40,7 +40,13 @@ class-level counts aren't in companyfacts). P/E = price / diluted EPS, only when
 ### 1.3 Macro series (FRED)
 Keyless `fredgraph.csv` endpoint: DFF, DGS10, MORTGAGE30US, CPIAUCSL, UNRATE, GDPC1.
 
-### 1.4 Refresh
+### 1.4 Share counts
+Market cap uses cover-page shares outstanding, unless they differ from diluted weighted shares by more than 25%.
+In that case (a share class missing from the cover page, as at NKE; tagging errors; post-year share issuance) we use diluted
+shares and flag it, which keeps market cap on the same share basis as the EPS the model uses.
+Near-duplicate period ends (52/53-week calendars tagged a day apart) are collapsed into one fiscal year.
+
+### 1.5 Refresh
 `.github/workflows/refresh.yml` runs `scripts/refresh_data.py` every weekday and commits changed snapshots,
 so newly filed 10-Ks, prices and macro data reach the app without manual work.
 
@@ -112,6 +118,13 @@ one-line reason built from its dominant channel and that channel's exposure. If 
 case is below the short's optimistic case, the call is labelled **low conviction**. If every company moves
 the same way, the pair is labelled a relative-value trade.
 
-## 3. Out of scope
+## 3. Backtests
+See the Backtests page. **TCJA (2017):** the tax channel run on each company's last pre-TCJA fiscal year predicts the
+post-2018 effective tax rate. The fiscal year containing enactment (22 Dec 2017) is excluded as the base year because of
+deferred-tax remeasurement, and "actual" is the average of the first two fiscal years starting after 1 Jan 2018.
+**Section 232 steel (2018):** the Industrials steel-tariff policy run on FY2017 baselines, compared with FY2017→FY2018
+gross-margin changes. Demand conditions confound it, so the test is direction and order of magnitude.
+
+## 4. Out of scope
 General-equilibrium and macro feedback, second-round competitive responses, timing within the year,
 and non-US policy. This is a first-order, partial-equilibrium model for education, not investment advice.

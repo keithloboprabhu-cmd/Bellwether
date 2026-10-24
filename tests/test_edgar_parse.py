@@ -219,3 +219,15 @@ def test_predecessor_cik_merge_keeps_history():
     """XOM re-registered under a new holding-company CIK in 2026; history must survive."""
     years = [y.fiscal_year for y in _load("XOM")]
     assert 2017 in years and max(years) >= 2025
+
+
+def test_near_duplicate_period_ends_collapse():
+    """Two period ends 1 day apart are one fiscal year; the later filing wins."""
+    facts = _facts(
+        NetIncomeLoss=[
+            _fact(10e6, "2015-10-31", "2015-12-10", start="2014-11-01", accn="OLD"),
+            _fact(11e6, "2015-11-01", "2016-12-10", start="2014-11-02", accn="NEW"),
+        ]
+    )
+    years = build_baseline(facts)
+    assert len(years) == 1 and years[0].period_end == "2015-11-01"

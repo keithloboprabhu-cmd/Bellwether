@@ -7,6 +7,7 @@ Outputs (data/snapshots/):
     baselines.json  per-company annual financials from SEC EDGAR XBRL (FY2008→latest)
     prices.csv      latest close per ticker (yfinance)
     fred.csv        macro series from FRED (keyless CSV endpoint)
+    gdp_betas.json  industry revenue betas to real GDP (derived from the two above)
     meta.json       as-of timestamps for each snapshot
 
 Run daily by .github/workflows/refresh.yml so new 10-Ks, prices and macro data flow
@@ -28,8 +29,16 @@ import pandas as pd  # noqa: E402
 from policyshock.config import SNAPSHOT_DIR, load_universe  # noqa: E402
 from policyshock.data import edgar, fred, prices  # noqa: E402
 from policyshock.data.baseline import build_baseline, shares_outstanding  # noqa: E402
+from policyshock.macro import gdp_beta  # noqa: E402
 
 META_FILE = SNAPSHOT_DIR / "meta.json"
+
+
+def _atomic_write(path: Path, text: str) -> None:
+    """Write via a temp file + rename so readers never see a half-written snapshot."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(text)
+    tmp.replace(path)
 
 
 def _now() -> str:
@@ -66,7 +75,7 @@ def refresh_baselines(max_age_s: float) -> dict:
             latest = years[0] if years else None
             print(f"  {c.ticker:6} {latest.period_end if latest else '—':10}  {len(years):2d} yrs  {len(latest.flags) if latest else 0} flags")
     out = {"as_of": _now(), "source": "SEC EDGAR XBRL companyfacts", "companies": companies}
-    (SNAPSHOT_DIR / "baselines.json").write_text(json.dumps(out, indent=1))
+    _atomic_write(SNAPSHOT_DIR / "baselines.json", json.dumps(out, indent=1))
     return {"companies": len(companies)}
 
 
@@ -93,10 +102,10 @@ def refresh_fred() -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--only", nargs="*", choices=["baselines", "prices", "fred"])
+    ap.add_argument("--only", nargs="*", choices=["baselines", "prices", "fred", "gdp_betas"])
     ap.add_argument("--max-age-hours", type=float, default=20, help="reuse cached EDGAR responses younger than this")
     args = ap.parse_args()
-    targets = args.only or ["baselines", "prices", "fred"]
+    targets = args.only or ["baselines", "prices", "fred", "gdp_betas"]
 
     SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
     meta = json.loads(META_FILE.read_text()) if META_FILE.exists() else {}
@@ -104,6 +113,7 @@ def main() -> int:
         "baselines": lambda: refresh_baselines(args.max_age_hours * 3600),
         "prices": refresh_prices,
         "fred": refresh_fred,
+        "gdp_betas": gdp_beta.write_snapshot,
     }
     failed = []
     for name in targets:

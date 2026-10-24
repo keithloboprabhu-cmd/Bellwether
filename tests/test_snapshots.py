@@ -38,3 +38,12 @@ def test_fred_snapshot_has_all_series():
     latest = fred.latest_values()
     assert set(fred.SERIES) <= set(latest)
     assert isinstance(fred.load_snapshot()["date"].iloc[0], pd.Timestamp)
+
+
+def test_gdp_betas_cover_every_industry():
+    from policyshock.macro import gdp_beta
+
+    betas = gdp_beta.load()
+    assert set(betas) == {i.slug for i in load_universe().industries}
+    for b in betas.values():
+        assert b["n"] >= 40 and b["se"] > 0

@@ -53,12 +53,21 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
     flags = list(fy["flags"])
 
     so = co.get("shares_outstanding")
-    if so and year is None:
-        shares_out, shares_src = so["value"], f"cover page {so['date']}"
-    else:
-        shares_out, shares_src = it.get("diluted_shares"), "diluted weighted-average shares"
-        if year is None:
+    diluted = it.get("diluted_shares")
+    shares_out, shares_src = diluted, "diluted weighted-average shares"
+    if year is None:
+        if not so or not so["value"]:
             flags.append("shares outstanding not on cover page (multi-class); using diluted shares")
+        elif diluted and not 0.8 <= so["value"] / diluted <= 1.25:
+            # A >25% gap usually means a class is missing from the cover page (NKE), a tagging
+            # error, or a post-year share issue; diluted shares keep market cap on the same
+            # share basis as the EPS the model uses.
+            flags.append(
+                f"cover-page shares ({so['value']:,.0f}M, {so['date']}) differ from diluted shares "
+                f"({diluted:,.0f}M) by >25%; using diluted shares"
+            )
+        else:
+            shares_out, shares_src = so["value"], f"cover page {so['date']}"
 
     eps = it.get("eps_diluted")
     mcap = price * shares_out if (price is not None and shares_out) else None
