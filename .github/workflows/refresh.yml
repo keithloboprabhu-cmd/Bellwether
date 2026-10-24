@@ -1,0 +1,41 @@
+# Daily data refresh: re-pulls SEC filings, prices and FRED series, commits changed snapshots.
+# Satisfies the "updates when new data becomes available" requirement: a newly filed 10-K
+# appears in the app the day after it is filed. Each commit also redeploys (wakes) the app.
+name: Refresh data
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5"   # 22:30 UTC weekdays, after US market close
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Refresh snapshots
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python scripts/refresh_data.py
+      - name: Run tests
+        run: pytest -q
+      - name: Commit changed snapshots
+        run: |
+          git config user.name "policyshock-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/snapshots
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: daily snapshot refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi

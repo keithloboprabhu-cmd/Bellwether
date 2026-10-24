@@ -1,0 +1,98 @@
+# Industry taxonomy and the 6 representative US-listed companies per industry.
+# `kind` selects the income-statement template used by the baseline parser and engine:
+#   standard - revenue / cost of revenue / operating income
+#   bank     - net revenue, net interest income, no meaningful cost of revenue
+#   reit     - standard statement, plus FFO approximation (NI + D&A) for valuation
+#   managed_care - cost of revenue = product costs + medical claims incurred
+# `predecessor_ciks` merges filings made under an older CIK (holding-company reorganizations).
+industries:
+  - slug: tmt
+    name: Technology, Media & Telecom
+    companies:
+      - {ticker: AAPL, name: Apple}
+      - {ticker: MSFT, name: Microsoft}
+      - {ticker: GOOGL, name: Alphabet}
+      - {ticker: META, name: Meta Platforms}
+      - {ticker: NVDA, name: NVIDIA}
+      - {ticker: VZ, name: Verizon}
+  - slug: financial_services
+    name: Financial Services
+    companies:
+      - {ticker: JPM, name: JPMorgan Chase, kind: bank}
+      - {ticker: BAC, name: Bank of America, kind: bank}
+      - {ticker: WFC, name: Wells Fargo, kind: bank}
+      - {ticker: GS, name: Goldman Sachs, kind: bank}
+      - {ticker: C, name: Citigroup, kind: bank}
+      - {ticker: AXP, name: American Express, kind: bank}
+  - slug: consumer_retail
+    name: Consumer & Retail
+    companies:
+      - {ticker: WMT, name: Walmart}
+      - {ticker: TGT, name: Target}
+      - {ticker: COST, name: Costco}
+      - {ticker: AMZN, name: Amazon}
+      - {ticker: NKE, name: Nike}
+      - {ticker: HD, name: Home Depot}
+  - slug: healthcare
+    name: Healthcare & Life Sciences
+    companies:
+      - {ticker: UNH, name: UnitedHealth Group, kind: managed_care}
+      - {ticker: ELV, name: Elevance Health, kind: managed_care}
+      - {ticker: HUM, name: Humana, kind: managed_care}
+      - {ticker: CVS, name: CVS Health, kind: managed_care}
+      - {ticker: PFE, name: Pfizer}
+      - {ticker: LLY, name: Eli Lilly}
+  - slug: industrials
+    name: Industrials & Manufacturing
+    companies:
+      - {ticker: CAT, name: Caterpillar}
+      - {ticker: DE, name: Deere}
+      - {ticker: GE, name: GE Aerospace}
+      - {ticker: HON, name: Honeywell}
+      - {ticker: MMM, name: 3M}
+      - {ticker: NUE, name: Nucor}
+  - slug: energy_resources
+    name: Energy & Resources
+    companies:
+      - {ticker: XOM, name: Exxon Mobil, predecessor_ciks: [34088]}  # ExxonMobil Holdings Corp reorganization, 2026
+      - {ticker: CVX, name: Chevron}
+      - {ticker: COP, name: ConocoPhillips}
+      - {ticker: NEE, name: NextEra Energy}
+      - {ticker: FSLR, name: First Solar}
+      - {ticker: FCX, name: Freeport-McMoRan}
+  - slug: transportation_logistics
+    name: Transportation, Logistics & Infrastructure
+    companies:
+      - {ticker: UPS, name: United Parcel Service}
+      - {ticker: FDX, name: FedEx}
+      - {ticker: UNP, name: Union Pacific}
+      - {ticker: DAL, name: Delta Air Lines}
+      - {ticker: TSLA, name: Tesla}
+      - {ticker: GM, name: General Motors}
+  - slug: public_sector
+    name: Public Sector (government contractors)
+    companies:
+      - {ticker: BAH, name: Booz Allen Hamilton}
+      - {ticker: LDOS, name: Leidos}
+      - {ticker: SAIC, name: Science Applications International}
+      - {ticker: CACI, name: CACI International}
+      - {ticker: PSN, name: Parsons}
+      - {ticker: GD, name: General Dynamics}
+  - slug: real_estate_hospitality
+    name: Real Estate & Hospitality
+    companies:
+      - {ticker: PLD, name: Prologis, kind: reit}
+      - {ticker: AMT, name: American Tower, kind: reit}
+      - {ticker: SPG, name: Simon Property Group, kind: reit}
+      - {ticker: MAR, name: Marriott International}
+      - {ticker: HLT, name: Hilton Worldwide}
+      - {ticker: ABNB, name: Airbnb}
+  - slug: education
+    name: Education
+    companies:
+      - {ticker: LRN, name: Stride}
+      - {ticker: LOPE, name: Grand Canyon Education}
+      - {ticker: CVSA, name: Covista (formerly Adtalem Global Education; ticker ATGE until Jan 2026)}
+      - {ticker: STRA, name: Strategic Education}
+      - {ticker: DUOL, name: Duolingo}
+      - {ticker: COUR, name: Coursera}
