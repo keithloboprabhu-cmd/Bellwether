@@ -19,7 +19,7 @@ The worked examples are `config/policies/consumer_retail/*.yaml` and `config/exp
 ## Files
 | What | Where |
 |---|---|
-| Exposure key definitions | `config/exposure_definitions.d/<industry>.yaml` while authoring in parallel (merged into `config/exposure_definitions.yaml` later). Re-use existing keys where they fit; never redefine a key differently. |
+| Exposure key definitions | `config/exposure_definitions.yaml` (one file, grouped by industry). Re-use existing keys where they fit; never redefine a key differently. For parallel authoring you may use `config/exposure_definitions.d/<industry>.yaml` temporarily; the loader reads both and rejects conflicting duplicates. |
 | Company exposure values | `config/exposures/<industry>.yaml`: **every** exposure key a policy lists must have a value for **all 6** companies in the industry |
 | Policies | `config/policies/<industry>/<policy_id>.yaml` |
 

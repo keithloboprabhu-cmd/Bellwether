@@ -1,0 +1,234 @@
+# Healthcare & Life Sciences company exposures. Fractions of total revenue (or of cost of revenue where the key says so).
+# Denominators are the FY2025 revenues in data/snapshots/baselines.json: UNH $447,567M, ELV $199,125M, HUM $129,664M,
+# CVS $402,067M, PFE $62,579M, LLY $65,179M.
+industry: healthcare
+companies:
+  UNH:
+    medicare_advantage_revenue_share:
+      value: 0.34
+      low: 0.30
+      high: 0.38
+      source: "UnitedHealth 2025 10-K: UnitedHealthcare Medicare & Retirement revenue $171,285M of $447,567M total (38%); 8.4M MA members. M&R also includes PDP and Medicare Supplement, so the MA-only share is set below 38%."
+      source_url: https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+      rationale: MA-only split is not disclosed; PDP + Med Supp assumed ~10% of M&R revenue.
+    medicaid_revenue_share:
+      value: 0.21
+      low: 0.18
+      high: 0.211
+      source: "UnitedHealth 2025 10-K: UnitedHealthcare Community & State revenue $94,390M of $447,567M total (21%); ~7.4M Medicaid members"
+      source_url: https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+    aca_exchange_revenue_share:
+      value: 0.02
+      low: 0.01
+      high: 0.03
+      source: estimate
+      rationale: "Individual exchange plans sit inside UHC Employer & Individual ($79,228M, 18% of revenue) and are not split out; exchange business is a small part of E&I."
+    negotiated_drug_medicare_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a drug manufacturer; Part D plan and PBM effects of negotiated prices are bid through and not modelled.
+    pbm_retained_rebate_share:
+      value: 0.008
+      low: 0.004
+      high: 0.015
+      source: estimate
+      rationale: "Optum Rx ($154,726M revenue, $7,193M earnings from operations, $188B of drug spend managed in 2025 per the 10-K) does not disclose retained rebates; assumes retained rebates/fees of roughly 2% of managed drug spend (~$3.5B)."
+    hospital_outpatient_cost_share:
+      value: 0.13
+      low: 0.10
+      high: 0.16
+      source: estimate
+      rationale: Medical claims are roughly three-quarters of UNH cost of revenue (the rest is Optum Rx drug cost); hospital outpatient is ~15–20% of medical claims.
+    us_import_share_of_cogs:
+      value: 0
+      source: estimate
+      rationale: Payer/PBM; drug-tariff costs reach it only indirectly through manufacturer price increases, which are not modelled (they flow into premiums and client contracts).
+  ELV:
+    medicare_advantage_revenue_share:
+      value: 0.15
+      low: 0.12
+      high: 0.19
+      source: estimate
+      rationale: "Elevance 2025 10-K: 2,230K Medicare Advantage members of 45,232K medical members; at roughly $13–16K premium per MA member that is ~$30B of $199,125M revenue. Premium split by line not found in the filing text read."
+    medicaid_revenue_share:
+      value: 0.25
+      low: 0.20
+      high: 0.30
+      source: estimate
+      rationale: "Elevance 2025 10-K: 8,500K Medicaid members; at roughly $5–7K premium per member per year that is ~$45–60B of $199,125M revenue."
+    aca_exchange_revenue_share:
+      value: 0.045
+      low: 0.035
+      high: 0.055
+      source: estimate
+      rationale: "Elevance 2025 10-K: 1,307K Individual members (mostly ACA exchange); at ~$6–8K premium per member that is ~$8–10B of $199,125M revenue."
+    negotiated_drug_medicare_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a drug manufacturer.
+    pbm_retained_rebate_share:
+      value: 0.005
+      low: 0.002
+      high: 0.01
+      source: estimate
+      rationale: "CarelonRx operating revenue $43,400M and operating gain $2,418M in 2025 (Elevance 10-K segment note); retained rebates/fees not disclosed, assumed ~2% of drug spend (~$1B)."
+    hospital_outpatient_cost_share:
+      value: 0.15
+      low: 0.12
+      high: 0.18
+      source: estimate
+      rationale: Benefit expense is most of ELV cost of revenue (premiums $164,639M of $197,584M operating revenue); hospital outpatient is ~15–20% of medical claims.
+    us_import_share_of_cogs:
+      value: 0
+      source: estimate
+      rationale: Payer/PBM; indirect drug-tariff cost not modelled.
+  HUM:
+    medicare_advantage_revenue_share:
+      value: 0.767
+      low: 0.75
+      high: 0.77
+      source: "Humana 2025 10-K: individual MA premiums $90,403M + group MA $9,014M = $99,417M, 77% of $129,664M revenue (70.3% + 7.0% of consolidated premiums and services revenue)"
+      source_url: https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm
+    medicaid_revenue_share:
+      value: 0.10
+      low: 0.08
+      high: 0.112
+      source: "Humana 2025 10-K: state-based contracts and other (incl. Medicaid) premiums $14,477M, 11.2% of consolidated premiums and services revenue; 'other' trimmed off for the base"
+      source_url: https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm
+    aca_exchange_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Humana left the individual commercial (exchange) market in 2018; its 2025 10-K premium table has no individual commercial line.
+    negotiated_drug_medicare_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a drug manufacturer.
+    pbm_retained_rebate_share:
+      value: 0.002
+      low: 0
+      high: 0.005
+      source: estimate
+      rationale: Humana's PBM serves mainly its own plan members, so rebates largely stay inside its own Part D/MA economics rather than being retained from outside clients.
+    hospital_outpatient_cost_share:
+      value: 0.13
+      low: 0.10
+      high: 0.16
+      source: estimate
+      rationale: Cost of revenue is almost all benefit expense (~85% of revenue); hospital outpatient is ~15% of MA medical claims.
+    us_import_share_of_cogs:
+      value: 0
+      source: estimate
+      rationale: Payer; indirect drug-tariff cost not modelled.
+  CVS:
+    medicare_advantage_revenue_share:
+      value: 0.14
+      low: 0.12
+      high: 0.158
+      source: "CVS 2025 10-K: Health Care Benefits revenue from the federal government ~20% of consolidated revenue, of which Medicare contracts with CMS ~79% (=15.8% of revenue, incl. PDP); 4,267K MA members at Dec 31 2025 (Q4 2025 release)"
+      source_url: https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
+      rationale: PDP premiums are removed from the 15.8% CMS share to get an MA-only base.
+    medicaid_revenue_share:
+      value: 0.035
+      low: 0.025
+      high: 0.045
+      source: estimate
+      rationale: "CVS Q4 2025 release: 1,952K insured Medicaid members; at ~$6–8K premium per member that is ~$12–16B of $402,067M revenue."
+      source_url: https://www.sec.gov/Archives/edgar/data/64803/000006480326000009/cvs_ex99x1q4-25.htm
+    aca_exchange_revenue_share:
+      value: 0
+      low: 0
+      high: 0.01
+      source: "CVS 2025 10-K: Aetna exited the Public Exchange (ACA individual) markets effective January 2026"
+      source_url: https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
+    negotiated_drug_medicare_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a drug manufacturer.
+    pbm_retained_rebate_share:
+      value: 0.01
+      low: 0.005
+      high: 0.02
+      source: estimate
+      rationale: "Caremark (Health Services revenue $190,425M, adjusted operating income $7,151M in 2025 per the Q4 release) does not disclose retained rebates; assumes ~$4B retained rebates and rebate-linked fees."
+    hospital_outpatient_cost_share:
+      value: 0.06
+      low: 0.04
+      high: 0.08
+      source: estimate
+      rationale: "Most CVS cost of revenue is drug cost; HCB benefit costs (~$120B on $134,749M premiums) are ~35% of the $346,705M total, and hospital outpatient is ~15–20% of those."
+    us_import_share_of_cogs:
+      value: 0
+      source: estimate
+      rationale: Payer/PBM/pharmacy; indirect drug-tariff cost not modelled (contracts largely pass drug cost through to clients).
+  PFE:
+    medicare_advantage_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Drugmaker; MA rates do not set its prices.
+    medicaid_revenue_share:
+      value: 0.03
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Medicaid buys roughly a tenth of US retail Rx by gross spend but pays the deepest statutory rebates; Medicaid net sales are assumed a few % of Pfizer revenue.
+    aca_exchange_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Exchange-enrollee drug use is a negligible slice of revenue.
+    negotiated_drug_medicare_revenue_share:
+      value: 0.08
+      low: 0.05
+      high: 0.12
+      source: estimate
+      rationale: "Selected Pfizer drugs: Eliquis (IPAY 2026, BMS alliance), Ibrance and Xtandi (IPAY 2027; 2027 MFPs roughly half of 2024 list), Xeljanz (IPAY 2028, $1.0B Medicare spend per Milliman). Medicare net sales of these assumed ~$4–7B of $62,579M revenue."
+      source_url: https://www.milliman.com/en-GB/insight/key-takeaways-third-medicare-drug-price-negotiation
+    pbm_retained_rebate_share:
+      value: 0
+      source: estimate
+      rationale: Not a PBM; rebate rules change how rebates are split, not what manufacturers pay.
+    hospital_outpatient_cost_share:
+      value: 0
+      source: estimate
+      rationale: Not a payer.
+    us_import_share_of_cogs:
+      value: 0.30
+      low: 0.20
+      high: 0.45
+      source: estimate
+      rationale: Roughly 60% of Pfizer sales are US and a large share of branded supply is made in Ireland, Belgium and other EU sites; about half of US-sold product cost assumed imported.
+  LLY:
+    medicare_advantage_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Drugmaker; MA rates do not set its prices.
+    medicaid_revenue_share:
+      value: 0.03
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Medicaid net sales after statutory rebates assumed a few % of revenue.
+    aca_exchange_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Exchange-enrollee drug use is a negligible slice of revenue.
+    negotiated_drug_medicare_revenue_share:
+      value: 0.05
+      low: 0.03
+      high: 0.08
+      source: estimate
+      rationale: "Selected Lilly drugs: Jardiance (IPAY 2026) and Tradjenta (IPAY 2027, renegotiated for 2028) via the Boehringer alliance; Trulicity ($4.9B Medicare gross spend) and Verzenio ($1.4B) on the IPAY 2028 list per Milliman. Net Medicare sales assumed ~$2–5B of $65,179M revenue."
+      source_url: https://www.milliman.com/en-GB/insight/key-takeaways-third-medicare-drug-price-negotiation
+    pbm_retained_rebate_share:
+      value: 0
+      source: estimate
+      rationale: Not a PBM.
+    hospital_outpatient_cost_share:
+      value: 0
+      source: estimate
+      rationale: Not a payer.
+    us_import_share_of_cogs:
+      value: 0.30
+      low: 0.20
+      high: 0.45
+      source: estimate
+      rationale: About two-thirds of Lilly sales are US; much incretin and API supply has come from Ireland and other EU sites while new US plants ramp; about half of US-sold product cost assumed imported.

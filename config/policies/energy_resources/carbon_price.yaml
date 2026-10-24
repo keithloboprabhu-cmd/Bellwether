@@ -1,0 +1,46 @@
+id: carbon_price
+industry: energy_resources
+name: Carbon price on direct emissions
+description: >-
+  A US price per tonne on each company's direct (Scope 1) CO2e emissions. Refiners and producers pass part of
+  the cost into fuel prices; NextEra's regulated utility (FPL) recovers most of it through rates; copper and
+  crude are priced globally, so FCX and COP absorb most of theirs. Covers Scope 1 only - an upstream tax on the
+  carbon in fuels sold (Scope 3), which would cut oil demand far more, is not modeled here.
+persistence: permanent
+user_inputs:
+  - key: price_per_ton
+    label: Carbon price
+    unit: USD per t CO2e
+    min: 0
+    max: 200
+    step: 5
+    default: 50
+    help: $50/t is in the range of US carbon-tax bills; EPA's 2023 social cost of carbon is ~$190/t.
+assumptions:
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.05
+    base: 0.2
+    high: 0.4
+    source: estimate
+    rationale: Short-run price elasticities of demand for gasoline, electricity and other energy are typically well below 0.5 (the Treasury SPR analysis uses 0.08-0.20 for gasoline).
+    source_url: https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
+derived:
+  carbon_cost_musd: input.price_per_ton * exposure.us_scope1_co2e_mt
+channels:
+  - type: cost
+    label: Carbon cost on direct emissions
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: derived.carbon_cost_musd
+      pass_through: exposure.carbon_cost_pass_through
+      elasticity: assumption.elasticity
+exposure_keys: [us_scope1_co2e_mt, carbon_cost_pass_through]
+references:
+  - https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
+  - https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/Sustainability/2025/Data%20Appendix.pdf
+  - https://www.conocophillips.com/sustainability/managing-climate-related-risks/metrics-targets
+narrative:
+  extra: "Exposure is tonnes of US Scope 1 emissions times the price, net of what each company can recover in its prices."

@@ -1,0 +1,280 @@
+# Industrials & Manufacturing company exposures.
+# Cited figures come from each company's latest 10-K (the same filing as the baseline in
+# data/snapshots/baselines.json; Deere's fiscal year ends 2025-11-02, the others 2025-12-31) or from the
+# SEC XBRL companyfacts data behind it. Capex = PaymentsToAcquirePropertyPlantAndEquipment
+# (GE: PaymentsToAcquireProductiveAssets).
+industry: industrials
+companies:
+  CAT:
+    ind_steel_share_of_cogs:
+      value: 0.15
+      low: 0.10
+      high: 0.20
+      source: estimate
+      rationale: "Caterpillar's 10-K calls it 'a significant user of steel' and says unformed materials include a variety of steel products cut and machined in its plants; heavy machinery frames, buckets, castings and forgings make steel the largest single material input, but most of the $44.8B cost of goods sold is components, labor and overhead."
+      source_url: https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Caterpillar buys steel; it does not sell it.
+    ind_us_pretax_income_share:
+      value: 0.47
+      low: 0.40
+      high: 0.50
+      source: "Caterpillar 2025 10-K tax note: U.S. pretax income $5,407M of $11,541M (47%); 47% in 2024 and 50% in 2023"
+      source_url: https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+    ind_us_capex_musd:
+      value: 1750
+      low: 1500
+      high: 2000
+      source: "Caterpillar 2025 10-K: capex $2,821M (XBRL PaymentsToAcquirePropertyPlantAndEquipment) × 62% of net PP&E inside the US ($9,455M of $15,140M)"
+      source_url: https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+      rationale: Allocates capex by the US share of the PP&E stock; the range allows for the US share of new spending to differ.
+    ind_us_qre_musd:
+      value: 1300
+      low: 900
+      high: 2000
+      source: estimate
+      rationale: "R&D expense was $2,148M in 2025 (XBRL); about 60% assumed performed in the US. The 10-K gives no research-credit amount, and peers' reported credits (DE, HON, GE) imply qualifying spend above their R&D expense, so the high end is wide."
+      source_url: https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+    ind_infrastructure_capture_share:
+      value: 0.010
+      low: 0.004
+      high: 0.020
+      source: estimate
+      rationale: "Equipment is a modest share of highway and bridge construction cost, and Caterpillar is the largest US construction-equipment maker; about 1 cent of each new federal infrastructure dollar becomes Caterpillar revenue (machines bought or rented by contractors, plus parts)."
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.005
+      high: 0.02
+      source: estimate
+      rationale: Caterpillar sells engines and machines to the US military but does not disclose government sales, implying they are small relative to $67.6B revenue.
+  DE:
+    ind_steel_share_of_cogs:
+      value: 0.12
+      low: 0.08
+      high: 0.16
+      source: estimate
+      rationale: "Deere's 10-K lists a variety of steel products, metal castings and forgings first among purchased materials; tractors and combines are somewhat less steel-intensive per dollar of cost than Caterpillar's earthmoving and mining machines."
+      source_url: https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Deere buys steel; it does not sell it.
+    ind_us_pretax_income_share:
+      value: 0.43
+      low: 0.40
+      high: 0.64
+      source: "Deere FY2025 10-K tax note: U.S. pretax income $2.7B of $6.3B (43%); 64% in FY2024, 60% in FY2023, 55% in FY2022"
+      source_url: https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm
+      rationale: FY2025 was a down year for US farm equipment, so the US share could recover toward its FY2022–24 level of 55–64%.
+    ind_us_capex_musd:
+      value: 707
+      low: 600
+      high: 850
+      source: "Deere FY2025 10-K: capex $1,360M (XBRL PaymentsToAcquirePropertyPlantAndEquipment) × 52% of property and equipment in the U.S. ($4,198M of $8,079M)"
+      source_url: https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm
+    ind_us_qre_musd:
+      value: 1600
+      low: 1200
+      high: 1900
+      source: estimate
+      rationale: "R&D expense $2,311M in FY2025 (XBRL), roughly 60% in the US ≈ $1.4B; the 10-K tax note shows research and business credits of $131M, which at the 14% alternative simplified credit on about half of QREs implies up to ~$1.9B."
+      source_url: https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm
+    ind_infrastructure_capture_share:
+      value: 0.004
+      low: 0.001
+      high: 0.008
+      source: estimate
+      rationale: Deere's Construction & Forestry segment (road-building via Wirtgen, plus earthmoving) is much smaller than Caterpillar's construction business, so it captures well under half of Caterpillar's share.
+    govcon_defense_intel_share:
+      value: 0.0
+      low: 0.0
+      high: 0.005
+      source: estimate
+      rationale: Deere discloses no material sales to the US government; its products are agricultural, turf and construction equipment.
+  GE:
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Jet engines are built mainly from nickel superalloys, titanium and composites; specialty steel (shafts, bearings, cases) is a small share of a cost base dominated by high-value parts and labor.
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: GE Aerospace buys steel; it does not sell it.
+    ind_us_pretax_income_share:
+      value: 0.67
+      low: 0.63
+      high: 0.69
+      source: "GE Aerospace 2025 10-K tax note: U.S. pretax income $6,659M of $10,000M (67%); 63% in 2024, 69% in 2023"
+      source_url: https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm
+    ind_us_capex_musd:
+      value: 917
+      low: 800
+      high: 1050
+      source: "GE Aerospace 2025 10-K: capex $1,273M (XBRL PaymentsToAcquireProductiveAssets) × 72% of long-lived assets in the U.S. ($5,736M of $7,988M)"
+      source_url: https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm
+    ind_us_qre_musd:
+      value: 2500
+      low: 1250
+      high: 5000
+      source: estimate
+      rationale: "Company-funded R&D was $1,580M in 2025 (XBRL), mostly US; the 10-K tax note shows a $354M R&D credit, which at ~7% of QREs (14% on the half above the base) implies up to ~$5B, likely including customer- and partner-funded engineering and prior-year claims. Base sits between the two."
+      source_url: https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm
+    ind_infrastructure_capture_share:
+      value: 0.0002
+      low: 0.0
+      high: 0.001
+      source: estimate
+      rationale: GE Aerospace sells aircraft engines and services; roads, bridges and water projects buy almost nothing from it (airport grants do not buy engines).
+    govcon_defense_intel_share:
+      value: 0.10
+      low: 0.09
+      high: 0.11
+      source: "GE Aerospace 2025 10-K: sales of equipment and services to agencies of the U.S. Government were 10% of total revenue (12% in 2024, 14% in 2023)"
+      source_url: https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm
+      rationale: Almost all GE's US government sales are military engines and services (including foreign military sales through the US Air Force), so the government share approximates the defense share.
+  HON:
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.06
+      source: estimate
+      rationale: "Honeywell's 10-K names steel among Aerospace Technologies' metals (with nickel and titanium) and copper, aluminum and others in other segments; its automation, building and aerospace electronics are not steel-intensive."
+      source_url: https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Honeywell buys steel; it does not sell it.
+    ind_us_pretax_income_share:
+      value: 0.20
+      low: 0.07
+      high: 0.27
+      source: "Honeywell 2025 10-K tax note: U.S. pretax income $373M of $5,476M (7%) in 2025, $1,442M (23%) in 2024 and $1,652M (27%) in 2023"
+      source_url: https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
+      rationale: The 2025 US share looks depressed by one-off charges (the 2025 rate reconciliation shows $164M of impairment losses), so the base uses a share closer to 2023–24; the low end is the 2025 actual.
+    ind_us_capex_musd:
+      value: 680
+      low: 590
+      high: 780
+      source: "Honeywell 2025 10-K: capex $986M (XBRL PaymentsToAcquirePropertyPlantAndEquipment) × 69% of long-lived assets in the United States ($3,192M of $4,628M)"
+      source_url: https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
+    ind_us_qre_musd:
+      value: 2000
+      low: 1000
+      high: 3000
+      source: estimate
+      rationale: "R&D expense was $1,812M in 2025 (XBRL), of which about 60% is US-based ≈ $1.1B; the 10-K tax note shows a $214M research credit, which at ~7% of QREs implies ~$3B including engineering charged to cost of sales."
+      source_url: https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
+    ind_infrastructure_capture_share:
+      value: 0.001
+      low: 0.0
+      high: 0.003
+      source: estimate
+      rationale: Honeywell sells building automation, controls and safety products that go into public buildings, transit and utility projects, but roads and bridges buy little from it.
+    govcon_defense_intel_share:
+      value: 0.11
+      low: 0.10
+      high: 0.13
+      source: "Honeywell 2025 10-K: sales to the U.S. Department of Defense $4,209M (as prime and subcontractor) of $37,442M net sales = 11.2%; total U.S. government sales $4,752M"
+      source_url: https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
+  MMM:
+    ind_steel_share_of_cogs:
+      value: 0.02
+      low: 0.01
+      high: 0.04
+      source: estimate
+      rationale: 3M's materials are mainly resins, films, adhesives, chemicals and minerals; steel enters through equipment, packaging and a few products (abrasives backings, fasteners).
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 3M buys steel; it does not sell it.
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.44
+      high: 0.52
+      source: "3M 2025 10-K tax note: United States pretax income $1,870M of $4,213M (44%); 48% in 2024, 52% in 2022 (2023 distorted by a $13.3B litigation charge)"
+      source_url: https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm
+    ind_us_capex_musd:
+      value: 565
+      low: 500
+      high: 663
+      source: "3M 2025 10-K: capital spending $910M, of which Americas $663M (73%); US share assumed ~62% (Americas includes Canada and Latin America)"
+      source_url: https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm
+      rationale: The high end treats all Americas capex as US.
+    ind_us_qre_musd:
+      value: 700
+      low: 450
+      high: 1000
+      source: estimate
+      rationale: "3M 2025 10-K: research, development and related expenses $1,169M (4.7% of sales); about 60% assumed US-based and qualifying. The 2024 rate reconciliation shows a US R&D credit of 0.7% of pretax income (~$34M), consistent with the lower end."
+      source_url: https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0005
+      high: 0.004
+      source: estimate
+      rationale: 3M sells reflective sheeting for road signs, pavement markings and other transportation-safety products, a small slice of road-project budgets.
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.005
+      high: 0.02
+      source: estimate
+      rationale: 3M sells safety and industrial products to the military but does not disclose government sales as material; 56% of 2025 revenue came from outside the US.
+  NUE:
+    ind_steel_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: Nucor makes its own steel from scrap and DRI; the cost channel is not applied to it (domestic-producer role). Higher scrap costs are handled by the flow-through assumption instead.
+    ind_domestic_steel_sales_share:
+      value: 0.88
+      low: 0.80
+      high: 0.93
+      source: "Nucor 2025 10-K: steel mills $20,003M + steel products $10,327M = 93% of $32,494M external sales (raw materials $2,164M); 98% of 2025 pretax income was domestic"
+      source_url: https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+      rationale: "Nucor gives no revenue by country; the base assumes ~5% of steel sales are to Canada/Mexico or exports and are not priced off the protected US market."
+    ind_us_pretax_income_share:
+      value: 0.98
+      low: 0.98
+      high: 0.99
+      source: "Nucor 2025 10-K tax note: domestic pretax income $2,514M of $2,568M (98%); 99% in 2023 and 2024"
+      source_url: https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+    ind_us_capex_musd:
+      value: 3350
+      low: 3200
+      high: 3422
+      source: "Nucor 2025 10-K: capex $3,422M (XBRL PaymentsToAcquirePropertyPlantAndEquipment); nearly all facilities are in the US (one DRI plant in Trinidad, some products plants in Canada/Mexico)"
+      source_url: https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+    ind_us_qre_musd:
+      value: 500
+      low: 300
+      high: 650
+      source: estimate
+      rationale: "Nucor reports no R&D expense line, but its rate reconciliation shows a federal research credit of 1.55% of 2024 pretax income (~$45M), which at ~7% of QREs implies ~$650M of qualifying process engineering; 0.51% in 2023 implies less."
+      source_url: https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+    ind_infrastructure_capture_share:
+      value: 0.015
+      low: 0.008
+      high: 0.025
+      source: estimate
+      rationale: "Rebar, beams, plate, piling (Skyline Steel) and fabricated products are a meaningful share of bridge, road and water project costs; Nucor is the largest US steelmaker, and Buy America rules steer federally funded steel to US mills."
+    govcon_defense_intel_share:
+      value: 0.0
+      low: 0.0
+      high: 0.005
+      source: estimate
+      rationale: Nucor sells steel to fabricators and manufacturers; any defense demand is indirect and not modelled here.

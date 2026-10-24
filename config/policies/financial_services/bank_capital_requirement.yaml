@@ -1,0 +1,37 @@
+id: bank_capital_requirement
+industry: financial_services
+name: Higher bank capital requirements (CET1)
+description: Regulators raise required common equity tier 1 capital (for example a Basel III endgame or GSIB surcharge change), so banks hold more equity against the same assets. Earnings don't change but return on equity falls, which lowers value; banks running closest to their minimums feel it most.
+persistence: permanent
+user_inputs:
+  - key: d_ratio_pp
+    label: Increase in required CET1 ratio
+    unit: percentage points
+    min: 0
+    max: 4
+    step: 0.25
+    default: 1
+    help: Assumes banks keep their current buffer over the minimum, so their actual CET1 ratio rises one-for-one. The 2023 Basel III endgame proposal implied roughly a 2 pp rise for the largest banks; later re-proposals were much smaller.
+assumptions:
+  - key: mm_offset
+    label: Modigliani–Miller offset (fall in required return on safer equity)
+    unit: fraction
+    low: 0
+    base: 0.4
+    high: 0.75
+    source: estimate
+    rationale: Pure Modigliani–Miller implies a full offset; studies such as Miles, Yang & Marcheggiano (2013, Economic Journal) find a large but partial one, and taxes and implicit guarantees keep it below 1. We use 0.4 with a wide range.
+channels:
+  - type: bank_capital
+    label: Lower return on equity from more capital
+    params:
+      cet1_ratio: exposure.cet1_ratio_std
+      d_ratio: input.d_ratio_pp / 100
+      mm_offset: assumption.mm_offset
+exposure_keys: [cet1_ratio_std]
+references:
+  - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm
+  - https://www.bankofengland.co.uk/external-mpc-discussion-paper/2011/optimal-bank-capital
+narrative:
+  extra: "This is a value effect only: EPS is unchanged, but the same earnings now sit on a bigger equity base, so ROE and the price-to-book multiple fall."

@@ -1,0 +1,45 @@
+id: credit_card_late_fee_cap
+industry: financial_services
+name: Credit card late-fee cap
+description: Caps the late fee large card issuers may charge, like the CFPB's 2024 $8 rule (vacated by a federal court in April 2025). Citi, with its private-label Retail Services book, has the most late-fee revenue relative to its size; Apple Card (Goldman) charges no late fees.
+persistence: permanent
+user_inputs:
+  - key: fee_cut_usd
+    label: Cut in the typical late fee
+    unit: $ per late payment
+    min: 0
+    max: 35
+    step: 1
+    default: 24
+    help: The CFPB's 2024 rule cut the safe harbor from about $32 to $8 (a $24 cut) for issuers with 1 million+ open accounts; the old safe harbors were $30 for a first late payment and $41 for later ones.
+assumptions:
+  - key: current_avg_fee
+    label: Typical late fee today
+    unit: $
+    low: 30
+    base: 32
+    high: 35
+    source: "CFPB (Mar 2024): average late fee at major issuers rose from $23 at end-2010 to $32 in 2022"
+    source_url: https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
+    rationale: Range brackets the $30/$41 first/repeat safe harbors issuers actually charged.
+  - key: offset_share
+    label: Share of lost late-fee revenue recouped (higher APRs, other fees)
+    unit: fraction
+    low: 0
+    base: 0.3
+    high: 0.6
+    source: estimate
+    rationale: Issuers said they would raise APRs and tighten credit to replace lost fees; after the CARD Act and Durbin, banks recovered only part of lost fees, so we assume about a third.
+channels:
+  - type: price
+    label: Lower late-fee revenue
+    params:
+      d_price: -min(input.fee_cut_usd, assumption.current_avg_fee) / assumption.current_avg_fee
+      exposed_revenue_share: exposure.card_late_fee_revenue_share
+      offset_share: assumption.offset_share
+exposure_keys: [card_late_fee_revenue_share]
+references:
+  - https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
+  - https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court
+narrative:
+  extra: "The CFPB put total card late fees at over $14 billion in 2022 and expected the $8 cap to save consumers more than $10 billion a year; company late-fee revenue is not disclosed, so each bank's exposure is estimated from its card balances."

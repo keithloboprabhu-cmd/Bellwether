@@ -1,0 +1,35 @@
+id: continuing_resolution
+industry: public_sector
+name: Continuing resolution
+description: A continuing resolution funds agencies at last year's level and bars new starts, so revenue from new awards and scope growth slips by the length of the CR. Revenue is delayed rather than lost, so it is a one-year hit.
+persistence: one_time
+user_inputs:
+  - key: months_delayed
+    label: Length of the continuing resolution
+    unit: months
+    min: 0
+    max: 12
+    step: 1
+    default: 3
+    help: Government fiscal 2026 opened with a shutdown followed by a continuing resolution; fiscal 2025 ran on a full-year CR (CACI FY2026 10-K refers to the GFY25 full-year CR level).
+assumptions:
+  - key: new_award_share
+    label: Share of annual revenue from new awards and new starts
+    unit: fraction
+    low: 0.05
+    base: 0.10
+    high: 0.20
+    source: estimate
+    rationale: Contractors typically enter a year with most revenue covered by backlog and option years on existing contracts; new business and new-start programs that a CR delays are roughly a tenth of a year's revenue.
+channels:
+  - type: gov_cr
+    label: New awards delayed by the CR
+    params:
+      gov_revenue_share: exposure.govcon_us_gov_share
+      months_delayed: input.months_delayed
+      new_award_share: assumption.new_award_share
+exposure_keys: [govcon_us_gov_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+  - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm

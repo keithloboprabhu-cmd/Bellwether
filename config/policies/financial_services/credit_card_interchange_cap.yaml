@@ -1,0 +1,46 @@
+id: credit_card_interchange_cap
+industry: financial_services
+name: Credit card interchange cap
+description: A Durbin-style cap on the interchange fee card issuers earn on Visa and Mastercard credit card purchases. JPMorgan and Citi, the largest credit issuers, lose the most; issuers claw much of it back by cutting rewards. Amex's three-party network is assumed exempt, as under the Durbin amendment.
+persistence: permanent
+user_inputs:
+  - key: cap_pct
+    label: Interchange cap
+    unit: percent of purchase
+    min: 0.2
+    max: 2.5
+    step: 0.1
+    default: 1
+    help: The EU caps consumer credit interchange at 0.3%; the Durbin amendment caps large-bank debit at about 0.05% + 21¢. US credit interchange is roughly 2% today.
+assumptions:
+  - key: current_rate_pct
+    label: Average US credit interchange rate today
+    unit: percent of purchase
+    low: 1.8
+    base: 2.0
+    high: 2.3
+    source: estimate
+    rationale: Visa and Mastercard's published US consumer credit rates run from about 1.4% to 2.6% depending on card tier and merchant; rewards-heavy mix puts the average near 2%.
+  - key: rewards_offset
+    label: Share of lost interchange recouped by cutting rewards and partner payments
+    unit: fraction
+    low: 0.25
+    base: 0.5
+    high: 0.75
+    source: estimate
+    rationale: Rewards and partner payments consume most interchange (JPM $29.7B vs $36.2B of interchange and merchant processing income in 2025); after Durbin, banks dropped debit rewards, but Fed research (Kay, Manuszak & Vojtech 2014) finds only partial offset through other fees.
+    source_url: https://www.federalreserve.gov/econres/feds/bank-profitability-and-debit-card-interchange-regulation-bank-responses-to-the-durbin-amendment.htm
+channels:
+  - type: price
+    label: Lower credit card interchange
+    params:
+      d_price: min(0, input.cap_pct / assumption.current_rate_pct - 1)
+      exposed_revenue_share: exposure.credit_interchange_revenue_share
+      offset_share: assumption.rewards_offset
+exposure_keys: [credit_interchange_revenue_share]
+references:
+  - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm
+  - https://www.federalreserve.gov/econres/feds/bank-profitability-and-debit-card-interchange-regulation-bank-responses-to-the-durbin-amendment.htm
+narrative:
+  extra: "Gross credit interchange is estimated from disclosed card income and purchase volumes; the rewards offset is what keeps the EPS hit well below the gross revenue loss."

@@ -1,0 +1,43 @@
+id: vehicle_emissions_credit_rollback
+industry: transportation_logistics
+name: Weaker vehicle emissions standards (credit market shrinks)
+description: Loosening or repealing federal GHG/CAFE standards and California ZEV rules lowers the value of the regulatory credits automakers trade. Tesla loses high-margin credit revenue, and credit buyers save. In this universe only Tesla and GM are exposed.
+persistence: permanent
+user_inputs:
+  - key: credit_value_change_pct
+    label: Change in regulatory credit revenue
+    unit: percent
+    min: -100
+    max: 50
+    step: 5
+    default: -50
+    help: "Percent change in what automakers pay for compliance credits. Tesla's credit revenue already fell 28% in 2025 after OBBBA zeroed CAFE penalties; -100% means the market disappears."
+assumptions:
+  - key: margin_on_credits
+    label: Share of credit revenue that is profit
+    unit: fraction
+    low: 0.9
+    base: 1.0
+    high: 1.0
+    source: "Tesla 2025 10-K: regulatory credits have negligible incremental costs"
+    source_url: https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+channels:
+  - type: price
+    label: Lower regulatory credit revenue
+    params:
+      d_price: input.credit_value_change_pct / 100
+      exposed_revenue_share: exposure.tl_regulatory_credit_revenue_share
+      offset_share: 1 - assumption.margin_on_credits
+  - type: cost
+    label: Cheaper compliance credits for buyers
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: exposure.tl_regulatory_credit_purchases_musd * input.credit_value_change_pct / 100
+exposure_keys: [tl_regulatory_credit_revenue_share, tl_regulatory_credit_purchases_musd]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm
+narrative:
+  extra: "Tesla's $1,993M of 2025 credit revenue is nearly all profit, about 40% of its pre-tax income, so even a partial rollback hits its EPS hard. GM's slower EV plans would also lower its future compliance costs, which this policy does not model."

@@ -1,0 +1,34 @@
+id: fixed_price_shift
+industry: public_sector
+name: Shift to fixed-price contracts
+description: Agencies convert part of their cost-plus work to firm-fixed-price, as recent administration acquisition policy has pushed; the converted work's margin changes. Approximation via the price channel — the margin change is applied as a price change on converted revenue, so EBIT is right but the revenue change is only the margin piece.
+persistence: permanent
+user_inputs:
+  - key: conversion_pct
+    label: Share of cost-plus revenue converted to fixed-price
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 20
+    help: Share of each firm's cost-plus revenue that moves to firm-fixed-price terms (new awards and renegotiated existing contracts).
+assumptions:
+  - key: d_margin_pp
+    label: Margin change on converted work (percentage points)
+    unit: percentage points
+    low: -3
+    base: -1
+    high: 2
+    source: estimate
+    rationale: Cost-plus fees are usually mid-single-digit; fixed-price services can earn more but carry overrun risk, and agencies will demand price cuts at conversion to bank savings. Net central case is a small margin loss; efficient operators could gain (high end).
+channels:
+  - type: price
+    label: Margin change on work converted to fixed-price
+    params:
+      d_price: assumption.d_margin_pp / 100
+      exposed_revenue_share: exposure.govcon_cost_plus_share * input.conversion_pct / 100
+exposure_keys: [govcon_cost_plus_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+  - https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm

@@ -1,0 +1,52 @@
+id: carbon_tax_transport_fuel
+industry: transportation_logistics
+name: Carbon price on transport fuel
+description: A per-tonne CO2 charge on jet fuel, diesel and other fossil fuels burned in the US. Delta carries the largest bill and recovers the least of it; UPS, FedEx and Union Pacific pass most of theirs through fuel surcharges. Tesla's and GM's direct fuel use is small.
+persistence: permanent
+user_inputs:
+  - key: price_per_ton
+    label: Carbon price
+    unit: USD per tonne CO2
+    min: 0
+    max: 200
+    step: 5
+    default: 50
+    help: Charge per metric tonne of CO2 from fuel combustion, collected upstream and passed into fuel prices. $50/t adds about 49¢/gal to jet fuel and 51¢/gal to diesel.
+assumptions:
+  - key: elasticity
+    label: Freight and travel demand elasticity
+    unit: number
+    low: 0.3
+    base: 0.6
+    high: 1.0
+    source: estimate
+    rationale: Aggregate freight and national air-travel demand is inelastic. InterVISTAS (2007) uses 0.8 for national air fares, and freight demand is generally less elastic than that.
+    source_url: https://WWW.CAA.CO.UK/media/qcrcutdj/annex-3-stansted-s-own-airport-charge-elasticity-a-summary-of-the-evidence-and-research.pdf
+  - key: variable_cost_share
+    label: Share of costs that shrink with volume
+    unit: fraction
+    low: 0.4
+    base: 0.5
+    high: 0.6
+    source: estimate
+    rationale: Fuel, purchased transport and some labour scale with volume; aircraft, track and facility costs do not in the near term.
+derived:
+  carbon_cost_musd: input.price_per_ton * exposure.tl_fuel_co2_mt
+channels:
+  - type: cost
+    label: Carbon charge on fuel burned
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: derived.carbon_cost_musd
+      pass_through: exposure.tl_fuel_cost_recovery_share
+      elasticity: assumption.elasticity
+      variable_cost_share: assumption.variable_cost_share
+exposure_keys: [tl_fuel_co2_mt, tl_fuel_cost_recovery_share]
+default_role: neutral
+references:
+  - https://www.eia.gov/environment/emissions/co2_vol_mass.php
+  - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm
+narrative:
+  extra: "Surcharge-indexed carriers (UPS, FedEx, Union Pacific) recover most of the charge within weeks. Delta has no domestic fuel surcharge, and its ~4.3B gallons a year make it the biggest payer. The EV demand a carbon price on gasoline would add for Tesla and GM is not modelled."

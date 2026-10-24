@@ -1,0 +1,52 @@
+id: airline_ticket_tax_change
+industry: transportation_logistics
+name: Change in the domestic airline ticket tax
+description: Raises or lowers the 7.5% federal excise tax on domestic airfares, which funds the Airport and Airway Trust Fund. Only Delta is exposed in this universe; the 6.25% air cargo waybill tax is not changed.
+persistence: permanent
+user_inputs:
+  - key: d_tax_pts
+    label: Change in ticket tax rate
+    unit: points
+    min: -7.5
+    max: 10
+    step: 0.5
+    default: 2.5
+    help: Percentage-point change to the 7.5% domestic passenger ticket tax (e.g. +2.5 takes it to 10%).
+assumptions:
+  - key: consumer_incidence
+    label: Share of the tax borne by passengers
+    unit: fraction
+    low: 0.5
+    base: 0.75
+    high: 1.0
+    source: estimate
+    rationale: Ticket taxes are listed separately on fares, so most of a change reaches passengers, but in competitive markets airlines absorb part of it by trimming base fares.
+  - key: elasticity
+    label: Air travel demand elasticity
+    unit: number
+    low: 0.6
+    base: 0.8
+    high: 1.4
+    source: "InterVISTAS (2007) for IATA: base fare elasticities 1.4 route, 0.8 national, 0.6 pan-national (summarized by the UK CAA)"
+    source_url: https://WWW.CAA.CO.UK/media/qcrcutdj/annex-3-stansted-s-own-airport-charge-elasticity-a-summary-of-the-evidence-and-research.pdf
+derived:
+  dtax_rel: input.d_tax_pts / 100 / 1.075
+channels:
+  - type: demand_price
+    label: Fewer domestic trips at higher all-in fares
+    params:
+      dp_consumer: derived.dtax_rel * assumption.consumer_incidence
+      elasticity: assumption.elasticity
+      exposed_revenue_share: exposure.tl_domestic_passenger_revenue_share
+  - type: price
+    label: Base fares cut to absorb part of the tax
+    params:
+      d_price: -derived.dtax_rel * (1 - assumption.consumer_incidence)
+      exposed_revenue_share: exposure.tl_domestic_passenger_revenue_share
+exposure_keys: [tl_domestic_passenger_revenue_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+  - https://WWW.CAA.CO.UK/media/qcrcutdj/annex-3-stansted-s-own-airport-charge-elasticity-a-summary-of-the-evidence-and-research.pdf
+narrative:
+  extra: "Delta's domestic passenger revenue was $35.7B in 2025, 56% of total revenue. Revenue excludes the tax itself, so only fare cuts and lost trips reach Delta."

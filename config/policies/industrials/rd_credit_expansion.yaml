@@ -1,0 +1,36 @@
+id: rd_credit_expansion
+industry: industrials
+name: Bigger federal R&D tax credit
+description: Raising the research credit rate cuts tax for companies that do a lot of US research. GE Aerospace, Honeywell and Deere gain the most; Nucor gains a little on process engineering.
+persistence: permanent
+user_inputs:
+  - key: d_credit_pts
+    label: Increase in the research credit rate
+    unit: percentage points
+    min: 0
+    max: 14
+    step: 1
+    default: 6
+    help: Added to the 14% alternative simplified credit (Section 41(c)(4)), which most large companies use. +6 points takes it to 20%, the rate of the regular credit.
+assumptions:
+  - key: incremental_share
+    label: Share of QREs the credit rate applies to
+    unit: fraction
+    low: 0.45
+    base: 0.5
+    high: 0.6
+    source: "26 U.S.C. §41(c)(4): the alternative simplified credit is 14% of qualified research expenses above 50% of the average for the 3 prior years"
+    source_url: https://www.law.cornell.edu/uscode/text/26/41
+    rationale: With flat research spending the credit applies to half of QREs; growing spending raises the share and shrinking spending lowers it.
+channels:
+  - type: tax_credit
+    label: Larger credit on US research spending
+    params:
+      credit_rate: input.d_credit_pts / 100 * assumption.incremental_share
+      base_musd: exposure.ind_us_qre_musd
+exposure_keys: [ind_us_qre_musd]
+default_role: neutral
+references:
+  - https://www.law.cornell.edu/uscode/text/26/41
+narrative:
+  extra: "Companies that elect the reduced credit under Section 280C keep about 79% of it, so the gain may be somewhat smaller than shown."

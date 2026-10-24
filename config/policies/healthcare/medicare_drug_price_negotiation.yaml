@@ -1,0 +1,37 @@
+id: medicare_drug_price_negotiation
+industry: healthcare
+name: Medicare drug price negotiation
+description: Negotiated Medicare prices (IRA program) cut net prices on selected drugs. Pfizer (Eliquis, Ibrance, Xtandi, Xeljanz) and Lilly (Jardiance, Tradjenta, Trulicity, Verzenio) lose revenue on their Medicare sales; insurers' Part D effects are bid through and not modelled.
+persistence: permanent
+user_inputs:
+  - key: net_price_cut_pct
+    label: Net price cut on selected drugs
+    unit: percent
+    min: 0
+    max: 70
+    step: 1
+    default: 30
+    help: Cut to the manufacturer's current Medicare net price (after rebates). CMS reported 44% net savings on the 2027 drugs; savings versus list are larger (2027 MFPs were 38–85% below list).
+assumptions:
+  - key: volume_offset
+    label: Share of the revenue loss recovered through higher volume
+    unit: fraction
+    low: 0
+    base: 0.1
+    high: 0.25
+    source: estimate
+    rationale: Lower patient cost-sharing and fewer plan utilization controls on negotiated drugs can lift volume a little; most of the cut is not recovered.
+channels:
+  - type: price
+    label: Negotiated Medicare prices on selected drugs
+    params:
+      d_price: -input.net_price_cut_pct / 100
+      exposed_revenue_share: exposure.negotiated_drug_medicare_revenue_share
+      offset_share: assumption.volume_offset
+exposure_keys: [negotiated_drug_medicare_revenue_share]
+default_role: neutral
+references:
+  - https://www.cms.gov/newsroom/press-releases/cms-delivers-savings-seniors-15-major-drugs-cancer-chronic-disease
+  - https://www.milliman.com/en-GB/insight/key-takeaways-third-medicare-drug-price-negotiation
+narrative:
+  extra: "CMS said the 2027 round produced net savings of 44% ($12 billion) on 15 drugs; the 2028 list adds Lilly's Trulicity and Verzenio and Pfizer's Xeljanz."

@@ -1,0 +1,52 @@
+id: student_loan_borrowing_caps
+industry: education
+name: Graduate student loan caps (end of Grad PLUS)
+description: The 2025 reconciliation law (P.L. 119-21) ended Grad PLUS for new borrowers and set new annual, aggregate and lifetime caps on federal graduate and professional loans from July 1, 2026. Schools whose students borrowed beyond the caps lose some enrollment and must hold down tuition. Covista's Caribbean medical schools and Walden are the most exposed, then Strategic Education's Capella and Grand Canyon.
+persistence: permanent
+user_inputs:
+  - key: affected_pct
+    label: Share of above-cap students already under the new caps
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 60
+    help: The caps apply to new borrowers from July 1, 2026, and some provisions apply only prospectively (Covista FY2026 10-K), so continuing students are grandfathered for a while. 100 is the fully phased-in law; the default reflects the first years, when most but not all of the student body is new.
+assumptions:
+  - key: lost_enrollment
+    label: Enrollment lost among affected above-cap borrowers
+    unit: fraction
+    low: 0.05
+    base: 0.15
+    high: 0.3
+    source: estimate
+    rationale: "Black, Turner & Denning (NBER w31291, 2023) found that uncapping graduate loans in 2006 did not improve access or completion, which suggests re-capping costs moderate enrollment; some students switch to private loans, cheaper programs or employer aid, while others (e.g. Caribbean medical students with large gaps) cannot."
+    source_url: https://www.nber.org/papers/w31291
+  - key: price_concession
+    label: Tuition cut or extra aid for above-cap students
+    unit: fraction
+    low: 0
+    base: 0.05
+    high: 0.12
+    source: estimate
+    rationale: "Black, Turner & Denning (NBER w31291, 2023) find that federal borrowing and prices rose after 2006 at programs where more students had hit the old federal limit, which implies prices should fall back when credit is capped again. A FREOPP summary puts ~64% of the extra loan dollars into tuition (not checked against the paper). Assumes schools give back ~5% of tuition through discounts, scholarships or institutional loans."
+    source_url: https://www.nber.org/papers/w31291
+channels:
+  - type: demand_volume
+    label: Fewer graduate students who borrowed above the caps
+    params:
+      d_volume: -input.affected_pct / 100 * assumption.lost_enrollment
+      exposed_revenue_share: exposure.grad_plus_dependent_revenue_share
+  - type: price
+    label: Tuition discounts for students who borrowed above the caps
+    params:
+      d_price: -input.affected_pct / 100 * assumption.price_concession * (1 - assumption.lost_enrollment)
+      exposed_revenue_share: exposure.grad_plus_dependent_revenue_share
+exposure_keys: [grad_plus_dependent_revenue_share]
+default_role: neutral
+references:
+  - https://www.nber.org/papers/w31291
+  - https://freopp.org/?p=3907
+  - https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+narrative:
+  extra: "Covista's FY2026 10-K warns that the new borrowing limits 'may materially reduce the amount of loan funding available to students'; caps on Parent PLUS and part-time aid also matter but are not modelled here."

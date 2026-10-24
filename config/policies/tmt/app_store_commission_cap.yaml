@@ -1,0 +1,44 @@
+id: app_store_commission_cap
+industry: tmt
+name: App-store commission cap
+description: A cap on the commission app-store operators may charge on US in-app and paid-app sales. It cuts Apple's and Google's high-margin store revenue; Meta and others that pay those fees are not credited with savings here.
+persistence: permanent
+user_inputs:
+  - key: max_commission_pct
+    label: Maximum commission
+    unit: percent
+    min: 5
+    max: 30
+    step: 1
+    default: 15
+    help: Standard rates are 30%, or 15% for small developers and subscriptions after year one. A 0% cap is not meaningful here; set 30% or more to switch the policy off.
+assumptions:
+  - key: current_rate
+    label: Current effective commission rate
+    unit: fraction
+    low: 0.22
+    base: 0.25
+    high: 0.28
+    source: estimate
+    rationale: Headline 30%, but small-business (15%) and second-year subscription (15%) rates bring the blended rate below 30%.
+  - key: offset_share
+    label: Share of lost commission recovered (more transactions, other fees)
+    unit: fraction
+    low: 0
+    base: 0.1
+    high: 0.25
+    source: estimate
+    rationale: Lower fees may lift app spending slightly, and stores could add or raise other charges (e.g. Apple's Core Technology Fee in the EU).
+channels:
+  - type: price
+    label: Lower app-store commissions
+    params:
+      d_price: -max(0, assumption.current_rate - input.max_commission_pct / 100) / assumption.current_rate
+      exposed_revenue_share: exposure.us_app_store_fee_share
+      offset_share: assumption.offset_share
+exposure_keys: [us_app_store_fee_share]
+references:
+  - https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
+  - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
+narrative:
+  extra: "Apple and Google don't disclose store commissions, so the exposure is an estimate; commissions are booked net, so the whole cut falls to operating income."

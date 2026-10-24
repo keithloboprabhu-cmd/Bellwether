@@ -133,7 +133,9 @@ pol = an.base.policy
 st.subheader(f"{pol.name} · {universe.industry(pol.industry).name}")
 inputs_txt = " · ".join(f"{u.label}: **{an.base.inputs[u.key]:g} {u.unit}**" for u in pol.user_inputs)
 st.markdown(inputs_txt)
-if decode(encode(current)) != decode(token):
+# compare on a normalised basis: a deep link may omit inputs that are at their defaults
+applied_full = {**applied, "in": {k: float(v) for k, v in {**pol.default_inputs(), **applied.get("in", {})}.items()}, "a": applied.get("a", {})}
+if decode(encode(current)) != decode(encode(applied_full)):
     st.caption("Sidebar has changes that aren't applied yet; press **Run** to update.")
 
 link = f"{st.context.url.split('?')[0]}?s={token}"

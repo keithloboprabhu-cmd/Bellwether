@@ -1,0 +1,40 @@
+id: federal_leasing_limits
+industry: energy_resources
+name: Federal oil & gas leasing limits
+description: >-
+  A pause on new oil and gas leases on federal lands and waters. Existing leases keep producing, so output from
+  federal acreage declines gradually as it depletes; the input is the eventual percentage drop in each company's
+  federal-land production. Modeled with the price channel as lost revenue net of avoided costs (royalties,
+  production taxes, operating costs), because company-wide contribution margins (16% for XOM, which includes refining)
+  understate upstream margins. Any world oil-price response is ignored (federal lands are ~3% of world supply).
+persistence: permanent
+user_inputs:
+  - key: production_decline_pct
+    label: Drop in federal-land production
+    unit: percent
+    min: 0
+    max: 100
+    step: 1
+    default: 10
+    help: Eventual decline in each company's output from federal lands and waters; existing leases and permits soften the near-term hit.
+assumptions:
+  - key: avoided_cost_share
+    label: Costs avoided per $ of lost revenue
+    unit: fraction
+    low: 0.3
+    base: 0.45
+    high: 0.6
+    source: estimate
+    rationale: Federal royalties (12.5-18.75%), severance taxes, lease operating and transport costs disappear with the barrels; capital not spent is not counted in EBIT.
+channels:
+  - type: price
+    label: Lost federal-land oil & gas output
+    params:
+      d_price: -input.production_decline_pct / 100
+      exposed_revenue_share: exposure.federal_upstream_revenue_share
+      offset_share: assumption.avoided_cost_share
+exposure_keys: [federal_upstream_revenue_share]
+references:
+  - https://www.eia.gov/todayinenergy/detail.php?id=65804
+narrative:
+  extra: "Federal onshore and offshore wells supplied about 27% of US crude in 2024 (EIA), but companies don't disclose their federal split, so exposures are estimates."

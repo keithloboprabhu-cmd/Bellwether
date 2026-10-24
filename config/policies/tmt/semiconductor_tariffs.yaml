@@ -1,0 +1,48 @@
+id: semiconductor_tariffs
+industry: tmt
+name: Tariffs on imported semiconductors and electronics
+description: A tariff on imported chips and the devices and servers that contain them raises the cost of imported hardware. Apple, NVIDIA and Verizon (handsets) carry most of it; for the cloud and ad platforms it mainly arrives slowly through server depreciation.
+persistence: permanent
+user_inputs:
+  - key: tariff_pct
+    label: Tariff rate
+    unit: percent
+    min: 0
+    max: 100
+    step: 1
+    default: 25
+    help: Ad valorem duty on the customs value of imported semiconductors and chip-containing products. Proposals discussed in 2025 ranged from 25% to 100%, often with exemptions for firms building in the US.
+assumptions:
+  - key: pass_through
+    label: Share of the cost increase passed to customers (φ)
+    unit: fraction
+    low: 0.25
+    base: 0.5
+    high: 0.8
+    source: estimate
+    rationale: Amiti, Redding & Weinstein (2019) find near-complete pass-through of 2018 tariffs to US import prices; device makers with pricing power (Apple, NVIDIA in a supply-constrained market) can pass on more, carriers that subsidize handsets less.
+    source_url: https://www.aeaweb.org/doi/10.1257/jep.33.4.187
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.3
+    base: 0.8
+    high: 1.3
+    source: estimate
+    rationale: Premium phones and AI accelerators in short supply are less price-sensitive than average retail goods; unit elasticity sits near the top of the range.
+channels:
+  - type: cost
+    label: Tariff on imported chips and hardware
+    params:
+      exposed_cost_share: exposure.us_import_share_of_cogs
+      shock_pct: input.tariff_pct / 100
+      pass_through: assumption.pass_through
+      elasticity: assumption.elasticity
+exposure_keys: [us_import_share_of_cogs]
+default_role: importer
+references:
+  - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
+  - https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
+  - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+narrative:
+  extra: "Hyperscalers' exposure is mostly future server capex, which reaches the income statement through depreciation over several years, so their base exposure is a partial phase-in."

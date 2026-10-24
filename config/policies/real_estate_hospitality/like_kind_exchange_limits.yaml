@@ -1,0 +1,37 @@
+id: like_kind_exchange_limits
+industry: real_estate_hospitality
+name: Limit 1031 like-kind exchanges
+description: Taxing part of the gains now deferred through Section 1031 exchanges makes private property buyers pay less, nudging cap rates up and REIT property values down. Exposure in this universe is small and value-only; REITs themselves rarely rely on 1031, and the hotel companies and Airbnb own little property.
+persistence: permanent
+user_inputs:
+  - key: taxed_share_pct
+    label: Share of exchange gains made taxable
+    unit: "%"
+    min: 0
+    max: 100
+    step: 5
+    default: 75
+    help: 100 = full repeal for real estate. A per-taxpayer cap on deferred gains, as proposed in 2021, would tax most large commercial exchanges (~75%).
+assumptions:
+  - key: cap_rate_rise_bps
+    label: Cap-rate rise at full repeal
+    unit: bps
+    low: 0
+    base: 10
+    high: 25
+    source: estimate
+    rationale: "The Ling-Petrova study (2016) predicts lower prices in the short run and higher rents later but gives no size; 10 bps is a small move since institutional buyers (REITs, pensions) don't use 1031."
+    source_url: https://www.ipx1031.com/wp-content/uploads/2016/07/Summary-Ling-Petrova-Study-5.2016.pdf
+channels:
+  - type: reit_nav
+    label: Lower private-market property prices
+    params:
+      d_10y_bps: assumption.cap_rate_rise_bps * input.taxed_share_pct / 100
+      cap_rate: exposure.re_implied_cap_rate
+      cap_rate_beta: exposure.re_property_value_share
+exposure_keys: [re_implied_cap_rate, re_property_value_share]
+default_role: neutral
+references:
+  - https://www.ipx1031.com/wp-content/uploads/2016/07/Summary-Ling-Petrova-Study-5.2016.pdf
+narrative:
+  extra: "No EPS effect: the channel is lower private-market property prices, which mark down REIT net asset value."

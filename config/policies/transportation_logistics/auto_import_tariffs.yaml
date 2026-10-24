@@ -1,0 +1,48 @@
+id: auto_import_tariffs
+industry: transportation_logistics
+name: Tariffs on imported vehicles and auto parts
+description: A Section 232-style tariff on imported cars, light trucks, medium/heavy trucks and parts, with USMCA-content relief. GM, which builds many US-sold vehicles in Mexico and Korea, carries most of it. Tesla's exposure is through parts. The parcel, rail and airline companies see it only in fleet costs.
+persistence: permanent
+user_inputs:
+  - key: tariff_pct
+    label: Tariff rate
+    unit: percent
+    min: 0
+    max: 50
+    step: 1
+    default: 25
+    help: Ad valorem tariff on the non-US content of imported vehicles and parts. The 2025 Section 232 auto tariffs were 25%.
+assumptions:
+  - key: pass_through
+    label: Share of the cost passed to buyers (φ)
+    unit: fraction
+    low: 0.2
+    base: 0.4
+    high: 0.7
+    source: estimate
+    rationale: In 2025 automakers absorbed most of the tariff to protect share, and GM reported a $3.1B EBIT hit. Pass-through rises if tariffs look permanent.
+    source_url: https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm
+  - key: elasticity
+    label: Vehicle demand elasticity
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: New-vehicle demand is roughly unit-elastic in aggregate; fleet buyers are less sensitive.
+channels:
+  - type: cost
+    label: Tariff on imported vehicles and parts
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: exposure.tl_auto_tariff_cost_at_25pct_musd * input.tariff_pct / 25
+      pass_through: assumption.pass_through
+      elasticity: assumption.elasticity
+exposure_keys: [tl_auto_tariff_cost_at_25pct_musd]
+default_role: importer
+references:
+  - https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+narrative:
+  extra: "GM's exposure scales its own 10-K estimate of a $3.0-4.0B 2026 tariff cost, which already nets out its mitigation. The rate is assumed to scale linearly. Lost cross-border auto traffic on Union Pacific is not modelled. Effects are measured against no tariff, but the 2025 baseline already absorbed ~$3.1B of real tariffs at GM, so at the 25% default the result mostly restates a cost already in the baseline. GM's large % move also reflects its depressed 2025 pre-tax income ($3.1B after $7.7B of EV charges)."

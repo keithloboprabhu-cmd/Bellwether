@@ -1,0 +1,47 @@
+id: earnings_accountability_test
+industry: education
+name: Program earnings test ("do no harm" accountability)
+description: Under the 2025 reconciliation law, degree programs whose graduates earn less than a benchmark (high-school graduates for undergraduate programs, bachelor's holders for graduate programs) lose Direct Loan eligibility. The first test runs in early 2027. Online for-profit graduate programs in counseling, psychology and education are the most at risk (Covista's Walden, Strategic's Capella, Grand Canyon); Stride and Duolingo are outside the rule.
+persistence: permanent
+user_inputs:
+  - key: fail_share_pct
+    label: Share of at-risk revenue in programs that actually fail
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 50
+    help: Of the revenue in programs near or below the benchmark, the share in programs that fail and lose loan access. Schools can cut prices, close or redesign weak programs, or appeal, so not every at-risk program fails.
+assumptions:
+  - key: enrollment_loss
+    label: Enrollment lost in a program that loses Direct Loan access
+    unit: fraction
+    low: 0.4
+    base: 0.6
+    high: 0.85
+    source: estimate
+    rationale: Most students at these schools borrow (Covista's Title IV institutions take 78% of revenue from federal aid, per its FY2026 10-K), so a program without loans loses most new students; some switch to a passing program at the same school.
+    source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+  - key: programs_failing_share
+    label: Share of all programs estimated to fail (for context)
+    unit: fraction
+    low: 0.04
+    base: 0.06
+    high: 0.08
+    source: estimate
+    rationale: "ED's January 2026 analysis, as summarised by EdTrust and in a web-search summary (ED's slides could not be opened to confirm), estimated ~6% of programs (~5% of Title IV students) would fail, including ~35% of for-profit programs and ~4% of master's programs; for-profit students are about 55% of enrolment in failing programs. Shown for context only; the company exposure keys carry the effect."
+    source_url: https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
+channels:
+  - type: demand_volume
+    label: Enrollment lost in programs that fail the earnings test
+    params:
+      d_volume: -input.fail_share_pct / 100 * assumption.enrollment_loss
+      exposed_revenue_share: exposure.earnings_test_at_risk_revenue_share
+exposure_keys: [earnings_test_at_risk_revenue_share]
+default_role: neutral
+references:
+  - https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
+  - https://ticas.org/accountability/earnings-metric-final-rule-blog/
+  - https://www.nasfaa.org/uploads/documents/Ppt3_ResultsofEarningsTestandGEChanges_v2.pdf
+narrative:
+  extra: "At-risk revenue shares are estimates; ED's program-level results arrive with the first official test in 2027."

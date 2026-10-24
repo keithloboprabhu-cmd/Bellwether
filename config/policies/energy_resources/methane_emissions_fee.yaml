@@ -1,0 +1,53 @@
+id: methane_emissions_fee
+industry: energy_resources
+name: Methane emissions fee
+description: >-
+  A per-tonne fee on methane from US oil and gas facilities, modeled on the IRA Waste Emissions Charge
+  ($1,500/t once fully phased in), charged only on emissions above facility thresholds. The 2025 budget law
+  pushed the charge back to 2034. Oil producers bear it; NEE, FSLR and FCX are essentially outside its scope.
+  Even at the full rate the hit is small next to these companies' earnings.
+persistence: permanent
+user_inputs:
+  - key: fee_per_ton
+    label: Fee per tonne of methane
+    unit: USD per t CH4
+    min: 0
+    max: 3000
+    step: 100
+    default: 1500
+    help: The IRA schedule was $900 (2024), $1,200 (2025) and $1,500 (2026 on); P.L. 119-21 moved the first charge to $1,500 in 2034.
+assumptions:
+  - key: chargeable_share
+    label: Share of reported methane above the waste thresholds
+    unit: fraction
+    low: 0.15
+    base: 0.34
+    high: 0.6
+    source: "CRS R48906 (2026), citing EPA's 2024 analysis: ~58.8 MMTCO2e reported under Subpart W fell to ~19.9 MMTCO2e chargeable after thresholds (0.2% of gas sent to sale for production) and netting (34%)"
+    source_url: https://www.everycrsreport.com/reports/R48906.html
+    rationale: Large, lower-intensity operators can net across facilities and may sit below the industry average; high end reflects stricter Subpart W measurement raising reported emissions.
+  - key: pass_through
+    label: Share of the fee passed to buyers
+    unit: fraction
+    low: 0
+    base: 0.05
+    high: 0.2
+    source: estimate
+    rationale: Oil and gas are priced at hubs; only above-threshold facilities pay, so the marginal producer mostly does not, and pass-through is minimal.
+derived:
+  fee_musd: input.fee_per_ton * exposure.us_methane_kt_ch4 * assumption.chargeable_share / 1000
+channels:
+  - type: cost
+    label: Methane fee on above-threshold emissions
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: derived.fee_musd
+      pass_through: assumption.pass_through
+exposure_keys: [us_methane_kt_ch4]
+references:
+  - https://www.everycrsreport.com/reports/R48906.html
+  - https://www.epa.gov/inflation-reduction-act/waste-emissions-charge
+  - https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
+narrative:
+  extra: "Fee ($/t) × US methane (kt CH4) × share above thresholds; 1 kt at $1,500/t is $1.5M."

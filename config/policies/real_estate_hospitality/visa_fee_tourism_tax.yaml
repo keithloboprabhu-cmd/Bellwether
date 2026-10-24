@@ -1,0 +1,53 @@
+id: visa_fee_tourism_tax
+industry: real_estate_hospitality
+name: Visa fee / tourist entry tax
+description: A new per-visitor fee on foreign travellers who need a US visa raises the cost of a trip and deters some visits, trimming hotel and short-term-rental demand from inbound tourists. Exposure is a few percent of revenue at most; logistics and tower REITs are untouched.
+persistence: permanent
+user_inputs:
+  - key: fee_usd
+    label: Fee per visitor
+    unit: USD
+    min: 0
+    max: 1000
+    step: 25
+    default: 250
+    help: A flat charge per visitor on top of the existing visa application fee.
+assumptions:
+  - key: trip_spend_usd
+    label: Average spend per overseas visitor
+    unit: USD
+    low: 3500
+    base: 4800
+    high: 6000
+    source: "NTTO (released Apr 2026), via TravelMole: 35.2M overseas visitors spent $169.8B in the US in 2024, ≈$4,800 each"
+    source_url: https://www.travelmole.com/news/economic-impact-overseas-visitors-usa/
+    rationale: The NTTO total includes students' education spending, so the true trip cost is likely lower; the low end allows for that.
+  - key: visa_required_share
+    label: Share of foreign visitors who need a visa
+    unit: fraction
+    low: 0.3
+    base: 0.45
+    high: 0.6
+    source: estimate
+    rationale: Visitors from Visa Waiver Program countries (most of Western Europe, Japan, Korea, Australia) and Canada don't need a visa and would not pay a visa fee.
+  - key: elasticity
+    label: Trip demand elasticity to total trip cost
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: Long-haul leisure trips are fairly price-sensitive and travellers can pick other destinations; business and family trips are less so.
+channels:
+  - type: demand_price
+    label: Fewer inbound foreign visitors
+    params:
+      dp_consumer: input.fee_usd / assumption.trip_spend_usd
+      elasticity: assumption.elasticity
+      exposed_revenue_share: exposure.re_intl_inbound_revenue_share * assumption.visa_required_share
+exposure_keys: [re_intl_inbound_revenue_share]
+default_role: neutral
+references:
+  - https://www.travelmole.com/news/economic-impact-overseas-visitors-usa/
+narrative:
+  extra: "A $250 fee is about 5% of an average overseas visitor's US spend."

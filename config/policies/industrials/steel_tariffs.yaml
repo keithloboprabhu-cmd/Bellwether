@@ -1,0 +1,79 @@
+id: steel_tariffs
+industry: industrials
+name: Higher tariffs on imported steel
+description: A higher Section 232-style tariff on imported steel lets US mills raise prices, which helps Nucor and raises costs for steel buyers. Caterpillar and Deere are hit hardest because they use the most steel; GE Aerospace, Honeywell and 3M barely notice.
+persistence: permanent
+showcase: true
+user_inputs:
+  - key: tariff_pct
+    label: Change in the steel tariff
+    unit: percentage points
+    min: -50
+    max: 50
+    step: 5
+    default: 25
+    help: Added to the existing Section 232 steel tariff (negative cuts it). The 2018 tariff was 25%; Nucor's 2025 10-K says it was fully reinstated in 2025 without exemptions and broadened to about 600 fabricated steel products.
+assumptions:
+  - key: price_response
+    label: Rise in US steel prices per 1 point of tariff
+    unit: fraction
+    low: 0.1
+    base: 0.4
+    high: 0.8
+    source: "Low end: USITC Pub. 5405 (2023) estimates the Section 232 tariffs raised US steel prices by 2.4% on average (~0.1 per point of a 25% tariff). That figure is taken from the Reason (Mar 2023) and Polsinelli summaries; the USITC report itself could not be accessed. Base and high are estimates."
+    source_url: https://www.polsinelli.com/publications/usitc-releases-report-on-the-economic-impact-of-the-section-232-and-301-tariffs-on-u-s-industries
+    rationale: The USITC average is diluted by exemptions, quotas and years when the tariff was partly lifted. A tariff without exemptions lets domestic mills price closer to the tariff-inclusive import price, and imports still supplied ~18% of US demand in 2025 (Nucor 10-K), so the base assumes 40% and the high end 80%.
+  - key: pass_through
+    label: Share of the steel-cost increase passed on to customers (φ)
+    unit: fraction
+    low: 0.3
+    base: 0.5
+    high: 0.8
+    source: estimate
+    rationale: Caterpillar's 2025 10-K reports unfavorable price realization in a year of rising tariff costs, which suggests limited short-run pass-through; equipment makers usually recover more over one or two pricing cycles.
+    source_url: https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.3
+    base: 0.6
+    high: 1.0
+    source: estimate
+    rationale: Capital equipment demand is driven mostly by construction, mining and farm cycles, so it responds less than one-for-one to small price increases.
+  - key: flow_through
+    label: Share of Nucor's extra steel revenue that reaches profit
+    unit: fraction
+    low: 0.5
+    base: 0.7
+    high: 0.9
+    source: estimate
+    rationale: Scrap and pig-iron prices tend to rise with finished-steel prices, so mills keep only part of a price increase as wider metal margins.
+derived:
+  steel_price_rise: input.tariff_pct / 100 * assumption.price_response
+channels:
+  - type: cost
+    label: Higher prices for steel and steel parts
+    params:
+      exposed_cost_share: exposure.ind_steel_share_of_cogs
+      shock_pct: derived.steel_price_rise
+      pass_through: assumption.pass_through
+      elasticity: assumption.elasticity
+    roles: [importer]
+  - type: domestic_uplift
+    label: Higher US steel prices behind the tariff wall
+    params:
+      domestic_sales_share: exposure.ind_domestic_steel_sales_share
+      price_uplift: derived.steel_price_rise
+      flow_through: assumption.flow_through
+    roles: [domestic_producer]
+exposure_keys: [ind_steel_share_of_cogs, ind_domestic_steel_sales_share]
+roles: {NUE: domestic_producer}
+default_role: importer
+references:
+  - https://www.polsinelli.com/publications/usitc-releases-report-on-the-economic-impact-of-the-section-232-and-301-tariffs-on-u-s-industries
+  - https://reason.com/2023/03/16/u-s-trade-commission-admits-tariffs-raised-prices-for-american-consumers/
+  - https://www.usitc.gov/publications/332/pub5405.pdf
+  - https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+narrative:
+  extra: "The same assumed rise in US steel prices drives both sides: Nucor's gain and the buyers' cost. The USITC found a much smaller average price effect from the 2018 tariffs (via secondary summaries), which is the low end of the range."

@@ -1,0 +1,34 @@
+id: chips_manufacturing_credit
+industry: tmt
+name: CHIPS-style chip-manufacturing investment credit
+description: A tax credit on US capex for facilities that make semiconductors or chip-making equipment (like Section 48D). None of these six companies runs a US fab, so the direct benefit is close to zero; NVIDIA and Apple gain only if they put their own money into US production equipment.
+persistence: "years: 5"
+user_inputs:
+  - key: credit_pct
+    label: Credit rate on qualifying capex
+    unit: percent
+    min: 0
+    max: 50
+    step: 1
+    default: 35
+    help: Section 48D gives 35% of qualified investment for property placed in service after 2025 (25% before), for construction begun by end-2026.
+assumptions:
+  - key: qualifying_share
+    label: Share of the company's US chip-manufacturing capex that qualifies
+    unit: fraction
+    low: 0.7
+    base: 0.9
+    high: 1.0
+    source: estimate
+    rationale: Buildings and land used mainly for chip manufacturing qualify under 48D, but office and shared infrastructure do not.
+channels:
+  - type: tax_credit
+    label: Investment credit on US chip-manufacturing capex
+    params:
+      credit_rate: input.credit_pct / 100
+      base_musd: exposure.us_semis_mfg_capex_musd * assumption.qualifying_share
+exposure_keys: [us_semis_mfg_capex_musd]
+references:
+  - https://www.law.cornell.edu/uscode/text/26/48D
+narrative:
+  extra: "The credit mainly helps the foundries and equipment makers (TSMC, Intel, Micron, Applied Materials) these companies buy from, which may pass some of it on through chip prices; that indirect effect isn't modelled."

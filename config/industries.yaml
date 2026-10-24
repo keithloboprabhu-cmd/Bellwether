@@ -72,7 +72,7 @@ industries:
   - slug: public_sector
     name: Public Sector (government contractors)
     companies:
-      - {ticker: BAH, name: Booz Allen Hamilton}
+      - {ticker: BAH, name: Booz Allen Hamilton, cost_basis: total_costs_less_overhead}  # billable expenses are custom-tagged
       - {ticker: LDOS, name: Leidos}
       - {ticker: SAIC, name: Science Applications International}
       - {ticker: CACI, name: CACI International}

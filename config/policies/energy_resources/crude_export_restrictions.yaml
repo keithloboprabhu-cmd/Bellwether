@@ -1,0 +1,58 @@
+id: crude_export_restrictions
+industry: energy_resources
+name: Crude oil export restrictions
+description: >-
+  Limits on US crude exports trap light crude at home and open a discount between US (WTI) and world (Brent)
+  prices. US producers get less for their barrels; US refiners buy cheaper crude while product prices stay tied
+  to world markets, so integrated XOM is roughly hedged, CVX loses slightly and COP takes the full hit. The likely
+  rise in world prices, which would help the majors' overseas output, is not modeled. LNG export limits are not covered.
+persistence: permanent
+user_inputs:
+  - key: restricted_pct
+    label: Share of crude exports blocked
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 50
+    help: 100% is a return to the pre-2015 export ban; the US exported about 4 mb/d of crude in 2024.
+assumptions:
+  - key: full_ban_discount
+    label: Extra WTI discount under a full ban
+    unit: USD per bbl
+    low: 3
+    base: 6
+    high: 12
+    source: "EIA (2015), Effects of removing restrictions on U.S. crude oil exports: in high-production cases keeping restrictions lowers WTI by $5.3-5.9/bbl and widens Brent-WTI by $5.9-6.8/bbl (2013$)"
+    source_url: https://www.eia.gov/analysis/requests/crude-exports
+    rationale: US output today (~13 mb/d) exceeds EIA's highest case, so the high end is wider.
+  - key: refiner_pass_through
+    label: Share of cheaper crude passed on in product prices
+    unit: fraction
+    low: 0
+    base: 0.2
+    high: 0.5
+    source: "EIA (2015): gasoline prices unchanged or ~1¢/gal different with vs. without export restrictions"
+    source_url: https://www.eia.gov/analysis/requests/crude-exports
+    rationale: Products trade globally, so refiners keep most of the crude discount.
+derived:
+  wti_ref: 65  # 2025 average WTI, $/bbl (Chevron 2025 10-K)
+  discount_pct: assumption.full_ban_discount * input.restricted_pct / 100 / derived.wti_ref
+channels:
+  - type: price
+    label: Lower US crude realizations
+    params:
+      d_price: -derived.discount_pct
+      exposed_revenue_share: exposure.us_crude_sales_share
+  - type: cost
+    label: Cheaper domestic crude for US refineries
+    params:
+      exposed_cost_share: exposure.us_refinery_domestic_crude_cost_share
+      shock_pct: -derived.discount_pct
+      pass_through: assumption.refiner_pass_through
+exposure_keys: [us_crude_sales_share, us_refinery_domestic_crude_cost_share]
+references:
+  - https://www.eia.gov/analysis/requests/crude-exports
+  - https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm
+narrative:
+  extra: "The discount moves money from US crude producers to US refiners, so it matters whether a company is a net seller or buyer of US crude."

@@ -1,0 +1,190 @@
+# Transportation, Logistics & Infrastructure company exposures. Fractions are of total revenue.
+# 10-K figures are from the filings in data/snapshots/baselines.json (FedEx: fiscal year to May 31, 2026,
+# consolidated, i.e. still including FedEx Freight, which was spun off June 1, 2026).
+# CO2 factors: EIA, kg CO2 per gallon — distillate/diesel 10.19, jet fuel 9.75, finished motor gasoline 8.49.
+industry: transportation_logistics
+companies:
+  UPS:
+    tl_fuel_co2_mt:
+      value: 13
+      low: 10
+      high: 16
+      source: estimate
+      rationale: "UPS 2025 10-K: fuel expense $4,316M (jet, diesel, gasoline) but no gallons disclosed. At a blended ~$2.6/gal that is ~1.65B gal x ~9.8 kg = ~16 Mt; base removes ~20% for fuel bought outside the US."
+      source_url: https://www.sec.gov/Archives/edgar/data/1090727/000162828026008432/ups-20251231.htm
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: UPS 10-K says its air and ground fuel surcharges are indexed to fuel prices (international air to the DOE Gulf Coast jet fuel spot price) and reset frequently, so most of a fuel-cost rise is recovered with a short lag.
+      source_url: https://www.sec.gov/Archives/edgar/data/1090727/000162828026008432/ups-20251231.htm
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 80
+      low: 20
+      high: 200
+      source: estimate
+      rationale: UPS buys delivery vans and tractors, mostly assembled in the US; a 25% tariff on imported parts and trucks raises fleet capex modestly and reaches earnings slowly through depreciation.
+    tl_us_ev_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: UPS does not sell vehicles.}
+    tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: UPS does not sell vehicle emissions credits.}
+    tl_regulatory_credit_purchases_musd: {value: 0, low: 0, high: 0, source: estimate, rationale: Fleet operators are not subject to automaker credit obligations.}
+    tl_domestic_passenger_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: UPS carries no passengers.}
+    tl_checked_bag_fee_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: UPS carries no passengers.}
+  FDX:
+    tl_fuel_co2_mt:
+      value: 12
+      low: 9.5
+      high: 15.8
+      source: estimate
+      rationale: "FedEx FY2026 10-K: fuel $4,052M, of which jet fuel $3,050M. ~$3,050M / ~$2.3 = ~1.33B gal x 9.75 kg = ~12.9 Mt; vehicle fuel ~$1,000M / ~$3.3 = ~0.3B gal = ~2.9 Mt. High is the ~15.8 Mt total; base removes ~25% for fuel bought abroad."
+      source_url: https://www.sec.gov/Archives/edgar/data/1048911/000104891126000105/fdx-20260531.htm
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: FedEx 10-K says Express fuel surcharges are indexed to a weekly fuel price with about a two-week lag and that higher fuel prices raised yields through surcharges in FY2026.
+      source_url: https://www.sec.gov/Archives/edgar/data/1048911/000104891126000105/fdx-20260531.htm
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 80
+      low: 20
+      high: 200
+      source: estimate
+      rationale: Same logic as UPS. FedEx's pickup-and-delivery vans and tractors are mostly US-assembled, and its aircraft are covered by civil-aircraft tariff exemptions.
+    tl_us_ev_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: FedEx does not sell vehicles.}
+    tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: FedEx does not sell vehicle emissions credits.}
+    tl_regulatory_credit_purchases_musd: {value: 0, low: 0, high: 0, source: estimate, rationale: Fleet operators are not subject to automaker credit obligations.}
+    tl_domestic_passenger_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: FedEx carries no passengers.}
+    tl_checked_bag_fee_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: FedEx carries no passengers.}
+  UNP:
+    tl_fuel_co2_mt:
+      value: 9.8
+      low: 9.3
+      high: 10.3
+      source: "Union Pacific 2025 10-K: fuel expense $2,390M at an average $2.49/gal = ~960M gal; x EIA 10.19 kg CO2/gal diesel = 9.8 Mt"
+      source_url: https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: UNP 10-K says fuel surcharge programs recover a significant amount of fuel expense with about a two-month lag; 2025 fuel surcharge revenue was ~$2.3B against $2,390M of fuel expense.
+      source_url: https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 20
+      low: 0
+      high: 60
+      source: estimate
+      rationale: Locomotives and railcars are largely US-built; small exposure through imported parts. The larger effect, lost cross-border auto traffic, is not modelled here.
+    tl_us_ev_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Union Pacific does not sell vehicles.}
+    tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Union Pacific does not sell vehicle emissions credits.}
+    tl_regulatory_credit_purchases_musd: {value: 0, low: 0, high: 0, source: estimate, rationale: Railroads are not subject to automaker credit obligations.}
+    tl_domestic_passenger_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Union Pacific carries no passengers.}
+    tl_checked_bag_fee_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Union Pacific carries no passengers.}
+  DAL:
+    tl_fuel_co2_mt:
+      value: 32.5
+      low: 25
+      high: 41.6
+      source: estimate
+      rationale: "Delta 2025 10-K: 4,269M gallons of jet fuel (incl. regional carriers) x EIA 9.75 kg = 41.6 Mt (high). Domestic is 56% of passenger revenue; assuming about half of international fuel is uplifted abroad leaves ~78% bought in the US (base)."
+      source_url: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+    tl_fuel_cost_recovery_share:
+      value: 0.5
+      low: 0.3
+      high: 0.7
+      source: estimate
+      rationale: US airlines have no fuel surcharge on domestic fares and recover fuel shocks only partly and with a lag, by cutting capacity and raising fares.
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 10
+      low: 0
+      high: 50
+      source: estimate
+      rationale: Civil aircraft and parts are largely exempt from the auto tariffs; only ground-support vehicles are exposed.
+    tl_us_ev_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Delta does not sell vehicles.}
+    tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Delta does not sell vehicle emissions credits.}
+    tl_regulatory_credit_purchases_musd: {value: 0, low: 0, high: 0, source: estimate, rationale: Airlines are not subject to automaker credit obligations.}
+    tl_domestic_passenger_revenue_share:
+      value: 0.564
+      low: 0.564
+      high: 0.564
+      source: "Delta 2025 10-K: domestic passenger revenue $35,731M of $63,364M total operating revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0167
+      low: 0.0158
+      high: 0.0182
+      source: estimate
+      rationale: "Delta's 10-K reports bag fees only inside travel-related services. BTS data reported in the press put Delta's 2024 checked-bag fees above $1B (~$1.06B); $1,000-1,150M of $63,364M 2025 revenue."
+      source_url: https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+  TSLA:
+    tl_fuel_co2_mt:
+      value: 0.3
+      low: 0.1
+      high: 0.6
+      source: estimate
+      rationale: Tesla burns little fuel (factory natural gas, logistics); its 10-K gives no figure. The EV-demand gain a carbon price on gasoline would bring is not modelled.
+    tl_fuel_cost_recovery_share:
+      value: 0.2
+      low: 0
+      high: 0.4
+      source: estimate
+      rationale: Automakers cannot pass a small factory-energy cost directly into vehicle prices.
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 600
+      low: 300
+      high: 1200
+      source: estimate
+      rationale: The Tesla 10-K says tariffs affected product pricing but does not quantify them. US-sold Teslas are assembled in California and Texas, so exposure comes from imported parts only, well below GM's.
+      source_url: https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+    tl_us_ev_revenue_share:
+      value: 0.35
+      low: 0.3
+      high: 0.4
+      source: estimate
+      rationale: "Tesla 2025 10-K: automotive sales $65,821M (69% of $94,827M) and US revenue $47,627M (50%); assuming the US share of auto sales matches the total gives ~0.35."
+      source_url: https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+    tl_regulatory_credit_revenue_share:
+      value: 0.021
+      low: 0.021
+      high: 0.021
+      source: "Tesla 2025 10-K: automotive regulatory credits revenue $1,993M of $94,827M total revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+    tl_regulatory_credit_purchases_musd: {value: 0, low: 0, high: 0, source: estimate, rationale: Tesla sells credits and does not buy them.}
+    tl_domestic_passenger_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Tesla carries no airline passengers.}
+    tl_checked_bag_fee_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Tesla carries no airline passengers.}
+  GM:
+    tl_fuel_co2_mt:
+      value: 1.5
+      low: 1
+      high: 2.5
+      source: estimate
+      rationale: GM's direct emissions come mainly from natural gas at its North American plants; the 10-K gives no figure. Tailpipe emissions of vehicles sold are excluded.
+    tl_fuel_cost_recovery_share:
+      value: 0.2
+      low: 0
+      high: 0.4
+      source: estimate
+      rationale: Automakers cannot pass a small factory-energy cost directly into vehicle prices.
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 3500
+      low: 3000
+      high: 4000
+      source: "GM 2025 10-K: tariff impact on EBIT-adjusted $3.1B in 2025; 2026 estimate $3.0B-$4.0B under the current tariff regime"
+      source_url: https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm
+    tl_us_ev_revenue_share:
+      value: 0.053
+      low: 0.045
+      high: 0.06
+      source: estimate
+      rationale: "GM sold 169,887 EVs in the US in 2025 (Electrek, Jan 2026). At the Dec 2025 average EV transaction price of $58,034 (Cox/KBB) that is ~$9.9B of $185,019M revenue."
+      source_url: https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/
+    tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0.005, source: estimate, rationale: GM does not report regulatory credit sales as a revenue line; any sales are small.}
+    tl_regulatory_credit_purchases_musd:
+      value: 100
+      low: 0
+      high: 500
+      source: estimate
+      rationale: GM does not disclose credit purchases. Its rising EV volume earns it credits, so net purchases are likely modest; the high case allows for past GHG/CAFE credit buying.
+    tl_domestic_passenger_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: GM carries no airline passengers.}
+    tl_checked_bag_fee_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: GM carries no airline passengers.}

@@ -3,7 +3,7 @@
     dEBIT = Σ channel dEBIT                 (each channel: dR − dC − dOpex, or its own dEBIT)
     dPTI  = dEBIT − dInt
     t'    = t + Σ dTaxRate                  (clamped to [0, 1])
-    dNI   = (PTI + dPTI)(1 − t') − PTI(1 − t) + Σ dNI_direct
+    dNI   = [(PTI + dPTI)(1 − t') − PTI(1 − t) + Σ dNI_direct] × parent share
 
 dNI is computed against the *model's* baseline PTI·(1 − t), not reported NI, so a
 zero shock always gives exactly zero (reported NI also contains minority interests,
@@ -125,13 +125,15 @@ def aggregate(
     d_tax = sum(x.dTaxRate for x in d)
     t_new = min(max(t + d_tax, 0.0), 1.0)
     direct = sum(x.dNI_direct for x in d)
-    dNI = (PTI + dPTI) * (1 - t_new) - PTI * (1 - t) + direct
+    # parent_share < 1 when minority partners own part of consolidated profit (see scenarios.py)
+    ps = b.get("parent_share", 1.0)
+    dNI = ((PTI + dPTI) * (1 - t_new) - PTI * (1 - t) + direct) * ps
 
     # exact per-channel attribution (see module docstring)
     rate_effect = PTI * (t - t_new)
     for o in outcomes:
         share = (o.delta.dTaxRate / d_tax) if d_tax else 0.0
-        o.dNI = (o.delta.ebit - o.delta.dInt) * (1 - t_new) + o.delta.dNI_direct + rate_effect * share
+        o.dNI = ((o.delta.ebit - o.delta.dInt) * (1 - t_new) + o.delta.dNI_direct + rate_effect * share) * ps
 
     # valuation: each piece at its own persistence, plus direct value effects
     dP: float | None = 0.0

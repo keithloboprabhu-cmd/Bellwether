@@ -2,6 +2,7 @@
 # (the form shows only the keys a policy uses) and policy configs (exposure.<key>).
 # unit: fraction (0–1), usd_m ($ millions), count_m (millions), number, per_100bp.
 exposures:
+  # ---- shared
   - key: us_consumer_revenue_share
     label: US consumer revenue share
     unit: fraction
@@ -11,6 +12,550 @@ exposures:
   - key: us_import_share_of_cogs
     label: Imported share of cost of revenue (US operations)
     unit: fraction
-    help: Share of total cost of revenue that is goods imported into the US, i.e. the base a US import tariff applies to.
+    help: Share of total cost of revenue that is goods imported into the US, i.e. the base a US import tariff applies
+      to.
+    min: 0
+    max: 1
+  # ---- consumer_retail
+  - key: snap_grocery_spend_share
+    label: Share of SNAP shoppers' grocery spending captured
+    unit: fraction
+    help: Share of all grocery dollars spent by SNAP-using households that goes to this company (proxy for its share
+      of SNAP benefit redemptions).
+    min: 0
+    max: 1
+  - key: us_hourly_workers_m
+    label: US hourly employees
+    unit: count_m
+    help: Millions of US employees paid by the hour (store, warehouse, delivery), the workforce a minimum-wage change
+      reaches.
+    min: 0
+    max: 3
+  - key: us_starting_wage
+    label: Typical US starting wage
+    unit: number
+    help: Entry-level hourly pay for US hourly staff ($/hour); a new minimum wage above this forces raises.
+    min: 0
+    max: 40
+  - key: us_sweetened_beverage_revenue_share
+    label: US sweetened-beverage revenue share
+    unit: fraction
+    help: Share of total revenue from sugar- or artificially sweetened drinks (soda, sports drinks, sweetened teas)
+      sold in the US, the base a per-ounce beverage tax applies to.
+    min: 0
+    max: 1
+  # ---- education
+  - key: grad_plus_dependent_revenue_share
+    label: Revenue from students borrowing above the new federal loan caps
+    unit: fraction
+    help: Share of total revenue from graduate and professional students who borrow (or would borrow) beyond the new
+      annual and aggregate Direct Loan caps, which used to be covered by Grad PLUS. For a service company, use its
+      share of the partner university's tuition from those students.
+    min: 0
+    max: 1
+  - key: pell_revenue_share
+    label: Pell Grant-funded revenue share
+    unit: fraction
+    help: Share of total revenue paid with federal Pell Grants (for a service company, the Pell-funded share of partner
+      tuition that its service fee depends on).
+    min: 0
+    max: 1
+  - key: earnings_test_at_risk_revenue_share
+    label: Revenue in programs at risk of failing the earnings test
+    unit: fraction
+    help: Share of total revenue from degree programs whose graduates' median earnings are close to or below the federal
+      "do no harm" earnings benchmark, so the programs could lose Direct Loan eligibility.
+    min: 0
+    max: 1
+  - key: ninety_ten_hi_ratio
+    label: 90/10 ratio of the most federally dependent institution(s)
+    unit: fraction
+    help: Cash-basis share of revenue from federal education assistance (90/10 calculation) at the company's most
+      federally dependent institution or group of institutions. Zero if the company owns no proprietary Title IV institution.
+    min: 0
+    max: 1
+  - key: ninety_ten_hi_revenue_share
+    label: Revenue share of the most federally dependent institution(s)
+    unit: fraction
+    help: Share of the company's total revenue that comes from the institution(s) described by ninety_ten_hi_ratio.
+    min: 0
+    max: 1
+  - key: ninety_ten_lo_ratio
+    label: 90/10 ratio of the company's other institutions
+    unit: fraction
+    help: Revenue-weighted cash-basis 90/10 ratio of the company's remaining Title IV institutions. Zero if none.
+    min: 0
+    max: 1
+  - key: ninety_ten_lo_revenue_share
+    label: Revenue share of the company's other institutions
+    unit: fraction
+    help: Share of the company's total revenue that comes from the institution(s) described by ninety_ten_lo_ratio.
+    min: 0
+    max: 1
+  - key: esa_capture_share
+    label: Share of new ESA and voucher spending captured
+    unit: fraction
+    help: Share of private school choice dollars (education savings accounts, vouchers, tax-credit scholarships) that
+      the company would capture as tuition or curriculum sales.
+    min: 0
+    max: 1
+  - key: online_revenue_share
+    label: Online-delivered revenue share
+    unit: fraction
+    help: Share of total revenue from programs, courses or products delivered fully or mostly online (distance education,
+      virtual schools, apps).
+    min: 0
+    max: 1
+  # ---- energy_resources
+  - key: oil_price_sensitivity
+    label: Oil-price sensitivity (EBIT-equivalent revenue share)
+    unit: fraction
+    help: 'Share of total revenue that behaves as if it moved 1:1 with the Brent price and fell fully to operating
+      income. A 1% change in Brent changes EBIT by revenue × this share × 1%. Use with the `price` channel (offset_share
+      0). For XOM/CVX/COP it is backed out of the company''s after-tax $/bbl earnings sensitivity: ni_per_usd_bbl_musd
+      × Brent ref ($69.06, 2025 avg) ÷ ((1 − model tax rate) × revenue). Negative for oil consumers (FCX''s diesel
+      bill).'
+    min: -0.5
+    max: 1
+  - key: ni_per_usd_bbl_musd
+    label: After-tax earnings per $1/bbl Brent
+    unit: usd_m
+    help: Annual after-tax earnings change ($M) for a $1/bbl change in Brent, as companies disclose it (upstream,
+      excluding derivatives). Reference value for oil-shock scenarios; oil_price_sensitivity is derived from it.
+    min: -1000
+    max: 2000
+  - key: us_scope1_co2e_mt
+    label: US Scope 1 emissions (million t CO2e)
+    unit: number
+    help: Direct (Scope 1) greenhouse-gas emissions from US operations, million metric tons CO2e per year; the base
+      a US carbon price applies to.
+    min: 0
+    max: 200
+  - key: carbon_cost_pass_through
+    label: Carbon-cost pass-through to customers
+    unit: fraction
+    help: Share of a carbon/emissions cost the company can recover through higher prices (regulated cost recovery
+      for utilities; market pass-through otherwise).
+    min: 0
+    max: 1
+  - key: us_methane_kt_ch4
+    label: US oil & gas methane emissions (thousand t CH4)
+    unit: number
+    help: Methane emissions from US petroleum and natural gas facilities, thousand metric tons of CH4 per year (not
+      CO2e); the base the IRA Waste Emissions Charge applies to before thresholds.
+    min: 0
+    max: 1000
+  - key: federal_upstream_revenue_share
+    label: Revenue from federal-land/offshore oil & gas
+    unit: fraction
+    help: Share of total revenue from oil and gas produced on federal onshore lands and federal offshore waters (Gulf
+      of America, NPR-A).
+    min: 0
+    max: 1
+  - key: us_crude_sales_share
+    label: US-produced crude revenue share
+    unit: fraction
+    help: Share of total revenue from selling the company's own US crude oil production (excludes NGLs and gas); the
+      base a domestic crude discount applies to.
+    min: 0
+    max: 1
+  - key: us_refinery_domestic_crude_cost_share
+    label: Domestic crude purchases in cost of revenue
+    unit: fraction
+    help: Share of total cost of revenue that is US-produced crude run in the company's US refineries; a domestic
+      crude discount lowers this cost.
+    min: 0
+    max: 1
+  - key: clean_generation_credits_musd
+    label: Clean-electricity tax credits ($M/yr)
+    unit: usd_m
+    help: Annual clean-electricity production/investment tax credits recognized (PTC/ITC, §§45/48/45Y/48E), $ millions.
+    min: 0
+    max: 10000
+  - key: manufacturing_credits_45x_musd
+    label: Advanced manufacturing credits, §45X ($M/yr)
+    unit: usd_m
+    help: Annual §45X advanced manufacturing production credits recognized, $ millions.
+    min: 0
+    max: 10000
+  - key: us_solar_module_revenue_share
+    label: US solar module revenue share
+    unit: fraction
+    help: Share of total revenue from solar modules sold to US customers, whose demand depends on US clean-electricity
+      credits.
+    min: 0
+    max: 1
+  - key: us_critical_mineral_production_cost_musd
+    label: US critical-mineral production cost ($M/yr)
+    unit: usd_m
+    help: Annual production costs of critical minerals (e.g. copper) mined/processed in the US, $ millions; the base
+      a production-cost credit applies to.
+    min: 0
+    max: 20000
+  # ---- financial_services
+  - key: nii_sens_up_per_100bp
+    label: NII sensitivity to a +100 bp US rate move
+    unit: per_100bp
+    help: Change in 12-month net interest income per +100 bp instantaneous parallel shift in US dollar rates, as a
+      fraction of annual NII (0.02 = NII up 2%). From the bank's 10-K earnings-at-risk / NII sensitivity table.
+    min: -0.1
+    max: 0.1
+  - key: nii_sens_down_per_100bp
+    label: NII sensitivity to a −100 bp US rate move
+    unit: per_100bp
+    help: Fall in 12-month net interest income for a −100 bp instantaneous parallel shift, as a fraction of annual
+      NII, sign-matched to the up key (0.025 = NII down 2.5% when rates fall 100 bp; negative means NII rises when
+      rates fall).
+    min: -0.1
+    max: 0.1
+  - key: cet1_ratio_std
+    label: CET1 capital ratio (Standardized)
+    unit: fraction
+    help: Common equity tier 1 capital ÷ Standardized risk-weighted assets at fiscal year-end (0.12 = 12%).
+    min: 0
+    max: 0.3
+  - key: card_late_fee_revenue_share
+    label: Credit card late-fee revenue share
+    unit: fraction
+    help: Share of total net revenue from late fees on US consumer and small-business credit cards (often booked in
+      card income or interest income).
+    min: 0
+    max: 0.1
+  - key: credit_interchange_revenue_share
+    label: Gross US credit card interchange share
+    unit: fraction
+    help: Share of total net revenue from gross interchange on US credit card purchases where the company is the issuer
+      on a four-party network (Visa/Mastercard), before rewards and partner payments. Excludes regulated debit interchange
+      and three-party discount revenue.
+    min: 0
+    max: 0.5
+  - key: fdic_assessment_base_musd
+    label: FDIC deposit-insurance assessment base
+    unit: usd_m
+    help: Approximate FDIC assessment base of the company's insured bank subsidiaries (average consolidated assets
+      less average tangible equity), $ millions.
+    min: 0
+    max: 5000000
+  - key: trading_revenue_share
+    label: Trading (sales and trading) revenue share
+    unit: fraction
+    help: Share of total net revenue from sales and trading / markets intermediation whose volume would fall if trading
+      got more expensive.
+    min: 0
+    max: 1
+  # ---- healthcare
+  - key: medicare_advantage_revenue_share
+    label: Medicare Advantage premium revenue share
+    unit: fraction
+    help: Medicare Advantage (individual + group, incl. MA-PD) premium revenue as a share of total revenue. Excludes
+      stand-alone PDP and Medicare Supplement, whose rates are not set by the MA benchmark.
+    min: 0
+    max: 1
+  - key: medicaid_revenue_share
+    label: Medicaid revenue share
+    unit: fraction
+    help: Medicaid/CHIP managed-care premium revenue (or, for drugmakers, Medicaid-funded net product sales) as a
+      share of total revenue.
+    min: 0
+    max: 1
+  - key: aca_exchange_revenue_share
+    label: ACA individual-exchange revenue share
+    unit: fraction
+    help: Premium revenue from ACA individual (on-exchange, subsidy-eligible) plans as a share of total revenue.
+    min: 0
+    max: 1
+  - key: negotiated_drug_medicare_revenue_share
+    label: Medicare sales of negotiation-selected drugs
+    unit: fraction
+    help: Net Medicare (Part D/B) sales of drugs selected for Medicare price negotiation (IPAY 2026–2028 lists), as
+      a share of the company's total revenue. Includes the company's share of alliance revenue.
+    min: 0
+    max: 1
+  - key: pbm_retained_rebate_share
+    label: PBM-retained manufacturer rebates and fees
+    unit: fraction
+    help: Manufacturer rebates and rebate-linked administrative fees that the company's PBM keeps (does not pass to
+      plan sponsors), as a share of total revenue.
+    min: 0
+    max: 1
+  - key: hospital_outpatient_cost_share
+    label: Hospital outpatient claims share of cost of revenue
+    unit: fraction
+    help: Medical claims paid to hospital outpatient departments as a share of total cost of revenue (the base a site-neutral
+      payment cut lowers).
+    min: 0
+    max: 1
+  # ---- industrials
+  - key: ind_steel_share_of_cogs
+    label: Steel share of cost of revenue
+    unit: fraction
+    help: Share of total cost of revenue spent on steel and steel-intensive purchased parts (plate, bar, castings,
+      forgings, fabricated steel), domestic or imported; the base a steel price rise applies to.
+    min: 0
+    max: 1
+  - key: ind_domestic_steel_sales_share
+    label: US steel sales share
+    unit: fraction
+    help: Share of total revenue from steel and steel products sold to US customers at prices set by the US steel
+      market (the base that rises when tariffs lift US steel prices). Zero for steel buyers.
+    min: 0
+    max: 1
+  - key: ind_us_pretax_income_share
+    label: US share of pretax income
+    unit: fraction
+    help: Share of pretax income earned in the US (domestic ÷ total pretax income in the 10-K tax note), i.e. the
+      income a change in the US corporate rate applies to.
+    min: 0
+    max: 1
+  - key: ind_us_capex_musd
+    label: Annual US capital spending
+    unit: usd_m
+    help: Company's annual capital expenditure on property and equipment located in the US, $ millions (the base for
+      US bonus depreciation).
+    min: 0
+    max: 20000
+  - key: ind_us_qre_musd
+    label: Annual US qualified research expenses
+    unit: usd_m
+    help: Company's annual US qualified research expenses for the federal research credit (Section 41), $ millions.
+      Can exceed reported R&D expense because engineering costs booked elsewhere can qualify.
+    min: 0
+    max: 20000
+  - key: ind_infrastructure_capture_share
+    label: Share of federal infrastructure spending captured as revenue
+    unit: fraction
+    help: Share of each dollar of new federal infrastructure outlays (roads, bridges, rail, water, grid) that ends
+      up as the company's revenue, e.g. via equipment sold to contractors or steel used in projects.
+    min: 0
+    max: 0.1
+  # ---- public_sector
+  - key: govcon_us_gov_share
+    label: US federal government revenue share
+    unit: fraction
+    help: Share of total revenue from contracts with the US federal government (prime or sub), as disclosed in the
+      10-K. Includes foreign military sales paid through the US government.
+    min: 0
+    max: 1
+  - key: govcon_defense_intel_share
+    label: Defense and intelligence revenue share
+    unit: fraction
+    help: Share of total revenue from the Department of Defense/War (incl. FMS) and the Intelligence Community.
+    min: 0
+    max: 1
+  - key: govcon_civilian_share
+    label: Federal civilian-agency revenue share
+    unit: fraction
+    help: Share of total revenue from non-defense, non-intelligence federal agencies (VA, HHS, DHS, Treasury, FAA,
+      etc.).
+    min: 0
+    max: 1
+  - key: govcon_cost_plus_share
+    label: Cost-reimbursable revenue share
+    unit: fraction
+    help: Share of total revenue earned on cost-reimbursable (cost-plus-fee, incl. fixed-price-incentive where reported
+      together) contracts.
+    min: 0
+    max: 1
+  - key: govcon_services_share
+    label: Federal services revenue share (annually funded)
+    unit: fraction
+    help: Share of total revenue from US-government services/IT/solutions work paid out of annual appropriations,
+      i.e. work that stops when funding lapses. Excludes multi-year-funded hardware production.
+    min: 0
+    max: 1
+  - key: govcon_advisory_share
+    label: Federal management-consulting/advisory revenue share
+    unit: fraction
+    help: Share of total revenue from federal management-consulting, advisory and professional-support task orders,
+      the work targeted by 2025-era efficiency reviews.
+    min: 0
+    max: 1
+  - key: govcon_fed_it_share
+    label: Federal IT services revenue share
+    unit: fraction
+    help: Share of total revenue from federal IT services, digital modernization, cloud, software and cyber work.
+    min: 0
+    max: 1
+  # ---- real_estate_hospitality
+  - key: re_floating_debt_share
+    label: Floating-rate share of debt
+    unit: fraction
+    help: Share of total debt that pays a floating rate after swaps (credit lines, term loans, commercial paper),
+      so a rate change reprices it within the year.
+    min: 0
+    max: 1
+  - key: re_debt_maturing_1y_share
+    label: Fixed-rate debt maturing within a year
+    unit: fraction
+    help: Fixed-rate principal due in the next fiscal year as a share of total debt; it is refinanced at the new rate
+      level.
+    min: 0
+    max: 1
+  - key: re_interest_cash_musd
+    label: Interest-earning cash and investments
+    unit: usd_m
+    help: Cash, short-term investments and customer funds held ($M) whose interest income moves with short rates.
+    min: 0
+    max: 50000
+  - key: re_property_value_share
+    label: Directly owned property share of value
+    unit: fraction
+    help: 1 for REITs whose equity value rests on owned property marked at cap rates; 0 for asset-light hotel franchisors
+      and platforms.
+    min: 0
+    max: 1
+  - key: re_implied_cap_rate
+    label: Implied cap rate
+    unit: fraction
+    help: Net operating income ÷ property value implied for the portfolio; a given cap-rate rise cuts value more when
+      the cap rate is low.
+    min: 0.02
+    max: 0.15
+  - key: re_us_str_revenue_share
+    label: US short-term-rental revenue share
+    unit: fraction
+    help: Share of total revenue earned from US short-term-rental bookings (the base local listing restrictions hit).
+    min: 0
+    max: 1
+  - key: re_us_hotel_revenue_share
+    label: US hotel revenue share
+    unit: fraction
+    help: Share of revenue (fees for franchisors) tied to US hotels, which win back some guests when short-term-rental
+      supply shrinks.
+    min: 0
+    max: 1
+  - key: re_intl_inbound_revenue_share
+    label: International inbound visitor revenue share
+    unit: fraction
+    help: Share of total revenue paid by foreign visitors travelling to the US, the demand a visa fee or tourist entry
+      tax hits.
+    min: 0
+    max: 1
+  - key: re_lihtc_investment_musd
+    label: Annual LIHTC-eligible investment
+    unit: usd_m
+    help: Qualified basis of low-income-housing projects the company develops or invests in each year ($M), the base
+      a housing tax credit applies to.
+    min: 0
+    max: 10000
+  - key: re_office_linked_revenue_share
+    label: Office-attendance-linked revenue share (signed)
+    unit: fraction
+    help: Share of revenue that rises with office attendance (positive, e.g. weekday mall and hotel traffic) or falls
+      with it (negative, e.g. remote-work long stays).
+    min: -1
+    max: 1
+  - key: re_property_tax_musd
+    label: Annual property tax expense
+    unit: usd_m
+    help: Real estate taxes the company pays on property it owns or leases ($M per year).
+    min: 0
+    max: 5000
+  - key: re_property_tax_recovery_share
+    label: Property tax recovered from tenants
+    unit: fraction
+    help: Share of property tax billed back to tenants under net or CAM leases, so a tax change largely passes through.
+    min: 0
+    max: 1
+  # ---- tmt
+  - key: us_digital_ad_revenue_share
+    label: US digital advertising revenue share
+    unit: fraction
+    help: Share of total revenue from digital advertising shown to US users (search, display, video, social ads).
+    min: 0
+    max: 1
+  - key: us_app_store_fee_share
+    label: US app-store commission revenue share
+    unit: fraction
+    help: Share of total revenue from commissions/fees the company earns as an app-store operator on US transactions
+      (net commission, not gross billings).
+    min: 0
+    max: 1
+  - key: us_users_m
+    label: US users whose personal data is processed
+    unit: count_m
+    help: Millions of US people with an account or device whose personal data the company processes (rough unique
+      users, not accounts).
+    min: 0
+    max: 400
+  - key: restricted_chip_china_share
+    label: Revenue from advanced chips sold into China (restricted-market share)
+    unit: fraction
+    help: Share of total revenue from advanced semiconductors sold to customers in China/Hong Kong that tighter US
+      export controls could block.
+    min: 0
+    max: 1
+  - key: greater_china_revenue_share
+    label: Greater China revenue share
+    unit: fraction
+    help: Share of total revenue from customers in mainland China, Hong Kong (and, where the company reports it that
+      way, Taiwan); the base exposed to Chinese retaliation.
+    min: 0
+    max: 1
+  - key: us_semis_mfg_capex_musd
+    label: Annual US semiconductor-manufacturing capex
+    unit: usd_m
+    help: Company's own annual capital spending on US facilities that make semiconductors or chip-making equipment
+      (the Section 48D base), $ millions.
+    min: 0
+    max: 50000
+  - key: broadband_subsidy_capture_share
+    label: Share of a federal broadband-subsidy program captured
+    unit: fraction
+    help: Company's share of households enrolled in a federal broadband affordability subsidy (e.g. the 2021-24 Affordable
+      Connectivity Program).
+    min: 0
+    max: 1
+  # ---- transportation_logistics
+  - key: tl_fuel_co2_mt
+    label: CO2 from fuel burned in the US (million tonnes)
+    unit: number
+    help: Million tonnes of CO2 a year from fuel the company burns that would fall under a US carbon price (gallons
+      x EIA kg CO2/gal; fuel bought abroad excluded).
+    min: 0
+    max: 100
+  - key: tl_fuel_cost_recovery_share
+    label: Share of fuel-cost increases recovered from customers
+    unit: fraction
+    help: How much of a fuel-cost rise the company passes on (fuel surcharges for parcel and rail; fares for airlines;
+      vehicle prices for automakers).
+    min: 0
+    max: 1
+  - key: tl_auto_tariff_cost_at_25pct_musd
+    label: Annual cost of a 25% auto and parts tariff
+    unit: usd_m
+    help: Gross annual cost ($M, before price increases) of a 25% US tariff on imported vehicles, parts and trucks,
+      after USMCA content exemptions and the company's existing mitigation.
+    min: 0
+    max: 20000
+  - key: tl_us_ev_revenue_share
+    label: US new-EV sales share of revenue
+    unit: fraction
+    help: Share of total revenue from new battery-electric vehicles sold in the US (what a consumer EV tax credit
+      would apply to).
+    min: 0
+    max: 1
+  - key: tl_regulatory_credit_revenue_share
+    label: Vehicle emissions regulatory credit sales share of revenue
+    unit: fraction
+    help: Share of total revenue from selling GHG / ZEV / CAFE regulatory credits to other automakers.
+    min: 0
+    max: 1
+  - key: tl_regulatory_credit_purchases_musd
+    label: Annual purchases of vehicle emissions regulatory credits
+    unit: usd_m
+    help: Annual spend ($M) on buying GHG / ZEV / CAFE credits from other automakers to meet emission standards.
+    min: 0
+    max: 5000
+  - key: tl_domestic_passenger_revenue_share
+    label: US domestic passenger ticket revenue share
+    unit: fraction
+    help: Share of total revenue from domestic passenger tickets, which carry the 7.5% federal ticket tax.
+    min: 0
+    max: 1
+  - key: tl_checked_bag_fee_revenue_share
+    label: Checked-bag fee revenue share
+    unit: fraction
+    help: Share of total revenue from checked-baggage fees charged to passengers.
     min: 0
     max: 1

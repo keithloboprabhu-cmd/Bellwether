@@ -1,0 +1,49 @@
+id: chip_export_controls
+industry: tmt
+name: Tighter advanced-chip export controls on China
+description: The US blocks more chip sales to China and China retaliates against US tech firms. NVIDIA loses restricted chip sales (partly resold elsewhere); Apple is most exposed to retaliation through its Greater China sales.
+persistence: permanent
+user_inputs:
+  - key: restricted_loss_pct
+    label: Share of restricted chip sales lost
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 75
+    help: Share of the company's chip sales to China that the new controls block (licences, lower-spec substitutes and diversion make it less than 100%).
+  - key: retaliation_pct
+    label: Sales lost to Chinese retaliation
+    unit: percent
+    min: 0
+    max: 50
+    step: 1
+    default: 5
+    help: Drop in other China revenue from boycotts, procurement bans (e.g. iPhone bans for officials) or regulatory action.
+assumptions:
+  - key: resale_share
+    label: Share of blocked chip volume resold to other customers
+    unit: fraction
+    low: 0
+    base: 0.3
+    high: 0.6
+    source: estimate
+    rationale: While AI accelerators are supply-constrained, chips not shipped to China can go elsewhere; China-specific parts (H20-type) cannot, as NVIDIA's $4.5B FY2026 H20 inventory charge shows.
+    source_url: https://www.sec.gov/Archives/edgar/data/1045810/000104581025000115/q1fy26pr.htm
+channels:
+  - type: demand_volume
+    label: Lost chip sales to China
+    params:
+      d_volume: -input.restricted_loss_pct / 100 * (1 - assumption.resale_share)
+      exposed_revenue_share: exposure.restricted_chip_china_share
+  - type: demand_volume
+    label: Chinese retaliation
+    params:
+      d_volume: -input.retaliation_pct / 100
+      exposed_revenue_share: max(0, exposure.greater_china_revenue_share - exposure.restricted_chip_china_share)
+exposure_keys: [restricted_chip_china_share, greater_china_revenue_share]
+references:
+  - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+  - https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R68.htm
+narrative:
+  extra: "NVIDIA's China revenue already fell from 19% to 9% of sales after the H20 licence requirement, so further controls bite on a smaller base."

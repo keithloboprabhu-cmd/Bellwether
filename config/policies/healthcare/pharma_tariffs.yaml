@@ -1,0 +1,55 @@
+id: pharma_tariffs
+industry: healthcare
+name: Tariffs on imported pharmaceuticals
+description: A US tariff on imported branded drugs and ingredients raises Pfizer's and Lilly's cost of US-sold product; company deals with the administration and new US plants shield part of it. Insurers' indirect cost from higher drug prices is not modelled.
+persistence: permanent
+user_inputs:
+  - key: tariff_pct
+    label: Tariff rate on imported pharmaceuticals
+    unit: percent
+    min: 0
+    max: 100
+    step: 1
+    default: 15
+    help: Ad valorem duty on the customs value of imported drugs/API. 15% matches the cap agreed for EU-made pharmaceuticals in the 2025 US–EU framework; 100% was announced for branded imports from firms not building US plants.
+assumptions:
+  - key: exempt_share
+    label: Share of imports exempted (deals, US plants, transfer pricing)
+    unit: fraction
+    low: 0
+    base: 0.4
+    high: 0.8
+    source: estimate
+    rationale: Pfizer and Lilly reached pricing and US-investment agreements with the administration in late 2025 that were reported to include tariff relief; low customs values on transfer-priced imports also shrink the duty base.
+  - key: pass_through
+    label: Share of the tariff cost passed into US prices
+    unit: fraction
+    low: 0
+    base: 0.2
+    high: 0.5
+    source: estimate
+    rationale: Political pressure (most-favored-nation pricing deals) and contracted net prices limit how much drugmakers can raise US prices.
+  - key: elasticity
+    label: Volume loss per 1% price rise
+    unit: number
+    low: 0.1
+    base: 0.2
+    high: 0.4
+    source: estimate
+    rationale: Prescription drug demand is price-inelastic because insurance covers most of the cost.
+channels:
+  - type: cost
+    label: Tariff on imported pharmaceuticals
+    roles: [importer]
+    params:
+      exposed_cost_share: exposure.us_import_share_of_cogs
+      shock_pct: input.tariff_pct / 100 * (1 - assumption.exempt_share)
+      pass_through: assumption.pass_through
+      elasticity: assumption.elasticity
+exposure_keys: [us_import_share_of_cogs]
+roles: {PFE: importer, LLY: importer}
+default_role: neutral
+references:
+  - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+narrative:
+  extra: "Drugmakers' cost of goods is small relative to sales (about 17–26% here), so even a sizeable tariff moves EPS by only a few percent."

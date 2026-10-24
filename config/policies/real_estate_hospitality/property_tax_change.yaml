@@ -1,0 +1,38 @@
+id: property_tax_change
+industry: real_estate_hospitality
+name: Property tax increase
+description: Higher property tax rates raise operating costs for owners of real estate. Net and CAM leases pass most of it to tenants at Prologis and Simon; tower owners and owned hotels absorb more; Airbnb's hosts, not Airbnb, pay tax on listed homes.
+persistence: permanent
+user_inputs:
+  - key: d_tax_pct
+    label: Change in property tax bills
+    unit: "%"
+    min: -30
+    max: 30
+    step: 1
+    default: 10
+    help: Percent change in annual real estate tax bills (rate or assessment changes).
+assumptions:
+  - key: recovery_scale
+    label: Recovery achieved vs lease terms
+    unit: fraction
+    low: 0.8
+    base: 1.0
+    high: 1.0
+    source: estimate
+    rationale: Tenants under strain may push back on reimbursements or vacancies leave some tax unrecovered.
+channels:
+  - type: cost
+    label: Higher property tax bills
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: exposure.re_property_tax_musd * input.d_tax_pct / 100
+      pass_through: exposure.re_property_tax_recovery_share * assumption.recovery_scale
+exposure_keys: [re_property_tax_musd, re_property_tax_recovery_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+  - https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+narrative:
+  extra: "Recovered tax shows up as both higher revenue and higher cost, so it nets out of operating income."

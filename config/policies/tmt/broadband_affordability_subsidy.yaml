@@ -1,0 +1,46 @@
+id: broadband_affordability_subsidy
+industry: tmt
+name: Broadband affordability subsidy (ACP revival)
+description: A revived Affordable Connectivity Program pays low-income households a monthly discount on internet service. Verizon gains from subscribers it keeps or adds; the other five companies have no direct exposure.
+persistence: "years: 3"
+user_inputs:
+  - key: monthly_benefit
+    label: Monthly discount per household
+    unit: USD
+    min: 0
+    max: 75
+    step: 5
+    default: 30
+    help: ACP paid up to $30/month ($75 on Tribal lands) until it ran out of money in mid-2024.
+  - key: households_m
+    label: Enrolled households
+    unit: millions
+    min: 0
+    max: 50
+    step: 1
+    default: 23
+    help: ACP reached about 23 million households before it ended.
+assumptions:
+  - key: incremental_share
+    label: Share of subsidy that is new revenue to providers
+    unit: fraction
+    low: 0.2
+    base: 0.35
+    high: 0.6
+    source: estimate
+    rationale: "Most of the discount replaces what customers already paid. When ACP ended, ~410k of Verizon's ~1.1M ACP prepaid subscribers disconnected in one quarter (~37%), a guide to how much revenue depends on the subsidy."
+    source_url: https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
+derived:
+  annual_program_musd: input.monthly_benefit * 12 * input.households_m
+channels:
+  - type: demand_transfer
+    label: Broadband subsidy revenue
+    params:
+      total_transfer_musd: derived.annual_program_musd
+      mpc: assumption.incremental_share
+      capture_share: exposure.broadband_subsidy_capture_share
+exposure_keys: [broadband_subsidy_capture_share]
+references:
+  - https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
+narrative:
+  extra: "Even for Verizon the effect is small: the whole program is about $8B a year, against Verizon's $138B of revenue."

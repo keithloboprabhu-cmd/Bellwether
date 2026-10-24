@@ -1,0 +1,37 @@
+id: airline_bag_fee_cap
+industry: transportation_logistics
+name: Cap or ban on checked-bag fees
+description: A federal "junk fee" rule that cuts checked-bag fees, for example by making the first checked bag free. Delta is the only exposed company in this universe, and airlines would win back part of the lost revenue through higher base fares.
+persistence: permanent
+user_inputs:
+  - key: fee_cut_pct
+    label: Cut in checked-bag fee revenue
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 50
+    help: Percent reduction in checked-bag fee revenue. A free first bag would remove most of it, since first bags are the bulk of fees and many elite and cardholder flyers already check bags free.
+assumptions:
+  - key: fare_recapture
+    label: Share recaptured through higher base fares
+    unit: fraction
+    low: 0.3
+    base: 0.5
+    high: 0.7
+    source: estimate
+    rationale: Bag fees were introduced in 2008 partly in place of fare increases. Airlines would rebuild some of the revenue in fares, but competition from low-cost carriers limits how much.
+channels:
+  - type: price
+    label: Lower checked-bag fee revenue
+    params:
+      d_price: -input.fee_cut_pct / 100
+      exposed_revenue_share: exposure.tl_checked_bag_fee_revenue_share
+      offset_share: assumption.fare_recapture
+exposure_keys: [tl_checked_bag_fee_revenue_share]
+default_role: neutral
+references:
+  - https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+  - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+narrative:
+  extra: "Delta's checked-bag fees were about $1.06B in 2024 (BTS data via press reports), under 2% of revenue, so even a full ban moves EPS by single digits."

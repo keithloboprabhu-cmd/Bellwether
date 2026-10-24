@@ -1,0 +1,50 @@
+id: short_term_rental_regulation
+industry: real_estate_hospitality
+name: Short-term rental restrictions
+description: A wave of US city and state rules (registration caps, primary-residence requirements, outright bans like New York City's 2023 law) removes a share of US short-term-rental listings. Airbnb loses US bookings it can't move to other listings; hotel franchisors win back a little demand.
+persistence: permanent
+user_inputs:
+  - key: listings_removed_pct
+    label: Share of US listings removed
+    unit: "%"
+    min: 0
+    max: 50
+    step: 1
+    default: 10
+    help: Share of Airbnb's US listings (and bookings) taken off the market by new rules.
+assumptions:
+  - key: recapture_share
+    label: Bookings Airbnb keeps on other listings
+    unit: fraction
+    low: 0.1
+    base: 0.3
+    high: 0.5
+    source: estimate
+    rationale: Some guests rebook a compliant listing nearby or in a neighbouring town; restrictions concentrate in dense cities where substitutes are scarce.
+  - key: hotel_elasticity
+    label: Hotel revenue change per 1% change in STR supply
+    unit: number
+    low: 0.02
+    base: 0.039
+    high: 0.06
+    source: "Zervas, Proserpio & Byers (rev. Nov 2016): a 10% increase in Airbnb supply is associated with a 0.39% decrease in Texas hotel room revenue"
+    source_url: https://people.bu.edu/zg/publications/airbnb.pdf
+    rationale: Assumes the effect is symmetric when supply shrinks; range brackets the paper's earlier 0.35% estimate and larger effects in tight markets.
+channels:
+  - type: demand_volume
+    label: Lost US short-term-rental bookings
+    params:
+      d_volume: -(input.listings_removed_pct / 100) * (1 - assumption.recapture_share)
+      exposed_revenue_share: exposure.re_us_str_revenue_share
+  - type: demand_volume
+    label: Guests shifting to hotels
+    params:
+      d_volume: assumption.hotel_elasticity * input.listings_removed_pct / 100
+      exposed_revenue_share: exposure.re_us_hotel_revenue_share
+exposure_keys: [re_us_str_revenue_share, re_us_hotel_revenue_share]
+default_role: neutral
+references:
+  - https://people.bu.edu/zg/publications/airbnb.pdf
+  - https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+narrative:
+  extra: "Airbnb's FY2025 10-K calls New York City's 2023 rules a de facto ban on short-term rentals there."

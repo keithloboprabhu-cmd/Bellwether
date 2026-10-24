@@ -1,0 +1,263 @@
+# Public Sector (government contractor) company exposures. Fractions of total revenue.
+# Cited figures come from each company's latest 10-K (the same filing as the baseline in data/snapshots/baselines.json).
+# Fiscal years differ: BAH FY ends Mar-2026, LDOS Jan-2-2026, SAIC Jan-30-2026, CACI Jun-2026, PSN and GD Dec-2025.
+industry: public_sector
+companies:
+  BAH:
+    govcon_us_gov_share:
+      value: 0.98
+      low: 0.97
+      high: 0.99
+      source: "Booz Allen FY2026 10-K, Note 3: approximately 98% of revenue in fiscal 2026, 2025 and 2024 from contracts with the U.S. government"
+      source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    govcon_defense_intel_share:
+      value: 0.71
+      low: 0.69
+      high: 0.73
+      source: "Booz Allen FY2026 10-K, Note 3: Defense customers $6,069M (54%) + Intelligence customers $1,900M (17%) of $11,217M revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    govcon_civilian_share:
+      value: 0.27
+      low: 0.25
+      high: 0.29
+      source: "Booz Allen FY2026 10-K, Note 3: Civil and Commercial customers $3,248M (29%) of revenue; ~2% is non-US-government (98% US gov), leaving ~27% civil agencies"
+      source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    govcon_cost_plus_share:
+      value: 0.59
+      low: 0.55
+      high: 0.60
+      source: "Booz Allen FY2026 10-K: cost-reimbursable $6,587M (59%) of revenue (57% FY2025, 55% FY2024)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    govcon_services_share:
+      value: 0.98
+      low: 0.95
+      high: 0.98
+      source: "Booz Allen FY2026 10-K: substantially all revenue is from services under U.S. government contracts; ~98% from the U.S. government"
+      source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    govcon_advisory_share:
+      value: 0.30
+      low: 0.20
+      high: 0.45
+      source: estimate
+      rationale: "Booz Allen's management-consulting heritage makes it the most exposed name; its 10-K shows Civil & Commercial revenue fell from $4,170M to $3,248M (−22%) in FY2026 amid efficiency reviews and contract cancellations. Advisory work is a large part of civil plus some defense staff-support work."
+    govcon_fed_it_share:
+      value: 0.45
+      low: 0.35
+      high: 0.60
+      source: estimate
+      rationale: Booz Allen calls itself the government's largest AI provider and lists digital modernization, cloud, data and cyber as core lines; no revenue split by offering is disclosed.
+  LDOS:
+    govcon_us_gov_share:
+      value: 0.87
+      low: 0.85
+      high: 0.89
+      source: "Leidos FY2025 10-K: approximately 87% of total revenues from contracts with the U.S. government in fiscal 2025, 2024 and 2023"
+      source_url: https://www.sec.gov/Archives/edgar/data/1336920/000133692026000030/ldos-20260102.htm
+    govcon_defense_intel_share:
+      value: 0.49
+      low: 0.48
+      high: 0.51
+      source: "Leidos FY2025 10-K revenue disaggregation: DoW and U.S. Intelligence Community $8,426M of $17,107M (49%)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1336920/000133692026000030/ldos-20260102.htm
+    govcon_civilian_share:
+      value: 0.377
+      low: 0.35
+      high: 0.39
+      source: "Leidos FY2025 10-K revenue disaggregation: Other U.S. government agencies $6,458M of $17,107M (37.7%)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1336920/000133692026000030/ldos-20260102.htm
+    govcon_cost_plus_share:
+      value: 0.44
+      low: 0.40
+      high: 0.44
+      source: "Leidos FY2025 10-K: cost-reimbursement and fixed-price-incentive-fee contracts 44% of revenues ($7,606M); low end strips out the FPIF part"
+      source_url: https://www.sec.gov/Archives/edgar/data/1336920/000133692026000030/ldos-20260102.htm
+    govcon_services_share:
+      value: 0.75
+      low: 0.70
+      high: 0.85
+      source: estimate
+      rationale: "87% US-government revenue (10-K) less most of the Defense Systems segment (13% of revenue, hardware and production programs) and some security-product sales."
+    govcon_advisory_share:
+      value: 0.05
+      low: 0.02
+      high: 0.10
+      source: estimate
+      rationale: Leidos is mainly IT, engineering, health-services and hardware; pure management-consulting task orders are a small slice.
+    govcon_fed_it_share:
+      value: 0.40
+      low: 0.30
+      high: 0.50
+      source: estimate
+      rationale: "National Security & Digital is 44% of revenue (10-K) and Health & Civil (30%) includes large IT programs; part of each is non-IT (health services, engineering)."
+  SAIC:
+    govcon_us_gov_share:
+      value: 0.98
+      low: 0.97
+      high: 0.99
+      source: "SAIC FY2026 10-K: 98% of total revenues in fiscal 2026, 2025 and 2024 from contracts with the U.S. government"
+      source_url: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    govcon_defense_intel_share:
+      value: 0.77
+      low: 0.72
+      high: 0.80
+      source: "SAIC FY2026 10-K: Defense and Intelligence segment revenues $5,581M of $7,262M (77%); DoW alone ~52%"
+      source_url: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    govcon_civilian_share:
+      value: 0.23
+      low: 0.20
+      high: 0.26
+      source: "SAIC FY2026 10-K: Civilian segment revenues $1,681M of $7,262M (23%)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    govcon_cost_plus_share:
+      value: 0.62
+      low: 0.60
+      high: 0.63
+      source: "SAIC FY2026 10-K: cost reimbursement 62% of total revenues (79% of Defense & Intelligence, 3% of Civilian)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    govcon_services_share:
+      value: 0.98
+      low: 0.95
+      high: 0.98
+      source: "SAIC FY2026 10-K: 98% of revenues from U.S. government contracts; SAIC is a technology-integration and services provider"
+      source_url: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    govcon_advisory_share:
+      value: 0.05
+      low: 0.02
+      high: 0.10
+      source: estimate
+      rationale: SAIC's work is mostly IT integration, engineering and mission support; advisory-only task orders are a small share.
+    govcon_fed_it_share:
+      value: 0.70
+      low: 0.55
+      high: 0.85
+      source: estimate
+      rationale: SAIC positions itself as a technology integrator (enterprise IT, cloud, software, mission IT); engineering and logistics work make up the rest.
+  CACI:
+    govcon_us_gov_share:
+      value: 0.956
+      low: 0.95
+      high: 0.96
+      source: "CACI FY2026 10-K: federal government contracts 95.6% of total revenues in fiscal 2026 (95.7% FY2025)"
+      source_url: https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+    govcon_defense_intel_share:
+      value: 0.782
+      low: 0.77
+      high: 0.79
+      source: "CACI FY2026 10-K: DoW $5,134M (53.6%) + Intelligence Community $2,352M (24.6%) of $9,568M revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+    govcon_civilian_share:
+      value: 0.174
+      low: 0.166
+      high: 0.18
+      source: "CACI FY2026 10-K: Federal civilian agencies $1,661M (17.4%) of revenue (16.6% FY2025)"
+      source_url: https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+    govcon_cost_plus_share:
+      value: 0.56
+      low: 0.56
+      high: 0.605
+      source: "CACI FY2026 10-K: cost-plus-fee $5,361M (56.0%) of revenue (60.5% FY2025)"
+      source_url: https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+    govcon_services_share:
+      value: 0.90
+      low: 0.85
+      high: 0.956
+      source: estimate
+      rationale: "95.6% federal revenue (10-K), less technology products and work funded from multi-year procurement/RDT&E money that keeps flowing in a lapse."
+    govcon_advisory_share:
+      value: 0.06
+      low: 0.03
+      high: 0.12
+      source: estimate
+      rationale: CACI's 'Expertise' offerings include some functional/advisory support, but most revenue is technology and mission work for DoW and the IC.
+    govcon_fed_it_share:
+      value: 0.45
+      low: 0.35
+      high: 0.60
+      source: estimate
+      rationale: CACI sells enterprise IT, software development and network modernization alongside mission technology (signals intelligence, electronic warfare) that is not classic IT.
+  PSN:
+    govcon_us_gov_share:
+      value: 0.51
+      low: 0.49
+      high: 0.55
+      source: "Parsons FY2025 10-K: approximately 51% of consolidated revenues from contracts with the U.S. federal government (59% in 2024)"
+      source_url: https://www.sec.gov/Archives/edgar/data/275880/000119312526045495/psn-20251231.htm
+    govcon_defense_intel_share:
+      value: 0.31
+      low: 0.29
+      high: 0.40
+      source: estimate
+      rationale: "10-K business-line table: Defense & Intelligence $1,873M of $6,364M (29%); Engineered Systems ($1,348M) adds some military-facility and missile-defense work."
+    govcon_civilian_share:
+      value: 0.20
+      low: 0.12
+      high: 0.22
+      source: estimate
+      rationale: "Federal revenue 51% (10-K) minus Defense & Intelligence 29% leaves ≤22% for civil agencies (FAA, DOE, State); part of Engineered Systems is defense."
+    govcon_cost_plus_share:
+      value: 0.423
+      low: 0.37
+      high: 0.43
+      source: "Parsons FY2025 10-K, Note 4: cost-plus revenue $2,689M of $6,364M (42%); 37% in 2024"
+      source_url: https://www.sec.gov/Archives/edgar/data/275880/000119312526045495/psn-20251231.htm
+    govcon_services_share:
+      value: 0.51
+      low: 0.45
+      high: 0.51
+      source: "Parsons FY2025 10-K: ~51% of revenue from the U.S. federal government (Federal Solutions); low end allows for multi-year-funded engineered systems"
+      source_url: https://www.sec.gov/Archives/edgar/data/275880/000119312526045495/psn-20251231.htm
+    govcon_advisory_share:
+      value: 0.05
+      low: 0.02
+      high: 0.10
+      source: estimate
+      rationale: Parsons' federal work is engineering, missile defense, cyber and program management; advisory-only federal work is small. Its 2025 Federal Solutions decline came from a reduced State Department contract, not consulting.
+    govcon_fed_it_share:
+      value: 0.08
+      low: 0.04
+      high: 0.15
+      source: estimate
+      rationale: Parsons is mainly engineering and infrastructure; federal IT/cyber is a modest part of Defense & Intelligence.
+  GD:
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.70
+      source: "General Dynamics 2025 10-K: total U.S. government revenue $35,757M, 68% of total revenue (incl. FMS)"
+      source_url: https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: "General Dynamics 2025 10-K: DoW $29,788M + FMS $1,015M of $52,550M revenue (58.6%); high end adds the IC part of non-DoW ($4,954M)"
+      source_url: https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: "10-K shows non-DoW U.S. government revenue of $4,954M (9.4% of revenue), which includes the intelligence community; civil agencies are the larger part (mainly GDIT)."
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.30
+      source: "General Dynamics 2025 10-K: cost-reimbursement revenue $15,673M of $52,550M (29.8%); 44% of U.S. government revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    govcon_services_share:
+      value: 0.20
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: "Technologies segment (GDIT + Mission Systems) is $13,471M, 26% of revenue (10-K), mostly US government; shipbuilding, combat vehicles and munitions are multi-year-funded production that continues through a lapse. GD says only its IT services business was 'somewhat impacted' by the 2025 shutdown."
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: "GD's 10-K says 2025 efficiency-driven contract terminations were 'largely limited to our IT services business'; professional-support work is a small part of GDIT."
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: "General Dynamics 2025 10-K: Technologies IT services revenue $9,057M of $52,550M (17.2%); includes a little state and commercial work"
+      source_url: https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm

@@ -28,6 +28,11 @@ Rules (`src/policyshock/data/baseline.py`):
 - Per-share history is as reported in the latest filing covering each year and is **not split-adjusted across years**.
   Backtests therefore compare tax rates and margins, not EPS levels.
 
+- **Cost-basis override:** a company can set `cost_basis: total_costs_less_overhead` in `config/industries.yaml` when
+  its tagged cost of revenue omits large variable costs. Cost of revenue is then CostsAndExpenses − SG&A/G&A − R&D − D&A.
+  It is used for Booz Allen, whose subcontractor "billable expenses" sit on a custom-tagged line, and it moves its
+  contribution margin from 53% to 22%.
+
 Known limitations: firms that report costs by nature (UPS, FDX, DAL, GD) get a cost of revenue close to total
 operating costs, so their contribution margin ≈ operating margin, which understates operating leverage
 in demand shocks. Some debt totals (GM, DE) aren't in the standard taxonomy and are flagged.
@@ -94,6 +99,8 @@ Allocating within the sample would hand the six firms 100% of the industry's spe
 ΔNI   = (PTI + ΔPTI)(1 − t') − PTI(1 − t) + Σ ΔNI_direct
 ΔEPS  = ΔNI / S                ΔEPS% = ΔEPS / reported EPS (n/m if EPS ≤ 0)
 ```
+ΔNI is multiplied by the **parent share** of consolidated profit, NI ÷ (NI + minority-interest income), when a company
+reports material noncontrolling interests (FCX 53%, PSN 78%, NUE 86%), so ΔEPS matches EPS attributable to shareholders.
 ΔNI is measured against the model's own baseline PTI(1 − t), so a zero shock gives exactly zero even though reported
 NI includes minority interests, discontinued operations and so on. The tax-rate effect is applied **once** here; channels only report Δt.
 ΔNI splits exactly into per-channel pieces: (ΔEBIT_c − ΔInt_c)(1 − t') + ΔNI_direct_c, plus PTI(t − t') assigned to the tax channels.
@@ -113,7 +120,9 @@ a low value isn't always bad news (low pass-through hurts an importer, but low e
 Exposure drivers move every company's exposure to its own low/high together.
 
 ### 2.6 Winners, losers, long/short
-Companies are ranked by implied Δprice % (ΔEPS % if n/m). Long = top, short = bottom, each with a
+Companies are ranked by implied Δprice % (ΔEPS % if n/m). Only companies the policy actually moves are eligible:
+unaffected names and names whose % change is n/m (negative baseline EPS) are listed as "not ranked" rather than treated
+as zero. If only one company is affected, there is a single call instead of a pair. Long = top, short = bottom, each with a
 one-line reason built from its dominant channel and that channel's exposure. If the long's pessimistic
 case is below the short's optimistic case, the call is labelled **low conviction**. If every company moves
 the same way, the pair is labelled a relative-value trade.

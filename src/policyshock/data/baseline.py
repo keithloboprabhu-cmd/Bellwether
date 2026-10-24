@@ -30,6 +30,10 @@ REVENUE_TAGS = [
     "SalesRevenueServicesNet",
     "SalesRevenueGoodsNet",
 ]
+# Banks: total net revenue first. Contract-revenue tags cover only fee income (AXP tags $41B
+# of discount/fee revenue that way vs $72B total revenues net of interest expense).
+BANK_REVENUE_TAGS = ["RevenuesNetOfInterestExpense", "Revenues"]
+
 COST_TAGS = [
     "CostOfRevenue",
     "CostOfGoodsAndServicesSold",
@@ -48,6 +52,7 @@ TAX_TAGS = ["IncomeTaxExpenseBenefit"]
 # Income tax note: pretax income split by jurisdiction (domestic share drives US tax-rate effects).
 PRETAX_DOMESTIC_TAGS = ["IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic"]
 PRETAX_FOREIGN_TAGS = ["IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign"]
+NCI_INCOME_TAGS = ["NetIncomeLossAttributableToNoncontrollingInterest"]
 NET_INCOME_TAGS = ["NetIncomeLoss", "NetIncomeLossAvailableToCommonStockholdersBasic", "ProfitLoss"]
 EPS_TAGS = ["EarningsPerShareDiluted", "EarningsPerShareBasicAndDiluted"]
 DILUTED_SHARES_TAGS = ["WeightedAverageNumberOfDilutedSharesOutstanding"]
@@ -59,7 +64,7 @@ CLAIMS_TAGS = [
     "PolicyholderBenefitsAndClaimsIncurredHealthCare",
     "BenefitsLossesAndExpenses",
 ]
-SGA_TAGS = ["SellingGeneralAndAdministrativeExpense"]
+SGA_TAGS = ["SellingGeneralAndAdministrativeExpense", "GeneralAndAdministrativeExpense"]
 RND_TAGS = ["ResearchAndDevelopmentExpense", "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"]
 DA_TAGS = ["DepreciationDepletionAndAmortization", "DepreciationAndAmortization", "DepreciationAmortizationAndAccretionNet"]
 NII_TAGS = ["InterestIncomeExpenseNet", "InterestIncomeExpenseAfterProvisionForLoanLoss"]
@@ -189,14 +194,19 @@ def fiscal_year_label(period_end: str) -> int:
     return d.year - 1 if (d.month == 1 and d.day <= 7) else d.year
 
 
-def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) -> list[FiscalYear]:
+def build_baseline(
+    facts: dict, kind: str = "standard", min_year: int = 2008, cost_basis: str = "reported"
+) -> list[FiscalYear]:
     """Parse company facts into a list of FiscalYear records, newest first.
 
-    `kind` is "standard", "bank", "reit" or "managed_care" (config/industries.yaml). Values are
+    `kind` is "standard", "bank", "reit" or "managed_care" (config/industries.yaml).
+    `cost_basis="total_costs_less_overhead"` sets cost of revenue = CostsAndExpenses − SG&A/G&A
+    − R&D − D&A, for companies whose tagged cost of revenue omits large variable costs
+    (Booz Allen reports subcontractor "billable expenses" on a separate, custom-tagged line). Values are
     converted to $ millions / millions of shares. EPS stays in $ per share.
     """
     M = 1e6
-    rev = _chain(facts, REVENUE_TAGS)
+    rev = _chain(facts, BANK_REVENUE_TAGS if kind == "bank" else REVENUE_TAGS)
     cost = _chain(facts, COST_TAGS)
     opinc = _chain(facts, OPINC_TAGS)
     interest = _chain(facts, INTEREST_TAGS)
@@ -205,6 +215,7 @@ def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) ->
     pt_dom = _chain(facts, PRETAX_DOMESTIC_TAGS)
     pt_for = _chain(facts, PRETAX_FOREIGN_TAGS)
     ni = _chain(facts, NET_INCOME_TAGS)
+    nci = _chain(facts, NCI_INCOME_TAGS)
     eps = _chain(facts, EPS_TAGS, unit="USD/shares")
     dil = _chain(facts, DILUTED_SHARES_TAGS, unit="shares")
     gp = _chain(facts, GROSS_PROFIT_TAGS)
@@ -245,11 +256,17 @@ def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) ->
 
         R = put("revenue", rev.get(end))
         put("net_income", ni.get(end))
+        put("nci_income", nci.get(end))
         put("eps_diluted", eps.get(end), scale=1)
         S = put("diluted_shares", dil.get(end))
         put("interest_expense", interest.get(end))
         put("da", da.get(end))
         put("total_assets", _near(assets, end))
+        # raw cost components, kept so cross-year comparisons can use one consistent cost definition
+        put("costs_and_expenses", cae.get(end))
+        put("sga", sga.get(end))
+        put("rnd", rnd.get(end))
+        put("gross_profit", gp.get(end))
         put("pretax_domestic", pt_dom.get(end))
         put("pretax_foreign", pt_for.get(end))
         PTI = put("pretax_income", pretax.get(end))
@@ -302,6 +319,14 @@ def build_baseline(facts: dict, kind: str = "standard", min_year: int = 2008) ->
             if kind == "managed_care" and cl is not None:
                 fy.items["cost_of_revenue"] = (C or 0.0) + cl.value / M
                 fy.tags["cost_of_revenue"] = (f"{fy.tags['cost_of_revenue']} + " if C is not None else "") + cl.tag
+                C = fy.items["cost_of_revenue"]
+            # --- opt-in: variable costs = total costs less overhead (see docstring)
+            ce_ = cae.get(end)
+            if cost_basis == "total_costs_less_overhead" and ce_ is not None and R is not None:
+                s_, r_ = sga.get(end), rnd.get(end)
+                overhead = sum(x.value / M for x in (s_, r_) if x) + (fy.items.get("da") or 0.0)
+                fy.items["cost_of_revenue"] = ce_.value / M - overhead
+                fy.tags["cost_of_revenue"] = "= CostsAndExpenses − SG&A/G&A − R&D − D&A (config cost_basis)"
                 C = fy.items["cost_of_revenue"]
             # --- cost of revenue fallbacks
             if C is None and R is not None:

@@ -1,0 +1,35 @@
+id: corporate_tax_rate_change
+industry: industrials
+name: Change in the US corporate tax rate
+description: A change in the 21% federal corporate rate hits only income earned in the US. Nucor earns almost all its profit at home and feels it fully; Honeywell, with most pretax income booked abroad, feels it least.
+persistence: permanent
+user_inputs:
+  - key: d_rate_pts
+    label: Change in the statutory rate
+    unit: percentage points
+    min: -10
+    max: 14
+    step: 1
+    default: 4
+    help: Positive is an increase from today's 21%. +4 points (to 25%) is a middle-of-the-road increase; +7 (to 28%) matches proposals made in 2021–24.
+assumptions:
+  - key: effective_share
+    label: Share of the statutory change that reaches the effective rate
+    unit: fraction
+    low: 0.8
+    base: 0.9
+    high: 1.0
+    source: estimate
+    rationale: Credits, FDII and other preferences are partly fixed in dollars, so a statutory change moves the tax on US income by slightly less than one-for-one.
+channels:
+  - type: tax_rate
+    label: Different tax rate on US income
+    params:
+      d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+      domestic_income_share: exposure.ind_us_pretax_income_share
+exposure_keys: [ind_us_pretax_income_share]
+default_role: neutral
+references:
+  - https://www.law.cornell.edu/uscode/text/26/11
+narrative:
+  extra: "Taxes on foreign income (GILTI and the global minimum tax) are not modelled, so companies with large foreign profits may be somewhat more exposed than shown."

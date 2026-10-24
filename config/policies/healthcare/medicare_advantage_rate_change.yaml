@@ -1,0 +1,40 @@
+id: medicare_advantage_rate_change
+industry: healthcare
+name: Medicare Advantage rate change
+description: CMS changes Medicare Advantage payment rates relative to what plans expected. Insurers recover part of a cut by raising premiums and trimming benefits; the rest hits margins. Humana, with about three-quarters of revenue in MA, is by far the most exposed; Pfizer and Lilly are not directly affected.
+persistence: permanent
+showcase: true
+user_inputs:
+  - key: rate_change_pct
+    label: Change in MA payment rates
+    unit: percent
+    min: -10
+    max: 10
+    step: 0.5
+    default: -2
+    help: Change in CMS per-member MA payments versus what plans priced into their bids (negative = cut). Annual rate notices typically move rates a few percent either way.
+assumptions:
+  - key: offset_share
+    label: Share of the rate change passed to members (premiums/benefits)
+    unit: fraction
+    low: 0.22
+    base: 0.54
+    high: 0.83
+    source: "Cabral, Geruso & Mahoney (AER 2018): MA insurers pass through 45% of payment changes in lower premiums plus 9% in richer benefits (54%); premium pass-through is 13% in the least and 74% in the most competitive markets (+9% benefits gives the 22%–83% range)"
+    source_url: https://www.nber.org/papers/w20470
+channels:
+  - type: price
+    label: Medicare Advantage payment rates
+    params:
+      d_price: input.rate_change_pct / 100
+      exposed_revenue_share: exposure.medicare_advantage_revenue_share
+      offset_share: assumption.offset_share
+exposure_keys: [medicare_advantage_revenue_share]
+default_role: neutral
+references:
+  - https://www.nber.org/papers/w20470
+  - https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
+narrative:
+  extra: "Humana's 2025 pre-tax margin was about 1%, so even a 2% MA rate cut it cannot fully reprice would wipe out a large share of its earnings."

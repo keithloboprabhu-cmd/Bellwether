@@ -1,0 +1,38 @@
+id: school_choice_esa
+industry: education
+name: School choice expansion (ESAs, vouchers, tax-credit scholarships)
+description: New or larger education savings account, voucher and tax-credit scholarship programs give families public money to spend on private schooling and curriculum. Stride's tuition-based online private schools accept these funds, so it gains a little; the higher-ed and consumer-app companies are not affected. Exposure in this universe is small.
+persistence: permanent
+user_inputs:
+  - key: new_choice_spending_bn
+    label: New private school choice spending
+    unit: USD billions per year
+    min: 0
+    max: 30
+    step: 0.5
+    default: 5
+    help: Added annual ESA, voucher and tax-credit scholarship dollars nationally. EdChoice's 2026 rankings list 70 programs, with participation growing fastest in ESAs and vouchers; for scale, Tennessee's 2024-25 average ESA award was about $9,400 per student, so $5B is roughly half a million new awards.
+assumptions:
+  - key: spend_share
+    label: Share of new choice dollars actually spent on schooling in the year
+    unit: fraction
+    low: 0.8
+    base: 0.9
+    high: 1
+    source: estimate
+    rationale: Choice funds can only be spent on approved education expenses; some ESA balances roll over unspent.
+    source_url: https://www.edchoice.org/2026-edchoice-participation-rankings/
+channels:
+  - type: demand_transfer
+    label: Families spend choice dollars on online private school and curriculum
+    params:
+      total_transfer_musd: input.new_choice_spending_bn * 1000
+      mpc: assumption.spend_share
+      capture_share: exposure.esa_capture_share
+exposure_keys: [esa_capture_share]
+default_role: neutral
+references:
+  - https://www.edchoice.org/2026-edchoice-participation-rankings/
+  - https://www.sec.gov/Archives/edgar/data/1157408/000110465926090515/lrn-20260630x10k.htm
+narrative:
+  extra: "Choice programs could also pull some students out of the virtual public schools Stride serves under per-pupil contracts; that offset is not modelled."

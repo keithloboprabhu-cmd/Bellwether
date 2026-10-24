@@ -1,0 +1,44 @@
+id: site_neutral_payments
+industry: healthcare
+name: Site-neutral payment rules
+description: Paying hospital outpatient departments the same as physician offices for the same service cuts what insurers pay hospitals. Insurers here are helped (lower claims), though they hand much of the saving back through MLR rules, premiums and lower MA benchmarks; drugmakers are unaffected.
+persistence: permanent
+user_inputs:
+  - key: rate_cut_pct
+    label: Payment cut on affected outpatient services
+    unit: percent
+    min: 0
+    max: 60
+    step: 5
+    default: 30
+    help: Reduction in hospital outpatient payment rates for services moved to site-neutral rates (office-setting rates are often far below outpatient-department rates).
+assumptions:
+  - key: eligible_share
+    label: Share of outpatient spending subject to site-neutral rates
+    unit: fraction
+    low: 0.1
+    base: 0.15
+    high: 0.3
+    source: estimate
+    rationale: Proposals target selected services (clinic visits, drug administration, imaging) at off-campus departments, a minority of all outpatient spending.
+  - key: pass_through
+    label: Share of claims savings passed to customers
+    unit: fraction
+    low: 0.4
+    base: 0.65
+    high: 0.85
+    source: estimate
+    rationale: Minimum-MLR rules, premium competition and MA benchmarks tied to Medicare fee-for-service spending return most savings to customers over time.
+channels:
+  - type: cost
+    label: Lower outpatient hospital claims
+    params:
+      exposed_cost_share: exposure.hospital_outpatient_cost_share
+      shock_pct: -input.rate_cut_pct / 100 * assumption.eligible_share
+      pass_through: assumption.pass_through
+exposure_keys: [hospital_outpatient_cost_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/R28.htm
+narrative:
+  extra: "This is a gain for insurers; the losers are hospital systems, which are outside this six-company universe."

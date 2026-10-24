@@ -1,0 +1,45 @@
+id: bonus_depreciation_rollback
+industry: industrials
+name: Rolling back 100% bonus depreciation
+description: Lowering the permanent 100% bonus depreciation rate means companies deduct less of their new US equipment up front. It changes when tax is paid, not how much, so earnings barely move but value falls a little. Nucor, with by far the largest US capex relative to its size, loses the most.
+persistence: permanent
+user_inputs:
+  - key: bonus_cut_pts
+    label: Cut in the bonus depreciation rate
+    unit: percentage points
+    min: 0
+    max: 100
+    step: 10
+    default: 60
+    help: The 2025 budget law made 100% bonus depreciation permanent for property acquired after January 19, 2025. A cut of 60 points returns it to 40%, the level the 2017 law had phased it down to for 2025.
+assumptions:
+  - key: eligible_share
+    label: Share of US capex that qualifies for bonus depreciation
+    unit: fraction
+    low: 0.6
+    base: 0.75
+    high: 0.9
+    source: estimate
+    rationale: Machinery and equipment qualify, but buildings and land generally do not; industrial capex is mostly equipment.
+  - key: recovery_years
+    label: Normal tax recovery period for the equipment
+    unit: years
+    low: 5
+    base: 7
+    high: 7
+    source: estimate
+    rationale: Most manufacturing machinery is 7-year MACRS property; some tools, vehicles and computers are 5-year.
+channels:
+  - type: tax_timing
+    label: Slower write-off of new US equipment
+    params:
+      capex_musd: exposure.ind_us_capex_musd
+      expensed_share: -input.bonus_cut_pts / 100 * assumption.eligible_share
+      recovery_years: assumption.recovery_years
+exposure_keys: [ind_us_capex_musd]
+default_role: neutral
+references:
+  - https://www.bdo.com/insights/tax/irs-issues-interim-guidance-on-bonus-depreciation-rules
+  - https://www.law.cornell.edu/uscode/text/26/168
+narrative:
+  extra: "Under GAAP the lost deduction shows up as deferred tax rather than as lower earnings, so the effect is on cash and value, computed for one year of capex."

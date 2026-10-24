@@ -1,0 +1,57 @@
+id: clean_energy_credits_change
+industry: energy_resources
+name: Clean-energy tax credit change
+description: >-
+  Changes the value of clean-electricity credits (PTC/ITC, 45Y/48E) and the 45X manufacturing credit. A cut
+  reduces NextEra's tax credits directly and First Solar's 45X credits (≈ all of its 2025 earnings), and lowers US
+  module demand as solar projects pencil out less. Negative inputs are cuts; positive inputs are expansions.
+  The oil majors and FCX have essentially no exposure.
+persistence: "years: 7"
+user_inputs:
+  - key: d_generation_credit_pct
+    label: Change in clean-electricity credit value
+    unit: percent
+    min: -100
+    max: 50
+    step: 5
+    default: -25
+    help: The 2025 budget law (P.L. 119-21) already ends wind/solar credits for projects placed in service after 2027 unless construction began by mid-2026; -25% approximates a further cut.
+  - key: d_manufacturing_credit_pct
+    label: Change in 45X manufacturing credit value
+    unit: percent
+    min: -100
+    max: 50
+    step: 5
+    default: -25
+    help: 45X pays about 17¢/W for First Solar's US-made modules.
+assumptions:
+  - key: module_demand_sensitivity
+    label: US module volume change per 1% change in generation credits
+    unit: number
+    low: 0.1
+    base: 0.3
+    high: 0.6
+    source: estimate
+    rationale: Credits are ~30-40% of utility-solar project value, but First Solar sells years ahead from a contracted backlog, muting the near-term volume response.
+channels:
+  - type: tax_credit
+    label: Change in clean-electricity credits
+    params:
+      credit_rate: input.d_generation_credit_pct / 100
+      base_musd: exposure.clean_generation_credits_musd
+  - type: tax_credit
+    label: Change in 45X manufacturing credits
+    params:
+      credit_rate: input.d_manufacturing_credit_pct / 100
+      base_musd: exposure.manufacturing_credits_45x_musd
+  - type: demand_volume
+    label: US solar module demand
+    params:
+      d_volume: input.d_generation_credit_pct / 100 * assumption.module_demand_sensitivity
+      exposed_revenue_share: exposure.us_solar_module_revenue_share
+exposure_keys: [clean_generation_credits_musd, manufacturing_credits_45x_musd, us_solar_module_revenue_share]
+references:
+  - https://www.sec.gov/Archives/edgar/data/37634/000075330826000015/nee-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/1274494/000127449426000021/fslr-20251231.htm
+narrative:
+  extra: "Valued over 7 years (roughly the credits' remaining life after the 2025 phase-downs) rather than capitalized forever."

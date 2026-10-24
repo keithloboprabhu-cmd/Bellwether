@@ -1,0 +1,30 @@
+id: fed_rate_change
+industry: financial_services
+name: Fed policy rate change
+description: The Federal Reserve moves short-term US rates and the curve shifts in parallel. Rate cuts squeeze net interest income at asset-sensitive deposit banks (Wells Fargo, Bank of America, JPMorgan); Citi's US dollar book and Amex barely move.
+persistence: permanent
+user_inputs:
+  - key: d_rate_bps
+    label: Change in US policy rates
+    unit: bps
+    min: -300
+    max: 300
+    step: 25
+    default: -100
+    help: Instantaneous parallel shift in US dollar rates. The Fed cut 100 bp from Sept to Dec 2024; banks disclose ±100 and ±200 bp scenarios.
+derived:
+  sensitivity: "exposure.nii_sens_up_per_100bp if input.d_rate_bps > 0 else exposure.nii_sens_down_per_100bp"
+channels:
+  - type: bank_nii
+    label: Change in net interest income
+    params:
+      d_rate_bps: input.d_rate_bps
+      nii_sensitivity_per_100bp: derived.sensitivity
+exposure_keys: [nii_sens_up_per_100bp, nii_sens_down_per_100bp]
+references:
+  - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm
+  - https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm
+narrative:
+  extra: "Sensitivities come from each bank's own 10-K rate-shock table (static or forecast balance sheet, no management response), scaled linearly; moves beyond ±100 bp are rougher because cuts hit deposit-rate floors."

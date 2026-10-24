@@ -1,0 +1,61 @@
+id: financial_transaction_tax
+industry: financial_services
+name: Financial transaction tax
+description: A tax on the value of US securities trades. Higher trading costs cut trading volume, which hurts dealers' sales-and-trading revenue; Goldman, with the largest markets business relative to its size, is hit hardest and Amex not at all.
+persistence: permanent
+user_inputs:
+  - key: rate_bps
+    label: Tax rate
+    unit: bps of trade value
+    min: 0
+    max: 50
+    step: 1
+    default: 5
+    help: US proposals have ranged from 1 bp (0.01%) to 10 bp (0.1%) of the value traded; the UK stamp duty on shares is 50 bp.
+assumptions:
+  - key: elasticity
+    label: Elasticity of trading volume to transaction costs
+    unit: number
+    low: 0.5
+    base: 1
+    high: 2
+    source: estimate
+    rationale: Literature surveys of FTTs (e.g. Matheson 2011, IMF WP/11/54) report volume elasticities to total trading costs mostly between about 0.5 and 2; we use 1.
+  - key: cost_bps
+    label: Current all-in trading cost
+    unit: bps of trade value
+    low: 10
+    base: 20
+    high: 50
+    source: estimate
+    rationale: Institutional trading costs (commissions, spread, impact) are often well under 0.1% of value; retail and less liquid bonds cost more.
+  - key: variable_comp_ratio
+    label: Share of lost trading revenue saved in variable compensation
+    unit: fraction
+    low: 0.15
+    base: 0.27
+    high: 0.35
+    source: "Goldman Sachs 2025 10-K: Global Banking & Markets compensation and benefits $11,025M on $41,453M net revenues (26.6%)"
+    source_url: https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm
+    rationale: Bonus pools move with markets revenue; low assumes sticky pay.
+derived:
+  d_volume: (1 + input.rate_bps / assumption.cost_bps) ** (-assumption.elasticity) - 1
+  d_trading_rev: baseline.revenue * exposure.trading_revenue_share * derived.d_volume
+channels:
+  - type: demand_volume
+    label: Lower trading volume
+    params:
+      d_volume: derived.d_volume
+      exposed_revenue_share: exposure.trading_revenue_share
+  - type: cost
+    label: Lower variable pay on lost trading revenue
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: derived.d_trading_rev * assumption.variable_comp_ratio
+exposure_keys: [trading_revenue_share]
+references:
+  - https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm
+  - https://www.imf.org/en/Publications/WP/Issues/2016/12/31/Taxing-Financial-Transactions-Issues-and-Evidence-24702
+narrative:
+  extra: "Volume falls by (1 + tax/cost)^(−elasticity) − 1; the tax itself is paid by investors, and the banks' own-account trading tax is not modelled."

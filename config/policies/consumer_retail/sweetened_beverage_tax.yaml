@@ -1,0 +1,69 @@
+id: sweetened_beverage_tax
+industry: consumer_retail
+name: Sweetened beverage (soda) tax
+description: A per-ounce excise on sugar- and artificially sweetened drinks, like Philadelphia's, raises shelf prices; shoppers buy fewer taxed drinks and shift a little spending to other items.
+persistence: permanent
+user_inputs:
+  - key: tax_cents_per_oz
+    label: Tax per ounce
+    unit: cents
+    min: 0
+    max: 3
+    step: 0.25
+    default: 1.5
+    help: Philadelphia levies 1.5¢/oz (from 2017), Seattle 1.75¢, Berkeley 1¢.
+  - key: coverage_pct
+    label: Share of the company's US sales in taxing areas
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 100
+    help: 100 models a national tax; a single city covers ~1–2% of a national chain's sales.
+assumptions:
+  - key: pass_through
+    label: Share of the tax passed into shelf prices
+    unit: fraction
+    low: 0.43
+    base: 0.6
+    high: 1.0
+    source: "Roberto et al. (2019), JAMA 321(18): Philadelphia's 1.5¢/oz tax raised prices 0.65¢/oz at supermarkets (43%), 0.87¢ at mass merchandisers (58%) and 1.56¢ at pharmacies (~100%) vs. Baltimore"
+    source_url: https://doi.org/10.1001/jama.2019.4249
+  - key: price_per_oz
+    label: Pre-tax shelf price of taxed drinks
+    unit: cents per ounce
+    low: 5.28
+    base: 5.4
+    high: 6.6
+    source: "Roberto et al. (2019): 2016 mean prices 5.28¢/oz (mass merchandise), 5.43¢ (supermarkets), 6.60¢ (pharmacies) in Philadelphia"
+    source_url: https://doi.org/10.1001/jama.2019.4249
+  - key: elasticity
+    label: Demand elasticity for sweetened drinks
+    unit: number
+    low: 0.8
+    base: 1.21
+    high: 2.0
+    source: "Powell et al. (2013), Obesity Reviews 14(2): US price elasticity of demand for sugar-sweetened beverages ≈ −1.21"
+    source_url: https://doi.org/10.1111/obr.12002
+    rationale: High end reflects Philadelphia, where taxed volume fell 40% at mass merchandisers on a ~16% price rise, partly from cross-border shopping (Roberto et al. 2019).
+  - key: recapture
+    label: Share of lost drink spending re-spent in the same store
+    unit: fraction
+    low: 0
+    base: 0.3
+    high: 0.5
+    source: estimate
+    rationale: Some shoppers switch to untaxed water, juice or milk in the same trip; others shop across the border or stop buying.
+channels:
+  - type: demand_price
+    label: Fewer taxed drinks sold
+    params:
+      dp_consumer: input.tax_cents_per_oz * assumption.pass_through / assumption.price_per_oz
+      elasticity: assumption.elasticity
+      exposed_revenue_share: exposure.us_sweetened_beverage_revenue_share * input.coverage_pct / 100 * (1 - assumption.recapture)
+exposure_keys: [us_sweetened_beverage_revenue_share]
+references:
+  - https://doi.org/10.1001/jama.2019.4249
+  - https://doi.org/10.1111/obr.12002
+narrative:
+  extra: "The excise is paid by distributors, so retailers lose only margin on the volume that disappears; sweetened drinks are a few percent of grocers' sales at most."

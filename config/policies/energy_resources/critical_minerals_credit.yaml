@@ -1,0 +1,37 @@
+id: critical_minerals_credit
+industry: energy_resources
+name: Critical-minerals production credit
+description: >-
+  A production tax credit worth a percentage of the cost of mining and processing critical minerals in the US,
+  extended to copper (which today is not on the 45X list). Freeport's US copper mines are the only meaningful
+  exposure in this group; XOM's and CVX's lithium projects are still pre-production.
+persistence: "years: 10"
+user_inputs:
+  - key: credit_pct
+    label: Credit as % of production cost
+    unit: percent
+    min: 0
+    max: 30
+    step: 1
+    default: 10
+    help: Mirrors the 10%-of-production-cost credit 45X gives listed critical minerals.
+assumptions:
+  - key: eligible_cost_share
+    label: Share of site production costs that qualify
+    unit: fraction
+    low: 0.4
+    base: 0.7
+    high: 1
+    source: estimate
+    rationale: Treasury rules for 45X limit which extraction and raw-material costs count; mining-heavy copper costs may only partly qualify.
+channels:
+  - type: tax_credit
+    label: Critical-minerals production credit
+    params:
+      credit_rate: input.credit_pct / 100 * assumption.eligible_cost_share
+      base_musd: exposure.us_critical_mineral_production_cost_musd
+exposure_keys: [us_critical_mineral_production_cost_musd]
+references:
+  - https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm
+narrative:
+  extra: "Base is FCX's US copper sales volume times its 2025 site production and delivery cost per pound."

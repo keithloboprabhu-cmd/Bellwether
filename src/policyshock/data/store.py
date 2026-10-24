@@ -91,6 +91,7 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
         "income_tax": it.get("income_tax"),
         "effective_tax_rate": it.get("effective_tax_rate"),
         "net_income": it.get("net_income"),
+        "nci_income": it.get("nci_income"),
         "diluted_shares": it.get("diluted_shares"),
         "eps_diluted": eps,
         "total_debt": it.get("total_debt"),

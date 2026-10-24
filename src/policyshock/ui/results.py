@@ -90,9 +90,14 @@ def reason(an: Analysis, c, reg: Registry) -> str:
     for key in dom.exposure_refs:
         d = reg.exposure_defs[key]
         v = reg.exposures[c.ticker][key].value
-        bits.append(f"{lower_first(d.label)} {f.pct(v, digits=0) if d.unit == 'fraction' else f.number(v)}")
-    eps = f.pct(c.dEPS_pct, signed=True)
-    return f"Δ EPS {eps}, driven by {bits[0]}" + (f" ({'; '.join(bits[1:])})" if len(bits) > 1 else "") + "."
+        shown = f.pct(v, digits=0) if d.unit == "fraction" else f.money(v) if d.unit == "usd_m" else f.number(v)
+        bits.append(f"{lower_first(d.label)} {shown}")
+    # lead with the metric the ranking used: implied Δprice when available, else ΔEPS
+    if c.dP_pct is not None:
+        head = f"implied Δ price {f.pct(c.dP_pct, signed=True)} (Δ EPS {f.pct(c.dEPS_pct, signed=True)})"
+    else:
+        head = f"Δ EPS {f.pct(c.dEPS_pct, signed=True)}"
+    return f"{head[:1].upper()}{head[1:]}, driven by {bits[0]}" + (f" ({'; '.join(bits[1:])})" if len(bits) > 1 else "") + "."
 
 
 # ------------------------------------------------------------------ tabs
@@ -118,14 +123,16 @@ def overview(an: Analysis, reg: Registry) -> None:
         help="Constant-multiple valuation: " + persistence_label(an.base.policy.persistence),
     )
 
-    if an.long and an.short:
+    if an.long or an.short:
         c1, c2 = st.columns(2)
-        with c1:
-            st.markdown(f"#### ▲ Long **{an.long.ticker}**")
-            st.markdown(f"{an.long.name}: {reason(an, an.long, reg)}")
-        with c2:
-            st.markdown(f"#### ▼ Short **{an.short.ticker}**")
-            st.markdown(f"{an.short.name}: {reason(an, an.short, reg)}")
+        if an.long:
+            with c1:
+                st.markdown(f"#### ▲ Long **{an.long.ticker}**")
+                st.markdown(f"{an.long.name}: {reason(an, an.long, reg)}")
+        if an.short:
+            with c2:
+                st.markdown(f"#### ▼ Short **{an.short.ticker}**")
+                st.markdown(f"{an.short.name}: {reason(an, an.short, reg)}")
         if an.low_conviction:
             st.caption("⚠ Low conviction: the long's pessimistic case overlaps the short's optimistic case.")
     for n in an.notes:

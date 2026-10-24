@@ -1,0 +1,38 @@
+id: snap_benefit_change
+industry: consumer_retail
+name: SNAP benefit cut or expansion
+description: A change in federal SNAP (food stamp) benefits shifts what low-income households spend on groceries; grocers that take the most SNAP dollars, above all Walmart, gain or lose the most.
+persistence: permanent
+user_inputs:
+  - key: d_benefits_bn
+    label: Change in annual SNAP benefits
+    unit: USD billions per year
+    min: -60
+    max: 30
+    step: 1
+    default: -15
+    help: CBO scored the 2025 reconciliation law (P.L. 119-21) as cutting SNAP spending by about $186 billion over 2025–2034 (~$19B a year), roughly a third of it by shifting costs to states. Positive values model an expansion.
+assumptions:
+  - key: spend_response
+    label: Retail spending change per $1 of benefits (MPC)
+    unit: fraction
+    low: 0.5
+    base: 0.7
+    high: 0.9
+    source: estimate
+    rationale: Hastings & Shapiro (2018) find a marginal propensity to consume SNAP-eligible food out of SNAP of 0.5–0.6 (far above cash); these stores also sell non-food items that freed-up cash would buy, so the total store-spending response is higher.
+    source_url: https://www.nber.org/papers/w23112
+channels:
+  - type: demand_transfer
+    label: Change in SNAP households' grocery spending
+    params:
+      total_transfer_musd: input.d_benefits_bn * 1000
+      mpc: assumption.spend_response
+      capture_share: exposure.snap_grocery_spend_share
+exposure_keys: [snap_grocery_spend_share]
+references:
+  - https://www.nber.org/papers/w23112
+  - https://supermarketnews.com/foodservice-retail/walmart-dominates-the-retail-field-in-snap-grocery-market-share
+  - https://www.everycrsreport.com/files/2025-07-23_R48552_542fa893b97030757b3aedac1b44930cac47cc88.html
+narrative:
+  extra: "Each company's share of SNAP shoppers' grocery spending (Numerator) stands in for its share of SNAP dollars, so Nike and Home Depot are unaffected."

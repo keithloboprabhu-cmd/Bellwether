@@ -1,82 +1,245 @@
-# Consumer & Retail company exposures. Values are fractions of total revenue / COGS.
-# M2 values are labelled estimates; milestone M3 replaces them with 10-K-cited figures where possible.
+# Consumer & Retail company exposures. Fractions are of total revenue / cost of revenue.
+# 10-K figures were read from the latest 10-K of each company (the fiscal year in
+# data/snapshots/baselines.json); company-statement figures cite the press report quoting them.
 industry: consumer_retail
 companies:
   WMT:
     us_consumer_revenue_share:
       value: 0.80
       low: 0.72
-      high: 0.83
-      source: estimate
-      rationale: Walmart U.S. plus Sam's Club U.S. are roughly four-fifths of net sales in recent 10-Ks; low end treats part of Sam's as business buyers.
+      high: 0.81
+      source: "Walmart FY2026 10-K: Walmart U.S. net sales $482,975M + Sam's Club U.S. $93,015M = 80.8% of $713,163M total revenues"
+      source_url: https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm
+      rationale: Base trims US advertising/other revenue; low end treats part of Sam's Club as business buyers.
     us_import_share_of_cogs:
       value: 0.27
       low: 0.20
       high: 0.33
       source: estimate
-      rationale: Walmart says about two-thirds of what it buys for the US is made, grown or assembled in the US; one-third imported × ~80% US share of COGS.
+      rationale: "CFO Rainey (Apr 9 2025): 'more than two-thirds of what we sell in the US is made, grown or assembled in the US'; under one-third imported × ~81% US share of sales; high allows for imported parts in US-assembled goods."
+      source_url: https://www.foodbusinessnews.net/articles/28068-walmart-ready-for-tariff-clouded-trade-environment
+    snap_grocery_spend_share:
+      value: 0.255
+      low: 0.22
+      high: 0.28
+      source: "Numerator SNAP Shopper Scorecard (year to Q1 2023), via Supermarket News: Walmart 25.5% of SNAP shoppers' annual grocery spend"
+      source_url: https://supermarketnews.com/foodservice-retail/walmart-dominates-the-retail-field-in-snap-grocery-market-share
+      rationale: Share of SNAP households' total grocery spend, used as a proxy for share of SNAP dollars; range allows for drift since 2023.
+    us_hourly_workers_m:
+      value: 1.47
+      low: 1.40
+      high: 1.50
+      source: "Walmart FY2026 10-K: ~1.6 million US associates, ~92% hourly"
+      source_url: https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm
+    us_starting_wage:
+      value: 14
+      low: 14
+      high: 16
+      source: "Walmart 'How much do Walmart associates make': team associate pay range $14–$37/hour; average US hourly frontline associate more than $18.50/hour"
+      source_url: https://corporate.walmart.com/askwalmart/how-much-do-walmart-associates-make
+      rationale: $14 is the floor of the range; high end reflects higher starting pay in many markets.
+    us_sweetened_beverage_revenue_share:
+      value: 0.020
+      low: 0.012
+      high: 0.030
+      source: estimate
+      rationale: "FY2026 10-K: Walmart U.S. grocery $285,482M + Sam's Club grocery $64,706M = 49% of revenue; assumes sweetened drinks are ~4% (2.5–6%) of grocery sales."
   TGT:
     us_consumer_revenue_share:
       value: 0.98
       low: 0.95
-      high: 0.99
-      source: estimate
-      rationale: All Target stores are in the US; small non-merchandise revenue (credit card profit sharing, advertising) excluded.
+      high: 0.98
+      source: "Target FY2025 10-K: merchandise sales $102,717M of $104,780M net sales (98.0%); all stores are in the US"
+      source_url: https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm
+      rationale: Excludes advertising, credit-card profit sharing and other revenue; low end allows for some business purchasers.
     us_import_share_of_cogs:
       value: 0.50
       low: 0.35
       high: 0.60
       source: estimate
-      rationale: Discretionary-heavy mix (apparel, home, electronics, toys) is largely imported; food and essentials mostly domestic.
+      rationale: "Not disclosed. FY2025 10-K mix: apparel $15.7B, home $15.6B and hardlines $15.8B (45% of net sales) are largely imported; food & beverage $24.1B and household essentials $18.0B mostly domestic."
+    snap_grocery_spend_share:
+      value: 0.018
+      low: 0.012
+      high: 0.025
+      source: "Numerator SNAP Shopper Scorecard (year to Q1 2023), via Supermarket News: Target 1.8% of SNAP shoppers' annual grocery spend"
+      source_url: https://supermarketnews.com/foodservice-retail/walmart-dominates-the-retail-field-in-snap-grocery-market-share
+    us_hourly_workers_m:
+      value: 0.38
+      low: 0.35
+      high: 0.40
+      source: "Target FY2025 10-K: ~415,000 full-time, part-time and seasonal team members as of Jan 31 2026; US hourly store and supply-chain staff are 'the vast majority'"
+      source_url: https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm
+      rationale: Base assumes ~92% of headcount is hourly, as at Walmart.
+    us_starting_wage:
+      value: 15
+      low: 15
+      high: 17
+      source: "Target FY2025 10-K: starting wage range of $15 to $24 per hour for US hourly team members"
+      source_url: https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm
+      rationale: Bottom of the disclosed range; high end for higher-cost markets.
+    us_sweetened_beverage_revenue_share:
+      value: 0.014
+      low: 0.008
+      high: 0.020
+      source: estimate
+      rationale: "FY2025 10-K: food & beverage $24,136M = 23% of net sales; assumes sweetened drinks are ~6% (3.5–9%) of that category."
   COST:
     us_consumer_revenue_share:
       value: 0.70
       low: 0.60
-      high: 0.74
-      source: estimate
-      rationale: US & Puerto Rico are about three-quarters of net sales; low end strips out business members.
+      high: 0.725
+      source: "Costco FY2026 10-K: United States segment total revenue $219,823M of $303,154M (72.5%)"
+      source_url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm
+      rationale: Base and low strip out business members (business centers, Executive/Business memberships).
     us_import_share_of_cogs:
-      value: 0.22
-      low: 0.15
-      high: 0.30
+      value: 0.24
+      low: 0.18
+      high: 0.28
+      source: "CFO Millerchip, May 29 2025 earnings call: about a third of Costco's US sales are imported goods; China about 8% of US sales"
+      source_url: https://www.nbcsandiego.com/news/business/money-report/costco-tops-earnings-and-revenue-estimates-as-sales-jump-8/3836279/
+      rationale: "One-third × US share of merchandise costs (FY2026 10-K: US $191,440M of $264,279M = 72%) = 0.24; low allows for gasoline and fresh food being mostly domestic."
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.03
+      high: 0.06
+      source: "Numerator SNAP Shopper Scorecard (year to Q1 2023), via Supermarket News: Costco 6% of SNAP shoppers' annual grocery spend"
+      source_url: https://supermarketnews.com/foodservice-retail/walmart-dominates-the-retail-field-in-snap-grocery-market-share
+      rationale: Low end assumes SNAP households pay at Costco disproportionately with non-SNAP funds (bulk, membership-gated shopping).
+    us_hourly_workers_m:
+      value: 0.21
+      low: 0.20
+      high: 0.22
+      source: "Costco FY2026 10-K: 232,000 US employees; average US hourly rate ~ $33"
+      source_url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm
+      rationale: Base assumes ~90% of US employees are hourly warehouse staff.
+    us_starting_wage:
+      value: 20
+      low: 19.5
+      high: 21
       source: estimate
-      rationale: Food and sundries dominate the mix; roughly 30% of US merchandise imported × ~73% US share.
+      rationale: Costco doesn't disclose starting pay in its 10-K; press reports of a Jan 2025 memo put bottom-of-scale pay at $20/hour, with later reports of ~$21.
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.009
+      high: 0.022
+      source: estimate
+      rationale: "FY2026 10-K: Foods and Sundries $116,788M + Fresh Foods $41,715M = 53% of net sales, US ~72% of revenue; assumes sweetened drinks are ~4% (2.5–6%) of food sales."
   AMZN:
     us_consumer_revenue_share:
       value: 0.55
       low: 0.45
-      high: 0.60
-      source: estimate
-      rationale: North America segment is about 60% of net sales; AWS and International are excluded; some North America revenue is Canada/Mexico or business.
+      high: 0.595
+      source: "Amazon 2025 10-K: North America segment net sales $426,305M of $716,924M (59.5%); United States net sales $489,657M incl. AWS"
+      source_url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm
+      rationale: Base strips Canada/Mexico and advertising sold to businesses from North America; low also strips third-party seller fees.
     us_import_share_of_cogs:
       value: 0.15
       low: 0.10
       high: 0.25
       source: estimate
-      rationale: Cost of sales includes shipping and digital content; first-party US product purchases, a large share imported, are only part of it.
+      rationale: "2025 10-K: cost of sales $356,414M includes shipping and digital content; first-party online + physical store sales are $291,848M worldwide, ~60% US, a large share imported."
+    snap_grocery_spend_share:
+      value: 0.013
+      low: 0.008
+      high: 0.02
+      source: "Numerator SNAP Shopper Scorecard (year to Q1 2023), via Supermarket News: Amazon 1.3% of SNAP shoppers' annual grocery spend"
+      source_url: https://supermarketnews.com/foodservice-retail/walmart-dominates-the-retail-field-in-snap-grocery-market-share
+    us_hourly_workers_m:
+      value: 0.80
+      low: 0.60
+      high: 1.00
+      source: estimate
+      rationale: "2025 10-K: ~1,576,000 employees worldwide; US share of hourly fulfillment and transportation staff not disclosed, assumed ~half."
+    us_starting_wage:
+      value: 19
+      low: 18
+      high: 21
+      source: estimate
+      rationale: "Amazon raised average starting pay for US front-line staff above $19 in 2022 (Bloomberg) and average pay above $23 in Sep 2025 (aboutamazon.com); current starting pay varies by site."
+      source_url: https://www.aboutamazon.com/md/news/workplace/amazon-wage-increase-2025-fulfillment-transportation-employees
+    us_sweetened_beverage_revenue_share:
+      value: 0.002
+      low: 0.001
+      high: 0.004
+      source: estimate
+      rationale: "2025 10-K: physical stores (mostly Whole Foods) $22,561M = 3.1% of net sales, plus online grocery; sweetened drinks are a small slice."
   NKE:
     us_consumer_revenue_share:
+      value: 0.44
+      low: 0.40
+      high: 0.44
+      source: "Nike FY2026 10-K: NIKE Brand and Converse sales in the United States ~44% of total revenues"
+      source_url: https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm
+      rationale: Includes wholesale sales to US retailers, which reach US consumers; low trims team/institutional sales.
+    us_import_share_of_cogs:
       value: 0.42
       low: 0.38
-      high: 0.45
+      high: 0.44
+      source: "Nike FY2026 10-K: 'Nearly all footwear, apparel and equipment products are manufactured outside the United States'; US ~44% of revenues"
+      source_url: https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm
+      rationale: US-bound product cost ≈ US revenue share; base trims freight and other non-product cost of sales.
+    snap_grocery_spend_share:
+      value: 0
+      low: 0
+      high: 0
       source: estimate
-      rationale: North America is roughly 40–45% of Nike revenue in recent 10-Ks.
-    us_import_share_of_cogs:
-      value: 0.40
-      low: 0.33
-      high: 0.45
+      rationale: Nike sells no SNAP-eligible food.
+    us_hourly_workers_m:
+      value: 0.025
+      low: 0.015
+      high: 0.035
       source: estimate
-      rationale: Virtually all Nike products are made by contract factories outside the US; only goods sold in the US face US tariffs (~42% of revenue).
+      rationale: "FY2026 10-K: ~73,000 employees worldwide incl. retail; 347 US stores; assumes ~60–70 hourly staff per store plus US distribution centers."
+    us_starting_wage:
+      value: 16
+      low: 15
+      high: 18
+      source: estimate
+      rationale: Not disclosed; assumes Nike store pay a little above the $15 floor most large US retailers have adopted.
+    us_sweetened_beverage_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Nike sells no beverages.
   HD:
     us_consumer_revenue_share:
       value: 0.88
       low: 0.45
       high: 0.92
-      source: estimate
-      rationale: About 92% of sales are in the US; roughly half come from Pro customers, so the low end counts only DIY consumers.
+      source: "Home Depot FY2025 10-K: net sales in the US $152,170M of $164,683M (92.4%)"
+      source_url: https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm
+      rationale: Roughly half of sales go to Pro (contractor) customers, so the low end counts only DIY consumers.
     us_import_share_of_cogs:
       value: 0.37
       low: 0.28
       high: 0.45
+      source: "Home Depot Q1 FY2025 call (May 20 2025): over 50% of purchases are sourced in the US"
+      source_url: https://www.retaildive.com/news/home-depot-not-raise-prices-tariffs-first-quarter/748594/
+      rationale: "Under half of purchases imported × ~92% US share of sales caps the share near 0.45; base assumes ~40% of US purchases are imported."
+    snap_grocery_spend_share:
+      value: 0
+      low: 0
+      high: 0
       source: estimate
-      rationale: Building materials are mostly domestic; tools, appliances, décor and fixtures are often imported.
+      rationale: Home Depot doesn't accept SNAP for groceries in any material amount.
+    us_hourly_workers_m:
+      value: 0.375
+      low: 0.36
+      high: 0.39
+      source: "Home Depot FY2025 10-K: 422,500 US associates; ~53,400 salaried company-wide"
+      source_url: https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm
+      rationale: Assumes ~90% of salaried staff are in the US.
+    us_starting_wage:
+      value: 15
+      low: 15
+      high: 17
+      source: estimate
+      rationale: Not disclosed in the 10-K; Home Depot has publicly set a $15 starting floor in US stores, higher in many markets.
+    us_sweetened_beverage_revenue_share:
+      value: 0.001
+      low: 0
+      high: 0.002
+      source: estimate
+      rationale: Checkout-lane drinks only.

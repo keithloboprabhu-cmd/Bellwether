@@ -1,0 +1,44 @@
+id: digital_services_tax
+industry: tmt
+name: Digital services tax (hypothetical US DST)
+description: A hypothetical US tax on revenue from digital advertising and app-marketplace commissions earned from US users, modelled on the UK and French DSTs. Alphabet and Meta carry almost all of it; they can pass part on to advertisers as Google did abroad.
+persistence: permanent
+user_inputs:
+  - key: rate_pct
+    label: DST rate on in-scope revenue
+    unit: percent
+    min: 0
+    max: 10
+    step: 0.5
+    default: 3
+    help: France and Canada set 3% (Canada repealed its DST in 2025), the UK 2%, Austria 5%.
+assumptions:
+  - key: pass_through
+    label: Share of the tax passed to advertisers and developers as a surcharge
+    unit: fraction
+    low: 0.2
+    base: 0.5
+    high: 0.9
+    source: estimate
+    rationale: Google added a 2% UK DST fee and 5% Austria fee on top of ad spend from Nov 2020 (full pass-through on paper), but in a US-wide tax advertisers would cut budgets and rivals might absorb it, so we assume about half sticks.
+    source_url: https://ppc.land/google-ads-to-pass-cost-of-digital-taxes-to-advertisers-starting-in-november/
+derived:
+  in_scope_share: exposure.us_digital_ad_revenue_share + exposure.us_app_store_fee_share
+channels:
+  - type: tax_revenue
+    label: Digital services tax on US ad and marketplace revenue
+    params:
+      rate: input.rate_pct / 100
+      in_scope_share: derived.in_scope_share
+  - type: price
+    label: DST surcharge passed to advertisers
+    params:
+      d_price: input.rate_pct / 100 * assumption.pass_through
+      exposed_revenue_share: derived.in_scope_share
+exposure_keys: [us_digital_ad_revenue_share, us_app_store_fee_share]
+references:
+  - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
+  - https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/R46.htm
+  - https://ppc.land/google-ads-to-pass-cost-of-digital-taxes-to-advertisers-starting-in-november/
+narrative:
+  extra: "The surcharge is modelled as a price rise on in-scope revenue with no lost volume, so the net hit is the tax times (1 − pass-through)."

@@ -1,0 +1,58 @@
+id: interest_rate_change
+industry: real_estate_hospitality
+name: Interest rate change
+description: A parallel move in short and long rates reprices floating-rate and maturing debt, changes interest earned on cash, and moves REIT property values through cap rates. REIT GAAP EPS understates the hit (property value carries it), and Airbnb's large cash pile means higher rates help it.
+persistence: permanent
+user_inputs:
+  - key: d_bps
+    label: Change in interest rates
+    unit: bps
+    min: -300
+    max: 300
+    step: 25
+    default: 100
+    help: A parallel shift in SOFR and the 10-year Treasury. Positive = rates rise.
+assumptions:
+  - key: cap_rate_beta
+    label: Cap-rate move per 1 bp move in the 10-year
+    unit: number
+    low: 0.3
+    base: 0.5
+    high: 0.8
+    source: estimate
+    rationale: Cap rates follow Treasuries only partly because rent growth expectations and spreads absorb some of the move; 0.5 is a common middle reading.
+  - key: cash_rate_beta
+    label: Share of a rate move earned on cash and investments
+    unit: fraction
+    low: 0.6
+    base: 0.85
+    high: 1.0
+    source: estimate
+    rationale: Money-market and short bills reprice fully within the year; longer-dated securities and bank deposit pricing lag.
+channels:
+  - type: financing_debt
+    label: Repricing of floating and maturing debt
+    params:
+      d_rate_bps: input.d_bps
+      floating_share: exposure.re_floating_debt_share
+      maturing_share: exposure.re_debt_maturing_1y_share
+  - type: cost
+    label: Interest earned on cash and investments
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: -exposure.re_interest_cash_musd * assumption.cash_rate_beta * input.d_bps / 10000
+  - type: reit_nav
+    label: Property values move with cap rates
+    params:
+      d_10y_bps: input.d_bps
+      cap_rate: exposure.re_implied_cap_rate
+      cap_rate_beta: assumption.cap_rate_beta * exposure.re_property_value_share
+exposure_keys: [re_floating_debt_share, re_debt_maturing_1y_share, re_interest_cash_musd, re_implied_cap_rate, re_property_value_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+  - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+  - https://www.cbre.com/insights/reports/us-cap-rate-survey-h1-2025
+narrative:
+  extra: "Interest earned on cash is booked here as a cost offset; the REIT value effect is on property value and ignores leverage, so the equity hit is if anything understated."

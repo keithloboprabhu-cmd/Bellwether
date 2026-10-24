@@ -1,0 +1,310 @@
+# Technology, Media & Telecom company exposures. Fractions are of total revenue / cost of revenue.
+# 10-K figures were read from the SEC XBRL "R" pages of the filings in data/snapshots/baselines.json.
+industry: tmt
+companies:
+  AAPL:
+    us_import_share_of_cogs:
+      value: 0.28
+      low: 0.15
+      high: 0.33
+      source: estimate
+      rationale: "Apple FY2025 10-K: products $307.0B of $416.2B net sales and U.S. net sales $151.8B (36%); products are ~88% of $221.0B cost of sales and almost all are assembled abroad, so US-bound imported hardware is ~0.32 of COGS. Base trims for US-made Macs and exemptions tied to US investment pledges; low assumes a broad exemption."
+      source_url: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
+    us_digital_ad_revenue_share:
+      value: 0.012
+      low: 0.005
+      high: 0.02
+      source: estimate
+      rationale: Apple doesn't disclose advertising revenue (App Store search ads, News, TV); assumes ~$10B global, about half from US users, inside $109.2B Services.
+    us_app_store_fee_share:
+      value: 0.025
+      low: 0.015
+      high: 0.035
+      source: estimate
+      rationale: "Not disclosed. Sensor Tower data imply ~$160B/yr combined App Store + Google Play consumer spend (Q2 2025 $40.9B), roughly two-thirds App Store; ~25% effective commission gives ~$26B global, ~40% US => ~$10B of $416B revenue."
+    us_users_m:
+      value: 150
+      low: 120
+      high: 180
+      source: estimate
+      rationale: Apple doesn't disclose US users; iPhone share of US smartphones is roughly half of ~300M adult and teen users.
+    restricted_chip_china_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Apple's China sales are consumer devices, which advanced-computing export controls do not restrict.
+    greater_china_revenue_share:
+      value: 0.155
+      low: 0.12
+      high: 0.155
+      source: "Apple FY2025 10-K: Greater China net sales $64,377M of $416,161M (15.5%; includes Hong Kong and Taiwan)"
+      source_url: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R68.htm
+      rationale: Low end strips Taiwan, which Chinese retaliation would not reach.
+    us_semis_mfg_capex_musd:
+      value: 0
+      low: 0
+      high: 300
+      source: estimate
+      rationale: Apple owns no US fabs; it buys chips from TSMC Arizona and others. High case allows for Apple-owned tooling placed at US chip suppliers.
+    broadband_subsidy_capture_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Not a broadband provider.
+  MSFT:
+    us_import_share_of_cogs:
+      value: 0.10
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: "Xbox and Surface hardware (inside $21.8B Xbox and $17.1B Windows & Devices, FY2026 10-K) are imported; cost of revenue also carries depreciation of Azure servers, so a chip tariff on new servers phases in over their ~6-year lives. High case is a fully phased-in tariff on imported servers."
+      source_url: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/R110.htm
+    us_digital_ad_revenue_share:
+      value: 0.035
+      low: 0.025
+      high: 0.05
+      source: estimate
+      rationale: "Microsoft FY2026 10-K: search advertising revenue $15,176M of $331,839M; assumes ~60% from US users, plus a few $B of LinkedIn marketing solutions (not disclosed)."
+      source_url: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/R110.htm
+    us_app_store_fee_share:
+      value: 0
+      low: 0
+      high: 0.01
+      source: estimate
+      rationale: Mobile app-store rules don't reach the Microsoft Store or Xbox store; high case covers a cap that extends to console stores (~$3B US Xbox store commissions).
+    us_users_m:
+      value: 200
+      low: 150
+      high: 250
+      source: estimate
+      rationale: Windows, Outlook, LinkedIn and Xbox accounts reach most US adults; unique US users not disclosed.
+    restricted_chip_china_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Microsoft doesn't sell chips into China.
+    greater_china_revenue_share:
+      value: 0.015
+      low: 0.01
+      high: 0.025
+      source: estimate
+      rationale: Microsoft doesn't break out China (FY2026 10-K reports only U.S. $170.8B vs other countries $161.0B); piracy and local-cloud rules keep China sales to low single digits.
+    us_semis_mfg_capex_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Microsoft designs chips (Maia, Cobalt) but owns no fabs; data centers don't qualify for Section 48D.
+    broadband_subsidy_capture_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Not a broadband provider.
+  GOOGL:
+    us_import_share_of_cogs:
+      value: 0.08
+      low: 0.03
+      high: 0.18
+      source: estimate
+      rationale: Pixel/Nest/Fitbit devices are imported; most cost of revenue is TAC, content and data-center costs, and server depreciation only reflects a server tariff gradually. High case is a fully phased-in tariff on imported servers.
+    us_digital_ad_revenue_share:
+      value: 0.35
+      low: 0.32
+      high: 0.40
+      source: "Alphabet 2025 10-K: Google advertising $294,691M of $402,836M revenue; United States $194,229M (48%) of revenue. 0.35 = 73% x 48%, assuming ads split by country like total revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
+      rationale: Range covers US ads being a somewhat larger share of US revenue than of global revenue.
+    us_app_store_fee_share:
+      value: 0.008
+      low: 0.004
+      high: 0.013
+      source: estimate
+      rationale: "Google Play sits inside 'subscriptions, platforms and devices' ($48,030M, Alphabet 2025 10-K) and isn't broken out; ~$55B global Play spend x ~20% effective fee x ~30% US => ~$3.3B of $403B."
+      source_url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
+    us_users_m:
+      value: 300
+      low: 250
+      high: 330
+      source: estimate
+      rationale: Search, YouTube, Gmail and Android reach nearly every US internet user.
+    restricted_chip_china_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Alphabet doesn't sell chips (TPUs are used in-house or rented through Cloud, not shipped to China).
+    greater_china_revenue_share:
+      value: 0.01
+      low: 0.005
+      high: 0.03
+      source: estimate
+      rationale: Google services are blocked in China; exposure is China-based advertisers (exporters, apps) buying ads aimed at users abroad, which only escalation would cut.
+    us_semis_mfg_capex_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Alphabet designs TPUs but owns no fabs; data centers don't qualify for Section 48D.
+    broadband_subsidy_capture_share:
+      value: 0
+      low: 0
+      high: 0.002
+      source: estimate
+      rationale: Google Fiber took part in ACP but is small (well under 1M homes) and no longer a core Alphabet segment.
+  META:
+    us_import_share_of_cogs:
+      value: 0.08
+      low: 0.03
+      high: 0.25
+      source: estimate
+      rationale: Cost of revenue ($36.2B) is mostly data-center and server depreciation plus Quest hardware; imported servers reach depreciation slowly. High case is a fully phased-in tariff on imported servers.
+    us_digital_ad_revenue_share:
+      value: 0.36
+      low: 0.34
+      high: 0.38
+      source: "Meta 2025 10-K: advertising $196,175M of $200,966M revenue; United States $74,780M (37.2%; geography by user location). 0.36 = 97.6% x 37.2%"
+      source_url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/R46.htm
+    us_app_store_fee_share:
+      value: 0
+      low: 0
+      high: 0.002
+      source: estimate
+      rationale: The Meta Quest store charges commissions but is tiny; Meta mostly pays app-store fees rather than earning them.
+    us_users_m:
+      value: 250
+      low: 220
+      high: 280
+      source: estimate
+      rationale: Facebook, Instagram and WhatsApp reach most US adults and teens; US-only users not disclosed (US & Canada reported together).
+    restricted_chip_china_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Meta doesn't sell chips.
+    greater_china_revenue_share:
+      value: 0.03
+      low: 0
+      high: 0.11
+      source: estimate
+      rationale: Meta has no users in China, but China-based advertisers were reported at ~11% of 2024 revenue ($18.35B); chip controls only reach them if China retaliates against US platforms, so base takes a small slice.
+      source_url: https://adnews.com.au/news/meta-s-billions-of-ad-dollars-from-china-at-risk-from-trade-war
+    us_semis_mfg_capex_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Meta designs MTIA chips but owns no fabs.
+    broadband_subsidy_capture_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Not a broadband provider.
+  NVDA:
+    us_import_share_of_cogs:
+      value: 0.45
+      low: 0.25
+      high: 0.60
+      source: estimate
+      rationale: "Customers headquartered in the US were $149.6B of $215.9B FY2026 revenue (NVDA 10-K), but some of that hardware is deployed abroad. GPUs are fabbed by TSMC in Taiwan and systems assembled in Taiwan/Mexico; Arizona and Texas production is still ramping."
+      source_url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+    us_digital_ad_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No advertising business.
+    us_app_store_fee_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No app store.
+    us_users_m:
+      value: 10
+      low: 5
+      high: 20
+      source: estimate
+      rationale: Consumer data exposure limited to GeForce NOW / NVIDIA app accounts.
+    restricted_chip_china_share:
+      value: 0.06
+      low: 0.03
+      high: 0.091
+      source: estimate
+      rationale: "NVDA FY2026 10-K: China (incl. Hong Kong) revenue $19,677M of $215,938M (9.1%), already after the H20 license requirement ($4.5B charge) shut it out of China data-center compute. Base assumes about two-thirds of what's left (gaming GPUs, licensed parts) could fall under tighter controls; high is all of it."
+      source_url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+    greater_china_revenue_share:
+      value: 0.091
+      low: 0.06
+      high: 0.12
+      source: "NVIDIA FY2026 10-K: China (including Hong Kong) revenue $19,677M of $215,938M total (9.1%), by direct-customer headquarters"
+      source_url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+      rationale: Range reflects that end-customer location can differ from the headquarters basis NVIDIA reports.
+    us_semis_mfg_capex_musd:
+      value: 0
+      low: 0
+      high: 500
+      source: estimate
+      rationale: NVIDIA is fabless; US chip and supercomputer production (TSMC Arizona, Foxconn/Wistron in Texas) is partners' capex, not NVIDIA's. High case allows NVIDIA-owned test/packaging equipment.
+    broadband_subsidy_capture_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Not a broadband provider.
+  VZ:
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.18
+      high: 0.386
+      source: estimate
+      rationale: "Verizon 2025 10-K: cost of wireless equipment $28,976M of $75,114M cost of revenue (incl. D&A), i.e. 0.386, nearly all imported phones. Customs value is the OEM's import price, below Verizon's purchase price, so base takes ~two-thirds; high assumes OEMs pass the full duty on their wholesale price."
+      source_url: https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/R3.htm
+    us_digital_ad_revenue_share:
+      value: 0
+      low: 0
+      high: 0.003
+      source: estimate
+      rationale: Verizon sold Yahoo/AOL in 2021; remaining ad revenue is negligible.
+    us_app_store_fee_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No app store.
+    us_users_m:
+      value: 120
+      low: 100
+      high: 146
+      source: estimate
+      rationale: Verizon serves roughly 146M wireless connections (many are tablets, IoT or second lines); unique US people are fewer.
+    restricted_chip_china_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No chip sales.
+    greater_china_revenue_share:
+      value: 0
+      low: 0
+      high: 0.002
+      source: estimate
+      rationale: US-focused carrier.
+    us_semis_mfg_capex_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No chip manufacturing.
+    broadband_subsidy_capture_share:
+      value: 0.06
+      low: 0.048
+      high: 0.09
+      source: estimate
+      rationale: "Verizon CFO (Q2 2024 call): about 1.1M prepaid subscribers benefited from ACP, ~4.8% of the program's ~23M households; Fios and 5G home-internet ACP customers (not disclosed) push the total higher."
+      source_url: https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset

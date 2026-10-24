@@ -1,0 +1,453 @@
+# Real Estate & Hospitality company exposures. Fractions are of total revenue or total debt.
+# 10-K figures are from each company's FY2025 10-K (filing index linked in source_url).
+industry: real_estate_hospitality
+companies:
+  PLD:
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.02
+      high: 0.05
+      source: 'Prologis FY2025 10-K Item 7A: $1.1B of debt at variable rates vs $34.5B fixed (3.1%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+      rationale: High end allows for heavier credit-line/commercial-paper use during the year.
+    re_debt_maturing_1y_share:
+      value: 0.054
+      low: 0.04
+      high: 0.07
+      source: 'Prologis FY2025 10-K debt note: scheduled 2026 principal $1,914.5M of $35,578.0M (5.4%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+    re_interest_cash_musd:
+      value: 1146
+      low: 800
+      high: 1500
+      source: 'Prologis FY2025 10-K balance sheet: cash and cash equivalents $1,145.6M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+    re_property_value_share:
+      value: 1
+      low: 1
+      high: 1
+      source: estimate
+      rationale: 'REIT: equity value rests on owned logistics property marked at cap rates.'
+    re_implied_cap_rate:
+      value: 0.05
+      low: 0.045
+      high: 0.06
+      source: estimate
+      rationale: Prime US logistics trades at roughly 4.5-6% cap rates, below CBRE's H1 2025 all-property average of 6.84%; sector figure not verified.
+      source_url: https://www.cbre.com/insights/reports/us-cap-rate-survey-h1-2025
+    re_us_str_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No short-term-rental business.
+    re_us_hotel_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No hotel business.
+    re_intl_inbound_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Logistics rents are paid by businesses, not tourists.
+    re_lihtc_investment_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: 'FY2025 10-K full-text search: no mention of low-income housing tax credits or affordable-housing investment'
+      source_url: https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+    re_office_linked_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Industrial/logistics portfolio; no office exposure.
+    re_property_tax_musd:
+      value: 900
+      low: 600
+      high: 1200
+      source: estimate
+      rationale: 'FY2025 10-K: rental expenses $1,964M include real estate taxes, property insurance, utilities and repairs; taxes assumed ~45% (30-60%), as is typical for industrial property.'
+    re_property_tax_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: 'Prologis FY2025 10-K: ''Generally, under the terms of our leases, the majority of our rental expenses are recovered from our customers'''
+      source_url: https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+      rationale: Mostly net leases; vacancy and some gross leases keep part of the tax with Prologis.
+  AMT:
+    re_floating_debt_share:
+      value: 0.037
+      low: 0.03
+      high: 0.05
+      source: 'American Tower FY2025 10-K Item 7A: variable rate debt $1,385.2M vs fixed $36,049.7M (3.7%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.07
+      high: 0.11
+      source: 'American Tower FY2025 10-K Item 7A: fixed-rate debt due 2026 $3,386.2M of $37,434.9M total (9.0%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/
+    re_interest_cash_musd:
+      value: 1475
+      low: 1000
+      high: 2000
+      source: 'American Tower FY2025 10-K balance sheet: cash and cash equivalents $1,474.8M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/
+    re_property_value_share:
+      value: 1
+      low: 1
+      high: 1
+      source: estimate
+      rationale: 'REIT: value rests on towers and data centers valued on cash-flow yields.'
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.065
+      source: estimate
+      rationale: Tower portfolios trade at low cap rates for their contracted escalators; no public survey figure found, CBRE H1 2025 all-property average is 6.84%.
+      source_url: https://www.cbre.com/insights/reports/us-cap-rate-survey-h1-2025
+    re_us_str_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No short-term-rental business.
+    re_us_hotel_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No hotel business.
+    re_intl_inbound_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Tenants are wireless carriers, not travellers.
+    re_lihtc_investment_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: 'FY2025 10-K full-text search: no mention of low-income housing tax credits or affordable-housing investment'
+      source_url: https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/
+    re_office_linked_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Tower and data-center leases do not depend on office attendance.
+    re_property_tax_musd:
+      value: 300
+      low: 150
+      high: 450
+      source: estimate
+      rationale: FY2025 10-K lists property taxes among direct site expenses (ground rent and power are larger) but gives no total; ~3% of revenue assumed.
+    re_property_tax_recovery_share:
+      value: 0.3
+      low: 0.1
+      high: 0.5
+      source: estimate
+      rationale: Some tower leases pass property tax to tenants (10-K notes property tax paid on behalf of landlords); most is absorbed.
+  SPG:
+    re_floating_debt_share:
+      value: 0.011
+      low: 0.011
+      high: 0.04
+      source: 'Simon FY2025 10-K: ''Floating rate debt comprised 1.1% of our total consolidated debt at December 31, 2025'''
+      source_url: https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+      rationale: High end counts the $460M credit facility and $355M commercial paper drawn at year-end as floating.
+    re_debt_maturing_1y_share:
+      value: 0.207
+      low: 0.15
+      high: 0.22
+      source: 'Simon FY2025 10-K contractual obligations: long-term debt due 2026 $5,905.6M of $28,595.5M (20.7%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+      rationale: Low end allows for extension options on some mortgages.
+    re_interest_cash_musd:
+      value: 823
+      low: 600
+      high: 1400
+      source: 'Simon FY2025 10-K balance sheet: cash and cash equivalents $823.1M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+    re_property_value_share:
+      value: 1
+      low: 1
+      high: 1
+      source: estimate
+      rationale: 'REIT: value rests on owned malls and outlets.'
+    re_implied_cap_rate:
+      value: 0.07
+      low: 0.06
+      high: 0.08
+      source: estimate
+      rationale: Class A malls and outlets trade around 6-8% cap rates, near CBRE's H1 2025 all-property average of 6.84%; sector figure not verified.
+      source_url: https://www.cbre.com/insights/reports/us-cap-rate-survey-h1-2025
+    re_us_str_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No short-term-rental business.
+    re_us_hotel_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No hotel business.
+    re_intl_inbound_revenue_share:
+      value: 0.02
+      low: 0.005
+      high: 0.04
+      source: estimate
+      rationale: Rents are partly sales-linked and premium outlets draw foreign shoppers, but most rent is fixed; a small indirect share.
+    re_lihtc_investment_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: 'FY2025 10-K full-text search: no mention of low-income housing tax credits or affordable-housing investment'
+      source_url: https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+    re_office_linked_revenue_share:
+      value: 0.02
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: Weekday office workers add some mall traffic and percentage rent; most rent is fixed minimum rent.
+    re_property_tax_musd:
+      value: 451
+      low: 430
+      high: 470
+      source: 'Simon FY2025 10-K income statement: real estate taxes $451.1M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.5
+      high: 0.85
+      source: estimate
+      rationale: '10-K: leases include reimbursements for real estate taxes, but many are fixed-CAM or gross and vacancy is unrecovered.'
+  MAR:
+    re_floating_debt_share:
+      value: 0.147
+      low: 0.12
+      high: 0.18
+      source: 'Marriott FY2025 10-K Item 7A: floating-rate debt $2,358M (incl. swaps) of $16,084M total (14.7%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1048286/000104828626000007/
+    re_debt_maturing_1y_share:
+      value: 0.074
+      low: 0.06
+      high: 0.09
+      source: 'Marriott FY2025 10-K Item 7A: fixed-rate debt maturing 2026 $1,198M of $16,084M (7.4%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1048286/000104828626000007/
+    re_interest_cash_musd:
+      value: 358
+      low: 250
+      high: 600
+      source: 'Marriott FY2025 10-K balance sheet: cash and equivalents $358M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1048286/000104828626000007/
+    re_property_value_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Asset-light franchisor/manager; valued on fees, not property cap rates.
+    re_implied_cap_rate:
+      value: 0.07
+      low: 0.07
+      high: 0.07
+      source: estimate
+      rationale: Placeholder; unused because property value share is 0.
+    re_us_str_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Homes & Villas by Marriott is immaterial to revenue.
+    re_us_hotel_revenue_share:
+      value: 0.7
+      low: 0.6
+      high: 0.75
+      source: 'Marriott FY2025 10-K segments: U.S. & Canada net fee revenues $2,921M of $4,172M across the four reportable segments (70%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1048286/000104828626000007/
+      rationale: Fee share used because reimbursed-cost revenue is pass-through.
+    re_intl_inbound_revenue_share:
+      value: 0.05
+      low: 0.03
+      high: 0.08
+      source: estimate
+      rationale: ~70% of fees from US & Canada hotels, of which foreign visitors are assumed ~7% of room demand.
+    re_lihtc_investment_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: 'FY2025 10-K full-text search: no mention of low-income housing tax credits or affordable-housing investment'
+      source_url: https://www.sec.gov/Archives/edgar/data/1048286/000104828626000007/
+    re_office_linked_revenue_share:
+      value: 0.01
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Business transient travel is tied to company activity more than to daily office attendance.
+    re_property_tax_musd:
+      value: 50
+      low: 20
+      high: 100
+      source: estimate
+      rationale: Only owned/leased hotels pay property tax; FY2025 10-K owned, leased and other revenue $1,679M, taxes assumed ~3%.
+    re_property_tax_recovery_share:
+      value: 0
+      low: 0
+      high: 0.1
+      source: estimate
+      rationale: Owned/leased hotels absorb property tax; franchised hotels' taxes fall on owners.
+  HLT:
+    re_floating_debt_share:
+      value: 0.125
+      low: 0.1
+      high: 0.26
+      source: 'Hilton FY2025 10-K Item 7A: variable-rate debt $3,119M less $1,600M variable-to-fixed swap = $1,519M of $12,119M (12.5%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1585689/000158568926000007/
+      rationale: 'High end: the swap matures in 2026, leaving all $3,119M floating.'
+    re_debt_maturing_1y_share:
+      value: 0
+      low: 0
+      high: 0.02
+      source: 'Hilton FY2025 10-K Item 7A: no fixed-rate debt maturing in 2026'
+      source_url: https://www.sec.gov/Archives/edgar/data/1585689/000158568926000007/
+    re_interest_cash_musd:
+      value: 918
+      low: 600
+      high: 1300
+      source: 'Hilton FY2025 10-K balance sheet: cash and cash equivalents $918M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1585689/000158568926000007/
+    re_property_value_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Asset-light franchisor/manager; valued on fees, not property cap rates.
+    re_implied_cap_rate:
+      value: 0.07
+      low: 0.07
+      high: 0.07
+      source: estimate
+      rationale: Placeholder; unused because property value share is 0.
+    re_us_str_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No short-term-rental business.
+    re_us_hotel_revenue_share:
+      value: 0.79
+      low: 0.7
+      high: 0.82
+      source: 'Hilton FY2025 10-K: U.S. revenues $9,523M of $12,039M (79%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1585689/000158568926000007/
+    re_intl_inbound_revenue_share:
+      value: 0.055
+      low: 0.03
+      high: 0.08
+      source: estimate
+      rationale: 79% of revenue from US hotels, of which foreign visitors are assumed ~7% of room demand.
+    re_lihtc_investment_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: 'FY2025 10-K full-text search: no mention of low-income housing tax credits or affordable-housing investment'
+      source_url: https://www.sec.gov/Archives/edgar/data/1585689/000158568926000007/
+    re_office_linked_revenue_share:
+      value: 0.01
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Business transient travel is tied to company activity more than to daily office attendance.
+    re_property_tax_musd:
+      value: 40
+      low: 15
+      high: 80
+      source: estimate
+      rationale: Only its owned and leased hotels pay property tax; a small amount assumed.
+    re_property_tax_recovery_share:
+      value: 0
+      low: 0
+      high: 0.1
+      source: estimate
+      rationale: Owned/leased hotels absorb property tax.
+  ABNB:
+    re_floating_debt_share:
+      value: 0
+      low: 0
+      high: 0
+      source: 'Airbnb FY2025 10-K: debt is $2.0B of 0% convertible senior notes due March 2026; revolver undrawn'
+      source_url: https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+    re_debt_maturing_1y_share:
+      value: 0
+      low: 0
+      high: 0.5
+      source: estimate
+      rationale: The 0% notes mature March 2026; with $11B of cash Airbnb is assumed to repay rather than refinance, high end allows partial refinancing.
+      source_url: https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+    re_interest_cash_musd:
+      value: 18100
+      low: 15000
+      high: 20000
+      source: 'Airbnb FY2025 10-K: cash $6.6B + short-term investments $4.5B + $7.0B held for bookings; interest income $705M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+      rationale: 'Low end: longer-dated securities reprice slowly.'
+    re_property_value_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Platform owns no rental property.
+    re_implied_cap_rate:
+      value: 0.07
+      low: 0.07
+      high: 0.07
+      source: estimate
+      rationale: Placeholder; unused because property value share is 0.
+    re_us_str_revenue_share:
+      value: 0.39
+      low: 0.35
+      high: 0.42
+      source: 'Airbnb FY2025 10-K: United States revenue $4,814M of $12,241M (39%)'
+      source_url: https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+    re_us_hotel_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Hotel listings are a small part of Airbnb; its loss is in the STR channel.
+    re_intl_inbound_revenue_share:
+      value: 0.04
+      low: 0.02
+      high: 0.07
+      source: estimate
+      rationale: 39% of revenue is US (10-K); foreign guests assumed ~10% of US bookings.
+    re_lihtc_investment_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: 'FY2025 10-K full-text search: no mention of low-income housing tax credits or affordable-housing investment'
+      source_url: https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+    re_office_linked_revenue_share:
+      value: -0.05
+      low: -0.1
+      high: 0.0
+      source: estimate
+      rationale: Stays of 28+ nights (a 10-K reported category) are partly remote-work driven and fall when workers must be in the office.
+    re_property_tax_musd:
+      value: 0
+      low: 0
+      high: 10
+      source: estimate
+      rationale: Hosts pay property tax on listed homes; Airbnb leases its offices.
+    re_property_tax_recovery_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No meaningful property tax to recover.

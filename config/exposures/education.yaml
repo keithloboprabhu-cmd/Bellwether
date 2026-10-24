@@ -1,0 +1,344 @@
+# Education company exposures. Fractions of total revenue unless the key says otherwise.
+# Denominators are the latest fiscal-year revenues in data/snapshots/baselines.json: LRN $2,518.1M (FY Jun-2026),
+# LOPE $1,106.1M (FY2025 service revenue), CVSA $1,954.1M (FY Jun-2026), STRA $1,268.2M (FY2025),
+# DUOL $1,037.6M (FY2025), COUR $757.5M (FY2025).
+industry: education
+companies:
+  LRN:
+    grad_plus_dependent_revenue_share:
+      value: 0
+      source: estimate
+      rationale: K-12 virtual and blended public schools funded per pupil by states and districts; adult learning ($56.6M) is short non-degree training that is not financed with graduate loans.
+    pell_revenue_share:
+      value: 0
+      source: estimate
+      rationale: K-12 revenue is funded per pupil by states and districts. The adult learning brands (Galvanize, Tech Elevator, MedCerts) are not funded with Pell.
+    earnings_test_at_risk_revenue_share:
+      value: 0
+      source: estimate
+      rationale: The test applies to Title IV degree programs; Stride's K-12 schools and non-Title IV adult bootcamps are outside it.
+    ninety_ten_hi_ratio:
+      value: 0
+      source: estimate
+      rationale: Owns no proprietary Title IV institution, so the 90/10 rule does not apply.
+    ninety_ten_hi_revenue_share:
+      value: 0
+      source: estimate
+      rationale: No institution subject to 90/10.
+    ninety_ten_lo_ratio:
+      value: 0
+      source: estimate
+      rationale: No institution subject to 90/10.
+    ninety_ten_lo_revenue_share:
+      value: 0
+      source: estimate
+      rationale: No institution subject to 90/10.
+    esa_capture_share:
+      value: 0.005
+      low: 0.001
+      high: 0.015
+      source: estimate
+      rationale: "Stride FY2026 10-K: its tuition-based online private schools accept education savings accounts, tax credits and vouchers, and 96% of General Education revenue ($1,417.8M) is from funding-based public contracts, so private-pay and curriculum sales are only ~$57M. Online private schools are a niche among the private schools ESA families choose, so Stride captures well under 1% of new choice dollars."
+      source_url: https://www.sec.gov/Archives/edgar/data/1157408/000110465926090515/lrn-20260630x10k.htm
+    online_revenue_share:
+      value: 0.95
+      low: 0.9
+      high: 0.98
+      source: estimate
+      rationale: "Stride FY2026 10-K: served 92 virtual and blended public schools; nearly all revenue is online instruction and curriculum, less blended-school in-person components and adult bootcamp campus programs."
+      source_url: https://www.sec.gov/Archives/edgar/data/1157408/000110465926090515/lrn-20260630x10k.htm
+    us_consumer_revenue_share:
+      value: 0.03
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: "Stride FY2026 10-K: 96% of General Education and 100% of middle/high school Career Learning revenue comes from funding-based contracts with schools (state/district money, not household spending). Household-paid revenue is private-school tuition and adult learning ($56.6M), about 2-4% of revenue."
+      source_url: https://www.sec.gov/Archives/edgar/data/1157408/000110465926090515/lrn-20260630x10k.htm
+  LOPE:
+    grad_plus_dependent_revenue_share:
+      value: 0.06
+      low: 0.03
+      high: 0.1
+      source: estimate
+      rationale: "GCU (89.5% of LOPE service revenue per the FY2025 10-K) enrolls many online master's and doctoral students in education, nursing and business; assumes ~30-35% of service revenue is from graduate students and ~20% of that from students who borrowed beyond the new caps through Grad PLUS. The degree-level split is not disclosed in the text read."
+    pell_revenue_share:
+      value: 0.08
+      low: 0.04
+      high: 0.12
+      source: estimate
+      rationale: "GCU's online and ground undergraduates include many Pell recipients. GCU took about 73% of revenue under the 90/10 rule from Title IV, per GCE's quarterly report as quoted by Higher Ed Dive (Feb 2020, stale). Pell is assumed to be a minority of that federal aid, with loans the majority."
+      source_url: https://www.highereddive.com/news/grand-canyon-ceo-were-being-selective-in-the-hunt-for-new-partners/572682/
+    earnings_test_at_risk_revenue_share:
+      value: 0.04
+      low: 0.01
+      high: 0.08
+      source: estimate
+      rationale: ED's January 2026 estimate (as summarised by EdTrust and others; not confirmed against the ED slides) has ~4% of master's and ~1.2% of bachelor's programs failing. GCU's large online graduate programs in counseling and education are the likeliest failures, so a few percent of revenue is at risk.
+      source_url: https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
+    ninety_ten_hi_ratio:
+      value: 0.73
+      low: 0.68
+      high: 0.8
+      source: estimate
+      rationale: "Higher Ed Dive (Feb 20, 2020) reported that about 73% of GCU's revenue subject to the rule came from Title IV, per GCE's quarterly report. The figure is stale; since 2023 VA/DoD funds also count as federal, which pushes the ratio up, hence the higher high end. ED has treated GCU as for-profit for Title IV purposes despite its nonprofit conversion."
+      source_url: https://www.highereddive.com/news/grand-canyon-ceo-were-being-selective-in-the-hunt-for-new-partners/572682/
+    ninety_ten_hi_revenue_share:
+      value: 0.895
+      low: 0.88
+      high: 0.9
+      source: "Grand Canyon Education 2025 10-K: most significant university partner (GCU) was 89.5% of total service revenue in 2025 (88.9% in 2024)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1434588/000110465926017047/lope-20251231x10k.htm
+    ninety_ten_lo_ratio:
+      value: 0
+      source: estimate
+      rationale: The other university partners are nonprofit institutions not subject to 90/10.
+    ninety_ten_lo_revenue_share:
+      value: 0
+      source: estimate
+      rationale: No other partner is subject to 90/10.
+    esa_capture_share:
+      value: 0
+      source: estimate
+      rationale: Higher-education services; K-12 ESA and voucher dollars cannot be spent here.
+    online_revenue_share:
+      value: 0.75
+      low: 0.65
+      high: 0.85
+      source: estimate
+      rationale: "Grand Canyon Education 2025 10-K: partner enrollments 136,239 of which GCU 131,826; GCU's traditional ground campus is a minority of enrollment, with most students online (plus 5,738 at off-campus hybrid sites). Revenue split by modality is not disclosed in the text read."
+      source_url: https://www.sec.gov/Archives/edgar/data/1434588/000110465926017047/lope-20251231x10k.htm
+    us_consumer_revenue_share:
+      value: 0.9
+      low: 0.8
+      high: 0.95
+      source: estimate
+      rationale: Service revenue is a share of US partner universities' tuition, which US students and families pay (with federal aid); treated as US household education spending.
+  CVSA:
+    grad_plus_dependent_revenue_share:
+      value: 0.25
+      low: 0.15
+      high: 0.35
+      source: estimate
+      rationale: "Covista FY2026 10-K: Medical & Veterinary revenue $398.9M (20%) from Caribbean medical and veterinary schools whose cost of attendance far exceeds the new professional-student loan limits; Walden $804.9M (41%) is mostly online master's and doctoral programs. The 10-K says the 2025 law's new annual/aggregate/lifetime limits and the end of Grad PLUS 'may materially reduce the amount of loan funding available to students'. Assumes ~70% of medical/vet and ~20-25% of Walden revenue depends on above-cap borrowing."
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    pell_revenue_share:
+      value: 0.06
+      low: 0.03
+      high: 0.1
+      source: estimate
+      rationale: "Covista FY2026 10-K: its Title IV institutions get 78% of revenue from federal education assistance, mostly loans. Pell goes only to undergraduates, mainly Chamberlain's pre-licensure BSN and RN-BSN students; Walden and the medical schools are mostly graduate/professional."
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    earnings_test_at_risk_revenue_share:
+      value: 0.05
+      low: 0.02
+      high: 0.1
+      source: estimate
+      rationale: "Nursing and medical programs clear the benchmark easily. Walden's online counseling, psychology, education and social-work master's and doctoral programs are the likeliest to fail; ED's January 2026 estimate (secondary summary, not confirmed against ED slides) has ~35% of for-profit programs failing, mostly undergraduate certificates, which Covista barely offers."
+      source_url: https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
+    ninety_ten_hi_ratio:
+      value: 0.86
+      low: 0.86
+      high: 0.87
+      source: "Covista FY2026 10-K: audited FY2025 90/10 rates of 86% at both American University of the Caribbean School of Medicine and Ross University School of Medicine (87% in FY2024)"
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    ninety_ten_hi_revenue_share:
+      value: 0.13
+      low: 0.1
+      high: 0.17
+      source: estimate
+      rationale: "Covista FY2026 10-K: Medical & Veterinary segment revenue $398.9M (20.4% of $1,954.1M) covers AUC, RUSM and the veterinary school (RUSVM); assumes the two medical schools are about two-thirds of the segment."
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    ninety_ten_lo_ratio:
+      value: 0.763
+      low: 0.74
+      high: 0.78
+      source: "Covista FY2026 10-K: audited FY2025 90/10 rates Walden 82%, Chamberlain 70%, RUSVM 77% (consolidated 78%); weighted by FY2026 revenue (Walden $804.9M, Chamberlain $750.2M, RUSVM ~$140M) ≈ 76%"
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+      rationale: RUSVM's revenue is not disclosed separately and is estimated at about a third of the Medical & Veterinary segment.
+    ninety_ten_lo_revenue_share:
+      value: 0.87
+      low: 0.83
+      high: 0.9
+      source: estimate
+      rationale: "Covista FY2026 10-K: Chamberlain $750.2M + Walden $804.9M = 79.6% of revenue, plus RUSVM (~7%, estimated share of the Medical & Veterinary segment)."
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    esa_capture_share:
+      value: 0
+      source: estimate
+      rationale: Higher-education institutions; K-12 ESA and voucher dollars cannot be spent here.
+    online_revenue_share:
+      value: 0.55
+      low: 0.45
+      high: 0.65
+      source: estimate
+      rationale: "Covista FY2026 10-K: nearly all of Walden's programs ($804.9M, 41% of revenue) are online; Chamberlain's post-licensure nursing, MPH and MSW are online but its pre-licensure BSN is campus-based; the medical and veterinary schools are campus-based."
+      source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    us_consumer_revenue_share:
+      value: 0.95
+      low: 0.85
+      high: 0.98
+      source: estimate
+      rationale: Tuition paid by (mostly US) students with their own money and federal aid; the Caribbean medical and veterinary schools enrol mainly US students.
+  STRA:
+    grad_plus_dependent_revenue_share:
+      value: 0.07
+      low: 0.04
+      high: 0.12
+      source: estimate
+      rationale: "Strategic Education 2025 10-K: US Higher Education revenue $868.2M (68% of $1,268.2M) from Capella and Strayer. Capella is mostly online master's and doctoral students; Strayer is mostly undergraduate. Assumes Capella is ~half of USHE, ~70% of it graduate, and ~25-30% of that from students who borrowed beyond the new caps."
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    pell_revenue_share:
+      value: 0.1
+      low: 0.05
+      high: 0.15
+      source: estimate
+      rationale: "Strategic Education 2025 10-K: Strayer University took 89.64% of cash-basis revenue from federal funds in FY2024, and Strayer is mainly an undergraduate school, so Pell is a large part of its revenue. Assumes Pell is ~25% of Strayer's federal funds and Strayer is ~30% of company revenue, with a little Capella undergraduate Pell."
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    earnings_test_at_risk_revenue_share:
+      value: 0.06
+      low: 0.02
+      high: 0.12
+      source: estimate
+      rationale: "Capella's online counseling, psychology and education graduate programs and some Strayer associate/undergraduate programs are the likeliest failures. ED's January 2026 estimate (secondary summary, not confirmed against ED slides) has ~35% of for-profit programs failing, concentrated in undergraduate certificates, which Strategic offers little of."
+      source_url: https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
+    ninety_ten_hi_ratio:
+      value: 0.8964
+      low: 0.88
+      high: 0.9
+      source: "Strategic Education 2025 10-K: Strayer University derived approximately 89.64% of its cash-basis revenues from federal funds in fiscal year 2024"
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    ninety_ten_hi_revenue_share:
+      value: 0.3
+      low: 0.25
+      high: 0.36
+      source: estimate
+      rationale: "Strategic Education 2025 10-K: USHE (Capella + Strayer) revenue $868.2M, 68% of the total; the Capella/Strayer split is not disclosed in the text read and is assumed to be roughly 55/45."
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    ninety_ten_lo_ratio:
+      value: 0.6788
+      low: 0.66
+      high: 0.7
+      source: "Strategic Education 2025 10-K: Capella University derived approximately 67.88% of its cash-basis revenues from federal funds in fiscal year 2024"
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    ninety_ten_lo_revenue_share:
+      value: 0.38
+      low: 0.32
+      high: 0.43
+      source: estimate
+      rationale: "Remainder of USHE revenue (68% of the total, per the 2025 10-K) after Strayer's estimated share."
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    esa_capture_share:
+      value: 0
+      source: estimate
+      rationale: Higher-education and workforce businesses; K-12 ESA and voucher dollars cannot be spent here.
+    online_revenue_share:
+      value: 0.75
+      low: 0.65
+      high: 0.82
+      source: estimate
+      rationale: "Capella is online and Strayer is mostly online; ETS (Sophia, Workforce Edge) is online. The ANZ segment (Torrens University and other Australia/New Zealand institutions) is largely campus-based. Strategic's 2025 10-K: USHE $868.2M of $1,268.2M."
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.62
+      high: 0.75
+      source: estimate
+      rationale: "Strategic Education 2025 10-K: USHE revenue $868.2M (68%) is US students' tuition; Sophia subscriptions add a little; Workforce Edge is paid by employers and ANZ is outside the US."
+      source_url: https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+  DUOL:
+    grad_plus_dependent_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Consumer app and English test; no federal student-loan financing.
+    pell_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a Title IV institution.
+    earnings_test_at_risk_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a Title IV institution, so it has no programs the test covers.
+    ninety_ten_hi_ratio:
+      value: 0
+      source: estimate
+      rationale: Not a Title IV institution.
+    ninety_ten_hi_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a Title IV institution.
+    ninety_ten_lo_ratio:
+      value: 0
+      source: estimate
+      rationale: Not a Title IV institution.
+    ninety_ten_lo_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a Title IV institution.
+    esa_capture_share:
+      value: 0
+      source: estimate
+      rationale: A consumer language app is rarely an approved ESA expense, so this is treated as zero.
+    online_revenue_share:
+      value: 1
+      low: 0.98
+      high: 1
+      source: estimate
+      rationale: All revenue comes from the app (subscriptions, ads, in-app purchases) and the online Duolingo English Test.
+    us_consumer_revenue_share:
+      value: 0.38
+      low: 0.33
+      high: 0.38
+      source: "Duolingo 2025 10-K: customers located in the United States were 38% of total revenue ($392.2M of $1,037.6M)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm
+      rationale: Low end allows for US advertising revenue paid by businesses rather than consumers.
+  COUR:
+    grad_plus_dependent_revenue_share:
+      value: 0.01
+      low: 0
+      high: 0.02
+      source: estimate
+      rationale: "Coursera 2025 10-K: offers 50+ online degrees with university partners; some US master's students borrow federal loans at the partner university, and Coursera's revenue share of those degrees falls if enrolment does. Degrees are a small part of the $502.2M Consumer segment."
+      source_url: https://www.sec.gov/Archives/edgar/data/1651562/000165156226000015/cour-20251231.htm
+    pell_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Its degrees are mostly master's programs and it is not itself a Title IV institution.
+    earnings_test_at_risk_revenue_share:
+      value: 0.005
+      low: 0
+      high: 0.01
+      source: estimate
+      rationale: Only partner-university degree programs fall under the test; computer science, data science and business master's degrees generally clear the bachelor's-earnings benchmark.
+    ninety_ten_hi_ratio:
+      value: 0
+      source: estimate
+      rationale: Not a proprietary Title IV institution.
+    ninety_ten_hi_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a proprietary Title IV institution.
+    ninety_ten_lo_ratio:
+      value: 0
+      source: estimate
+      rationale: Not a proprietary Title IV institution.
+    ninety_ten_lo_revenue_share:
+      value: 0
+      source: estimate
+      rationale: Not a proprietary Title IV institution.
+    esa_capture_share:
+      value: 0
+      source: estimate
+      rationale: Adult-learner platform; K-12 ESA dollars rarely reach it.
+    online_revenue_share:
+      value: 1
+      low: 0.98
+      high: 1
+      source: estimate
+      rationale: An online learning platform; all courses, certificates and degrees are delivered online.
+    us_consumer_revenue_share:
+      value: 0.34
+      low: 0.25
+      high: 0.45
+      source: "Coursera 2025 10-K: United States revenue $384.7M of $757.5M (51%); Consumer segment $502.2M of $757.5M (66%)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1651562/000165156226000015/cour-20251231.htm
+      rationale: The US consumer split is not disclosed; assumes the US share of Consumer revenue matches the company-wide US share (51% × 66% ≈ 34%).

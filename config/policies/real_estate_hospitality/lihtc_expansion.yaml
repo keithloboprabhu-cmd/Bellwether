@@ -1,0 +1,35 @@
+id: lihtc_expansion
+industry: real_estate_hospitality
+name: Low-income housing tax credit expansion
+description: A bigger Low-Income Housing Tax Credit raises credits on affordable-housing investment. None of these six companies develops or invests in affordable housing per their FY2025 10-Ks, so the modelled effect is zero; the policy is kept to show that honestly.
+persistence: permanent
+user_inputs:
+  - key: credit_increase_pct
+    label: Increase in LIHTC allocations
+    unit: "%"
+    min: 0
+    max: 100
+    step: 5
+    default: 12.5
+    help: Percent increase in credit authority (e.g. the 12.5% boost to 9% credits enacted in 2018).
+assumptions:
+  - key: annual_credit_rate
+    label: Annual credit as a share of qualified basis
+    unit: fraction
+    low: 0.04
+    base: 0.09
+    high: 0.09
+    source: estimate
+    rationale: The "9%" credit (new construction) and "4%" credit (bond-financed) are claimed each year for ten years on qualified basis.
+channels:
+  - type: tax_credit
+    label: Extra housing tax credits
+    params:
+      credit_rate: assumption.annual_credit_rate * input.credit_increase_pct / 100
+      base_musd: exposure.re_lihtc_investment_musd
+exposure_keys: [re_lihtc_investment_musd]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+narrative:
+  extra: "LIHTC exposure in this universe is nil: the credit flows to apartment developers and bank investors, not logistics, tower, mall or hotel companies."

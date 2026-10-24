@@ -1,0 +1,35 @@
+id: return_to_office_mandate
+industry: real_estate_hospitality
+name: Return-to-office mandate
+description: A federal push that raises office attendance nationwide adds weekday mall and hotel traffic a little and trims remote-work long stays on Airbnb. None of these companies owns office buildings, so effects are small.
+persistence: permanent
+user_inputs:
+  - key: d_attendance_pct
+    label: Change in office attendance
+    unit: "%"
+    min: -20
+    max: 20
+    step: 1
+    default: 3
+    help: Percent change in average office attendance nationwide (e.g. federal staff plus contractors and firms that follow).
+assumptions:
+  - key: spend_elasticity
+    label: Linked revenue change per 1% change in attendance
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: Attendance-linked spending (weekday lunches, commuter retail, remote-work stays) is assumed to scale roughly one-for-one with attendance.
+channels:
+  - type: demand_volume
+    label: Office-attendance-linked demand
+    params:
+      d_volume: input.d_attendance_pct / 100 * assumption.spend_elasticity
+      exposed_revenue_share: exposure.re_office_linked_revenue_share
+exposure_keys: [re_office_linked_revenue_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+narrative:
+  extra: "Office REITs are not in this universe; Prologis and American Tower have no office exposure."

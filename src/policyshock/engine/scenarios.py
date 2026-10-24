@@ -47,6 +47,14 @@ def prepare_baselines(frame: pd.DataFrame) -> list[dict]:
                 r["model_flags"].append(f"contribution margin set to industry median {median_cm:.0%}")
         if not _ok(r.get("cost_of_revenue")) and r["revenue"]:
             r["cost_of_revenue"] = r["revenue"] * (1 - r["contribution_margin"]) if r["kind"] != "bank" else 0.0
+        # Share of consolidated profit that belongs to shareholders: minority partners own the rest
+        # (FCX's Indonesian mine). ΔNI is scaled by it so ΔEPS matches attributable EPS.
+        ni, nci = r.get("net_income"), r.get("nci_income")
+        r["parent_share"] = 1.0
+        if _ok(ni) and _ok(nci) and ni > 0 and nci > 0:
+            r["parent_share"] = min(1.0, max(0.1, ni / (ni + nci)))
+            if r["parent_share"] < 0.95:
+                r["model_flags"].append(f"{1 - r['parent_share']:.0%} of profit belongs to minority interests; ΔNI scaled to the parent's share")
         if not _ok(r.get("pretax_income")):
             r["pretax_income"] = (r["operating_income"] or 0.0) - (r.get("interest_expense") or 0.0)
             r["model_flags"].append("pretax income approximated as EBIT − interest")
@@ -75,7 +83,7 @@ class IndustryResult:
         cs = self.companies
         R = sum(c.baseline["revenue"] or 0 for c in cs)
         EBIT = sum(c.baseline["operating_income"] or 0 for c in cs)
-        NI_model = sum(c.baseline["pretax_income"] * (1 - c.tax_rate) for c in cs)
+        NI_model = sum(c.baseline["pretax_income"] * (1 - c.tax_rate) * c.baseline.get("parent_share", 1.0) for c in cs)
         dR = sum(c.dR for c in cs)
         dEBIT = sum(c.dEBIT for c in cs)
         dNI = sum(c.dNI for c in cs)

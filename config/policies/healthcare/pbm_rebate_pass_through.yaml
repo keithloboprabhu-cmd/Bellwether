@@ -1,0 +1,37 @@
+id: pbm_rebate_pass_through
+industry: healthcare
+name: PBM rebate pass-through reform
+description: Rules requiring PBMs to pass manufacturer rebates through to plan sponsors (or delink PBM pay from drug prices) remove rebate income that CVS Caremark, Optum Rx and CarelonRx keep today. PBMs recoup part of it through flat service fees.
+persistence: permanent
+user_inputs:
+  - key: pass_through_pct
+    label: Share of currently retained rebates that must be passed through
+    unit: percent
+    min: 0
+    max: 100
+    step: 5
+    default: 50
+    help: Portion of the rebates and rebate-linked fees PBMs keep today that the reform hands to plan sponsors or patients.
+assumptions:
+  - key: fee_offset
+    label: Share of lost rebate income replaced by flat service fees
+    unit: fraction
+    low: 0.2
+    base: 0.5
+    high: 0.8
+    source: estimate
+    rationale: PBMs can reprice administrative fees to clients, but competitive bidding and the reform's intent limit full replacement.
+channels:
+  - type: price
+    label: Retained PBM rebates passed through
+    params:
+      d_price: -input.pass_through_pct / 100
+      exposed_revenue_share: exposure.pbm_retained_rebate_share
+      offset_share: assumption.fee_offset
+exposure_keys: [pbm_retained_rebate_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/64803/000006480326000009/cvs_ex99x1q4-25.htm
+  - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+narrative:
+  extra: "None of the three PBMs discloses how much rebate income it retains, so exposures are estimates; drugmakers are assumed unaffected because the reform changes who keeps rebates, not how much is paid."

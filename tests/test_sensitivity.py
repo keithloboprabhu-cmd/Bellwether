@@ -34,7 +34,7 @@ def test_industry_range_brackets_base(tariffs):
 
 
 def test_long_is_least_hurt(tariffs):
-    ranked = sorted(tariffs.base.companies, key=lambda c: c.rank_value)
+    ranked = sorted((c for c in tariffs.base.companies if abs(c.rank_value) > 1e-6), key=lambda c: c.rank_value)
     assert tariffs.short.ticker == ranked[0].ticker
     assert tariffs.long.ticker == ranked[-1].ticker
     assert any("least-hurt" in n for n in tariffs.notes)
@@ -53,3 +53,10 @@ def test_edited_assumption_changes_result():
         "consumer_retail", "consumer_tax_rebate", assumption_ranges={"mpc": (0.5, 0.9, 0.9)}
     ).base.totals()["d_ni"]
     assert more == pytest.approx(base * 0.9 / 0.7)
+
+
+def test_unaffected_names_are_not_picked():
+    """School-choice money only reaches LRN: a single call, no pair built from zeros."""
+    an = simulate("education", "school_choice_esa")
+    assert an.long is not None and an.long.ticker == "LRN"
+    assert an.short is None

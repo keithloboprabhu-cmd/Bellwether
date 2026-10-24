@@ -54,7 +54,7 @@ def refresh_baselines(max_age_s: float) -> dict:
         for c in ind.companies:
             cik = cik_map[c.ticker]
             facts = edgar.merged_company_facts([cik, *c.predecessor_ciks], max_age_s)
-            years = build_baseline(facts, c.kind)
+            years = build_baseline(facts, c.kind, cost_basis=c.cost_basis)
             so = shares_outstanding(facts)
             companies[c.ticker] = {
                 "ticker": c.ticker,

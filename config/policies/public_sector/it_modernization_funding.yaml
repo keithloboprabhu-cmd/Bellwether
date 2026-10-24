@@ -1,0 +1,45 @@
+id: it_modernization_funding
+industry: public_sector
+name: Federal IT modernization funding
+description: New federal money for IT modernization (in the style of the Technology Modernization Fund) flows to IT contractors in proportion to their share of all federal IT spending. SAIC, Booz Allen and Leidos benefit most; Parsons little.
+persistence: "years: 3"
+user_inputs:
+  - key: program_busd
+    label: New IT modernization funding per year
+    unit: USD billions
+    min: 0
+    max: 20
+    step: 0.5
+    default: 3
+    help: The Technology Modernization Fund received $1B under the 2021 American Rescue Plan; total federal IT spending is more than $100B a year.
+assumptions:
+  - key: outlay_share
+    label: Share of new funding spent within the year
+    unit: fraction
+    low: 0.4
+    base: 0.65
+    high: 0.9
+    source: estimate
+    rationale: IT modernization money is usually obligated over several years and spends out slowly; two-thirds within the year is a middle case.
+  - key: fed_it_market_musd
+    label: Total annual federal IT spending ($M)
+    unit: USD millions
+    low: 100000
+    base: 110000
+    high: 130000
+    source: "GAO (July 17, 2025): each year the federal government spends more than $100 billion on IT systems and cyber-related investments"
+    source_url: https://www.gao.gov/podcast/which-critical-government-it-systems-are-most-need-modernization
+channels:
+  - type: demand_transfer
+    label: New IT modernization contract work
+    params:
+      total_transfer_musd: input.program_busd * 1000
+      mpc: assumption.outlay_share
+      capture_share: baseline.revenue * exposure.govcon_fed_it_share / assumption.fed_it_market_musd
+exposure_keys: [govcon_fed_it_share]
+default_role: neutral
+references:
+  - https://www.gao.gov/podcast/which-critical-government-it-systems-are-most-need-modernization
+  - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+narrative:
+  extra: "Each firm is allocated its share of all federal IT spending (including in-house and other vendors), not its share of these six companies."

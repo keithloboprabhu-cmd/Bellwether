@@ -1,0 +1,72 @@
+id: ev_tax_credit
+industry: transportation_logistics
+name: Restore a consumer EV tax credit
+description: Reinstates a point-of-sale federal credit for new electric vehicles, ended September 30, 2025 by the One Big Beautiful Bill Act. Tesla and GM, the two largest US EV sellers, gain volume and some price. The other four companies are unaffected.
+persistence: permanent
+user_inputs:
+  - key: credit_usd
+    label: Credit per new EV
+    unit: USD
+    min: 0
+    max: 10000
+    step: 500
+    default: 7500
+    help: Federal credit per qualifying new EV. The 30D credit was up to $7,500 until September 30, 2025.
+assumptions:
+  - key: buyer_capture
+    label: Share of the credit captured by buyers
+    unit: fraction
+    low: 0.73
+    base: 0.85
+    high: 1.0
+    source: "Muehlegger & Rapson: buyers capture ~73-85% of EV subsidies (J. Public Econ. 2022); pass-through indistinguishable from 100% in NBER w25359"
+    source_url: https://www.nber.org/papers/w25359
+  - key: elasticity
+    label: EV demand price elasticity
+    unit: number
+    low: 1.0
+    base: 2.0
+    high: 3.3
+    source: estimate
+    rationale: Muehlegger & Rapson estimate -2.1 (published) to -3.3 (working paper) for low- and middle-income buyers. Market-wide elasticity is likely lower, so the base sits at the published estimate and the low case at 1.0.
+    source_url: https://www.nber.org/papers/w25359
+  - key: avg_ev_price
+    label: Average new-EV transaction price
+    unit: USD
+    low: 52000
+    base: 58034
+    high: 62000
+    source: "Cox Automotive / Kelley Blue Book: average new-EV transaction price $58,034 in December 2025"
+    source_url: https://www.coxautoinc.com/insights/dec-2025-atp-report/
+  - key: eligible_share
+    label: Share of US EV sales that qualify
+    unit: fraction
+    low: 0.5
+    base: 0.7
+    high: 0.9
+    source: estimate
+    rationale: The old 30D rules capped MSRP ($55k cars, $80k SUVs/trucks) and imposed battery-sourcing limits; most Model 3/Y and Equinox/Blazer EV trims qualified, and high-end trims did not.
+derived:
+  dp_buyer: -input.credit_usd * assumption.buyer_capture / assumption.avg_ev_price
+  dp_seller: input.credit_usd * (1 - assumption.buyer_capture) / assumption.avg_ev_price
+  eligible_rev_share: exposure.tl_us_ev_revenue_share * assumption.eligible_share
+channels:
+  - type: demand_price
+    label: More EV buyers at a lower net price
+    params:
+      dp_consumer: derived.dp_buyer
+      elasticity: assumption.elasticity
+      exposed_revenue_share: derived.eligible_rev_share
+  - type: price
+    label: Automakers keep part of the credit
+    params:
+      d_price: derived.dp_seller
+      exposed_revenue_share: derived.eligible_rev_share
+exposure_keys: [tl_us_ev_revenue_share]
+default_role: neutral
+references:
+  - https://www.nber.org/papers/w25359
+  - https://www.coxautoinc.com/insights/dec-2025-atp-report/
+  - https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/
+narrative:
+  extra: "Tesla's US EV business is about a third of its revenue, so its gain is far larger than GM's, where EVs are ~5% of sales. GM's EVs were thin-margin in 2025, so applying its average margin to the extra sales may overstate GM's gain."

@@ -1,0 +1,464 @@
+# Energy & Resources company exposures. Fractions are of total revenue / cost of revenue (FY2025 baselines).
+# Brent reference for oil_price_sensitivity: $69.06/bbl, 2025 average (XOM 2025 10-K realizations table).
+industry: energy_resources
+companies:
+  XOM:
+    oil_price_sensitivity:
+      value: 0.2017
+      low: 0.1729
+      high: 0.2306
+      source: "XOM 2025 10-K: for 2026, a $1/bbl change in Brent ≈ $700M annual after-tax Upstream earnings (excl. derivatives)"
+      source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+      rationale: 700 × $69.06 ÷ ((1 − 27.9% model tax rate) × $332.2B revenue); range uses $600–800M.
+    ni_per_usd_bbl_musd:
+      value: 700
+      low: 600
+      high: 800
+      source: "XOM 2025 10-K: for 2026, a $1/bbl change in Brent ≈ $700M annual after-tax Upstream earnings (excl. derivatives; ~10% from oil-linked LNG)"
+      source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+      rationale: Range ±$100M; XOM's 3Q25 investor sensitivity page showed $650M on 2025 volumes.
+    us_scope1_co2e_mt:
+      value: 46
+      low: 35
+      high: 60
+      source: estimate
+      source_url: https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
+      rationale: XOM performance data table reports 92 Mt CO2e operated Scope 1 for 2024 (global); ~half assumed US (four large Gulf Coast/Midwest refining-chemical complexes plus Permian). No US split is published.
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.25
+      high: 0.75
+      source: estimate
+      rationale: A US-wide carbon price hits all domestic refiners, so part of the refining-emissions cost reaches fuel prices; upstream crude is priced globally and absorbs most of its share.
+    us_methane_kt_ch4:
+      value: 96
+      low: 60
+      high: 130
+      source: estimate
+      source_url: https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
+      rationale: XOM reports 0.16 Mt CH4 operated methane in 2024 (global); ~60% assumed US, where its unconventional (XTO/Permian) gas systems are.
+    federal_upstream_revenue_share:
+      value: 0.025
+      low: 0.015
+      high: 0.04
+      source: estimate
+      source_url: https://www.eia.gov/todayinenergy/detail.php?id=65804
+      rationale: US upstream (1,522 kb/d liquids + gas per 2025 10-K) is ~10% of revenue; ~25% of it assumed federal (New Mexico Delaware Basin federal acreage; Midland/Pioneer is mostly private Texas land). EIA - federal onshore 1.7 + offshore 1.8 of 13.2 mb/d US crude in 2024 (~27%).
+    us_crude_sales_share:
+      value: 0.074
+      low: 0.06
+      high: 0.09
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+      rationale: 2025 10-K US liquids production 1,522 kb/d; ~70% assumed crude (rest NGLs) × ~$63/bbl × 365 ≈ $24.5B of $332B revenue.
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.08
+      high: 0.14
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+      rationale: 2025 10-K US refinery throughput 1,927 kb/d × $65 × 365 ≈ $45.7B; ~70% assumed domestic crude; ÷ $278.6B cost of revenue.
+    clean_generation_credits_musd:
+      value: 0
+      low: 0
+      high: 50
+      source: estimate
+      rationale: XOM does not report material clean-electricity PTC/ITC; its low-carbon credits (45Q CCS, 45V hydrogen) are a different program.
+    manufacturing_credits_45x_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No §45X-eligible manufacturing.
+    us_solar_module_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No solar module sales.
+    us_critical_mineral_production_cost_musd:
+      value: 0
+      low: 0
+      high: 50
+      source: estimate
+      rationale: XOM's Arkansas lithium project is pre-production; high end allows a small early volume.
+  CVX:
+    oil_price_sensitivity:
+      value: 0.3177
+      low: 0.26
+      high: 0.3755
+      source: estimate
+      rationale: From ni_per_usd_bbl_musd (550) × $69.06 ÷ ((1 − 36.8% model tax rate) × $189.0B revenue); range uses $450–650M.
+    ni_per_usd_bbl_musd:
+      value: 550
+      low: 450
+      high: 650
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm
+      rationale: Not in the 2025 10-K. Chevron investor materials (via secondary summaries) give ~$550M after-tax per $1 Brent for 2025 and ~$600M for 2026 incl. Hess. Cross-check from the 10-K - 2,303 kb/d liquids (1,341 US + 962 intl) × 365 × ~65% after-tax/PSC take ≈ $550M.
+    us_scope1_co2e_mt:
+      value: 27
+      low: 20
+      high: 35
+      source: estimate
+      rationale: Secondary data sources put CVX 2024 Scope 1 at ~53–54 Mt CO2e (company data table not retrieved); ~half assumed US (five US refineries incl. Pascagoula, El Segundo, Richmond; Permian, DJ, Gulf of America).
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.25
+      high: 0.75
+      source: estimate
+      rationale: Same logic as XOM - refining emissions cost partly reaches US fuel prices; upstream crude priced globally.
+    us_methane_kt_ch4:
+      value: 55
+      low: 30
+      high: 100
+      source: estimate
+      rationale: 2025 10-K US production 1,858 kboe/d (678 MMboe) × ~2.3 kg CO2e/boe methane intensity (CVX's 2028 target is 2) ÷ GWP 28 ≈ 56 kt CH4.
+    federal_upstream_revenue_share:
+      value: 0.038
+      low: 0.025
+      high: 0.05
+      source: estimate
+      source_url: https://www.eia.gov/todayinenergy/detail.php?id=65804
+      rationale: US upstream ≈ $26B (10-K - 1,341 kb/d liquids at $48.13 + 3,099 MMcf/d gas at $2.05) = 14% of revenue; ~28% assumed federal (Gulf of America deepwater - Anchor, Ballymore, Stampede, Whale - plus New Mexico Permian).
+    us_crude_sales_share:
+      value: 0.10
+      low: 0.08
+      high: 0.12
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm
+      rationale: 2025 10-K US liquids 1,341 kb/d at $48.13 = $23.6B (12.5% of revenue); ~80% of liquids revenue assumed crude (NGLs sell far lower).
+    us_refinery_domestic_crude_cost_share:
+      value: 0.137
+      low: 0.09
+      high: 0.18
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm
+      rationale: 2025 10-K US refinery crude inputs 1,038 kb/d × $65 × 365 ≈ $24.6B; ~60% assumed domestic (10-K says CVX runs both imported and domestic crude; West Coast plants import heavily); ÷ $108.2B cost of revenue.
+    clean_generation_credits_musd:
+      value: 0
+      low: 0
+      high: 50
+      source: estimate
+      rationale: No material clean-electricity credits; renewable-fuel credits (45Z) are a different program.
+    manufacturing_credits_45x_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No §45X-eligible manufacturing.
+    us_solar_module_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No solar module sales.
+    us_critical_mineral_production_cost_musd:
+      value: 0
+      low: 0
+      high: 20
+      source: estimate
+      rationale: Lithium leasing (Arkansas/Texas) is pre-production.
+  COP:
+    oil_price_sensitivity:
+      value: 0.6126
+      low: 0.4641
+      high: 0.7796
+      source: estimate
+      rationale: From ni_per_usd_bbl_musd (330) × $69.06 ÷ ((1 − 36.9% model tax rate) × $58.9B revenue); range uses $250–420M.
+    ni_per_usd_bbl_musd:
+      value: 330
+      low: 250
+      high: 420
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm
+      rationale: COP publishes sensitivities per marker (Brent alone ~$65–75M; WTI, ANS, WCS, NGL separately), not in the 10-K. Built from the 10-K - 1,145 kb/d crude + 133 kb/d bitumen + ~40% weight on 419 kb/d NGL ≈ 1.45 mb/d × 365 × (1 − ~37% tax) ≈ $330M for all crude markers moving $1 together.
+    us_scope1_co2e_mt:
+      value: 11
+      low: 8
+      high: 14
+      source: estimate
+      source_url: https://www.conocophillips.com/sustainability/managing-climate-related-risks/metrics-targets
+      rationale: COP reports 2025 Scope 1+2 intensity 19.5 kg CO2e/BOE × 867 MMBOE (10-K) ≈ 17 Mt; ~71% of production is US (Lower 48 + Alaska) and ~90% of the total assumed Scope 1.
+    carbon_cost_pass_through:
+      value: 0.2
+      low: 0.05
+      high: 0.4
+      source: estimate
+      rationale: Pure upstream producer selling globally priced crude; little of a US-only carbon cost can be passed on.
+    us_methane_kt_ch4:
+      value: 61
+      low: 40
+      high: 90
+      source: estimate
+      source_url: https://www.conocophillips.com/sustainability/managing-climate-related-risks/metrics-targets
+      rationale: COP 2025 methane intensity 2.8 kg CO2e/BOE × 867 MMBOE ÷ GWP 28 ≈ 87 kt CH4; × 71% US production share.
+    federal_upstream_revenue_share:
+      value: 0.08
+      low: 0.05
+      high: 0.12
+      source: estimate
+      source_url: https://www.eia.gov/todayinenergy/detail.php?id=65804
+      rationale: US production revenue ≈ 44% of total (10-K - Lower 48 1,484 kboe/d, Alaska 199 kboe/d); ~18% assumed federal (New Mexico Delaware Basin from Concho, NPR-A Greater Mooses Tooth; Prudhoe/Kuparuk are state lands).
+    us_crude_sales_share:
+      value: 0.372
+      low: 0.33
+      high: 0.40
+      source: "COP 2025 10-K: Alaska crude 177 kb/d at $71.79, Lower 48 crude 749 kb/d at $63.18 → $21.9B of $58.9B revenue"
+      source_url: https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm
+      rationale: Range allows for marketing revenue swings in the denominator.
+    us_refinery_domestic_crude_cost_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: COP has no refining since the 2012 Phillips 66 spin-off.
+    clean_generation_credits_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No clean-electricity generation.
+    manufacturing_credits_45x_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No §45X-eligible manufacturing.
+    us_solar_module_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No solar module sales.
+    us_critical_mineral_production_cost_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No mineral production.
+  NEE:
+    oil_price_sensitivity:
+      value: 0
+      low: 0
+      high: 0.01
+      source: estimate
+      rationale: Oil-fired generation was 0.06 TWh in 2024 (NEE Data Appendix); gas fuel costs pass through FPL's fuel clause.
+    ni_per_usd_bbl_musd:
+      value: 0
+      low: 0
+      high: 10
+      source: estimate
+      rationale: No meaningful direct oil exposure.
+    us_scope1_co2e_mt:
+      value: 42.67
+      low: 40
+      high: 45
+      source: "NextEra 2024 Data Appendix (SASB): gross global Scope 1 emissions 42,674,351 t CO2e in 2024 (41,323,533 in 2023), all US"
+      source_url: https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/Sustainability/2025/Data%20Appendix.pdf
+      rationale: Range brackets year-to-year variation in gas burn.
+    carbon_cost_pass_through:
+      value: 0.9
+      low: 0.75
+      high: 0.97
+      source: estimate
+      rationale: Nearly all of NEE's fossil fleet (25.7 GW gas) sits in FPL, a regulated utility that recovers fuel and environmental compliance costs through cost-recovery clauses; NEER's contracted renewables emit almost nothing.
+    us_methane_kt_ch4:
+      value: 3
+      low: 0
+      high: 10
+      source: estimate
+      rationale: Power plants are outside the Waste Emissions Charge; only NEE's gas pipeline interests could be covered and are small.
+    federal_upstream_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No oil and gas production.
+    us_crude_sales_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No crude production.
+    us_refinery_domestic_crude_cost_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No refining.
+    clean_generation_credits_musd:
+      value: 2075
+      low: 1500
+      high: 2400
+      source: "NEE 2025 10-K income-tax reconciliation: clean energy tax credits $(2,075)M in 2025 ($1,201M 2024; $605M 2023)"
+      source_url: https://www.sec.gov/Archives/edgar/data/37634/000075330826000015/nee-20251231.htm
+      rationale: Low end reflects that part of the credit value accrues to tax-equity partners/noncontrolling interests and that 2025 was a peak-growth year.
+    manufacturing_credits_45x_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No §45X manufacturing.
+    us_solar_module_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Buys modules; does not sell them.
+    us_critical_mineral_production_cost_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No mineral production.
+  FSLR:
+    oil_price_sensitivity:
+      value: 0
+      low: 0
+      high: 0.01
+      source: estimate
+      rationale: Module sales are not oil-linked.
+    ni_per_usd_bbl_musd:
+      value: 0
+      low: 0
+      high: 5
+      source: estimate
+      rationale: No meaningful direct oil exposure.
+    us_scope1_co2e_mt:
+      value: 0.05
+      low: 0.02
+      high: 0.15
+      source: estimate
+      rationale: Module factories in Ohio, Alabama and Louisiana mostly use purchased electricity (Scope 2); direct combustion and process emissions are small.
+    carbon_cost_pass_through:
+      value: 0.3
+      low: 0.1
+      high: 0.5
+      source: estimate
+      rationale: Mostly contracted backlog at fixed prices; limited ability to reprice.
+    us_methane_kt_ch4:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Not an oil and gas facility.
+    federal_upstream_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No oil and gas production.
+    us_crude_sales_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No crude production.
+    us_refinery_domestic_crude_cost_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No refining.
+    clean_generation_credits_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Sold its project development business; does not own generating fleet credits.
+    manufacturing_credits_45x_musd:
+      value: 1600
+      low: 1400
+      high: 1800
+      source: "FSLR 2025 10-K: recognized $1.6 billion of Section 45X credits as a reduction to cost of sales in 2025 (~17¢/W for US-made modules)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1274494/000127449426000021/fslr-20251231.htm
+      rationale: Range brackets US output growth (Louisiana plant) vs. lower volumes.
+    us_solar_module_revenue_share:
+      value: 0.957
+      low: 0.9
+      high: 0.97
+      source: "FSLR 2025 10-K: US net sales $4,994.7M of $5,219.4M (customer country of invoicing)"
+      source_url: https://www.sec.gov/Archives/edgar/data/1274494/000127449426000021/fslr-20251231.htm
+      rationale: Low end allows some US-invoiced sales for non-US projects.
+    us_critical_mineral_production_cost_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Does not mine or refine critical minerals (tellurium is purchased).
+  FCX:
+    oil_price_sensitivity:
+      value: -0.0175
+      low: -0.0293
+      high: -0.008
+      source: "FCX 2025 10-K: energy was 15% of copper mine site operating costs in 2025, including ~275 million gallons of diesel"
+      source_url: https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm
+      rationale: Diesel moves ~$1/42 per gallon per $1/bbl crude → 275M gal ≈ $6.5M pretax cost per $1/bbl; × $69.06 ÷ $25.9B revenue. Negative = oil consumer. Range $3–11M/bbl (other energy partly oil-linked; some diesel hedged/indexed).
+    ni_per_usd_bbl_musd:
+      value: -4.3
+      low: -8
+      high: -2
+      source: estimate
+      rationale: $6.5M pretax diesel cost per $1/bbl (from FCX 10-K diesel volume) × (1 − 34.9% tax rate).
+    us_scope1_co2e_mt:
+      value: 1.8
+      low: 1.2
+      high: 2.5
+      source: estimate
+      rationale: Global Scope 1 is roughly 5 Mt CO2e per secondary data sources (FCX's own sustainability data table not retrieved); ~35% assumed US (diesel haul fleets in Arizona/New Mexico plus the Miami smelter; Indonesia's coal power is the largest block).
+    carbon_cost_pass_through:
+      value: 0.1
+      low: 0
+      high: 0.3
+      source: estimate
+      rationale: Copper is priced on the LME/COMEX world market; a US-only carbon cost is mostly absorbed.
+    us_methane_kt_ch4:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: Not an oil and gas facility.
+    federal_upstream_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No oil and gas production (hard-rock mining claims are a separate regime).
+    us_crude_sales_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No crude production.
+    us_refinery_domestic_crude_cost_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No refining.
+    clean_generation_credits_musd:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No clean-electricity generation credits.
+    manufacturing_credits_45x_musd:
+      value: 0
+      low: 0
+      high: 30
+      source: estimate
+      rationale: Copper is not on the §45X applicable critical mineral list; molybdenum by-product could qualify at most marginally.
+    us_solar_module_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No solar module sales.
+    us_critical_mineral_production_cost_musd:
+      value: 4549
+      low: 4000
+      high: 5000
+      source: "FCX 2025 10-K: U.S. copper mines sold 1,296M lbs (net of JV interests) at site production & delivery cost $3.51/lb (by-product method)"
+      source_url: https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm
+      rationale: 1,296 × $3.51 ≈ $4,549M; range for cost inflation/volume swings.

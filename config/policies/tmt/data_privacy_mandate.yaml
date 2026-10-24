@@ -1,0 +1,50 @@
+id: data_privacy_mandate
+industry: tmt
+name: Federal data-privacy mandate (opt-in consent)
+description: A GDPR-style federal privacy law requiring opt-in consent for targeted ads and adding compliance work per user. Ad platforms lose some targeting revenue; everyone with US user data pays compliance costs.
+persistence: permanent
+user_inputs:
+  - key: ad_revenue_loss_pct
+    label: Loss of US targeted-ad revenue
+    unit: percent
+    min: 0
+    max: 30
+    step: 1
+    default: 5
+    help: "Reference points: Meta put the 2022 hit from Apple's iOS tracking opt-in at ~$10B (~8% of 2021 revenue); GDPR cut EU website page views and revenue ~12% (Goldberg, Johnson & Shriver 2024)."
+  - key: cost_per_user
+    label: Annual compliance cost per US user
+    unit: USD
+    min: 0
+    max: 20
+    step: 0.5
+    default: 1
+    help: Consent management, data-subject requests, audits and data-minimization engineering spread over US users.
+assumptions:
+  - key: ad_loss_scale
+    label: Ad-loss realised relative to the input (measurement vs. real loss)
+    unit: fraction
+    low: 0.5
+    base: 0.8
+    high: 1.2
+    source: estimate
+    rationale: Goldberg, Johnson & Shriver (2024) split GDPR's measured drop into real losses and less data being recorded; part of a measured loss is measurement, and platforms rebuild targeting over time (contextual ads, modelled conversions).
+    source_url: https://www.aeaweb.org/doi/10.1257/pol.20210309
+channels:
+  - type: demand_volume
+    label: Lost targeted-ad revenue
+    params:
+      d_volume: -input.ad_revenue_loss_pct / 100 * assumption.ad_loss_scale
+      exposed_revenue_share: exposure.us_digital_ad_revenue_share
+  - type: cost
+    label: Privacy compliance cost
+    params:
+      exposed_cost_share: 0
+      shock_pct: 0
+      dcost_musd: input.cost_per_user * exposure.us_users_m
+exposure_keys: [us_digital_ad_revenue_share, us_users_m]
+references:
+  - https://www.aeaweb.org/doi/10.1257/pol.20210309
+  - https://itpro.com/security/privacy/362151/meta-says-apples-ios-privacy-changes-will-cost-it-10-billion-in-2022
+narrative:
+  extra: "Apple can gain share of ad budgets when rivals' targeting weakens (as after its own tracking opt-in), which this model does not capture."

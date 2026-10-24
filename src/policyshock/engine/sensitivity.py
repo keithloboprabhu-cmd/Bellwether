@@ -154,17 +154,36 @@ def _range_pct(c_low: CompanyResult, c_high: CompanyResult) -> tuple[float, floa
 
 
 def _pick_long_short(an: Analysis) -> None:
-    """Long = most helped, short = most hurt (by implied Δprice %, else ΔEPS %)."""
-    ranked = sorted(an.base.companies, key=lambda c: c.rank_value, reverse=True)
-    if len(ranked) < 2 or all(abs(c.rank_value) < 1e-9 for c in ranked):
+    """Long = most helped, short = most hurt (by implied Δprice %, else ΔEPS %).
+
+    Only companies the policy actually moves are eligible: unaffected names and names whose
+    % change is n/m (negative baseline EPS) are left out rather than ranked as zero.
+    """
+    def metric(c):
+        return c.dP_pct if c.dP_pct is not None else c.dEPS_pct
+
+    affected = [c for c in an.base.companies if metric(c) is not None and abs(metric(c)) > 1e-6]
+    affected.sort(key=metric, reverse=True)
+    if not affected:
         an.notes.append("No company is meaningfully affected, so there is no long/short call.")
         return
-    an.long, an.short = ranked[0], ranked[-1]
+    if len(affected) == 1:
+        c = affected[0]
+        if metric(c) > 0:
+            an.long = c
+        else:
+            an.short = c
+        an.notes.append(f"Only {c.ticker} is materially affected, so there is a single call rather than a pair.")
+        return
+    an.long, an.short = affected[0], affected[-1]
     long_lo, _ = _range_pct(an.envelopes[an.long.ticker].low, an.envelopes[an.long.ticker].high)
     _, short_hi = _range_pct(an.envelopes[an.short.ticker].low, an.envelopes[an.short.ticker].high)
     # Ranges overlap when the long's pessimistic case is worse than the short's optimistic case.
     an.low_conviction = long_lo < short_hi
-    if an.long.rank_value <= 0:
-        an.notes.append("Every company is hurt; the 'long' is simply the least-hurt name (a relative-value pair).")
-    if an.short.rank_value >= 0:
-        an.notes.append("Every company is helped; the 'short' is simply the least-helped name (a relative-value pair).")
+    if metric(an.long) <= 0:
+        an.notes.append("Every affected company is hurt; the 'long' is simply the least-hurt name (a relative-value pair).")
+    if metric(an.short) >= 0:
+        an.notes.append("Every affected company is helped; the 'short' is simply the least-helped name (a relative-value pair).")
+    skipped = [c.ticker for c in an.base.companies if c not in affected]
+    if skipped:
+        an.notes.append("Not ranked (unaffected or n/m): " + ", ".join(skipped) + ".")

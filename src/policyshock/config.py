@@ -20,6 +20,8 @@ class Company(BaseModel):
     kind: Literal["standard", "bank", "reit", "managed_care"] = "standard"
     # Older CIKs whose filings belong to this company (e.g. after a holding-company reorganization).
     predecessor_ciks: list[int] = Field(default_factory=list)
+    # "total_costs_less_overhead" when tagged cost of revenue omits big variable costs (see baseline.py).
+    cost_basis: Literal["reported", "total_costs_less_overhead"] = "reported"
 
 
 class Industry(BaseModel):

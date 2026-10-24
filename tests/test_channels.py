@@ -219,3 +219,8 @@ def test_every_registered_channel_has_a_test():
         "bank_nii", "bank_capital", "reit_nav", "gov_budget", "gov_shutdown", "gov_cr",
     }
     assert set(CHANNELS) == tested
+
+
+def test_minority_interest_scales_dni():
+    d = run_channel("tax_credit", B, {"credit_rate": 0.10, "base_musd": 50})
+    assert agg(d, b={**B, "parent_share": 0.5}).dNI == approx(2.5)

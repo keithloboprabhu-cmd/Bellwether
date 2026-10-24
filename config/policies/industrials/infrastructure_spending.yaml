@@ -1,0 +1,36 @@
+id: infrastructure_spending
+industry: industrials
+name: New federal infrastructure program
+description: New federal money for roads, bridges, water and the grid flows to contractors, who buy machinery and steel. Nucor and Caterpillar capture the most; GE Aerospace and Honeywell capture little.
+persistence: "years: 5"
+user_inputs:
+  - key: program_busd
+    label: New federal infrastructure funding per year
+    unit: $B per year
+    min: 0
+    max: 200
+    step: 5
+    default: 50
+    help: New authorized spending per year on top of current programs. The 2021 Infrastructure Investment and Jobs Act added roughly $550B of new spending over about five years (~$110B a year).
+assumptions:
+  - key: outlay_rate
+    label: Share of each year's funding actually spent that year
+    unit: fraction
+    low: 0.3
+    base: 0.5
+    high: 0.7
+    source: estimate
+    rationale: Highway and water money is spent slowly as projects are designed, bid and built, so annual outlays lag annual authorizations.
+channels:
+  - type: demand_transfer
+    label: Equipment and steel bought for infrastructure projects
+    params:
+      total_transfer_musd: input.program_busd * 1000
+      mpc: assumption.outlay_rate
+      capture_share: exposure.ind_infrastructure_capture_share
+exposure_keys: [ind_infrastructure_capture_share]
+default_role: neutral
+references:
+  - https://www.congress.gov/bill/117th-congress/house-bill/3684
+narrative:
+  extra: "Buy America rules on federally funded projects steer the steel toward US mills such as Nucor."

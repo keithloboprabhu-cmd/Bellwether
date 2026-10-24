@@ -1,0 +1,35 @@
+id: defense_budget_increase
+industry: public_sector
+name: Defense budget increase
+description: A higher defense and intelligence topline lifts contract spending at the DoW and the IC; defense-heavy CACI, SAIC and Booz Allen gain the most as a share of revenue, while Parsons and Leidos gain less.
+persistence: permanent
+user_inputs:
+  - key: d_budget_pct
+    label: Change in defense + intelligence budget
+    unit: percent
+    min: -20
+    max: 20
+    step: 1
+    default: 5
+    help: Positive is an increase. A 5% rise is roughly $45B on the $893B GFY25 defense level cited in CACI's FY2026 10-K.
+assumptions:
+  - key: services_capture
+    label: Contractor revenue change per 1% budget change
+    unit: multiple
+    low: 0.5
+    base: 0.9
+    high: 1.2
+    source: estimate
+    rationale: New defense money has recently tilted toward shipbuilding, munitions and procurement rather than services and IT, so services-heavy contractors may capture less than a proportional share; GD's hardware lines capture more.
+channels:
+  - type: gov_budget
+    label: Higher defense and intelligence contract spending
+    params:
+      gov_revenue_share: exposure.govcon_defense_intel_share
+      d_budget_pct: input.d_budget_pct / 100
+      program_relevance: assumption.services_capture
+exposure_keys: [govcon_defense_intel_share]
+default_role: neutral
+references:
+  - https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+  - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
