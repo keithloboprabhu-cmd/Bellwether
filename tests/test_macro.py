@@ -61,3 +61,27 @@ def test_oil_up_helps_producers_hurts_airlines():
     for t in ("XOM", "CVX", "COP"):
         assert energy.company(t).dEPS > 0
     assert an.base.industries["transportation_logistics"].company("DAL").dEPS < 0
+
+
+def test_recession_betas_match_snapshot():
+    """The recession shock's industry betas are copied from the committed GDP-beta fits."""
+    from policyshock.macro import gdp_beta
+
+    shock = registry().macro["recession_gdp_shock"]
+    for slug, fit in gdp_beta.load().items():
+        a = next(x for x in shock.industry_effects[slug].assumptions if x.key == f"gdp_beta_{slug}")
+        assert a.base == pytest.approx(fit["beta"], abs=0.005), slug
+
+
+def test_corporate_tax_spares_reits_and_hits_domestic_firms_most():
+    an = simulate_market("corporate_tax_change", inputs={"d_rate_pts": 7})
+    re = an.base.industries["real_estate_hospitality"]
+    assert re.company("PLD").dNI == 0  # REIT: no corporate tax on distributed income
+    cr = an.base.industries["consumer_retail"]
+    assert cr.company("KO").dEPS_pct > cr.company("HD").dEPS_pct  # KO books most profit abroad
+
+
+def test_strong_dollar_hurts_multinationals_not_domestic_utilities():
+    an = simulate_market("strong_dollar")
+    assert an.base.industries["consumer_retail"].company("KO").dNI < 0
+    assert an.base.industries["energy_resources"].company("DUK").dNI == 0

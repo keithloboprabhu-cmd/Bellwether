@@ -18,6 +18,10 @@ class Company(BaseModel):
     ticker: str
     name: str
     kind: Literal["standard", "bank", "reit", "managed_care"] = "standard"
+    subsector: str | None = None
+    reported_share_unit: Literal["shares", "thousands", "millions"] = "shares"
+    share_unit_source: str | None = None
+    share_unit_since_filed: str | None = None
     # Older CIKs whose filings belong to this company (e.g. after a holding-company reorganization).
     predecessor_ciks: list[int] = Field(default_factory=list)
     # "total_costs_less_overhead" when tagged cost of revenue omits big variable costs (see baseline.py).

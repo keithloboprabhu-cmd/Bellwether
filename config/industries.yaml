@@ -1,98 +1,759 @@
-# Industry taxonomy and the 6 representative US-listed companies per industry.
-# `kind` selects the income-statement template used by the baseline parser and engine:
-#   standard - revenue / cost of revenue / operating income
-#   bank     - net revenue, net interest income, no meaningful cost of revenue
-#   reit     - standard statement, plus FFO approximation (NI + D&A) for valuation
-#   managed_care - cost of revenue = product costs + medical claims incurred
-# `predecessor_ciks` merges filings made under an older CIK (holding-company reorganizations).
 industries:
-  - slug: tmt
-    name: Technology, Media & Telecom
-    companies:
-      - {ticker: AAPL, name: Apple}
-      - {ticker: MSFT, name: Microsoft}
-      - {ticker: GOOGL, name: Alphabet}
-      - {ticker: META, name: Meta Platforms}
-      - {ticker: NVDA, name: NVIDIA}
-      - {ticker: VZ, name: Verizon}
-  - slug: financial_services
-    name: Financial Services
-    companies:
-      - {ticker: JPM, name: JPMorgan Chase, kind: bank}
-      - {ticker: BAC, name: Bank of America, kind: bank}
-      - {ticker: WFC, name: Wells Fargo, kind: bank}
-      - {ticker: GS, name: Goldman Sachs, kind: bank}
-      - {ticker: C, name: Citigroup, kind: bank}
-      - {ticker: AXP, name: American Express, kind: bank}
-  - slug: consumer_retail
-    name: Consumer & Retail
-    companies:
-      - {ticker: WMT, name: Walmart}
-      - {ticker: TGT, name: Target}
-      - {ticker: COST, name: Costco}
-      - {ticker: AMZN, name: Amazon}
-      - {ticker: NKE, name: Nike}
-      - {ticker: HD, name: Home Depot}
-  - slug: healthcare
-    name: Healthcare & Life Sciences
-    companies:
-      - {ticker: UNH, name: UnitedHealth Group, kind: managed_care}
-      - {ticker: ELV, name: Elevance Health, kind: managed_care}
-      - {ticker: HUM, name: Humana, kind: managed_care}
-      - {ticker: CVS, name: CVS Health, kind: managed_care}
-      - {ticker: PFE, name: Pfizer}
-      - {ticker: LLY, name: Eli Lilly}
-  - slug: industrials
-    name: Industrials & Manufacturing
-    companies:
-      - {ticker: CAT, name: Caterpillar}
-      - {ticker: DE, name: Deere}
-      - {ticker: GE, name: GE Aerospace}
-      - {ticker: HON, name: Honeywell}
-      - {ticker: MMM, name: 3M}
-      - {ticker: NUE, name: Nucor}
-  - slug: energy_resources
-    name: Energy & Resources
-    companies:
-      - {ticker: XOM, name: Exxon Mobil, predecessor_ciks: [34088]}  # ExxonMobil Holdings Corp reorganization, 2026
-      - {ticker: CVX, name: Chevron}
-      - {ticker: COP, name: ConocoPhillips}
-      - {ticker: NEE, name: NextEra Energy}
-      - {ticker: FSLR, name: First Solar}
-      - {ticker: FCX, name: Freeport-McMoRan}
-  - slug: transportation_logistics
-    name: Transportation, Logistics & Infrastructure
-    companies:
-      - {ticker: UPS, name: United Parcel Service}
-      - {ticker: FDX, name: FedEx}
-      - {ticker: UNP, name: Union Pacific}
-      - {ticker: DAL, name: Delta Air Lines}
-      - {ticker: TSLA, name: Tesla}
-      - {ticker: GM, name: General Motors}
-  - slug: public_sector
-    name: Public Sector (government contractors)
-    companies:
-      - {ticker: BAH, name: Booz Allen Hamilton, cost_basis: total_costs_less_overhead}  # billable expenses are custom-tagged
-      - {ticker: LDOS, name: Leidos}
-      - {ticker: SAIC, name: Science Applications International}
-      - {ticker: CACI, name: CACI International}
-      - {ticker: PSN, name: Parsons}
-      - {ticker: GD, name: General Dynamics}
-  - slug: real_estate_hospitality
-    name: Real Estate & Hospitality
-    companies:
-      - {ticker: PLD, name: Prologis, kind: reit}
-      - {ticker: AMT, name: American Tower, kind: reit}
-      - {ticker: SPG, name: Simon Property Group, kind: reit}
-      - {ticker: MAR, name: Marriott International}
-      - {ticker: HLT, name: Hilton Worldwide}
-      - {ticker: ABNB, name: Airbnb}
-  - slug: education
-    name: Education
-    companies:
-      - {ticker: LRN, name: Stride}
-      - {ticker: LOPE, name: Grand Canyon Education}
-      - {ticker: CVSA, name: Covista (formerly Adtalem Global Education; ticker ATGE until Jan 2026)}
-      - {ticker: STRA, name: Strategic Education}
-      - {ticker: DUOL, name: Duolingo}
-      - {ticker: COUR, name: Coursera}
+- slug: tmt
+  name: Technology, Media & Telecom
+  companies:
+  - ticker: AAPL
+    name: Apple
+  - ticker: MSFT
+    name: Microsoft
+  - ticker: GOOGL
+    name: Alphabet
+  - ticker: META
+    name: Meta Platforms
+  - ticker: NVDA
+    name: NVIDIA
+  - ticker: VZ
+    name: Verizon
+  - ticker: IBM
+    name: INTERNATIONAL BUSINESS MACHINES CORPORATION
+    kind: standard
+    subsector: Enterprise software and services
+  - ticker: ORCL
+    name: Oracle Corporation
+    kind: standard
+    subsector: Enterprise software and services
+  - ticker: CRM
+    name: Salesforce, Inc.
+    kind: standard
+    subsector: Enterprise software and services
+  - ticker: ADBE
+    name: ADOBE INC.
+    kind: standard
+    subsector: Enterprise software and services
+  - ticker: INTC
+    name: INTEL CORP
+    kind: standard
+    subsector: Semiconductors
+  - ticker: AMD
+    name: ADVANCED MICRO DEVICES INC
+    kind: standard
+    subsector: Semiconductors
+  - ticker: QCOM
+    name: QUALCOMM INC/DE
+    kind: standard
+    subsector: Semiconductors
+  - ticker: MU
+    name: Micron Technology, Inc.
+    kind: standard
+    subsector: Semiconductors
+  - ticker: AVGO
+    name: Broadcom Inc.
+    kind: standard
+    subsector: Semiconductors
+  - ticker: CSCO
+    name: CISCO SYSTEMS, INC.
+    kind: standard
+    subsector: Telecom and networking
+  - ticker: T
+    name: AT&T INC.
+    kind: standard
+    subsector: Telecom and networking
+  - ticker: CMCSA
+    name: "COMCAST\_CORPORATION"
+    kind: standard
+    subsector: Telecom and networking
+  - ticker: NFLX
+    name: Netflix, Inc.
+    kind: standard
+    subsector: Media and entertainment
+  - ticker: DIS
+    name: WALT DISNEY CO/
+    kind: standard
+    subsector: Media and entertainment
+- slug: financial_services
+  name: Financial Services
+  companies:
+  - ticker: JPM
+    name: JPMorgan Chase
+    kind: bank
+  - ticker: BAC
+    name: Bank of America
+    kind: bank
+  - ticker: WFC
+    name: Wells Fargo
+    kind: bank
+  - ticker: GS
+    name: Goldman Sachs
+    kind: bank
+  - ticker: C
+    name: Citigroup
+    kind: bank
+  - ticker: AXP
+    name: American Express
+    kind: bank
+  - ticker: MS
+    name: MORGAN STANLEY
+    kind: bank
+    subsector: Capital markets and custody
+  - ticker: SCHW
+    name: SCHWAB CHARLES CORP
+    kind: bank
+    subsector: Capital markets and custody
+  - ticker: BNY
+    name: Bank of New York Mellon Corp
+    kind: bank
+    subsector: Capital markets and custody
+  - ticker: STT
+    name: STATE STREET CORP
+    kind: bank
+    subsector: Capital markets and custody
+  - ticker: USB
+    name: US BANCORP \DE\
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: PNC
+    name: PNC FINANCIAL SERVICES GROUP, INC.
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: TFC
+    name: TRUIST FINANCIAL CORPORATION
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: COF
+    name: CAPITAL ONE FINANCIAL CORP
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: FITB
+    name: FIFTH THIRD BANCORP
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: HBAN
+    name: Huntington Bancshares Incorporated
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: KEY
+    name: KeyCorp
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: ALLY
+    name: Ally Financial Inc.
+    kind: bank
+    subsector: Regional and consumer banking
+  - ticker: MA
+    name: Mastercard Incorporated
+    kind: standard
+    subsector: Payments, asset management and insurance
+  - ticker: BLK
+    name: BlackRock, Inc.
+    kind: standard
+    subsector: Payments, asset management and insurance
+  - ticker: AIG
+    name: AMERICAN INTERNATIONAL GROUP, INC.
+    kind: standard
+    subsector: Payments, asset management and insurance
+  - ticker: PRU
+    name: PRUDENTIAL FINANCIAL INC
+    kind: standard
+    subsector: Payments, asset management and insurance
+  - ticker: PGR
+    name: PROGRESSIVE CORP/OH/
+    kind: standard
+    subsector: Payments, asset management and insurance
+- slug: consumer_retail
+  name: Consumer & Retail
+  companies:
+  - ticker: WMT
+    name: Walmart
+  - ticker: TGT
+    name: Target
+  - ticker: COST
+    name: Costco
+  - ticker: AMZN
+    name: Amazon
+  - ticker: NKE
+    name: Nike
+  - ticker: HD
+    name: Home Depot
+  - ticker: LOW
+    name: LOWES COMPANIES INC
+    kind: standard
+    subsector: Home improvement
+  - ticker: KR
+    name: KROGER CO
+    kind: standard
+    subsector: Groceries and discount retail
+  - ticker: DG
+    name: DOLLAR GENERAL CORP
+    kind: standard
+    subsector: Groceries and discount retail
+  - ticker: DLTR
+    name: DOLLAR TREE, INC.
+    kind: standard
+    subsector: Groceries and discount retail
+  - ticker: TJX
+    name: The TJX Companies, Inc.
+    kind: standard
+    subsector: Apparel and specialty retail
+  - ticker: ROST
+    name: Ross Stores, Inc.
+    kind: standard
+    subsector: Apparel and specialty retail
+  - ticker: SBUX
+    name: Starbucks Corporation
+    kind: standard
+    subsector: Restaurants and consumer staples
+  - ticker: MCD
+    name: "McDONALD\u2019S CORPORATION"
+    kind: standard
+    subsector: Restaurants and consumer staples
+    reported_share_unit: millions
+    share_unit_since_filed: '2024-02-22'
+    share_unit_source: https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm
+  - ticker: KO
+    name: COCA COLA CO
+    kind: standard
+    subsector: Restaurants and consumer staples
+  - ticker: PEP
+    name: PEPSICO INC
+    kind: standard
+    subsector: Restaurants and consumer staples
+  - ticker: PG
+    name: PROCTER & GAMBLE CO
+    kind: standard
+    subsector: Restaurants and consumer staples
+  - ticker: CL
+    name: COLGATE-PALMOLIVE COMPANY
+    kind: standard
+    subsector: Restaurants and consumer staples
+  - ticker: ULTA
+    name: ULTA BEAUTY, INC.
+    kind: standard
+    subsector: Apparel and specialty retail
+  - ticker: BBY
+    name: Best Buy Co., Inc.
+    kind: standard
+    subsector: Apparel and specialty retail
+- slug: healthcare
+  name: Healthcare & Life Sciences
+  companies:
+  - ticker: UNH
+    name: UnitedHealth Group
+    kind: managed_care
+  - ticker: ELV
+    name: Elevance Health
+    kind: managed_care
+  - ticker: HUM
+    name: Humana
+    kind: managed_care
+  - ticker: CVS
+    name: CVS Health
+    kind: managed_care
+  - ticker: PFE
+    name: Pfizer
+  - ticker: LLY
+    name: Eli Lilly
+  - ticker: CI
+    name: The Cigna Group
+    kind: managed_care
+    subsector: Managed care
+  - ticker: CNC
+    name: CENTENE CORPORATION
+    kind: managed_care
+    subsector: Managed care
+  - ticker: MOH
+    name: MOLINA HEALTHCARE, INC.
+    kind: managed_care
+    subsector: Managed care
+  - ticker: JNJ
+    name: Johnson & Johnson
+    kind: standard
+    subsector: Pharmaceuticals and biotechnology
+  - ticker: MRK
+    name: "Merck\_& Co., Inc."
+    kind: standard
+    subsector: Pharmaceuticals and biotechnology
+  - ticker: ABBV
+    name: AbbVie Inc.
+    kind: standard
+    subsector: Pharmaceuticals and biotechnology
+  - ticker: AMGN
+    name: Amgen Inc.
+    kind: standard
+    subsector: Pharmaceuticals and biotechnology
+  - ticker: GILD
+    name: GILEAD SCIENCES, INC.
+    kind: standard
+    subsector: Pharmaceuticals and biotechnology
+  - ticker: HCA
+    name: HCA Healthcare, Inc.
+    kind: standard
+    subsector: Hospitals
+  - ticker: THC
+    name: TENET HEALTHCARE CORP
+    kind: standard
+    subsector: Hospitals
+  - ticker: UHS
+    name: UNIVERSAL HEALTH SERVICES INC
+    kind: standard
+    subsector: Hospitals
+  - ticker: TMO
+    name: THERMO FISHER SCIENTIFIC INC.
+    kind: standard
+    subsector: Medical devices and life science tools
+  - ticker: ABT
+    name: ABBOTT LABORATORIES
+    kind: standard
+    subsector: Medical devices and life science tools
+  - ticker: MDT
+    name: Medtronic plc
+    kind: standard
+    subsector: Medical devices and life science tools
+- slug: industrials
+  name: Industrials & Manufacturing
+  companies:
+  - ticker: CAT
+    name: Caterpillar
+  - ticker: DE
+    name: Deere
+  - ticker: GE
+    name: GE Aerospace
+  - ticker: HON
+    name: Honeywell
+  - ticker: MMM
+    name: 3M
+  - ticker: NUE
+    name: Nucor
+  - ticker: BA
+    name: THE BOEING COMPANY
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: ETN
+    name: EATON CORPORATION plc
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: EMR
+    name: EMERSON ELECTRIC CO.
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: ITW
+    name: ILLINOIS TOOL WORKS INC
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: PH
+    name: PARKER-HANNIFIN CORPORATION
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: CMI
+    name: CUMMINS INC.
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: PCAR
+    name: PACCAR Inc
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: DOV
+    name: DOVER Corp
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: ROK
+    name: Rockwell Automation, Inc.
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: STLD
+    name: Steel Dynamics, Inc.
+    kind: standard
+    subsector: Steel production
+  - ticker: CLF
+    name: CLEVELAND-CLIFFS INC.
+    kind: standard
+    subsector: Steel production
+  - ticker: CARR
+    name: CARRIER GLOBAL CORPORATION
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: OTIS
+    name: OTIS WORLDWIDE CORPORATION
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+  - ticker: IR
+    name: Ingersoll Rand Inc.
+    kind: standard
+    subsector: Aerospace and diversified manufacturing
+- slug: energy_resources
+  name: Energy & Resources
+  companies:
+  - ticker: XOM
+    name: Exxon Mobil
+    predecessor_ciks:
+    - 34088
+  - ticker: CVX
+    name: Chevron
+  - ticker: COP
+    name: ConocoPhillips
+  - ticker: NEE
+    name: NextEra Energy
+  - ticker: FSLR
+    name: First Solar
+  - ticker: FCX
+    name: Freeport-McMoRan
+  - ticker: EOG
+    name: EOG RESOURCES, INC.
+    kind: standard
+    subsector: Oil production and services
+  - ticker: OXY
+    name: OCCIDENTAL PETROLEUM CORPORATION
+    kind: standard
+    subsector: Oil production and services
+  - ticker: DVN
+    name: DEVON ENERGY CORP/DE
+    kind: standard
+    subsector: Oil production and services
+  - ticker: SLB
+    name: SLB LIMITED/NV
+    kind: standard
+    subsector: Oil production and services
+  - ticker: HAL
+    name: HALLIBURTON COMPANY
+    kind: standard
+    subsector: Oil production and services
+  - ticker: WMB
+    name: WILLIAMS COMPANIES, INC.
+    kind: standard
+    subsector: Midstream pipelines
+  - ticker: PSX
+    name: Phillips 66
+    kind: standard
+    subsector: Refining
+  - ticker: VLO
+    name: VALERO ENERGY CORP/TX
+    kind: standard
+    subsector: Refining
+  - ticker: MPC
+    name: Marathon Petroleum Corporation
+    kind: standard
+    subsector: Refining
+  - ticker: DUK
+    name: Duke Energy CORP
+    kind: standard
+    subsector: Utilities and generation
+  - ticker: SO
+    name: SOUTHERN CO
+    kind: standard
+    subsector: Utilities and generation
+  - ticker: AEP
+    name: American Electric Power Company, Inc.
+    kind: standard
+    subsector: Utilities and generation
+  - ticker: EXC
+    name: EXELON CORPORATION
+    kind: standard
+    subsector: Utilities and generation
+  - ticker: CEG
+    name: CONSTELLATION ENERGY CORPORATION
+    kind: standard
+    subsector: Utilities and generation
+- slug: transportation_logistics
+  name: Transportation, Logistics & Infrastructure
+  companies:
+  - ticker: UPS
+    name: United Parcel Service
+  - ticker: FDX
+    name: FedEx
+  - ticker: UNP
+    name: Union Pacific
+  - ticker: DAL
+    name: Delta Air Lines
+  - ticker: TSLA
+    name: Tesla
+  - ticker: GM
+    name: General Motors
+  - ticker: F
+    name: Ford Motor Co
+    kind: standard
+    subsector: Automotive
+  - ticker: RIVN
+    name: Rivian Automotive, Inc. / DE
+    kind: standard
+    subsector: Automotive
+  - ticker: CHRW
+    name: C. H. ROBINSON WORLDWIDE, INC.
+    kind: standard
+    subsector: Freight and logistics
+  - ticker: JBHT
+    name: J.B. HUNT TRANSPORT SERVICES, INC.
+    kind: standard
+    subsector: Freight and logistics
+  - ticker: ODFL
+    name: OLD DOMINION FREIGHT LINE, INC.
+    kind: standard
+    subsector: Freight and logistics
+  - ticker: XPO
+    name: XPO, Inc.
+    kind: standard
+    subsector: Freight and logistics
+  - ticker: SAIA
+    name: Saia, Inc.
+    kind: standard
+    subsector: Freight and logistics
+  - ticker: CSX
+    name: CSX CORPORATION
+    kind: standard
+    subsector: Rail
+  - ticker: NSC
+    name: NORFOLK SOUTHERN CORP
+    kind: standard
+    subsector: Rail
+  - ticker: UAL
+    name: United Airlines Holdings, Inc.
+    kind: standard
+    subsector: Passenger aviation
+  - ticker: AAL
+    name: American Airlines Group Inc.
+    kind: standard
+    subsector: Passenger aviation
+  - ticker: LUV
+    name: SOUTHWEST AIRLINES CO.
+    kind: standard
+    subsector: Passenger aviation
+  - ticker: UBER
+    name: Uber Technologies, Inc
+    kind: standard
+    subsector: Mobility platforms
+  - ticker: LYFT
+    name: Lyft, Inc.
+    kind: standard
+    subsector: Mobility platforms
+- slug: public_sector
+  name: Public Sector (government contractors)
+  companies:
+  - ticker: BAH
+    name: Booz Allen Hamilton
+    cost_basis: total_costs_less_overhead
+  - ticker: LDOS
+    name: Leidos
+  - ticker: SAIC
+    name: Science Applications International
+  - ticker: CACI
+    name: CACI International
+  - ticker: PSN
+    name: Parsons
+  - ticker: GD
+    name: General Dynamics
+  - ticker: LMT
+    name: LOCKHEED MARTIN CORPORATION
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: NOC
+    name: NORTHROP GRUMMAN CORP /DE/
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: RTX
+    name: RTX CORPORATION
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: HII
+    name: HUNTINGTON INGALLS INDUSTRIES, INC.
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: OSK
+    name: Oshkosh Corporation
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: KBR
+    name: KBR, Inc.
+    kind: standard
+    subsector: Government engineering and advisory
+  - ticker: KTOS
+    name: KRATOS DEFENSE & SECURITY SOLUTIONS, INC.
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: AVAV
+    name: AEROVIRONMENT, INC.
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: BWXT
+    name: BWX TECHNOLOGIES, INC.
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: TXT
+    name: Textron Inc.
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: ICFI
+    name: ICF International, Inc.
+    kind: standard
+    subsector: Government engineering and advisory
+  - ticker: TTEK
+    name: TETRA TECH INC
+    kind: standard
+    subsector: Government engineering and advisory
+  - ticker: MRCY
+    name: Mercury Systems, Inc.
+    kind: standard
+    subsector: Defense platforms and equipment
+  - ticker: VSEC
+    name: VSE CORPORATION
+    kind: standard
+    subsector: Defense platforms and equipment
+- slug: real_estate_hospitality
+  name: Real Estate & Hospitality
+  companies:
+  - ticker: PLD
+    name: Prologis
+    kind: reit
+  - ticker: AMT
+    name: American Tower
+    kind: reit
+  - ticker: SPG
+    name: Simon Property Group
+    kind: reit
+  - ticker: MAR
+    name: Marriott International
+  - ticker: HLT
+    name: Hilton Worldwide
+  - ticker: ABNB
+    name: Airbnb
+  - ticker: O
+    name: REALTY INCOME CORPORATION
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: EQIX
+    name: EQUINIX, INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: DLR
+    name: DIGITAL REALTY TRUST, INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: WELL
+    name: WELLTOWER INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: VTR
+    name: "Ventas,\_Inc."
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: ESS
+    name: ESSEX PROPERTY TRUST, INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: MAA
+    name: MID-AMERICA APARTMENT COMMUNITIES, INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: PSA
+    name: Public Storage
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: EXR
+    name: EXTRA SPACE STORAGE INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: VICI
+    name: VICI Properties Inc.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: WY
+    name: WEYERHAEUSER COMPANY
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: HST
+    name: HOST HOTELS & RESORTS, INC.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: RLJ
+    name: RLJ LODGING TRUST
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+  - ticker: PK
+    name: Park Hotels & Resorts Inc.
+    kind: reit
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
+      hospitality'
+- slug: education
+  name: Education
+  companies:
+  - ticker: LRN
+    name: Stride
+  - ticker: LOPE
+    name: Grand Canyon Education
+  - ticker: CVSA
+    name: Covista (formerly Adtalem Global Education; ticker ATGE until Jan 2026)
+  - ticker: STRA
+    name: Strategic Education
+  - ticker: DUOL
+    name: Duolingo
+  - ticker: COUR
+    name: Coursera
+  - ticker: UTI
+    name: UNIVERSAL TECHNICAL INSTITUTE, INC
+    kind: standard
+    subsector: Postsecondary and workforce institutions
+  - ticker: PRDO
+    name: PERDOCEO EDUCATION CORP
+    kind: standard
+    subsector: Postsecondary and workforce institutions
+  - ticker: APEI
+    name: AMERICAN PUBLIC EDUCATION, INC.
+    kind: standard
+    subsector: Postsecondary and workforce institutions
+  - ticker: LAUR
+    name: Laureate Education, Inc.
+    kind: standard
+    subsector: Postsecondary and workforce institutions
+  - ticker: NRDY
+    name: NERDY INC.
+    kind: standard
+    subsector: Digital learning and training
+  - ticker: LINC
+    name: LINCOLN EDUCATIONAL SERVICES CORPORATION
+    kind: standard
+    subsector: Postsecondary and workforce institutions
+    reported_share_unit: thousands
+    share_unit_since_filed: '2026-03-02'
+    share_unit_source: https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/ef20060592_10k.htm
+  - ticker: SKIL
+    name: Skillsoft Corp.
+    kind: standard
+    subsector: Digital learning and training
+  - ticker: CHGG
+    name: CHEGG, INC
+    kind: standard
+    subsector: Digital learning and training
+  - ticker: SCHL
+    name: SCHOLASTIC CORPORATION
+    kind: standard
+    subsector: Publishing and childcare
+  - ticker: KLC
+    name: KinderCare Learning Companies, Inc.
+    kind: standard
+    subsector: Publishing and childcare
+  - ticker: BFAM
+    name: BRIGHT HORIZONS FAMILY SOLUTIONS INC.
+    kind: standard
+    subsector: Publishing and childcare
+  - ticker: WLY
+    name: JOHN WILEY & SONS, INC.
+    kind: standard
+    subsector: Publishing and childcare
+  - ticker: FC
+    name: FRANKLIN COVEY CO.
+    kind: standard
+    subsector: Digital learning and training
+  - ticker: SLM
+    name: SLM Corp
+    kind: bank
+    subsector: Student financing

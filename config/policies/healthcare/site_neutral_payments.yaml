@@ -31,6 +31,7 @@ assumptions:
     rationale: Minimum-MLR rules, premium competition and MA benchmarks tied to Medicare fee-for-service spending return most savings to customers over time.
 channels:
   - type: cost
+    company_kinds: [managed_care]
     label: Lower outpatient hospital claims
     params:
       exposed_cost_share: exposure.hospital_outpatient_cost_share
@@ -41,4 +42,4 @@ default_role: neutral
 references:
   - https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/R28.htm
 narrative:
-  extra: "This is a gain for insurers; the losers are hospital systems, which are outside this six-company universe."
+  extra: "This channel models insurers' claims savings. Hospital-provider revenue losses are not modeled by this channel."

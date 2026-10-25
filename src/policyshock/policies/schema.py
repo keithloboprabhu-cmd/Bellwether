@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from typing import Literal
 
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from policyshock.engine.expressions import references
 
@@ -93,6 +93,7 @@ class ChannelSpec(BaseModel):
     roles: list[Role] | None = None  # apply only to companies with these roles
     component: str | None = None  # optional, user-toggleable component (e.g. "second_round")
     persistence: str | None = None  # override the policy's persistence for this channel
+    company_kinds: list[Literal["standard", "bank", "reit", "managed_care"]] | None = None
 
     @field_validator("type")
     @classmethod
@@ -298,6 +299,8 @@ class ExposureDefinition(BaseModel):
 
 
 class ExposureValue(Sourced):
+    model_config = ConfigDict(allow_inf_nan=False, strict=True)
+    applicable: bool = True
     value: float
     low: float | None = None
     high: float | None = None

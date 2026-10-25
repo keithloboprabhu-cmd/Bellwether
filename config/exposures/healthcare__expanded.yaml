@@ -1,0 +1,908 @@
+industry: healthcare
+companies:
+  CI:
+    aca_exchange_revenue_share:
+      value: 0.01
+      low: 0.0
+      high: 0.055
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.13
+      low: 0.04
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.155
+      low: 0.025
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.245
+      low: 0.12
+      high: 0.77
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Managed care is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.006500000000000001
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  CNC:
+    aca_exchange_revenue_share:
+      value: 0.01
+      low: 0.0
+      high: 0.055
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.13
+      low: 0.04
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.155
+      low: 0.025
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.245
+      low: 0.12
+      high: 0.77
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Managed care is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.006500000000000001
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  MOH:
+    aca_exchange_revenue_share:
+      value: 0.01
+      low: 0.0
+      high: 0.055
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.13
+      low: 0.04
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.155
+      low: 0.025
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.245
+      low: 0.12
+      high: 0.77
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Managed care is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.006500000000000001
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
+        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  JNJ:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.065
+      low: 0.03
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  MRK:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.065
+      low: 0.03
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  ABBV:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.065
+      low: 0.03
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  AMGN:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.065
+      low: 0.03
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  GILD:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.065
+      low: 0.03
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Pharmaceuticals and biotechnology is outside
+        this direct policy channel; indirect effects are not modeled. This is not
+        a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
+        and biotechnology; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  HCA:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median
+        base and outer low/high from UNH/CVS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  THC:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median
+        base and outer low/high from UNH/CVS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  UHS:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
+        channel; indirect effects are not modeled. This is not a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median
+        base and outer low/high from UNH/CVS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  TMO:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices
+        and life science tools; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  ABT:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices
+        and life science tools; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  MDT:
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Medical devices and life science tools
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices
+        and life science tools; median base and outer low/high from PFE/LLY in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true

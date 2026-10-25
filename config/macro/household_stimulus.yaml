@@ -1,0 +1,144 @@
+id: household_stimulus
+scope: full_market
+name: Household stimulus payments
+description: The government sends one-time payments to households. Most of the money is spent within the year, at retailers and restaurants, on cars, travel and hotels, and on tuition; companies capture it roughly in proportion to their share of US consumer spending.
+persistence: one_time
+user_inputs:
+  - key: amount_per_recipient
+    label: Payment per recipient
+    unit: USD
+    min: 0
+    max: 5000
+    step: 50
+    default: 1000
+    help: The 2020 CARES Act paid up to $1,200 per adult; the 2021 American Rescue Plan paid up to $1,400 per person.
+  - key: recipients
+    label: Number of recipients
+    unit: millions
+    min: 1
+    max: 200
+    step: 1
+    default: 130
+assumptions:
+  - key: mpc
+    label: Share of payment spent within the year (MPC)
+    unit: fraction
+    low: 0.5
+    base: 0.7
+    high: 0.9
+    source: "Parker, Souleles, Johnson & McClelland (2013), AER 103(6): households spent ~50–90% of 2008 stimulus payments in total (12–30% on nondurables) within 3 months of receipt"
+    source_url: https://www.nber.org/papers/w16684
+derived:
+  total_transfer_musd: input.amount_per_recipient * input.recipients
+industry_effects:
+  consumer_retail:
+    reason: Shoppers spend much of the payment on goods and meals out.
+    assumptions:
+      - key: goods_tilt
+        label: Retail goods' share of new spending vs. their share of all spending
+        unit: multiple
+        low: 0.6
+        base: 1.0
+        high: 1.4
+        source: estimate
+        rationale: Same as the Consumer & Retail rebate policy; low-income recipients tilt toward goods, but durable purchases are lumpy.
+    channels:
+      - type: demand_transfer
+        label: Extra household spending
+        params:
+          total_transfer_musd: derived.total_transfer_musd
+          mpc: assumption.mpc
+          capture_share: baseline.revenue * exposure.us_consumer_revenue_share / macro.pce_musd
+          tilt: assumption.goods_tilt
+    exposure_keys: [us_consumer_revenue_share]
+  transportation_logistics:
+    reason: Some of the money goes to car purchases and domestic flights.
+    assumptions:
+      - key: tl_us_consumer_share
+        label: US-consumer share of vehicle and passenger revenue
+        unit: fraction
+        low: 0.5
+        base: 0.7
+        high: 0.85
+        source: estimate
+        rationale: Automakers sell abroad and to fleets, and airlines carry business travelers; households buy roughly two-thirds of the rest.
+      - key: tl_tilt
+        label: Cars and travel share of new spending vs. their share of all spending
+        unit: multiple
+        low: 0.8
+        base: 1.2
+        high: 1.8
+        source: estimate
+        rationale: Stimulus recipients financed vehicle purchases with 2008 and 2020–21 payments more than in proportion to normal spending.
+    channels:
+      - type: demand_transfer
+        label: Extra spending on cars and flights
+        params:
+          total_transfer_musd: derived.total_transfer_musd
+          mpc: assumption.mpc
+          capture_share: baseline.revenue * (exposure.mx_vehicle_sales_revenue_share + exposure.tl_domestic_passenger_revenue_share) * assumption.tl_us_consumer_share / macro.pce_musd
+          tilt: assumption.tl_tilt
+    exposure_keys: [mx_vehicle_sales_revenue_share, tl_domestic_passenger_revenue_share]
+  real_estate_hospitality:
+    reason: Some of the money goes to hotel stays and short-term rentals.
+    assumptions:
+      - key: re_travel_tilt
+        label: Travel share of new spending vs. its share of all spending
+        unit: multiple
+        low: 0.5
+        base: 1.0
+        high: 1.5
+        source: estimate
+        rationale: Leisure travel is discretionary and responds to windfalls, but one-time payments to lower-income households go mainly to essentials.
+    channels:
+      - type: demand_transfer
+        label: Extra hotel and rental spending
+        params:
+          total_transfer_musd: derived.total_transfer_musd
+          mpc: assumption.mpc
+          capture_share: baseline.revenue * (exposure.re_us_hotel_revenue_share + exposure.re_us_str_revenue_share) / macro.pce_musd
+          tilt: assumption.re_travel_tilt
+    exposure_keys: [re_us_hotel_revenue_share, re_us_str_revenue_share]
+  education:
+    reason: A little of the money goes to tuition and courses.
+    assumptions:
+      - key: edu_tilt
+        label: Education share of new spending vs. its share of all spending
+        unit: multiple
+        low: 0.2
+        base: 0.5
+        high: 1.0
+        source: estimate
+        rationale: Tuition is mostly financed by aid and loans and decided once a year, so windfalls reach it less than in proportion.
+    channels:
+      - type: demand_transfer
+        label: Extra tuition and course spending
+        params:
+          total_transfer_musd: derived.total_transfer_musd
+          mpc: assumption.mpc
+          capture_share: baseline.revenue * exposure.us_consumer_revenue_share / macro.pce_musd
+          tilt: assumption.edu_tilt
+    exposure_keys: [us_consumer_revenue_share]
+  tmt:
+    effect: none
+    rationale: Subscriptions and enterprise revenue barely respond to one-time payments; device purchases are not separately configured, so any lift for hardware makers is not modelled.
+  financial_services:
+    effect: none
+    rationale: Higher card spending lifts interchange slightly and lower delinquencies help lenders, both second-order and not modelled.
+  healthcare:
+    effect: none
+    rationale: Health spending is mostly insured and does not respond to one-time payments.
+  industrials:
+    effect: none
+    rationale: Manufacturers sell mainly to businesses and governments.
+  energy_resources:
+    effect: none
+    rationale: Gasoline and power use barely respond to one-time income.
+  public_sector:
+    effect: none
+    rationale: Contractors' revenue depends on appropriations, not household spending.
+references:
+  - https://www.nber.org/papers/w16684
+  - https://fred.stlouisfed.org/series/PCE
+narrative:
+  extra: "Because the payment is one-time, the implied price change counts the earnings bump once rather than capitalizing it at the P/E. Financing the payments (higher deficits or taxes) is not modelled."

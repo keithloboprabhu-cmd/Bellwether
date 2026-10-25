@@ -1,0 +1,996 @@
+industry: public_sector
+companies:
+  LMT:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  NOC:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  RTX:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  HII:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  OSK:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  KBR:
+    govcon_advisory_share:
+      value: 0.05
+      low: 0.02
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.23
+      low: 0.12
+      high: 0.39
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.56
+      low: 0.37
+      high: 0.63
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.71
+      low: 0.29
+      high: 0.8
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.45
+      low: 0.04
+      high: 0.85
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_services_share:
+      value: 0.9
+      low: 0.45
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.956
+      low: 0.49
+      high: 0.99
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  KTOS:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  AVAV:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  BWXT:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  TXT:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  ICFI:
+    govcon_advisory_share:
+      value: 0.05
+      low: 0.02
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.23
+      low: 0.12
+      high: 0.39
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.56
+      low: 0.37
+      high: 0.63
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.71
+      low: 0.29
+      high: 0.8
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.45
+      low: 0.04
+      high: 0.85
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_services_share:
+      value: 0.9
+      low: 0.45
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.956
+      low: 0.49
+      high: 0.99
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  TTEK:
+    govcon_advisory_share:
+      value: 0.05
+      low: 0.02
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.23
+      low: 0.12
+      high: 0.39
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.56
+      low: 0.37
+      high: 0.63
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.71
+      low: 0.29
+      high: 0.8
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.45
+      low: 0.04
+      high: 0.85
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_services_share:
+      value: 0.9
+      low: 0.45
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.956
+      low: 0.49
+      high: 0.99
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
+        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
+        committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  MRCY:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  VSEC:
+    govcon_advisory_share:
+      value: 0.02
+      low: 0.01
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.094
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_cost_plus_share:
+      value: 0.298
+      low: 0.29
+      high: 0.3
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.586
+      low: 0.58
+      high: 0.65
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_fed_it_share:
+      value: 0.17
+      low: 0.15
+      high: 0.172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_services_share:
+      value: 0.2
+      low: 0.15
+      high: 0.26
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.68
+      low: 0.66
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
+        and equipment; median base and outer low/high from GD in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true

@@ -1,6 +1,6 @@
 """Industry revenue betas to real GDP growth (used by the Full Market recession shock).
 
-For each industry we pool its six companies and regress annual revenue growth on real
+For each industry we pool its configured companies and regress annual revenue growth on real
 GDP growth over the same fiscal year:
 
     g_rev(i, t) = α + β · g_GDP(t) + ε
@@ -12,7 +12,7 @@ GDP growth over the same fiscal year:
 - Revenue growth is winsorized at [−50%, +100%] to limit acquisitions and divestitures, and the
   number of clipped points is reported. Results are shown with and without fiscal years
   ending in 2020–2021, whose pandemic swings dominate a short sample.
-These are small samples (≈ 6 companies × 16 years), so the standard error and R² are shown so
+These are small samples (uneven company histories), so the standard error and R² are shown so
 users can judge how much to trust each β.
 """
 

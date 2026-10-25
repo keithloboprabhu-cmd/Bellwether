@@ -1,0 +1,128 @@
+id: corporate_tax_change
+scope: full_market
+name: Corporate tax rate change
+description: Congress changes the 21% federal corporate rate. The change applies only to income earned in the US, so domestic businesses (banks, retailers, railroads, utilities) feel it fully and multinationals booking profit abroad feel it least. REITs pay no corporate tax on distributed income and are unaffected.
+persistence: permanent
+user_inputs:
+  - key: d_rate_pts
+    label: Change in the federal corporate rate
+    unit: percentage points
+    min: -10
+    max: 14
+    step: 1
+    default: 4
+    help: Positive is an increase from today's 21%. +7 points (to 28%) matches proposals made in 2021–24; the 2017 TCJA cut the rate by 14 points.
+assumptions:
+  - key: effective_share
+    label: Share of the statutory change that reaches the effective rate
+    unit: fraction
+    low: 0.8
+    base: 0.9
+    high: 1.0
+    source: estimate
+    rationale: Same range as the Industrials corporate-tax policy; credits and deductions fixed in dollars mean a statutory change moves the tax on US income slightly less than one-for-one.
+industry_effects:
+  consumer_retail:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  education:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  energy_resources:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  financial_services:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  healthcare:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  industrials:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  public_sector:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  real_estate_hospitality:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  tmt:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+  transportation_logistics:
+    reason: Tax on US income changes with the statutory rate.
+    channels:
+      - type: tax_rate
+        label: Different tax rate on US income
+        company_kinds: [standard, bank, managed_care]
+        params:
+          d_statutory_rate: input.d_rate_pts / 100 * assumption.effective_share
+          domestic_income_share: exposure.mx_us_pretax_share
+    exposure_keys: [mx_us_pretax_share]
+references:
+  - https://www.law.cornell.edu/uscode/text/26/11
+narrative:
+  extra: "The US share of pretax income comes from each company's 10-K tax note where it is tagged; taxes on foreign income (GILTI, the global minimum tax) are not modelled. The backtests page checks this channel against the 2017 cut."

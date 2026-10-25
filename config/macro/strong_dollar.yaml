@@ -1,0 +1,145 @@
+id: strong_dollar
+scope: full_market
+name: Stronger US dollar
+description: The dollar strengthens against other currencies. Profits earned abroad translate into fewer dollars, so multinationals (consumer staples, pharma, chips, industrial exporters) report lower earnings; importers of finished goods pay a little less for them. Purely domestic companies barely notice.
+persistence: one_time
+user_inputs:
+  - key: d_usd_pct
+    label: Change in the trade-weighted dollar
+    unit: percent
+    min: -20
+    max: 25
+    step: 1
+    default: 10
+    help: Positive means a stronger dollar. The broad dollar index rose roughly 15% from mid-2021 to its 2022 peak.
+assumptions:
+  - key: import_price_passthrough
+    label: Fall in dollar import prices per 1% stronger dollar
+    unit: fraction
+    low: 0.1
+    base: 0.25
+    high: 0.4
+    source: "Gopinath, Itskhoki & Rigobon (2010), Currency Choice and Exchange Rate Pass-Through, AER 100(1): most US imports are invoiced in dollars, so exchange-rate pass-through to US import prices is low (≈0.25 for dollar-priced goods in the short run)"
+  - key: hedge_offset
+    label: Share of the translation hit offset by hedges within the year
+    unit: fraction
+    low: 0.0
+    base: 0.2
+    high: 0.4
+    source: estimate
+    rationale: Large multinationals hedge part of next year's foreign earnings; hedges roll off within 12–18 months.
+derived:
+  translation: input.d_usd_pct / (100 + input.d_usd_pct) * (1 - assumption.hedge_offset)
+industry_effects:
+  consumer_retail:
+    reason: Foreign profits translate into fewer dollars; imported goods cost slightly less.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+      - type: cost
+        label: Cheaper imported goods
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs
+          shock_pct: -input.d_usd_pct / 100 * assumption.import_price_passthrough
+    exposure_keys: [mx_us_pretax_share, us_import_share_of_cogs]
+  education:
+    reason: Foreign profits translate into fewer dollars.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+    exposure_keys: [mx_us_pretax_share]
+  energy_resources:
+    effect: none
+    rationale: Oil, gas and copper are priced in dollars, so foreign production profits do not shrink with a stronger dollar; the utilities are domestic.
+  financial_services:
+    reason: Foreign profits translate into fewer dollars.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+    exposure_keys: [mx_us_pretax_share]
+  healthcare:
+    reason: Foreign profits translate into fewer dollars; imported goods cost slightly less.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+      - type: cost
+        label: Cheaper imported goods
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs
+          shock_pct: -input.d_usd_pct / 100 * assumption.import_price_passthrough
+    exposure_keys: [mx_us_pretax_share, us_import_share_of_cogs]
+  industrials:
+    reason: Foreign profits translate into fewer dollars.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+    exposure_keys: [mx_us_pretax_share]
+  public_sector:
+    reason: Foreign profits translate into fewer dollars.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+    exposure_keys: [mx_us_pretax_share]
+  real_estate_hospitality:
+    reason: Foreign profits translate into fewer dollars.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+    exposure_keys: [mx_us_pretax_share]
+  tmt:
+    reason: Foreign profits translate into fewer dollars; imported goods cost slightly less.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+      - type: cost
+        label: Cheaper imported goods
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs
+          shock_pct: -input.d_usd_pct / 100 * assumption.import_price_passthrough
+    exposure_keys: [mx_us_pretax_share, us_import_share_of_cogs]
+  transportation_logistics:
+    reason: Foreign profits translate into fewer dollars.
+    channels:
+      - type: cost
+        label: Foreign profits worth fewer dollars
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: max(0, baseline.pretax_income) * (1 - exposure.mx_us_pretax_share) * derived.translation
+    exposure_keys: [mx_us_pretax_share]
+references:
+  - https://fred.stlouisfed.org/series/DTWEXBGS
+narrative:
+  extra: "Foreign pretax income is proxied by each company's 10-K domestic/foreign split, so profit earned abroad in dollars (oil, some commodities) is treated as if it were in local currency. Lost export competitiveness is not modelled, and the effect is counted for one year."

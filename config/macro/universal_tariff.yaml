@@ -1,0 +1,160 @@
+id: universal_tariff
+scope: full_market
+name: Universal import tariff
+description: A flat tariff on all goods imported into the US. Importers of finished goods and components (retailers, consumer electronics, pharma, autos, machinery) pay more and pass part of it on, losing some volume; US steelmakers gain pricing power behind the tariff wall.
+persistence: permanent
+user_inputs:
+  - key: tariff_pct
+    label: Tariff on all imports
+    unit: percent
+    min: 0
+    max: 50
+    step: 1
+    default: 10
+    help: The 10% baseline tariff announced in April 2025 is a reference point; the average US tariff on imports was under 3% before 2018.
+assumptions:
+  - key: pass_through
+    label: Share of the tariff cost passed to customers (φ)
+    unit: fraction
+    low: 0.3
+    base: 0.6
+    high: 0.9
+    source: estimate
+    rationale: Amiti, Redding & Weinstein (2019) find near-complete pass-through of 2018 tariffs to import prices at the border, but Cavallo, Gopinath, Neiman & Tang (2021) find much smaller pass-through to retail shelf prices; range spans both.
+    source_url: https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: Same central case as the Consumer & Retail tariff policy; essentials are less elastic, discretionary goods more.
+  - key: domestic_price_follow
+    label: Rise in US steel prices as a share of the tariff
+    unit: fraction
+    low: 0.3
+    base: 0.5
+    high: 0.8
+    source: estimate
+    rationale: Domestic producers raise prices toward the tariff-inclusive import price; after the 2018 steel tariffs US prices rose by a large part of the tariff before easing.
+industry_effects:
+  consumer_retail:
+    reason: Retailers import much of what they sell.
+    channels:
+      - type: cost
+        label: Tariff on imported goods
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs
+          shock_pct: input.tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+    exposure_keys: [us_import_share_of_cogs]
+  tmt:
+    reason: Hardware is assembled abroad and imported.
+    channels:
+      - type: cost
+        label: Tariff on imported hardware and components
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs
+          shock_pct: input.tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+    exposure_keys: [us_import_share_of_cogs]
+  healthcare:
+    reason: Drugmakers and device makers import ingredients and finished products.
+    channels:
+      - type: cost
+        label: Tariff on imported drugs, ingredients and devices
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs
+          shock_pct: input.tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+    exposure_keys: [us_import_share_of_cogs]
+  industrials:
+    reason: Manufacturers import components and pay more for steel; US steelmakers gain.
+    assumptions:
+      - key: ind_import_share
+        label: Imported share of manufacturers' cost of revenue
+        unit: fraction
+        low: 0.08
+        base: 0.15
+        high: 0.25
+        source: estimate
+        rationale: Diversified US manufacturers import a minority of their inputs (castings, electronics, sub-assemblies); most production for the US market is sourced domestically.
+    channels:
+      - type: cost
+        label: Tariff on imported components
+        params:
+          exposed_cost_share: assumption.ind_import_share
+          shock_pct: input.tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+        roles: [importer]
+      - type: cost
+        label: Higher US steel prices
+        params:
+          exposed_cost_share: exposure.ind_steel_share_of_cogs
+          shock_pct: input.tariff_pct / 100 * assumption.domestic_price_follow
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+        roles: [importer]
+      - type: domestic_uplift
+        label: Higher US steel prices behind the tariff wall
+        roles: [domestic_producer]
+        params:
+          domestic_sales_share: exposure.ind_domestic_steel_sales_share
+          price_uplift: input.tariff_pct / 100 * assumption.domestic_price_follow
+          flow_through: 0.1
+    exposure_keys: [ind_steel_share_of_cogs, ind_domestic_steel_sales_share]
+    roles: {NUE: domestic_producer, STLD: domestic_producer, CLF: domestic_producer}
+    default_role: importer
+  transportation_logistics:
+    reason: Automakers import vehicles and parts.
+    channels:
+      - type: cost
+        label: Tariff on imported vehicles and parts
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: exposure.tl_auto_tariff_cost_at_25pct_musd * input.tariff_pct / 25
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+    exposure_keys: [tl_auto_tariff_cost_at_25pct_musd]
+  public_sector:
+    reason: Contractors' imported parts are small; cost-plus work passes them on.
+    assumptions:
+      - key: gov_import_share
+        label: Imported share of contractors' cost of revenue
+        unit: fraction
+        low: 0.02
+        base: 0.04
+        high: 0.08
+        source: estimate
+        rationale: Defense and services contractors source mostly domestically (Buy American rules); imports are mainly electronic components.
+    channels:
+      - type: cost
+        label: Tariff on imported parts
+        params:
+          exposed_cost_share: assumption.gov_import_share
+          shock_pct: input.tariff_pct / 100
+          pass_through: exposure.govcon_cost_plus_share
+    exposure_keys: [govcon_cost_plus_share]
+  energy_resources:
+    effect: none
+    rationale: Energy imports (crude oil, natural gas) have been exempted from recent broad tariffs; equipment cost effects are small next to commodity prices.
+  financial_services:
+    effect: none
+    rationale: Banks, insurers and payment networks import no goods; credit effects on importers are second-order.
+  education:
+    effect: none
+    rationale: Education providers import few goods; tariffs barely touch their costs.
+  real_estate_hospitality:
+    effect: none
+    rationale: REIT and hotel operating costs are mostly local labor, utilities and taxes; tariffs on construction materials raise development costs that are capitalized rather than expensed.
+references:
+  - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+  - https://www.usitc.gov/publications/332/pub5405.pdf
+narrative:
+  extra: "Retaliation against US exports and the dollar's likely appreciation are not modelled; both would deepen the hit to exporters."

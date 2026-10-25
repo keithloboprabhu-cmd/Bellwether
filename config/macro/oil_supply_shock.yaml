@@ -1,0 +1,151 @@
+id: oil_supply_shock
+scope: full_market
+name: Oil supply shock
+description: A supply disruption moves the Brent oil price for about a year. Oil producers earn more per barrel, fuel-heavy carriers pay more for jet fuel and diesel (recovering part through surcharges), manufacturers pay more for energy, and, as an optional second round, households spend less elsewhere because gasoline costs more.
+persistence: one_time
+showcase: true
+user_inputs:
+  - key: d_brent_usd
+    label: Change in the Brent oil price
+    unit: USD per bbl
+    min: -40
+    max: 60
+    step: 5
+    default: 20
+    help: Positive is a price spike. Brent averaged about $69 in 2025; it rose roughly $25–30 in the first months after Russia invaded Ukraine in 2022.
+assumptions:
+  - key: elasticity
+    label: Freight and travel demand elasticity
+    unit: number
+    low: 0.3
+    base: 0.6
+    high: 1.0
+    source: estimate
+    rationale: Same range as the Transportation carbon-tax policy; air travel is more price-sensitive than freight.
+  - key: gas_bill_spending_cut
+    label: Share of the extra gasoline bill that comes out of other spending
+    unit: fraction
+    low: 0.5
+    base: 0.8
+    high: 1.0
+    source: estimate
+    rationale: Gasoline demand barely responds in the short run, so most of a higher bill is paid by cutting other purchases or saving less.
+derived:
+  brent_ref: 69.06  # 2025 average Brent, $/bbl (XOM 2025 10-K), the reference oil_price_sensitivity was built on
+  d_oil_pct: input.d_brent_usd / derived.brent_ref
+  # US motor-gasoline use ≈ 376 million gallons/day (EIA, 2023) ≈ 137B gallons a year; $1/bbl ≈ 1/42 $/gal
+  gasoline_bill_musd: 137000 * input.d_brent_usd / 42
+component_labels:
+  second_round: Households spend less elsewhere as gasoline costs more
+industry_effects:
+  energy_resources:
+    reason: Producers' revenue and earnings move with the oil price.
+    channels:
+      - type: price
+        label: Higher realized oil prices
+        roles: [domestic_producer]
+        params:
+          d_price: derived.d_oil_pct
+          exposed_revenue_share: exposure.oil_price_sensitivity
+    exposure_keys: [oil_price_sensitivity]
+    roles: {PSX: neutral, VLO: neutral, MPC: neutral, SLB: neutral, HAL: neutral, NEE: neutral, FSLR: neutral, DUK: neutral, SO: neutral, AEP: neutral, EXC: neutral, CEG: neutral, WMB: neutral}
+    default_role: domestic_producer
+  transportation_logistics:
+    reason: Fuel is a large cost for airlines and truckers; surcharges recover part of it.
+    assumptions:
+      - key: gal_per_t_co2
+        label: Gallons of fuel per tonne of CO2 emitted
+        unit: gallons
+        low: 98
+        base: 101
+        high: 104
+        source: "EIA carbon-dioxide coefficients: jet fuel ≈ 21.5 lb and diesel ≈ 22.4 lb CO2 per gallon, i.e. ≈ 98–104 gallons per tonne"
+        source_url: https://www.eia.gov/environment/emissions/co2_vol_mass.php
+      - key: variable_cost_share
+        label: Share of costs that shrink with volume
+        unit: fraction
+        low: 0.4
+        base: 0.5
+        high: 0.6
+        source: estimate
+        rationale: Same range as the Transportation carbon-tax policy; crew, fuel and handling scale with flights and loads, fleet and network costs do not.
+    channels:
+      - type: cost
+        label: Higher jet-fuel and diesel prices
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: exposure.tl_fuel_co2_mt * assumption.gal_per_t_co2 * input.d_brent_usd / 42
+          pass_through: exposure.tl_fuel_cost_recovery_share
+          elasticity: assumption.elasticity
+          variable_cost_share: assumption.variable_cost_share
+    exposure_keys: [tl_fuel_co2_mt, tl_fuel_cost_recovery_share]
+  industrials:
+    reason: Manufacturers pay more for energy and pass part of it on.
+    assumptions:
+      - key: ind_energy_cost_share
+        label: Energy share of manufacturers' cost of revenue
+        unit: fraction
+        low: 0.02
+        base: 0.04
+        high: 0.07
+        source: estimate
+        rationale: Purchased fuel and power are a few percent of costs for diversified manufacturers; steel mini-mills are higher.
+      - key: ind_energy_oil_link
+        label: Move in manufacturers' energy costs per 1% move in oil
+        unit: fraction
+        low: 0.2
+        base: 0.4
+        high: 0.6
+        source: estimate
+        rationale: Industrial energy is mostly electricity and natural gas, which move only partly with oil.
+      - key: ind_energy_pass_through
+        label: Share of the energy cost increase passed to customers
+        unit: fraction
+        low: 0.2
+        base: 0.4
+        high: 0.7
+        source: estimate
+        rationale: Surcharges and list-price increases recover part of an input-cost rise within a year.
+    channels:
+      - type: cost
+        label: Higher energy costs
+        params:
+          exposed_cost_share: assumption.ind_energy_cost_share
+          shock_pct: derived.d_oil_pct * assumption.ind_energy_oil_link
+          pass_through: assumption.ind_energy_pass_through
+  consumer_retail:
+    reason: (Second round) a bigger gasoline bill squeezes other household spending.
+    channels:
+      - type: demand_transfer
+        label: Less spending elsewhere as gasoline costs more
+        component: second_round
+        params:
+          total_transfer_musd: -derived.gasoline_bill_musd
+          mpc: assumption.gas_bill_spending_cut
+          capture_share: baseline.revenue * exposure.us_consumer_revenue_share / macro.pce_musd
+    exposure_keys: [us_consumer_revenue_share]
+  tmt:
+    effect: none
+    rationale: Energy is a small share of costs for software, chips and media; data-center power is mostly contracted electricity.
+  financial_services:
+    effect: none
+    rationale: No direct oil exposure in the configured banks, insurers and payment networks; credit effects on energy borrowers are second-order.
+  healthcare:
+    effect: none
+    rationale: Energy is a small share of healthcare costs and demand does not depend on fuel prices.
+  public_sector:
+    effect: none
+    rationale: Contractors' fuel costs are largely reimbursable or small relative to labor.
+  real_estate_hospitality:
+    effect: none
+    rationale: Property operating energy is mostly electricity and gas and largely recovered from tenants; any hit to travel demand is not modelled.
+  education:
+    effect: none
+    rationale: Energy is a small share of education costs.
+references:
+  - https://www.eia.gov/tools/faqs/faq.php?id=23&t=10
+  - https://www.eia.gov/environment/emissions/co2_vol_mass.php
+  - https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+narrative:
+  extra: "Refiners, oil-service companies and utilities are held flat: refining margins depend on the crack spread, oil-service revenue follows drilling budgets with a lag, and utilities' fuel costs pass through rate cases. The price is assumed to last about a year, so earnings changes are counted once rather than capitalized."

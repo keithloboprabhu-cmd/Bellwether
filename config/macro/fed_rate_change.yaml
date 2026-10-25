@@ -47,6 +47,7 @@ industry_effects:
       sensitivity: "exposure.nii_sens_up_per_100bp if input.d_ff_bps > 0 else exposure.nii_sens_down_per_100bp"
     channels:
       - type: bank_nii
+        company_kinds: [bank]
         label: Change in net interest income
         params:
           d_rate_bps: input.d_ff_bps

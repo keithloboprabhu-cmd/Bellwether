@@ -120,7 +120,7 @@ def exposure_values(policy: Policy, tickers: list[str], exposures: dict, case: d
         for key in policy.exposure_keys:
             ev = exposures[t][key]
             c = case.get(key, "base")
-            out[t][key] = ev.low if c == "low" else ev.high if c == "high" else ev.value
+            out[t][key] = 0.0 if not ev.applicable else ev.low if c == "low" else ev.high if c == "high" else ev.value
     return out
 
 
@@ -162,7 +162,11 @@ def run_policy(
         if not derived_shown:
             derived_shown = {k: v for k, v in ctx["derived"].items() if isinstance(v, (int, float))}
         outcomes = []
+        scope_notes = []
         for spec in policy.channels:
+            if spec.company_kinds is not None and b["kind"] not in spec.company_kinds:
+                scope_notes.append(f"{spec.label or spec.type}: not applicable to the {b['kind']} statement template; no direct effect modeled")
+                continue
             if spec.roles and role not in spec.roles:
                 continue
             if spec.component and spec.component not in comps:
@@ -180,6 +184,6 @@ def run_policy(
                 )
             )
         res = aggregate(b, outcomes, role=role)
-        res.notes = list(b.get("model_flags", [])) + res.notes
+        res.notes = list(b.get("model_flags", [])) + scope_notes + res.notes
         results.append(res)
     return IndustryResult(policy, inputs, a_vals, results, comps, derived_shown)

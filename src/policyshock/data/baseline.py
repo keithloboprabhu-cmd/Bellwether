@@ -43,7 +43,7 @@ COST_TAGS = [
     "DirectCostsOfLeasedAndRentedPropertyOrEquipment",
 ]
 OPINC_TAGS = ["OperatingIncomeLoss"]
-INTEREST_TAGS = ["InterestExpense", "InterestExpenseNonoperating", "InterestExpenseDebt"]
+INTEREST_TAGS = ["InterestExpense", "InterestExpenseNonoperating", "InterestExpenseDebt", "InterestExpenseOperating", "InterestExpenseBorrowings"]
 PRETAX_TAGS = [
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
@@ -101,6 +101,7 @@ class FiscalYear:
     source_accn: str | None = None
     source_filed: str | None = None
     source_cik: int | None = None
+    estimates: dict = field(default_factory=dict)
 
     def to_dict(self) -> dict:
         return {
@@ -112,6 +113,7 @@ class FiscalYear:
             "source_accn": self.source_accn,
             "source_filed": self.source_filed,
             "source_cik": self.source_cik,
+            "estimates": self.estimates,
         }
 
 
@@ -195,7 +197,7 @@ def fiscal_year_label(period_end: str) -> int:
 
 
 def build_baseline(
-    facts: dict, kind: str = "standard", min_year: int = 2008, cost_basis: str = "reported"
+    facts: dict, kind: str = "standard", min_year: int = 2008, cost_basis: str = "reported", share_scale: float = 1, share_scale_since_filed: str | None = None
 ) -> list[FiscalYear]:
     """Parse company facts into a list of FiscalYear records, newest first.
 
@@ -225,6 +227,8 @@ def build_baseline(
     rnd = _chain(facts, RND_TAGS)
     da = _chain(facts, DA_TAGS)
     nii = _chain(facts, NII_TAGS)
+    noninterest = _chain(facts, ["NoninterestIncome"])
+    basic_shares = _chain(facts, ["WeightedAverageNumberOfSharesOutstandingBasic"], unit="shares")
     assets = _chain(facts, ASSETS_TAGS, instant=True)
     debt = _chain(facts, DEBT_TAGS, instant=True)
     debt_nc = _chain(facts, DEBT_NONCURRENT_TAGS, instant=True)
@@ -259,6 +263,11 @@ def build_baseline(
         put("nci_income", nci.get(end))
         put("eps_diluted", eps.get(end), scale=1)
         S = put("diluted_shares", dil.get(end))
+        if S is not None and share_scale != 1 and (share_scale_since_filed is None or dil[end].filed >= share_scale_since_filed):
+            S *= share_scale
+            fy.items["diluted_shares"] = S
+            fy.tags["diluted_shares"] += f" × {share_scale:g} (filing share-unit normalization)"
+            fy.flags.append(f"weighted shares normalized by {share_scale:g} using the configured annual-filing share unit")
         put("interest_expense", interest.get(end))
         put("da", da.get(end))
         put("total_assets", _near(assets, end))
@@ -273,6 +282,18 @@ def build_baseline(
         T = put("income_tax", tax.get(end))
         EBIT = put("operating_income", opinc.get(end))
         C = put("cost_of_revenue", cost.get(end))
+
+        if R is None and kind == "bank" and end in nii and end in noninterest:
+            R = (nii[end].value + noninterest[end].value) / M
+            fy.items["revenue"] = R
+            fy.tags["revenue"] = f"= {nii[end].tag} + {noninterest[end].tag}"
+            fy.flags.append("bank net revenue derived from net interest income + noninterest income")
+        # Resolve pretax before the statement-template OI fallback, not afterwards.
+        if PTI is None and T is not None and fy.items.get("net_income") is not None:
+            PTI = fy.items["net_income"] + T
+            fy.items["pretax_income"] = PTI
+            fy.tags["pretax_income"] = "= NetIncome + IncomeTax"
+            fy.flags.append("pretax income derived (NI + tax)")
 
         # --- total debt: the largest of the complete-debt measures available. Partial tags
         # (e.g. MAR tags a $23M item as LongTermDebt) can only understate, so max is safest.
@@ -368,6 +389,13 @@ def build_baseline(
             fy.flags.append("pretax income ≤ 0 or tax missing; tax rate set to 21%")
 
         # --- EPS / shares consistency
+        if S is None and fy.items.get("net_income", 0) < 0 and end in basic_shares:
+            S = basic_shares[end].value / M * (share_scale if share_scale_since_filed is None or basic_shares[end].filed >= share_scale_since_filed else 1)
+            fy.items["diluted_shares"] = S
+            fy.tags["diluted_shares"] = "= WeightedAverageNumberOfSharesOutstandingBasic (loss-year proxy)"
+            rationale = "Diluted shares unavailable in companyfacts; use reported same-year basic weighted shares for a loss year, assuming potentially dilutive securities are anti-dilutive."
+            fy.estimates["diluted_shares"] = {"source": "estimate", "rationale": rationale}
+            fy.flags.append(rationale)
         if S is None and fy.items.get("eps_diluted") and fy.items.get("net_income"):
             fy.items["diluted_shares"] = fy.items["net_income"] / fy.items["eps_diluted"]
             fy.tags["diluted_shares"] = "= NetIncome / EPS diluted"

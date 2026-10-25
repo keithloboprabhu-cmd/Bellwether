@@ -1,0 +1,1150 @@
+industry: transportation_logistics
+companies:
+  F:
+    mx_vehicle_sales_revenue_share:
+      value: 0.8
+      low: 0.65
+      high: 0.92
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 2363.7110344471394
+      low: 592.4483533170932
+      high: 4048.6004140115338
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 1.055336754285709
+      low: 0.19748278443903108
+      high: 2.530375258757209
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.2
+      low: 0.0
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 50.607505175144176
+      low: 0.0
+      high: 506.0750517514417
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0105
+      low: 0.0
+      high: 0.021
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.20149999999999998
+      low: 0.045
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  RIVN:
+    mx_vehicle_sales_revenue_share:
+      value: 0.8
+      low: 0.65
+      high: 0.92
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 67.99548955537676
+      low: 17.042614445252934
+      high: 116.46371453742589
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 0.030358253698393824
+      low: 0.005680871481750978
+      high: 0.07278982158589119
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.2
+      low: 0.0
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 1.4557964317178236
+      low: 0.0
+      high: 14.557964317178236
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0105
+      low: 0.0
+      high: 0.021
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.20149999999999998
+      low: 0.045
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
+        base and outer low/high from TSLA/GM in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  CHRW:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 14.178570964459945
+      low: 3.4275259712837842
+      high: 36.61759510946189
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 2.2183296324426465
+      low: 1.6280748363597974
+      high: 2.929407608756951
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  JBHT:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 10.480657799622126
+      low: 2.5335929054054054
+      high: 27.067359944056573
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 1.6397670698034603
+      low: 1.2034566300675675
+      high: 2.165388795524526
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  ODFL:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 4.800842683699443
+      low: 1.1605551097972973
+      high: 12.398662320524243
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 0.7511230583562272
+      low: 0.5512636771537162
+      high: 0.9918929856419395
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  XPO:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 7.124763871504793
+      low: 1.722339527027027
+      high: 18.400424087253697
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 1.1147156409438532
+      low: 0.8181112753378378
+      high: 1.4720339269802958
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  SAIA:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 2.824999882666882
+      low: 0.6829151182432434
+      high: 7.295848230901974
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 0.4419896029772872
+      low: 0.3243846811655406
+      high: 0.583667858472158
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
+        median base and outer low/high from UPS/FDX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  CSX:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 11.498980008159936
+      low: 0.0
+      high: 34.496940024479805
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 5.634500203998369
+      low: 5.347025703794371
+      high: 5.921974704202367
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+  NSC:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 9.938800489596083
+      low: 0.0
+      high: 29.81640146878825
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 4.870012239902081
+      low: 4.62154222766218
+      high: 5.118482252141983
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.85
+      low: 0.7
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Rail; median base
+        and outer low/high from UNP in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.
+      applicable: true
+  UAL:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 9.32232813585001
+      low: 0.0
+      high: 46.61164067925005
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0167
+      low: 0.0158
+      high: 0.0182
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.564
+      low: 0.564
+      high: 0.564
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 30.297566441512533
+      low: 23.305820339625026
+      high: 38.780885045136046
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.5
+      low: 0.3
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  AAL:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 8.622088252004293
+      low: 0.0
+      high: 43.11044126002147
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0167
+      low: 0.0158
+      high: 0.0182
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.564
+      low: 0.564
+      high: 0.564
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 28.02178681901395
+      low: 21.555220630010734
+      high: 35.86788712833786
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.5
+      low: 0.3
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  LUV:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 4.42885550154662
+      low: 0.0
+      high: 22.144277507733097
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.0167
+      low: 0.0158
+      high: 0.0182
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.564
+      low: 0.564
+      high: 0.564
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 14.393780380026515
+      low: 11.072138753866549
+      high: 18.424038886433937
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.5
+      low: 0.3
+      high: 0.7
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
+        median base and outer low/high from DAL in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  UBER:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 27.572433376306023
+      low: 0.0
+      high: 117.33907806137987
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.00835
+      low: 0.0
+      high: 0.0182
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.282
+      low: 0.0
+      high: 0.564
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 17.153527770092502
+      low: 5.8669539030689934
+      high: 34.150419796730006
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.675
+      low: 0.3
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  LYFT:
+    mx_vehicle_sales_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_auto_tariff_cost_at_25pct_musd:
+      value: 3.348034019836977
+      low: 0.0
+      high: 14.248115857028457
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_checked_bag_fee_revenue_share:
+      value: 0.00835
+      low: 0.0
+      high: 0.0182
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.282
+      low: 0.0
+      high: 0.564
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_fuel_co2_mt:
+      value: 2.0828990227551043
+      low: 0.7124057928514228
+      high: 4.1467782589482995
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_fuel_cost_recovery_share:
+      value: 0.675
+      low: 0.3
+      high: 0.95
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_regulatory_credit_purchases_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    tl_us_ev_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
+        median base and outer low/high from DAL/UPS in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true

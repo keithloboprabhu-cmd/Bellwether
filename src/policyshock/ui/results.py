@@ -113,7 +113,7 @@ def overview(an: Analysis, reg: Registry) -> None:
         f.pct(t["d_eps_pct"], signed=True),
         f"range {f.pct(lo['d_eps_pct'], signed=True)} to {f.pct(hi['d_eps_pct'], signed=True)}",
         delta_color="off",
-        help="Σ Δ net income ÷ Σ baseline net income across the six companies. Range = pessimistic / optimistic assumptions.",
+        help="Σ Δ net income ÷ Σ baseline net income across the configured sample. Range = pessimistic / optimistic assumptions.",
     )
     k4.metric(
         "Implied Δ market cap",

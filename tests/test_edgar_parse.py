@@ -231,3 +231,49 @@ def test_near_duplicate_period_ends_collapse():
     )
     years = build_baseline(facts)
     assert len(years) == 1 and years[0].period_end == "2015-11-01"
+
+
+def test_bank_revenue_components_and_pretax_precede_template_fallback():
+    """Banks without a total-revenue/pretax tag retain their reported components."""
+    def row(v):
+        return [_fact(v, '2025-12-31', '2026-02-01', start='2025-01-01')]
+    fy = build_baseline(_facts(InterestIncomeExpenseNet=row(100e6), NoninterestIncome=row(30e6),
+                                NetIncomeLoss=row(20e6), IncomeTaxExpenseBenefit=row(5e6)), 'bank')[0]
+    assert fy.items['revenue'] == 130
+    assert fy.items['pretax_income'] == fy.items['operating_income'] == 25
+    assert 'NoninterestIncome' in fy.tags['revenue']
+
+
+def test_loss_basic_shares_fallback_has_explicit_estimate_provenance():
+    """Loss-year basic shares are usable only as a documented diluted-share proxy."""
+    def row(v):
+        return [_fact(v, '2025-12-31', '2026-02-01', start='2025-01-01')]
+    fy = build_baseline(_facts(Revenues=row(100e6), NetIncomeLoss=row(-10e6),
+                               WeightedAverageNumberOfSharesOutstandingBasic=row(20e6)))[0]
+    assert fy.items['diluted_shares'] == 20
+    assert fy.estimates['diluted_shares']['source'] == 'estimate'
+    assert fy.estimates['diluted_shares']['rationale']
+
+
+def test_share_scale_is_explicit_and_preserves_per_share_eps():
+    """Configured filing units scale counts; they cannot scale reported EPS."""
+    def row(v):
+        return [_fact(v, '2025-12-31', '2026-02-01', start='2025-01-01')]
+    fy = build_baseline(_facts(NetIncomeLoss=row(100e6), EarningsPerShareDiluted=row(5),
+                               WeightedAverageNumberOfDilutedSharesOutstanding=row(20)), share_scale=1e6)[0]
+    assert fy.items['diluted_shares'] == 20
+    assert fy.items['eps_diluted'] == 5
+    assert any('normalized' in f for f in fy.flags)
+
+
+def test_share_normalization_does_not_rescale_older_correct_facts():
+    """A tagging change applies by filing date, not to an issuer's entire history."""
+    facts = _facts(
+        NetIncomeLoss=[_fact(100e6, '2020-12-31', '2021-02-01', start='2020-01-01'),
+                       _fact(100e6, '2025-12-31', '2026-02-01', start='2025-01-01')],
+        WeightedAverageNumberOfDilutedSharesOutstanding=[
+            _fact(20e6, '2020-12-31', '2021-02-01', start='2020-01-01'),
+            _fact(20, '2025-12-31', '2026-02-01', start='2025-01-01')],
+    )
+    years = build_baseline(facts, share_scale=1e6, share_scale_since_filed='2024-02-22')
+    assert [y.items['diluted_shares'] for y in years] == [20, 20]

@@ -1,0 +1,1048 @@
+industry: tmt
+companies:
+  IBM:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.015
+      low: 0.01
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.035
+      low: 0.025
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.1
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 40.7034736724737
+      low: 30.527605254355276
+      high: 50.879342090592125
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  ORCL:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.015
+      low: 0.01
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.035
+      low: 0.025
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.1
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 40.596192732017634
+      low: 30.447144549013224
+      high: 50.745240915022045
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  CRM:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.015
+      low: 0.01
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.035
+      low: 0.025
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.1
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 25.027196923809434
+      low: 18.770397692857077
+      high: 31.283996154761795
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  ADBE:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.015
+      low: 0.01
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.035
+      low: 0.025
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.1
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 14.325621762360663
+      low: 10.744216321770498
+      high: 17.90702720295083
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Enterprise software
+        and services; median base and outer low/high from MSFT in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  INTC:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.091
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.06
+      low: 0.03
+      high: 0.091
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45
+      low: 0.25
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 122.38003501004918
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 2.447600700200984
+      low: 1.223800350100492
+      high: 4.895201400401968
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  AMD:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.091
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.06
+      low: 0.03
+      high: 0.091
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45
+      low: 0.25
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 80.205892432087
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 1.6041178486417398
+      low: 0.8020589243208699
+      high: 3.2082356972834796
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  QCOM:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.091
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.06
+      low: 0.03
+      high: 0.091
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45
+      low: 0.25
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 102.53869166149543
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 2.0507738332299086
+      low: 1.0253869166149543
+      high: 4.101547666459817
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  MU:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.091
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.06
+      low: 0.03
+      high: 0.091
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45
+      low: 0.25
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 308.3940760773926
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 6.167881521547852
+      low: 3.083940760773926
+      high: 12.335763043095705
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  AVGO:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.091
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.06
+      low: 0.03
+      high: 0.091
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45
+      low: 0.25
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 147.92903518602563
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 2.9585807037205125
+      low: 1.4792903518602563
+      high: 5.917161407441025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
+        median base and outer low/high from NVDA in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  CSCO:
+    broadband_subsidy_capture_share:
+      value: 0.06
+      low: 0.048
+      high: 0.09
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.002
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.003
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.18
+      high: 0.386
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 54.98910927629151
+      low: 45.82425773024292
+      high: 66.90341628615467
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  T:
+    broadband_subsidy_capture_share:
+      value: 0.06
+      low: 0.048
+      high: 0.09
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.002
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.003
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.18
+      high: 0.386
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 109.10811847370668
+      low: 90.92343206142223
+      high: 132.74821080967646
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  CMCSA:
+    broadband_subsidy_capture_share:
+      value: 0.06
+      low: 0.048
+      high: 0.09
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.002
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.003
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.18
+      high: 0.386
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 107.42262520714084
+      low: 89.51885433928403
+      high: 130.6975273353547
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Telecom and networking;
+        median base and outer low/high from VZ in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  NFLX:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.002
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.02
+      low: 0.0
+      high: 0.11
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.004
+      low: 0.0
+      high: 0.013
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.355
+      low: 0.32
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.08
+      low: 0.03
+      high: 0.25
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 44.92801066881083
+      low: 28.040589718893045
+      high: 62.95219131594399
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  DIS:
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.002
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.02
+      low: 0.0
+      high: 0.11
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_app_store_fee_share:
+      value: 0.004
+      low: 0.0
+      high: 0.013
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.355
+      low: 0.32
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.08
+      low: 0.03
+      high: 0.25
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_users_m:
+      value: 93.89203964519919
+      low: 58.60014993694705
+      high: 131.55956728998936
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Media and entertainment;
+        median base and outer low/high from GOOGL/META in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true

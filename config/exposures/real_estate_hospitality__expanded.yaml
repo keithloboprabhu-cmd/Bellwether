@@ -1,0 +1,1696 @@
+industry: real_estate_hospitality
+companies:
+  O:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 749.5666492645669
+      low: 523.2576958216872
+      high: 1264.690309772716
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 407.4109497910678
+      low: 81.01822050617214
+      high: 784.8865437325308
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  EQIX:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 1201.6529454011302
+      low: 838.8502236657104
+      high: 2027.4632512662022
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 653.1328045150409
+      low: 129.88275745448396
+      high: 1258.2753354985655
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  DLR:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 796.9333130226673
+      low: 556.3234296842355
+      high: 1344.6087009123253
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 433.15608865104196
+      low: 86.13792909080661
+      high: 834.4851445263532
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  WELL:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 1412.9928912289888
+      low: 986.3824720621213
+      high: 2384.0420582590477
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 768.0021201963075
+      low: 152.7258046333352
+      high: 1479.573708093182
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  VTR:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 760.5966421190501
+      low: 530.957516313473
+      high: 1283.3004294913742
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 413.406066929007
+      low: 82.21041654923623
+      high: 796.4362744702096
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  ESS:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 246.05985442531147
+      low: 171.76953188503418
+      high: 415.1592307650006
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 133.74058076786804
+      low: 26.595809142663885
+      high: 257.65429782755126
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  MAA:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 288.01158345038704
+      low: 201.0552065971288
+      high: 485.9413890004015
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 156.5425474565579
+      low: 31.130235048757118
+      high: 301.58280989569323
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  PSA:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 628.9367034173682
+      low: 439.0483095409202
+      high: 1061.1600116584086
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 341.84511804138737
+      low: 67.97972211262048
+      high: 658.5724643113803
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  EXR:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 440.3421170137815
+      low: 307.3941480026398
+      high: 742.957826256716
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 239.33855688698495
+      low: 47.59514683501494
+      high: 461.0912220039597
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  VICI:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 522.2915364021476
+      low: 364.6014215721798
+      high: 881.2252327557288
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 283.8804142663098
+      low: 56.45279296544727
+      high: 546.9021323582697
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  WY:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 900.229314092959
+      low: 628.4323309549452
+      high: 1518.892671150388
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 489.30042477773213
+      low: 97.30285778704695
+      high: 942.6484964324179
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  HST:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 797.1038416168503
+      low: 556.4424723328798
+      high: 1344.8964216384463
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 433.2487758278138
+      low: 86.15636097176032
+      high: 834.6637084993198
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  RLJ:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 175.9860306910241
+      low: 122.85237744574108
+      high: 296.92866923664917
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 95.65344987552055
+      low: 19.02175751085057
+      high: 184.27856616861163
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+  PK:
+    re_debt_maturing_1y_share:
+      value: 0.09
+      low: 0.04
+      high: 0.22
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_floating_debt_share:
+      value: 0.031
+      low: 0.011
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_implied_cap_rate:
+      value: 0.055
+      low: 0.045
+      high: 0.08
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_interest_cash_musd:
+      value: 331.2791726444908
+      low: 231.25945734344907
+      high: 558.9437041843788
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.04
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_lihtc_investment_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_tax_musd:
+      value: 180.05972184796775
+      low: 35.80688799954907
+      high: 346.8891860151736
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Absolute
+        exposure intensity scaled by SEC annual revenue.'
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0.7
+      low: 0.1
+      high: 0.95
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_property_value_share:
+      value: 1.0
+      low: 1.0
+      high: 1.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_hotel_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true
+    re_us_str_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
+        housing, storage, digital infrastructure, timber and hospitality; median base
+        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
+        peer prior; review before relying on this company result.'
+      applicable: true

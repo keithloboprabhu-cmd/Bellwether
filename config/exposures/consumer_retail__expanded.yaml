@@ -1,0 +1,837 @@
+industry: consumer_retail
+companies:
+  LOW:
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Home improvement;
+        median base and outer low/high from HD in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.88
+      low: 0.45
+      high: 0.92
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Home improvement;
+        median base and outer low/high from HD in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.19648202911047286
+      low: 0.18862274794605394
+      high: 0.20434131027489177
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Home improvement;
+        median base and outer low/high from HD in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.37
+      low: 0.28
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Home improvement;
+        median base and outer low/high from HD in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_starting_wage:
+      value: 15.0
+      low: 15.0
+      high: 17.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Home improvement;
+        median base and outer low/high from HD in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.001
+      low: 0.0
+      high: 0.002
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Home improvement;
+        median base and outer low/high from HD in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  KR:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.012
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.8
+      low: 0.6
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.3043255749386886
+      low: 0.09740395970364897
+      high: 0.563626646306547
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 15.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.008
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  DG:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.012
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.8
+      low: 0.6
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.0880651722397264
+      low: 0.028186577778950634
+      high: 0.16310123687726666
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 15.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.008
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  DLTR:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.012
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.8
+      low: 0.6
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.040012375852364744
+      low: 0.012806560362060208
+      high: 0.07410498186676846
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 15.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.008
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
+        discount retail; median base and outer low/high from WMT/COST/TGT in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  TJX:
+    snap_grocery_spend_share:
+      value: 0.009
+      low: 0.0
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.71
+      low: 0.4
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.1257386550951916
+      low: 0.019517651622914783
+      high: 0.23047146401985114
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45999999999999996
+      low: 0.35
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_starting_wage:
+      value: 15.5
+      low: 15.0
+      high: 18.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.007
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  ROST:
+    snap_grocery_spend_share:
+      value: 0.009
+      low: 0.0
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.71
+      low: 0.4
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.04738330171807803
+      low: 0.0073550236001551795
+      high: 0.08685076923076923
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45999999999999996
+      low: 0.35
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_starting_wage:
+      value: 15.5
+      low: 15.0
+      high: 18.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.007
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  SBUX:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.0
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.4
+      high: 0.81
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.025758274672278775
+      low: 0.012021337126600284
+      high: 0.07821017074637916
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.44
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 16.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  MCD:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.0
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.4
+      high: 0.81
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.018623702804515196
+      low: 0.008691646191646193
+      high: 0.056547381173728865
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.44
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 16.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  KO:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.0
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.4
+      high: 0.81
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.0332095568588902
+      low: 0.015498836156730892
+      high: 0.10083459181140916
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.44
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 16.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  PEP:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.0
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.4
+      high: 0.81
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.06506346609314077
+      low: 0.030364994180783658
+      high: 0.1975530138271335
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.44
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 16.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  PG:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.0
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.4
+      high: 0.81
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.06028856620727419
+      low: 0.02813655761024182
+      high: 0.18305492573226598
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.44
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 16.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  CL:
+    snap_grocery_spend_share:
+      value: 0.06
+      low: 0.0
+      high: 0.28
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.7
+      low: 0.4
+      high: 0.81
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.014118962639450575
+      low: 0.006589292641924221
+      high: 0.04286958240963146
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.27
+      low: 0.18
+      high: 0.44
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_starting_wage:
+      value: 16.0
+      low: 14.0
+      high: 21.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.015
+      low: 0.0
+      high: 0.03
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
+        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  ULTA:
+    snap_grocery_spend_share:
+      value: 0.009
+      low: 0.0
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.71
+      low: 0.4
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.02581091432513073
+      low: 0.004006472261735419
+      high: 0.04730986829547624
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45999999999999996
+      low: 0.35
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_starting_wage:
+      value: 15.5
+      low: 15.0
+      high: 18.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.007
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  BBY:
+    snap_grocery_spend_share:
+      value: 0.009
+      low: 0.0
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_consumer_revenue_share:
+      value: 0.71
+      low: 0.4
+      high: 0.98
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_hourly_workers_m:
+      value: 0.08683115135449601
+      low: 0.013478274925643347
+      high: 0.15915632754342435
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.45999999999999996
+      low: 0.35
+      high: 0.6
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_starting_wage:
+      value: 15.5
+      low: 15.0
+      high: 18.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_sweetened_beverage_revenue_share:
+      value: 0.007
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Apparel and specialty
+        retail; median base and outer low/high from TGT/NKE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true

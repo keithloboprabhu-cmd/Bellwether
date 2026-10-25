@@ -15,6 +15,7 @@ from policyshock.config import load_universe  # noqa: E402
 from policyshock.data import fred  # noqa: E402
 from policyshock.engine.simulate import simulate  # noqa: E402
 from policyshock.engine.valuation import persistence_label  # noqa: E402
+from policyshock.narrative import templates  # noqa: E402
 from policyshock.policies.loader import ConfigError, registry  # noqa: E402
 from policyshock.ui import results  # noqa: E402
 from policyshock.ui.common import cached_prices, footer, macro_strip, page_setup  # noqa: E402
@@ -59,7 +60,7 @@ with st.sidebar:
     pol = reg.policy(industry, policy_id)
     st.caption(pol.description)
     st.caption(f"Persistence: {persistence_label(pol.persistence)}")
-    st.caption("Mode: Industry (6 companies). Company mode and Full Market arrive in milestone M4.")
+    st.caption(f"Mode: Industry ({len(universe.industry(industry).tickers)} companies). For a macro shock across every industry, use Full Market.")
 
     st.subheader("Policy inputs")
     inputs = {}
@@ -138,7 +139,7 @@ applied_full = {**applied, "in": {k: float(v) for k, v in {**pol.default_inputs(
 if decode(encode(current)) != decode(encode(applied_full)):
     st.caption("Sidebar has changes that aren't applied yet; press **Run** to update.")
 
-link = f"{st.context.url.split('?')[0]}?s={token}"
+link = f"{(st.context.url or '').split('?')[0]}?s={token}"
 with st.popover("🔗 Copy scenario link"):
     st.code(link, language=None)
     st.caption("Opening this link reproduces exactly this scenario.")
@@ -155,7 +156,8 @@ with tab_co:
 with tab_sens:
     results.tornado(an)
 with tab_expl:
-    st.info("Template-generated explanations arrive in milestone M4.")
+    st.markdown(templates.explain(an, reg))
+    st.caption("Generated from a template using the numbers above; no AI model is called.")
 with tab_src:
     adf = results.assumptions(an, reg, rng)
     st.download_button("Download assumptions (CSV)", adf.to_csv(index=False), f"{pol.id}_assumptions.csv", "text/csv")

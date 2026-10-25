@@ -41,7 +41,7 @@ assumptions:
     source: estimate
     rationale: Capital equipment demand is driven mostly by construction, mining and farm cycles, so it responds less than one-for-one to small price increases.
   - key: flow_through
-    label: Share of Nucor's extra steel revenue that reaches profit
+    label: Share of a domestic mill's extra steel revenue that reaches profit
     unit: fraction
     low: 0.5
     base: 0.7
@@ -67,7 +67,7 @@ channels:
       flow_through: assumption.flow_through
     roles: [domestic_producer]
 exposure_keys: [ind_steel_share_of_cogs, ind_domestic_steel_sales_share]
-roles: {NUE: domestic_producer}
+roles: {NUE: domestic_producer, STLD: domestic_producer, CLF: domestic_producer}
 default_role: importer
 references:
   - https://www.polsinelli.com/publications/usitc-releases-report-on-the-economic-impact-of-the-section-232-and-301-tariffs-on-u-s-industries

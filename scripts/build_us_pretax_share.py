@@ -1,0 +1,97 @@
+"""Build `mx_us_pretax_share` (US share of pretax income) for every configured company.
+
+Used by the Full Market corporate-tax and strong-dollar shocks. Values come from the
+domestic/foreign split companies tag in their 10-K income-tax note
+(IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / ...Foreign), averaged over
+up to three recent fiscal years with positive pretax income; low/high are the range of
+those years. Untagged companies are either listed in ESTIMATES (known multinationals,
+explained estimate) or assumed US-only with a 0.9 low end.
+
+Writes config/exposures/<industry>__macro_tax.yaml. Rerun after scripts/refresh_data.py.
+"""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+import yaml  # noqa: E402
+
+from policyshock.config import ROOT, load_universe  # noqa: E402
+from policyshock.data import store  # noqa: E402
+
+KEY = "mx_us_pretax_share"
+# ticker → (base, low, high, rationale): untagged companies with material non-US business.
+ESTIMATES = {
+    "LLY": (0.45, 0.3, 0.65, "Untagged split; roughly a third of revenue is ex-US and much manufacturing profit is booked in Ireland and Puerto Rico."),
+    "ETN": (0.45, 0.3, 0.6, "Irish-domiciled; untagged split. About half of sales are outside the US, so US-taxed income is roughly half."),
+    "BLK": (0.6, 0.5, 0.7, "Untagged split; about two-fifths of revenue comes from clients outside the Americas."),
+    "STT": (0.55, 0.45, 0.7, "Untagged split; roughly 40% of revenue is earned outside the US."),
+    "MS": (0.75, 0.65, 0.85, "Untagged split; international regions are about a quarter of net revenues."),
+    "AXP": (0.8, 0.7, 0.9, "Untagged split; international card services and network are roughly a fifth of revenue."),
+    "GM": (0.85, 0.75, 0.95, "Untagged split; GM International (incl. China JV equity income) is a modest share of EBIT."),
+    "OXY": (0.85, 0.75, 0.95, "Untagged split; Oman, UAE and Algeria operations are a minority of production."),
+    "PSN": (0.85, 0.75, 0.95, "Untagged split; Middle East and Canada work is roughly a sixth of revenue."),
+    "LDOS": (0.95, 0.9, 1.0, "Untagged split; UK and Australia work is a small share of revenue."),
+    "CI": (0.95, 0.9, 1.0, "Untagged split; international health is a small share after the 2022 divestiture."),
+    "BAC": (0.9, 0.85, 0.97, "Untagged split; most income is US, with a modest international markets business."),
+}
+
+
+def split_share(t: str) -> tuple[float, float, float, str, str | None] | None:
+    """(base, low, high, source text, filing url) from tagged years, or None if untagged."""
+    years = sorted(store.company_years(t), key=lambda y: y["period_end"], reverse=True)[:5]
+    shares, fys, url = [], [], None
+    for y in years:
+        it = y["items"]
+        d, f, p = it.get("pretax_domestic"), it.get("pretax_foreign"), it.get("pretax_income")
+        if d is not None and f is not None and d + f > 0:
+            s = d / (d + f)
+        elif f is not None and p and p > 0:
+            s = (p - f) / p
+        elif d is not None and p and p > 0:
+            s = d / p
+        else:
+            continue
+        shares.append(min(1.0, max(0.0, s)))
+        fys.append(y["fiscal_year"])
+        url = url or y.get("filing_url")
+        if len(shares) == 3:
+            break
+    if not shares:
+        return None
+    base = sum(shares) / len(shares)
+    lo, hi = max(0.0, min(shares) - 0.03), min(1.0, max(shares) + 0.03)
+    src = f"SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY{', FY'.join(map(str, sorted(fys)))}"
+    return base, lo, hi, src, url
+
+
+def build() -> dict[str, int]:
+    """Write one exposure file per industry; returns counts by source type."""
+    counts = {"tagged": 0, "estimate": 0, "us_only": 0}
+    for ind in load_universe().industries:
+        out = {}
+        for t in ind.tickers:
+            tagged = split_share(t)
+            est = ESTIMATES.get(t)
+            if tagged:
+                base, lo, hi, src, url = tagged
+                out[t] = {KEY: {"value": round(base, 3), "low": round(lo, 3), "high": round(hi, 3), "source": src, **({"source_url": url} if url else {})}}
+                counts["tagged"] += 1
+            elif est and est[0] is not None:
+                out[t] = {KEY: {"value": est[0], "low": est[1], "high": est[2], "source": "estimate", "rationale": est[3]}}
+                counts["estimate"] += 1
+            else:
+                out[t] = {KEY: {"value": 1.0, "low": 0.9, "high": 1.0, "source": "estimate",
+                                "rationale": "No domestic/foreign pretax split tagged in recent 10-Ks and no material foreign business, so assumed US-only; the low end allows for small untagged foreign income."}}
+                counts["us_only"] += 1
+        path = ROOT / "config/exposures" / f"{ind.slug}__macro_tax.yaml"
+        header = "# Generated by scripts/build_us_pretax_share.py; do not edit by hand.\n"
+        path.write_text(header + yaml.safe_dump({"industry": ind.slug, "companies": out}, sort_keys=False, width=120))
+    return counts
+
+
+if __name__ == "__main__":
+    print(build())

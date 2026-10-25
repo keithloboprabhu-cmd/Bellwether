@@ -1,0 +1,1958 @@
+[
+ {
+  "industry": "tmt",
+  "ticker": "IBM",
+  "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+  "subsector": "Enterprise software and services",
+  "cik": 51143,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/0000051143-26-000010-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "MSFT"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "ORCL",
+  "name": "Oracle Corporation",
+  "subsector": "Enterprise software and services",
+  "cik": 1341439,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/0001193125-26-277521-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "MSFT"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "CRM",
+  "name": "Salesforce, Inc.",
+  "subsector": "Enterprise software and services",
+  "cik": 1108524,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/0001108524-26-000060-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "MSFT"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "ADBE",
+  "name": "ADOBE INC.",
+  "subsector": "Enterprise software and services",
+  "cik": 796343,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/0000796343-26-000003-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "MSFT"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "INTC",
+  "name": "INTEL CORP",
+  "subsector": "Semiconductors",
+  "cik": 50863,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/0000050863-26-000011-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NVDA"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "AMD",
+  "name": "ADVANCED MICRO DEVICES INC",
+  "subsector": "Semiconductors",
+  "cik": 2488,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/0000002488-26-000018-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NVDA"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "QCOM",
+  "name": "QUALCOMM INC/DE",
+  "subsector": "Semiconductors",
+  "cik": 804328,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/0000804328-25-000085-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NVDA"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "MU",
+  "name": "Micron Technology, Inc.",
+  "subsector": "Semiconductors",
+  "cik": 723125,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NVDA"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "AVGO",
+  "name": "Broadcom Inc.",
+  "subsector": "Semiconductors",
+  "cik": 1730168,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/0001730168-25-000121-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NVDA"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "CSCO",
+  "name": "CISCO SYSTEMS, INC.",
+  "subsector": "Telecom and networking",
+  "cik": 858877,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/0000858877-26-000132-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "VZ"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "T",
+  "name": "AT&T INC.",
+  "subsector": "Telecom and networking",
+  "cik": 732717,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/0000732717-26-000120-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "VZ"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "CMCSA",
+  "name": "COMCAST\u00a0CORPORATION",
+  "subsector": "Telecom and networking",
+  "cik": 1166691,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/0001628280-26-004994-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "VZ"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "NFLX",
+  "name": "Netflix, Inc.",
+  "subsector": "Media and entertainment",
+  "cik": 1065280,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/0001065280-26-000034-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GOOGL",
+   "META"
+  ]
+ },
+ {
+  "industry": "tmt",
+  "ticker": "DIS",
+  "name": "WALT DISNEY CO/",
+  "subsector": "Media and entertainment",
+  "cik": 1744489,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/0001744489-25-000155-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GOOGL",
+   "META"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "MS",
+  "name": "MORGAN STANLEY",
+  "subsector": "Capital markets and custody",
+  "cik": 895421,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/0000895421-26-000086-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GS"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "SCHW",
+  "name": "SCHWAB CHARLES CORP",
+  "subsector": "Capital markets and custody",
+  "cik": 316709,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/0000316709-26-000009-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GS"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "BNY",
+  "name": "Bank of New York Mellon Corp",
+  "subsector": "Capital markets and custody",
+  "cik": 1390777,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1390777/000139077726000033/0001390777-26-000033-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GS"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "STT",
+  "name": "STATE STREET CORP",
+  "subsector": "Capital markets and custody",
+  "cik": 93751,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/0000093751-26-000124-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GS"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "USB",
+  "name": "US BANCORP \\DE\\",
+  "subsector": "Regional and consumer banking",
+  "cik": 36104,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/36104/000003610426000011/0000036104-26-000011-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "PNC",
+  "name": "PNC FINANCIAL SERVICES GROUP, INC.",
+  "subsector": "Regional and consumer banking",
+  "cik": 713676,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/0000713676-26-000020-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "TFC",
+  "name": "TRUIST FINANCIAL CORPORATION",
+  "subsector": "Regional and consumer banking",
+  "cik": 92230,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/0000092230-26-000030-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "COF",
+  "name": "CAPITAL ONE FINANCIAL CORP",
+  "subsector": "Regional and consumer banking",
+  "cik": 927628,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/0000927628-26-000024-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "FITB",
+  "name": "FIFTH THIRD BANCORP",
+  "subsector": "Regional and consumer banking",
+  "cik": 35527,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/35527/000003552726000124/0000035527-26-000124-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "HBAN",
+  "name": "Huntington Bancshares Incorporated",
+  "subsector": "Regional and consumer banking",
+  "cik": 49196,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000015/0000049196-26-000015-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "KEY",
+  "name": "KeyCorp",
+  "subsector": "Regional and consumer banking",
+  "cik": 91576,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/91576/000162828026010546/0001628280-26-010546-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "ALLY",
+  "name": "Ally Financial Inc.",
+  "subsector": "Regional and consumer banking",
+  "cik": 40729,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/0000040729-26-000005-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "MA",
+  "name": "Mastercard Incorporated",
+  "subsector": "Payments, asset management and insurance",
+  "cik": 1141391,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/0001141391-26-000013-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "GS",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "BLK",
+  "name": "BlackRock, Inc.",
+  "subsector": "Payments, asset management and insurance",
+  "cik": 2012383,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/0001193125-26-071966-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "GS",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "AIG",
+  "name": "AMERICAN INTERNATIONAL GROUP, INC.",
+  "subsector": "Payments, asset management and insurance",
+  "cik": 5272,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/5272/000000527226000023/0000005272-26-000023-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "GS",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "PRU",
+  "name": "PRUDENTIAL FINANCIAL INC",
+  "subsector": "Payments, asset management and insurance",
+  "cik": 1137774,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1137774/000113777426000048/0001137774-26-000048-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "GS",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "financial_services",
+  "ticker": "PGR",
+  "name": "PROGRESSIVE CORP/OH/",
+  "subsector": "Payments, asset management and insurance",
+  "cik": 80661,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/0000080661-26-000086-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "JPM",
+   "BAC",
+   "WFC",
+   "GS",
+   "C",
+   "AXP"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "LOW",
+  "name": "LOWES COMPANIES INC",
+  "subsector": "Home improvement",
+  "cik": 60667,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/0000060667-26-000029-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "HD"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "KR",
+  "name": "KROGER CO",
+  "subsector": "Groceries and discount retail",
+  "cik": 56873,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/0001104659-26-037723-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "TGT"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "DG",
+  "name": "DOLLAR GENERAL CORP",
+  "subsector": "Groceries and discount retail",
+  "cik": 29534,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/29534/000110465926032325/0001104659-26-032325-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "TGT"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "DLTR",
+  "name": "DOLLAR TREE, INC.",
+  "subsector": "Groceries and discount retail",
+  "cik": 935703,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/935703/000093570326000025/0000935703-26-000025-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "TGT"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "TJX",
+  "name": "The TJX Companies, Inc.",
+  "subsector": "Apparel and specialty retail",
+  "cik": 109198,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000008/0000109198-26-000008-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "TGT",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "ROST",
+  "name": "Ross Stores, Inc.",
+  "subsector": "Apparel and specialty retail",
+  "cik": 745732,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/745732/000074573226000006/0000745732-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "TGT",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "SBUX",
+  "name": "Starbucks Corporation",
+  "subsector": "Restaurants and consumer staples",
+  "cik": 829224,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/0000829224-25-000114-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "MCD",
+  "name": "McDONALD\u2019S CORPORATION",
+  "subsector": "Restaurants and consumer staples",
+  "cik": 63908,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/0000063908-26-000035-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "KO",
+  "name": "COCA COLA CO",
+  "subsector": "Restaurants and consumer staples",
+  "cik": 21344,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/0001628280-26-010047-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "PEP",
+  "name": "PEPSICO INC",
+  "subsector": "Restaurants and consumer staples",
+  "cik": 77476,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000007/0000077476-26-000007-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "PG",
+  "name": "PROCTER & GAMBLE CO",
+  "subsector": "Restaurants and consumer staples",
+  "cik": 80424,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/0000080424-26-000103-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "CL",
+  "name": "COLGATE-PALMOLIVE COMPANY",
+  "subsector": "Restaurants and consumer staples",
+  "cik": 21665,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/21665/000002166526000006/0000021665-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "WMT",
+   "COST",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "ULTA",
+  "name": "ULTA BEAUTY, INC.",
+  "subsector": "Apparel and specialty retail",
+  "cik": 1403568,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926035243/0001104659-26-035243-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "TGT",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "consumer_retail",
+  "ticker": "BBY",
+  "name": "Best Buy Co., Inc.",
+  "subsector": "Apparel and specialty retail",
+  "cik": 764478,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/0000764478-26-000009-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "TGT",
+   "NKE"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "CI",
+  "name": "The Cigna Group",
+  "subsector": "Managed care",
+  "cik": 1739940,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1739940/000173994026000006/0001739940-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNH",
+   "ELV",
+   "HUM",
+   "CVS"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "CNC",
+  "name": "CENTENE CORPORATION",
+  "subsector": "Managed care",
+  "cik": 1071739,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/0001071739-26-000049-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNH",
+   "ELV",
+   "HUM",
+   "CVS"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "MOH",
+  "name": "MOLINA HEALTHCARE, INC.",
+  "subsector": "Managed care",
+  "cik": 1179929,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/0001179929-26-000005-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNH",
+   "ELV",
+   "HUM",
+   "CVS"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "JNJ",
+  "name": "Johnson & Johnson",
+  "subsector": "Pharmaceuticals and biotechnology",
+  "cik": 200406,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/0000200406-26-000016-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "MRK",
+  "name": "Merck\u00a0& Co., Inc.",
+  "subsector": "Pharmaceuticals and biotechnology",
+  "cik": 310158,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/0000310158-26-000063-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "ABBV",
+  "name": "AbbVie Inc.",
+  "subsector": "Pharmaceuticals and biotechnology",
+  "cik": 1551152,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/0001551152-26-000008-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "AMGN",
+  "name": "Amgen Inc.",
+  "subsector": "Pharmaceuticals and biotechnology",
+  "cik": 318154,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/0000318154-26-000010-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "GILD",
+  "name": "GILEAD SCIENCES, INC.",
+  "subsector": "Pharmaceuticals and biotechnology",
+  "cik": 882095,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/0000882095-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "HCA",
+  "name": "HCA Healthcare, Inc.",
+  "subsector": "Hospitals",
+  "cik": 860730,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/860730/000119312526044769/0001193125-26-044769-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNH",
+   "CVS"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "THC",
+  "name": "TENET HEALTHCARE CORP",
+  "subsector": "Hospitals",
+  "cik": 70318,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/0000070318-26-000012-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNH",
+   "CVS"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "UHS",
+  "name": "UNIVERSAL HEALTH SERVICES INC",
+  "subsector": "Hospitals",
+  "cik": 352915,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/0001193125-26-071676-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNH",
+   "CVS"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "TMO",
+  "name": "THERMO FISHER SCIENTIFIC INC.",
+  "subsector": "Medical devices and life science tools",
+  "cik": 97745,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/97745/000009774526000018/0000097745-26-000018-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "ABT",
+  "name": "ABBOTT LABORATORIES",
+  "subsector": "Medical devices and life science tools",
+  "cik": 1800,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/0001628280-26-010185-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "healthcare",
+  "ticker": "MDT",
+  "name": "Medtronic plc",
+  "subsector": "Medical devices and life science tools",
+  "cik": 1613103,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1613103/000162828026044354/0001628280-26-044354-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PFE",
+   "LLY"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "BA",
+  "name": "THE BOEING COMPANY",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 12927,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/0001628280-26-004357-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "ETN",
+  "name": "EATON CORPORATION plc",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 1551182,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/0001551182-26-000007-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "EMR",
+  "name": "EMERSON ELECTRIC CO.",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 32604,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/32604/000003260425000087/0000032604-25-000087-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "ITW",
+  "name": "ILLINOIS TOOL WORKS INC",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 49826,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/49826/000004982626000008/0000049826-26-000008-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "PH",
+  "name": "PARKER-HANNIFIN CORPORATION",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 76334,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/76334/000007633426000105/0000076334-26-000105-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "CMI",
+  "name": "CUMMINS INC.",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 26172,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/26172/000002617226000009/0000026172-26-000009-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "PCAR",
+  "name": "PACCAR Inc",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 75362,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/75362/000119312526057025/0001193125-26-057025-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "DOV",
+  "name": "DOVER Corp",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 29905,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/29905/000002990526000009/0000029905-26-000009-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "ROK",
+  "name": "Rockwell Automation, Inc.",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 1024478,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1024478/000102447825000116/0001024478-25-000116-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "STLD",
+  "name": "Steel Dynamics, Inc.",
+  "subsector": "Steel production",
+  "cik": 1022671,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1022671/000110465926021395/0001104659-26-021395-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NUE"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "CLF",
+  "name": "CLEVELAND-CLIFFS INC.",
+  "subsector": "Steel production",
+  "cik": 764065,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000025/0000764065-26-000025-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NUE"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "CARR",
+  "name": "CARRIER GLOBAL CORPORATION",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 1783180,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1783180/000178318026000008/0001783180-26-000008-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "OTIS",
+  "name": "OTIS WORLDWIDE CORPORATION",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 1781335,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1781335/000178133526000011/0001781335-26-000011-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "industrials",
+  "ticker": "IR",
+  "name": "Ingersoll Rand Inc.",
+  "subsector": "Aerospace and diversified manufacturing",
+  "cik": 1699150,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1699150/000162828026008617/0001628280-26-008617-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "CAT",
+   "DE",
+   "GE",
+   "HON",
+   "MMM"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "EOG",
+  "name": "EOG RESOURCES, INC.",
+  "subsector": "Oil production and services",
+  "cik": 821189,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/0000821189-26-000054-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX",
+   "COP"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "OXY",
+  "name": "OCCIDENTAL PETROLEUM CORPORATION",
+  "subsector": "Oil production and services",
+  "cik": 797468,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/0001628280-26-009059-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX",
+   "COP"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "DVN",
+  "name": "DEVON ENERGY CORP/DE",
+  "subsector": "Oil production and services",
+  "cik": 1090012,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1090012/000119312526056485/0001193125-26-056485-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX",
+   "COP"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "SLB",
+  "name": "SLB LIMITED/NV",
+  "subsector": "Oil production and services",
+  "cik": 87347,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX",
+   "COP"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "HAL",
+  "name": "HALLIBURTON COMPANY",
+  "subsector": "Oil production and services",
+  "cik": 45012,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX",
+   "COP"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "WMB",
+  "name": "WILLIAMS COMPANIES, INC.",
+  "subsector": "Midstream pipelines",
+  "cik": 107263,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/107263/000010726326000006/0000107263-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX",
+   "COP"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "PSX",
+  "name": "Phillips 66",
+  "subsector": "Refining",
+  "cik": 1534701,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/0001534701-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "VLO",
+  "name": "VALERO ENERGY CORP/TX",
+  "subsector": "Refining",
+  "cik": 1035002,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1035002/000162828026011499/0001628280-26-011499-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "MPC",
+  "name": "Marathon Petroleum Corporation",
+  "subsector": "Refining",
+  "cik": 1510295,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000009/0001510295-26-000009-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "XOM",
+   "CVX"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "DUK",
+  "name": "Duke Energy CORP",
+  "subsector": "Utilities and generation",
+  "cik": 1326160,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1326160/000132616026000014/0001326160-26-000014-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NEE"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "SO",
+  "name": "SOUTHERN CO",
+  "subsector": "Utilities and generation",
+  "cik": 92122,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/0000092122-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NEE"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "AEP",
+  "name": "American Electric Power Company, Inc.",
+  "subsector": "Utilities and generation",
+  "cik": 4904,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000013/0000004904-26-000013-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NEE"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "EXC",
+  "name": "EXELON CORPORATION",
+  "subsector": "Utilities and generation",
+  "cik": 1109357,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000018/0001109357-26-000018-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NEE"
+  ]
+ },
+ {
+  "industry": "energy_resources",
+  "ticker": "CEG",
+  "name": "CONSTELLATION ENERGY CORPORATION",
+  "subsector": "Utilities and generation",
+  "cik": 1868275,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000032/0001868275-26-000032-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "NEE"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "F",
+  "name": "Ford Motor Co",
+  "subsector": "Automotive",
+  "cik": 37996,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/0000037996-26-000015-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "TSLA",
+   "GM"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "RIVN",
+  "name": "Rivian Automotive, Inc. / DE",
+  "subsector": "Automotive",
+  "cik": 1874178,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/0001874178-26-000008-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "TSLA",
+   "GM"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "CHRW",
+  "name": "C. H. ROBINSON WORLDWIDE, INC.",
+  "subsector": "Freight and logistics",
+  "cik": 1043277,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1043277/000104327726000009/0001043277-26-000009-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UPS",
+   "FDX"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "JBHT",
+  "name": "J.B. HUNT TRANSPORT SERVICES, INC.",
+  "subsector": "Freight and logistics",
+  "cik": 728535,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/728535/000143774926005294/0001437749-26-005294-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UPS",
+   "FDX"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "ODFL",
+  "name": "OLD DOMINION FREIGHT LINE, INC.",
+  "subsector": "Freight and logistics",
+  "cik": 878927,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/878927/000119312526067161/0001193125-26-067161-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UPS",
+   "FDX"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "XPO",
+  "name": "XPO, Inc.",
+  "subsector": "Freight and logistics",
+  "cik": 1166003,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000016/0001166003-26-000016-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UPS",
+   "FDX"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "SAIA",
+  "name": "Saia, Inc.",
+  "subsector": "Freight and logistics",
+  "cik": 1177702,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526067030/0001193125-26-067030-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UPS",
+   "FDX"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "CSX",
+  "name": "CSX CORPORATION",
+  "subsector": "Rail",
+  "cik": 277948,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/0000277948-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNP"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "NSC",
+  "name": "NORFOLK SOUTHERN CORP",
+  "subsector": "Rail",
+  "cik": 702165,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/702165/000162828026006268/0001628280-26-006268-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "UNP"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "UAL",
+  "name": "United Airlines Holdings, Inc.",
+  "subsector": "Passenger aviation",
+  "cik": 100517,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000023/0000100517-26-000023-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DAL"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "AAL",
+  "name": "American Airlines Group Inc.",
+  "subsector": "Passenger aviation",
+  "cik": 6201,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/0000006201-26-000014-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DAL"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "LUV",
+  "name": "SOUTHWEST AIRLINES CO.",
+  "subsector": "Passenger aviation",
+  "cik": 92380,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/0000092380-26-000004-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DAL"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "UBER",
+  "name": "Uber Technologies, Inc",
+  "subsector": "Mobility platforms",
+  "cik": 1543151,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/0001543151-26-000015-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DAL",
+   "UPS"
+  ]
+ },
+ {
+  "industry": "transportation_logistics",
+  "ticker": "LYFT",
+  "name": "Lyft, Inc.",
+  "subsector": "Mobility platforms",
+  "cik": 1759509,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/0001628280-26-006960-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DAL",
+   "UPS"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "LMT",
+  "name": "LOCKHEED MARTIN CORPORATION",
+  "subsector": "Defense platforms and equipment",
+  "cik": 936468,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/0001628280-26-004195-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "NOC",
+  "name": "NORTHROP GRUMMAN CORP /DE/",
+  "subsector": "Defense platforms and equipment",
+  "cik": 1133421,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/0001133421-26-000003-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "RTX",
+  "name": "RTX CORPORATION",
+  "subsector": "Defense platforms and equipment",
+  "cik": 101829,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/0000101829-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "HII",
+  "name": "HUNTINGTON INGALLS INDUSTRIES, INC.",
+  "subsector": "Defense platforms and equipment",
+  "cik": 1501585,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1501585/000150158526000006/0001501585-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "OSK",
+  "name": "Oshkosh Corporation",
+  "subsector": "Defense platforms and equipment",
+  "cik": 775158,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/775158/000119312526054061/0001193125-26-054061-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "KBR",
+  "name": "KBR, Inc.",
+  "subsector": "Government engineering and advisory",
+  "cik": 1357615,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1357615/000135761526000051/0001357615-26-000051-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "BAH",
+   "LDOS",
+   "SAIC",
+   "CACI",
+   "PSN"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "KTOS",
+  "name": "KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",
+  "subsector": "Defense platforms and equipment",
+  "cik": 1069258,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/0001069258-26-000013-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "AVAV",
+  "name": "AEROVIRONMENT, INC.",
+  "subsector": "Defense platforms and equipment",
+  "cik": 1368622,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1368622/000110465926078906/0001104659-26-078906-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "BWXT",
+  "name": "BWX TECHNOLOGIES, INC.",
+  "subsector": "Defense platforms and equipment",
+  "cik": 1486957,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1486957/000148695726000007/0001486957-26-000007-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "TXT",
+  "name": "Textron Inc.",
+  "subsector": "Defense platforms and equipment",
+  "cik": 217346,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/0000217346-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "ICFI",
+  "name": "ICF International, Inc.",
+  "subsector": "Government engineering and advisory",
+  "cik": 1362004,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1362004/000119312526082536/0001193125-26-082536-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "BAH",
+   "LDOS",
+   "SAIC",
+   "CACI",
+   "PSN"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "TTEK",
+  "name": "TETRA TECH INC",
+  "subsector": "Government engineering and advisory",
+  "cik": 831641,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/0000831641-25-000032-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "BAH",
+   "LDOS",
+   "SAIC",
+   "CACI",
+   "PSN"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "MRCY",
+  "name": "Mercury Systems, Inc.",
+  "subsector": "Defense platforms and equipment",
+  "cik": 1049521,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1049521/000104952126000045/0001049521-26-000045-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "public_sector",
+  "ticker": "VSEC",
+  "name": "VSE CORPORATION",
+  "subsector": "Defense platforms and equipment",
+  "cik": 102752,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/102752/000010275226000015/0000102752-26-000015-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "GD"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "O",
+  "name": "REALTY INCOME CORPORATION",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 726728,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/0000726728-26-000011-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "EQIX",
+  "name": "EQUINIX, INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1101239,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/0001101239-26-000032-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "DLR",
+  "name": "DIGITAL REALTY TRUST, INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1297996,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/0001104659-26-015365-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "WELL",
+  "name": "WELLTOWER INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 766704,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/0000766704-26-000010-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "VTR",
+  "name": "Ventas,\u00a0Inc.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 740260,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/740260/000074026026000006/0000740260-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "ESS",
+  "name": "ESSEX PROPERTY TRUST, INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 920522,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/920522/000092052226000003/0000920522-26-000003-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "MAA",
+  "name": "MID-AMERICA APARTMENT COMMUNITIES, INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 912595,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/912595/000119312526041208/0001193125-26-041208-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "PSA",
+  "name": "Public Storage",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1393311,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026007696/0001628280-26-007696-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "EXR",
+  "name": "EXTRA SPACE STORAGE INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1289490,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/0001289490-26-000011-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "VICI",
+  "name": "VICI Properties Inc.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1705696,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1705696/000170569626000034/0001705696-26-000034-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "WY",
+  "name": "WEYERHAEUSER COMPANY",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 106535,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/106535/000119312526051422/0001193125-26-051422-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "HST",
+  "name": "HOST HOTELS & RESORTS, INC.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1070750,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "RLJ",
+  "name": "RLJ LODGING TRUST",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1511337,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "real_estate_hospitality",
+  "ticker": "PK",
+  "name": "Park Hotels & Resorts Inc.",
+  "subsector": "Property REITs: housing, storage, digital infrastructure, timber and hospitality",
+  "cik": 1617406,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "PLD",
+   "AMT",
+   "SPG"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "UTI",
+  "name": "UNIVERSAL TECHNICAL INSTITUTE, INC",
+  "subsector": "Postsecondary and workforce institutions",
+  "cik": 1261654,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1261654/000126165425000025/0001261654-25-000025-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LOPE",
+   "CVSA",
+   "STRA"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "PRDO",
+  "name": "PERDOCEO EDUCATION CORP",
+  "subsector": "Postsecondary and workforce institutions",
+  "cik": 1046568,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1046568/000119312526059331/0001193125-26-059331-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LOPE",
+   "CVSA",
+   "STRA"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "APEI",
+  "name": "AMERICAN PUBLIC EDUCATION, INC.",
+  "subsector": "Postsecondary and workforce institutions",
+  "cik": 1201792,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1201792/000120179226000004/0001201792-26-000004-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LOPE",
+   "CVSA",
+   "STRA"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "LAUR",
+  "name": "Laureate Education, Inc.",
+  "subsector": "Postsecondary and workforce institutions",
+  "cik": 912766,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LOPE",
+   "CVSA",
+   "STRA"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "NRDY",
+  "name": "NERDY INC.",
+  "subsector": "Digital learning and training",
+  "cik": 1819404,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1819404/000181940426000015/0001819404-26-000015-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "LINC",
+  "name": "LINCOLN EDUCATIONAL SERVICES CORPORATION",
+  "subsector": "Postsecondary and workforce institutions",
+  "cik": 1286613,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/0001140361-26-007380-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LOPE",
+   "CVSA",
+   "STRA"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "SKIL",
+  "name": "Skillsoft Corp.",
+  "subsector": "Digital learning and training",
+  "cik": 1774675,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1774675/000143774926011602/0001437749-26-011602-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "CHGG",
+  "name": "CHEGG, INC",
+  "subsector": "Digital learning and training",
+  "cik": 1364954,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1364954/000136495426000021/0001364954-26-000021-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "SCHL",
+  "name": "SCHOLASTIC CORPORATION",
+  "subsector": "Publishing and childcare",
+  "cik": 866729,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/0000866729-26-000018-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LRN",
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "KLC",
+  "name": "KinderCare Learning Companies, Inc.",
+  "subsector": "Publishing and childcare",
+  "cik": 1873529,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/0001193125-26-106342-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LRN",
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "BFAM",
+  "name": "BRIGHT HORIZONS FAMILY SOLUTIONS INC.",
+  "subsector": "Publishing and childcare",
+  "cik": 1437578,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1437578/000143757826000006/0001437578-26-000006-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LRN",
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "WLY",
+  "name": "JOHN WILEY & SONS, INC.",
+  "subsector": "Publishing and childcare",
+  "cik": 107140,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/107140/000162828026045111/0001628280-26-045111-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LRN",
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "FC",
+  "name": "FRANKLIN COVEY CO.",
+  "subsector": "Digital learning and training",
+  "cik": 886206,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/886206/000088620625000085/0000886206-25-000085-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "DUOL",
+   "COUR"
+  ]
+ },
+ {
+  "industry": "education",
+  "ticker": "SLM",
+  "name": "SLM Corp",
+  "subsector": "Student financing",
+  "cik": 1032033,
+  "financial_source": "https://www.sec.gov/Archives/edgar/data/1032033/000103203326000011/0001032033-26-000011-index.htm",
+  "exposure_status": "peer estimate",
+  "reference_peers": [
+   "LRN",
+   "LOPE",
+   "CVSA",
+   "STRA",
+   "DUOL",
+   "COUR"
+  ]
+ }
+]

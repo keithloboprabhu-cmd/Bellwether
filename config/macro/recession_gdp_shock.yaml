@@ -1,0 +1,204 @@
+id: recession_gdp_shock
+scope: full_market
+name: Recession (GDP shock)
+description: Real GDP growth falls short of the baseline for a year. Each industry's revenue moves by its historical sensitivity to GDP (estimated from its companies' filings since 2009) and falls to profit through operating leverage. Banks also set aside more for loan losses.
+persistence: one_time
+user_inputs:
+  - key: d_gdp_pts
+    label: Change in real GDP growth
+    unit: percentage points
+    min: -6
+    max: 3
+    step: 0.5
+    default: -2
+    help: Negative is a slowdown. Real GDP fell about 2.5% in 2009 against roughly 2% trend growth, a gap of about 4.5 points; a mild recession is 1–2 points.
+assumptions:
+  - key: loan_share_of_assets
+    label: Loans as a share of bank assets
+    unit: fraction
+    low: 0.35
+    base: 0.45
+    high: 0.6
+    source: estimate
+    rationale: Large US banks hold roughly 35–60% of assets in loans; the rest is securities, cash and trading assets.
+  - key: loss_rate_per_gdp_pt
+    label: Rise in bank credit losses per 1-point GDP shortfall
+    unit: percent of loans
+    low: 0.15
+    base: 0.3
+    high: 0.5
+    source: estimate
+    rationale: Net charge-off rates rose about 2 points of loans in 2008–10 against a ~4.5-point growth shortfall (≈0.45 per point); milder recessions show less.
+industry_effects:
+  consumer_retail:
+    reason: Revenue moves with GDP (β = 1.27).
+    assumptions:
+      - key: gdp_beta_consumer_retail
+        label: Consumer & Retail revenue growth per 1 point of GDP growth
+        unit: number
+        low: 0.91
+        base: 1.27
+        high: 1.81
+        source: "Pooled OLS of Consumer & Retail companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 345 company-years, R² 0.04 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_consumer_retail * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  education:
+    reason: Revenue moves with GDP (β = 0.70).
+    assumptions:
+      - key: gdp_beta_education
+        label: Education revenue growth per 1 point of GDP growth
+        unit: number
+        low: -2.62
+        base: 0.7
+        high: 1.47
+        source: "Pooled OLS of Education companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 258 company-years, R² 0.00 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_education * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  energy_resources:
+    reason: Revenue moves with GDP (β = 6.19).
+    assumptions:
+      - key: gdp_beta_energy_resources
+        label: Energy revenue growth per 1 point of GDP growth
+        unit: number
+        low: 2.23
+        base: 6.19
+        high: 6.89
+        source: "Pooled OLS of Energy companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 313 company-years, R² 0.20 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_energy_resources * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  financial_services:
+    reason: Revenue moves with GDP (β = 0.12).
+    assumptions:
+      - key: gdp_beta_financial_services
+        label: Financial Services revenue growth per 1 point of GDP growth
+        unit: number
+        low: -2.43
+        base: 0.12
+        high: 0.58
+        source: "Pooled OLS of Financial Services companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 358 company-years, R² 0.00 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_financial_services * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+      - type: cost
+        label: Higher loan-loss provisions
+        company_kinds: [bank]
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: -baseline.total_assets * assumption.loan_share_of_assets * assumption.loss_rate_per_gdp_pt / 100 * min(0, input.d_gdp_pts)
+  healthcare:
+    reason: Revenue moves with GDP (β = 0.51).
+    assumptions:
+      - key: gdp_beta_healthcare
+        label: Healthcare revenue growth per 1 point of GDP growth
+        unit: number
+        low: -0.89
+        base: 0.51
+        high: 1.0
+        source: "Pooled OLS of Healthcare companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 311 company-years, R² 0.00 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_healthcare * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  industrials:
+    reason: Revenue moves with GDP (β = 3.79).
+    assumptions:
+      - key: gdp_beta_industrials
+        label: Industrials revenue growth per 1 point of GDP growth
+        unit: number
+        low: 3.21
+        base: 3.79
+        high: 5.59
+        source: "Pooled OLS of Industrials companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 305 company-years, R² 0.12 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_industrials * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  public_sector:
+    reason: Revenue moves with GDP (β = 0.69).
+    assumptions:
+      - key: gdp_beta_public_sector
+        label: Public Sector revenue growth per 1 point of GDP growth
+        unit: number
+        low: 0.16
+        base: 0.69
+        high: 2.71
+        source: "Pooled OLS of Public Sector companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 316 company-years, R² 0.01 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_public_sector * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  real_estate_hospitality:
+    reason: Revenue moves with GDP (β = 3.53).
+    assumptions:
+      - key: gdp_beta_real_estate_hospitality
+        label: Real Estate & Hospitality revenue growth per 1 point of GDP growth
+        unit: number
+        low: 1.06
+        base: 3.53
+        high: 4.13
+        source: "Pooled OLS of Real Estate & Hospitality companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 279 company-years, R² 0.11 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_real_estate_hospitality * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  tmt:
+    reason: Revenue moves with GDP (β = 1.75).
+    assumptions:
+      - key: gdp_beta_tmt
+        label: TMT revenue growth per 1 point of GDP growth
+        unit: number
+        low: 1.14
+        base: 1.75
+        high: 3.13
+        source: "Pooled OLS of TMT companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 319 company-years, R² 0.03 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_tmt * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+  transportation_logistics:
+    reason: Revenue moves with GDP (β = 5.50).
+    assumptions:
+      - key: gdp_beta_transportation_logistics
+        label: Transportation revenue growth per 1 point of GDP growth
+        unit: number
+        low: 2.73
+        base: 5.5
+        high: 6.26
+        source: "Pooled OLS of Transportation companies' annual revenue growth on real GDP growth (FRED GDPC1), FY2009–latest, 305 company-years, R² 0.15 (data/snapshots/gdp_betas.json, Methodology page). Range: ±1 s.e. across the full and ex-2020–21 fits."
+    channels:
+      - type: demand_volume
+        label: Revenue moves with the economy
+        params:
+          d_volume: assumption.gdp_beta_transportation_logistics * input.d_gdp_pts / 100
+          exposed_revenue_share: 1
+references:
+  - https://fred.stlouisfed.org/series/GDPC1
+  - https://fred.stlouisfed.org/series/CORALACBN
+narrative:
+  extra: "Betas are historical averages with wide ranges (low R²), so treat industry differences as indicative. Credit losses are added only for downturns, and only for banks; the shock is counted for one year."

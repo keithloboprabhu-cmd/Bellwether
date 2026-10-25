@@ -23,6 +23,7 @@ assumptions:
     rationale: Pure Modigliani–Miller implies a full offset; studies such as Miles, Yang & Marcheggiano (2013, Economic Journal) find a large but partial one, and taxes and implicit guarantees keep it below 1. We use 0.4 with a wide range.
 channels:
   - type: bank_capital
+    company_kinds: [bank]
     label: Lower return on equity from more capital
     params:
       cet1_ratio: exposure.cet1_ratio_std

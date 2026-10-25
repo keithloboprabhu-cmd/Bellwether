@@ -1,0 +1,151 @@
+id: china_trade_war
+scope: full_market
+name: US–China trade war
+description: The US raises tariffs on imports from China, and (optionally) China retaliates against US companies selling there. Electronics, retail and some pharma supply chains pay the tariff on their China-sourced goods; chipmakers and Apple-like firms with big China sales lose revenue if China retaliates.
+persistence: permanent
+user_inputs:
+  - key: china_tariff_pct
+    label: Additional tariff on imports from China
+    unit: percent
+    min: 0
+    max: 150
+    step: 5
+    default: 25
+    help: The 2018–19 Section 301 tariffs added 7.5–25% on most Chinese goods; rates briefly exceeded 100% in April 2025.
+assumptions:
+  - key: pass_through
+    label: Share of the tariff cost passed to customers (φ)
+    unit: fraction
+    low: 0.3
+    base: 0.6
+    high: 0.9
+    source: estimate
+    rationale: Amiti, Redding & Weinstein (2019) find near-complete pass-through of 2018 tariffs to import prices at the border, but Cavallo, Gopinath, Neiman & Tang (2021) find much smaller pass-through to retail shelf prices; range spans both.
+    source_url: https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.5
+    base: 1.0
+    high: 1.5
+    source: estimate
+    rationale: Same central case as the Consumer & Retail tariff policy; essentials are less elastic, discretionary goods more.
+  - key: retaliation_loss
+    label: Share of China sales lost to retaliation
+    unit: fraction
+    low: 0.05
+    base: 0.15
+    high: 0.3
+    source: estimate
+    rationale: Retaliatory tariffs, procurement bans and consumer boycotts cut US brands' China sales; losses in 2019–23 ranged from small to severe by sector.
+component_labels:
+  second_round: China retaliates against US companies' sales in China
+industry_effects:
+  consumer_retail:
+    reason: Retailers source much of their apparel, toys and electronics from China.
+    assumptions:
+      - key: china_share_consumer_retail
+        label: China's share of these companies' imports
+        unit: fraction
+        low: 0.2
+        base: 0.3
+        high: 0.45
+        source: estimate
+        rationale: China supplied roughly a third of US imports of consumer goods such as apparel, toys and electronics after 2018, down from higher shares before the Section 301 tariffs.
+    channels:
+      - type: cost
+        label: Tariff on China-sourced goods
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs * assumption.china_share_consumer_retail
+          shock_pct: input.china_tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+    exposure_keys: [us_import_share_of_cogs]
+  tmt:
+    reason: Hardware is assembled in China; US tech firms also sell heavily there.
+    assumptions:
+      - key: china_share_tmt
+        label: China's share of these companies' imports
+        unit: fraction
+        low: 0.3
+        base: 0.5
+        high: 0.7
+        source: estimate
+        rationale: Most smartphones, laptops and networking gear are still assembled in China, though production is shifting to Vietnam and India.
+    channels:
+      - type: cost
+        label: Tariff on China-assembled hardware
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs * assumption.china_share_tmt
+          shock_pct: input.china_tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+      - type: demand_volume
+        label: Lost sales in China
+        component: second_round
+        params:
+          d_volume: -assumption.retaliation_loss * min(1, input.china_tariff_pct / 25)
+          exposed_revenue_share: exposure.greater_china_revenue_share
+    exposure_keys: [us_import_share_of_cogs, greater_china_revenue_share]
+  healthcare:
+    reason: Generic ingredients and medical supplies are partly China-sourced.
+    assumptions:
+      - key: china_share_healthcare
+        label: China's share of these companies' imports
+        unit: fraction
+        low: 0.05
+        base: 0.12
+        high: 0.25
+        source: estimate
+        rationale: China is a major source of active pharmaceutical ingredients and medical supplies, but branded drugmakers import mostly from Europe.
+    channels:
+      - type: cost
+        label: Tariff on China-sourced ingredients and supplies
+        params:
+          exposed_cost_share: exposure.us_import_share_of_cogs * assumption.china_share_healthcare
+          shock_pct: input.china_tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+    exposure_keys: [us_import_share_of_cogs]
+  industrials:
+    reason: Manufacturers import some components from China.
+    assumptions:
+      - key: ind_china_import_share
+        label: China-sourced share of manufacturers' cost of revenue
+        unit: fraction
+        low: 0.02
+        base: 0.04
+        high: 0.08
+        source: estimate
+        rationale: Roughly a quarter of a 15% imported-input share, consistent with China's share of US imports of machinery parts.
+    channels:
+      - type: cost
+        label: Tariff on China-sourced components
+        params:
+          exposed_cost_share: assumption.ind_china_import_share
+          shock_pct: input.china_tariff_pct / 100
+          pass_through: assumption.pass_through
+          elasticity: assumption.elasticity
+  transportation_logistics:
+    effect: none
+    rationale: US automakers import few finished vehicles or parts from China (already under high tariffs); freight volume effects are not modelled.
+  energy_resources:
+    effect: none
+    rationale: US oil, gas and utility costs have little China-sourced content; solar module tariffs are covered by the Energy policies.
+  public_sector:
+    effect: none
+    rationale: Defense supply chains largely exclude Chinese components by law.
+  financial_services:
+    effect: none
+    rationale: Banks, insurers and payment networks import no goods; credit effects on importers are second-order.
+  education:
+    effect: none
+    rationale: Education providers import few goods; tariffs barely touch their costs.
+  real_estate_hospitality:
+    effect: none
+    rationale: REIT and hotel operating costs are mostly local labor, utilities and taxes; tariffs on construction materials raise development costs that are capitalized rather than expensed.
+references:
+  - https://ustr.gov/issue-areas/enforcement/section-301-investigations/tariff-actions
+  - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+narrative:
+  extra: "Retaliation is scaled up to the full assumed loss at a 25% tariff and capped there. Export controls on chips are a separate TMT policy."

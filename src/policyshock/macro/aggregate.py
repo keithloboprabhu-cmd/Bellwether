@@ -1,4 +1,4 @@
-"""Full Market mode: run one macro shock across all 10 industries and 60 companies.
+"""Full Market mode: run one macro shock across all configured industries and companies.
 
 Each industry's block of a macro config is an ordinary industry Policy, so the same
 channels, aggregation, valuation and range logic apply. This module adds the market
@@ -6,7 +6,7 @@ layer:
 
 - **Market headline:** cap-weighted Δ EPS % (Σ mcap·ΔEPS% / Σ mcap over companies with a
   meaningful ΔEPS %) and implied Δ market value (Σ Δmcap / Σ mcap). Always labelled
-  "60-company sample, cap-weighted", never "the market".
+  "configured-company sample, cap-weighted", never "the market".
 - **Market tornado and range:** drivers are the union of all industries' uncertain
   assumptions and exposures. Each is moved low/high with the rest at base across *all*
   industries; the market range orients every driver by its effect on the market metric.

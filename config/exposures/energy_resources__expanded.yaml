@@ -1,0 +1,1588 @@
+industry: energy_resources
+companies:
+  EOG:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.05
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 5.986319704175505
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.038
+      low: 0.015
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 65.84951674593056
+      low: 40.871905080093185
+      high: 161.26221498371336
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.3177
+      low: 0.1729
+      high: 0.7796
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 3.405992090007765
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.1
+      low: 0.06
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 6.584951674593056
+      low: 3.5917918225053036
+      high: 34.556188925081436
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.0
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 3.2326126402547732
+      low: 2.3841944630054357
+      high: 5.375407166123779
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  OXY:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.05
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 5.711497056038428
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.038
+      low: 0.015
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 62.826467616422704
+      low: 38.99553934227873
+      high: 153.85891693811075
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.3177
+      low: 0.1729
+      high: 0.7796
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 3.2496282785232276
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.1
+      low: 0.06
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 6.28264676164227
+      low: 3.4268982336230565
+      high: 32.96976791530945
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.0
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 3.084208410260751
+      low: 2.2747397949662593
+      high: 5.128630564603691
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  DVN:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.05
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 4.546344250413954
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.038
+      low: 0.015
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 50.00978675455349
+      low: 31.040398750293463
+      high: 122.4714983713355
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.3177
+      low: 0.1729
+      high: 0.7796
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 2.5866998958577887
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.1
+      low: 0.06
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 5.0009786754553485
+      low: 2.727806550248372
+      high: 26.243892508143322
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.0
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 2.455025895223535
+      low: 1.810689927100452
+      high: 4.0823832790445165
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  SLB:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.05
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 9.4450116647534
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.038
+      low: 0.015
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 103.8951283122874
+      low: 64.48630198833366
+      high: 254.43403908794787
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.3177
+      low: 0.1729
+      high: 0.7796
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 5.373858499027805
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.1
+      low: 0.06
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 10.389512831228739
+      low: 5.66700699885204
+      high: 54.521579804560254
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.0
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 5.100306298966836
+      low: 3.7617009493194637
+      high: 8.48113463626493
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  HAL:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.05
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 5.867820622014379
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.038
+      low: 0.015
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 64.54602684215817
+      low: 40.06284651364384
+      high: 158.0700325732899
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.3177
+      low: 0.1729
+      high: 0.7796
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 3.338570542803653
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.1
+      low: 0.06
+      high: 0.4
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 6.454602684215817
+      low: 3.5206923732086275
+      high: 33.87214983713355
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.0
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 3.168623135887765
+      low: 2.336999379962557
+      high: 5.26900108577633
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
+        and services; median base and outer low/high from XOM/CVX/COP in committed
+        exposure configuration. Dimensionless peer prior; review before relying on
+        this company result.
+      applicable: true
+  WMB:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.05
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Midstream pipelines;
+        median base and outer low/high from XOM/CVX/COP in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    us_crude_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+    us_methane_kt_ch4:
+      value: 3.4769429352857473
+      low: 1.8965143283376802
+      high: 18.246131921824105
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Midstream pipelines;
+        median base and outer low/high from XOM/CVX/COP in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.115
+      low: 0.0
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Midstream pipelines;
+        median base and outer low/high from XOM/CVX/COP in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 1.7068628955039122
+      low: 1.258886701701792
+      high: 2.8382871878393052
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Midstream pipelines;
+        median base and outer low/high from XOM/CVX/COP in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Midstream pipelines is outside this direct
+        policy channel; indirect effects are not modeled. This is not a reported zero
+        exposure.'
+      applicable: true
+  PSX:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.25
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 35.014362723574436
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0315
+      low: 0.015
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 332.03203767796606
+      low: 239.0623589113828
+      high: 455.18671540646767
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.2597
+      low: 0.1729
+      high: 0.3755
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 19.921863242615235
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.087
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 38.382888210876565
+      low: 21.008617634144663
+      high: 70.02872544714887
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.126
+      low: 0.08
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 18.617935026968105
+      low: 13.945304269830665
+      high: 24.510053906502108
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  VLO:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.25
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 32.451555564960245
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0315
+      low: 0.015
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 307.7296081358904
+      low: 221.56466147761546
+      high: 421.8702223444832
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.2597
+      low: 0.1729
+      high: 0.3755
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 18.463721789801287
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.087
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 35.57352847893737
+      low: 19.470933338976145
+      high: 64.90311112992049
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.126
+      low: 0.08
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 17.25523202584786
+      low: 12.924605252860902
+      high: 22.716088895472172
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  MPC:
+    carbon_cost_pass_through:
+      value: 0.5
+      low: 0.25
+      high: 0.75
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 0.0
+      low: 0.0
+      high: 35.09979844575757
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0315
+      low: 0.015
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 332.84220227101906
+      low: 239.64567569031837
+      high: 456.29737979484844
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.2597
+      low: 0.1729
+      high: 0.3755
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 19.9704729741932
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.087
+      low: 0.06
+      high: 0.12
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 38.476543200392136
+      low: 21.059879067454546
+      high: 70.19959689151514
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.126
+      low: 0.08
+      high: 0.18
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 18.663363148483416
+      low: 13.97933108193524
+      high: 24.569858912030302
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
+        base and outer low/high from XOM/CVX in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+  DUK:
+    carbon_cost_pass_through:
+      value: 0.9
+      low: 0.75
+      high: 0.97
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 2440.2369400262655
+      low: 1764.026703633445
+      high: 2822.442725813512
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 0.0
+      low: 0.0
+      high: 11.760178024222967
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 3.5280534072668903
+      low: 0.0
+      high: 11.760178024222967
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 50.1806796293594
+      low: 47.040712096891866
+      high: 52.92080110900335
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  SO:
+    carbon_cost_pass_through:
+      value: 0.9
+      low: 0.75
+      high: 0.97
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 2237.0667955639865
+      low: 1617.1567196848098
+      high: 2587.4507514956954
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 0.0
+      low: 0.0
+      high: 10.781044797898732
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 3.234313439369619
+      low: 0.0
+      high: 10.781044797898732
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 46.00271815263389
+      low: 43.124179191594926
+      high: 48.51470159054429
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  AEP:
+    carbon_cost_pass_through:
+      value: 0.9
+      low: 0.75
+      high: 0.97
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 1655.9426528527654
+      low: 1197.0669779658544
+      high: 1915.3071647453671
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 0.0
+      low: 0.0
+      high: 7.980446519772363
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 2.394133955931709
+      low: 0.0
+      high: 7.980446519772363
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 34.052565299868675
+      low: 31.92178607908945
+      high: 35.912009338975636
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  EXC:
+    carbon_cost_pass_through:
+      value: 0.9
+      low: 0.75
+      high: 0.97
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 1836.2523712242814
+      low: 1327.4113526922517
+      high: 2123.8581643076027
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 0.0
+      low: 0.0
+      high: 8.849409017948345
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 2.654822705384503
+      low: 0.0
+      high: 8.849409017948345
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 37.76042827958559
+      low: 35.39763607179338
+      high: 39.82234058076755
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+  CEG:
+    carbon_cost_pass_through:
+      value: 0.9
+      low: 0.75
+      high: 0.97
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    clean_generation_credits_musd:
+      value: 1932.7657595213775
+      low: 1397.1800671238873
+      high: 2235.4881073982197
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    federal_upstream_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    manufacturing_credits_45x_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ni_per_usd_bbl_musd:
+      value: 0.0
+      low: 0.0
+      high: 9.314533780825915
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    oil_price_sensitivity:
+      value: 0.0
+      low: 0.0
+      high: 0.01
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_critical_mineral_production_cost_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_crude_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_methane_kt_ch4:
+      value: 2.794360134247775
+      low: 0.0
+      high: 9.314533780825915
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_refinery_domestic_crude_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true
+    us_scope1_co2e_mt:
+      value: 39.745115642784185
+      low: 37.25813512330366
+      high: 41.91540201371662
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    us_solar_module_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
+        generation; median base and outer low/high from NEE in committed exposure
+        configuration. Dimensionless peer prior; review before relying on this company
+        result.
+      applicable: true

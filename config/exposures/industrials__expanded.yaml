@@ -1,0 +1,970 @@
+industry: industrials
+companies:
+  BA:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 1789.0649002289827
+      low: 1174.9802994483846
+      high: 2647.2650875142403
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 3133.2807985290256
+      low: 1191.269289381408
+      high: 9754.988550866863
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  ETN:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 548.9001417511721
+      low: 360.4938271604939
+      high: 812.2031691547442
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 961.3168724279836
+      low: 365.49142611963487
+      high: 2992.9124413913423
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  EMR:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 360.2807109366481
+      low: 236.6167586025742
+      high: 533.104499252837
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 630.9780229401979
+      low: 239.89702466377665
+      high: 1964.4531675935011
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  ITW:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 320.84501144913315
+      low: 210.7171000788022
+      high: 474.75180872627203
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 561.9122668768059
+      low: 213.6383139268224
+      high: 1749.427543343147
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  PH:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 429.9331152546069
+      low: 282.361439453638
+      high: 636.1686073177589
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 752.9638385430347
+      low: 286.2758732929915
+      high: 2344.2372696543453
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  CMI:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 673.3265728928144
+      low: 442.21171526136067
+      high: 996.3159685747681
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 1179.2312406969618
+      low: 448.3421858586457
+      high: 3671.355359284702
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  PCAR:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 568.8339679424272
+      low: 373.58550039401104
+      high: 841.6990930476852
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 996.2280010506961
+      low: 378.7645918714583
+      high: 3101.6028786391885
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  DOV:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 161.83377182422853
+      low: 106.28540845810349
+      high: 239.46414357365845
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 283.42775588827595
+      low: 107.7588646081463
+      high: 882.4087885726748
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  ROK:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 166.821807872642
+      low: 109.56133438402941
+      high: 246.84490079746703
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 292.1635583574118
+      low: 111.08020535886017
+      high: 909.6063678988114
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  STLD:
+    govcon_defense_intel_share:
+      value: 0.0
+      low: 0.0
+      high: 0.005
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.88
+      low: 0.8
+      high: 0.93
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.015
+      low: 0.008
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 1873.9319982150548
+      low: 1790.0245953099031
+      high: 1914.2075516095276
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.98
+      low: 0.98
+      high: 0.99
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 279.69134301717236
+      low: 167.81480581030343
+      high: 363.59874592232404
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  CLF:
+    govcon_defense_intel_share:
+      value: 0.0
+      low: 0.0
+      high: 0.005
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.88
+      low: 0.8
+      high: 0.93
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.015
+      low: 0.008
+      high: 0.025
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.05
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 1918.6157444451283
+      low: 1832.707576783406
+      high: 1959.8516649227547
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.98
+      low: 0.98
+      high: 0.99
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Dimensionless peer prior; review before relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 286.3605588724072
+      low: 171.81633532344432
+      high: 372.26872653412937
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
+        median base and outer low/high from NUE in committed exposure configuration.
+        Absolute exposure intensity scaled by SEC annual revenue.
+      applicable: true
+  CARR:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 434.89257441936536
+      low: 285.618597320725
+      high: 643.5070795543654
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 761.6495928552666
+      low: 289.5781857994644
+      high: 2371.279031730455
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  OTIS:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 288.5885290589903
+      low: 189.5324402416601
+      high: 427.02214857447217
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 505.419840644427
+      low: 192.1599668585125
+      high: 1573.547050485225
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+  IR:
+    govcon_defense_intel_share:
+      value: 0.01
+      low: 0.0
+      high: 0.13
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_domestic_steel_sales_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: 'Explicit scope estimate: Aerospace and diversified manufacturing
+        is outside this direct policy channel; indirect effects are not modeled. This
+        is not a reported zero exposure.'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.002
+      low: 0.0
+      high: 0.02
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_steel_share_of_cogs:
+      value: 0.03
+      low: 0.01
+      high: 0.2
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_capex_musd:
+      value: 153.0013150147203
+      low: 100.48463356973996
+      high: 226.39482756069773
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.44
+      low: 0.07
+      high: 0.69
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+    ind_us_qre_musd:
+      value: 267.95902285263986
+      low: 101.87767240231398
+      high: 834.2492639842983
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
+        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
+        in committed exposure configuration. Absolute exposure intensity scaled by
+        SEC annual revenue.
+      applicable: true

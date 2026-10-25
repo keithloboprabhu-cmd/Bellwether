@@ -47,7 +47,7 @@ channels:
       pass_through: assumption.pass_through
       elasticity: assumption.elasticity
 exposure_keys: [us_import_share_of_cogs]
-roles: {PFE: importer, LLY: importer}
+roles: {PFE: importer, LLY: importer, JNJ: importer, MRK: importer, ABBV: importer, AMGN: importer, GILD: importer}
 default_role: neutral
 references:
   - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536

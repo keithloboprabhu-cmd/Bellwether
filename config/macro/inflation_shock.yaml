@@ -1,0 +1,219 @@
+id: inflation_shock
+scope: full_market
+name: Inflation surprise
+description: Inflation runs above expectations for a year. Wages and input costs rise with it; companies that can reprice quickly (retailers, commodity producers, freight) pass most of it on, while those with prices set in advance (government-reimbursed healthcare, tuition, leases, cost-plus or fixed-price contracts) absorb more of it in their margins.
+persistence: one_time
+user_inputs:
+  - key: d_inflation_pts
+    label: Inflation above expectations
+    unit: percentage points
+    min: -3
+    max: 6
+    step: 0.5
+    default: 2
+    help: Extra inflation over a year. CPI inflation ran about 5 points above the Fed's 2% target in 2022.
+assumptions:
+  - key: cost_beta
+    label: Rise in operating costs per 1 point of extra inflation
+    unit: number
+    low: 0.6
+    base: 0.8
+    high: 1.0
+    source: estimate
+    rationale: Costs are measured as revenue − pretax income, which includes depreciation and fixed-rate interest that do not reprice (roughly a fifth of costs), so cash costs rise about one-for-one but total costs somewhat less.
+industry_effects:
+  consumer_retail:
+    reason: Retailers reprice quickly and pass on most cost increases.
+    assumptions:
+      - key: pass_through_consumer_retail
+        label: Share of cost inflation Consumer & Retail companies pass on within the year
+        unit: fraction
+        low: 0.7
+        base: 0.85
+        high: 1.0
+        source: estimate
+        rationale: Retailers reprice shelves within weeks; competition keeps a little of the cost rise in margins.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_consumer_retail
+  education:
+    reason: Tuition is set annually, so cost inflation squeezes margins.
+    assumptions:
+      - key: pass_through_education
+        label: Share of cost inflation Education companies pass on within the year
+        unit: fraction
+        low: 0.2
+        base: 0.4
+        high: 0.6
+        source: estimate
+        rationale: Tuition is set once a year, ahead of the academic year.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_education
+  energy_resources:
+    reason: Commodity prices and utility rate cases pass on most cost inflation.
+    assumptions:
+      - key: pass_through_energy_resources
+        label: Share of cost inflation Energy companies pass on within the year
+        unit: fraction
+        low: 0.6
+        base: 0.8
+        high: 1.0
+        source: estimate
+        rationale: Commodity producers' prices move with the general price level; regulated utilities recover costs through rate cases with a lag.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_energy_resources
+  financial_services:
+    reason: Bank expenses rise; fees adjust only partly.
+    assumptions:
+      - key: pass_through_financial_services
+        label: Share of cost inflation Financial Services companies pass on within the year
+        unit: fraction
+        low: 0.2
+        base: 0.35
+        high: 0.5
+        source: estimate
+        rationale: Fees and spreads adjust only partly to general inflation within a year.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_financial_services
+  healthcare:
+    reason: Government rates and premiums are set in advance, so cost inflation squeezes margins.
+    assumptions:
+      - key: pass_through_healthcare
+        label: Share of cost inflation Healthcare companies pass on within the year
+        unit: fraction
+        low: 0.2
+        base: 0.4
+        high: 0.6
+        source: estimate
+        rationale: Medicare and Medicaid rates are set annually from lagged cost data, and insurance premiums are fixed for the plan year.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_healthcare
+  industrials:
+    reason: Manufacturers raise prices with a lag.
+    assumptions:
+      - key: pass_through_industrials
+        label: Share of cost inflation Industrials companies pass on within the year
+        unit: fraction
+        low: 0.5
+        base: 0.75
+        high: 0.95
+        source: estimate
+        rationale: Price increases and surcharges follow input costs with a lag of a quarter or two; long-term contracts reprice more slowly.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_industrials
+  public_sector:
+    reason: Cost-plus contracts pass inflation through; fixed-price work absorbs it.
+    assumptions:
+      - key: fixed_price_reprice
+        label: Share of fixed-price contract cost inflation recovered within the year
+        unit: fraction
+        low: 0.1
+        base: 0.25
+        high: 0.45
+        source: estimate
+        rationale: Fixed-price federal contracts rarely include economic price adjustments; recoveries come only at option exercise or re-bid.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: exposure.govcon_cost_plus_share + (1 - exposure.govcon_cost_plus_share) * assumption.fixed_price_reprice
+    exposure_keys: [govcon_cost_plus_share]
+  real_estate_hospitality:
+    reason: Rents adjust slowly through lease escalators.
+    assumptions:
+      - key: pass_through_real_estate_hospitality
+        label: Share of cost inflation Real Estate & Hospitality companies pass on within the year
+        unit: fraction
+        low: 0.3
+        base: 0.5
+        high: 0.8
+        source: estimate
+        rationale: Leases carry fixed or CPI-linked escalators and roll over gradually; hotels reprice nightly.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_real_estate_hospitality
+  tmt:
+    reason: Contracts reprice at renewal, so part of cost inflation squeezes margins for a year.
+    assumptions:
+      - key: pass_through_tmt
+        label: Share of cost inflation TMT companies pass on within the year
+        unit: fraction
+        low: 0.4
+        base: 0.6
+        high: 0.85
+        source: estimate
+        rationale: Subscription and enterprise contracts reprice at renewal, often with annual escalators.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_tmt
+  transportation_logistics:
+    reason: Surcharges and rate resets pass on most costs.
+    assumptions:
+      - key: pass_through_transportation_logistics
+        label: Share of cost inflation Transportation companies pass on within the year
+        unit: fraction
+        low: 0.6
+        base: 0.8
+        high: 0.95
+        source: estimate
+        rationale: Fuel surcharges and contract rate resets pass on most cost inflation within the year.
+    channels:
+      - type: cost
+        label: Higher wages and input costs
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: (baseline.revenue - baseline.pretax_income) * input.d_inflation_pts / 100 * assumption.cost_beta
+          pass_through: assumption.pass_through_transportation_logistics
+references:
+  - https://fred.stlouisfed.org/series/CPIAUCSL
+narrative:
+  extra: "The Fed's likely response (higher rates) is not included; run the Fed rate shock alongside this one. Volume is held fixed, and the effect is counted for one year."

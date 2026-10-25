@@ -18,7 +18,7 @@ st.markdown((ROOT / "METHODOLOGY.md").read_text())
 
 st.header("Industry revenue betas to real GDP")
 st.markdown(
-    "Pooled OLS of annual revenue growth on real GDP growth (FRED GDPC1), FY2009 to latest, six companies per industry. "
+    "Pooled OLS of annual revenue growth on real GDP growth (FRED GDPC1), FY2009 to latest, all configured companies per industry. "
     "Used by the Full Market recession shock. These are **small, noisy samples**: read β with its standard error, "
     "and compare with the estimate that drops pandemic years (FY ending 2020–21)."
 )

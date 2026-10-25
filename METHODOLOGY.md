@@ -90,8 +90,8 @@ Gaps are filled and flagged: a missing cm uses the industry median; a missing PT
 | | `gov_cr` | ΔR = −R × gov share × new-award share × months/12 |
 
 **Consumer transfers** are allocated by each firm's share of *all* US consumer spending
-(firm US consumer revenue ÷ FRED PCE), not by its share of the six sample companies.
-Allocating within the sample would hand the six firms 100% of the industry's spending and overstate the effect.
+(firm US consumer revenue ÷ FRED PCE), not by its share of the sample companies.
+Allocating within the sample would hand the sampled firms 100% of the industry's spending and overstate the effect.
 
 ### 2.3 Aggregation (`model.py`)
 ```
@@ -134,6 +134,180 @@ deferred-tax remeasurement, and "actual" is the average of the first two fiscal 
 **Section 232 steel (2018):** the Industrials steel-tariff policy run on FY2017 baselines, compared with FY2017→FY2018
 gross-margin changes. Demand conditions confound it, so the test is direction and order of magnitude.
 
-## 4. Out of scope
-General-equilibrium and macro feedback, second-round competitive responses, timing within the year,
-and non-US policy. This is a first-order, partial-equilibrium model for education, not investment advice.
+## 4. Full Market (macro shocks)
+Code: `src/policyshock/macro/aggregate.py`; configs: `config/macro/*.yaml`. A macro shock has shared inputs and
+assumptions plus one block per industry, either channels (an ordinary industry policy run through §2) or an explicit
+`effect: none` with a one-line rationale. Effects are summed across industries (partial equilibrium).
+
+- **Headline:** cap-weighted Δ EPS % = Σ market cap × company ΔEPS% ÷ Σ market cap (companies with a meaningful
+  ΔEPS%), and implied Δ market value = Σ Δmcap ÷ Σ mcap. Always labelled as the configured-company sample, never "the market".
+- **Ranges:** tornado drivers are the union of every industry's uncertain assumptions and exposures, each moved
+  across all industries at once. The market range orients each driver by its effect on the headline; company and
+  industry ranges are oriented within each industry (§2.5).
+- **Sector pair:** industries ranked by implied Δ value % (Δ EPS % if no value); long = top, short = bottom among
+  industries the shock actually moves.
+- **Second round:** effects such as rate-sensitive spending or retaliation are separate `component`s the user can switch off.
+- **Channel scope:** a channel can be limited to statement templates (`company_kinds`), e.g. corporate tax skips REITs and
+  loan-loss provisions apply only to banks.
+
+| Shock | Main transmission |
+|---|---|
+| Fed rate change ★ | bank NII; floating/maturing debt reprices; REIT values via cap rates; (2nd) car and home spending |
+| Oil supply shock ★ | producers' realized prices (`oil_price_sensitivity`); carrier fuel cost from CO2 (EIA ≈100 gal/t) less surcharge recovery; manufacturers' energy cost; (2nd) gasoline bill crowds out retail spending (US use ≈137B gal/yr) |
+| Inflation surprise | costs (revenue − pretax income) rise × cost β; each industry passes on a share; cost-plus contracts pass through |
+| Universal tariff / US–China trade war | `cost` on imported COGS share with pass-through and demand elasticity; US steel uplift; auto tariff exposure scaled; (2nd, China) lost China sales |
+| Recession | revenue × industry GDP β × ΔGDP (§4.1) through contribution margin; bank provisions = assets × loan share × Δloss rate |
+| Stronger dollar | foreign pretax income × d/(1+d) × (1 − hedged share); importers' COGS fall by low exchange-rate pass-through |
+| Corporate tax change | `tax_rate` with each company's US share of pretax income |
+| Government shutdown | services contractors' lost billable work; airline capacity cuts in long lapses |
+| Household stimulus | `demand_transfer` by share of US consumer spending, with category tilts |
+
+**US share of pretax income** (`mx_us_pretax_share`, `scripts/build_us_pretax_share.py`): the average of up to three recent
+years of the 10-K tax-note domestic/foreign split (domestic ÷ (domestic + foreign), or (PTI − foreign) ÷ PTI when only one
+side is tagged), clamped to [0, 1], range = min/max year ± 3 pts. Untagged multinationals use explained estimates; other
+untagged companies are assumed US-only (low 0.9). Years with US losses can push the share to 0.
+
+### 4.1 GDP revenue betas
+Pooled OLS per industry of annual revenue growth on real GDP growth (GDPC1, four-quarter average matched to the fiscal
+year end), FY2009 onward, growth winsorized to [−50%, +100%] (`macro/gdp_beta.py`). The recession shock uses the full-sample β
+as base and the widest of β ± 1 s.e. across the full and ex-2020–21 fits as its range; a test keeps the config in sync with
+`data/snapshots/gdp_betas.json`. R² is low, so industry differences are indicative.
+
+## 4b. Out of scope
+General-equilibrium and macro feedback (beyond labelled second-round components), competitive responses, timing within
+the year, and non-US policy. This is a first-order, partial-equilibrium model for education, not investment advice.
+
+## 5. Instrument interface and the Field
+
+The web interface calls the existing Python engine through a local HTTP adapter;
+it does not implement a second financial model. The Industry headline retains
+`Σ ΔNI / Σ model-baseline NI` from §2.3. This is a sample earnings-change measure,
+not an average of company EPS percentages or an all-market forecast. The interface
+labels its company coverage and scenario bounds explicitly. Long/short comparisons
+retain §2.6's ranking and disclose one-sided outcomes as relative comparisons.
+
+The Field encodes each company's fractional EPS change `e` using the fixed mapping
+`A = tanh(e / 0.15)`. Thus `0.15` means a 15% EPS change. It never rescales by the
+largest value in the current scenario. Undefined EPS percentages have no deformation;
+zero has exactly zero deformation. Neither is substituted for the other in tables.
+
+Entity IDs and seed 256 determine stable anchors independently of table order and
+shock magnitude. The layout carries no geographical or economic-distance meaning.
+For anchor `i`, use the compact weight `w_i = max(0, 1 − (d_i/r_i)^2)^2` inside its
+radius and zero outside. Each support radius is 0.8 times the smaller grid spacing,
+so no other entity's support reaches an anchor. The terrain is
+`h = Σ(A_i w_i) / max(1, Σw_i)`. At an anchor, its own weight is one and all other
+weights are zero, so its displayed elevation equals its mapped effect exactly.
+The normalized interpolation cannot exceed the most extreme mapped node value.
+
+The renderer uses 5 CSS-pixel cells, a 4×4 Bayer dither and 14 contour levels on each
+side of zero, with stronger fifth contours. Positive stipple and negative diagonal
+hatching supplement signed labels. Text sits on solid plates. An accessible DOM
+table provides exact base/low/high values. The landing terrain is separately labeled
+illustrative, with no interpretation as model output. Canvas errors do not prevent
+the numerical calculator or table from working. Rendering occurs on data, size,
+visibility or selection changes; there is no idle animation loop.
+
+This checkpoint uses committed prices without live overlays. Share URLs and CSVs
+carry engine/config and snapshot-content fingerprints. Earlier versions are not
+archived by the adapter: a version mismatch is rejected with a route to rerun using
+current snapshots. A fingerprint identifies contents; it does not make unavailable
+historical versions reproducible.
+
+
+## 6. Expanded company coverage and user-company scenarios
+
+The configured teaching sample has 203 issuers: 20 in each of nine industries and
+23 in Financial Services. Selection spans the business strata documented in
+`data/snapshots/sample_coverage.json` (for example banks, custody, payments, asset
+management and insurance; managed care, pharmaceuticals, hospitals and devices).
+Names, CIKs, financial facts and public quotes are API-sourced. Selection is curated;
+it is not a probability sample, industry census or market-representative index.
+
+New issuer policy exposures in `config/exposures/*__expanded.yaml` are **estimates**,
+not API financial disclosures. For each documented reference cohort, the base is
+the median exposure, low is the minimum low and high the maximum high. Absolute
+exposures are scaled by annual revenue; dimensionless values are unchanged. Bounds
+are clamped to exposure-definition limits. Scope zeros are explicitly described as
+modeling estimates. Bank-only capital/NII channels require the bank template;
+non-bank financial issuers have `applicable: false` bank measures. Other economic
+effects on those companies are outside these channels. The site-neutral insurer
+cost channel applies only to managed-care templates; direct hospital payment
+losses are not covered by it. Pharma tariffs apply to the configured drugmakers;
+steel-production uplift applies to NUE, STLD and CLF. Peer priors need review before
+any company-specific interpretation; their ranges are not confidence intervals.
+
+Parser extensions accept reported operating/borrowing interest tags, bank net
+revenue derived from net interest income plus noninterest income, and pretax income
+derived from net income plus tax when a pretax tag is absent. Missing diluted share
+counts in a loss year may use reported basic weighted shares, with `source: estimate`
+and a rationale in the fiscal-year record. These are flagged in the Data page.
+Issuer share-count units are normalized only with explicit configuration and a
+filing source: MCD reports weighted shares in millions ([FY2025 filing](https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm));
+LINC reports them in thousands ([FY2025 filing](https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/ef20060592_10k.htm)).
+`refresh_data.py` preserves those unit overrides. They apply only to facts filed on or after the documented tagging change (MCD: 2024-02-22; LINC: 2026-03-02); older correctly tagged facts retain their original units.
+
+Public-company lookup searches SEC's issuer directory and uses supported US-GAAP
+annual 10-K facts. It can fetch issuers outside the configured sample. Missing
+required financials and policy exposures remain blank. Users supply them or
+explicitly choose labeled reference-cohort exposure estimates. Unknown-issuer
+share counts that conflict with EPS/net income by at least 100× are left blank for
+filing review rather than automatically rescaled. Private companies and unsupported
+foreign filings use manual profiles. An optional public quote enables valuation;
+missing price or nonpositive EPS leaves a constant-P/E valuation undefined.
+
+Profiles use USD millions, millions of diluted shares, USD/share EPS and fractional
+tax rates/exposures. Validation rejects non-finite values, unknown fields, unsafe
+source links, invalid denominators and broken PTI = operating income − interest +
+other income identities. Missing non-bank cost of revenue, bank NII for rate
+policies, or debt for debt-financing channels must be supplied. A user profile's
+financials, source descriptions, template, role and exposure ranges travel together
+in a versioned JSON schema. Import validates that schema before replacing a draft.
+Profiles are request-local; inputs are not persisted to the server or encoded in
+public share URLs. Browser-session drafts can be downloaded and imported as JSON.
+
+Company scenarios use the same channel, aggregation and oriented-range engine.
+Their headline EPS percentage and one-driver sensitivity use ΔEPS / stated positive
+starting EPS. If starting EPS is nonpositive, the percentage is unavailable and
+sensitivity retains absolute ΔEPS. The P&L bridge uses model NI = PTI × (1 − t)
+with any parent-share adjustment, distinct from reported EPS. Industry reference
+companies are shown alongside the user company but do not enter its totals,
+channel attribution or range. Relative long/short comparisons describe only the
+reference sample. Company CSV exports include the profile for reproducibility.
+
+
+## 7. Tactical console display contract
+
+The console changes presentation, not policy calculations. Its command sequence
+unlocks policy selection after an industry, parameters after a policy, and execution
+after valid numeric inputs. Parameter edits leave the previously applied scenario
+labeled until execution. Loading telemetry shows actual browser request elapsed
+time, not a fabricated progress percentage, live market feed or execution stage.
+
+Per-company projected revenue and operating income equal their baseline plus the
+engine delta. Projected net income uses the model baseline PTI × (1 − tax rate)
+× parent share, plus ΔNI. Projected EPS starts from stated reported/derived baseline
+EPS plus ΔEPS; it therefore need not equal projected model NI divided by shares.
+Their baselines are identified separately in the grid and income statement bridge.
+Each projected value is paired with its percentage change; nonpositive earnings
+bases keep percentages undefined. Implied share price is the starting quote plus
+the engine's Δprice, respecting each channel's persistence and direct-value effects.
+Missing valuation stays undefined. A truly unaffected company can retain its
+starting quote even when an earnings multiple is undefined.
+
+EPS sparklines display up to eight actual annual fiscal-year observations from the
+committed SEC financial snapshot. Missing observations break the line. Custom
+profiles without committed annual history display “No history”; no price paths or
+historical points are fabricated. The exposure scatter uses the selected policy's
+configured base exposure on X and ΔEPS percentage on Y. Undefined/N/A points are
+excluded and counted. Coincident points are not randomly displaced; the company
+selector and grid remain available for exact selection. Error bars show configured
+scenario bounds, not statistical confidence intervals. Sensitivity variance bars
+show existing one-driver low/high runs while the other drivers remain at base.
+
+Motion uses CSS entry/selection transitions, an initialization scan and a request
+sweep while waiting. Text remains fully opaque throughout motion. OS reduced-motion
+preferences and the console motion toggle disable nonessential animations; the
+Canvas renderer remains event-driven and static at rest. Company editing uses
+three stages and financial subgroups with preserved source disclosures and the
+same validation/profile schema.

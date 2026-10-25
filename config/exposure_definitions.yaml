@@ -566,3 +566,9 @@ exposures:
     help: Share of revenue from selling new vehicles (excludes financing, services, energy and credits); used for rate-sensitive auto demand.
     min: 0
     max: 1
+  - key: mx_us_pretax_share
+    label: US share of pretax income
+    unit: fraction
+    help: Share of pretax income earned in the US (taxed at the federal rate); the rest is foreign income translated from other currencies. From the 10-K income-tax note where tagged.
+    min: 0
+    max: 1

@@ -42,6 +42,12 @@ def ticker_to_cik(max_age_s: float = 86400) -> dict[str, int]:
     return {row["ticker"].upper(): int(row["cik_str"]) for row in raw.values()}
 
 
+def company_directory(max_age_s: float = 86400) -> list[dict]:
+    """Issuer names, tickers and CIKs from SEC's cached public ticker directory."""
+    raw = _cached_json(TICKER_MAP_URL, CACHE_DIR / "company_tickers.json", max_age_s)
+    return list(raw.values())
+
+
 def company_facts(cik: int, max_age_s: float = 86400) -> dict:
     """All XBRL facts ever filed by a registrant (companyfacts endpoint)."""
     return _cached_json(FACTS_URL.format(cik=cik), CACHE_DIR / f"facts_{cik:010d}.json", max_age_s)

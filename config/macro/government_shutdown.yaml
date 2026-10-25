@@ -1,0 +1,90 @@
+id: government_shutdown
+scope: full_market
+name: Federal government shutdown
+description: Appropriations lapse and non-essential federal work stops. Government services contractors lose billable work they only partly recover; in a long shutdown, unpaid air-traffic and security staff thin out flight schedules. Most other industries see little direct effect because mandatory programs (Medicare, Medicaid, Social Security, federal student aid) keep paying.
+persistence: one_time
+user_inputs:
+  - key: days
+    label: Shutdown length
+    unit: days
+    min: 0
+    max: 90
+    step: 1
+    default: 35
+    help: The 2018–19 shutdown lasted 35 days; the October–November 2025 shutdown lasted 43.
+assumptions:
+  - key: affected_share
+    label: Share of federal services revenue disrupted during the lapse
+    unit: fraction
+    low: 0.04
+    base: 0.085
+    high: 0.15
+    source: "Booz Allen Q3 FY26 8-K (Ex. 99.1): 2025 shutdown cost ~$50M of revenue for work not performed plus ~$60M shifted to Q4 = ~$110M, about 8.5% of its ~$1.3B of US-government revenue over 43 days. SAIC FY2026 10-K: ~$26M of revenue attributed to the shutdown (~3% of 43 days' revenue), the low end."
+    source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026003186/finalbahexhibit991q3fy26.htm
+  - key: recovery_share
+    label: Share of disrupted revenue made up later in the year
+    unit: fraction
+    low: 0.3
+    base: 0.55
+    high: 0.7
+    source: "Booz Allen Q3 FY26 8-K (Ex. 99.1): of ~$110M shutdown impact, ~$60M of billable expenses shifted from Q3 to Q4 (recovered) and ~$50M was lost (work not performed)"
+    source_url: https://www.sec.gov/Archives/edgar/data/1443646/000162828026003186/finalbahexhibit991q3fy26.htm
+industry_effects:
+  public_sector:
+    reason: Services contractors lose billable work during the lapse.
+    channels:
+      - type: gov_shutdown
+        label: Contract work stopped during the shutdown
+        params:
+          gov_revenue_share: exposure.govcon_services_share
+          days: input.days
+          affected_share: assumption.affected_share
+          recovery_share: assumption.recovery_share
+    exposure_keys: [govcon_services_share]
+  transportation_logistics:
+    reason: Unpaid controllers and screeners thin out flight schedules in a long shutdown.
+    assumptions:
+      - key: flight_disruption_share
+        label: Share of domestic passenger revenue lost per shutdown day
+        unit: fraction
+        low: 0.0
+        base: 0.02
+        high: 0.05
+        source: estimate
+        rationale: Absences among unpaid air-traffic and TSA staff grow as a shutdown drags on, and the FAA can order capacity cuts at busy airports; short shutdowns barely register.
+    channels:
+      - type: demand_volume
+        label: Fewer flights during the shutdown
+        params:
+          d_volume: -assumption.flight_disruption_share * input.days / 365
+          exposed_revenue_share: exposure.tl_domestic_passenger_revenue_share
+    exposure_keys: [tl_domestic_passenger_revenue_share]
+  industrials:
+    effect: none
+    rationale: Defense product contracts are mostly funded in advance from prior appropriations; deliveries and payments may slip but are not modelled.
+  healthcare:
+    effect: none
+    rationale: Medicare, Medicaid and ACA payments are mandatory spending and continue during a lapse.
+  education:
+    effect: none
+    rationale: Pell Grants and federal student loans are funded outside annual appropriations and keep disbursing.
+  financial_services:
+    effect: none
+    rationale: Delays to SBA and FHA loan processing are small and recovered after the lapse.
+  consumer_retail:
+    effect: none
+    rationale: Federal workers receive back pay, so lost spending is small and mostly shifted rather than lost.
+  tmt:
+    effect: none
+    rationale: Federal IT and telecom contracts are mostly funded in advance; the services contractors are in Public Sector.
+  energy_resources:
+    effect: none
+    rationale: Permitting and lease sales pause, but production and utility revenue continue.
+  real_estate_hospitality:
+    effect: none
+    rationale: Government leases keep paying; lost travel to national parks and Washington is small for these companies.
+references:
+  - https://www.sec.gov/Archives/edgar/data/1443646/000162828026003186/finalbahexhibit991q3fy26.htm
+  - https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+narrative:
+  extra: "SNAP and other appropriated benefits that can lapse in a long shutdown are not modelled; see the SNAP policy in Consumer & Retail."
