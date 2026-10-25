@@ -1,0 +1,167 @@
+id: fed_rate_change
+scope: full_market
+name: Fed rate change
+description: The Fed moves its policy rate. Banks' net interest income moves with it, borrowers pay more (or less) on floating and maturing debt, REIT property values move with long-term yields, and, as an optional second round, rate-sensitive spending on homes and cars responds.
+persistence: permanent
+showcase: true
+user_inputs:
+  - key: d_ff_bps
+    label: Change in the federal funds rate
+    unit: bps
+    min: -300
+    max: 300
+    step: 25
+    default: 100
+    help: Positive means the Fed raises rates. The 2022–23 hiking cycle added 525 bp; the 2024 cuts totalled 100 bp.
+assumptions:
+  - key: long_rate_passthrough
+    label: Move in the 10-year Treasury per 1 bp move in fed funds
+    unit: number
+    low: 0.2
+    base: 0.5
+    high: 0.9
+    source: estimate
+    rationale: Long yields usually move less than one-for-one with the policy rate because part of a move is expected and term premia shift; the range covers mild to near-full transmission.
+  - key: nonfin_repricing_share
+    label: Share of non-financial companies' debt that reprices within a year
+    unit: fraction
+    low: 0.15
+    base: 0.25
+    high: 0.40
+    source: estimate
+    rationale: Large US companies borrow mostly with fixed-rate bonds; the repricing share is floating-rate loans and commercial paper plus roughly a tenth of bonds maturing each year.
+  - key: rate_demand_semi
+    label: Drop in rate-sensitive spending per +100 bp
+    unit: fraction
+    low: 0.01
+    base: 0.02
+    high: 0.04
+    source: estimate
+    rationale: Higher borrowing costs dampen credit-financed purchases (vehicles, home improvement); a few percent per 100 bp over a year is a middle-of-the-road reading.
+component_labels:
+  second_round: Rate-sensitive demand (cars, home improvement)
+industry_effects:
+  financial_services:
+    reason: Bank net interest income moves with short-term rates.
+    derived:
+      sensitivity: "exposure.nii_sens_up_per_100bp if input.d_ff_bps > 0 else exposure.nii_sens_down_per_100bp"
+    channels:
+      - type: bank_nii
+        label: Change in net interest income
+        params:
+          d_rate_bps: input.d_ff_bps
+          nii_sensitivity_per_100bp: derived.sensitivity
+    exposure_keys: [nii_sens_up_per_100bp, nii_sens_down_per_100bp]
+  real_estate_hospitality:
+    reason: REIT property values move inversely with long yields; floating debt reprices.
+    assumptions:
+      - key: re_cap_rate_beta
+        label: Cap-rate move per 1 bp move in the 10-year
+        unit: number
+        low: 0.3
+        base: 0.5
+        high: 0.8
+        source: estimate
+        rationale: Same range as the Real Estate interest-rate policy; cap rates adjust only partly and slowly to Treasury yields.
+      - key: re_cash_rate_beta
+        label: Share of a rate move earned on cash and investments
+        unit: fraction
+        low: 0.6
+        base: 0.85
+        high: 1.0
+        source: estimate
+        rationale: Same range as the Real Estate interest-rate policy; money-market yields track the policy rate closely.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params:
+          d_rate_bps: input.d_ff_bps
+          floating_share: exposure.re_floating_debt_share
+          maturing_share: exposure.re_debt_maturing_1y_share
+      - type: cost
+        label: Interest earned on cash and investments
+        params:
+          exposed_cost_share: 0
+          shock_pct: 0
+          dcost_musd: -exposure.re_interest_cash_musd * assumption.re_cash_rate_beta * input.d_ff_bps / 10000
+      - type: reit_nav
+        label: Property values move with cap rates
+        params:
+          d_10y_bps: input.d_ff_bps * assumption.long_rate_passthrough
+          cap_rate: exposure.re_implied_cap_rate
+          cap_rate_beta: assumption.re_cap_rate_beta * exposure.re_property_value_share
+    exposure_keys: [re_floating_debt_share, re_debt_maturing_1y_share, re_interest_cash_musd, re_implied_cap_rate, re_property_value_share]
+  consumer_retail:
+    reason: Higher borrowing costs, and (second round) less credit-financed spending.
+    assumptions:
+      - key: cr_rate_sensitive_share
+        label: Share of retail sales that is credit- or housing-sensitive
+        unit: fraction
+        low: 0.05
+        base: 0.12
+        high: 0.25
+        source: estimate
+        rationale: Big-ticket home improvement, appliances and electronics are a minority of these retailers' sales; groceries and essentials barely respond to rates.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+      - type: demand_volume
+        label: Less credit-financed spending
+        component: second_round
+        params:
+          d_volume: -assumption.rate_demand_semi * input.d_ff_bps / 100
+          exposed_revenue_share: assumption.cr_rate_sensitive_share
+  transportation_logistics:
+    reason: Higher borrowing costs, and (second round) weaker car sales.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+      - type: demand_volume
+        label: Fewer car loans, fewer car sales
+        component: second_round
+        params:
+          d_volume: -assumption.rate_demand_semi * input.d_ff_bps / 100
+          exposed_revenue_share: exposure.mx_vehicle_sales_revenue_share
+    exposure_keys: [mx_vehicle_sales_revenue_share]
+  tmt:
+    reason: Higher borrowing costs on floating and maturing debt.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+  healthcare:
+    reason: Higher borrowing costs on floating and maturing debt.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+  industrials:
+    reason: Higher borrowing costs on floating and maturing debt.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+  energy_resources:
+    reason: Higher borrowing costs on floating and maturing debt.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+  public_sector:
+    reason: Higher borrowing costs on floating and maturing debt.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+  education:
+    reason: Higher borrowing costs on floating and maturing debt.
+    channels:
+      - type: financing_debt
+        label: Repricing of floating and maturing debt
+        params: {d_rate_bps: input.d_ff_bps, floating_share: assumption.nonfin_repricing_share}
+references:
+  - https://www.federalreserve.gov/monetarypolicy/openmarket.htm
+narrative:
+  extra: "Interest earned on corporate cash piles (large for the tech companies) is only modelled for Airbnb, so tech's net effect from higher rates is if anything too negative."

@@ -93,6 +93,8 @@ class Runner:
         exp_case = {}
         for d, c in case.items():
             if d.kind == "assumption":
+                if d.key not in self.assumption_ranges:  # driver from another industry (Full Market)
+                    continue
                 lo, base, hi = self.assumption_ranges[d.key]
                 a_vals[d.key] = lo if c == "low" else hi if c == "high" else base
             else:

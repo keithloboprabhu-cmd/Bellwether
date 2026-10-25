@@ -102,3 +102,43 @@ Notes:
 ```
 The smoke test fails on errors or NaN, and warns `REVIEW` for any |ΔEPS| > 100% at defaults. Fix the
 defaults or explain why the result is plausible.
+
+## Full Market (macro) shocks
+File: `config/macro/<shock_id>.yaml`. Worked example: `config/macro/fed_rate_change.yaml`.
+A macro shock has shared `user_inputs`, shared `assumptions` and `derived` values, and an
+`industry_effects` block with **one entry for every industry slug** (all 10):
+
+```yaml
+id: oil_supply_shock
+scope: full_market
+name: …
+description: …
+persistence: "years: 1"
+user_inputs: [...]
+assumptions: [...]            # shared across industries; low/base/high + source
+derived: {oil_price_change: "..."}
+component_labels:
+  second_round: Consumer spending hit from higher gasoline prices
+industry_effects:
+  energy_resources:
+    reason: One line used in the sector pair trade, e.g. "Higher crude prices lift upstream earnings."
+    assumptions: [...]        # optional, industry-specific; keys must be unique across the whole file (prefix them)
+    derived: {...}            # optional
+    channels: [...]           # same channel specs as industry policies; `component: second_round` makes one toggleable
+    exposure_keys: [...]      # every exposure.<key> used; must exist for all 6 companies in that industry
+    roles: {...}              # optional
+    default_role: neutral
+  public_sector:
+    effect: none
+    rationale: Contractor revenue is set by budgets, not fuel prices.
+  # …all 10 industries
+```
+Rules specific to macro shocks:
+- Each industry block becomes an ordinary industry policy, so every expression rule above applies.
+- **No silent omissions:** an industry with no first-order exposure gets `effect: none` + `rationale`.
+- First-order effects only, unless a second-round effect is a separately labelled `component` the user can toggle.
+- Prefer existing exposure keys (see `config/exposure_definitions.yaml`). New macro exposures go in a separate file,
+  `config/exposures/<industry>__<shock_id>.yaml` (same format: `industry:` + `companies:`), with definitions in
+  `config/exposure_definitions.d/<shock_id>.yaml`. A ticker's key may only be defined once across files.
+- Validate: `.venv/bin/python -m pytest -q tests/test_macro.py -k <shock_id>` and run
+  `simulate_market('<shock_id>')` from `policyshock.macro.aggregate` to check signs and magnitudes.

@@ -1,0 +1,25 @@
+# Macro-shock exposures for Transportation (kept separate from the industry policy file).
+industry: transportation_logistics
+companies:
+  UPS:
+    mx_vehicle_sales_revenue_share: {value: 0, source: estimate, rationale: Parcel delivery; sells no vehicles.}
+  FDX:
+    mx_vehicle_sales_revenue_share: {value: 0, source: estimate, rationale: Parcel delivery; sells no vehicles.}
+  UNP:
+    mx_vehicle_sales_revenue_share: {value: 0, source: estimate, rationale: Railroad; sells no vehicles.}
+  DAL:
+    mx_vehicle_sales_revenue_share: {value: 0, source: estimate, rationale: Airline; sells no vehicles.}
+  TSLA:
+    mx_vehicle_sales_revenue_share:
+      value: 0.72
+      low: 0.65
+      high: 0.78
+      source: estimate
+      rationale: Automotive sales are roughly three-quarters of revenue in recent 10-Ks; energy storage, services and regulatory credits make up the rest.
+  GM:
+    mx_vehicle_sales_revenue_share:
+      value: 0.88
+      low: 0.82
+      high: 0.92
+      source: estimate
+      rationale: GM North America and International vehicle sales dominate revenue; GM Financial is under a tenth.

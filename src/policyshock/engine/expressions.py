@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import ast
 import operator
+from functools import lru_cache
 from typing import Any, Mapping
 
 NAMESPACES = ("input", "assumption", "exposure", "baseline", "derived", "macro", "role")
@@ -40,7 +41,9 @@ class ExpressionError(ValueError):
     pass
 
 
+@lru_cache(maxsize=4096)
 def parse(expr: str) -> ast.Expression:
+    """Parse and safety-check an expression (cached: policies re-evaluate the same strings)."""
     try:
         tree = ast.parse(expr.strip(), mode="eval")
     except SyntaxError as exc:

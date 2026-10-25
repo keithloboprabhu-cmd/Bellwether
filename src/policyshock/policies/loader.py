@@ -3,7 +3,9 @@
     config/exposure_definitions.yaml      label/unit/help/bounds for each exposure key
     config/exposures/<industry>.yaml      per-company exposure values with sources
     config/policies/<industry>/<id>.yaml  industry policies
-    config/macro/<id>.yaml                Full Market shocks (milestone M4)
+    config/macro/<id>.yaml                Full Market shocks (every industry: channels or effect: none)
+Several exposure files may cover the same industry (e.g. macro-specific exposures); a
+ticker's key may only be defined once.
 """
 
 from __future__ import annotations
@@ -16,7 +18,7 @@ import yaml
 from pydantic import ValidationError
 
 from policyshock.config import CONFIG_DIR, load_universe
-from policyshock.policies.schema import ExposureDefinition, ExposureValue, IndustryExposures, Policy
+from policyshock.policies.schema import ExposureDefinition, ExposureValue, IndustryExposures, MacroShock, Policy
 
 
 class ConfigError(RuntimeError):
@@ -26,8 +28,12 @@ class ConfigError(RuntimeError):
 @dataclass
 class Registry:
     policies: dict[str, Policy]  # keyed by "<industry>/<id>"
+    macro: dict[str, MacroShock]  # keyed by shock id
     exposure_defs: dict[str, ExposureDefinition]
     exposures: dict[str, dict[str, ExposureValue]]  # ticker → key → value
+
+    def macro_shocks(self) -> list[MacroShock]:
+        return sorted(self.macro.values(), key=lambda m: (not m.showcase, m.name))
 
     def industry_policies(self, industry: str) -> list[Policy]:
         return sorted(
@@ -87,6 +93,9 @@ def load_registry(config_dir: Path = CONFIG_DIR) -> Registry:
                     d = defs[key]
                     if (d.min is not None and v.low < d.min) or (d.max is not None and v.high > d.max):
                         raise ValueError(f"{ticker}.{key}: outside [{d.min}, {d.max}]")
+                dup = set(vals) & set(exposures.get(ticker, {}))
+                if dup:
+                    raise ValueError(f"{ticker}: exposure keys {sorted(dup)} already defined in another file")
                 exposures.setdefault(ticker, {}).update(vals)
         except Exception as exc:
             errors.append(_fmt(path, exc))
@@ -111,9 +120,36 @@ def load_registry(config_dir: Path = CONFIG_DIR) -> Registry:
         except Exception as exc:
             errors.append(_fmt(path, exc))
 
+    macro: dict[str, MacroShock] = {}
+    for path in sorted((config_dir / "macro").glob("*.yaml")):
+        try:
+            shock = MacroShock.model_validate(_read(path))
+            slugs = {i.slug for i in universe.industries}
+            missing = slugs - set(shock.industry_effects)
+            extra = set(shock.industry_effects) - slugs
+            if missing or extra:
+                raise ValueError(f"industry_effects must cover every industry exactly (missing {sorted(missing)}, unknown {sorted(extra)})")
+            for slug in sorted(slugs):
+                pol = shock.industry_policy(slug)  # validates the block's expressions
+                if pol is None:
+                    continue
+                ind = universe.industry(slug)
+                for key in pol.exposure_keys:
+                    if key not in defs:
+                        raise ValueError(f"{slug}: exposure key {key!r} not in exposure definitions")
+                    gaps = [t for t in ind.tickers if key not in exposures.get(t, {})]
+                    if gaps:
+                        raise ValueError(f"{slug}: exposure {key!r} missing for {gaps}")
+                for t in pol.roles:
+                    if t not in ind.tickers:
+                        raise ValueError(f"{slug}: role given for {t}, which is not in that industry")
+            macro[shock.id] = shock
+        except Exception as exc:
+            errors.append(_fmt(path, exc))
+
     if errors:
         raise ConfigError("Invalid configuration:\n" + "\n".join(errors))
-    return Registry(policies=policies, exposure_defs=defs, exposures=exposures)
+    return Registry(policies=policies, macro=macro, exposure_defs=defs, exposures=exposures)
 
 
 @lru_cache(maxsize=1)

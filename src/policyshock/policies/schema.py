@@ -189,6 +189,102 @@ class Policy(BaseModel):
         return sorted({c.component for c in self.channels if c.component})
 
 
+# ----------------------------------------------------------------------------- macro shocks
+
+
+class IndustryEffect(BaseModel):
+    """How one macro shock reaches one industry: channels, or an explicit `effect: none`."""
+
+    effect: Literal["none"] | None = None
+    rationale: str | None = None
+    channels: list[ChannelSpec] = Field(default_factory=list)
+    assumptions: list[Assumption] = Field(default_factory=list)  # industry-specific transmission params
+    derived: dict[str, str | float] = Field(default_factory=dict)
+    exposure_keys: list[str] = Field(default_factory=list)
+    roles: dict[str, Role] = Field(default_factory=dict)
+    default_role: Role = "neutral"
+    reason: str | None = None  # one-line transmission reason used for the sector pair trade
+
+    @model_validator(mode="after")
+    def _explicit(self):
+        if self.effect == "none":
+            if not (self.rationale and self.rationale.strip()):
+                raise ValueError("`effect: none` needs a one-line rationale")
+            if self.channels:
+                raise ValueError("`effect: none` can't also list channels")
+        elif not self.channels:
+            raise ValueError("give channels, or `effect: none` + rationale")
+        return self
+
+
+class MacroShock(BaseModel):
+    """A Full Market shock: shared inputs/assumptions mapped to every industry's channels."""
+
+    id: str
+    scope: Literal["full_market"] = "full_market"
+    name: str
+    description: str
+    persistence: str = "permanent"
+    user_inputs: list[UserInput] = Field(default_factory=list)
+    assumptions: list[Assumption] = Field(default_factory=list)
+    derived: dict[str, str | float] = Field(default_factory=dict)
+    industry_effects: dict[str, IndustryEffect]
+    component_labels: dict[str, str] = Field(default_factory=dict)  # e.g. second_round: "Consumer spending hit"
+    references: list[str] = Field(default_factory=list)
+    narrative: Narrative | None = None
+    showcase: bool = False
+
+    _persistence_v = field_validator("persistence", mode="before")(classmethod(lambda cls, v: parse_persistence(v)))
+
+    @model_validator(mode="after")
+    def _keys_unique(self):
+        shared = {a.key for a in self.assumptions}
+        seen: dict[str, str] = {}
+        for slug, eff in self.industry_effects.items():
+            for a in eff.assumptions:
+                if a.key in shared:
+                    raise ValueError(f"{slug}: assumption {a.key!r} duplicates a shared assumption")
+                if a.key in seen and seen[a.key] != slug:
+                    raise ValueError(f"assumption {a.key!r} defined in both {seen[a.key]} and {slug}; prefix it")
+                seen[a.key] = slug
+        return self
+
+    def industry_policy(self, slug: str) -> Policy | None:
+        """The equivalent industry Policy (None for `effect: none`). Validates expressions."""
+        eff = self.industry_effects[slug]
+        if eff.effect == "none":
+            return None
+        return Policy(
+            id=self.id,
+            industry=slug,
+            name=self.name,
+            description=self.description,
+            persistence=self.persistence,
+            user_inputs=self.user_inputs,
+            assumptions=[*self.assumptions, *eff.assumptions],
+            derived={**self.derived, **eff.derived},
+            channels=eff.channels,
+            exposure_keys=eff.exposure_keys,
+            roles=eff.roles,
+            default_role=eff.default_role,
+            references=self.references,
+            narrative=self.narrative,
+        )
+
+    @property
+    def components(self) -> list[str]:
+        return sorted({c.component for e in self.industry_effects.values() for c in e.channels if c.component})
+
+    def default_inputs(self) -> dict:
+        return {u.key: u.default for u in self.user_inputs}
+
+    def all_assumptions(self) -> list[Assumption]:
+        return [*self.assumptions, *(a for e in self.industry_effects.values() for a in e.assumptions)]
+
+    def assumption(self, key: str) -> Assumption:
+        return next(a for a in self.all_assumptions() if a.key == key)
+
+
 # ----------------------------------------------------------------------------- exposures
 
 

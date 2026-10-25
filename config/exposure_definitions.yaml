@@ -559,3 +559,10 @@ exposures:
     help: Share of total revenue from checked-baggage fees charged to passengers.
     min: 0
     max: 1
+  # ---- macro (Full Market shocks)
+  - key: mx_vehicle_sales_revenue_share
+    label: New-vehicle sales share of revenue
+    unit: fraction
+    help: Share of revenue from selling new vehicles (excludes financing, services, energy and credits); used for rate-sensitive auto demand.
+    min: 0
+    max: 1
