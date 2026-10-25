@@ -91,6 +91,5 @@ expanded selection from the public APIs. Then rebuild GDP betas (the regular
 Refreshed every weekday by GitHub Actions. See [METHODOLOGY.md](METHODOLOGY.md).
 
 ## Team
-Keith LoboPrabhu. Built with [Claude Code](https://claude.com/claude-code).
+Keith LoboPrabhu.
 
-_Educational project for Duke FMKT 256. Not investment advice._
