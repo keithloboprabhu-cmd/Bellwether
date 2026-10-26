@@ -94,9 +94,13 @@ companies:
     govcon_defense_intel_share:
       value: 0.0
       low: 0.0
-      high: 0.005
+      high: 0.0
       source: estimate
-      rationale: Deere discloses no material sales to the US government; its products are agricultural, turf and construction equipment.
+      source_url: https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/0001104659-25-122321-index.htm
+      rationale: 'Company-specific scope estimate: This channel requires a separately configured defense/IC
+        sales estimate, excluding unquantified downstream steel/customer procurement feedback. This is a model
+        boundary, not a reported zero measurement.'
+      applicable: true
   GE:
     ind_steel_share_of_cogs:
       value: 0.03
@@ -275,6 +279,10 @@ companies:
     govcon_defense_intel_share:
       value: 0.0
       low: 0.0
-      high: 0.005
+      high: 0.0
       source: estimate
-      rationale: Nucor sells steel to fabricators and manufacturers; any defense demand is indirect and not modelled here.
+      source_url: https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/0001193125-26-071575-index.htm
+      rationale: 'Company-specific scope estimate: This channel requires a separately configured defense/IC
+        sales estimate, excluding unquantified downstream steel/customer procurement feedback. This is a model
+        boundary, not a reported zero measurement.'
+      applicable: true

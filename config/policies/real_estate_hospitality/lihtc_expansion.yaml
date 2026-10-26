@@ -1,7 +1,7 @@
 id: lihtc_expansion
 industry: real_estate_hospitality
 name: Low-income housing tax credit expansion
-description: A bigger Low-Income Housing Tax Credit raises credits on affordable-housing investment. None of these six companies develops or invests in affordable housing per their FY2025 10-Ks, so the modelled effect is zero; the policy is kept to show that honestly.
+description: A bigger Low-Income Housing Tax Credit raises credits on affordable-housing investment. No qualified affordable-housing investment basis has been sourced for the current company sample, so this direct-credit channel has no quantified exposure. This is a coverage limitation, not proof that every company has no economic exposure.
 persistence: permanent
 user_inputs:
   - key: credit_increase_pct
@@ -32,4 +32,4 @@ default_role: neutral
 references:
   - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
 narrative:
-  extra: "LIHTC exposure in this universe is nil: the credit flows to apartment developers and bank investors, not logistics, tower, mall or hotel companies."
+  extra: "No sourced qualifying investment basis is configured for this sample. Supply a supported company-specific basis to model a direct credit; zero here represents unquantified coverage."

@@ -1,0 +1,561 @@
+as_of: '2026-10-25'
+reviews:
+  consumer_retail/consumer_tax_rebate:
+    rationale: Consumer transfers raise captured retailer spending.
+    expect:
+    - ticker: WMT
+      metric: dR
+      sign: 1
+  consumer_retail/import_tariffs:
+    rationale: Import duties raise importer input costs after partial pass-through.
+    expect:
+    - ticker: WMT
+      metric: dNI
+      sign: -1
+  consumer_retail/minimum_wage_increase:
+    rationale: Higher wage floor raises exposed hourly payroll.
+    expect:
+    - ticker: WMT
+      metric: dNI
+      sign: -1
+  consumer_retail/sales_tax_change:
+    rationale: Higher checkout tax reduces exposed consumer demand.
+    expect:
+    - ticker: WMT
+      metric: dR
+      sign: -1
+  consumer_retail/snap_benefit_change:
+    rationale: Default SNAP reduction lowers grocery spending.
+    expect:
+    - ticker: KR
+      metric: dR
+      sign: -1
+    unaffected:
+    - SBUX
+    - MCD
+    - PG
+    - CL
+    - ULTA
+    - NKE
+  consumer_retail/sweetened_beverage_tax:
+    rationale: Covered beverage demand declines under a consumer tax.
+    expect:
+    - ticker: KO
+      metric: dR
+      sign: -1
+  education/earnings_accountability_test:
+    rationale: Loss of aid eligibility reduces enrollment at exposed programs.
+    expect:
+    - ticker: CVSA
+      metric: dR
+      sign: -1
+  education/ninety_ten_rule_change:
+    rationale: Tighter federal revenue limit restricts exposed proprietary programs.
+    expect:
+    - ticker: CVSA
+      metric: dR
+      sign: -1
+  education/online_compliance_costs:
+    rationale: Online compliance increases operating costs.
+    expect:
+    - ticker: COUR
+      metric: dNI
+      sign: -1
+    unaffected:
+    - LAUR
+    - KLC
+    - BFAM
+    - SLM
+  education/pell_grant_change:
+    rationale: Default grant reduction lowers funded undergraduate enrollment.
+    expect:
+    - ticker: UTI
+      metric: dR
+      sign: -1
+    unaffected:
+    - LAUR
+    - COUR
+    - DUOL
+    - SLM
+  education/school_choice_esa:
+    rationale: ESA funding raises eligible education spending.
+    expect:
+    - ticker: LRN
+      metric: dR
+      sign: 1
+  education/student_loan_borrowing_caps:
+    rationale: Graduate borrowing limits reduce funded graduate tuition.
+    expect:
+    - ticker: CVSA
+      metric: dR
+      sign: -1
+    unaffected:
+    - LAUR
+    - UTI
+    - LINC
+    - DUOL
+    - SLM
+  education/student_loan_forgiveness:
+    rationale: Household transfer proxy increases discretionary education demand; not lender debt cancellation.
+    expect:
+    - ticker: DUOL
+      metric: dR
+      sign: 1
+  energy_resources/carbon_price:
+    rationale: Covered emissions raise direct compliance cost.
+    expect:
+    - ticker: XOM
+      metric: dNI
+      sign: -1
+  energy_resources/clean_energy_credits_change:
+    rationale: Default credit rollback reduces qualifying production benefits.
+    expect:
+    - ticker: FSLR
+      metric: dNI
+      sign: -1
+  energy_resources/critical_minerals_credit:
+    rationale: Qualifying domestic mineral production gets an after-tax credit.
+    expect:
+    - ticker: FCX
+      metric: dNI
+      sign: 1
+  energy_resources/crude_export_restrictions:
+    rationale: Domestic upstream prices fall; refiner feedstock savings are a separate channel.
+    expect:
+    - ticker: COP
+      metric: dNI
+      sign: -1
+    - ticker: PSX
+      metric: dNI
+      sign: 1
+  energy_resources/federal_leasing_limits:
+    rationale: Limits reduce federal-lease production revenue.
+    expect:
+    - ticker: COP
+      metric: dR
+      sign: -1
+    unaffected:
+    - SLB
+    - HAL
+    - PSX
+    - VLO
+    - MPC
+    - NEE
+  energy_resources/methane_emissions_fee:
+    rationale: Fee raises covered oil/gas facility cost, not power combustion.
+    expect:
+    - ticker: XOM
+      metric: dNI
+      sign: -1
+    unaffected:
+    - SLB
+    - HAL
+    - NEE
+    - DUK
+    - SO
+    - AEP
+    - EXC
+    - CEG
+  energy_resources/spr_release:
+    rationale: Default reserve release depresses crude price for producers.
+    expect:
+    - ticker: COP
+      metric: dR
+      sign: -1
+    unaffected:
+    - SLB
+    - HAL
+    - PSX
+    - VLO
+    - MPC
+  financial_services/bank_capital_requirement:
+    rationale: Higher CET1 lowers modeled ROE/value while EPS remains unchanged.
+    expect:
+    - ticker: JPM
+      metric: dP
+      sign: -1
+    unaffected:
+    - BLK
+    - PRU
+    - AIG
+    - PGR
+    - MA
+  financial_services/credit_card_interchange_cap:
+    rationale: Credit issuer interchange declines after a binding cap.
+    expect:
+    - ticker: JPM
+      metric: dR
+      sign: -1
+    unaffected:
+    - AXP
+    - BLK
+    - MS
+    - SCHW
+    - BNY
+    - STT
+    - ALLY
+    - MA
+  financial_services/credit_card_late_fee_cap:
+    rationale: Binding late-fee cap lowers issuer fee revenue.
+    expect:
+    - ticker: COF
+      metric: dR
+      sign: -1
+    unaffected:
+    - ALLY
+    - BLK
+    - MS
+    - SCHW
+    - BNY
+    - STT
+  financial_services/fdic_assessment_increase:
+    rationale: Higher assessment raises covered bank operating cost.
+    expect:
+    - ticker: JPM
+      metric: dNI
+      sign: -1
+  financial_services/fed_rate_change:
+    rationale: Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ.
+    expect:
+    - ticker: JPM
+      metric: dR
+      sign: -1
+    - ticker: C
+      metric: dR
+      sign: 1
+  financial_services/financial_transaction_tax:
+    rationale: Transaction tax reduces trading volume and imposes modeled absorbed costs.
+    expect:
+    - ticker: GS
+      metric: dNI
+      sign: -1
+  healthcare/aca_subsidy_change:
+    rationale: Default subsidy loss reduces exchange enrollment.
+    expect:
+    - ticker: CNC
+      metric: dR
+      sign: -1
+  healthcare/medicaid_work_requirements:
+    rationale: Eligibility loss reduces Medicaid premium and provider-volume revenue.
+    expect:
+    - ticker: MOH
+      metric: dR
+      sign: -1
+    - ticker: HCA
+      metric: dR
+      sign: -1
+  healthcare/medicare_advantage_rate_change:
+    rationale: Default MA payment cut lowers premium revenue.
+    expect:
+    - ticker: HUM
+      metric: dR
+      sign: -1
+    - ticker: MOH
+      metric: dR
+      sign: -1
+    unaffected:
+    - CI
+    - PFE
+    - HCA
+  healthcare/medicare_drug_price_negotiation:
+    rationale: Lower net prices on exposed Medicare drugs reduce manufacturer revenue.
+    expect:
+    - ticker: PFE
+      metric: dR
+      sign: -1
+  healthcare/pbm_rebate_pass_through:
+    rationale: Owned PBMs lose retained rebates after partial service-fee offset.
+    expect:
+    - ticker: CVS
+      metric: dNI
+      sign: -1
+    unaffected:
+    - CNC
+    - MOH
+    - PFE
+    - HCA
+  healthcare/pharma_tariffs:
+    rationale: Drug/API import tariffs raise exposed pharmaceutical costs.
+    expect:
+    - ticker: LLY
+      metric: dNI
+      sign: -1
+    unaffected:
+    - ABT
+    - TMO
+    - MDT
+    - UNH
+    - HCA
+  healthcare/site_neutral_payments:
+    rationale: Lower hospital outpatient payments hurt providers and lower insurers claims cost.
+    expect:
+    - ticker: HCA
+      metric: dR
+      sign: -1
+    - ticker: UNH
+      metric: dNI
+      sign: 1
+    - ticker: THC
+      metric: dR
+      sign: -1
+    - ticker: UHS
+      metric: dR
+      sign: -1
+  industrials/bonus_depreciation_rollback:
+    rationale: Lost cash-tax deferral lowers value, without a GAAP EPS change.
+    expect:
+    - ticker: CAT
+      metric: dP
+      sign: -1
+  industrials/corporate_tax_rate_change:
+    rationale: Default statutory tax increase lowers positive domestic pretax earnings after tax.
+    expect:
+    - ticker: CAT
+      metric: dNI
+      sign: -1
+  industrials/defense_procurement_increase:
+    rationale: Higher defense procurement raises exposed suppliers revenue.
+    expect:
+    - ticker: BA
+      metric: dR
+      sign: 1
+  industrials/infrastructure_spending:
+    rationale: Public infrastructure purchases raise captured equipment/material demand.
+    expect:
+    - ticker: CAT
+      metric: dR
+      sign: 1
+    unaffected:
+    - BA
+  industrials/rd_credit_expansion:
+    rationale: Incremental qualifying R&D credit is after-tax income.
+    expect:
+    - ticker: HON
+      metric: dNI
+      sign: 1
+  industrials/steel_tariffs:
+    rationale: Domestic steel producer gains tariff pricing while equipment users face costs.
+    expect:
+    - ticker: NUE
+      metric: dNI
+      sign: 1
+    - ticker: CAT
+      metric: dNI
+      sign: -1
+  public_sector/consulting_contract_cancellations:
+    rationale: Canceled federal advisory contracts reduce exposed revenue.
+    expect:
+    - ticker: BAH
+      metric: dR
+      sign: -1
+  public_sector/continuing_resolution:
+    rationale: New awards slip beyond the modeled fiscal year.
+    expect:
+    - ticker: LDOS
+      metric: dR
+      sign: -1
+  public_sector/defense_budget_increase:
+    rationale: Higher defense budget raises relevant contract demand.
+    expect:
+    - ticker: LMT
+      metric: dR
+      sign: 1
+  public_sector/federal_civilian_budget_cut:
+    rationale: Civilian budget cuts reduce exposed federal demand.
+    expect:
+    - ticker: BAH
+      metric: dR
+      sign: -1
+  public_sector/fixed_price_shift:
+    rationale: Cost overruns move from reimbursed to contractor-borne.
+    expect:
+    - ticker: BAH
+      metric: dNI
+      sign: -1
+  public_sector/government_shutdown:
+    rationale: Unrecovered service revenue is lost during a shutdown.
+    expect:
+    - ticker: BAH
+      metric: dR
+      sign: -1
+  public_sector/it_modernization_funding:
+    rationale: Incremental federal IT awards raise captured revenue.
+    expect:
+    - ticker: LDOS
+      metric: dR
+      sign: 1
+  real_estate_hospitality/interest_rate_change:
+    rationale: Higher rates raise refinancing cost and reduce property values.
+    expect:
+    - ticker: PLD
+      metric: dP
+      sign: -1
+  real_estate_hospitality/lihtc_expansion:
+    rationale: No sourced qualified investment basis in this sample. Zero is an explicit coverage gap, not
+      economic immunity.
+    expect: []
+    zero_coverage_reason: No sourced qualified investment basis in this sample. Zero is an explicit coverage
+      gap, not economic immunity.
+  real_estate_hospitality/like_kind_exchange_limits:
+    rationale: Reduced exchange liquidity raises modeled property cap rates; EPS unchanged.
+    expect:
+    - ticker: PLD
+      metric: dP
+      sign: -1
+    unaffected:
+    - MAR
+    - HLT
+    - ABNB
+  real_estate_hospitality/property_tax_change:
+    rationale: Hotel owner bears unrecovered property-tax increase.
+    expect:
+    - ticker: HST
+      metric: dNI
+      sign: -1
+    unaffected:
+    - ABNB
+  real_estate_hospitality/return_to_office_mandate:
+    rationale: More office-linked activity raises exposed footfall.
+    expect:
+    - ticker: SPG
+      metric: dR
+      sign: 1
+  real_estate_hospitality/short_term_rental_regulation:
+    rationale: Restrictions lower covered short-term rental bookings; hotels can gain.
+    expect:
+    - ticker: ABNB
+      metric: dR
+      sign: -1
+    - ticker: HST
+      metric: dR
+      sign: 1
+  real_estate_hospitality/visa_fee_tourism_tax:
+    rationale: Higher entry costs reduce inbound visitor spending.
+    expect:
+    - ticker: HST
+      metric: dR
+      sign: -1
+  tmt/app_store_commission_cap:
+    rationale: Binding app-store commission cap reduces platform fee revenue.
+    expect:
+    - ticker: AAPL
+      metric: dR
+      sign: -1
+    unaffected:
+    - NFLX
+    - DIS
+    - NVDA
+    - CRM
+  tmt/broadband_affordability_subsidy:
+    rationale: Broadband subsidies raise access-provider subscriber spending.
+    expect:
+    - ticker: VZ
+      metric: dR
+      sign: 1
+    unaffected:
+    - CSCO
+    - NVDA
+    - AAPL
+  tmt/chip_export_controls:
+    rationale: Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
+    expect:
+    - ticker: NVDA
+      metric: dR
+      sign: -1
+  tmt/chips_manufacturing_credit:
+    rationale: Credit applies to qualifying estimated US manufacturing capex, including Intel/Micron.
+    expect:
+    - ticker: INTC
+      metric: dNI
+      sign: 1
+    - ticker: MU
+      metric: dNI
+      sign: 1
+    unaffected:
+    - NVDA
+    - AMD
+    - AAPL
+    - MSFT
+  tmt/data_privacy_mandate:
+    rationale: Ad-targeting loss and privacy compliance raise costs/reduce monetization.
+    expect:
+    - ticker: META
+      metric: dNI
+      sign: -1
+  tmt/digital_services_tax:
+    rationale: Tax applies to US digital advertising and covered platform fees.
+    expect:
+    - ticker: GOOGL
+      metric: dNI
+      sign: -1
+  tmt/semiconductor_tariffs:
+    rationale: Tariffs raise imported semiconductor/hardware cost.
+    expect:
+    - ticker: AAPL
+      metric: dNI
+      sign: -1
+  transportation_logistics/airline_bag_fee_cap:
+    rationale: Binding baggage cap reduces airline ancillary revenue.
+    expect:
+    - ticker: DAL
+      metric: dR
+      sign: -1
+    unaffected:
+    - UBER
+    - LYFT
+    - FDX
+  transportation_logistics/airline_ticket_tax_change:
+    rationale: Higher ticket tax reduces demand and modeled fare retention.
+    expect:
+    - ticker: DAL
+      metric: dR
+      sign: -1
+    unaffected:
+    - UBER
+    - LYFT
+    - FDX
+  transportation_logistics/auto_import_tariffs:
+    rationale: Imported vehicles/parts and owned-fleet procurement face tariff costs.
+    expect:
+    - ticker: GM
+      metric: dNI
+      sign: -1
+    unaffected:
+    - UBER
+    - LYFT
+    - CHRW
+  transportation_logistics/carbon_tax_transport_fuel:
+    rationale: Owned-fleet fuel carbon cost is partially recovered through pricing.
+    expect:
+    - ticker: DAL
+      metric: dNI
+      sign: -1
+    unaffected:
+    - UBER
+    - LYFT
+    - CHRW
+  transportation_logistics/ev_tax_credit:
+    rationale: Buyer incentive increases covered US EV demand.
+    expect:
+    - ticker: TSLA
+      metric: dR
+      sign: 1
+    unaffected:
+    - DAL
+    - UPS
+    - UBER
+  transportation_logistics/vehicle_emissions_credit_rollback:
+    rationale: Weaker standards hurt credit sellers and help credit purchasers.
+    expect:
+    - ticker: TSLA
+      metric: dNI
+      sign: -1
+    - ticker: GM
+      metric: dNI
+      sign: 1
+    - ticker: F
+      metric: dNI
+      sign: 1
+    - ticker: RIVN
+      metric: dNI
+      sign: -1

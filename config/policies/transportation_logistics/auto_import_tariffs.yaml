@@ -1,7 +1,7 @@
 id: auto_import_tariffs
 industry: transportation_logistics
 name: Tariffs on imported vehicles and auto parts
-description: A Section 232-style tariff on imported cars, light trucks, medium/heavy trucks and parts, with USMCA-content relief. GM, which builds many US-sold vehicles in Mexico and Korea, carries most of it. Tesla's exposure is through parts. The parcel, rail and airline companies see it only in fleet costs.
+description: Tariffs on imported vehicles and parts, with USMCA-content relief. GM, which builds many US-sold vehicles in Mexico and Korea, carries most of it. Tesla's exposure is through parts. The parcel, rail and airline companies see it only in fleet costs.
 persistence: permanent
 user_inputs:
   - key: tariff_pct

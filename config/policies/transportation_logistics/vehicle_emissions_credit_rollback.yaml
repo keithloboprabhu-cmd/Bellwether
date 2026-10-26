@@ -1,7 +1,7 @@
 id: vehicle_emissions_credit_rollback
 industry: transportation_logistics
 name: Weaker vehicle emissions standards (credit market shrinks)
-description: Loosening or repealing federal GHG/CAFE standards and California ZEV rules lowers the value of the regulatory credits automakers trade. Tesla loses high-margin credit revenue, and credit buyers save. In this universe only Tesla and GM are exposed.
+description: Loosening or repealing federal GHG/CAFE standards and California ZEV rules lowers the value of the regulatory credits automakers trade. Tesla loses high-margin credit revenue, and credit buyers save. Tesla and Rivian are modeled sellers; GM and Ford are modeled buyers. Firm-specific forward exposure is uncertain.
 persistence: permanent
 user_inputs:
   - key: credit_value_change_pct

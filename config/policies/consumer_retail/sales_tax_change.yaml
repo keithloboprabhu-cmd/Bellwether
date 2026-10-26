@@ -37,3 +37,6 @@ channels:
       elasticity: assumption.elasticity
       exposed_revenue_share: exposure.us_consumer_revenue_share * assumption.taxable_share
 exposure_keys: [us_consumer_revenue_share]
+
+references:
+  - https://comptroller.texas.gov/taxes/sales/faq/food.php

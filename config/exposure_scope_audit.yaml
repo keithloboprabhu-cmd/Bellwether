@@ -1,0 +1,572 @@
+rules:
+- industry: tmt
+  key: us_app_store_fee_share
+  allowed:
+  - AAPL
+  - GOOGL
+  rationale: This channel covers the mobile app-store commission owners, not streaming subscriptions or enterprise
+    software fees.
+- industry: tmt
+  key: broadband_subsidy_capture_share
+  allowed:
+  - VZ
+  - T
+  - CMCSA
+  rationale: Household broadband subsidies flow to retail access providers; networking-equipment suppliers
+    have no direct subscriber benefit in this channel.
+- industry: tmt
+  key: us_digital_ad_revenue_share
+  allowed:
+  - AAPL
+  - MSFT
+  - GOOGL
+  - META
+  - NFLX
+  - DIS
+  rationale: Direct digital advertising and ad-supported media sales; enterprise software license and consulting
+    revenue is not media advertising revenue.
+- industry: financial_services
+  key: credit_interchange_revenue_share
+  allowed:
+  - JPM
+  - BAC
+  - WFC
+  - GS
+  - C
+  - USB
+  - PNC
+  - TFC
+  - COF
+  - FITB
+  - HBAN
+  - KEY
+  rationale: Covered Visa/Mastercard credit-card issuers. Amex's three-party network is exempt in this scenario;
+    custody/brokerage firms and Ally's divested card business do not inherit issuer interchange.
+- industry: consumer_retail
+  key: snap_grocery_spend_share
+  allowed:
+  - WMT
+  - TGT
+  - COST
+  - AMZN
+  - KR
+  - DG
+  - DLTR
+  rationale: Direct SNAP grocery-redemption capture. Manufacturer supplier effects, restaurant-meals exceptions
+    and non-food specialty sales are outside this retailer channel.
+- industry: consumer_retail
+  key: us_sweetened_beverage_revenue_share
+  allowed:
+  - WMT
+  - TGT
+  - COST
+  - AMZN
+  - HD
+  - LOW
+  - KR
+  - DG
+  - DLTR
+  - SBUX
+  - MCD
+  - KO
+  - PEP
+  rationale: Retailers, beverage producers and restaurants selling covered beverages; unrelated specialty retailers
+    and household-products businesses do not inherit grocery beverage exposure.
+- industry: healthcare
+  key: medicare_advantage_revenue_share
+  allowed:
+  - UNH
+  - ELV
+  - HUM
+  - CVS
+  - CNC
+  - MOH
+  rationale: Direct MA premium revenue; Cigna sold its Medicare businesses to HCSC in March 2025. PBM service
+    contracts are not MA premium revenue.
+- industry: healthcare
+  key: pharma_import_share_of_cogs
+  allowed:
+  - PFE
+  - LLY
+  - JNJ
+  - MRK
+  - ABBV
+  - AMGN
+  - GILD
+  rationale: This policy covers imported branded drugs/API, not medical devices, life-science instruments or
+    indirect insurer drug costs.
+- industry: industrials
+  key: ind_infrastructure_capture_share
+  allowed:
+  - CAT
+  - DE
+  - GE
+  - HON
+  - MMM
+  - NUE
+  - ETN
+  - EMR
+  - ITW
+  - PH
+  - CMI
+  - PCAR
+  - DOV
+  - ROK
+  - STLD
+  - CLF
+  - CARR
+  - OTIS
+  - IR
+  rationale: Domestic equipment/materials/building-systems suppliers; Boeing's aerospace revenue is outside
+    this infrastructure transfer channel.
+- industry: energy_resources
+  key: us_crude_sales_share
+  allowed:
+  - XOM
+  - CVX
+  - COP
+  - EOG
+  - OXY
+  - DVN
+  rationale: Direct upstream crude sales, excluding oilfield-service, pipeline and stand-alone refining revenue.
+- industry: energy_resources
+  key: us_refinery_domestic_crude_cost_share
+  allowed:
+  - XOM
+  - CVX
+  - PSX
+  - VLO
+  - MPC
+  rationale: Domestic crude purchased by refiners. Upstream-only producers, service contractors and gas pipelines
+    do not inherit refinery feedstock costs.
+- industry: energy_resources
+  key: federal_upstream_revenue_share
+  allowed:
+  - XOM
+  - CVX
+  - COP
+  - EOG
+  - OXY
+  - DVN
+  rationale: Direct production on federal leases, not contractor service revenue or stand-alone refining.
+- industry: energy_resources
+  key: us_methane_kt_ch4
+  allowed:
+  - XOM
+  - CVX
+  - COP
+  - EOG
+  - OXY
+  - DVN
+  - WMB
+  - PSX
+  - VLO
+  - MPC
+  rationale: Fee is on covered oil/gas facilities. Power-generation fuel-combustion methane and oilfield-service-company
+    footprints are not a proxy for covered Subpart W waste emissions.
+- industry: energy_resources
+  key: clean_generation_credits_musd
+  allowed:
+  - NEE
+  - DUK
+  - SO
+  - AEP
+  - CEG
+  rationale: Qualifying generation credits; Exelon separated its generation business into Constellation in
+    2022 and does not inherit the generator peer's credits.
+- industry: transportation_logistics
+  key: tl_checked_bag_fee_revenue_share
+  allowed:
+  - DAL
+  - UAL
+  - AAL
+  - LUV
+  rationale: Passenger airlines' bag fees, not ride-hailing fares or freight revenue.
+- industry: transportation_logistics
+  key: tl_domestic_passenger_revenue_share
+  allowed:
+  - DAL
+  - UAL
+  - AAL
+  - LUV
+  rationale: Airline-ticket excise tax applies to domestic air travel; ride-hailing is outside this channel.
+- industry: transportation_logistics
+  key: tl_fuel_co2_mt
+  allowed:
+  - UPS
+  - FDX
+  - UNP
+  - DAL
+  - TSLA
+  - GM
+  - F
+  - RIVN
+  - JBHT
+  - ODFL
+  - XPO
+  - SAIA
+  - CSX
+  - NSC
+  - UAL
+  - AAL
+  - LUV
+  rationale: Direct fleet/operating fuel footprint. Brokerage and independent drivers' Scope 3 emissions at
+    CHRW, Uber and Lyft are not owned-fleet Scope 1 fuel.
+- industry: transportation_logistics
+  key: tl_auto_tariff_cost_at_25pct_musd
+  allowed:
+  - UPS
+  - FDX
+  - UNP
+  - DAL
+  - TSLA
+  - GM
+  - F
+  - RIVN
+  - JBHT
+  - ODFL
+  - XPO
+  - SAIA
+  - CSX
+  - NSC
+  - UAL
+  - AAL
+  - LUV
+  rationale: Direct vehicle/parts and owned-fleet cost; independent drivers and brokered carrier fleets are
+    outside the modeled companies' direct import bill.
+- industry: transportation_logistics
+  key: tl_regulatory_credit_revenue_share
+  allowed:
+  - TSLA
+  - RIVN
+  rationale: Modeled regulatory-credit sellers. Ford is treated as a purchaser rather than inheriting Tesla's
+    seller revenue.
+- industry: transportation_logistics
+  key: tl_regulatory_credit_purchases_musd
+  allowed:
+  - GM
+  - F
+  rationale: Modeled credit purchasers. Rivian is a seller; its Tesla/GM peer median must not imply simultaneous
+    purchased credits.
+- industry: education
+  key: grad_plus_dependent_revenue_share
+  allowed:
+  - LOPE
+  - CVSA
+  - STRA
+  - COUR
+  - PRDO
+  - APEI
+  rationale: US graduate/professional programs or their service partners. Undergraduate vocational schools
+    and Laureate's Mexico/Peru institutions do not inherit Grad PLUS exposure.
+- industry: education
+  key: pell_revenue_share
+  allowed:
+  - LOPE
+  - CVSA
+  - STRA
+  - UTI
+  - PRDO
+  - APEI
+  - LINC
+  rationale: US Title IV undergraduate institutions/service partners; Laureate's current Mexico/Peru operations
+    are outside US Pell funding.
+- industry: education
+  key: earnings_test_at_risk_revenue_share
+  allowed:
+  - LOPE
+  - CVSA
+  - STRA
+  - COUR
+  - UTI
+  - PRDO
+  - APEI
+  - LINC
+  rationale: Modeled US federal-aid program exposure; foreign private-pay institutions and non-institutional
+    learning tools are outside this channel.
+- industry: education
+  key: ninety_ten_hi_revenue_share
+  allowed:
+  - LOPE
+  - CVSA
+  - STRA
+  - UTI
+  - PRDO
+  - APEI
+  - LINC
+  rationale: US proprietary-school Title IV revenue or service-partner exposure; not foreign universities,
+    lenders or consumer apps.
+- industry: education
+  key: ninety_ten_lo_revenue_share
+  allowed:
+  - LOPE
+  - CVSA
+  - STRA
+  - UTI
+  - PRDO
+  - APEI
+  - LINC
+  rationale: US proprietary-school Title IV revenue or service-partner exposure; not foreign universities,
+    lenders or consumer apps.
+- industry: education
+  key: online_revenue_share
+  allowed:
+  - LRN
+  - LOPE
+  - CVSA
+  - STRA
+  - DUOL
+  - COUR
+  - UTI
+  - PRDO
+  - APEI
+  - NRDY
+  - LINC
+  - SKIL
+  - CHGG
+  - SCHL
+  - WLY
+  - FC
+  rationale: This policy covers online education revenue; physical childcare centers, student lenders and non-US-only
+    institutional programs are outside its direct US online-education channel.
+- industry: healthcare
+  key: hospital_outpatient_medicare_revenue_share
+  allowed:
+  - HCA
+  - THC
+  - UHS
+  rationale: Hospital outpatient Medicare billing only; drugmakers, device suppliers and insurer premium revenue
+    are outside the provider payment channel.
+- industry: healthcare
+  key: pbm_retained_rebate_share
+  allowed:
+  - UNH
+  - ELV
+  - HUM
+  - CVS
+  - CI
+  rationale: Retained rebates at owned PBMs, not insurers that outsource pharmacy-benefit management or drug/device
+    manufacturer revenue.
+- industry: tmt
+  key: restricted_chip_china_share
+  allowed:
+  - NVDA
+  - INTC
+  - AMD
+  - QCOM
+  - MU
+  - AVGO
+  rationale: Direct restricted merchant semiconductor sales; customer consumption of chips and software revenue
+    are not chip export sales.
+- industry: tmt
+  key: us_semis_mfg_capex_musd
+  allowed:
+  - INTC
+  - MU
+  rationale: Direct qualifying US chip manufacturing investment in this sample; fabless customers and software
+    firms do not inherit a manufacturer credit.
+- industry: financial_services
+  key: fdic_assessment_base_musd
+  allowed:
+  - JPM
+  - BAC
+  - WFC
+  - GS
+  - C
+  - AXP
+  - MS
+  - SCHW
+  - BNY
+  - STT
+  - USB
+  - PNC
+  - TFC
+  - COF
+  - FITB
+  - HBAN
+  - KEY
+  - ALLY
+  rationale: FDIC assessments cover insured depository subsidiaries, not an insurer's policy premiums or a
+    payment network's transactions. AIG, Prudential, Progressive, BlackRock and Mastercard have no quantified
+    insured-bank assessment base in this model.
+- industry: healthcare
+  key: medicaid_revenue_share
+  allowed:
+  - UNH
+  - ELV
+  - HUM
+  - CVS
+  - CNC
+  - MOH
+  - HCA
+  - THC
+  - UHS
+  rationale: This enrollment channel covers Medicaid plan premiums and a separately estimated hospital patient-volume
+    proxy. Drugmakers are not capitated Medicaid plans; formulary, rebate and prescription-demand spillovers
+    need a separate model.
+- industry: public_sector
+  key: govcon_fed_it_share
+  allowed:
+  - BAH
+  - LDOS
+  - SAIC
+  - CACI
+  - PSN
+  - GD
+  - LMT
+  - NOC
+  - RTX
+  - HII
+  - KBR
+  - ICFI
+  - TTEK
+  rationale: Agency IT modernization and cyber/services contract exposure must not be copied from General Dynamics
+    to defense vehicle, drone, nuclear-component or aviation-parts manufacturers. Mission hardware and customer
+    supply-chain effects are outside this channel.
+- industry: public_sector
+  key: govcon_advisory_share
+  allowed:
+  - BAH
+  - LDOS
+  - SAIC
+  - CACI
+  - PSN
+  - GD
+  - KBR
+  - ICFI
+  - TTEK
+  rationale: Management consulting and advisory cancellations do not automatically cancel weapons, ship, drone,
+    vehicle, nuclear-component or aerospace manufacturing contracts.
+- industry: education
+  key: esa_capture_share
+  allowed:
+  - LRN
+  - NRDY
+  - SCHL
+  - KLC
+  - BFAM
+  rationale: "ESA capture requires a potentially eligible K\u201312/early-learning service or materials business.\
+    \ Student loan interest and university publishing are outside this channel."
+- industry: energy_resources
+  key: us_critical_mineral_production_cost_musd
+  allowed:
+  - FCX
+  rationale: Only separately identified eligible mineral production costs qualify; oil/gas and oilfield services
+    cannot inherit a mineral-production credit, even in a high case.
+- industry: financial_services
+  key: card_late_fee_revenue_share
+  allowed:
+  - JPM
+  - BAC
+  - WFC
+  - C
+  - AXP
+  - USB
+  - PNC
+  - TFC
+  - COF
+  - FITB
+  - HBAN
+  - KEY
+  rationale: Covered consumer-card late fees only. The modeled Goldman Apple Card book charges no late fees,
+    and Ally sold its card business.
+- industry: healthcare
+  key: aca_exchange_revenue_share
+  allowed:
+  - UNH
+  - ELV
+  - CI
+  - CNC
+  - MOH
+  rationale: Current ACA exchange premium business; Aetna/CVS and Humana exits are not reversed simply by selecting
+    a high exposure case.
+- industry: industrials
+  key: govcon_defense_intel_share
+  allowed:
+  - CAT
+  - GE
+  - HON
+  - MMM
+  - BA
+  - ETN
+  - EMR
+  - ITW
+  - PH
+  - CMI
+  - PCAR
+  - DOV
+  - ROK
+  - CARR
+  - OTIS
+  - IR
+  rationale: This channel requires a separately configured defense/IC sales estimate, excluding unquantified
+    downstream steel/customer procurement feedback.
+- industry: real_estate_hospitality
+  key: re_property_tax_musd
+  allowed:
+  - PLD
+  - AMT
+  - SPG
+  - MAR
+  - HLT
+  - O
+  - EQIX
+  - DLR
+  - WELL
+  - VTR
+  - ESS
+  - MAA
+  - PSA
+  - EXR
+  - VICI
+  - WY
+  - HST
+  - RLJ
+  - PK
+  rationale: Host-owned taxes are not Airbnb's direct property tax bill, including exposure high cases.
+- industry: real_estate_hospitality
+  key: re_office_linked_revenue_share
+  allowed:
+  - SPG
+  - MAR
+  - HLT
+  - ABNB
+  - HST
+  - RLJ
+  - PK
+  rationale: This attendance-linked spending channel covers retail footfall, business travel and remote-work
+    stays. Fixed property rents and other property types need a separate channel.
+- industry: real_estate_hospitality
+  key: re_intl_inbound_revenue_share
+  allowed:
+  - SPG
+  - MAR
+  - HLT
+  - ABNB
+  - HST
+  - RLJ
+  - PK
+  rationale: Modeled inbound-visitor spending includes tourism-sensitive retail/hotels/bookings, not the same
+    generic share for every property REIT.
+- industry: tmt
+  key: greater_china_revenue_share
+  allowed:
+  - AAPL
+  - MSFT
+  - GOOGL
+  - META
+  - NVDA
+  - IBM
+  - ORCL
+  - CRM
+  - ADBE
+  - INTC
+  - AMD
+  - QCOM
+  - MU
+  - AVGO
+  - CSCO
+  - NFLX
+  - DIS
+  rationale: Current China sales/advertiser exposure, not inherited hypothetical China subscriber sales at
+    US cable/telecom access providers.

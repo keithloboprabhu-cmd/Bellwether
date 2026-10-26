@@ -1,26 +1,35 @@
 id: fdic_assessment_increase
 industry: financial_services
 name: Higher FDIC deposit-insurance assessments
-description: The FDIC raises deposit-insurance assessment rates, as it did by 2 bp from 2023 to rebuild the Deposit Insurance Fund. Cost scales with each bank's insured-bank balance sheet, so JPMorgan and Bank of America pay the most in dollars; relative to earnings the effect is small everywhere.
+description: Higher recurring FDIC deposit-insurance assessment rates raise costs at insured bank subsidiaries.
+  The assessment base is average consolidated bank assets less average tangible equity, not insurer premiums
+  or only insured deposits. Consolidated-company exposure estimates must isolate the insured depository subsidiaries.
 persistence: permanent
 user_inputs:
-  - key: d_rate_bp
-    label: Increase in assessment rate
-    unit: bps of assessment base
-    min: 0
-    max: 10
-    step: 0.5
-    default: 2
-    help: The FDIC raised initial base assessment rate schedules uniformly by 2 bp from Q1 2023; it estimated this would cut bank income by about 1.2% a year on average.
+- key: d_rate_bp
+  label: Increase in assessment rate
+  unit: bps of assessment base
+  min: 0
+  max: 10
+  step: 0.5
+  default: 2
+  help: The FDIC raised initial base assessment rate schedules uniformly by 2 bp from Q1 2023; it estimated
+    this would cut bank income by about 1.2% a year on average.
 channels:
-  - type: cost
-    label: Higher deposit-insurance assessments
-    params:
-      exposed_cost_share: 0
-      shock_pct: 0
-      dcost_musd: exposure.fdic_assessment_base_musd * input.d_rate_bp / 10000
-exposure_keys: [fdic_assessment_base_musd]
+- type: cost
+  label: Higher deposit-insurance assessments
+  params:
+    exposed_cost_share: 0
+    shock_pct: 0
+    dcost_musd: exposure.fdic_assessment_base_musd * input.d_rate_bp / 10000
+  company_kinds:
+  - bank
+exposure_keys:
+- fdic_assessment_base_musd
 references:
-  - https://www.fdic.gov/news/press-releases/2022/pr22073.html
+- https://www.fdic.gov/news/press-releases/2022/pr22073.html
+- https://www.fdic.gov/resources/deposit-insurance/deposit-insurance-fund/dif-assessments.html
 narrative:
-  extra: "Assessment bases are estimated from each insured bank subsidiary's size; the FDIC's own estimate for the 2023 increase was a 1.2% average hit to bank income."
+  extra: AIG and other insurers are outside this direct bank-assessment channel. Bank-counterparty effects
+    and insurance-guaranty association assessments are separate risks and are not estimated here. Company bases
+    are estimates unless specifically sourced as reported.

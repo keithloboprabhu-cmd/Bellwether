@@ -1,11 +1,18 @@
 /** Deterministic terrain geometry and event-driven Canvas 2D renderer.
  * Impacts are fractions. A=tanh(impact/0.15), fixed across scenarios.
- * Compact supports exclude neighboring anchors. A normalized partition bounds the
- * interpolated terrain by its node values, with h(anchor)=A and no noise contribution.
+ * Smooth anisotropic interpolation joins companies into one continuous terrain.
+ * Positive normalized weights bound the surface by its anchors, with h(anchor)=A.
  */
 export type FieldNode = {id:string; impact:number|null};
 export type Anchor = {id:string; x:number; y:number; radius:number};
-export const BAYER = [0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
+/** Fixed density scale: a 9.2% impact has about six times the center density of 1.4%. */
+export function dotDensity(height:number):number {return Math.min(.92,Math.abs(height)*1.2);}
+/** Stable spatial dithering gives both signs the same density without diagonal masks. */
+export function dotThreshold(x:number,y:number):number {
+  let h=Math.imul(x+1,374761393)^Math.imul(y+1,668265263);
+  h=Math.imul(h^(h>>>13),1274126177);
+  return ((h^(h>>>16))>>>0)/4294967296;
+}
 /** Map a fractional EPS impact to elevation on the shared, fixed scale. */
 export function mappedImpact(impact:number|null):number {return impact===null?0:Math.tanh(impact/.15);}
 function hash(s:string):number {let h=2166136261; for(const c of s) h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0;}
@@ -15,13 +22,26 @@ export function anchorsFor(nodes:FieldNode[],seed=256):Anchor[] {
   const cols=Math.ceil(Math.sqrt(sorted.length*1.5)),rows=Math.ceil(sorted.length/cols);
   return sorted.map((n,i)=>({id:n.id,x:(i%cols+.5)/cols,y:(Math.floor(i/cols)+.5)/rows,radius:Math.min(1/cols,1/rows)*.8}));
 }
-/** Evaluate bounded geometry while preserving each node's exact mapped height. */
+type Peak=Anchor&{height:number};
+function terrainPeaks(nodes:FieldNode[],anchors:Anchor[]):Peak[] {
+  const impacts=new Map(nodes.map(n=>[n.id,n.impact]));
+  return anchors.map(a=>({...a,height:mappedImpact(impacts.get(a.id)??null)}));
+}
+function terrainHeight(x:number,y:number,peaks:Peak[]):number {
+  let height=0,weight=0;
+  for(const a of peaks){
+    const dx=(x-a.x)/a.radius,dy=(y-a.y)/a.radius;
+    const along=dx*.8+dy*.6,across=-dx*.6+dy*.8;
+    const distance=along*along*.55+across*across*1.65;
+    if(distance<1e-14)return a.height;
+    const w=1/(distance*distance);
+    height+=a.height*w;weight+=w;
+  }
+  return weight?height/weight:0;
+}
+/** Interpolate a bounded flowing surface with exact heights at company anchors. */
 export function heightAt(x:number,y:number,nodes:FieldNode[],anchors:Anchor[]):number {
-  let h=0,weight=0;
-  for(const a of anchors){const n=nodes.find(n=>n.id===a.id);if(!n || n.impact===null)continue;
-    const d=Math.hypot(x-a.x,y-a.y)/a.radius;
-    if(d<1){const w=Math.pow(1-d*d,2);h+=mappedImpact(n.impact)*w;weight+=w;}
-  }return h/Math.max(1,weight);
+  return terrainHeight(x,y,terrainPeaks(nodes,anchors));
 }
 export type FieldColors = {gold:string; gain:string; loss:string; plate:string; ink:string};
 /** Attach the event-driven renderer and return its small update/cleanup lifecycle. */
@@ -33,7 +53,7 @@ export function createField(canvas:HTMLCanvasElement,colors:FieldColors) {
   if(!ctx)throw new Error('Canvas 2D is unavailable. Exact results remain in the table.');
   function render(){
     if(destroyed || document.hidden || !visible)return;
-    const w=canvas.clientWidth,h=canvas.clientHeight,dpr=Math.min(devicePixelRatio||1,1.5);
+    const w=canvas.clientWidth,h=canvas.clientHeight,dpr=Math.min(devicePixelRatio||1,2);
     if(!w || !h)return;
     canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx!.setTransform(dpr,0,0,dpr,0,0);
     function drawSelection(){
@@ -42,31 +62,55 @@ export function createField(canvas:HTMLCanvasElement,colors:FieldColors) {
     const key=JSON.stringify([w,h,dpr,illustrative,nodes]);
     if(cachedKey===key){ctx!.drawImage(cached,0,0,w,h);drawSelection();return;}
     ctx!.fillStyle=colors.plate;ctx!.fillRect(0,0,w,h);
-    const step=5, nx=Math.ceil(w/step),ny=Math.ceil(h/step),values=new Float32Array((nx+1)*(ny+1));
+    const step=3, nx=Math.ceil(w/step),ny=Math.ceil(h/step),values=new Float32Array((nx+1)*(ny+1));
+    const peaks=terrainPeaks(nodes,anchors);
     const elevation=(u:number,v:number)=>illustrative?
       .43*Math.exp(-((u-.48)**2/.08+(v-.52)**2/.13))+.24*Math.sin(u*13+v*5)*Math.exp(-((v-.5)**2/.3)):
-      heightAt(u,v,nodes,anchors);
-    // Low-resolution ordered dither buffer; no stochastic contribution to heights.
-    const buffer=document.createElement('canvas');buffer.width=nx;buffer.height=ny;
-    const b=buffer.getContext('2d');if(!b)return;
-    for(let y=0;y<=ny;y++)for(let x=0;x<=nx;x++)values[y*(nx+1)+x]=elevation(x/nx,y/ny);
-    for(let y=0;y<ny;y++)for(let x=0;x<nx;x++){
-      const z=values[y*(nx+1)+x], threshold=BAYER[(y%4)*4+x%4]/16;
-      if(Math.abs(z)*.8+(illustrative?.025:0)>threshold && (illustrative||z!==0)){
-        b.globalAlpha=illustrative?.10:.75;
-        b.fillStyle=illustrative?colors.gold:z>0?colors.gain:z<0?colors.loss:colors.gold;
-        if(z<0&&!illustrative){if((x+y)%4===0)b.fillRect(x,y,1,1);}
-        else b.fillRect(x,y,1,1);
+      terrainHeight(u,v,peaks);
+    let minHeight=Infinity,maxHeight=-Infinity;
+    for(let y=0;y<=ny;y++)for(let x=0;x<=nx;x++){
+      const value=elevation(x/nx,y/ny);values[y*(nx+1)+x]=value;
+      minHeight=Math.min(minHeight,value);maxHeight=Math.max(maxHeight,value);
+    }
+    // A very dim continuous light layer makes the halftone read as elevation,
+    // rather than disconnected confetti. It uses the same signed data surface.
+    const light=document.createElement('canvas');light.width=nx+1;light.height=ny+1;
+    const lightCtx=light.getContext('2d');
+    function rgb(color:string){const hex=color.trim().replace('#','');return [0,2,4].map(i=>parseInt(hex.slice(i,i+2),16));}
+    const gain=rgb(colors.gain),loss=rgb(colors.loss);
+    if(lightCtx&&!illustrative){
+      const pixels=lightCtx.createImageData(nx+1,ny+1);
+      for(let i=0;i<values.length;i++){
+        const z=values[i],magnitude=Math.abs(z),signed=z>0?gain:loss;
+        for(let c=0;c<3;c++)pixels.data[i*4+c]=signed[c];
+        pixels.data[i*4+3]=Math.min(.16,magnitude*.24)*255;
+      }
+      lightCtx.putImageData(pixels,0,0);ctx!.imageSmoothingEnabled=true;ctx!.drawImage(light,0,0,w,h);
+    }
+    // Fine screen-space dots are independent of the coarser contour mesh. Stronger
+    // shocks add points on the same stable grid; tiny shocks have no Bayer floor.
+    const pitch=2, dotSize=1.25;
+    for(let y=0;y*pitch<h;y++)for(let x=0;x*pitch<w;x++){
+      const px=(x+.5)*pitch,py=(y+.5)*pitch;
+      const z=elevation(px/w,py/h);
+      const density=illustrative?dotDensity(z)*.8+.018:dotDensity(z);
+      if(density>dotThreshold(x,y)){
+        const magnitude=Math.min(1,Math.abs(z));
+        ctx!.globalAlpha=illustrative?.14:.18+magnitude*.75;
+        ctx!.fillStyle=illustrative?colors.gold:z>0?colors.gain:colors.loss;
+        ctx!.fillRect(Math.round(px*dpr)/dpr,Math.round(py*dpr)/dpr,dotSize,dotSize);
       }
     }
-    ctx!.imageSmoothingEnabled=false;ctx!.drawImage(buffer,0,0,w,h);
-    // Fourteen marching-squares contours, fixed signed levels; stronger fifth indices.
-    const levels=illustrative?Array.from({length:14},(_,i)=>(i+1)*.045):Array.from({length:28},(_,i)=>(i<14?i-14:i-13)/14);
+    ctx!.globalAlpha=1;
+    // Fine fixed-height contour intervals expose gradients even in small shocks.
+    const levels=illustrative?Array.from({length:14},(_,i)=>(i+1)*.045):Array.from({length:80},(_,i)=>(i<40?i-40:i-39)*.025);
     levels.forEach((level,index)=>{
-      ctx!.beginPath();ctx!.lineWidth=index%5===0?1.1:.65;
-      ctx!.strokeStyle=colors.gold;ctx!.globalAlpha=illustrative?(index%5===0?.33:.16):(index%5===0?.5:.26);
+      if(level<=minHeight||level>=maxHeight)return;
+      const major=Math.round(Math.abs(level)/.025)%5===0;
+      ctx!.beginPath();ctx!.lineWidth=illustrative?(index%5===0?1.1:.65):(major?1:.55);
+      ctx!.strokeStyle=illustrative?colors.gold:level>0?colors.gain:colors.loss;ctx!.globalAlpha=illustrative?(index%5===0?.33:.16):(major?.46:.18+Math.abs(level)*.25);
       for(let y=0;y<ny;y++)for(let x=0;x<nx;x++){
-        const p=[[x*step,y*step],[(x+1)*step,y*step],[(x+1)*step,(y+1)*step],[x*step,(y+1)*step]];
+        const p=[[x/nx*w,y/ny*h],[(x+1)/nx*w,y/ny*h],[(x+1)/nx*w,(y+1)/ny*h],[x/nx*w,(y+1)/ny*h]];
         const v=[values[y*(nx+1)+x],values[y*(nx+1)+x+1],values[(y+1)*(nx+1)+x+1],values[(y+1)*(nx+1)+x]];
         const hits:number[][]=[];
         for(let e=0;e<4;e++){const j=(e+1)%4;if((v[e]>level)!==(v[j]>level)){const t=(level-v[e])/(v[j]-v[e]);hits.push([p[e][0]+t*(p[j][0]-p[e][0]),p[e][1]+t*(p[j][1]-p[e][1])]);}}

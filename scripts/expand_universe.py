@@ -140,7 +140,8 @@ def exposure_estimates(industry: str, ticker: str, company: dict, reg, original:
         elif structural_zero:
             rationale = f"Explicit scope estimate: {label} is outside this direct policy channel; indirect effects are not modeled. This is not a reported zero exposure."
         out[key] = {"value": base, "low": low, "high": high, "source": "estimate", "rationale": rationale, "applicable": not not_applicable}
-    return out
+    from policyshock.company.exposure_audit import reviewed_exposures
+    return reviewed_exposures(industry, ticker, out)
 
 
 def main() -> int:
@@ -196,7 +197,18 @@ def main() -> int:
         ind["companies"].extend(c for c in additions if c["ticker"] not in existing_tickers)
         if not 20 <= len(ind["companies"]) <= 30:
             raise ValueError(f"Invalid sample count for {ind['slug']}")
-        (STAGE / f"{ind['slug']}__expanded.yaml").write_text(yaml.safe_dump({"industry": ind["slug"], "companies": estimates}, sort_keys=False))
+        # New policy-specific files can own exposures for expanded tickers too.
+        # Do not duplicate/overwrite those canonical keys during regeneration.
+        destination = f"{ind['slug']}__expanded.yaml"
+        for path in (ROOT / "config/exposures").glob("*.yaml"):
+            if path.name == destination:
+                continue
+            existing = yaml.safe_load(path.read_text())
+            for ticker, values in existing["companies"].items():
+                if ticker in estimates:
+                    for key in values:
+                        estimates[ticker].pop(key, None)
+        (STAGE / destination).write_text(yaml.safe_dump({"industry": ind["slug"], "companies": estimates}, sort_keys=False))
     baseline["as_of"] = datetime.now(timezone.utc).isoformat()
     (STAGE / "baselines.json").write_text(json.dumps(baseline, indent=1))
     (STAGE / "industries.yaml").write_text(yaml.safe_dump(config, sort_keys=False))

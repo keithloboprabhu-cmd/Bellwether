@@ -1,0 +1,9 @@
+exposures:
+- key: pharma_import_share_of_cogs
+  label: US branded-drug/API import share of COGS
+  unit: fraction
+  min: 0
+  max: 1
+  help: Direct pharmaceutical import exposure for the drug/API tariff scenario; excludes
+    medical devices and life-science tools. Separate from broad goods import exposure
+    used by macro tariffs.

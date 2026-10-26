@@ -1,36 +1,42 @@
 id: consulting_contract_cancellations
 industry: public_sector
 name: Consulting contract cancellations
-description: An efficiency drive (like the 2025 DOGE/GSA review of consulting contracts) cancels part of the federal management-consulting and advisory portfolio. Booz Allen is by far the most exposed; the IT and hardware names barely move.
-persistence: "years: 4"
+description: An efficiency drive (like the 2025 DOGE/GSA review of consulting contracts) cancels part of the
+  federal management-consulting and advisory portfolio. Booz Allen is by far the most exposed; only separately
+  identified advisory/services businesses are exposed; hardware-only contract revenue is outside this cancellation
+  channel.
+persistence: 'years: 4'
 user_inputs:
-  - key: cut_pct
-    label: Share of advisory/consulting work cancelled
-    unit: percent
-    min: 0
-    max: 100
-    step: 5
-    default: 15
-    help: Booz Allen's civil and commercial revenue fell 22% in its fiscal 2026 (to $3.2B from $4.2B) amid contract reviews and cancellations.
+- key: cut_pct
+  label: Share of advisory/consulting work cancelled
+  unit: percent
+  min: 0
+  max: 100
+  step: 5
+  default: 15
+  help: Booz Allen's civil and commercial revenue fell 22% in its fiscal 2026 (to $3.2B from $4.2B) amid contract
+    reviews and cancellations.
 assumptions:
-  - key: replacement_offset
-    label: Share of cancelled work later re-procured or redeployed
-    unit: fraction
-    low: 0.0
-    base: 0.25
-    high: 0.5
-    source: estimate
-    rationale: Some cancelled scope is re-awarded as fixed-price or in-house-plus-contractor work, and firms move freed staff onto defense programs; most is lost for the term.
+- key: replacement_offset
+  label: Share of cancelled work later re-procured or redeployed
+  unit: fraction
+  low: 0.0
+  base: 0.25
+  high: 0.5
+  source: estimate
+  rationale: Some cancelled scope is re-awarded as fixed-price or in-house-plus-contractor work, and firms
+    move freed staff onto defense programs; most is lost for the term.
 channels:
-  - type: gov_budget
-    label: Cancelled consulting and advisory task orders
-    params:
-      gov_revenue_share: exposure.govcon_advisory_share
-      d_budget_pct: -(input.cut_pct / 100) * (1 - assumption.replacement_offset)
-exposure_keys: [govcon_advisory_share]
+- type: gov_budget
+  label: Cancelled consulting and advisory task orders
+  params:
+    gov_revenue_share: exposure.govcon_advisory_share
+    d_budget_pct: -(input.cut_pct / 100) * (1 - assumption.replacement_offset)
+exposure_keys:
+- govcon_advisory_share
 default_role: neutral
 references:
-  - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
-  - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+- https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+- https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
 narrative:
-  extra: "The four-year horizon assumes cancellations last roughly one administration before the work is re-procured."
+  extra: The four-year horizon assumes cancellations last roughly one administration before the work is re-procured.

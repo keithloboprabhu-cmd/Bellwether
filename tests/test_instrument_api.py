@@ -83,3 +83,22 @@ def test_undefined_valuation_is_not_a_projected_zero():
     losses = [c for c in actual["companies"] if c["baseline"]["eps_diluted"] <= 0 and c["dNI"] != 0]
     assert losses
     assert all(c["metrics"]["price"]["projected"] is None and c["metrics"]["eps"]["percent"] is None for c in losses)
+
+
+@pytest.mark.parametrize('industry,policy,ticker', [
+    ('financial_services','bank_capital_requirement','JPM'),
+    ('industrials','bonus_depreciation_rollback','CAT'),
+    ('real_estate_hospitality','like_kind_exchange_limits','PLD'),
+])
+def test_value_only_policies_expose_price_impact_and_reconciled_bounds(industry, policy, ticker):
+    """A zero EPS change must not conceal capital/timing/property valuation effects."""
+    actual = calculate({'industry':industry,'policy':policy})
+    c = next(c for c in actual['companies'] if c['id'] == ticker)
+    assert c['dNI'] == 0 and c['dEPS'] == 0
+    assert c['value'] < 0
+    assert c['value_low'] <= c['value'] <= c['value_high']
+    assert c['metrics']['price']['projected'] < c['metrics']['price']['baseline']
+    assert c['metrics']['price']['delta'] < 0
+    assert sum(ch['dValue'] for ch in c['channels']) == pytest.approx(c['market_value'])
+    assert sum(ch['dValue'] for ch in actual['channels']) == pytest.approx(actual['totals']['d_mcap'])
+    assert actual['value_range'][0] <= actual['totals']['d_mcap_pct'] <= actual['value_range'][1]

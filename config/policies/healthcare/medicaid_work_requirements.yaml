@@ -1,37 +1,46 @@
 id: medicaid_work_requirements
 industry: healthcare
 name: Medicaid funding cuts and work requirements
-description: Work-reporting requirements and tighter eligibility checks reduce Medicaid enrollment, so managed-care plans lose members and premium revenue. UnitedHealth and Elevance have the largest Medicaid books; drugmakers lose a little volume.
+description: Work-reporting requirements and tighter eligibility checks reduce Medicaid enrollment, so managed-care
+  plans lose members and premium revenue. The sample includes Medicaid-focused Centene and Molina as well as
+  diversified plans, hospitals. Hospital losses use an estimated patient-volume proxy; uncompensated-care and
+  supplemental-payment effects are outside this channel. Drugmaker prescription/rebate spillovers are outside
+  this enrollment channel.
 persistence: permanent
 user_inputs:
-  - key: enrollment_change_pct
-    label: Change in Medicaid enrollment
-    unit: percent
-    min: -20
-    max: 5
-    step: 0.5
-    default: -6.5
-    help: CBO estimated the 2025 reconciliation bill's work requirement alone would cut Medicaid enrollment by 5.2 million in 2034, about 6–7% of an ~80 million program.
+- key: enrollment_change_pct
+  label: Change in Medicaid enrollment
+  unit: percent
+  min: -20
+  max: 5
+  step: 0.5
+  default: -6.5
+  help: "CBO estimated the 2025 reconciliation bill's work requirement alone would cut Medicaid enrollment\
+    \ by 5.2 million in 2034, about 6\u20137% of an ~80 million program."
 assumptions:
-  - key: retained_share
-    label: Share of lost Medicaid revenue the insurer keeps in other products
-    unit: fraction
-    low: 0
-    base: 0.1
-    high: 0.2
-    source: estimate
-    rationale: A few people who lose Medicaid gain employer or exchange coverage with the same insurer; CBO expected most (4.8M of 5.2M) to become uninsured.
-    source_url: https://www.factcheck.org/2025/06/assessing-medicaid-coverage-losses-under-house-reconciliation-bill/
+- key: retained_share
+  label: Share of lost Medicaid revenue retained through other coverage
+  unit: fraction
+  low: 0
+  base: 0.1
+  high: 0.2
+  source: estimate
+  rationale: Scenario estimate of retention through alternative coverage. The June 2025 CBO analysis of the
+    House bill expected most disenrollees to become uninsured; do not assume Marketplace eligibility after
+    work-requirement disenrollment.
+  source_url: https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf
 channels:
-  - type: demand_volume
-    label: Lower Medicaid enrollment
-    params:
-      d_volume: input.enrollment_change_pct / 100 * (1 - assumption.retained_share)
-      exposed_revenue_share: exposure.medicaid_revenue_share
-exposure_keys: [medicaid_revenue_share]
+- type: demand_volume
+  label: Lower Medicaid enrollment
+  params:
+    d_volume: input.enrollment_change_pct / 100 * (1 - assumption.retained_share)
+    exposed_revenue_share: exposure.medicaid_revenue_share
+exposure_keys:
+- medicaid_revenue_share
 default_role: neutral
 references:
-  - https://www.factcheck.org/2025/06/assessing-medicaid-coverage-losses-under-house-reconciliation-bill/
-  - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+- https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf
+- https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
 narrative:
-  extra: "Members who stay on Medicaid are likely sicker on average, which would raise plans' medical cost ratios; that acuity effect is not modelled."
+  extra: Members who stay on Medicaid are likely sicker on average, which would raise plans' medical cost ratios;
+    that acuity effect is not modelled.

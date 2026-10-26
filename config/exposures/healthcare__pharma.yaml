@@ -1,0 +1,172 @@
+industry: healthcare
+companies:
+  CI:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  CNC:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  MOH:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  JNJ:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median base
+        and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  MRK:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median base
+        and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  ABBV:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median base
+        and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  AMGN:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median base
+        and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  GILD:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median base
+        and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
+      applicable: true
+  HCA:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  THC:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  UHS:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  TMO:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  ABT:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  MDT:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  UNH:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  ELV:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  HUM:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  CVS:
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      rationale: Direct branded-drug/API import scope only; device/tool manufacturers and insurer/provider books
+        remain outside this policy. Their broader imported goods exposure is stored separately, not set to zero.
+  PFE:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: Roughly 60% of Pfizer sales are US and a large share of branded supply is made in Ireland, Belgium
+        and other EU sites; about half of US-sold product cost assumed imported.
+  LLY:
+    pharma_import_share_of_cogs:
+      value: 0.3
+      low: 0.2
+      high: 0.45
+      source: estimate
+      rationale: About two-thirds of Lilly sales are US; much incretin and API supply has come from Ireland and
+        other EU sites while new US plants ramp; about half of US-sold product cost assumed imported.

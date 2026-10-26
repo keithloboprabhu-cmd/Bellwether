@@ -102,15 +102,21 @@ def search_companies(query: str) -> list[dict]:
 
 def lookup_company(ticker: str, industry: str) -> dict:
     """Fetch a supported issuer's annual financials; leave undisclosed exposures unset."""
+    from policyshock.data.live import fetch_quotes, service
     ticker = ticker.strip().upper()
     if not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,19}", ticker):
         raise ValueError("Choose a valid ticker from the SEC company search.")
     load_universe().industry(industry)
     known = store.load_baselines()["companies"].get(ticker)
     if known:
-        px = prices.load_snapshot()
-        row = store.baseline_row(ticker, px.set_index("ticker")["close"].get(ticker), px.set_index("ticker")["date"].get(ticker))
-        year = store.fiscal_year(ticker)
+        if service.active:
+            captured = service.capture()
+            row = service.baseline_rows([ticker], captured)[0]
+            year = captured["companies"].get(ticker, {}).get("years", known["years"])[0]
+        else:
+            px = prices.load_snapshot()
+            row = store.baseline_row(ticker, px.set_index("ticker")["close"].get(ticker), px.set_index("ticker")["date"].get(ticker))
+            year = store.fiscal_year(ticker)
         kind = known["kind"]
     else:
         identity = next((r for r in edgar.company_directory() if r["ticker"] == ticker), None)
@@ -127,7 +133,7 @@ def lookup_company(ticker: str, industry: str) -> dict:
         year = years[0].to_dict()
         year["filing_url"] = edgar.filing_url(cik, years[0].source_accn) if years[0].source_accn else None
         row = {**year["items"], "name": facts.get("entityName") or identity["title"], "fiscal_year": year["fiscal_year"], "filing_url": year["filing_url"], "flags": year["flags"]}
-        quote = prices.fetch_live([ticker])
+        quote = pd.DataFrame(fetch_quotes([ticker])) if service.active else prices.fetch_live([ticker])
         row["price"] = float(quote.iloc[0]["close"]) if len(quote) else None
         row["price_date"] = str(quote.iloc[0]["date"]) if len(quote) else None
         cover = shares_outstanding(facts)
@@ -196,7 +202,7 @@ def peer_exposures(industry: str, policy_id: str, revenue: float) -> dict:
     return result
 
 
-def run_company(profile: CompanyProfile, policy_id: str, inputs: dict):
+def run_company(profile: CompanyProfile, policy_id: str, inputs: dict, *, macro: dict | None = None):
     """Run a validated user-company profile through the existing range/channel engine."""
     reg = registry()
     policy = reg.policy(profile.industry, policy_id)
@@ -229,7 +235,7 @@ def run_company(profile: CompanyProfile, policy_id: str, inputs: dict):
     prepared = prepare_baselines(pd.DataFrame([row]))
     prepared[0]["model_flags"] += profile.warnings
     runner = Runner(policy, prepared, inputs, {a.key: (a.low, a.base, a.high) for a in policy.assumptions}, {ticker: profile.exposures},
-                    macro=fred.macro_context(), exposure_labels={k: d.label for k, d in reg.exposure_defs.items()})
+                    macro=fred.macro_context() if macro is None else macro, exposure_labels={k: d.label for k, d in reg.exposure_defs.items()})
     analysis = analyze(runner)
     # Company percentages use reported EPS, whereas industry percentages use model NI.
     # Re-evaluate sensitivity on the same company metric shown in the headline.

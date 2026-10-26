@@ -22,14 +22,14 @@ companies:
         relying on this company result.
       applicable: true
     grad_plus_dependent_revenue_share:
-      value: 0.07
-      low: 0.03
-      high: 0.35
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1261654/000126165425000025/0001261654-25-000025-index.htm
+      rationale: 'Company-specific scope estimate: US graduate/professional programs or their service partners.
+        Undergraduate vocational schools and Laureate''s Mexico/Peru institutions do not inherit Grad PLUS
+        exposure. This is a model boundary, not a reported zero measurement.'
       applicable: true
     ninety_ten_hi_ratio:
       value: 0.86
@@ -305,14 +305,14 @@ companies:
       applicable: true
   LAUR:
     earnings_test_at_risk_revenue_share:
-      value: 0.05
-      low: 0.01
-      high: 0.12
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm
+      rationale: 'Company-specific scope estimate: Modeled US federal-aid program exposure; foreign private-pay
+        institutions and non-institutional learning tools are outside this channel. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     esa_capture_share:
       value: 0.0
@@ -325,14 +325,14 @@ companies:
         relying on this company result.
       applicable: true
     grad_plus_dependent_revenue_share:
-      value: 0.07
-      low: 0.03
-      high: 0.35
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm
+      rationale: 'Company-specific scope estimate: US graduate/professional programs or their service partners.
+        Undergraduate vocational schools and Laureate''s Mexico/Peru institutions do not inherit Grad PLUS
+        exposure. This is a model boundary, not a reported zero measurement.'
       applicable: true
     ninety_ten_hi_ratio:
       value: 0.86
@@ -345,14 +345,14 @@ companies:
         relying on this company result.
       applicable: true
     ninety_ten_hi_revenue_share:
-      value: 0.3
-      low: 0.1
-      high: 0.9
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm
+      rationale: 'Company-specific scope estimate: US proprietary-school Title IV revenue or service-partner
+        exposure; not foreign universities, lenders or consumer apps. This is a model boundary, not a reported
+        zero measurement.'
       applicable: true
     ninety_ten_lo_ratio:
       value: 0.6788
@@ -365,44 +365,44 @@ companies:
         relying on this company result.
       applicable: true
     ninety_ten_lo_revenue_share:
-      value: 0.38
+      value: 0.0
       low: 0.0
-      high: 0.9
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm
+      rationale: 'Company-specific scope estimate: US proprietary-school Title IV revenue or service-partner
+        exposure; not foreign universities, lenders or consumer apps. This is a model boundary, not a reported
+        zero measurement.'
       applicable: true
     online_revenue_share:
-      value: 0.75
-      low: 0.45
-      high: 0.85
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm
+      rationale: 'Company-specific scope estimate: This policy covers online education revenue; physical childcare
+        centers, student lenders and non-US-only institutional programs are outside its direct US online-education
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     pell_revenue_share:
-      value: 0.08
-      low: 0.03
-      high: 0.15
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/0001628280-26-009479-index.htm
+      rationale: 'Company-specific scope estimate: US Title IV undergraduate institutions/service partners;
+        Laureate''s current Mexico/Peru operations are outside US Pell funding. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_consumer_revenue_share:
-      value: 0.9
-      low: 0.62
-      high: 0.98
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/R17.htm
+      rationale: 'Scope estimate, not a reported zero: Laureate''s continuing institutions operate in Mexico
+        and Peru. US federal debt relief is not allocated to their tuition revenue as if it were US household
+        consumption.'
       applicable: true
   NRDY:
     earnings_test_at_risk_revenue_share:
@@ -415,14 +415,14 @@ companies:
         a reported zero exposure.'
       applicable: true
     esa_capture_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.001
+      low: 0
+      high: 0.003
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Digital learning
-        and training; median base and outer low/high from DUOL/COUR in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1819404/000181940426000015/0001819404-26-000015-index.htm
+      rationale: "Company-specific estimate: Varsity Tutors can serve K\u201312 tutoring demand. Estimate\
+        \ 0.1% of incremental ESA spending (0\u20130.3%); state eligibility, provider approval and competition\
+        \ matter. Not a measured market share."
       applicable: true
     grad_plus_dependent_revenue_share:
       value: 0.0
@@ -522,14 +522,14 @@ companies:
         relying on this company result.
       applicable: true
     grad_plus_dependent_revenue_share:
-      value: 0.07
-      low: 0.03
-      high: 0.35
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Postsecondary
-        and workforce institutions; median base and outer low/high from LOPE/CVSA/STRA
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/0001140361-26-007380-index.htm
+      rationale: 'Company-specific scope estimate: US graduate/professional programs or their service partners.
+        Undergraduate vocational schools and Laureate''s Mexico/Peru institutions do not inherit Grad PLUS
+        exposure. This is a model boundary, not a reported zero measurement.'
       applicable: true
     ninety_ten_hi_ratio:
       value: 0.86
@@ -806,12 +806,12 @@ companies:
     esa_capture_share:
       value: 0.0
       low: 0.0
-      high: 0.015
+      high: 0.003
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Publishing and
-        childcare; median base and outer low/high from LRN/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/0000866729-26-000018-index.htm
+      rationale: "No quantified central ESA award/allocation. K\u201312 materials or early-learning services\
+        \ may qualify depending on state/provider rules. A 0\u20130.3% program-capture sensitivity is an explicit\
+        \ unverified scenario, not measured awards or a promised benefit."
       applicable: true
     grad_plus_dependent_revenue_share:
       value: 0.0
@@ -902,12 +902,12 @@ companies:
     esa_capture_share:
       value: 0.0
       low: 0.0
-      high: 0.015
+      high: 0.003
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Publishing and
-        childcare; median base and outer low/high from LRN/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/0001193125-26-106342-index.htm
+      rationale: "No quantified central ESA award/allocation. K\u201312 materials or early-learning services\
+        \ may qualify depending on state/provider rules. A 0\u20130.3% program-capture sensitivity is an explicit\
+        \ unverified scenario, not measured awards or a promised benefit."
       applicable: true
     grad_plus_dependent_revenue_share:
       value: 0.0
@@ -957,14 +957,14 @@ companies:
         zero exposure.'
       applicable: true
     online_revenue_share:
-      value: 1.0
-      low: 0.9
-      high: 1.0
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Publishing and
-        childcare; median base and outer low/high from LRN/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/0001193125-26-106342-index.htm
+      rationale: 'Company-specific scope estimate: This policy covers online education revenue; physical childcare
+        centers, student lenders and non-US-only institutional programs are outside its direct US online-education
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     pell_revenue_share:
       value: 0.0
@@ -998,12 +998,12 @@ companies:
     esa_capture_share:
       value: 0.0
       low: 0.0
-      high: 0.015
+      high: 0.003
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Publishing and
-        childcare; median base and outer low/high from LRN/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1437578/000143757826000006/0001437578-26-000006-index.htm
+      rationale: "No quantified central ESA award/allocation. K\u201312 materials or early-learning services\
+        \ may qualify depending on state/provider rules. A 0\u20130.3% program-capture sensitivity is an explicit\
+        \ unverified scenario, not measured awards or a promised benefit."
       applicable: true
     grad_plus_dependent_revenue_share:
       value: 0.0
@@ -1053,14 +1053,14 @@ companies:
         zero exposure.'
       applicable: true
     online_revenue_share:
-      value: 1.0
-      low: 0.9
-      high: 1.0
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Publishing and
-        childcare; median base and outer low/high from LRN/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1437578/000143757826000006/0001437578-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: This policy covers online education revenue; physical childcare
+        centers, student lenders and non-US-only institutional programs are outside its direct US online-education
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     pell_revenue_share:
       value: 0.0
@@ -1094,12 +1094,12 @@ companies:
     esa_capture_share:
       value: 0.0
       low: 0.0
-      high: 0.015
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Publishing and
-        childcare; median base and outer low/high from LRN/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/107140/000162828026045111/0001628280-26-045111-index.htm
+      rationale: "Company-specific scope estimate: ESA capture requires a potentially eligible K\u201312/early-learning\
+        \ service or materials business. Student loan interest and university publishing are outside this\
+        \ channel. This is a model boundary, not a reported zero measurement."
       applicable: true
     grad_plus_dependent_revenue_share:
       value: 0.0
@@ -1286,12 +1286,12 @@ companies:
     esa_capture_share:
       value: 0.0
       low: 0.0
-      high: 0.015
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Student financing;
-        median base and outer low/high from LRN/LOPE/CVSA/STRA/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1032033/000103203326000011/0001032033-26-000011-index.htm
+      rationale: "Company-specific scope estimate: ESA capture requires a potentially eligible K\u201312/early-learning\
+        \ service or materials business. Student loan interest and university publishing are outside this\
+        \ channel. This is a model boundary, not a reported zero measurement."
       applicable: true
     grad_plus_dependent_revenue_share:
       value: 0.0
@@ -1341,14 +1341,14 @@ companies:
         exposure.'
       applicable: true
     online_revenue_share:
-      value: 0.85
-      low: 0.45
-      high: 1.0
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Student financing;
-        median base and outer low/high from LRN/LOPE/CVSA/STRA/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1032033/000103203326000011/0001032033-26-000011-index.htm
+      rationale: 'Company-specific scope estimate: This policy covers online education revenue; physical childcare
+        centers, student lenders and non-US-only institutional programs are outside its direct US online-education
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     pell_revenue_share:
       value: 0.0
@@ -1360,12 +1360,12 @@ companies:
         exposure.'
       applicable: true
     us_consumer_revenue_share:
-      value: 0.54
-      low: 0.01
-      high: 0.98
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Student financing;
-        median base and outer low/high from LRN/LOPE/CVSA/STRA/DUOL/COUR in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1032033/000103203326000011/0001032033-26-000011-index.htm
+      rationale: 'Scope estimate, not a reported zero: Sallie Mae earns lending revenue, not a share of household
+        education purchases. Federal forgiveness does not cancel its private loans; refinancing, credit quality
+        and loan demand need separate lending channels.'
       applicable: true

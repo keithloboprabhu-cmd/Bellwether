@@ -42,7 +42,8 @@ companies:
     us_import_share_of_cogs:
       value: 0
       source: estimate
-      rationale: Payer/PBM; drug-tariff costs reach it only indirectly through manufacturer price increases, which are not modelled (they flow into premiums and client contracts).
+      rationale: Payer/PBM; drug-tariff costs reach it only indirectly through manufacturer price increases,
+        which are not modelled (they flow into premiums and client contracts).
   ELV:
     medicare_advantage_revenue_share:
       value: 0.15
@@ -135,11 +136,15 @@ companies:
       rationale: "CVS Q4 2025 release: 1,952K insured Medicaid members; at ~$6–8K premium per member that is ~$12–16B of $402,067M revenue."
       source_url: https://www.sec.gov/Archives/edgar/data/64803/000006480326000009/cvs_ex99x1q4-25.htm
     aca_exchange_revenue_share:
-      value: 0
-      low: 0
-      high: 0.01
-      source: "CVS 2025 10-K: Aetna exited the Public Exchange (ACA individual) markets effective January 2026"
-      source_url: https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/0000064803-26-000010-index.htm
+      rationale: 'Company-specific scope estimate: Current ACA exchange premium business; Aetna/CVS and Humana
+        exits are not reversed simply by selecting a high exposure case. This is a model boundary, not a reported
+        zero measurement.'
+      applicable: true
     negotiated_drug_medicare_revenue_share:
       value: 0
       source: estimate
@@ -159,18 +164,24 @@ companies:
     us_import_share_of_cogs:
       value: 0
       source: estimate
-      rationale: Payer/PBM/pharmacy; indirect drug-tariff cost not modelled (contracts largely pass drug cost through to clients).
+      rationale: Payer/PBM/pharmacy; indirect drug-tariff cost not modelled (contracts largely pass drug cost
+        through to clients).
   PFE:
     medicare_advantage_revenue_share:
       value: 0
       source: estimate
       rationale: Drugmaker; MA rates do not set its prices.
     medicaid_revenue_share:
-      value: 0.03
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Medicaid buys roughly a tenth of US retail Rx by gross spend but pays the deepest statutory rebates; Medicaid net sales are assumed a few % of Pfizer revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/0000078003-26-000026-index.htm
+      rationale: 'Company-specific scope estimate: This enrollment channel covers Medicaid plan premiums and
+        a separately estimated hospital patient-volume proxy. Drugmakers are not capitated Medicaid plans;
+        formulary, rebate and prescription-demand spillovers need a separate model. This is a model boundary,
+        not a reported zero measurement.'
+      applicable: true
     aca_exchange_revenue_share:
       value: 0
       source: estimate
@@ -191,22 +202,28 @@ companies:
       source: estimate
       rationale: Not a payer.
     us_import_share_of_cogs:
-      value: 0.30
-      low: 0.20
+      value: 0.3
+      low: 0.2
       high: 0.45
       source: estimate
-      rationale: Roughly 60% of Pfizer sales are US and a large share of branded supply is made in Ireland, Belgium and other EU sites; about half of US-sold product cost assumed imported.
+      rationale: Roughly 60% of Pfizer sales are US and a large share of branded supply is made in Ireland,
+        Belgium and other EU sites; about half of US-sold product cost assumed imported.
   LLY:
     medicare_advantage_revenue_share:
       value: 0
       source: estimate
       rationale: Drugmaker; MA rates do not set its prices.
     medicaid_revenue_share:
-      value: 0.03
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Medicaid net sales after statutory rebates assumed a few % of revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm
+      rationale: 'Company-specific scope estimate: This enrollment channel covers Medicaid plan premiums and
+        a separately estimated hospital patient-volume proxy. Drugmakers are not capitated Medicaid plans;
+        formulary, rebate and prescription-demand spillovers need a separate model. This is a model boundary,
+        not a reported zero measurement.'
+      applicable: true
     aca_exchange_revenue_share:
       value: 0
       source: estimate
@@ -227,8 +244,9 @@ companies:
       source: estimate
       rationale: Not a payer.
     us_import_share_of_cogs:
-      value: 0.30
-      low: 0.20
+      value: 0.3
+      low: 0.2
       high: 0.45
       source: estimate
-      rationale: About two-thirds of Lilly sales are US; much incretin and API supply has come from Ireland and other EU sites while new US plants ramp; about half of US-sold product cost assumed imported.
+      rationale: About two-thirds of Lilly sales are US; much incretin and API supply has come from Ireland
+        and other EU sites while new US plants ramp; about half of US-sold product cost assumed imported.

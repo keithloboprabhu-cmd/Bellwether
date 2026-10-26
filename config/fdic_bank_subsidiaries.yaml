@@ -1,0 +1,21 @@
+# Reviewed FDIC certificates; refresh validates the returned parent name before use.
+# This is a selected insured-bank mapping, not an exhaustive legal-entity inventory.
+banks:
+  JPM: {certs: [628], parent_contains: JPMORGAN}
+  BAC: {certs: [3510], parent_contains: BANK OF AMERICA}
+  WFC: {certs: [3511], parent_contains: WELLS FARGO}
+  GS: {certs: [33124], parent_contains: GOLDMAN SACHS}
+  C: {certs: [7213], parent_contains: CITIGROUP}
+  AXP: {certs: [27471], parent_contains: AMERICAN EXPRESS}
+  MS: {certs: [32992, 34221], parent_contains: MORGAN STANLEY}
+  SCHW: {certs: [57450, 33497, 59108], parent_contains: CHARLES SCHWAB}
+  BNY: {certs: [639], parent_contains: BANK OF NY MELLON, custody_base_factor: 0.55, factor_low: 0.3, factor_high: 0.8}
+  STT: {certs: [14], parent_contains: STATE STREET, custody_base_factor: 0.55, factor_low: 0.3, factor_high: 0.8}
+  USB: {certs: [6548], parent_contains: U S BCORP}
+  PNC: {certs: [6384], parent_contains: PNC FINL}
+  TFC: {certs: [9846], parent_contains: TRUIST}
+  COF: {certs: [4297], parent_contains: CAPITAL ONE}
+  FITB: {certs: [6672], parent_contains: FIFTH THIRD}
+  HBAN: {certs: [6560], parent_contains: HUNTINGTON}
+  KEY: {certs: [17534], parent_contains: KEYCORP}
+  ALLY: {certs: [57803], parent_contains: ALLY FINANCIAL}

@@ -42,11 +42,15 @@ companies:
       source_url: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R68.htm
       rationale: Low end strips Taiwan, which Chinese retaliation would not reach.
     us_semis_mfg_capex_musd:
-      value: 0
-      low: 0
-      high: 300
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Apple owns no US fabs; it buys chips from TSMC Arizona and others. High case allows for Apple-owned tooling placed at US chip suppliers.
+      source_url: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm
+      rationale: 'Company-specific scope estimate: Direct qualifying US chip manufacturing investment in this
+        sample; fabless customers and software firms do not inherit a manufacturer credit. This is a model
+        boundary, not a reported zero measurement.'
+      applicable: true
     broadband_subsidy_capture_share:
       value: 0
       low: 0
@@ -69,11 +73,15 @@ companies:
       rationale: "Microsoft FY2026 10-K: search advertising revenue $15,176M of $331,839M; assumes ~60% from US users, plus a few $B of LinkedIn marketing solutions (not disclosed)."
       source_url: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/R110.htm
     us_app_store_fee_share:
-      value: 0
-      low: 0
-      high: 0.01
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Mobile app-store rules don't reach the Microsoft Store or Xbox store; high case covers a cap that extends to console stores (~$3B US Xbox store commissions).
+      source_url: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.htm
+      rationale: 'Company-specific scope estimate: This channel covers the mobile app-store commission owners,
+        not streaming subscriptions or enterprise software fees. This is a model boundary, not a reported
+        zero measurement.'
+      applicable: true
     us_users_m:
       value: 200
       low: 150
@@ -150,11 +158,15 @@ companies:
       source: estimate
       rationale: Alphabet designs TPUs but owns no fabs; data centers don't qualify for Section 48D.
     broadband_subsidy_capture_share:
-      value: 0
-      low: 0
-      high: 0.002
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Google Fiber took part in ACP but is small (well under 1M homes) and no longer a core Alphabet segment.
+      source_url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.htm
+      rationale: 'Company-specific scope estimate: Household broadband subsidies flow to retail access providers;
+        networking-equipment suppliers have no direct subscriber benefit in this channel. This is a model
+        boundary, not a reported zero measurement.'
+      applicable: true
   META:
     us_import_share_of_cogs:
       value: 0.08
@@ -169,11 +181,15 @@ companies:
       source: "Meta 2025 10-K: advertising $196,175M of $200,966M revenue; United States $74,780M (37.2%; geography by user location). 0.36 = 97.6% x 37.2%"
       source_url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/R46.htm
     us_app_store_fee_share:
-      value: 0
-      low: 0
-      high: 0.002
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: The Meta Quest store charges commissions but is tiny; Meta mostly pays app-store fees rather than earning them.
+      source_url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm
+      rationale: 'Company-specific scope estimate: This channel covers the mobile app-store commission owners,
+        not streaming subscriptions or enterprise software fees. This is a model boundary, not a reported
+        zero measurement.'
+      applicable: true
     us_users_m:
       value: 250
       low: 220
@@ -246,11 +262,15 @@ companies:
       source_url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
       rationale: Range reflects that end-customer location can differ from the headquarters basis NVIDIA reports.
     us_semis_mfg_capex_musd:
-      value: 0
-      low: 0
-      high: 500
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: NVIDIA is fabless; US chip and supercomputer production (TSMC Arizona, Foxconn/Wistron in Texas) is partners' capex, not NVIDIA's. High case allows NVIDIA-owned test/packaging equipment.
+      source_url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/0001045810-26-000021-index.htm
+      rationale: 'Company-specific scope estimate: Direct qualifying US chip manufacturing investment in this
+        sample; fabless customers and software firms do not inherit a manufacturer credit. This is a model
+        boundary, not a reported zero measurement.'
+      applicable: true
     broadband_subsidy_capture_share:
       value: 0
       low: 0
@@ -266,11 +286,15 @@ companies:
       rationale: "Verizon 2025 10-K: cost of wireless equipment $28,976M of $75,114M cost of revenue (incl. D&A), i.e. 0.386, nearly all imported phones. Customs value is the OEM's import price, below Verizon's purchase price, so base takes ~two-thirds; high assumes OEMs pass the full duty on their wholesale price."
       source_url: https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/R3.htm
     us_digital_ad_revenue_share:
-      value: 0
-      low: 0
-      high: 0.003
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Verizon sold Yahoo/AOL in 2021; remaining ad revenue is negligible.
+      source_url: https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm
+      rationale: 'Company-specific scope estimate: Direct digital advertising and ad-supported media sales;
+        enterprise software license and consulting revenue is not media advertising revenue. This is a model
+        boundary, not a reported zero measurement.'
+      applicable: true
     us_app_store_fee_share:
       value: 0
       low: 0
@@ -290,11 +314,15 @@ companies:
       source: estimate
       rationale: No chip sales.
     greater_china_revenue_share:
-      value: 0
-      low: 0
-      high: 0.002
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: US-focused carrier.
+      source_url: https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/0000732712-26-000007-index.htm
+      rationale: 'Company-specific scope estimate: Current China sales/advertiser exposure, not inherited
+        hypothetical China subscriber sales at US cable/telecom access providers. This is a model boundary,
+        not a reported zero measurement.'
+      applicable: true
     us_semis_mfg_capex_musd:
       value: 0
       low: 0

@@ -135,7 +135,8 @@ def test_nonbank_scope_is_not_a_bank_exposure():
         if c["id"] in {"MA", "BLK", "AIG", "PRU", "PGR"}:
             assert c["dNI"] == 0
             assert all(not e["applicable"] for e in c["exposures"])
-            assert "other economic effects are not covered" in c["reason"]
+            assert c['coverage']['status'] == 'outside_scope'
+            assert 'separate channels' in c['reason']
 
 
 @pytest.mark.parametrize("ticker,expected", [("MCD", 716.4), ("LINC", 31.26)])

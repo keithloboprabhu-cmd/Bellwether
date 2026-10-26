@@ -1,0 +1,9 @@
+exposures:
+- key: hospital_outpatient_medicare_revenue_share
+  label: Medicare hospital outpatient revenue share
+  unit: fraction
+  min: 0
+  max: 1
+  help: Estimated Medicare hospital outpatient revenue / consolidated revenue, before
+    the separate eligible-services fraction. Excludes ambulatory surgical centers
+    and inpatient revenue.

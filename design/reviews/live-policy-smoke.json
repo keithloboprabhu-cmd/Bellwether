@@ -1,0 +1,732 @@
+{
+  "checked_at": "2026-10-26T03:10:53.235372+00:00",
+  "policies": [
+    {
+      "policy": "consumer_retail/consumer_tax_rebate",
+      "companies": 20,
+      "passed": 9,
+      "expected": 9,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:01+00:00"
+    },
+    {
+      "policy": "consumer_retail/import_tariffs",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:01+00:00"
+    },
+    {
+      "policy": "consumer_retail/minimum_wage_increase",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:02+00:00"
+    },
+    {
+      "policy": "consumer_retail/sales_tax_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:03+00:00"
+    },
+    {
+      "policy": "consumer_retail/snap_benefit_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:04+00:00"
+    },
+    {
+      "policy": "consumer_retail/sweetened_beverage_tax",
+      "companies": 20,
+      "passed": 6,
+      "expected": 6,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:05+00:00"
+    },
+    {
+      "policy": "education/earnings_accountability_test",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:06+00:00"
+    },
+    {
+      "policy": "education/ninety_ten_rule_change",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:06+00:00"
+    },
+    {
+      "policy": "education/online_compliance_costs",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:07+00:00"
+    },
+    {
+      "policy": "education/pell_grant_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:08+00:00"
+    },
+    {
+      "policy": "education/school_choice_esa",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:09+00:00"
+    },
+    {
+      "policy": "education/student_loan_borrowing_caps",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:09+00:00"
+    },
+    {
+      "policy": "education/student_loan_forgiveness",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:10+00:00"
+    },
+    {
+      "policy": "energy_resources/carbon_price",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:11+00:00"
+    },
+    {
+      "policy": "energy_resources/clean_energy_credits_change",
+      "companies": 20,
+      "passed": 10,
+      "expected": 10,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:14+00:00"
+    },
+    {
+      "policy": "energy_resources/critical_minerals_credit",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:14+00:00"
+    },
+    {
+      "policy": "energy_resources/crude_export_restrictions",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:15+00:00"
+    },
+    {
+      "policy": "energy_resources/federal_leasing_limits",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:16+00:00"
+    },
+    {
+      "policy": "energy_resources/methane_emissions_fee",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:17+00:00"
+    },
+    {
+      "policy": "energy_resources/spr_release",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:18+00:00"
+    },
+    {
+      "policy": "financial_services/bank_capital_requirement",
+      "companies": 23,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:18+00:00"
+    },
+    {
+      "policy": "financial_services/credit_card_interchange_cap",
+      "companies": 23,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:19+00:00"
+    },
+    {
+      "policy": "financial_services/credit_card_late_fee_cap",
+      "companies": 23,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:20+00:00"
+    },
+    {
+      "policy": "financial_services/fdic_assessment_increase",
+      "companies": 23,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:20+00:00"
+    },
+    {
+      "policy": "financial_services/fed_rate_change",
+      "companies": 23,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:21+00:00"
+    },
+    {
+      "policy": "financial_services/financial_transaction_tax",
+      "companies": 23,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:22+00:00"
+    },
+    {
+      "policy": "healthcare/aca_subsidy_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:22+00:00"
+    },
+    {
+      "policy": "healthcare/medicaid_work_requirements",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:23+00:00"
+    },
+    {
+      "policy": "healthcare/medicare_advantage_rate_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:24+00:00"
+    },
+    {
+      "policy": "healthcare/medicare_drug_price_negotiation",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:25+00:00"
+    },
+    {
+      "policy": "healthcare/pbm_rebate_pass_through",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:25+00:00"
+    },
+    {
+      "policy": "healthcare/pharma_tariffs",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:26+00:00"
+    },
+    {
+      "policy": "healthcare/site_neutral_payments",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:26+00:00"
+    },
+    {
+      "policy": "industrials/bonus_depreciation_rollback",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:27+00:00"
+    },
+    {
+      "policy": "industrials/corporate_tax_rate_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:28+00:00"
+    },
+    {
+      "policy": "industrials/defense_procurement_increase",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:28+00:00"
+    },
+    {
+      "policy": "industrials/infrastructure_spending",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:29+00:00"
+    },
+    {
+      "policy": "industrials/rd_credit_expansion",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:30+00:00"
+    },
+    {
+      "policy": "industrials/steel_tariffs",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:30+00:00"
+    },
+    {
+      "policy": "public_sector/consulting_contract_cancellations",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:31+00:00"
+    },
+    {
+      "policy": "public_sector/continuing_resolution",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:32+00:00"
+    },
+    {
+      "policy": "public_sector/defense_budget_increase",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:32+00:00"
+    },
+    {
+      "policy": "public_sector/federal_civilian_budget_cut",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:33+00:00"
+    },
+    {
+      "policy": "public_sector/fixed_price_shift",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:34+00:00"
+    },
+    {
+      "policy": "public_sector/government_shutdown",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:35+00:00"
+    },
+    {
+      "policy": "public_sector/it_modernization_funding",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:35+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/interest_rate_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:36+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/lihtc_expansion",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:37+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/like_kind_exchange_limits",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:38+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/property_tax_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:38+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/return_to_office_mandate",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:39+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/short_term_rental_regulation",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:40+00:00"
+    },
+    {
+      "policy": "real_estate_hospitality/visa_fee_tourism_tax",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:40+00:00"
+    },
+    {
+      "policy": "tmt/app_store_commission_cap",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:41+00:00"
+    },
+    {
+      "policy": "tmt/broadband_affordability_subsidy",
+      "companies": 20,
+      "passed": 9,
+      "expected": 9,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:43+00:00"
+    },
+    {
+      "policy": "tmt/chip_export_controls",
+      "companies": 20,
+      "passed": 9,
+      "expected": 9,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:45+00:00"
+    },
+    {
+      "policy": "tmt/chips_manufacturing_credit",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:45+00:00"
+    },
+    {
+      "policy": "tmt/data_privacy_mandate",
+      "companies": 20,
+      "passed": 9,
+      "expected": 9,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:47+00:00"
+    },
+    {
+      "policy": "tmt/digital_services_tax",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:48+00:00"
+    },
+    {
+      "policy": "tmt/semiconductor_tariffs",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:48+00:00"
+    },
+    {
+      "policy": "transportation_logistics/airline_bag_fee_cap",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:49+00:00"
+    },
+    {
+      "policy": "transportation_logistics/airline_ticket_tax_change",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:50+00:00"
+    },
+    {
+      "policy": "transportation_logistics/auto_import_tariffs",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:50+00:00"
+    },
+    {
+      "policy": "transportation_logistics/carbon_tax_transport_fuel",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:51+00:00"
+    },
+    {
+      "policy": "transportation_logistics/ev_tax_credit",
+      "companies": 20,
+      "passed": 3,
+      "expected": 3,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:52+00:00"
+    },
+    {
+      "policy": "transportation_logistics/vehicle_emissions_credit_rollback",
+      "companies": 20,
+      "passed": 4,
+      "expected": 4,
+      "versions": {
+        "model": "260e68465f8d9f0c",
+        "data": "dd19abc085ef2769"
+      },
+      "captured_at": "2026-10-26T03:10:53+00:00"
+    }
+  ],
+  "errors": []
+}

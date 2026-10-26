@@ -2,14 +2,14 @@ industry: public_sector
 companies:
   LMT:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/0001628280-26-004195-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -42,14 +42,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.02
+      low: 0.0
+      high: 0.05
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/0001628280-26-004195-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 2.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -73,14 +74,14 @@ companies:
       applicable: true
   NOC:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/0001133421-26-000003-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -113,14 +114,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.03
+      low: 0.005
+      high: 0.08
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/0001133421-26-000003-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 3.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -144,14 +146,14 @@ companies:
       applicable: true
   RTX:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/0000101829-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -184,14 +186,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.01
+      low: 0.0
+      high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/0000101829-26-000006-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 1.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -215,14 +218,14 @@ companies:
       applicable: true
   HII:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1501585/000150158526000006/0001501585-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -255,14 +258,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.05
+      low: 0.01
+      high: 0.12
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1501585/000150158526000006/0001501585-26-000006-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 5.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -286,14 +290,14 @@ companies:
       applicable: true
   OSK:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/775158/000119312526054061/0001193125-26-054061-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -326,14 +330,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/775158/000119312526054061/0001193125-26-054061-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -397,14 +402,15 @@ companies:
         relying on this company result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.45
-      low: 0.04
-      high: 0.85
+      value: 0.05
+      low: 0.01
+      high: 0.15
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1357615/000135761526000051/0001357615-26-000051-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 5.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.9
@@ -428,14 +434,14 @@ companies:
       applicable: true
   KTOS:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/0001069258-26-000013-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -468,14 +474,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/0001069258-26-000013-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -499,14 +506,14 @@ companies:
       applicable: true
   AVAV:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1368622/000110465926078906/0001104659-26-078906-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -539,14 +546,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1368622/000110465926078906/0001104659-26-078906-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -570,14 +578,14 @@ companies:
       applicable: true
   BWXT:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1486957/000148695726000007/0001486957-26-000007-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -610,14 +618,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1486957/000148695726000007/0001486957-26-000007-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -641,14 +650,14 @@ companies:
       applicable: true
   TXT:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/0000217346-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -681,14 +690,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/0000217346-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -752,14 +762,15 @@ companies:
         relying on this company result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.45
-      low: 0.04
-      high: 0.85
+      value: 0.2
+      low: 0.08
+      high: 0.35
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1362004/000119312526082536/0001193125-26-082536-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 20.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.9
@@ -823,14 +834,15 @@ companies:
         relying on this company result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.45
-      low: 0.04
-      high: 0.85
+      value: 0.02
+      low: 0.0
+      high: 0.06
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/0000831641-25-000032-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 2.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
       applicable: true
     govcon_services_share:
       value: 0.9
@@ -854,14 +866,14 @@ companies:
       applicable: true
   MRCY:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1049521/000104952126000045/0001049521-26-000045-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -894,14 +906,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1049521/000104952126000045/0001049521-26-000045-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2
@@ -925,14 +938,14 @@ companies:
       applicable: true
   VSEC:
     govcon_advisory_share:
-      value: 0.02
-      low: 0.01
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/102752/000010275226000015/0000102752-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Management consulting and advisory cancellations do not
+        automatically cancel weapons, ship, drone, vehicle, nuclear-component or aerospace manufacturing contracts.
+        This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
       value: 0.07
@@ -965,14 +978,15 @@ companies:
         result.
       applicable: true
     govcon_fed_it_share:
-      value: 0.17
-      low: 0.15
-      high: 0.172
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/102752/000010275226000015/0000102752-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Agency IT modernization and cyber/services contract exposure
+        must not be copied from General Dynamics to defense vehicle, drone, nuclear-component or aviation-parts
+        manufacturers. Mission hardware and customer supply-chain effects are outside this channel. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_services_share:
       value: 0.2

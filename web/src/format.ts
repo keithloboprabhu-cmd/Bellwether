@@ -1,4 +1,12 @@
 /** Shared model-unit formatting: percentage inputs differ from fractional outputs. */
+/** Show calendar dates without timezone shifts, and timestamps in the viewer's local time. */
+export function observationDate(value:string|null|undefined,missing='—'):string {
+  if(!value)return missing;
+  const parsed=new Date(value);
+  if(!Number.isFinite(parsed.getTime()))return missing;
+  const calendarOnly=/^\d{4}-\d{2}-\d{2}$/.test(value);
+  return parsed.toLocaleString('en-US',{year:'numeric',month:'short',day:'numeric',...(calendarOnly?{timeZone:'UTC'}:{hour:'numeric',minute:'2-digit',timeZoneName:'short'})});
+}
 /** Semantic sign without equating missing values with zero. */
 export const signClass = (n:number|null) => n === null ? 'missing' : n > 0 ? 'gain' : n < 0 ? 'loss' : 'neutral';
 const sign = (n:number) => n < 0 ? '−' : n > 0 ? '+' : '';

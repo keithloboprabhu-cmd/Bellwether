@@ -1,4 +1,4 @@
-"""PolicyShock landing page. Run with:  streamlit run app.py"""
+"""Bellwether landing page. Run with:  streamlit run app.py"""
 
 import sys
 from pathlib import Path
@@ -20,7 +20,7 @@ page_setup("Home")
 universe = load_universe()
 reg = registry()
 
-st.title("PolicyShock")
+st.title("Bellwether")
 st.markdown(
     "**See how a policy could affect company earnings: revenue, margins, EPS and implied value for real companies, "
     "built from their latest SEC filings.**"

@@ -65,22 +65,23 @@ companies:
         Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     tl_regulatory_credit_revenue_share:
-      value: 0.0105
+      value: 0.0
       low: 0.0
-      high: 0.021
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
-        base and outer low/high from TSLA/GM in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/0000037996-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Modeled regulatory-credit sellers. Ford is treated as a
+        purchaser rather than inheriting Tesla''s seller revenue. This is a model boundary, not a reported
+        zero measurement.'
       applicable: true
     tl_us_ev_revenue_share:
-      value: 0.20149999999999998
-      low: 0.045
-      high: 0.4
+      value: 0.025
+      low: 0.015
+      high: 0.045
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
-        base and outer low/high from TSLA/GM in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/0000037996-26-000015-index.htm
+      rationale: "Company-specific estimate: US battery-electric sales are a small minority of Ford consolidated\
+        \ revenue; estimate 2.5% (1.5\u20134.5%), not the Tesla/GM median."
       applicable: true
   RIVN:
     mx_vehicle_sales_revenue_share:
@@ -138,31 +139,33 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     tl_regulatory_credit_purchases_musd:
-      value: 1.4557964317178236
+      value: 0.0
       low: 0.0
-      high: 14.557964317178236
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
-        base and outer low/high from TSLA/GM in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/0001874178-26-000008-index.htm
+      rationale: 'Company-specific scope estimate: Modeled credit purchasers. Rivian is a seller; its Tesla/GM
+        peer median must not imply simultaneous purchased credits. This is a model boundary, not a reported
+        zero measurement.'
       applicable: true
     tl_regulatory_credit_revenue_share:
-      value: 0.0105
-      low: 0.0
-      high: 0.021
+      value: 0.05
+      low: 0.02
+      high: 0.12
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
-        base and outer low/high from TSLA/GM in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/0001874178-26-000008-index.htm
+      rationale: "Company-specific estimate: Rivian is an EV regulatory-credit seller. Estimate 5% of consolidated\
+        \ revenue (2\u201312%) pending a normalized forward sales stream; do not also assign purchased credits."
       applicable: true
     tl_us_ev_revenue_share:
-      value: 0.20149999999999998
-      low: 0.045
-      high: 0.4
+      value: 0.85
+      low: 0.65
+      high: 0.98
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Automotive; median
-        base and outer low/high from TSLA/GM in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/0001874178-26-000008-index.htm
+      rationale: "Company-specific estimate: Rivian primarily sells battery-electric vehicles, but consolidated\
+        \ revenue also includes software/services and non-US sales. Estimate 85% (65\u201398%) US EV revenue,\
+        \ not the Tesla/GM median."
       applicable: true
   CHRW:
     mx_vehicle_sales_revenue_share:
@@ -175,13 +178,14 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     tl_auto_tariff_cost_at_25pct_musd:
-      value: 14.178570964459945
-      low: 3.4275259712837842
-      high: 36.61759510946189
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
-        median base and outer low/high from UPS/FDX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1043277/000104327726000009/0001043277-26-000009-index.htm
+      rationale: 'Company-specific scope estimate: Direct vehicle/parts and owned-fleet cost; independent
+        drivers and brokered carrier fleets are outside the modeled companies'' direct import bill. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     tl_checked_bag_fee_revenue_share:
       value: 0.0
@@ -202,13 +206,14 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     tl_fuel_co2_mt:
-      value: 2.2183296324426465
-      low: 1.6280748363597974
-      high: 2.929407608756951
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Freight and logistics;
-        median base and outer low/high from UPS/FDX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1043277/000104327726000009/0001043277-26-000009-index.htm
+      rationale: 'Company-specific scope estimate: Direct fleet/operating fuel footprint. Brokerage and independent
+        drivers'' Scope 3 emissions at CHRW, Uber and Lyft are not owned-fleet Scope 1 fuel. This is a model
+        boundary, not a reported zero measurement.'
       applicable: true
     tl_fuel_cost_recovery_share:
       value: 0.85
@@ -995,40 +1000,42 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     tl_auto_tariff_cost_at_25pct_musd:
-      value: 27.572433376306023
+      value: 0.0
       low: 0.0
-      high: 117.33907806137987
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/0001543151-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Direct vehicle/parts and owned-fleet cost; independent
+        drivers and brokered carrier fleets are outside the modeled companies'' direct import bill. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     tl_checked_bag_fee_revenue_share:
-      value: 0.00835
+      value: 0.0
       low: 0.0
-      high: 0.0182
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/0001543151-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Passenger airlines'' bag fees, not ride-hailing fares or
+        freight revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     tl_domestic_passenger_revenue_share:
-      value: 0.282
+      value: 0.0
       low: 0.0
-      high: 0.564
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/0001543151-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Airline-ticket excise tax applies to domestic air travel;
+        ride-hailing is outside this channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     tl_fuel_co2_mt:
-      value: 17.153527770092502
-      low: 5.8669539030689934
-      high: 34.150419796730006
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/0001543151-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Direct fleet/operating fuel footprint. Brokerage and independent
+        drivers'' Scope 3 emissions at CHRW, Uber and Lyft are not owned-fleet Scope 1 fuel. This is a model
+        boundary, not a reported zero measurement.'
       applicable: true
     tl_fuel_cost_recovery_share:
       value: 0.675
@@ -1077,40 +1084,42 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     tl_auto_tariff_cost_at_25pct_musd:
-      value: 3.348034019836977
+      value: 0.0
       low: 0.0
-      high: 14.248115857028457
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/0001628280-26-006960-index.htm
+      rationale: 'Company-specific scope estimate: Direct vehicle/parts and owned-fleet cost; independent
+        drivers and brokered carrier fleets are outside the modeled companies'' direct import bill. This is
+        a model boundary, not a reported zero measurement.'
       applicable: true
     tl_checked_bag_fee_revenue_share:
-      value: 0.00835
+      value: 0.0
       low: 0.0
-      high: 0.0182
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/0001628280-26-006960-index.htm
+      rationale: 'Company-specific scope estimate: Passenger airlines'' bag fees, not ride-hailing fares or
+        freight revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     tl_domestic_passenger_revenue_share:
-      value: 0.282
+      value: 0.0
       low: 0.0
-      high: 0.564
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/0001628280-26-006960-index.htm
+      rationale: 'Company-specific scope estimate: Airline-ticket excise tax applies to domestic air travel;
+        ride-hailing is outside this channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     tl_fuel_co2_mt:
-      value: 2.0828990227551043
-      low: 0.7124057928514228
-      high: 4.1467782589482995
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Mobility platforms;
-        median base and outer low/high from DAL/UPS in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/0001628280-26-006960-index.htm
+      rationale: 'Company-specific scope estimate: Direct fleet/operating fuel footprint. Brokerage and independent
+        drivers'' Scope 3 emissions at CHRW, Uber and Lyft are not owned-fleet Scope 1 fuel. This is a model
+        boundary, not a reported zero measurement.'
       applicable: true
     tl_fuel_cost_recovery_share:
       value: 0.675

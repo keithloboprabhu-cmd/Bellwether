@@ -179,7 +179,16 @@ companies:
       source: estimate
       rationale: "GM sold 169,887 EVs in the US in 2025 (Electrek, Jan 2026). At the Dec 2025 average EV transaction price of $58,034 (Cox/KBB) that is ~$9.9B of $185,019M revenue."
       source_url: https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/
-    tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0.005, source: estimate, rationale: GM does not report regulatory credit sales as a revenue line; any sales are small.}
+    tl_regulatory_credit_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/0001467858-26-000013-index.htm
+      rationale: 'Company-specific scope estimate: Modeled regulatory-credit sellers. Ford is treated as a
+        purchaser rather than inheriting Tesla''s seller revenue. This is a model boundary, not a reported
+        zero measurement.'
+      applicable: true
     tl_regulatory_credit_purchases_musd:
       value: 100
       low: 0

@@ -42,4 +42,4 @@ runs every policy on every company in its industry.
 ## Engine invariants (tested)
 - Channels never apply the tax rate to PTI; aggregation does it once.
 - ΔNI is measured against the model baseline PTI·(1 − t), so a zero shock gives exactly 0.
-- Ranges are oriented per company (see METHODOLOGY §2.5), not all-low/all-high.
+- Ranges are oriented per company (see METHODOLOGY §4), not all-low/all-high.

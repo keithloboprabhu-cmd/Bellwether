@@ -27,13 +27,15 @@ def build_runner(
     prices_df: pd.DataFrame | None = None,
     macro: dict | None = None,
     reg: Registry | None = None,
+    baselines: list[dict] | None = None,
 ) -> Runner:
+    """Build the shared engine runner, optionally with captured live annual inputs."""
     reg = reg or registry()
     pol = reg.policy(industry, policy_id)
     ranges = {a.key: (a.low, a.base, a.high) for a in pol.assumptions} | (assumption_ranges or {})
     return Runner(
         policy=pol,
-        baselines=industry_baselines(industry, prices_df),
+        baselines=industry_baselines(industry, prices_df) if baselines is None else baselines,
         inputs={**pol.default_inputs(), **(inputs or {})},
         assumption_ranges=ranges,
         exposure_cfg=reg.exposures,

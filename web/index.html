@@ -3,10 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#050607" />
-    <link rel="icon" href="data:," />
-    <meta name="description" content="Model how a policy change could affect company earnings. An educational scenario tool for Duke FMKT 256." />
-    <title>PolicyShock — The Instrument</title>
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" href="/bellwether-logo.png" />
+    <meta name="description" content="Model how a policy change could affect company earnings. Bellwether policy impact simulator." />
+    <link rel="preload" as="image" href="/bellwether-startup-bell.png" fetchpriority="high" />
+    <link rel="stylesheet" href="/startup.css" />
+    <title>Bellwether</title>
   </head>
-  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+  <body class="is-starting">
+    <div id="startup-splash" class="startup-splash" role="status" aria-label="Starting Bellwether">
+      <div class="startup-identity">
+        <div class="startup-mark">
+          <div class="startup-bell" aria-hidden="true">
+            <img class="startup-clapper" src="/bellwether-startup-bell.png" width="1254" height="1254" alt="" fetchpriority="high" />
+            <img class="startup-bell-body" src="/bellwether-startup-bell.png" width="1254" height="1254" alt="" fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="root" inert aria-hidden="true"></div>
+    <noscript><p style="color:#E8E5DC;padding:24px;font-family:monospace;position:relative;z-index:1001">Enable JavaScript to use Bellwether.</p></noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

@@ -440,11 +440,14 @@ companies:
       source: estimate
       rationale: Stays of 28+ nights (a 10-K reported category) are partly remote-work driven and fall when workers must be in the office.
     re_property_tax_musd:
-      value: 0
-      low: 0
-      high: 10
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Hosts pay property tax on listed homes; Airbnb leases its offices.
+      source_url: https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/0001559720-26-000004-index.htm
+      rationale: 'Company-specific scope estimate: Host-owned taxes are not Airbnb''s direct property tax
+        bill, including exposure high cases. This is a model boundary, not a reported zero measurement.'
+      applicable: true
     re_property_tax_recovery_share:
       value: 0
       low: 0

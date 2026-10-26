@@ -45,10 +45,14 @@ def fiscal_year(ticker: str, year: int | None = None) -> dict:
     raise KeyError(f"{ticker} FY{year} not in snapshot")
 
 
-def baseline_row(ticker: str, price: float | None, price_date: str | None = None, year: int | None = None) -> dict:
-    """Flat, model-ready baseline for one company ($M, shares in M, EPS in $/share)."""
-    co = load_baselines()["companies"][ticker]
-    fy = fiscal_year(ticker, year)
+def baseline_row(ticker: str, price: float | None, price_date: str | None = None, year: int | None = None, *, company: dict | None = None) -> dict:
+    """Model-ready annual row, optionally from an immutable live SEC company record.
+
+    Historical callers keep reading committed snapshots; live overrides never
+    mutate those records or alter backtest financial histories.
+    """
+    co = company if company is not None else load_baselines()["companies"][ticker]
+    fy = (co["years"][0] if year is None else next(y for y in co["years"] if y["fiscal_year"] == year)) if company is not None else fiscal_year(ticker, year)
     it = fy["items"]
     flags = list(fy["flags"])
 

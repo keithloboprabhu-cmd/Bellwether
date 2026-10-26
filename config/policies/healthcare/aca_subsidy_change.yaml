@@ -1,7 +1,7 @@
 id: aca_subsidy_change
 industry: healthcare
 name: ACA premium subsidy change
-description: A change in ACA premium tax credits (e.g. expiry of the enhanced subsidies) changes how many people buy exchange plans. Elevance has the largest exchange book here; Humana and (from 2026) CVS/Aetna have exited the exchanges, so exposure in this universe is small.
+description: A change in ACA premium tax credits (e.g. expiry of the enhanced subsidies) changes how many people buy exchange plans. Centene and Molina also have material exchange businesses; Humana and (from 2026) CVS/Aetna have exited the exchanges. Company-specific premium shares are used.
 persistence: permanent
 user_inputs:
   - key: enrollment_change_pct

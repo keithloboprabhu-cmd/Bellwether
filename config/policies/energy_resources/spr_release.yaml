@@ -1,51 +1,76 @@
 id: spr_release
 industry: energy_resources
 name: Strategic Petroleum Reserve release
-description: >-
-  An emergency sale from the SPR temporarily lowers oil prices, cutting upstream earnings for as long as the
-  price effect lasts. Effects use each company's oil-price sensitivity (from XOM/CVX/COP $/bbl disclosures);
-  FCX gains slightly on diesel and NEE/FSLR are barely exposed. Refining margins are assumed unchanged.
+description: An emergency SPR sale temporarily lowers crude prices. Upstream producers lose revenue; Freeport
+  benefits through its explicitly signed diesel-cost proxy. Stand-alone refiners have no direct modeled earnings
+  change when refining margins are held constant. Oilfield-service order/capex responses need a separate lagged
+  demand model.
 persistence: one_time
 user_inputs:
-  - key: barrels_mb
-    label: Barrels released
-    unit: million barrels
-    min: 0
-    max: 300
-    step: 10
-    default: 60
-    help: 2022's emergency sale was 180 mb over six months (plus 60 mb from IEA partners); the SPR held ~400 mb in 2025.
+- key: barrels_mb
+  label: Barrels released
+  unit: million barrels
+  min: 0
+  max: 300
+  step: 10
+  default: 60
+  help: 2022's emergency sale was 180 mb over six months (plus 60 mb from IEA partners); the SPR held ~400
+    mb in 2025.
 assumptions:
-  - key: impact_per_100mb
-    label: Oil-price drop per 100 million barrels
-    unit: USD per bbl
-    low: 2
-    base: 5
-    high: 7.5
-    source: "US Treasury (2022): the 180 mb SPR + 60 mb IEA release cut gasoline 17-42¢/gal; at $0.024/gal per $1/bbl that is ≈$7-17.5/bbl for 240 mb, i.e. ≈$3-7 per 100 mb"
-    source_url: https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
-    rationale: Low end reflects Kilian & Zhou's finding that historical SPR drawdowns had small effects (about $2/bbl after the 1990 releases).
-  - key: duration_years
-    label: Years the price effect lasts
-    unit: years
-    low: 0.25
-    base: 0.5
-    high: 1
-    source: estimate
-    rationale: Releases typically run 3-6 months and the price effect fades once the barrels stop (and refills add demand later).
+- key: impact_per_100mb
+  label: Oil-price drop per 100 million barrels
+  unit: USD per bbl
+  low: 2
+  base: 5
+  high: 7.5
+  source: "US Treasury (2022): the 180 mb SPR + 60 mb IEA release cut gasoline 17-42\xA2/gal; at $0.024/gal\
+    \ per $1/bbl that is \u2248$7-17.5/bbl for 240 mb, i.e. \u2248$3-7 per 100 mb"
+  source_url: https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
+  rationale: Low end reflects Kilian & Zhou's finding that historical SPR drawdowns had small effects (about
+    $2/bbl after the 1990 releases).
+- key: duration_years
+  label: Years the price effect lasts
+  unit: years
+  low: 0.25
+  base: 0.5
+  high: 1
+  source: estimate
+  rationale: Releases typically run 3-6 months and the price effect fades once the barrels stop (and refills
+    add demand later).
 derived:
-  brent_ref: 69.06  # 2025 average Brent, $/bbl (XOM 2025 10-K); the base oil_price_sensitivity uses
+  brent_ref: 69.06
   d_oil_pct: -assumption.impact_per_100mb * input.barrels_mb / 100 / derived.brent_ref * assumption.duration_years
 channels:
-  - type: price
-    label: Lower oil prices during the release
-    params:
-      d_price: derived.d_oil_pct
-      exposed_revenue_share: exposure.oil_price_sensitivity
-exposure_keys: [oil_price_sensitivity]
+- type: price
+  label: Lower oil prices during the release
+  params:
+    d_price: derived.d_oil_pct
+    exposed_revenue_share: max(0, exposure.oil_price_sensitivity)
+  roles:
+  - domestic_producer
+- type: cost
+  roles:
+  - domestic_producer
+  label: Diesel/input-cost exposure to oil prices
+  params:
+    exposed_cost_share: 0
+    shock_pct: 0
+    dcost_musd: baseline.revenue * max(0, -exposure.oil_price_sensitivity) * derived.d_oil_pct
+exposure_keys:
+- oil_price_sensitivity
 references:
-  - https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
-  - https://econpapers.repec.org/paper/zbwcfswop/647.htm
-  - https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+- https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
+- https://econpapers.repec.org/paper/zbwcfswop/647.htm
+- https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
 narrative:
-  extra: "Because the price dip is temporary, the earnings hit is counted once rather than capitalized at the P/E."
+  extra: The temporary effect is counted once. Refiner sales can fall with feedstock prices without a corresponding
+    profit loss; this model does not treat the upstream peer sensitivity as refinery earnings exposure.
+default_role: neutral
+roles:
+  XOM: domestic_producer
+  CVX: domestic_producer
+  COP: domestic_producer
+  EOG: domestic_producer
+  OXY: domestic_producer
+  DVN: domestic_producer
+  FCX: domestic_producer

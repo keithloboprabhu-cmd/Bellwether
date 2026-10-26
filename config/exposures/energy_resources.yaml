@@ -59,11 +59,15 @@ companies:
       source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
       rationale: 2025 10-K US refinery throughput 1,927 kb/d × $65 × 365 ≈ $45.7B; ~70% assumed domestic crude; ÷ $278.6B cost of revenue.
     clean_generation_credits_musd:
-      value: 0
-      low: 0
-      high: 50
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: XOM does not report material clean-electricity PTC/ITC; its low-carbon credits (45Q CCS, 45V hydrogen) are a different program.
+      source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
+      applicable: true
     manufacturing_credits_45x_musd:
       value: 0
       low: 0
@@ -77,11 +81,15 @@ companies:
       source: estimate
       rationale: No solar module sales.
     us_critical_mineral_production_cost_musd:
-      value: 0
-      low: 0
-      high: 50
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: XOM's Arkansas lithium project is pre-production; high end allows a small early volume.
+      source_url: https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/0000034088-26-000045-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
+      applicable: true
   CVX:
     oil_price_sensitivity:
       value: 0.3177
@@ -136,11 +144,15 @@ companies:
       source_url: https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm
       rationale: 2025 10-K US refinery crude inputs 1,038 kb/d × $65 × 365 ≈ $24.6B; ~60% assumed domestic (10-K says CVX runs both imported and domestic crude; West Coast plants import heavily); ÷ $108.2B cost of revenue.
     clean_generation_credits_musd:
-      value: 0
-      low: 0
-      high: 50
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: No material clean-electricity credits; renewable-fuel credits (45Z) are a different program.
+      source_url: https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/0000093410-26-000078-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
+      applicable: true
     manufacturing_credits_45x_musd:
       value: 0
       low: 0
@@ -154,11 +166,15 @@ companies:
       source: estimate
       rationale: No solar module sales.
     us_critical_mineral_production_cost_musd:
-      value: 0
-      low: 0
-      high: 20
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Lithium leasing (Arkansas/Texas) is pre-production.
+      source_url: https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/0000093410-26-000078-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
+      applicable: true
   COP:
     oil_price_sensitivity:
       value: 0.6126
@@ -264,11 +280,15 @@ companies:
       source: estimate
       rationale: Nearly all of NEE's fossil fleet (25.7 GW gas) sits in FPL, a regulated utility that recovers fuel and environmental compliance costs through cost-recovery clauses; NEER's contracted renewables emit almost nothing.
     us_methane_kt_ch4:
-      value: 3
-      low: 0
-      high: 10
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Power plants are outside the Waste Emissions Charge; only NEE's gas pipeline interests could be covered and are small.
+      source_url: https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/0000753308-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
+      applicable: true
     federal_upstream_revenue_share:
       value: 0
       low: 0

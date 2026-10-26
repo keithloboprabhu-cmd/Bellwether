@@ -14,11 +14,12 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 5.986319704175505
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/0000821189-26-000054-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
       value: 0.038
@@ -61,11 +62,12 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 3.405992090007765
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/0000821189-26-000054-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
       value: 0.1
@@ -87,14 +89,14 @@ companies:
         exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_refinery_domestic_crude_cost_share:
-      value: 0.115
+      value: 0.0
       low: 0.0
-      high: 0.18
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/0000821189-26-000054-index.htm
+      rationale: 'Company-specific scope estimate: Domestic crude purchased by refiners. Upstream-only producers,
+        service contractors and gas pipelines do not inherit refinery feedstock costs. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_scope1_co2e_mt:
       value: 3.2326126402547732
@@ -129,11 +131,12 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 5.711497056038428
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/0001628280-26-009059-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
       value: 0.038
@@ -176,11 +179,12 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 3.2496282785232276
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/0001628280-26-009059-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
       value: 0.1
@@ -202,14 +206,14 @@ companies:
         exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_refinery_domestic_crude_cost_share:
-      value: 0.115
+      value: 0.0
       low: 0.0
-      high: 0.18
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/0001628280-26-009059-index.htm
+      rationale: 'Company-specific scope estimate: Domestic crude purchased by refiners. Upstream-only producers,
+        service contractors and gas pipelines do not inherit refinery feedstock costs. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_scope1_co2e_mt:
       value: 3.084208410260751
@@ -244,11 +248,12 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 4.546344250413954
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1090012/000119312526056485/0001193125-26-056485-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
       value: 0.038
@@ -291,11 +296,12 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 2.5866998958577887
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1090012/000119312526056485/0001193125-26-056485-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
       value: 0.1
@@ -317,14 +323,14 @@ companies:
         exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_refinery_domestic_crude_cost_share:
-      value: 0.115
+      value: 0.0
       low: 0.0
-      high: 0.18
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1090012/000119312526056485/0001193125-26-056485-index.htm
+      rationale: 'Company-specific scope estimate: Domestic crude purchased by refiners. Upstream-only producers,
+        service contractors and gas pipelines do not inherit refinery feedstock costs. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_scope1_co2e_mt:
       value: 2.455025895223535
@@ -359,21 +365,21 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 9.4450116647534
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
-      value: 0.038
-      low: 0.015
-      high: 0.12
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm
+      rationale: 'Company-specific scope estimate: Direct production on federal leases, not contractor service
+        revenue or stand-alone refining. This is a model boundary, not a reported zero measurement.'
       applicable: true
     manufacturing_credits_45x_musd:
       value: 0.0
@@ -406,40 +412,41 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 5.373858499027805
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
-      value: 0.1
-      low: 0.06
-      high: 0.4
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm
+      rationale: 'Company-specific scope estimate: Direct upstream crude sales, excluding oilfield-service,
+        pipeline and stand-alone refining revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_methane_kt_ch4:
-      value: 10.389512831228739
-      low: 5.66700699885204
-      high: 54.521579804560254
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
-      value: 0.115
+      value: 0.0
       low: 0.0
-      high: 0.18
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/0001193125-26-021017-index.htm
+      rationale: 'Company-specific scope estimate: Domestic crude purchased by refiners. Upstream-only producers,
+        service contractors and gas pipelines do not inherit refinery feedstock costs. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_scope1_co2e_mt:
       value: 5.100306298966836
@@ -474,21 +481,21 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 5.867820622014379
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
-      value: 0.038
-      low: 0.015
-      high: 0.12
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Direct production on federal leases, not contractor service
+        revenue or stand-alone refining. This is a model boundary, not a reported zero measurement.'
       applicable: true
     manufacturing_credits_45x_musd:
       value: 0.0
@@ -521,40 +528,41 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 3.338570542803653
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
-      value: 0.1
-      low: 0.06
-      high: 0.4
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Direct upstream crude sales, excluding oilfield-service,
+        pipeline and stand-alone refining revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_methane_kt_ch4:
-      value: 6.454602684215817
-      low: 3.5206923732086275
-      high: 33.87214983713355
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
-      value: 0.115
+      value: 0.0
       low: 0.0
-      high: 0.18
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Oil production
-        and services; median base and outer low/high from XOM/CVX/COP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/0000045012-26-000015-index.htm
+      rationale: 'Company-specific scope estimate: Domestic crude purchased by refiners. Upstream-only producers,
+        service contractors and gas pipelines do not inherit refinery feedstock costs. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_scope1_co2e_mt:
       value: 3.168623135887765
@@ -658,13 +666,14 @@ companies:
         Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_refinery_domestic_crude_cost_share:
-      value: 0.115
+      value: 0.0
       low: 0.0
-      high: 0.18
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Midstream pipelines;
-        median base and outer low/high from XOM/CVX/COP in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/107263/000010726326000006/0000107263-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Domestic crude purchased by refiners. Upstream-only producers,
+        service contractors and gas pipelines do not inherit refinery feedstock costs. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     us_scope1_co2e_mt:
       value: 1.7068628955039122
@@ -697,20 +706,21 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 35.014362723574436
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/0001534701-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
-      value: 0.0315
-      low: 0.015
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/0001534701-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Direct production on federal leases, not contractor service
+        revenue or stand-alone refining. This is a model boundary, not a reported zero measurement.'
       applicable: true
     manufacturing_credits_45x_musd:
       value: 0.0
@@ -742,20 +752,21 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 19.921863242615235
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/0001534701-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
-      value: 0.087
-      low: 0.06
-      high: 0.12
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/0001534701-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Direct upstream crude sales, excluding oilfield-service,
+        pipeline and stand-alone refining revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_methane_kt_ch4:
       value: 38.382888210876565
@@ -806,20 +817,21 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 32.451555564960245
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1035002/000162828026011499/0001628280-26-011499-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
-      value: 0.0315
-      low: 0.015
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1035002/000162828026011499/0001628280-26-011499-index.htm
+      rationale: 'Company-specific scope estimate: Direct production on federal leases, not contractor service
+        revenue or stand-alone refining. This is a model boundary, not a reported zero measurement.'
       applicable: true
     manufacturing_credits_45x_musd:
       value: 0.0
@@ -851,20 +863,21 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 18.463721789801287
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1035002/000162828026011499/0001628280-26-011499-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
-      value: 0.087
-      low: 0.06
-      high: 0.12
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1035002/000162828026011499/0001628280-26-011499-index.htm
+      rationale: 'Company-specific scope estimate: Direct upstream crude sales, excluding oilfield-service,
+        pipeline and stand-alone refining revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_methane_kt_ch4:
       value: 35.57352847893737
@@ -915,20 +928,21 @@ companies:
     clean_generation_credits_musd:
       value: 0.0
       low: 0.0
-      high: 35.09979844575757
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1510295/000151029526000009/0001510295-26-000009-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
-      value: 0.0315
-      low: 0.015
-      high: 0.05
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1510295/000151029526000009/0001510295-26-000009-index.htm
+      rationale: 'Company-specific scope estimate: Direct production on federal leases, not contractor service
+        revenue or stand-alone refining. This is a model boundary, not a reported zero measurement.'
       applicable: true
     manufacturing_credits_45x_musd:
       value: 0.0
@@ -960,20 +974,21 @@ companies:
     us_critical_mineral_production_cost_musd:
       value: 0.0
       low: 0.0
-      high: 19.9704729741932
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1510295/000151029526000009/0001510295-26-000009-index.htm
+      rationale: 'Company-specific scope estimate: Only separately identified eligible mineral production
+        costs qualify; oil/gas and oilfield services cannot inherit a mineral-production credit, even in a
+        high case. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_crude_sales_share:
-      value: 0.087
-      low: 0.06
-      high: 0.12
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Refining; median
-        base and outer low/high from XOM/CVX in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1510295/000151029526000009/0001510295-26-000009-index.htm
+      rationale: 'Company-specific scope estimate: Direct upstream crude sales, excluding oilfield-service,
+        pipeline and stand-alone refining revenue. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_methane_kt_ch4:
       value: 38.476543200392136
@@ -1089,13 +1104,14 @@ companies:
         result.
       applicable: true
     us_methane_kt_ch4:
-      value: 3.5280534072668903
+      value: 0.0
       low: 0.0
-      high: 11.760178024222967
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
-        generation; median base and outer low/high from NEE in committed exposure
-        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1326160/000132616026000014/0001326160-26-000014-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
       value: 0.0
@@ -1204,13 +1220,14 @@ companies:
         result.
       applicable: true
     us_methane_kt_ch4:
-      value: 3.234313439369619
+      value: 0.0
       low: 0.0
-      high: 10.781044797898732
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
-        generation; median base and outer low/high from NEE in committed exposure
-        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/0000092122-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
       value: 0.0
@@ -1319,13 +1336,14 @@ companies:
         result.
       applicable: true
     us_methane_kt_ch4:
-      value: 2.394133955931709
+      value: 0.0
       low: 0.0
-      high: 7.980446519772363
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
-        generation; median base and outer low/high from NEE in committed exposure
-        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/4904/000000490426000013/0000004904-26-000013-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
       value: 0.0
@@ -1368,13 +1386,14 @@ companies:
         result.
       applicable: true
     clean_generation_credits_musd:
-      value: 1836.2523712242814
-      low: 1327.4113526922517
-      high: 2123.8581643076027
+      value: 0.0
+      low: 0.0
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
-        generation; median base and outer low/high from NEE in committed exposure
-        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1109357/000110935726000018/0001109357-26-000018-index.htm
+      rationale: 'Company-specific scope estimate: Qualifying generation credits; Exelon separated its generation
+        business into Constellation in 2022 and does not inherit the generator peer''s credits. This is a
+        model boundary, not a reported zero measurement.'
       applicable: true
     federal_upstream_revenue_share:
       value: 0.0
@@ -1434,13 +1453,14 @@ companies:
         result.
       applicable: true
     us_methane_kt_ch4:
-      value: 2.654822705384503
+      value: 0.0
       low: 0.0
-      high: 8.849409017948345
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
-        generation; median base and outer low/high from NEE in committed exposure
-        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1109357/000110935726000018/0001109357-26-000018-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
       value: 0.0
@@ -1549,13 +1569,14 @@ companies:
         result.
       applicable: true
     us_methane_kt_ch4:
-      value: 2.794360134247775
+      value: 0.0
       low: 0.0
-      high: 9.314533780825915
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Utilities and
-        generation; median base and outer low/high from NEE in committed exposure
-        configuration. Absolute exposure intensity scaled by SEC annual revenue.
+      source_url: https://www.sec.gov/Archives/edgar/data/1868275/000186827526000032/0001868275-26-000032-index.htm
+      rationale: 'Company-specific scope estimate: Fee is on covered oil/gas facilities. Power-generation
+        fuel-combustion methane and oilfield-service-company footprints are not a proxy for covered Subpart
+        W waste emissions. This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_refinery_domestic_crude_cost_share:
       value: 0.0

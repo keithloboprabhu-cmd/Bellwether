@@ -1,0 +1,402 @@
+{
+  "retrieved_at": "2026-10-26T03:04:46.980480+00:00",
+  "report_date": "20260630",
+  "source_url": "https://api.fdic.gov/banks/financials?filters=REPDTE%3A20260630+AND+CERT%3A%28628+OR+3510+OR+3511+OR+33124+OR+7213+OR+27471+OR+32992+OR+34221+OR+57450+OR+33497+OR+59108+OR+639+OR+14+OR+6548+OR+6384+OR+9846+OR+4297+OR+6672+OR+6560+OR+17534+OR+57803%29&fields=NAME%2CCERT%2CREPDTE%2CASSET%2CRBCT1J%2CNAMEHCR&limit=22",
+  "source": "FDIC BankFind financials",
+  "monetary_unit": "USD thousands",
+  "records": [
+    {
+      "NAMEHCR": "STATE STREET CORP",
+      "RBCT1J": 20623000,
+      "REPDTE": "20260630",
+      "ASSET": 412620000,
+      "CERT": 14,
+      "NAME": "STATE STREET BANK&TRUST CO",
+      "ID": "14_20260630"
+    },
+    {
+      "NAMEHCR": "KEYCORP",
+      "RBCT1J": 18430210,
+      "REPDTE": "20260630",
+      "ASSET": 188555486,
+      "CERT": 17534,
+      "NAME": "KEYBANK NATIONAL ASSN",
+      "ID": "17534_20260630"
+    },
+    {
+      "NAMEHCR": "AMERICAN EXPRESS CO",
+      "RBCT1J": 19154483,
+      "REPDTE": "20260630",
+      "ASSET": 213946192,
+      "CERT": 27471,
+      "NAME": "AMERICAN EXPRESS NB",
+      "ID": "27471_20260630"
+    },
+    {
+      "NAMEHCR": "MORGAN STANLEY",
+      "RBCT1J": 41091000,
+      "REPDTE": "20260630",
+      "ASSET": 419318000,
+      "CERT": 32992,
+      "NAME": "MORGAN STANLEY BANK NA",
+      "ID": "32992_20260630"
+    },
+    {
+      "NAMEHCR": "GOLDMAN SACHS GROUP INC THE",
+      "RBCT1J": 59262000,
+      "REPDTE": "20260630",
+      "ASSET": 758788000,
+      "CERT": 33124,
+      "NAME": "GOLDMAN SACHS BANK USA",
+      "ID": "33124_20260630"
+    },
+    {
+      "NAMEHCR": "CHARLES SCHWAB CORP THE",
+      "RBCT1J": 3049000,
+      "REPDTE": "20260630",
+      "ASSET": 26576000,
+      "CERT": 33497,
+      "NAME": "CHARLES SCHWAB PREMIER BK SS",
+      "ID": "33497_20260630"
+    },
+    {
+      "NAMEHCR": "MORGAN STANLEY",
+      "RBCT1J": 16645000,
+      "REPDTE": "20260630",
+      "ASSET": 250425000,
+      "CERT": 34221,
+      "NAME": "MORGAN STANLEY PRIVATE BK NA",
+      "ID": "34221_20260630"
+    },
+    {
+      "NAMEHCR": "BANK OF AMERICA CORP",
+      "RBCT1J": 186728000,
+      "REPDTE": "20260630",
+      "ASSET": 2654645000,
+      "CERT": 3510,
+      "NAME": "BANK OF AMERICA NA",
+      "ID": "3510_20260630"
+    },
+    {
+      "NAMEHCR": "WELLS FARGO&COMPANY",
+      "RBCT1J": 148541000,
+      "REPDTE": "20260630",
+      "ASSET": 1907928000,
+      "CERT": 3511,
+      "NAME": "WELLS FARGO BANK NA",
+      "ID": "3511_20260630"
+    },
+    {
+      "NAMEHCR": "CAPITAL ONE FINANCIAL CORP",
+      "RBCT1J": 67476000,
+      "REPDTE": "20260630",
+      "ASSET": 662157000,
+      "CERT": 4297,
+      "NAME": "CAPITAL ONE NATIONAL ASSN",
+      "ID": "4297_20260630"
+    },
+    {
+      "NAMEHCR": "CHARLES SCHWAB CORP THE",
+      "RBCT1J": 27085000,
+      "REPDTE": "20260630",
+      "ASSET": 250828000,
+      "CERT": 57450,
+      "NAME": "CHARLES SCHWAB BANK SSB",
+      "ID": "57450_20260630"
+    },
+    {
+      "NAMEHCR": "ALLY FINANCIAL INC",
+      "RBCT1J": 18021000,
+      "REPDTE": "20260630",
+      "ASSET": 188184000,
+      "CERT": 57803,
+      "NAME": "ALLY BANK",
+      "ID": "57803_20260630"
+    },
+    {
+      "NAMEHCR": "CHARLES SCHWAB CORP THE",
+      "RBCT1J": 1167412,
+      "REPDTE": "20260630",
+      "ASSET": 10508989,
+      "CERT": 59108,
+      "NAME": "CHARLES SCHWAB TRUST BANK",
+      "ID": "59108_20260630"
+    },
+    {
+      "NAMEHCR": "JPMORGAN CHASE&CO",
+      "RBCT1J": 302589000,
+      "REPDTE": "20260630",
+      "ASSET": 4091315000,
+      "CERT": 628,
+      "NAME": "JPMORGAN CHASE BANK NA",
+      "ID": "628_20260630"
+    },
+    {
+      "NAMEHCR": "PNC FINL SERVICES GROUP INC",
+      "RBCT1J": 53524844,
+      "REPDTE": "20260630",
+      "ASSET": 609771726,
+      "CERT": 6384,
+      "NAME": "PNC BANK NATIONAL ASSN",
+      "ID": "6384_20260630"
+    },
+    {
+      "NAMEHCR": "BANK OF NY MELLON CORP THE",
+      "RBCT1J": 22497000,
+      "REPDTE": "20260630",
+      "ASSET": 425115000,
+      "CERT": 639,
+      "NAME": "BANK OF NEW YORK MELLON",
+      "ID": "639_20260630"
+    },
+    {
+      "NAMEHCR": "U S BCORP",
+      "RBCT1J": 63189592,
+      "REPDTE": "20260630",
+      "ASSET": 705554946,
+      "CERT": 6548,
+      "NAME": "U S BANK NATIONAL ASSN",
+      "ID": "6548_20260630"
+    },
+    {
+      "NAMEHCR": "HUNTINGTON BANCSHARES INC",
+      "RBCT1J": 25622044,
+      "REPDTE": "20260630",
+      "ASSET": 283073605,
+      "CERT": 6560,
+      "NAME": "HUNTINGTON NATIONAL BANK",
+      "ID": "6560_20260630"
+    },
+    {
+      "NAMEHCR": "FIFTH THIRD BCORP",
+      "RBCT1J": 28723000,
+      "REPDTE": "20260630",
+      "ASSET": 299177000,
+      "CERT": 6672,
+      "NAME": "FIFTH THIRD BANK NA",
+      "ID": "6672_20260630"
+    },
+    {
+      "NAMEHCR": "CITIGROUP INC",
+      "RBCT1J": 155093000,
+      "REPDTE": "20260630",
+      "ASSET": 1976180000,
+      "CERT": 7213,
+      "NAME": "CITIBANK NATIONAL ASSN",
+      "ID": "7213_20260630"
+    },
+    {
+      "NAMEHCR": "TRUIST FINANCIAL CORP",
+      "RBCT1J": 52035000,
+      "REPDTE": "20260630",
+      "ASSET": 548346000,
+      "CERT": 9846,
+      "NAME": "TRUIST BANK",
+      "ID": "9846_20260630"
+    }
+  ],
+  "companies": {
+    "JPM": {
+      "value": 3788726.0,
+      "low": 3409853.4,
+      "high": 4167598.6000000006,
+      "gross_base_musd": 3788726.0,
+      "reported_assets_musd": 4091315.0,
+      "report_date": "20260630",
+      "certificates": [
+        628
+      ]
+    },
+    "BAC": {
+      "value": 2467917.0,
+      "low": 2221125.3000000003,
+      "high": 2714708.7,
+      "gross_base_musd": 2467917.0,
+      "reported_assets_musd": 2654645.0,
+      "report_date": "20260630",
+      "certificates": [
+        3510
+      ]
+    },
+    "WFC": {
+      "value": 1759387.0,
+      "low": 1583448.3,
+      "high": 1935325.7000000002,
+      "gross_base_musd": 1759387.0,
+      "reported_assets_musd": 1907928.0,
+      "report_date": "20260630",
+      "certificates": [
+        3511
+      ]
+    },
+    "GS": {
+      "value": 699526.0,
+      "low": 629573.4,
+      "high": 769478.6000000001,
+      "gross_base_musd": 699526.0,
+      "reported_assets_musd": 758788.0,
+      "report_date": "20260630",
+      "certificates": [
+        33124
+      ]
+    },
+    "C": {
+      "value": 1821087.0,
+      "low": 1638978.3,
+      "high": 2003195.7000000002,
+      "gross_base_musd": 1821087.0,
+      "reported_assets_musd": 1976180.0,
+      "report_date": "20260630",
+      "certificates": [
+        7213
+      ]
+    },
+    "AXP": {
+      "value": 194791.709,
+      "low": 175312.5381,
+      "high": 214270.87990000003,
+      "gross_base_musd": 194791.709,
+      "reported_assets_musd": 213946.192,
+      "report_date": "20260630",
+      "certificates": [
+        27471
+      ]
+    },
+    "MS": {
+      "value": 612007.0,
+      "low": 550806.3,
+      "high": 673207.7000000001,
+      "gross_base_musd": 612007.0,
+      "reported_assets_musd": 669743.0,
+      "report_date": "20260630",
+      "certificates": [
+        32992,
+        34221
+      ]
+    },
+    "SCHW": {
+      "value": 256611.577,
+      "low": 230950.4193,
+      "high": 282272.73470000003,
+      "gross_base_musd": 256611.577,
+      "reported_assets_musd": 287912.989,
+      "report_date": "20260630",
+      "certificates": [
+        57450,
+        33497,
+        59108
+      ]
+    },
+    "BNY": {
+      "value": 221439.90000000002,
+      "low": 120785.4,
+      "high": 322094.4,
+      "gross_base_musd": 402618.0,
+      "reported_assets_musd": 425115.0,
+      "report_date": "20260630",
+      "certificates": [
+        639
+      ]
+    },
+    "STT": {
+      "value": 215598.35,
+      "low": 117599.09999999999,
+      "high": 313597.60000000003,
+      "gross_base_musd": 391997.0,
+      "reported_assets_musd": 412620.0,
+      "report_date": "20260630",
+      "certificates": [
+        14
+      ]
+    },
+    "USB": {
+      "value": 642365.354,
+      "low": 578128.8186000001,
+      "high": 706601.8894000001,
+      "gross_base_musd": 642365.354,
+      "reported_assets_musd": 705554.946,
+      "report_date": "20260630",
+      "certificates": [
+        6548
+      ]
+    },
+    "PNC": {
+      "value": 556246.882,
+      "low": 500622.1938,
+      "high": 611871.5702000001,
+      "gross_base_musd": 556246.882,
+      "reported_assets_musd": 609771.726,
+      "report_date": "20260630",
+      "certificates": [
+        6384
+      ]
+    },
+    "TFC": {
+      "value": 496311.0,
+      "low": 446679.9,
+      "high": 545942.1000000001,
+      "gross_base_musd": 496311.0,
+      "reported_assets_musd": 548346.0,
+      "report_date": "20260630",
+      "certificates": [
+        9846
+      ]
+    },
+    "COF": {
+      "value": 594681.0,
+      "low": 535212.9,
+      "high": 654149.1000000001,
+      "gross_base_musd": 594681.0,
+      "reported_assets_musd": 662157.0,
+      "report_date": "20260630",
+      "certificates": [
+        4297
+      ]
+    },
+    "FITB": {
+      "value": 270454.0,
+      "low": 243408.6,
+      "high": 297499.4,
+      "gross_base_musd": 270454.0,
+      "reported_assets_musd": 299177.0,
+      "report_date": "20260630",
+      "certificates": [
+        6672
+      ]
+    },
+    "HBAN": {
+      "value": 257451.561,
+      "low": 231706.4049,
+      "high": 283196.7171,
+      "gross_base_musd": 257451.561,
+      "reported_assets_musd": 283073.605,
+      "report_date": "20260630",
+      "certificates": [
+        6560
+      ]
+    },
+    "KEY": {
+      "value": 170125.276,
+      "low": 153112.7484,
+      "high": 187137.80360000004,
+      "gross_base_musd": 170125.276,
+      "reported_assets_musd": 188555.486,
+      "report_date": "20260630",
+      "certificates": [
+        17534
+      ]
+    },
+    "ALLY": {
+      "value": 170163.0,
+      "low": 153146.7,
+      "high": 187179.30000000002,
+      "gross_base_musd": 170163.0,
+      "reported_assets_musd": 188184.0,
+      "report_date": "20260630",
+      "certificates": [
+        57803
+      ]
+    }
+  },
+  "limitations": "Quarter-end proxy, not a bank invoice or exact statutory quarterly average. Custodial deductions are estimated; entity mappings require review after mergers."
+}

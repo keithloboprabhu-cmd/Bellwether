@@ -1,0 +1,2341 @@
+as_of: '2026-10-25'
+description: Explicit business/activity scope decisions for every current policy-company pair. Included means a
+  modeled channel exists, not that every selected input must change earnings. Unquantified means missing coverage,
+  not a measured zero or legal exclusion.
+policies:
+  consumer_retail/consumer_tax_rebate:
+    references:
+    - https://www.nber.org/papers/w16684
+    - https://fred.stlouisfed.org/series/PCE
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - TGT
+      - COST
+      - AMZN
+      - NKE
+      - HD
+      - LOW
+      - KR
+      - DG
+      - DLTR
+      - TJX
+      - ROST
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      reason: Consumer transfers raise captured retailer spending.
+      default_direction:
+        metric: dR
+        sign: 1
+  consumer_retail/import_tariffs:
+    references:
+    - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
+    - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - TGT
+      - COST
+      - AMZN
+      - NKE
+      - HD
+      - LOW
+      - KR
+      - DG
+      - DLTR
+      - TJX
+      - ROST
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      reason: Import duties raise importer input costs after partial pass-through.
+      default_direction:
+        metric: dNI
+        sign: -1
+  consumer_retail/minimum_wage_increase:
+    references:
+    - https://www.npr.org/2019/07/08/739607964/-15-minimum-wage-would-boost-17-million-workers-cut-1-3-million-jobs-cbo-says
+    - https://fred.stlouisfed.org/series/CES4200000007
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - TGT
+      - COST
+      - AMZN
+      - NKE
+      - HD
+      - LOW
+      - KR
+      - DG
+      - DLTR
+      - TJX
+      - ROST
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      reason: Higher wage floor raises exposed hourly payroll.
+      default_direction:
+        metric: dNI
+        sign: -1
+      default_zero:
+      - COST
+      - AMZN
+  consumer_retail/sales_tax_change:
+    references:
+    - https://comptroller.texas.gov/taxes/sales/faq/food.php
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - TGT
+      - COST
+      - AMZN
+      - NKE
+      - HD
+      - LOW
+      - KR
+      - DG
+      - DLTR
+      - TJX
+      - ROST
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      reason: Higher checkout tax reduces exposed consumer demand.
+      default_direction:
+        metric: dR
+        sign: -1
+  industrials/bonus_depreciation_rollback:
+    references:
+    - https://www.bdo.com/insights/tax/irs-issues-interim-guidance-on-bonus-depreciation-rules
+    - https://www.law.cornell.edu/uscode/text/26/168
+    groups:
+    - status: included
+      tickers:
+      - CAT
+      - DE
+      - GE
+      - HON
+      - MMM
+      - NUE
+      - BA
+      - ETN
+      - EMR
+      - ITW
+      - PH
+      - CMI
+      - PCAR
+      - DOV
+      - ROK
+      - STLD
+      - CLF
+      - CARR
+      - OTIS
+      - IR
+      reason: Lost cash-tax deferral lowers value, without a GAAP EPS change.
+      default_direction:
+        metric: dValue_pv
+        sign: -1
+  industrials/corporate_tax_rate_change:
+    references:
+    - https://www.law.cornell.edu/uscode/text/26/11
+    groups:
+    - status: included
+      tickers:
+      - CAT
+      - DE
+      - GE
+      - HON
+      - MMM
+      - NUE
+      - BA
+      - ETN
+      - EMR
+      - ITW
+      - PH
+      - CMI
+      - PCAR
+      - DOV
+      - ROK
+      - STLD
+      - CLF
+      - CARR
+      - OTIS
+      - IR
+      reason: Default statutory tax increase lowers positive domestic pretax earnings after tax.
+      default_direction:
+        metric: tax_rate_change
+        sign: 1
+  industrials/rd_credit_expansion:
+    references:
+    - https://www.law.cornell.edu/uscode/text/26/41
+    groups:
+    - status: included
+      tickers:
+      - CAT
+      - DE
+      - GE
+      - HON
+      - MMM
+      - NUE
+      - BA
+      - ETN
+      - EMR
+      - ITW
+      - PH
+      - CMI
+      - PCAR
+      - DOV
+      - ROK
+      - STLD
+      - CLF
+      - CARR
+      - OTIS
+      - IR
+      reason: Incremental qualifying R&D credit is after-tax income.
+      default_direction:
+        metric: dNI
+        sign: 1
+  industrials/steel_tariffs:
+    references:
+    - https://www.polsinelli.com/publications/usitc-releases-report-on-the-economic-impact-of-the-section-232-and-301-tariffs-on-u-s-industries
+    - https://reason.com/2023/03/16/u-s-trade-commission-admits-tariffs-raised-prices-for-american-consumers/
+    - https://www.usitc.gov/publications/332/pub5405.pdf
+    - https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - CAT
+      - DE
+      - GE
+      - HON
+      - MMM
+      - NUE
+      - BA
+      - ETN
+      - EMR
+      - ITW
+      - PH
+      - CMI
+      - PCAR
+      - DOV
+      - ROK
+      - STLD
+      - CLF
+      - CARR
+      - OTIS
+      - IR
+      reason: Domestic steel producer gains tariff pricing while equipment users face costs.
+      default_direction:
+        metric: dNI
+        sign: -1
+      direction_overrides:
+        NUE:
+          metric: dNI
+          sign: 1
+        STLD:
+          metric: dNI
+          sign: 1
+        CLF:
+          metric: dNI
+          sign: 1
+  energy_resources/carbon_price:
+    references:
+    - https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
+    - https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/Sustainability/2025/Data%20Appendix.pdf
+    - https://www.conocophillips.com/sustainability/managing-climate-related-risks/metrics-targets
+    groups:
+    - status: included
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - NEE
+      - FSLR
+      - FCX
+      - EOG
+      - OXY
+      - DVN
+      - SLB
+      - HAL
+      - WMB
+      - PSX
+      - VLO
+      - MPC
+      - DUK
+      - SO
+      - AEP
+      - EXC
+      - CEG
+      reason: Covered emissions raise direct compliance cost.
+      default_direction:
+        metric: dNI
+        sign: -1
+  public_sector/continuing_resolution:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+    - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - OSK
+      - KBR
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - ICFI
+      - TTEK
+      - MRCY
+      - VSEC
+      reason: New awards slip beyond the modeled fiscal year.
+      default_direction:
+        metric: dR
+        sign: -1
+  public_sector/defense_budget_increase:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/16058/000162828026054195/caci-20260630.htm
+    - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - OSK
+      - KBR
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - ICFI
+      - TTEK
+      - MRCY
+      - VSEC
+      reason: Higher defense budget raises relevant contract demand.
+      default_direction:
+        metric: dR
+        sign: 1
+  public_sector/federal_civilian_budget_cut:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1336920/000133692026000030/ldos-20260102.htm
+    - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - OSK
+      - KBR
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - ICFI
+      - TTEK
+      - MRCY
+      - VSEC
+      reason: Civilian budget cuts reduce exposed federal demand.
+      default_direction:
+        metric: dR
+        sign: -1
+  public_sector/fixed_price_shift:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    - https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - OSK
+      - KBR
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - ICFI
+      - TTEK
+      - MRCY
+      - VSEC
+      reason: Cost overruns move from reimbursed to contractor-borne.
+      default_direction:
+        metric: dNI
+        sign: -1
+  public_sector/government_shutdown:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1443646/000162828026003186/finalbahexhibit991q3fy26.htm
+    - https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+    - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - OSK
+      - KBR
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - ICFI
+      - TTEK
+      - MRCY
+      - VSEC
+      reason: Unrecovered service revenue is lost during a shutdown.
+      default_direction:
+        metric: dR
+        sign: -1
+  real_estate_hospitality/interest_rate_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+    - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+    - https://www.cbre.com/insights/reports/us-cap-rate-survey-h1-2025
+    groups:
+    - status: included
+      tickers:
+      - PLD
+      - AMT
+      - SPG
+      - MAR
+      - HLT
+      - ABNB
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      - HST
+      - RLJ
+      - PK
+      reason: Higher rates raise refinancing cost and reduce property values.
+      default_direction:
+        metric: dValue_pct
+        sign: -1
+      direction_overrides:
+        ABNB:
+          metric: dNI
+          sign: 1
+        MAR:
+          metric: dNI
+          sign: -1
+        HLT:
+          metric: dNI
+          sign: -1
+  tmt/data_privacy_mandate:
+    references:
+    - https://www.aeaweb.org/doi/10.1257/pol.20210309
+    - https://itpro.com/security/privacy/362151/meta-says-apples-ios-privacy-changes-will-cost-it-10-billion-in-2022
+    groups:
+    - status: included
+      tickers:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - META
+      - NVDA
+      - VZ
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - INTC
+      - AMD
+      - QCOM
+      - MU
+      - AVGO
+      - CSCO
+      - T
+      - CMCSA
+      - NFLX
+      - DIS
+      reason: Ad-targeting loss and privacy compliance raise costs/reduce monetization.
+      default_direction:
+        metric: dNI
+        sign: -1
+  tmt/semiconductor_tariffs:
+    references:
+    - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
+    - https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
+    - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+    groups:
+    - status: included
+      tickers:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - META
+      - NVDA
+      - VZ
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - INTC
+      - AMD
+      - QCOM
+      - MU
+      - AVGO
+      - CSCO
+      - T
+      - CMCSA
+      - NFLX
+      - DIS
+      reason: Tariffs raise imported semiconductor/hardware cost.
+      default_direction:
+        metric: dNI
+        sign: -1
+  consumer_retail/snap_benefit_change:
+    references:
+    - https://www.nber.org/papers/w23112
+    - https://supermarketnews.com/foodservice-retail/walmart-dominates-the-retail-field-in-snap-grocery-market-share
+    - https://www.everycrsreport.com/files/2025-07-23_R48552_542fa893b97030757b3aedac1b44930cac47cc88.html
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - TGT
+      - COST
+      - AMZN
+      - KR
+      - DG
+      - DLTR
+      reason: Default SNAP reduction lowers grocery spending.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - NKE
+      - HD
+      - LOW
+      - TJX
+      - ROST
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      reason: This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects
+        and restaurant exceptions are not included.
+  consumer_retail/sweetened_beverage_tax:
+    references:
+    - https://doi.org/10.1001/jama.2019.4249
+    - https://doi.org/10.1111/obr.12002
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - TGT
+      - COST
+      - AMZN
+      - HD
+      - LOW
+      - KR
+      - DG
+      - DLTR
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      reason: Covered beverage demand declines under a consumer tax.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - NKE
+      - TJX
+      - ROST
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      reason: No quantified sales of covered sweetened beverages in this company channel; unrelated products do
+        not inherit beverage taxes.
+  industrials/defense_procurement_increase:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - CAT
+      - GE
+      - HON
+      - MMM
+      - BA
+      - ETN
+      - EMR
+      - ITW
+      - PH
+      - CMI
+      - PCAR
+      - DOV
+      - ROK
+      - CARR
+      - OTIS
+      - IR
+      reason: Higher defense procurement raises exposed suppliers revenue.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - DE
+      - NUE
+      - STLD
+      - CLF
+      reason: No quantified defense/IC revenue share. Military demand through customer supply chains is not separately
+        modeled.
+  industrials/infrastructure_spending:
+    references:
+    - https://www.congress.gov/bill/117th-congress/house-bill/3684
+    groups:
+    - status: included
+      tickers:
+      - CAT
+      - DE
+      - GE
+      - HON
+      - MMM
+      - NUE
+      - ETN
+      - EMR
+      - ITW
+      - PH
+      - CMI
+      - PCAR
+      - DOV
+      - ROK
+      - STLD
+      - CLF
+      - CARR
+      - OTIS
+      - IR
+      reason: Public infrastructure purchases raise captured equipment/material demand.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - BA
+      reason: Boeing aerospace revenue is outside the domestic infrastructure equipment/materials allocation.
+  education/earnings_accountability_test:
+    references:
+    - https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
+    - https://ticas.org/accountability/earnings-metric-final-rule-blog/
+    - https://www.nasfaa.org/uploads/documents/Ppt3_ResultsofEarningsTestandGEChanges_v2.pdf
+    groups:
+    - status: included
+      tickers:
+      - LOPE
+      - CVSA
+      - STRA
+      - COUR
+      - UTI
+      - PRDO
+      - APEI
+      - LINC
+      reason: Loss of aid eligibility reduces enrollment at exposed programs.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - LRN
+      - DUOL
+      - LAUR
+      - NRDY
+      - SKIL
+      - CHGG
+      - SCHL
+      - KLC
+      - BFAM
+      - WLY
+      - FC
+      - SLM
+      reason: This channel covers US aid-dependent programs or service partners, not foreign private-pay institutions,
+        lenders or learning apps.
+  education/online_compliance_costs:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1434588/000110465926017047/lope-20251231x10k.htm
+    groups:
+    - status: included
+      tickers:
+      - LRN
+      - LOPE
+      - CVSA
+      - STRA
+      - DUOL
+      - COUR
+      - UTI
+      - PRDO
+      - APEI
+      - NRDY
+      - LINC
+      - SKIL
+      - CHGG
+      - SCHL
+      - WLY
+      - FC
+      reason: Online compliance increases operating costs.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - LAUR
+      - KLC
+      - BFAM
+      - SLM
+      reason: This scenario covers US online education activity, excluding foreign institutions, physical childcare
+        centers and lending revenue.
+  education/pell_grant_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    groups:
+    - status: included
+      tickers:
+      - LOPE
+      - CVSA
+      - STRA
+      - UTI
+      - PRDO
+      - APEI
+      - LINC
+      reason: Default grant reduction lowers funded undergraduate enrollment.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - LRN
+      - DUOL
+      - COUR
+      - LAUR
+      - NRDY
+      - SKIL
+      - CHGG
+      - SCHL
+      - KLC
+      - BFAM
+      - WLY
+      - FC
+      - SLM
+      reason: Pell enrollment exposure requires US Title IV undergraduate programs or an explicitly modeled service
+        partner.
+  education/school_choice_esa:
+    references:
+    - https://www.edchoice.org/2026-edchoice-participation-rankings/
+    - https://www.sec.gov/Archives/edgar/data/1157408/000110465926090515/lrn-20260630x10k.htm
+    groups:
+    - status: included
+      tickers:
+      - LRN
+      - NRDY
+      reason: ESA funding raises eligible education spending.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - LOPE
+      - CVSA
+      - STRA
+      - DUOL
+      - COUR
+      - UTI
+      - PRDO
+      - APEI
+      - LAUR
+      - LINC
+      - SKIL
+      - CHGG
+      - WLY
+      - FC
+      - SLM
+      reason: "This allocation covers modeled K\u201312 school/tutoring providers, not higher education tuition\
+        \ or general consumer apps."
+    - status: unquantified
+      tickers:
+      - SCHL
+      - KLC
+      - BFAM
+      reason: No quantified central exposure. The high sensitivity case represents uncertain qualifying state ESA
+        services/materials capture; eligibility/provider approval and awards require verification.
+  education/student_loan_borrowing_caps:
+    references:
+    - https://www.nber.org/papers/w31291
+    - https://freopp.org/?p=3907
+    - https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    groups:
+    - status: included
+      tickers:
+      - LOPE
+      - CVSA
+      - STRA
+      - COUR
+      - PRDO
+      - APEI
+      reason: Graduate borrowing limits reduce funded graduate tuition.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - LRN
+      - DUOL
+      - UTI
+      - LAUR
+      - NRDY
+      - LINC
+      - SKIL
+      - CHGG
+      - SCHL
+      - KLC
+      - BFAM
+      - WLY
+      - FC
+      - SLM
+      reason: Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational
+        programs and private lenders do not inherit graduate tuition.
+  education/student_loan_forgiveness:
+    references:
+    - https://www.nber.org/papers/w31291
+    groups:
+    - status: included
+      tickers:
+      - LRN
+      - LOPE
+      - CVSA
+      - STRA
+      - DUOL
+      - COUR
+      - UTI
+      - PRDO
+      - APEI
+      - NRDY
+      - LINC
+      - SKIL
+      - CHGG
+      - SCHL
+      - KLC
+      - BFAM
+      - WLY
+      - FC
+      reason: Household transfer proxy increases discretionary education demand; not lender debt cancellation.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - LAUR
+      - SLM
+      reason: Laureate operates continuing institutions in Mexico/Peru. Sallie Mae earns private-loan revenue. Neither
+        is allocated US household education purchases in this scenario.
+  education/ninety_ten_rule_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/cvsa-20260630x10k.htm
+    - https://www.everycrsreport.com/reports/R46773.html
+    groups:
+    - status: included
+      tickers:
+      - CVSA
+      - STRA
+      - UTI
+      - PRDO
+      - APEI
+      - LINC
+      reason: Tighter federal revenue limit restricts exposed proprietary programs.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: conditional
+      tickers:
+      - LOPE
+      reason: "The configured federal-aid share is 73%, below every selectable cap (75\u201390%). The rule does\
+        \ not bind at these settings."
+    - status: outside_scope
+      tickers:
+      - LRN
+      - DUOL
+      - COUR
+      - LAUR
+      - NRDY
+      - SKIL
+      - CHGG
+      - SCHL
+      - KLC
+      - BFAM
+      - WLY
+      - FC
+      - SLM
+      reason: No covered proprietary Title IV tuition/service-partner exposure.
+  energy_resources/clean_energy_credits_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/37634/000075330826000015/nee-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/1274494/000127449426000021/fslr-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - NEE
+      - FSLR
+      - DUK
+      - SO
+      - AEP
+      - CEG
+      reason: Default credit rollback reduces qualifying production benefits.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - EOG
+      - OXY
+      - DVN
+      - SLB
+      - HAL
+      - WMB
+      - PSX
+      - VLO
+      - MPC
+      - EXC
+      reason: No quantified qualifying generation/45X manufacturing credit or US solar-module demand in this model.
+        Exelon is a separated transmission/distribution company.
+    - status: unquantified
+      tickers:
+      - FCX
+      reason: No quantified central exposure. The high sensitivity case represents uncertain qualifying molybdenum
+        by-product production credits, not a reported credit stream or a credit for copper.
+  energy_resources/critical_minerals_credit:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - FCX
+      reason: Qualifying domestic mineral production gets an after-tax credit.
+      default_direction:
+        metric: dNI
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - NEE
+      - FSLR
+      - EOG
+      - OXY
+      - DVN
+      - SLB
+      - HAL
+      - WMB
+      - PSX
+      - VLO
+      - MPC
+      - DUK
+      - SO
+      - AEP
+      - EXC
+      - CEG
+      reason: The channel requires qualifying domestic mineral production costs; fuel production, utilities and
+        imported solar materials do not automatically qualify.
+  energy_resources/crude_export_restrictions:
+    references:
+    - https://www.eia.gov/analysis/requests/crude-exports
+    - https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - EOG
+      - OXY
+      - DVN
+      - PSX
+      - VLO
+      - MPC
+      reason: Domestic upstream prices fall; refiner feedstock savings are a separate channel.
+      default_direction:
+        metric: dR
+        sign: -1
+      direction_overrides:
+        PSX:
+          metric: dNI
+          sign: 1
+        VLO:
+          metric: dNI
+          sign: 1
+        MPC:
+          metric: dNI
+          sign: 1
+    - status: outside_scope
+      tickers:
+      - NEE
+      - FSLR
+      - FCX
+      - SLB
+      - HAL
+      - WMB
+      - DUK
+      - SO
+      - AEP
+      - EXC
+      - CEG
+      reason: This scenario covers US upstream crude sales and refinery feedstock savings, not oilfield-service
+        orders or utilities.
+  energy_resources/federal_leasing_limits:
+    references:
+    - https://www.eia.gov/todayinenergy/detail.php?id=65804
+    groups:
+    - status: included
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - EOG
+      - OXY
+      - DVN
+      reason: Limits reduce federal-lease production revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - NEE
+      - FSLR
+      - FCX
+      - SLB
+      - HAL
+      - WMB
+      - PSX
+      - VLO
+      - MPC
+      - DUK
+      - SO
+      - AEP
+      - EXC
+      - CEG
+      reason: Production revenue on federal oil/gas leases is required. Contractors, refiners and utilities do not
+        own this modeled upstream exposure.
+  energy_resources/methane_emissions_fee:
+    references:
+    - https://www.everycrsreport.com/reports/R48906.html
+    - https://www.epa.gov/inflation-reduction-act/waste-emissions-charge
+    - https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
+    groups:
+    - status: included
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - EOG
+      - OXY
+      - DVN
+      - WMB
+      - PSX
+      - VLO
+      - MPC
+      reason: Fee raises covered oil/gas facility cost, not power combustion.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - NEE
+      - FSLR
+      - FCX
+      - SLB
+      - HAL
+      - DUK
+      - SO
+      - AEP
+      - EXC
+      - CEG
+      reason: Covered oil/gas-facility waste methane is distinct from combustion emissions or service-company footprints.
+  energy_resources/spr_release:
+    references:
+    - https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
+    - https://econpapers.repec.org/paper/zbwcfswop/647.htm
+    - https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - XOM
+      - CVX
+      - COP
+      - EOG
+      - OXY
+      - DVN
+      - FCX
+      reason: Default reserve release depresses crude price for producers.
+      default_direction:
+        metric: dR
+        sign: -1
+      direction_overrides:
+        FCX:
+          metric: dNI
+          sign: 1
+    - status: outside_scope
+      tickers:
+      - NEE
+      - FSLR
+      - SLB
+      - HAL
+      - WMB
+      - PSX
+      - VLO
+      - MPC
+      - DUK
+      - SO
+      - AEP
+      - EXC
+      - CEG
+      reason: This temporary-price scenario holds refining margins constant. Oilfield-service orders, utility dispatch
+        and other lagged/indirect effects are not quantified.
+  financial_services/fdic_assessment_increase:
+    references:
+    - https://www.fdic.gov/news/press-releases/2022/pr22073.html
+    - https://www.fdic.gov/resources/deposit-insurance/deposit-insurance-fund/dif-assessments.html
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - BAC
+      - WFC
+      - GS
+      - C
+      - AXP
+      - MS
+      - SCHW
+      - BNY
+      - STT
+      - USB
+      - PNC
+      - TFC
+      - COF
+      - FITB
+      - HBAN
+      - KEY
+      - ALLY
+      reason: Higher assessment raises covered bank operating cost.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - MA
+      - BLK
+      - AIG
+      - PRU
+      - PGR
+      reason: FDIC assessments apply to insured bank subsidiaries, not insurance-policy premiums. Insurers (including
+        AIG), asset managers and payment networks have no quantified insured-bank assessment base here; counterparty
+        spillovers are not modeled.
+  financial_services/bank_capital_requirement:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm
+    - https://www.bankofengland.co.uk/external-mpc-discussion-paper/2011/optimal-bank-capital
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - BAC
+      - WFC
+      - GS
+      - C
+      - AXP
+      - MS
+      - SCHW
+      - BNY
+      - STT
+      - USB
+      - PNC
+      - TFC
+      - COF
+      - FITB
+      - HBAN
+      - KEY
+      - ALLY
+      reason: Higher CET1 lowers modeled ROE/value while EPS remains unchanged.
+      default_direction:
+        metric: dValue_pct
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - MA
+      - BLK
+      - AIG
+      - PRU
+      - PGR
+      reason: CET1 is a bank capital standard. Insurance capital, asset-manager capital and payment-network regulation
+        need separate policy channels.
+  financial_services/fed_rate_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - BAC
+      - WFC
+      - GS
+      - C
+      - AXP
+      - MS
+      - SCHW
+      - BNY
+      - STT
+      - USB
+      - PNC
+      - TFC
+      - COF
+      - FITB
+      - HBAN
+      - KEY
+      - ALLY
+      reason: Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ.
+      default_direction:
+        metric: dR
+        sign: -1
+      direction_overrides:
+        C:
+          metric: dR
+          sign: 1
+    - status: outside_scope
+      tickers:
+      - MA
+      - BLK
+      - AIG
+      - PRU
+      - PGR
+      reason: This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager
+        fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest
+        rates cannot affect the business.
+  financial_services/credit_card_interchange_cap:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm
+    - https://www.federalreserve.gov/econres/feds/bank-profitability-and-debit-card-interchange-regulation-bank-responses-to-the-durbin-amendment.htm
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - BAC
+      - WFC
+      - GS
+      - C
+      - USB
+      - PNC
+      - TFC
+      - COF
+      - FITB
+      - HBAN
+      - KEY
+      reason: Credit issuer interchange declines after a binding cap.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - AXP
+      - MS
+      - SCHW
+      - BNY
+      - STT
+      - ALLY
+      - MA
+      - BLK
+      - AIG
+      - PRU
+      - PGR
+      reason: The cap covers Visa/Mastercard credit-card issuer interchange. Amex is assumed exempt; Mastercard
+        is a network rather than an issuer. Non-issuers and Ally after its card sale have no direct issuer-fee loss.
+  financial_services/credit_card_late_fee_cap:
+    references:
+    - https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
+    - https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - BAC
+      - WFC
+      - C
+      - AXP
+      - USB
+      - PNC
+      - TFC
+      - COF
+      - FITB
+      - HBAN
+      - KEY
+      reason: Binding late-fee cap lowers issuer fee revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - GS
+      - MS
+      - SCHW
+      - BNY
+      - STT
+      - ALLY
+      - MA
+      - BLK
+      - AIG
+      - PRU
+      - PGR
+      reason: Non-issuers have no covered card late fees. Goldman's modeled Apple Card book charges no late fees;
+        Ally sold its card business.
+  financial_services/financial_transaction_tax:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm
+    - https://www.imf.org/en/Publications/WP/Issues/2016/12/31/Taxing-Financial-Transactions-Issues-and-Evidence-24702
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - BAC
+      - WFC
+      - GS
+      - C
+      - MS
+      - SCHW
+      - BNY
+      - STT
+      - USB
+      - PNC
+      - TFC
+      - COF
+      - FITB
+      - HBAN
+      - KEY
+      - ALLY
+      reason: Transaction tax reduces trading volume and imposes modeled absorbed costs.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - AXP
+      - MA
+      - BLK
+      - AIG
+      - PRU
+      - PGR
+      reason: This model covers dealer/trading revenue lost from lower securities volume. Investor portfolio taxes,
+        insurer portfolios, asset-manager AUM and payment-network fees are separate effects.
+  healthcare/aca_subsidy_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - UNH
+      - ELV
+      - CI
+      - CNC
+      - MOH
+      reason: Default subsidy loss reduces exchange enrollment.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - HUM
+      - CVS
+      - PFE
+      - LLY
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      - HCA
+      - THC
+      - UHS
+      - TMO
+      - ABT
+      - MDT
+      reason: The channel requires ACA exchange premiums. Humana and Aetna/CVS have exited; provider and drug-demand
+        spillovers are outside this premium model.
+  healthcare/medicaid_work_requirements:
+    references:
+    - https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf
+    - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - CNC
+      - MOH
+      - HCA
+      - THC
+      - UHS
+      reason: Eligibility loss reduces Medicaid premium and provider-volume revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - PFE
+      - LLY
+      - CI
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      - TMO
+      - ABT
+      - MDT
+      reason: Only Medicaid plan premiums and an explicit hospital patient-volume proxy are modeled. Drugmaker prescriptions/rebates
+        and supplier demand are not capitated insurance revenue.
+  healthcare/medicare_advantage_rate_change:
+    references:
+    - https://www.nber.org/papers/w20470
+    - https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - CNC
+      - MOH
+      reason: Default MA payment cut lowers premium revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - PFE
+      - LLY
+      - CI
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      - HCA
+      - THC
+      - UHS
+      - TMO
+      - ABT
+      - MDT
+      reason: This is a Medicare Advantage premium-rate shock, not a hospital fee schedule or drug price. Cigna
+        sold its Medicare businesses.
+  healthcare/medicare_drug_price_negotiation:
+    references:
+    - https://www.cms.gov/newsroom/press-releases/cms-delivers-savings-seniors-15-major-drugs-cancer-chronic-disease
+    - https://www.milliman.com/en-GB/insight/key-takeaways-third-medicare-drug-price-negotiation
+    groups:
+    - status: included
+      tickers:
+      - PFE
+      - LLY
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      reason: Lower net prices on exposed Medicare drugs reduce manufacturer revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - CI
+      - CNC
+      - MOH
+      - HCA
+      - THC
+      - UHS
+      - TMO
+      - ABT
+      - MDT
+      reason: The manufacturer net-price channel requires exposed Medicare drugs. Plan savings, pharmacy reimbursement,
+        hospital billing and medical devices need separate models.
+  healthcare/pbm_rebate_pass_through:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/64803/000006480326000009/cvs_ex99x1q4-25.htm
+    - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - CI
+      reason: Owned PBMs lose retained rebates after partial service-fee offset.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - PFE
+      - LLY
+      - CNC
+      - MOH
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      - HCA
+      - THC
+      - UHS
+      - TMO
+      - ABT
+      - MDT
+      reason: Owned PBM retained rebates are modeled. Outsourced PBM contracts and manufacturer rebates are distinct
+        from retained PBM income.
+  healthcare/pharma_tariffs:
+    references:
+    - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
+    groups:
+    - status: included
+      tickers:
+      - PFE
+      - LLY
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      reason: Drug/API import tariffs raise exposed pharmaceutical costs.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - CI
+      - CNC
+      - MOH
+      - HCA
+      - THC
+      - UHS
+      - TMO
+      - ABT
+      - MDT
+      reason: This tariff covers branded drugs/API, not devices, diagnostics or instruments. Insurer supplier-cost
+        spillovers are outside the direct importer channel.
+  healthcare/site_neutral_payments:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/R28.htm
+    - https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/thc-20251231.htm
+    - https://www.cms.gov/files/document/2026-nfrm-opps-claims-accounting.pdf
+    groups:
+    - status: included
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - CI
+      - CNC
+      - MOH
+      - HCA
+      - THC
+      - UHS
+      reason: Lower hospital outpatient payments hurt providers and lower insurers claims cost.
+      default_direction:
+        metric: dNI
+        sign: 1
+      direction_overrides:
+        HCA:
+          metric: dR
+          sign: -1
+        THC:
+          metric: dR
+          sign: -1
+        UHS:
+          metric: dR
+          sign: -1
+    - status: outside_scope
+      tickers:
+      - PFE
+      - LLY
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      - TMO
+      - ABT
+      - MDT
+      reason: Only payer hospital-outpatient claims savings and provider Medicare outpatient losses are modeled;
+        device and drug revenue is not a hospital payment.
+  public_sector/consulting_contract_cancellations:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
+    - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - KBR
+      - ICFI
+      - TTEK
+      reason: Canceled federal advisory contracts reduce exposed revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - OSK
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - MRCY
+      - VSEC
+      reason: The selected policy cancels management-consulting/advisory scope; weapons, ship, drone, truck, aircraft
+        and nuclear-component purchases are not consulting task orders.
+  public_sector/it_modernization_funding:
+    references:
+    - https://www.gao.gov/podcast/which-critical-government-it-systems-are-most-need-modernization
+    - https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - BAH
+      - LDOS
+      - SAIC
+      - CACI
+      - PSN
+      - GD
+      - LMT
+      - NOC
+      - RTX
+      - HII
+      - KBR
+      - ICFI
+      - TTEK
+      reason: Incremental federal IT awards raise captured revenue.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - OSK
+      - KTOS
+      - AVAV
+      - BWXT
+      - TXT
+      - MRCY
+      - VSEC
+      reason: Agency IT/cyber-services allocation excludes defense hardware-only suppliers; a GD peer share is not
+        transferred to every manufacturer.
+  real_estate_hospitality/lihtc_expansion:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+    groups:
+    - status: unquantified
+      tickers:
+      - PLD
+      - AMT
+      - SPG
+      - MAR
+      - HLT
+      - ABNB
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      - HST
+      - RLJ
+      - PK
+      reason: No qualifying LIHTC investment base has been quantified for this sample. This is missing model coverage,
+        not evidence that these companies are legally ineligible or cannot be affected.
+  real_estate_hospitality/like_kind_exchange_limits:
+    references:
+    - https://www.ipx1031.com/wp-content/uploads/2016/07/Summary-Ling-Petrova-Study-5.2016.pdf
+    groups:
+    - status: included
+      tickers:
+      - PLD
+      - AMT
+      - SPG
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      - HST
+      - RLJ
+      - PK
+      reason: Reduced exchange liquidity raises modeled property cap rates; EPS unchanged.
+      default_direction:
+        metric: dValue_pct
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - MAR
+      - HLT
+      - ABNB
+      reason: This channel models owned-property cap-rate/NAV effects. Asset-light managers and booking platforms
+        have no modeled property NAV; fee-demand spillovers are separate.
+  real_estate_hospitality/property_tax_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
+    - https://www.sec.gov/Archives/edgar/data/1045609/000119312526051453/
+    groups:
+    - status: included
+      tickers:
+      - PLD
+      - AMT
+      - SPG
+      - MAR
+      - HLT
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      - HST
+      - RLJ
+      - PK
+      reason: Hotel owner bears unrecovered property-tax increase.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - ABNB
+      reason: Airbnb is a booking platform; host-owned property taxes are not Airbnb's direct tax bill.
+  real_estate_hospitality/return_to_office_mandate:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+    - https://ir.hosthotels.com/news-releases/news-release-details/host-hotels-resorts-inc-reports-results-2025
+    groups:
+    - status: included
+      tickers:
+      - SPG
+      - MAR
+      - HLT
+      - ABNB
+      - HST
+      - RLJ
+      - PK
+      reason: More office-linked activity raises exposed footfall.
+      default_direction:
+        metric: dR
+        sign: 1
+      direction_overrides:
+        ABNB:
+          metric: dR
+          sign: -1
+    - status: outside_scope
+      tickers:
+      - PLD
+      - AMT
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      reason: This scenario models attendance-linked retail/business travel and remote-work stays. No office-rental
+        channel or indirect local-economy multiplier is estimated for other property types.
+  real_estate_hospitality/short_term_rental_regulation:
+    references:
+    - https://people.bu.edu/zg/publications/airbnb.pdf
+    - https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/
+    groups:
+    - status: included
+      tickers:
+      - MAR
+      - HLT
+      - ABNB
+      - HST
+      - RLJ
+      - PK
+      reason: Restrictions lower covered short-term rental bookings; hotels can gain.
+      default_direction:
+        metric: dR
+        sign: 1
+      direction_overrides:
+        ABNB:
+          metric: dR
+          sign: -1
+    - status: outside_scope
+      tickers:
+      - PLD
+      - AMT
+      - SPG
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      reason: The modeled short-stay/hotel substitution channel excludes housing leases, storage, industrial, telecom,
+        healthcare, timber and gaming-lease properties.
+  real_estate_hospitality/visa_fee_tourism_tax:
+    references:
+    - https://www.travelmole.com/news/economic-impact-overseas-visitors-usa/
+    groups:
+    - status: included
+      tickers:
+      - SPG
+      - MAR
+      - HLT
+      - ABNB
+      - HST
+      - RLJ
+      - PK
+      reason: Higher entry costs reduce inbound visitor spending.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - PLD
+      - AMT
+      - O
+      - EQIX
+      - DLR
+      - WELL
+      - VTR
+      - ESS
+      - MAA
+      - PSA
+      - EXR
+      - VICI
+      - WY
+      reason: The tourism channel requires quantified inbound visitor sales; broad property rents are not automatically
+        inbound tourism revenue.
+  tmt/app_store_commission_cap:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
+    - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
+    groups:
+    - status: included
+      tickers:
+      - AAPL
+      - GOOGL
+      reason: Binding app-store commission cap reduces platform fee revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - MSFT
+      - META
+      - NVDA
+      - VZ
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - INTC
+      - AMD
+      - QCOM
+      - MU
+      - AVGO
+      - CSCO
+      - T
+      - CMCSA
+      - NFLX
+      - DIS
+      reason: Only the two modeled mobile app-store commission owners are covered. Customer fee savings and other
+        software stores need a separate channel.
+  tmt/broadband_affordability_subsidy:
+    references:
+    - https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
+    groups:
+    - status: included
+      tickers:
+      - VZ
+      - T
+      - CMCSA
+      reason: Broadband subsidies raise access-provider subscriber spending.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - META
+      - NVDA
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - INTC
+      - AMD
+      - QCOM
+      - MU
+      - AVGO
+      - CSCO
+      - NFLX
+      - DIS
+      reason: Household broadband subsidy payments reach retail access providers, not network-equipment or semiconductor
+        vendors directly.
+  tmt/chip_export_controls:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
+    - https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R68.htm
+    groups:
+    - status: included
+      tickers:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - META
+      - NVDA
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - INTC
+      - AMD
+      - QCOM
+      - MU
+      - AVGO
+      - NFLX
+      - DIS
+      - CSCO
+      reason: Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - VZ
+      - T
+      - CMCSA
+      reason: No quantified restricted-chip exports or China retaliation exposure in this channel. Equipment/software
+        supplier effects need separately supported exposure.
+  tmt/chips_manufacturing_credit:
+    references:
+    - https://www.law.cornell.edu/uscode/text/26/48D
+    groups:
+    - status: included
+      tickers:
+      - INTC
+      - MU
+      reason: Credit applies to qualifying estimated US manufacturing capex, including Intel/Micron.
+      default_direction:
+        metric: dNI
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - META
+      - NVDA
+      - VZ
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - AMD
+      - QCOM
+      - AVGO
+      - CSCO
+      - T
+      - CMCSA
+      - NFLX
+      - DIS
+      reason: The credit requires qualifying US chip manufacturing investment. Fabless chip designers, software
+        firms and device buyers do not inherit foundry capex.
+  tmt/digital_services_tax:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
+    - https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/R46.htm
+    - https://ppc.land/google-ads-to-pass-cost-of-digital-taxes-to-advertisers-starting-in-november/
+    groups:
+    - status: included
+      tickers:
+      - AAPL
+      - MSFT
+      - GOOGL
+      - META
+      - NFLX
+      - DIS
+      reason: Tax applies to US digital advertising and covered platform fees.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - NVDA
+      - VZ
+      - IBM
+      - ORCL
+      - CRM
+      - ADBE
+      - INTC
+      - AMD
+      - QCOM
+      - MU
+      - AVGO
+      - CSCO
+      - T
+      - CMCSA
+      reason: This scenario taxes modeled US digital advertising and mobile app-store commissions. Hardware sales,
+        telecom access and enterprise licenses are outside that defined tax base.
+  transportation_logistics/airline_bag_fee_cap:
+    references:
+    - https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+    - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - DAL
+      - UAL
+      - AAL
+      - LUV
+      reason: Binding baggage cap reduces airline ancillary revenue.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - UPS
+      - FDX
+      - UNP
+      - TSLA
+      - GM
+      - F
+      - RIVN
+      - CHRW
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UBER
+      - LYFT
+      reason: The fee cap applies to airline checked baggage, not freight, rail, ride-hailing or vehicle sales.
+  transportation_logistics/airline_ticket_tax_change:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+    - https://WWW.CAA.CO.UK/media/qcrcutdj/annex-3-stansted-s-own-airport-charge-elasticity-a-summary-of-the-evidence-and-research.pdf
+    groups:
+    - status: included
+      tickers:
+      - DAL
+      - UAL
+      - AAL
+      - LUV
+      reason: Higher ticket tax reduces demand and modeled fare retention.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - UPS
+      - FDX
+      - UNP
+      - TSLA
+      - GM
+      - F
+      - RIVN
+      - CHRW
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UBER
+      - LYFT
+      reason: Domestic airline ticket excise tax is not a tax on ride-hailing fares, freight or vehicle sales.
+  transportation_logistics/ev_tax_credit:
+    references:
+    - https://www.nber.org/papers/w25359
+    - https://www.coxautoinc.com/insights/dec-2025-atp-report/
+    - https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/
+    groups:
+    - status: included
+      tickers:
+      - TSLA
+      - GM
+      - F
+      - RIVN
+      reason: Buyer incentive increases covered US EV demand.
+      default_direction:
+        metric: dR
+        sign: 1
+    - status: outside_scope
+      tickers:
+      - UPS
+      - FDX
+      - UNP
+      - DAL
+      - CHRW
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UAL
+      - AAL
+      - LUV
+      - UBER
+      - LYFT
+      reason: The modeled demand channel covers qualifying US EV sales. Fleet buyers, airlines and mobility-platform
+        drivers are outside this manufacturer-sales channel.
+  transportation_logistics/auto_import_tariffs:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - UPS
+      - FDX
+      - UNP
+      - DAL
+      - TSLA
+      - GM
+      - F
+      - RIVN
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UAL
+      - AAL
+      - LUV
+      reason: Imported vehicles/parts and owned-fleet procurement face tariff costs.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - CHRW
+      - UBER
+      - LYFT
+      reason: Direct vehicle/parts and owned-fleet procurement costs are modeled. Independent drivers and brokered
+        carrier fleets are not the platforms' or broker's import bill.
+  transportation_logistics/carbon_tax_transport_fuel:
+    references:
+    - https://www.eia.gov/environment/emissions/co2_vol_mass.php
+    - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - UPS
+      - FDX
+      - UNP
+      - DAL
+      - TSLA
+      - GM
+      - F
+      - RIVN
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UAL
+      - AAL
+      - LUV
+      reason: Owned-fleet fuel carbon cost is partially recovered through pricing.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - CHRW
+      - UBER
+      - LYFT
+      reason: The direct operating-fuel channel excludes independent-driver and brokered-carrier Scope 3 fuel. Fare,
+        demand and supplier feedback require separate channels.
+  transportation_logistics/vehicle_emissions_credit_rollback:
+    references:
+    - https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
+    - https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm
+    groups:
+    - status: included
+      tickers:
+      - TSLA
+      - GM
+      - F
+      - RIVN
+      reason: Weaker standards hurt credit sellers and help credit purchasers.
+      default_direction:
+        metric: dNI
+        sign: -1
+      direction_overrides:
+        GM:
+          metric: dNI
+          sign: 1
+        F:
+          metric: dNI
+          sign: 1
+    - status: outside_scope
+      tickers:
+      - UPS
+      - FDX
+      - UNP
+      - DAL
+      - CHRW
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UAL
+      - AAL
+      - LUV
+      - UBER
+      - LYFT
+      reason: Only separately identified manufacturer credit sales and purchases are covered; freight and travel
+        companies do not sell these automotive compliance credits.

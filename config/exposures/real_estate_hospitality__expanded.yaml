@@ -44,12 +44,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/0000726728-26-000011-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -64,12 +64,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/0000726728-26-000011-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 407.4109497910678
@@ -165,12 +165,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/0001101239-26-000032-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -185,12 +185,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/0001101239-26-000032-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 653.1328045150409
@@ -286,12 +286,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/0001104659-26-015365-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -306,12 +306,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/0001104659-26-015365-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 433.15608865104196
@@ -407,12 +407,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/0000766704-26-000010-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -427,12 +427,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/0000766704-26-000010-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 768.0021201963075
@@ -528,12 +528,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/740260/000074026026000006/0000740260-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -548,12 +548,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/740260/000074026026000006/0000740260-26-000006-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 413.406066929007
@@ -649,12 +649,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/920522/000092052226000003/0000920522-26-000003-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -669,12 +669,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/920522/000092052226000003/0000920522-26-000003-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 133.74058076786804
@@ -770,12 +770,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/912595/000119312526041208/0001193125-26-041208-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -790,12 +790,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/912595/000119312526041208/0001193125-26-041208-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 156.5425474565579
@@ -891,12 +891,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1393311/000162828026007696/0001628280-26-007696-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -911,12 +911,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1393311/000162828026007696/0001628280-26-007696-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 341.84511804138737
@@ -1012,12 +1012,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/0001289490-26-000011-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -1032,12 +1032,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/0001289490-26-000011-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 239.33855688698495
@@ -1133,12 +1133,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1705696/000170569626000034/0001705696-26-000034-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -1153,12 +1153,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1705696/000170569626000034/0001705696-26-000034-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 283.8804142663098
@@ -1254,12 +1254,12 @@ companies:
     re_intl_inbound_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.04
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/106535/000119312526051422/0001193125-26-051422-index.htm
+      rationale: 'Company-specific scope estimate: Modeled inbound-visitor spending includes tourism-sensitive
+        retail/hotels/bookings, not the same generic share for every property REIT. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -1274,12 +1274,12 @@ companies:
     re_office_linked_revenue_share:
       value: 0.0
       low: 0.0
-      high: 0.05
+      high: 0.0
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/106535/000119312526051422/0001193125-26-051422-index.htm
+      rationale: 'Company-specific scope estimate: This attendance-linked spending channel covers retail footfall,
+        business travel and remote-work stays. Fixed property rents and other property types need a separate
+        channel. This is a model boundary, not a reported zero measurement.'
       applicable: true
     re_property_tax_musd:
       value: 489.30042477773213
@@ -1373,14 +1373,14 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_intl_inbound_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.04
+      value: 0.05
+      low: 0.02
+      high: 0.1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm
+      rationale: "Company-specific estimate: Estimate inbound international guests contribute 5% of total\
+        \ hotel revenue (2\u201310%). Guest-origin revenue is not separately disclosed; no tower/logistics\
+        \ peer inference."
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -1393,14 +1393,15 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_office_linked_revenue_share:
-      value: 0.0
+      value: 0.02
       low: 0.0
-      high: 0.05
+      high: 0.08
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://ir.hosthotels.com/news-releases/news-release-details/host-hotels-resorts-inc-reports-results-2025
+      rationale: "Scenario estimate: hotel owners have business/transient and group customers as do hotel\
+        \ managers. Use a small 2.0% attendance-linked revenue share (0\u20138%), not zero inherited from\
+        \ non-hotel property REITs. Attendance-to-travel transmission is uncertain, not a reported business-traveler\
+        \ share."
       applicable: true
     re_property_tax_musd:
       value: 433.2487758278138
@@ -1413,14 +1414,14 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_property_tax_recovery_share:
-      value: 0.7
-      low: 0.1
-      high: 0.95
+      value: 0
+      low: 0
+      high: 0.1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm
+      rationale: 'Company-specific estimate: Operating hotels do not have the triple-net tenant reimbursement
+        structure of property peers. Base contractual tax recovery is zero; high case allows limited recovery.
+        Other price responses remain outside this parameter.'
       applicable: true
     re_property_value_share:
       value: 1.0
@@ -1433,14 +1434,14 @@ companies:
         peer prior; review before relying on this company result.'
       applicable: true
     re_us_hotel_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.95
+      low: 0.85
+      high: 1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm
+      rationale: "Company-specific estimate: Hotel-owner portfolio exposure: estimate 95% (85\u2013100%) of\
+        \ consolidated revenue from US hotel operations. This is a hotel-specific proxy, not the zero hotel\
+        \ share of logistics/tower/mall REIT peers."
       applicable: true
     re_us_str_revenue_share:
       value: 0.0
@@ -1494,14 +1495,14 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_intl_inbound_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.04
+      value: 0.05
+      low: 0.02
+      high: 0.1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: "Company-specific estimate: Estimate inbound international guests contribute 5% of total\
+        \ hotel revenue (2\u201310%). Guest-origin revenue is not separately disclosed; no tower/logistics\
+        \ peer inference."
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -1514,14 +1515,15 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_office_linked_revenue_share:
-      value: 0.0
+      value: 0.03
       low: 0.0
-      high: 0.05
+      high: 0.08
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: "Scenario estimate: hotel owners have business/transient and group customers as do hotel\
+        \ managers. Use a small 3.0% attendance-linked revenue share (0\u20138%), not zero inherited from\
+        \ non-hotel property REITs. Attendance-to-travel transmission is uncertain, not a reported business-traveler\
+        \ share."
       applicable: true
     re_property_tax_musd:
       value: 95.65344987552055
@@ -1534,14 +1536,14 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_property_tax_recovery_share:
-      value: 0.7
-      low: 0.1
-      high: 0.95
+      value: 0
+      low: 0
+      high: 0.1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: 'Company-specific estimate: Operating hotels do not have the triple-net tenant reimbursement
+        structure of property peers. Base contractual tax recovery is zero; high case allows limited recovery.
+        Other price responses remain outside this parameter.'
       applicable: true
     re_property_value_share:
       value: 1.0
@@ -1554,14 +1556,14 @@ companies:
         peer prior; review before relying on this company result.'
       applicable: true
     re_us_hotel_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.95
+      low: 0.85
+      high: 1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: "Company-specific estimate: Hotel-owner portfolio exposure: estimate 95% (85\u2013100%) of\
+        \ consolidated revenue from US hotel operations. This is a hotel-specific proxy, not the zero hotel\
+        \ share of logistics/tower/mall REIT peers."
       applicable: true
     re_us_str_revenue_share:
       value: 0.0
@@ -1615,14 +1617,14 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_intl_inbound_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.04
+      value: 0.05
+      low: 0.02
+      high: 0.1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: "Company-specific estimate: Estimate inbound international guests contribute 5% of total\
+        \ hotel revenue (2\u201310%). Guest-origin revenue is not separately disclosed; no tower/logistics\
+        \ peer inference."
       applicable: true
     re_lihtc_investment_musd:
       value: 0.0
@@ -1635,14 +1637,15 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_office_linked_revenue_share:
-      value: 0.0
+      value: 0.02
       low: 0.0
-      high: 0.05
+      high: 0.08
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: "Scenario estimate: hotel owners have business/transient and group customers as do hotel\
+        \ managers. Use a small 2.0% attendance-linked revenue share (0\u20138%), not zero inherited from\
+        \ non-hotel property REITs. Attendance-to-travel transmission is uncertain, not a reported business-traveler\
+        \ share."
       applicable: true
     re_property_tax_musd:
       value: 180.05972184796775
@@ -1655,14 +1658,14 @@ companies:
         exposure intensity scaled by SEC annual revenue.'
       applicable: true
     re_property_tax_recovery_share:
-      value: 0.7
-      low: 0.1
-      high: 0.95
+      value: 0
+      low: 0
+      high: 0.1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: 'Company-specific estimate: Operating hotels do not have the triple-net tenant reimbursement
+        structure of property peers. Base contractual tax recovery is zero; high case allows limited recovery.
+        Other price responses remain outside this parameter.'
       applicable: true
     re_property_value_share:
       value: 1.0
@@ -1675,14 +1678,14 @@ companies:
         peer prior; review before relying on this company result.'
       applicable: true
     re_us_hotel_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.95
+      low: 0.85
+      high: 1
       source: estimate
-      rationale: 'Explicit modeling prior, not an issuer disclosure. Property REITs:
-        housing, storage, digital infrastructure, timber and hospitality; median base
-        and outer low/high from PLD/AMT/SPG in committed exposure configuration. Dimensionless
-        peer prior; review before relying on this company result.'
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: "Company-specific estimate: Hotel-owner portfolio exposure: estimate 95% (85\u2013100%) of\
+        \ consolidated revenue from US hotel operations. This is a hotel-specific proxy, not the zero hotel\
+        \ share of logistics/tower/mall REIT peers."
       applicable: true
     re_us_str_revenue_share:
       value: 0.0

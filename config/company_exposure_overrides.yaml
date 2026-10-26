@@ -1,0 +1,945 @@
+as_of: '2026-10-25'
+companies:
+  INTC:
+    us_semis_mfg_capex_musd:
+      value: 7323.0
+      low: 3661.5
+      high: 10984.5
+      source: estimate
+      source_url: https://www.intc.com/filings-reports/annual-reports/content/0000050863-26-000011/intc-20251227.htm
+      rationale: "Company-specific estimate: SEC FY2025 PaymentsToAcquirePropertyPlantAndEquipment = $14,646M\
+        \ worldwide. Apply an estimated US manufacturing share of 50% (25\u201375% range); this is not a disclosed\
+        \ US capex amount. Includes US fabs; geographic allocation and placed-in-service eligibility require\
+        \ review. The policy applies its separate qualifying-share assumption."
+      applicable: true
+  MU:
+    us_semis_mfg_capex_musd:
+      value: 7678.0
+      low: 3071.2000000000003
+      high: 12284.800000000001
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm
+      rationale: "Company-specific estimate: SEC FY2026 PaymentsToAcquirePropertyPlantAndEquipment = $30,712M\
+        \ worldwide. Apply an estimated US share of 25% (10\u201340% range), reflecting Idaho/New York construction\
+        \ and Virginia alongside large overseas fabs. Not a disclosed US annual spend; construction spending\
+        \ and placed-in-service credit timing differ."
+      applicable: true
+  NFLX:
+    us_digital_ad_revenue_share:
+      value: 0.03
+      low: 0.01
+      high: 0.06
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/0001065280-26-000034-index.htm
+      rationale: "Company-specific estimate: Ad-supported streaming is a minority of consolidated revenue;\
+        \ estimate US digital ad sales at 3% (1\u20136%), rather than inheriting Alphabet/Meta advertising-platform\
+        \ revenue shares."
+      applicable: true
+  DIS:
+    us_digital_ad_revenue_share:
+      value: 0.06
+      low: 0.03
+      high: 0.12
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/0001744489-25-000155-index.htm
+      rationale: "Company-specific estimate: Estimate US digital streaming advertising at 6% of consolidated\
+        \ revenue (3\u201312%). Excludes subscription, parks, merchandise and linear-TV revenue; this is not\
+        \ a disclosed US digital-ad segment."
+      applicable: true
+  CRM:
+    us_import_share_of_cogs:
+      value: 0.01
+      low: 0
+      high: 0.03
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/0001108524-26-000060-index.htm
+      rationale: "Company-specific estimate: Enterprise software has limited direct imported hardware cost.\
+        \ Use 1% of COGS (0\u20133%) as a phase-in proxy, rather than a device/cloud peer's 10%; indirect supplier\
+        \ pricing is not separately modeled."
+      applicable: true
+  ADBE:
+    us_import_share_of_cogs:
+      value: 0.01
+      low: 0
+      high: 0.03
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/0000796343-26-000003-index.htm
+      rationale: "Company-specific estimate: Enterprise software has limited direct imported hardware cost.\
+        \ Use 1% of COGS (0\u20133%) as a phase-in proxy, rather than a device/cloud peer's 10%; indirect supplier\
+        \ pricing is not separately modeled."
+      applicable: true
+  KO:
+    us_sweetened_beverage_revenue_share:
+      value: 0.2
+      low: 0.1
+      high: 0.3
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/0001628280-26-010047-index.htm
+      rationale: 'Company-specific estimate: Company-specific US covered-beverage revenue proxy separating
+        producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
+        coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
+      applicable: true
+  PEP:
+    us_sweetened_beverage_revenue_share:
+      value: 0.1
+      low: 0.05
+      high: 0.2
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/77476/000007747626000007/0000077476-26-000007-index.htm
+      rationale: 'Company-specific estimate: Company-specific US covered-beverage revenue proxy separating
+        producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
+        coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
+      applicable: true
+  SBUX:
+    us_sweetened_beverage_revenue_share:
+      value: 0.15
+      low: 0.08
+      high: 0.25
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/0000829224-25-000114-index.htm
+      rationale: 'Company-specific estimate: Company-specific US covered-beverage revenue proxy separating
+        producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
+        coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
+      applicable: true
+  MCD:
+    us_sweetened_beverage_revenue_share:
+      value: 0.06
+      low: 0.03
+      high: 0.12
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/0000063908-26-000035-index.htm
+      rationale: 'Company-specific estimate: Company-specific US covered-beverage revenue proxy separating
+        producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
+        coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
+      applicable: true
+  MOH:
+    medicaid_revenue_share:
+      value: 0.7097257077444635
+      low: 0.6742394223572403
+      high: 0.7452119931316867
+      source: 'Molina FY2025 10-K: Medicaid premium revenue $32,240M / total revenue $45,426M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm
+      rationale: "Base is the stated filing ratio; low/high are an explicit \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.13725619689164795
+      low: 0.13039338704706555
+      high: 0.14411900673623035
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm
+      rationale: "Medicare segment premium revenue $6,235M / total revenue $45,426M is used as an MA exposure\
+        \ proxy; no pure MA revenue cross-tab is asserted. Low/high are a \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
+      applicable: true
+    aca_exchange_revenue_share:
+      value: 0.09877603134768635
+      low: 0.09383722978030203
+      high: 0.10371483291507068
+      source: 'Molina FY2025 10-K: Marketplace premium revenue $4,487M / total revenue $45,426M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm
+      rationale: "Base is the stated filing ratio; low/high are an explicit \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
+      applicable: true
+  CNC:
+    medicaid_revenue_share:
+      value: 0.46328878666372314
+      low: 0.44012434733053696
+      high: 0.4864532259969093
+      source: 'Centene FY2025 results: Medicaid premium/service revenue $90,238M / SEC consolidated revenue'
+      source_url: https://investors.centene.com/2026-02-06-CENTENE-CORPORATION-REPORTS-2025-RESULTS-AND-ANNOUNCES-2026-GUIDANCE
+      rationale: "Base is the stated filing ratio; low/high are an explicit \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
+      applicable: true
+    aca_exchange_revenue_share:
+      value: 0.20486428069022522
+      low: 0.17251728900229493
+      high: 0.21564661125286866
+      source: estimate
+      source_url: https://investors.centene.com/2026-02-06-CENTENE-CORPORATION-REPORTS-2025-RESULTS-AND-ANNOUNCES-2026-GUIDANCE
+      rationale: "Company-specific estimate: 2025 Commercial segment premium/service revenue $42,003M / consolidated\
+        \ revenue; estimate 95% (80\u2013100%) belongs to Marketplace rather than group/off-exchange products.\
+        \ Not a separately reported pure-ACA revenue ratio."
+      applicable: true
+    medicare_advantage_revenue_share:
+      value: 0.06
+      low: 0.03
+      high: 0.1
+      source: estimate
+      source_url: https://investors.centene.com/2026-02-06-CENTENE-CORPORATION-REPORTS-2025-RESULTS-AND-ANNOUNCES-2026-GUIDANCE
+      rationale: "Company-specific estimate: Medicare segment includes a large standalone Part D business;\
+        \ its full revenue is not MA exposure. Use 6% of total revenue (3\u201310%) as an explicitly estimated\
+        \ MA premium share pending a separated revenue disclosure."
+      applicable: true
+  CI:
+    medicare_advantage_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      source_url: https://www.hcsc.com/newsroom/news-releases/2025/completes-cigna-medicare-acquisition
+      rationale: 'Company-specific estimate: Cigna completed the sale of its Medicare businesses on March 19,
+        2025. Direct MA premium exposure is zero in the continuing-business scenario; retained PBM service
+        revenue is a separate exposure.'
+      applicable: true
+    medicaid_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1739940/000173994026000006/0001739940-26-000006-index.htm
+      rationale: 'Company-specific estimate: Continuing Cigna business is commercial benefits and Evernorth/PBM,
+        not a direct Medicaid managed-care premium book. Pharmacy-service contracts are not Medicaid premium
+        revenue.'
+      applicable: true
+  ALLY:
+    credit_interchange_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072925000020/ally-20250630.htm
+      rationale: 'Company-specific estimate: Ally sold its credit-card business on April 1, 2025. Continuing-business
+        card-issuer exposure is zero; FY2025 historical revenue still contains the pre-sale portion.'
+      applicable: true
+    card_late_fee_revenue_share:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072925000020/ally-20250630.htm
+      rationale: 'Company-specific estimate: Ally sold its credit-card business on April 1, 2025. Exclude the
+        divested card late-fee stream from the current-business policy scenario.'
+      applicable: true
+    trading_revenue_share:
+      value: 0.002
+      low: 0
+      high: 0.01
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/0000040729-26-000005-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 170163.0
+      low: 153146.7
+      high: 187179.30000000002
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:57803%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: ALLY BANK (CERT 57803). Reported subsidiary ASSET minus RBCT1J\
+        \ (Tier 1 capital), converted from thousands to millions = $170,163.000M. This is a quarter-end proxy\
+        \ for statutory average assets minus average Tier 1 capital, not a reported assessment base. No holding-company\
+        \ or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing and remaining\
+        \ assessment adjustments."
+      applicable: true
+  HST:
+    re_us_hotel_revenue_share:
+      value: 0.95
+      low: 0.85
+      high: 1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm
+      rationale: "Company-specific estimate: Hotel-owner portfolio exposure: estimate 95% (85\u2013100%) of\
+        \ consolidated revenue from US hotel operations. This is a hotel-specific proxy, not the zero hotel\
+        \ share of logistics/tower/mall REIT peers."
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.05
+      low: 0.02
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm
+      rationale: "Company-specific estimate: Estimate inbound international guests contribute 5% of total hotel\
+        \ revenue (2\u201310%). Guest-origin revenue is not separately disclosed; no tower/logistics peer inference."
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0
+      low: 0
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1070750/000107075026000054/0001070750-26-000054-index.htm
+      rationale: 'Company-specific estimate: Operating hotels do not have the triple-net tenant reimbursement
+        structure of property peers. Base contractual tax recovery is zero; high case allows limited recovery.
+        Other price responses remain outside this parameter.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.02
+      low: 0.0
+      high: 0.08
+      source: estimate
+      source_url: https://ir.hosthotels.com/news-releases/news-release-details/host-hotels-resorts-inc-reports-results-2025
+      rationale: "Scenario estimate: hotel owners have business/transient and group customers as do hotel managers.\
+        \ Use a small 2.0% attendance-linked revenue share (0\u20138%), not zero inherited from non-hotel property\
+        \ REITs. Attendance-to-travel transmission is uncertain, not a reported business-traveler share."
+      applicable: true
+  RLJ:
+    re_us_hotel_revenue_share:
+      value: 0.95
+      low: 0.85
+      high: 1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: "Company-specific estimate: Hotel-owner portfolio exposure: estimate 95% (85\u2013100%) of\
+        \ consolidated revenue from US hotel operations. This is a hotel-specific proxy, not the zero hotel\
+        \ share of logistics/tower/mall REIT peers."
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.05
+      low: 0.02
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: "Company-specific estimate: Estimate inbound international guests contribute 5% of total hotel\
+        \ revenue (2\u201310%). Guest-origin revenue is not separately disclosed; no tower/logistics peer inference."
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0
+      low: 0
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: 'Company-specific estimate: Operating hotels do not have the triple-net tenant reimbursement
+        structure of property peers. Base contractual tax recovery is zero; high case allows limited recovery.
+        Other price responses remain outside this parameter.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.03
+      low: 0.0
+      high: 0.08
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1511337/000151133726000007/0001511337-26-000007-index.htm
+      rationale: "Scenario estimate: hotel owners have business/transient and group customers as do hotel managers.\
+        \ Use a small 3.0% attendance-linked revenue share (0\u20138%), not zero inherited from non-hotel property\
+        \ REITs. Attendance-to-travel transmission is uncertain, not a reported business-traveler share."
+      applicable: true
+  PK:
+    re_us_hotel_revenue_share:
+      value: 0.95
+      low: 0.85
+      high: 1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: "Company-specific estimate: Hotel-owner portfolio exposure: estimate 95% (85\u2013100%) of\
+        \ consolidated revenue from US hotel operations. This is a hotel-specific proxy, not the zero hotel\
+        \ share of logistics/tower/mall REIT peers."
+      applicable: true
+    re_intl_inbound_revenue_share:
+      value: 0.05
+      low: 0.02
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: "Company-specific estimate: Estimate inbound international guests contribute 5% of total hotel\
+        \ revenue (2\u201310%). Guest-origin revenue is not separately disclosed; no tower/logistics peer inference."
+      applicable: true
+    re_property_tax_recovery_share:
+      value: 0
+      low: 0
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: 'Company-specific estimate: Operating hotels do not have the triple-net tenant reimbursement
+        structure of property peers. Base contractual tax recovery is zero; high case allows limited recovery.
+        Other price responses remain outside this parameter.'
+      applicable: true
+    re_office_linked_revenue_share:
+      value: 0.02
+      low: 0.0
+      high: 0.08
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1617406/000161740626000006/0001617406-26-000006-index.htm
+      rationale: "Scenario estimate: hotel owners have business/transient and group customers as do hotel managers.\
+        \ Use a small 2.0% attendance-linked revenue share (0\u20138%), not zero inherited from non-hotel property\
+        \ REITs. Attendance-to-travel transmission is uncertain, not a reported business-traveler share."
+      applicable: true
+  F:
+    tl_us_ev_revenue_share:
+      value: 0.025
+      low: 0.015
+      high: 0.045
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/0000037996-26-000015-index.htm
+      rationale: "Company-specific estimate: US battery-electric sales are a small minority of Ford consolidated\
+        \ revenue; estimate 2.5% (1.5\u20134.5%), not the Tesla/GM median."
+      applicable: true
+  RIVN:
+    tl_us_ev_revenue_share:
+      value: 0.85
+      low: 0.65
+      high: 0.98
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/0001874178-26-000008-index.htm
+      rationale: "Company-specific estimate: Rivian primarily sells battery-electric vehicles, but consolidated\
+        \ revenue also includes software/services and non-US sales. Estimate 85% (65\u201398%) US EV revenue,\
+        \ not the Tesla/GM median."
+      applicable: true
+    tl_regulatory_credit_revenue_share:
+      value: 0.05
+      low: 0.02
+      high: 0.12
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/0001874178-26-000008-index.htm
+      rationale: "Company-specific estimate: Rivian is an EV regulatory-credit seller. Estimate 5% of consolidated\
+        \ revenue (2\u201312%) pending a normalized forward sales stream; do not also assign purchased credits."
+      applicable: true
+  BA:
+    govcon_defense_intel_share:
+      value: 0.3
+      low: 0.25
+      high: 0.4
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/0001628280-26-004357-index.htm
+      rationale: "Company-specific estimate: Defense, Space & Security is a material Boeing business. Estimate\
+        \ 30% of consolidated revenue (25\u201340%) for defense/IC procurement rather than a 1% mixed-industrial\
+        \ median."
+      applicable: true
+  ETN:
+    govcon_defense_intel_share:
+      value: 0.06
+      low: 0.03
+      high: 0.1
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/0001551182-26-000007-index.htm
+      rationale: "Company-specific estimate: Eaton aerospace has military customers alongside commercial and\
+        \ electrical businesses; estimate 6% defense/IC revenue (3\u201310%)."
+      applicable: true
+  PH:
+    govcon_defense_intel_share:
+      value: 0.08
+      low: 0.04
+      high: 0.15
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/76334/000007633426000105/0000076334-26-000105-index.htm
+      rationale: "Company-specific estimate: Parker aerospace includes military systems; estimate 8% defense/IC\
+        \ revenue (4\u201315%) instead of the generic 1% industrial median."
+      applicable: true
+  NRDY:
+    esa_capture_share:
+      value: 0.001
+      low: 0
+      high: 0.003
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1819404/000181940426000015/0001819404-26-000015-index.htm
+      rationale: "Company-specific estimate: Varsity Tutors can serve K\u201312 tutoring demand. Estimate 0.1%\
+        \ of incremental ESA spending (0\u20130.3%); state eligibility, provider approval and competition matter.\
+        \ Not a measured market share."
+      applicable: true
+  HCA:
+    medicaid_revenue_share:
+      value: 0.12
+      low: 0.06
+      high: 0.2
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/860730/000119312526044769/0001193125-26-044769-index.htm
+      rationale: Company-specific estimate of consolidated revenue sensitive to Medicaid patient coverage,
+        not a reported pure managed-care premium ratio. Includes a provider-volume proxy with wide payer-mix
+        uncertainty; does not separately model uncompensated care, state supplemental payments or payer substitution.
+        Hospital/service mix differs from insurers.
+  THC:
+    medicaid_revenue_share:
+      value: 0.08
+      low: 0.04
+      high: 0.14
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/0000070318-26-000012-index.htm
+      rationale: Company-specific estimate of consolidated revenue sensitive to Medicaid patient coverage,
+        not a reported pure managed-care premium ratio. Includes a provider-volume proxy with wide payer-mix
+        uncertainty; does not separately model uncompensated care, state supplemental payments or payer substitution.
+        Hospital/service mix differs from insurers.
+  UHS:
+    medicaid_revenue_share:
+      value: 0.2
+      low: 0.1
+      high: 0.3
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/0001193125-26-071676-index.htm
+      rationale: Company-specific estimate of consolidated revenue sensitive to Medicaid patient coverage,
+        not a reported pure managed-care premium ratio. Includes a provider-volume proxy with wide payer-mix
+        uncertainty; does not separately model uncompensated care, state supplemental payments or payer substitution.
+        Hospital/service mix differs from insurers.
+  MS:
+    trading_revenue_share:
+      value: 0.27
+      low: 0.2
+      high: 0.35
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/0000895421-26-000086-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 612007.0
+      low: 550806.3
+      high: 673207.7000000001
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:32992%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: MORGAN STANLEY BANK NA (CERT 32992); MORGAN STANLEY PRIVATE BK\
+        \ NA (CERT 34221). Reported subsidiary ASSET minus RBCT1J (Tier 1 capital), converted from thousands\
+        \ to millions = $612,007.000M. This is a quarter-end proxy for statutory average assets minus average\
+        \ Tier 1 capital, not a reported assessment base. No holding-company or revenue-scaled peer assets\
+        \ are used. Use \xB110% sensitivity for averaging/timing and remaining assessment adjustments."
+      applicable: true
+  SCHW:
+    trading_revenue_share:
+      value: 0.14
+      low: 0.08
+      high: 0.2
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/0000316709-26-000009-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 256611.577
+      low: 230950.4193
+      high: 282272.73470000003
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:57450%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: CHARLES SCHWAB PREMIER BK SS (CERT 33497); CHARLES SCHWAB BANK\
+        \ SSB (CERT 57450); CHARLES SCHWAB TRUST BANK (CERT 59108). Reported subsidiary ASSET minus RBCT1J\
+        \ (Tier 1 capital), converted from thousands to millions = $256,611.577M. This is a quarter-end proxy\
+        \ for statutory average assets minus average Tier 1 capital, not a reported assessment base. No holding-company\
+        \ or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing and remaining\
+        \ assessment adjustments."
+      applicable: true
+  BNY:
+    trading_revenue_share:
+      value: 0.02
+      low: 0.005
+      high: 0.06
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1390777/000139077726000033/0001390777-26-000033-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 221439.90000000002
+      low: 120785.4
+      high: 322094.4
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:639%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: BANK OF NEW YORK MELLON (CERT 639). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $402,618.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Apply an estimated 55% residual assessment\
+        \ base (30\u201380% range) for custodial-bank exclusions; the deduction is not disclosed in this source\
+        \ and remains uncertain."
+      applicable: true
+  STT:
+    trading_revenue_share:
+      value: 0.015
+      low: 0.005
+      high: 0.04
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/0000093751-26-000124-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 215598.35
+      low: 117599.09999999999
+      high: 313597.60000000003
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:14%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: STATE STREET BANK&TRUST CO (CERT 14). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $391,997.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Apply an estimated 55% residual assessment\
+        \ base (30\u201380% range) for custodial-bank exclusions; the deduction is not disclosed in this source\
+        \ and remains uncertain."
+      applicable: true
+  USB:
+    trading_revenue_share:
+      value: 0.025
+      low: 0.01
+      high: 0.05
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/36104/000003610426000011/0000036104-26-000011-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 642365.354
+      low: 578128.8186000001
+      high: 706601.8894000001
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:6548%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: U S BANK NATIONAL ASSN (CERT 6548). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $642,365.354M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  PNC:
+    trading_revenue_share:
+      value: 0.025
+      low: 0.01
+      high: 0.05
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/0000713676-26-000020-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 556246.882
+      low: 500622.1938
+      high: 611871.5702000001
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:6384%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: PNC BANK NATIONAL ASSN (CERT 6384). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $556,246.882M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  TFC:
+    trading_revenue_share:
+      value: 0.025
+      low: 0.01
+      high: 0.05
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/0000092230-26-000030-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 496311.0
+      low: 446679.9
+      high: 545942.1000000001
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:9846%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: TRUIST BANK (CERT 9846). Reported subsidiary ASSET minus RBCT1J\
+        \ (Tier 1 capital), converted from thousands to millions = $496,311.000M. This is a quarter-end proxy\
+        \ for statutory average assets minus average Tier 1 capital, not a reported assessment base. No holding-company\
+        \ or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing and remaining\
+        \ assessment adjustments."
+      applicable: true
+  COF:
+    trading_revenue_share:
+      value: 0.002
+      low: 0
+      high: 0.005
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/0000927628-26-000024-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 594681.0
+      low: 535212.9
+      high: 654149.1000000001
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:4297%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: CAPITAL ONE NATIONAL ASSN (CERT 4297). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $594,681.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  FITB:
+    trading_revenue_share:
+      value: 0.03
+      low: 0.01
+      high: 0.06
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/35527/000003552726000124/0000035527-26-000124-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 270454.0
+      low: 243408.6
+      high: 297499.4
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:6672%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: FIFTH THIRD BANK NA (CERT 6672). Reported subsidiary ASSET minus\
+        \ RBCT1J (Tier 1 capital), converted from thousands to millions = $270,454.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  HBAN:
+    trading_revenue_share:
+      value: 0.01
+      low: 0.002
+      high: 0.03
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/49196/000004919626000015/0000049196-26-000015-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 257451.561
+      low: 231706.4049
+      high: 283196.7171
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:6560%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: HUNTINGTON NATIONAL BANK (CERT 6560). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $257,451.561M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  KEY:
+    trading_revenue_share:
+      value: 0.025
+      low: 0.01
+      high: 0.05
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/91576/000162828026010546/0001628280-26-010546-index.htm
+      rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
+    fdic_assessment_base_musd:
+      value: 170125.276
+      low: 153112.7484
+      high: 187137.80360000004
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:17534%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: KEYBANK NATIONAL ASSN (CERT 17534). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $170,125.276M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  LAUR:
+    us_consumer_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/912766/000162828026009479/R17.htm
+      rationale: 'Scope estimate, not a reported zero: Laureate''s continuing institutions operate in Mexico
+        and Peru. US federal debt relief is not allocated to their tuition revenue as if it were US household
+        consumption.'
+      applicable: true
+  SLM:
+    us_consumer_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1032033/000103203326000011/0001032033-26-000011-index.htm
+      rationale: 'Scope estimate, not a reported zero: Sallie Mae earns lending revenue, not a share of household
+        education purchases. Federal forgiveness does not cancel its private loans; refinancing, credit quality
+        and loan demand need separate lending channels.'
+      applicable: true
+  LMT:
+    govcon_fed_it_share:
+      value: 0.02
+      low: 0.0
+      high: 0.05
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/0001628280-26-004195-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 2.0% share is an estimate with a wide
+        range, not disclosed eligible modernization revenue.'
+      applicable: true
+  NOC:
+    govcon_fed_it_share:
+      value: 0.03
+      low: 0.005
+      high: 0.08
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/0001133421-26-000003-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 3.0% share is an estimate with a wide
+        range, not disclosed eligible modernization revenue.'
+      applicable: true
+  RTX:
+    govcon_fed_it_share:
+      value: 0.01
+      low: 0.0
+      high: 0.04
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/0000101829-26-000006-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 1.0% share is an estimate with a wide
+        range, not disclosed eligible modernization revenue.'
+      applicable: true
+  HII:
+    govcon_fed_it_share:
+      value: 0.05
+      low: 0.01
+      high: 0.12
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1501585/000150158526000006/0001501585-26-000006-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 5.0% share is an estimate with a wide
+        range, not disclosed eligible modernization revenue.'
+      applicable: true
+  KBR:
+    govcon_fed_it_share:
+      value: 0.05
+      low: 0.01
+      high: 0.15
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1357615/000135761526000051/0001357615-26-000051-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 5.0% share is an estimate with a wide
+        range, not disclosed eligible modernization revenue.'
+      applicable: true
+  ICFI:
+    govcon_fed_it_share:
+      value: 0.2
+      low: 0.08
+      high: 0.35
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1362004/000119312526082536/0001193125-26-082536-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 20.0% share is an estimate with a
+        wide range, not disclosed eligible modernization revenue.'
+      applicable: true
+  TTEK:
+    govcon_fed_it_share:
+      value: 0.02
+      low: 0.0
+      high: 0.06
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/0000831641-25-000032-index.htm
+      rationale: 'Company-specific scenario estimate: isolate agency IT/cyber and digital-services opportunities
+        from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
+        share for all revenue. The filing supplies business context; the 2.0% share is an estimate with a wide
+        range, not disclosed eligible modernization revenue.'
+      applicable: true
+  CSCO:
+    greater_china_revenue_share:
+      value: 0.02
+      low: 0.0
+      high: 0.05
+      source: estimate
+      source_url: https://www.cisco.com/c/dam/en_us/about/annual-report/2025-cisco-full-annual-report.pdf
+      rationale: "Company-specific scenario estimate: Cisco reports APJC at about 14% of FY2025 revenue. Estimate\
+        \ Greater China at 2% of consolidated revenue (0\u20135%), a subset of APJC, rather than inheriting\
+        \ Verizon's zero China customer base. This is not a reported China split and does not imply restricted\
+        \ AI-chip exports."
+      applicable: true
+  SCHL:
+    esa_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.003
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/0000866729-26-000018-index.htm
+      rationale: "No quantified central ESA award/allocation. K\u201312 materials or early-learning services\
+        \ may qualify depending on state/provider rules. A 0\u20130.3% program-capture sensitivity is an explicit\
+        \ unverified scenario, not measured awards or a promised benefit."
+      applicable: true
+  KLC:
+    esa_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.003
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/0001193125-26-106342-index.htm
+      rationale: "No quantified central ESA award/allocation. K\u201312 materials or early-learning services\
+        \ may qualify depending on state/provider rules. A 0\u20130.3% program-capture sensitivity is an explicit\
+        \ unverified scenario, not measured awards or a promised benefit."
+      applicable: true
+  BFAM:
+    esa_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.003
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1437578/000143757826000006/0001437578-26-000006-index.htm
+      rationale: "No quantified central ESA award/allocation. K\u201312 materials or early-learning services\
+        \ may qualify depending on state/provider rules. A 0\u20130.3% program-capture sensitivity is an explicit\
+        \ unverified scenario, not measured awards or a promised benefit."
+      applicable: true
+  JPM:
+    fdic_assessment_base_musd:
+      value: 3788726.0
+      low: 3409853.4
+      high: 4167598.6000000006
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:628%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: JPMORGAN CHASE BANK NA (CERT 628). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $3,788,726.000M. This is a\
+        \ quarter-end proxy for statutory average assets minus average Tier 1 capital, not a reported assessment\
+        \ base. No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  BAC:
+    fdic_assessment_base_musd:
+      value: 2467917.0
+      low: 2221125.3000000003
+      high: 2714708.7
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:3510%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: BANK OF AMERICA NA (CERT 3510). Reported subsidiary ASSET minus\
+        \ RBCT1J (Tier 1 capital), converted from thousands to millions = $2,467,917.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  WFC:
+    fdic_assessment_base_musd:
+      value: 1759387.0
+      low: 1583448.3
+      high: 1935325.7000000002
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:3511%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: WELLS FARGO BANK NA (CERT 3511). Reported subsidiary ASSET minus\
+        \ RBCT1J (Tier 1 capital), converted from thousands to millions = $1,759,387.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  GS:
+    fdic_assessment_base_musd:
+      value: 699526.0
+      low: 629573.4
+      high: 769478.6000000001
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:33124%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: GOLDMAN SACHS BANK USA (CERT 33124). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $699,526.000M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  C:
+    fdic_assessment_base_musd:
+      value: 1821087.0
+      low: 1638978.3
+      high: 2003195.7000000002
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:7213%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: CITIBANK NATIONAL ASSN (CERT 7213). Reported subsidiary ASSET\
+        \ minus RBCT1J (Tier 1 capital), converted from thousands to millions = $1,821,087.000M. This is a\
+        \ quarter-end proxy for statutory average assets minus average Tier 1 capital, not a reported assessment\
+        \ base. No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true
+  AXP:
+    fdic_assessment_base_musd:
+      value: 194791.709
+      low: 175312.5381
+      high: 214270.87990000003
+      source: estimate
+      source_url: https://api.fdic.gov/banks/financials?filters=CERT:27471%20AND%20REPDTE:20260630
+      rationale: "FDIC 20260630 bank reports: AMERICAN EXPRESS NB (CERT 27471). Reported subsidiary ASSET minus\
+        \ RBCT1J (Tier 1 capital), converted from thousands to millions = $194,791.709M. This is a quarter-end\
+        \ proxy for statutory average assets minus average Tier 1 capital, not a reported assessment base.\
+        \ No holding-company or revenue-scaled peer assets are used. Use \xB110% sensitivity for averaging/timing\
+        \ and remaining assessment adjustments."
+      applicable: true

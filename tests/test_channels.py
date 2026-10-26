@@ -224,3 +224,12 @@ def test_every_registered_channel_has_a_test():
 def test_minority_interest_scales_dni():
     d = run_channel("tax_credit", B, {"credit_rate": 0.10, "base_musd": 50})
     assert agg(d, b={**B, "parent_share": 0.5}).dNI == approx(2.5)
+
+
+def test_absolute_operating_cost_changes_do_not_create_negative_bank_cogs():
+    """Compensation savings belong to operating expense; EBIT arithmetic is unchanged."""
+    bank = {**B, 'cost_of_revenue':0., 'kind':'bank'}
+    d = run_channel('cost', bank, {'exposed_cost_share':0., 'shock_pct':0., 'dcost_musd':-30.})
+    assert d.dC == 0 and d.dOpex == -30
+    assert d.ebit == 30
+    assert agg(d,b=bank).dNI == approx(24)

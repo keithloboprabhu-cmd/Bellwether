@@ -1,7 +1,7 @@
 id: chips_manufacturing_credit
 industry: tmt
 name: CHIPS-style chip-manufacturing investment credit
-description: A tax credit on US capex for facilities that make semiconductors or chip-making equipment (like Section 48D). None of these six companies runs a US fab, so the direct benefit is close to zero; NVIDIA and Apple gain only if they put their own money into US production equipment.
+description: A tax credit on US capex for facilities that make semiconductors or chip-making equipment (like Section 48D). Intel and Micron have modeled US fabrication investment; fabless designers and software firms receive no direct credit without their own qualifying manufacturing property. US capex allocation and placed-in-service timing are explicit estimates.
 persistence: "years: 5"
 user_inputs:
   - key: credit_pct
@@ -31,4 +31,4 @@ exposure_keys: [us_semis_mfg_capex_musd]
 references:
   - https://www.law.cornell.edu/uscode/text/26/48D
 narrative:
-  extra: "The credit mainly helps the foundries and equipment makers (TSMC, Intel, Micron, Applied Materials) these companies buy from, which may pass some of it on through chip prices; that indirect effect isn't modelled."
+  extra: "Direct benefits apply to modeled Intel and Micron US manufacturing investment. Supplier-price spillovers and the timing of actual tax claims are not modeled."

@@ -1,0 +1,17 @@
+/* Available before the JavaScript bundle: the supplied Bellwether logo rings once. */
+html,body{margin:0;background:#000}
+body.is-starting{overflow:hidden}
+.startup-splash{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#000;color:#F8CB72;opacity:1;transition:opacity 200ms ease-out}
+.startup-splash.is-leaving{opacity:0}
+.startup-identity{display:grid;justify-items:center}
+.startup-mark{position:relative;width:min(440px,76vw,72svh);aspect-ratio:1}
+.startup-bell{position:relative;width:100%;height:100%;transform-origin:50% 10%;animation:startup-bell-ring 2800ms cubic-bezier(.37,0,.63,1) both;will-change:transform}
+.startup-bell img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+/* Two layers of the original artwork let the clapper swing behind the rim. */
+.startup-bell-body{clip-path:polygon(0 0,100% 0,100% 83%,63% 83%,63% 81%,37% 81%,37% 83%,0 83%)}
+.startup-clapper{clip-path:inset(81% 36% 4% 36%);transform-origin:50% 76%;animation:startup-clapper-ring 2800ms cubic-bezier(.37,0,.63,1) both;will-change:transform}
+/* Long half-swings ease at each reversal and lose energy before settling. */
+@keyframes startup-bell-ring{0%,100%{transform:rotate(0)}8%{transform:rotate(-14deg)}24%{transform:rotate(12deg)}40%{transform:rotate(-9.5deg)}56%{transform:rotate(7deg)}72%{transform:rotate(-4.5deg)}88%{transform:rotate(2deg)}}
+/* The free-hanging clapper trails each reversal instead of moving as one piece. */
+@keyframes startup-clapper-ring{0%{transform:rotate(0)}16%{transform:rotate(19deg)}32%{transform:rotate(-18deg)}48%{transform:rotate(15deg)}64%{transform:rotate(-11deg)}80%{transform:rotate(7deg)}94%{transform:rotate(-3deg)}100%{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){.startup-bell,.startup-clapper{animation:none;will-change:auto}.startup-splash{transition:none}}

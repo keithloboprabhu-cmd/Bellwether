@@ -42,11 +42,11 @@ channels:
     label: Tariff on imported pharmaceuticals
     roles: [importer]
     params:
-      exposed_cost_share: exposure.us_import_share_of_cogs
+      exposed_cost_share: exposure.pharma_import_share_of_cogs
       shock_pct: input.tariff_pct / 100 * (1 - assumption.exempt_share)
       pass_through: assumption.pass_through
       elasticity: assumption.elasticity
-exposure_keys: [us_import_share_of_cogs]
+exposure_keys: [pharma_import_share_of_cogs]
 roles: {PFE: importer, LLY: importer, JNJ: importer, MRK: importer, ABBV: importer, AMGN: importer, GILD: importer}
 default_role: neutral
 references:

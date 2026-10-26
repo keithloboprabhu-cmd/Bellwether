@@ -16,10 +16,10 @@ universe = load_universe()
 reg = registry()
 n_pol = sum(len(reg.industry_policies(i.slug)) for i in universe.industries)
 
-st.title("About PolicyShock")
+st.title("About Bellwether")
 st.markdown(
     f"""
-PolicyShock is a teaching tool built for **Duke FMKT 256**. It asks a narrow question: *if this policy changed
+Bellwether is a teaching tool built for **Duke FMKT 256**. It asks a narrow question: *if this policy changed
 tomorrow, what would the first-order effect be on the revenue, margins, earnings per share and implied value of
 specific companies?* It covers **{len(universe.all_tickers)} public companies in {len(universe.industries)} industries**,
 **{n_pol} industry policies** and **{len(reg.macro)} macro shocks** that run across every industry at once.

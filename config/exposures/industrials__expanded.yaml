@@ -2,14 +2,14 @@ industry: industrials
 companies:
   BA:
     govcon_defense_intel_share:
-      value: 0.01
-      low: 0.0
-      high: 0.13
+      value: 0.3
+      low: 0.25
+      high: 0.4
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
-        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/0001628280-26-004357-index.htm
+      rationale: "Company-specific estimate: Defense, Space & Security is a material Boeing business. Estimate\
+        \ 30% of consolidated revenue (25\u201340%) for defense/IC procurement rather than a 1% mixed-industrial\
+        \ median."
       applicable: true
     ind_domestic_steel_sales_share:
       value: 0.0
@@ -21,14 +21,14 @@ companies:
         is not a reported zero exposure.'
       applicable: true
     ind_infrastructure_capture_share:
-      value: 0.002
+      value: 0.0
       low: 0.0
-      high: 0.02
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
-        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/0001628280-26-004357-index.htm
+      rationale: 'Company-specific scope estimate: Domestic equipment/materials/building-systems suppliers;
+        Boeing''s aerospace revenue is outside this infrastructure transfer channel. This is a model boundary,
+        not a reported zero measurement.'
       applicable: true
     ind_steel_share_of_cogs:
       value: 0.03
@@ -72,14 +72,13 @@ companies:
       applicable: true
   ETN:
     govcon_defense_intel_share:
-      value: 0.01
-      low: 0.0
-      high: 0.13
+      value: 0.06
+      low: 0.03
+      high: 0.1
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
-        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/0001551182-26-000007-index.htm
+      rationale: "Company-specific estimate: Eaton aerospace has military customers alongside commercial and\
+        \ electrical businesses; estimate 6% defense/IC revenue (3\u201310%)."
       applicable: true
     ind_domestic_steel_sales_share:
       value: 0.0
@@ -282,14 +281,13 @@ companies:
       applicable: true
   PH:
     govcon_defense_intel_share:
-      value: 0.01
-      low: 0.0
-      high: 0.13
+      value: 0.08
+      low: 0.04
+      high: 0.15
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Aerospace and
-        diversified manufacturing; median base and outer low/high from CAT/DE/GE/HON/MMM
-        in committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/76334/000007633426000105/0000076334-26-000105-index.htm
+      rationale: "Company-specific estimate: Parker aerospace includes military systems; estimate 8% defense/IC\
+        \ revenue (4\u201315%) instead of the generic 1% industrial median."
       applicable: true
     ind_domestic_steel_sales_share:
       value: 0.0
@@ -634,11 +632,12 @@ companies:
     govcon_defense_intel_share:
       value: 0.0
       low: 0.0
-      high: 0.005
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
-        median base and outer low/high from NUE in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1022671/000110465926021395/0001104659-26-021395-index.htm
+      rationale: 'Company-specific scope estimate: This channel requires a separately configured defense/IC
+        sales estimate, excluding unquantified downstream steel/customer procurement feedback. This is a model
+        boundary, not a reported zero measurement.'
       applicable: true
     ind_domestic_steel_sales_share:
       value: 0.88
@@ -698,11 +697,12 @@ companies:
     govcon_defense_intel_share:
       value: 0.0
       low: 0.0
-      high: 0.005
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Steel production;
-        median base and outer low/high from NUE in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: https://www.sec.gov/Archives/edgar/data/764065/000076406526000025/0000764065-26-000025-index.htm
+      rationale: 'Company-specific scope estimate: This channel requires a separately configured defense/IC
+        sales estimate, excluding unquantified downstream steel/customer procurement feedback. This is a model
+        boundary, not a reported zero measurement.'
       applicable: true
     ind_domestic_steel_sales_share:
       value: 0.88

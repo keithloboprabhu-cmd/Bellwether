@@ -14,7 +14,11 @@ REFRESH_COOLDOWN_S = 600  # public app: at most one live refresh per 10 minutes,
 
 
 def page_setup(title: str) -> None:
-    st.set_page_config(page_title=f"{title} · PolicyShock", page_icon="📉", layout="wide", initial_sidebar_state="expanded")
+    """Configure the page title and supplied Bellwether brand icon."""
+    from pathlib import Path
+
+    logo = Path(__file__).resolve().parents[3] / "web/public/bellwether-logo.png"
+    st.set_page_config(page_title=f"{title} · Bellwether", page_icon=str(logo), layout="wide", initial_sidebar_state="expanded")
 
 
 @st.cache_data(ttl=86400, show_spinner="Fetching latest prices…")

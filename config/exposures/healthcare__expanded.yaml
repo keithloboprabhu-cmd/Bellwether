@@ -22,24 +22,24 @@ companies:
         result.
       applicable: true
     medicaid_revenue_share:
-      value: 0.155
-      low: 0.025
-      high: 0.3
+      value: 0
+      low: 0
+      high: 0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1739940/000173994026000006/0001739940-26-000006-index.htm
+      rationale: 'Company-specific estimate: Continuing Cigna business is commercial benefits and Evernorth/PBM,
+        not a direct Medicaid managed-care premium book. Pharmacy-service contracts are not Medicaid premium
+        revenue.'
       applicable: true
     medicare_advantage_revenue_share:
-      value: 0.245
-      low: 0.12
-      high: 0.77
+      value: 0
+      low: 0
+      high: 0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.hcsc.com/newsroom/news-releases/2025/completes-cigna-medicare-acquisition
+      rationale: 'Company-specific estimate: Cigna completed the sale of its Medicare businesses on March
+        19, 2025. Direct MA premium exposure is zero in the continuing-business scenario; retained PBM service
+        revenue is a separate exposure.'
       applicable: true
     negotiated_drug_medicare_revenue_share:
       value: 0.0
@@ -64,21 +64,20 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care; median base and outer low/high
+        from UNH/ELV/HUM/CVS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
   CNC:
     aca_exchange_revenue_share:
-      value: 0.01
-      low: 0.0
-      high: 0.055
+      value: 0.20486428069022522
+      low: 0.17251728900229493
+      high: 0.21564661125286866
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://investors.centene.com/2026-02-06-CENTENE-CORPORATION-REPORTS-2025-RESULTS-AND-ANNOUNCES-2026-GUIDANCE
+      rationale: "Company-specific estimate: 2025 Commercial segment premium/service revenue $42,003M / consolidated\
+        \ revenue; estimate 95% (80\u2013100%) belongs to Marketplace rather than group/off-exchange products.\
+        \ Not a separately reported pure-ACA revenue ratio."
       applicable: true
     hospital_outpatient_cost_share:
       value: 0.13
@@ -91,24 +90,23 @@ companies:
         result.
       applicable: true
     medicaid_revenue_share:
-      value: 0.155
-      low: 0.025
-      high: 0.3
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      value: 0.46328878666372314
+      low: 0.44012434733053696
+      high: 0.4864532259969093
+      source: 'Centene FY2025 results: Medicaid premium/service revenue $90,238M / SEC consolidated revenue'
+      source_url: https://investors.centene.com/2026-02-06-CENTENE-CORPORATION-REPORTS-2025-RESULTS-AND-ANNOUNCES-2026-GUIDANCE
+      rationale: "Base is the stated filing ratio; low/high are an explicit \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
       applicable: true
     medicare_advantage_revenue_share:
-      value: 0.245
-      low: 0.12
-      high: 0.77
+      value: 0.06
+      low: 0.03
+      high: 0.1
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://investors.centene.com/2026-02-06-CENTENE-CORPORATION-REPORTS-2025-RESULTS-AND-ANNOUNCES-2026-GUIDANCE
+      rationale: "Company-specific estimate: Medicare segment includes a large standalone Part D business;\
+        \ its full revenue is not MA exposure. Use 6% of total revenue (3\u201310%) as an explicitly estimated\
+        \ MA premium share pending a separated revenue disclosure."
       applicable: true
     negotiated_drug_medicare_revenue_share:
       value: 0.0
@@ -119,35 +117,33 @@ companies:
         channel; indirect effects are not modeled. This is not a reported zero exposure.'
       applicable: true
     pbm_retained_rebate_share:
-      value: 0.006500000000000001
+      value: 0.0
       low: 0.0
-      high: 0.02
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/0001071739-26-000049-index.htm
+      rationale: 'Company-specific scope estimate: Retained rebates at owned PBMs, not insurers that outsource
+        pharmacy-benefit management or drug/device manufacturer revenue. This is a model boundary, not a reported
+        zero measurement.'
       applicable: true
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care; median base and outer low/high
+        from UNH/ELV/HUM/CVS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
   MOH:
     aca_exchange_revenue_share:
-      value: 0.01
-      low: 0.0
-      high: 0.055
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      value: 0.09877603134768635
+      low: 0.09383722978030203
+      high: 0.10371483291507068
+      source: 'Molina FY2025 10-K: Marketplace premium revenue $4,487M / total revenue $45,426M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm
+      rationale: "Base is the stated filing ratio; low/high are an explicit \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
       applicable: true
     hospital_outpatient_cost_share:
       value: 0.13
@@ -160,24 +156,23 @@ companies:
         result.
       applicable: true
     medicaid_revenue_share:
-      value: 0.155
-      low: 0.025
-      high: 0.3
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      value: 0.7097257077444635
+      low: 0.6742394223572403
+      high: 0.7452119931316867
+      source: 'Molina FY2025 10-K: Medicaid premium revenue $32,240M / total revenue $45,426M'
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm
+      rationale: "Base is the stated filing ratio; low/high are an explicit \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
       applicable: true
     medicare_advantage_revenue_share:
-      value: 0.245
-      low: 0.12
-      high: 0.77
+      value: 0.13725619689164795
+      low: 0.13039338704706555
+      high: 0.14411900673623035
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm
+      rationale: "Medicare segment premium revenue $6,235M / total revenue $45,426M is used as an MA exposure\
+        \ proxy; no pure MA revenue cross-tab is asserted. Low/high are a \xB15% relative modeling sensitivity,\
+        \ not reported confidence bounds."
       applicable: true
     negotiated_drug_medicare_revenue_share:
       value: 0.0
@@ -188,24 +183,23 @@ companies:
         channel; indirect effects are not modeled. This is not a reported zero exposure.'
       applicable: true
     pbm_retained_rebate_share:
-      value: 0.006500000000000001
+      value: 0.0
       low: 0.0
-      high: 0.02
+      high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/0001179929-26-000005-index.htm
+      rationale: 'Company-specific scope estimate: Retained rebates at owned PBMs, not insurers that outsource
+        pharmacy-benefit management or drug/device manufacturer revenue. This is a model boundary, not a reported
+        zero measurement.'
       applicable: true
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Managed care;
-        median base and outer low/high from UNH/ELV/HUM/CVS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Managed care; median base and outer low/high
+        from UNH/ELV/HUM/CVS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
   JNJ:
     aca_exchange_revenue_share:
@@ -268,10 +262,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
-        and biotechnology; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median
+        base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
   MRK:
     aca_exchange_revenue_share:
@@ -334,10 +327,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
-        and biotechnology; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median
+        base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
   ABBV:
     aca_exchange_revenue_share:
@@ -400,10 +392,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
-        and biotechnology; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median
+        base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
   AMGN:
     aca_exchange_revenue_share:
@@ -466,10 +457,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
-        and biotechnology; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median
+        base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
   GILD:
     aca_exchange_revenue_share:
@@ -532,10 +522,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals
-        and biotechnology; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Pharmaceuticals and biotechnology; median
+        base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
   HCA:
     aca_exchange_revenue_share:
@@ -555,13 +544,15 @@ companies:
         channel; indirect effects are not modeled. This is not a reported zero exposure.'
       applicable: true
     medicaid_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.12
+      low: 0.06
+      high: 0.2
       source: estimate
-      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
-        channel; indirect effects are not modeled. This is not a reported zero exposure.'
-      applicable: true
+      source_url: https://www.sec.gov/Archives/edgar/data/860730/000119312526044769/0001193125-26-044769-index.htm
+      rationale: Company-specific estimate of consolidated revenue sensitive to Medicaid patient coverage,
+        not a reported pure managed-care premium ratio. Includes a provider-volume proxy with wide payer-mix
+        uncertainty; does not separately model uncompensated care, state supplemental payments or payer substitution.
+        Hospital/service mix differs from insurers.
     medicare_advantage_revenue_share:
       value: 0.0
       low: 0.0
@@ -591,9 +582,9 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median
-        base and outer low/high from UNH/CVS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median base and outer low/high
+        from UNH/CVS in committed exposure configuration. Dimensionless peer prior; review before relying
+        on this company result.
       applicable: true
   THC:
     aca_exchange_revenue_share:
@@ -613,13 +604,15 @@ companies:
         channel; indirect effects are not modeled. This is not a reported zero exposure.'
       applicable: true
     medicaid_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.08
+      low: 0.04
+      high: 0.14
       source: estimate
-      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
-        channel; indirect effects are not modeled. This is not a reported zero exposure.'
-      applicable: true
+      source_url: https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/0000070318-26-000012-index.htm
+      rationale: Company-specific estimate of consolidated revenue sensitive to Medicaid patient coverage,
+        not a reported pure managed-care premium ratio. Includes a provider-volume proxy with wide payer-mix
+        uncertainty; does not separately model uncompensated care, state supplemental payments or payer substitution.
+        Hospital/service mix differs from insurers.
     medicare_advantage_revenue_share:
       value: 0.0
       low: 0.0
@@ -649,9 +642,9 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median
-        base and outer low/high from UNH/CVS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median base and outer low/high
+        from UNH/CVS in committed exposure configuration. Dimensionless peer prior; review before relying
+        on this company result.
       applicable: true
   UHS:
     aca_exchange_revenue_share:
@@ -671,13 +664,15 @@ companies:
         channel; indirect effects are not modeled. This is not a reported zero exposure.'
       applicable: true
     medicaid_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
+      value: 0.2
+      low: 0.1
+      high: 0.3
       source: estimate
-      rationale: 'Explicit scope estimate: Hospitals is outside this direct policy
-        channel; indirect effects are not modeled. This is not a reported zero exposure.'
-      applicable: true
+      source_url: https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/0001193125-26-071676-index.htm
+      rationale: Company-specific estimate of consolidated revenue sensitive to Medicaid patient coverage,
+        not a reported pure managed-care premium ratio. Includes a provider-volume proxy with wide payer-mix
+        uncertainty; does not separately model uncompensated care, state supplemental payments or payer substitution.
+        Hospital/service mix differs from insurers.
     medicare_advantage_revenue_share:
       value: 0.0
       low: 0.0
@@ -707,9 +702,9 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median
-        base and outer low/high from UNH/CVS in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Hospitals; median base and outer low/high
+        from UNH/CVS in committed exposure configuration. Dimensionless peer prior; review before relying
+        on this company result.
       applicable: true
   TMO:
     aca_exchange_revenue_share:
@@ -771,10 +766,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices
-        and life science tools; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices and life science tools;
+        median base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer
+        prior; review before relying on this company result.
       applicable: true
   ABT:
     aca_exchange_revenue_share:
@@ -836,10 +830,9 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices
-        and life science tools; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices and life science tools;
+        median base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer
+        prior; review before relying on this company result.
       applicable: true
   MDT:
     aca_exchange_revenue_share:
@@ -901,8 +894,7 @@ companies:
       low: 0.2
       high: 0.45
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices
-        and life science tools; median base and outer low/high from PFE/LLY in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices and life science tools;
+        median base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer
+        prior; review before relying on this company result.
       applicable: true

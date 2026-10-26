@@ -135,7 +135,10 @@ t = an.base.totals()
 lo_t, hi_t = an.market_low.totals(), an.market_high.totals()
 st.subheader(shock.name)
 st.markdown(" · ".join(f"{u.label}: **{an.base.inputs[u.key]:g} {u.unit}**" for u in shock.user_inputs))
-applied_full = {**applied, "in": {k: float(v) for k, v in {**shock.default_inputs(), **applied.get("in", {})}.items()}}
+# compare on a normalised basis: a deep link may omit inputs at their defaults and components (all on)
+applied_full = {**applied, "in": {k: float(v) for k, v in {**shock.default_inputs(), **applied.get("in", {})}.items()}, "a": applied.get("a", {})}
+if shock.components:
+    applied_full["c"] = sorted(applied.get("c", shock.components))
 if decode(encode(current)) != decode(encode(applied_full)):
     st.caption("Sidebar has changes that aren't applied yet; press **Run** to update.")
 

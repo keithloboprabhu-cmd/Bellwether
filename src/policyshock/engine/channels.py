@@ -129,15 +129,17 @@ def cost(b, p) -> Delta:
 
     exposed = C × exposed_cost_share;  dCost = exposed × shock_pct (+ dcost_musd for $ shocks)
     Firm raises prices by dp = φ·dCost/R; volume falls dQ = −ε·dp.
-    dR = R·((1+dp)(1+dQ) − 1);  dC = dCost·(1+dQ) + C·v·dQ  (v = variable cost share)
+    dR = R·((1+dp)(1+dQ) − 1). The COGS-linked cost and C·v·dQ go to dC;
+    absolute-dollar operating costs go to dOpex (both scale by 1+dQ). This keeps
+    bank compensation and property taxes out of a nonexistent/tiny COGS line.
     """
     R, C = b["revenue"], b["cost_of_revenue"]
     d_cost = C * p["exposed_cost_share"] * p["shock_pct"] + p["dcost_musd"]
     dp = p["pass_through"] * d_cost / R if R else 0.0
     dQ = -p["elasticity"] * dp
     dR = R * ((1 + dp) * (1 + dQ) - 1)
-    dC = d_cost * (1 + dQ) + C * p["variable_cost_share"] * dQ
-    return Delta(dR=dR, dC=dC)
+    dC = C * p["exposed_cost_share"] * p["shock_pct"] * (1 + dQ) + C * p["variable_cost_share"] * dQ
+    return Delta(dR=dR, dC=dC, dOpex=p["dcost_musd"] * (1 + dQ))
 
 
 @channel("domestic_uplift", "cost", required=("domestic_sales_share", "price_uplift"), optional={"flow_through": 1.0})
