@@ -1,0 +1,7 @@
+# Only existing application dependencies needed by the web API.
+# Streamlit, Plotly and pytest remain in the root requirements for local tools.
+pandas>=2.2
+pydantic>=2.9
+pyyaml>=6.0
+requests>=2.32
+yfinance>=0.2.50

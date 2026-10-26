@@ -5,7 +5,7 @@ EPS and implied value of 203 real US companies, using their latest SEC filings.
 
 **Status:** Python engine, Streamlit interface (Industry simulator, Full Market with 10 macro shocks, Backtests,
 Methodology, Data, About) and tactical web console implemented. The Streamlit app is ready for Streamlit Community
-Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`); no public deployment yet. The web console does not
+Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`). The tactical console also includes Vercel deployment configuration. The web console does not
 have a Full Market view yet.
 
 ## Tactical console interface
@@ -55,6 +55,27 @@ uv pip install --python .venv/bin/python -r requirements.txt
 ```
 The app runs entirely from committed snapshots in `data/snapshots/`, with no keys needed.
 `scripts/refresh_data.py` rebuilds them from SEC EDGAR, FRED and yfinance.
+
+## Deploy the tactical console on Vercel
+
+Import this repository with the repository root as the Root Directory and use the
+free Hobby plan. `vercel.json` configures the frontend build, SPA routes and the
+single Python function in `api/index.py`; no start command or API keys are needed.
+Python 3.12 is selected by `.python-version`. `api/requirements.txt` includes only
+the existing Python dependencies needed by the console, omitting local Streamlit,
+charting and test tools from the function bundle.
+
+Live checks finish inside requests: scenarios prioritize their industry's quotes,
+each request checks at most one SEC company and two FRED series, and Data-page
+requests rotate quote batches. Successful records keep their observation times;
+per-record TTLs avoid treating an entire provider as fresh after a partial batch.
+The ephemeral cache is stored under `/tmp/bellwether`, not in read-only application
+files. Cold instances fall back to committed data, then fetch current values when
+requested. There is no always-running refresh loop, shared persistent cache, or
+paid data service. Provider availability and cloud-IP rate limits still apply.
+
+The existing weekday GitHub Actions job refreshes committed snapshots. Connect
+the GitHub repository in Vercel to deploy subsequent commits automatically.
 
 ## Company coverage and user profiles
 

@@ -101,11 +101,10 @@ def calculate(payload: dict) -> dict:
         pol = registry().policy(ind, pid)
     except KeyError as exc:
         raise ValueError("This policy is unavailable for the selected industry. Choose another policy.") from exc
-    captured = live.service.capture() if live.service.active else None
     supplied_versions = payload.get("versions")
     if supplied_versions is not None and (not isinstance(supplied_versions, dict) or set(supplied_versions) != {"model", "data"} or not all(isinstance(v, str) for v in supplied_versions.values())):
         raise ValueError("Provide model and data version identifiers as strings.")
-    if supplied_versions and (supplied_versions != versions() if not captured else supplied_versions.get("model") != versions()["model"]):
+    if supplied_versions and (supplied_versions != versions() if not live.service.active else supplied_versions.get("model") != versions()["model"]):
         raise ValueError("This link uses a different model or data version. Return home to run it with current snapshots.")
     inputs = payload.get("inputs", {})
     if not isinstance(inputs, dict) or set(inputs) - {x.key for x in pol.user_inputs}:
@@ -122,6 +121,9 @@ def calculate(payload: dict) -> dict:
     profile = CompanyProfile.model_validate(payload["company"]) if "company" in payload else None
     if profile and profile.industry != ind:
         raise ValueError("The company profile's industry must match the scenario industry.")
+    if live.service.request_driven:
+        live.service.refresh_for_request(load_universe().industry(ind).tickers)
+    captured = live.service.capture() if live.service.active else None
     live_kw = {} if not captured else {"baselines": prepare_baselines(pd.DataFrame(live.service.baseline_rows(load_universe().industry(ind).tickers, captured))), "macro": fred.macro_context(captured["macro"])}
     reference = simulate(ind, pid, inputs=inputs, prices_df=captured["prices"] if captured else prices.load_snapshot(), **live_kw)
     an = run_company(profile, pid, inputs, **({"macro": live_kw["macro"]} if captured else {})) if profile else reference
@@ -226,6 +228,8 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/catalog":
                 return self.send_json(catalog())
             if path == "/api/live":
+                if live.service.request_driven:
+                    live.service.refresh_for_request()
                 captured = live.service.capture()
                 return self.send_json({"status": captured["status"], "macro": captured["macro"], "captured_at": captured["captured_at"]})
             if path == "/api/company/metrics":
@@ -237,6 +241,8 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/methodology":
                 return self.send_json({"text": (ROOT / "METHODOLOGY.md").read_text()})
             if path == "/api/data":
+                if live.service.request_driven:
+                    live.service.refresh_for_request()
                 captured = live.service.capture()
                 return self.send_json({"rows": clean_json(live.service.baseline_rows(load_universe().all_tickers, captured)), "status": captured["status"], "macro": captured["macro"]})
             if path == "/api/backtests":
@@ -281,6 +287,8 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/live/refresh":
                 return self.send_json(live.service.refresh(), 202)
             if path == "/api/company/lookup":
+                if live.service.request_driven and isinstance(body.get("ticker"), str) and body["ticker"].upper() in load_universe().all_tickers:
+                    live.service.refresh_for_request([body["ticker"].upper()])
                 return self.send_json(lookup_company(body["ticker"], body["industry"]))
             if path == "/api/company/peers":
                 return self.send_json({"exposures": peer_exposures(body["industry"], body["policy"], body["revenue"])})

@@ -1,0 +1,16 @@
+.git
+.venv
+.pytest_cache
+.env
+.env.*
+.streamlit/secrets.toml
+**/__pycache__
+**/*.pyc
+web/node_modules
+web/dist
+data/cache
+design
+tests
+docs
+scripts
+pages

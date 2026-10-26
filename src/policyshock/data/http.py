@@ -60,6 +60,10 @@ def get_with_retry(
     Raises the last error if every attempt fails; 4xx other than 429 fail immediately.
     """
     last_exc: Exception | None = None
+    if os.environ.get("VERCEL"):
+        # Complete provider work within a function invocation; never wait through
+        # a desktop-sized retry sequence before returning the snapshot fallback.
+        timeout, retries = min(timeout, 8), 0
     for attempt in range(retries + 1):
         if limiter:
             limiter.wait()

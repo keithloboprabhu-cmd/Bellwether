@@ -11,14 +11,14 @@ import json
 import time
 from pathlib import Path
 
-from policyshock.config import ROOT
+from policyshock.config import CACHE_DIR as DATA_CACHE_DIR
 from policyshock.data.http import DEFAULT_SEC_USER_AGENT, RateLimiter, get_secret, get_with_retry
 
 TICKER_MAP_URL = "https://www.sec.gov/files/company_tickers.json"
 FACTS_URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json"
 SUBMISSIONS_URL = "https://data.sec.gov/submissions/CIK{cik:010d}.json"
 
-CACHE_DIR = ROOT / "data" / "cache" / "edgar"
+CACHE_DIR = DATA_CACHE_DIR / "edgar"
 _limiter = RateLimiter(rate=8)
 
 

@@ -21,11 +21,11 @@ from pathlib import Path
 
 import pandas as pd
 
-from policyshock.config import ROOT, load_universe
+from policyshock.config import CACHE_DIR, load_universe
 from policyshock.data import edgar, fred, prices, store
 from policyshock.data.baseline import build_baseline, shares_outstanding
 
-CACHE = ROOT / "data/cache/live/state.json"
+CACHE = CACHE_DIR / "live/state.json"
 INTERVALS = {"quotes": 300, "fred": 3600, "financials": 21600}
 
 
@@ -81,10 +81,12 @@ class LiveData:
         self.cache = cache
         self.lock = threading.RLock()
         self.active = False
+        self.request_driven = False
         self.running: set[str] = set()
         self.attempted: dict[str, float] = {}
         self.state = {"quotes": {}, "fred": {}, "financials": {}, "status": {}}
         self.metrics_cache: dict[str, tuple[float, dict]] = {}
+        self.record_attempted: dict[tuple[str, str], float] = {}
         try:
             data = json.loads(cache.read_text())
             if isinstance(data, dict) and all(isinstance(data.get(k), dict) for k in self.state):
@@ -108,6 +110,8 @@ class LiveData:
 
     def refresh(self) -> dict:
         """Queue due providers without blocking HTTP, coalescing concurrent requests."""
+        if self.request_driven:
+            return self.refresh_for_request()
         with self.lock:
             if not self.active:
                 return self.status()
@@ -122,22 +126,63 @@ class LiveData:
                 threading.Thread(target=self._refresh_provider, args=(provider,), name=f"refresh-{provider}", daemon=True).start()
             return self.status()
 
+    def refresh_for_request(self, tickers: list[str] | None = None) -> dict:
+        """Finish a bounded batch before returning on hosts without a scheduler.
+
+        Scenarios prioritize their industry; the Data page rotates through the
+        universe. Per-record TTLs prevent a partial refresh marking all firms fresh.
+        No provider worker survives the request, and failures keep prior values.
+        """
+        if not self.active:
+            return self.status()
+        universe = load_universe().all_tickers
+        selected = [t for t in (tickers or universe) if t in universe]
+        jobs = []
+        with self.lock:
+            for provider, keys, limit in (("quotes", selected, 30 if tickers else 12),
+                                          ("financials", selected, 1),
+                                          ("fred", list(fred.SERIES), 2)):
+                if provider in self.running:
+                    continue
+                def checked(key):
+                    value = self.state[provider].get(key, {})
+                    stamp = value.get("checked_at" if provider == "financials" else "retrieved_at")
+                    try:
+                        return datetime.fromisoformat(stamp).timestamp() if stamp else 0
+                    except (ValueError, TypeError):
+                        return 0
+                due = [k for k in keys if time.time() - checked(k) >= INTERVALS[provider]
+                       and time.time() - self.record_attempted.get((provider, k), 0) >= 60]
+                due.sort(key=lambda k: (checked(k), self.record_attempted.get((provider, k), 0)))
+                batch = due[:limit]
+                if batch:
+                    for key in batch:
+                        self.record_attempted[provider, key] = time.time()
+                    self.running.add(provider)
+                    jobs.append((provider, batch))
+        # The context manager joins every task before returning to Vercel.
+        with ThreadPoolExecutor(max_workers=3) as pool:
+            futures = [pool.submit(self._refresh_provider, provider, keys) for provider, keys in jobs]
+            for future in futures:
+                future.result()
+        return self.status()
+
     def _save(self):
         self.cache.parent.mkdir(parents=True, exist_ok=True)
         tmp = self.cache.with_suffix(".tmp")
         tmp.write_text(json.dumps(self.state, allow_nan=False, separators=(",", ":")))
         tmp.replace(self.cache)
 
-    def _refresh_provider(self, provider):
+    def _refresh_provider(self, provider, keys=None):
         try:
             if provider == "quotes":
-                fetched = fetch_quotes(load_universe().all_tickers)
+                fetched = fetch_quotes(keys if keys is not None else load_universe().all_tickers)
                 if not fetched:
                     raise ValueError("Yahoo returned no valid quotes")
                 values = {r["ticker"]: r for r in fetched}
             elif provider == "fred":
                 values, errors = {}, []
-                for sid in fred.SERIES:
+                for sid in (keys if keys is not None else fred.SERIES):
                     try:
                         series = fred.fetch_series(sid)
                         if len(series):
@@ -164,7 +209,7 @@ class LiveData:
                     return ticker, {**old, "years": years, "shares_outstanding": shares_outstanding(facts), "checked_at": _now(), "source": "SEC EDGAR API"}
 
                 with ThreadPoolExecutor(max_workers=3) as pool:
-                    futures = {t: pool.submit(fetch_one, t) for t in load_universe().all_tickers}
+                    futures = {t: pool.submit(fetch_one, t) for t in (keys if keys is not None else load_universe().all_tickers)}
                     for ticker, future in futures.items():
                         try:
                             t, co = future.result()
@@ -181,7 +226,8 @@ class LiveData:
                     newer = not previous or (value[date_key] >= previous[date_key] if date_key else value["years"][0]["period_end"] >= previous["years"][0]["period_end"])
                     if newer:
                         self.state[provider][key] = value
-                missing = sorted(set(load_universe().all_tickers if provider != "fred" else fred.SERIES) - set(values))
+                requested = keys if keys is not None else (load_universe().all_tickers if provider != "fred" else fred.SERIES)
+                missing = sorted(set(requested) - set(values))
                 self.state["status"][provider] = {"checked_at": _now(), "success_epoch": time.time(), "updated": len(values), "missing": missing, "error": None if not missing else f"Partial refresh: {len(missing)} unavailable; prior data retained"}
                 self._save()
         except Exception as exc:
@@ -195,7 +241,7 @@ class LiveData:
     def status(self) -> dict:
         """Return honest retrieval status, retaining observation times separately."""
         with self.lock:
-            return {"enabled": self.active, "providers": {k: {**deepcopy(self.state["status"].get(k, {})), "refreshing": k in self.running, "refresh_seconds": ttl, "cached_records": len(self.state[k])} for k, ttl in INTERVALS.items()},
+            return {"enabled": self.active, "refresh_mode": "request" if self.request_driven else "background", "providers": {k: {**deepcopy(self.state["status"].get(k, {})), "refreshing": k in self.running, "refresh_seconds": ttl, "cached_records": len(self.state[k])} for k, ttl in INTERVALS.items()},
                     "quote_note": "Latest available Yahoo five-minute observations; delays are possible. Outside market hours, the last market observation remains visible.",
                     "financial_note": "Financial statements are latest filed annual SEC data; market metrics may be trailing twelve months. Economic releases update on their publication schedules."}
 

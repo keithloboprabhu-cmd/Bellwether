@@ -26,6 +26,8 @@ Filings and public APIs do not provide every policy-specific input. Domestic sal
 
 Annual statements, market quotes and economic releases keep their own observation dates. Refresh checks do not create new observations: markets close, filings arrive periodically and FRED series follow release schedules. Missing or incomplete updates retain the last usable record. Derived financials and defaults are flagged; unsupported percentages remain undefined. Each calculation uses one frozen capture of the available inputs.
 
+On Vercel, refreshes run during requests rather than continuously in the background. Scenarios prioritize quotes for their industry; each request checks at most one company's annual statements and two FRED series. The Data page rotates through companies in small batches. The intervals above are per-record minimum ages, not guaranteed publication or refresh times. Temporary caches belong to each running instance and can reset; committed snapshots provide the cold-start fallback. Historical backtests always use committed records.
+
 ## 2. Policy transmission
 
 A company is affected through the business it actually operates. Exposure determines which part of its revenue, costs, financing or asset value a policy reaches.

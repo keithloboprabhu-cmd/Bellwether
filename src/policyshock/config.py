@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 from functools import lru_cache
+import os
 from pathlib import Path
+import tempfile
 from typing import Literal
 
 import yaml
@@ -12,6 +14,8 @@ from pydantic import BaseModel, Field
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG_DIR = ROOT / "config"
 SNAPSHOT_DIR = ROOT / "data" / "snapshots"
+# Serverless application files are read-only; only disposable provider caches move.
+CACHE_DIR = (Path(tempfile.gettempdir()) / "bellwether" if os.environ.get("VERCEL") else ROOT / "data" / "cache")
 
 
 class Company(BaseModel):
