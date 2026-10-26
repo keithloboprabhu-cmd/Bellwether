@@ -3,6 +3,9 @@
 Simulate how a policy change (tariffs, tax changes, rate moves, Medicare rates…) hits the revenue, margins,
 EPS and implied value of 203 real US companies, using their latest SEC filings.
 
+**Live console:** https://duke-bellwether.vercel.app/ — hosted on Vercel Hobby.
+Pushes to `main` automatically deploy the tactical console.
+
 **Status:** Python engine, Streamlit interface (Industry simulator, Full Market with 10 macro shocks, Backtests,
 Methodology, Data, About) and tactical web console implemented. The Streamlit app is ready for Streamlit Community
 Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`). The tactical console also includes Vercel deployment configuration. The web console does not
