@@ -1,0 +1,202 @@
+list,rank,name,ticker,status,reason,source_url
+Fortune 100 2026,1,Amazon,AMZN,existing,Existing reference issuer,https://fortune.com/company/amazon-com/
+Fortune 100 2026,2,Walmart,WMT,existing,Existing reference issuer,https://fortune.com/company/walmart/
+Fortune 100 2026,3,UnitedHealth Group,UNH,existing,Existing reference issuer,https://fortune.com/company/unitedhealth-group/
+Fortune 100 2026,4,Apple,AAPL,existing,Existing reference issuer,https://fortune.com/company/apple/
+Fortune 100 2026,5,Alphabet,GOOGL,existing,Existing reference issuer,https://fortune.com/company/alphabet/
+Fortune 100 2026,6,CVS Health,CVS,existing,Existing reference issuer,https://fortune.com/company/cvs-health/
+Fortune 100 2026,7,Berkshire Hathaway,BRK-A,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/berkshire-hathaway/
+Fortune 100 2026,8,McKesson,MCK,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/mckesson/
+Fortune 100 2026,9,Exxon Mobil Holdings,XOM,existing,Existing reference issuer,https://fortune.com/company/exxon-mobil/
+Fortune 100 2026,10,Cencora,COR,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/amerisourcebergen/
+Fortune 100 2026,11,Microsoft,MSFT,existing,Existing reference issuer,https://fortune.com/company/microsoft/
+Fortune 100 2026,12,JPMorgan Chase,JPM,existing,Existing reference issuer,https://fortune.com/company/jpmorgan-chase/
+Fortune 100 2026,13,Costco Wholesale,COST,existing,Existing reference issuer,https://fortune.com/company/costco/
+Fortune 100 2026,14,Cigna Group,CI,existing,Existing reference issuer,https://fortune.com/company/cigna/
+Fortune 100 2026,15,Cardinal Health,CAH,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/cardinal-health/
+Fortune 100 2026,16,Nvidia,NVDA,existing,Existing reference issuer,https://fortune.com/company/nvidia/
+Fortune 100 2026,17,Meta Platforms,META,existing,Existing reference issuer,https://fortune.com/company/facebook/
+Fortune 100 2026,18,Elevance Health,ELV,existing,Existing reference issuer,https://fortune.com/company/elevance-health/
+Fortune 100 2026,19,Centene,CNC,existing,Existing reference issuer,https://fortune.com/company/centene/
+Fortune 100 2026,20,Bank of America,BAC,existing,Existing reference issuer,https://fortune.com/company/bank-of-america-corp/
+Fortune 100 2026,21,Chevron,CVX,existing,Existing reference issuer,https://fortune.com/company/chevron/
+Fortune 100 2026,22,Ford Motor,F,existing,Existing reference issuer,https://fortune.com/company/ford-motor/
+Fortune 100 2026,23,General Motors,GM,existing,Existing reference issuer,https://fortune.com/company/general-motors/
+Fortune 100 2026,24,Citigroup,C,existing,Existing reference issuer,https://fortune.com/company/citigroup/
+Fortune 100 2026,25,Home Depot,HD,existing,Existing reference issuer,https://fortune.com/company/home-depot/
+Fortune 100 2026,26,Fannie Mae,FNMA,conservatorship,"Federal conservatorship; separate category, not ordinary financial equity",https://fortune.com/company/fannie-mae/
+Fortune 100 2026,27,Kroger,KR,existing,Existing reference issuer,https://fortune.com/company/kroger/
+Fortune 100 2026,28,Verizon Communications,VZ,existing,Existing reference issuer,https://fortune.com/company/verizon/
+Fortune 100 2026,29,Phillips 66,PSX,existing,Existing reference issuer,https://fortune.com/company/phillips/
+Fortune 100 2026,30,Marathon Petroleum,MPC,existing,Existing reference issuer,https://fortune.com/company/marathon-petroleum/
+Fortune 100 2026,31,StoneX Group,SNEX,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/stonex-group/
+Fortune 100 2026,32,State Farm Insurance,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/state-farm-insurance-cos/
+Fortune 100 2026,33,Freddie Mac,FMCC,conservatorship,"Federal conservatorship; separate category, not ordinary financial equity",https://fortune.com/company/freddie-mac/
+Fortune 100 2026,34,Humana,HUM,existing,Existing reference issuer,https://fortune.com/company/humana/
+Fortune 100 2026,35,AT&T,T,existing,Existing reference issuer,https://fortune.com/company/att/
+Fortune 100 2026,36,Goldman Sachs Group,GS,existing,Existing reference issuer,https://fortune.com/company/goldman-sachs-group/
+Fortune 100 2026,37,Comcast,CMCSA,existing,Existing reference issuer,https://fortune.com/company/comcast/
+Fortune 100 2026,38,Wells Fargo,WFC,existing,Existing reference issuer,https://fortune.com/company/wells-fargo/
+Fortune 100 2026,39,Morgan Stanley,MS,existing,Existing reference issuer,https://fortune.com/company/morgan-stanley/
+Fortune 100 2026,40,Valero Energy,VLO,existing,Existing reference issuer,https://fortune.com/company/valero-energy/
+Fortune 100 2026,41,Dell Technologies,DELL,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/dell-technologies/
+Fortune 100 2026,42,Target,TGT,existing,Existing reference issuer,https://fortune.com/company/target/
+Fortune 100 2026,43,Tesla,TSLA,existing,Existing reference issuer,https://fortune.com/company/tesla/
+Fortune 100 2026,44,Walt Disney,DIS,existing,Existing reference issuer,https://fortune.com/company/disney/
+Fortune 100 2026,45,Johnson & Johnson,JNJ,existing,Existing reference issuer,https://fortune.com/company/johnson-johnson/
+Fortune 100 2026,46,PepsiCo,PEP,existing,Existing reference issuer,https://fortune.com/company/pepsico/
+Fortune 100 2026,47,Boeing,BA,existing,Existing reference issuer,https://fortune.com/company/boeing/
+Fortune 100 2026,48,UPS,UPS,existing,Existing reference issuer,https://fortune.com/company/ups/
+Fortune 100 2026,49,RTX,RTX,existing,Existing reference issuer,https://fortune.com/company/raytheon-technologies/
+Fortune 100 2026,50,FedEx,FDX,existing,Existing reference issuer,https://fortune.com/company/fedex/
+Fortune 100 2026,51,Progressive,PGR,existing,Existing reference issuer,https://fortune.com/company/progressive/
+Fortune 100 2026,52,Lowe's,LOW,existing,Existing reference issuer,https://fortune.com/company/lowes/
+Fortune 100 2026,53,Energy Transfer,ET,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/energy-transfer-equity/
+Fortune 100 2026,54,Procter & Gamble,PG,existing,Existing reference issuer,https://fortune.com/company/procter-gamble/
+Fortune 100 2026,55,Sysco,SYY,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/sysco/
+Fortune 100 2026,56,American Express,AXP,existing,Existing reference issuer,https://fortune.com/company/american-express/
+Fortune 100 2026,57,Albertsons,ACI,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/albertsons-cos/
+Fortune 100 2026,58,Archer Daniels Midland,ADM,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/archer-daniels-midland/
+Fortune 100 2026,59,MetLife,MET,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/metlife/
+Fortune 100 2026,60,HCA Healthcare,HCA,existing,Existing reference issuer,https://fortune.com/company/hca-holdings/
+Fortune 100 2026,61,Lockheed Martin,LMT,existing,Existing reference issuer,https://fortune.com/company/lockheed-martin/
+Fortune 100 2026,62,New York Life Insurance,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/new-york-life-insurance/
+Fortune 100 2026,63,Capital One Financial,COF,existing,Existing reference issuer,https://fortune.com/company/capital-one-financial/
+Fortune 100 2026,64,Allstate,ALL,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/allstate/
+Fortune 100 2026,65,Caterpillar,CAT,existing,Existing reference issuer,https://fortune.com/company/caterpillar/
+Fortune 100 2026,66,International Business Machines,IBM,existing,Existing reference issuer,https://fortune.com/company/ibm/
+Fortune 100 2026,67,Eli Lilly,LLY,existing,Existing reference issuer,https://fortune.com/company/eli-lilly/
+Fortune 100 2026,68,Merck,MRK,existing,Existing reference issuer,https://fortune.com/company/merck/
+Fortune 100 2026,69,Nationwide,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/nationwide/
+Fortune 100 2026,70,Broadcom,AVGO,existing,Existing reference issuer,https://fortune.com/company/broadcom/
+Fortune 100 2026,71,Delta Air Lines,DAL,existing,Existing reference issuer,https://fortune.com/company/delta-air-lines/
+Fortune 100 2026,72,Publix Super Markets,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/publix-super-markets/
+Fortune 100 2026,73,Pfizer,PFE,existing,Existing reference issuer,https://fortune.com/company/pfizer/
+Fortune 100 2026,74,TD Synnex,SNX,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/synnex/
+Fortune 100 2026,75,ConocoPhillips,COP,existing,Existing reference issuer,https://fortune.com/company/conocophillips/
+Fortune 100 2026,76,Galaxy Digital,GLXY,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/galaxy-digital/
+Fortune 100 2026,77,AbbVie,ABBV,existing,Existing reference issuer,https://fortune.com/company/abbvie/
+Fortune 100 2026,78,Prudential Financial,PRU,existing,Existing reference issuer,https://fortune.com/company/prudential-financial/
+Fortune 100 2026,79,TJX,TJX,existing,Existing reference issuer,https://fortune.com/company/tjx/
+Fortune 100 2026,80,Performance Food Group,PFGC,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/performance-food-group/
+Fortune 100 2026,81,United Airlines Holdings,UAL,existing,Existing reference issuer,https://fortune.com/company/united-continental-holdings/
+Fortune 100 2026,82,Oracle,ORCL,existing,Existing reference issuer,https://fortune.com/company/oracle/
+Fortune 100 2026,83,Cisco Systems,CSCO,existing,Existing reference issuer,https://fortune.com/company/cisco-systems-inc/
+Fortune 100 2026,84,HP,HPQ,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/hp/
+Fortune 100 2026,85,Charter Communications,CHTR,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/charter-communications/
+Fortune 100 2026,86,American Airlines Group,AAL,existing,Existing reference issuer,https://fortune.com/company/american-airlines-group/
+Fortune 100 2026,87,Tyson Foods,TSN,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/tyson-foods/
+Fortune 100 2026,88,Intel,INTC,existing,Existing reference issuer,https://fortune.com/company/intel/
+Fortune 100 2026,89,Enterprise Products Partners,EPD,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/enterprise-products-partners/
+Fortune 100 2026,90,Ingram Micro Holding,INGM,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/ingram-micro/
+Fortune 100 2026,91,General Dynamics,GD,existing,Existing reference issuer,https://fortune.com/company/general-dynamics/
+Fortune 100 2026,92,Uber Technologies,UBER,existing,Existing reference issuer,https://fortune.com/company/uber-technologies/
+Fortune 100 2026,93,United Services Automobile Assn.,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/usaa/
+Fortune 100 2026,94,TIAA,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/tiaa/
+Fortune 100 2026,95,Liberty Mutual Insurance Group,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/liberty-mutual-insurance-group/
+Fortune 100 2026,96,Travelers,TRV,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/travelers-cos/
+Fortune 100 2026,97,Bristol-Myers Squibb,BMY,candidate,Public gap: statement and exposure verification required,https://fortune.com/company/bristol-myers-squibb/
+Fortune 100 2026,98,Coca-Cola,KO,existing,Existing reference issuer,https://fortune.com/company/coca-cola/
+Fortune 100 2026,99,Nike,NKE,existing,Existing reference issuer,https://fortune.com/company/nike/
+Fortune 100 2026,100,Massachusetts Mutual Life Insurance,,excluded_no_traded_equity,No publicly traded equity; excluded from stock valuation,https://fortune.com/company/massachusetts-mutual-life-insurance/
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,NVIDIA,NVDA,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,APPLE,AAPL,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MICROSOFT,MSFT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,AMAZON.COM INC,AMZN,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ALPHABET CLASS A,GOOGL,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BROADCOM INC,AVGO,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,META PLATFORMS CLASS A,META,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ALPHABET CLASS C,GOOGL,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,TESLA INC,TSLA,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ELI LILLY,LLY,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MICRON TECHNOLOGY,MU,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BERKSHIRE HATHAWAY INC CLASS B,BRK-A,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ADVANCED MICRO DEVICES,AMD,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,JPMORGAN CHASE & CO,JPM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,EXXONMOBIL HOLDINGS CORP,XOM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,VISA CLASS A,V,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,JOHNSON & JOHNSON,JNJ,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,WALMART,WMT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MASTERCARD CLASS A,MA,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ABBVIE,ABBV,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,INTEL CORPORATION,INTC,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CHEVRON,CVX,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,PALANTIR TECHNOLOGIES CLASS A,PLTR,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,COSTCO WHOLESALE CORP,COST,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CISCO SYSTEMS INC,CSCO,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,PROCTER & GAMBLE,PG,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,UNITEDHEALTH GROUP,UNH,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MERCK & CO INC,MRK,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,COCA-COLA,KO,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,APPLIED MATERIAL INC,AMAT,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BANK OF AMERICA,BAC,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,HOME DEPOT,HD,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,PHILIP MORRIS INTERNATIONAL,PM,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,GE AEROSPACE,GE,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,LAM RESEARCH,LRCX,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,PALO ALTO NETWORKS,PANW,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CATERPILLAR INC,CAT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,TEXAS INSTRUMENT,TXN,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,GOLDMAN SACHS GROUP,GS,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,RTX,RTX,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,THERMO FISHER SCIENTIFIC,TMO,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,NETFLIX,NFLX,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,WELLS FARGO,WFC,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,AMGEN INC,AMGN,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,INTERNATIONAL BUSINESS MACHINES CO,IBM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ORACLE,ORCL,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,GE VERNOVA,GEV,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,LINDE PLC,LIN,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MORGAN STANLEY,MS,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CITIGROUP,C,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,GILEAD SCIENCES,GILD,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,QUALCOMM,QCOM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,SANDISK,SNDK,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ARISTA NETWORKS,ANET,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,WALT DISNEY,DIS,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,SALESFORCE,CRM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,PEPSICO,PEP,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MCDONALDS CORP,MCD,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,VERIZON COMMUNICATIONS INC,VZ,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ABBOTT LABORATORIES,ABT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CONOCOPHILLIPS,COP,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,UNION PACIFIC,UNP,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,NEXTERA ENERGY,NEE,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,PFIZER,PFE,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,AMERICAN EXPRESS,AXP,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BLACKROCK,BLK,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,DEERE,DE,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,INTUITIVE SURGICAL,ISRG,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ACCENTURE PLC CLASS A,ACN,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,DANAHER,DHR,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CHARLES SCHWAB,SCHW,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,DELL TECHNOLOGIES INC CLASS C,DELL,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,AT&T,T,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BOEING,BA,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,UBER TECHNOLOGIES,UBER,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,LOCKHEED MARTIN,LMT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ALTRIA GROUP INC,MO,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CAPITAL ONE FINANCIAL CORP,COF,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BRISTOL MYERS SQUIBB,BMY,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,STARBUCKS CORP,SBUX,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MEDTRONIC PLC,MDT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,LOWES COMPANIES INC,LOW,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,CVS HEALTH,CVS,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,SERVICENOW,NOW,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BOOKING HOLDINGS,BKNG,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,SOUTHERN,SO,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,BANK OF NEW YORK MELLON CORP,BNY,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,ADOBE INC,ADBE,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,DUKE ENERGY CORP,DUK,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,EMERSON ELECTRIC,EMR,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,US BANCORP,USB,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,GENERAL DYNAMICS CORP,GD,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,3M,MMM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,INTUIT,INTU,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,AMERICAN TOWER REIT,AMT,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,UNITED PARCEL SERVICE INC CLASS B,UPS,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,MONDELEZ INTERNATIONAL CLASS A,MDLZ,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,COMCAST CLASS A,CMCSA,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,GENERAL MOTORS,GM,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,T MOBILE US INC,TMUS,candidate,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv
+OEF holdings proxy 2026-10-29; NOT verified S&P publisher membership,,FEDEX CORP,FDX,existing,Fund issuer holdings cross-check only,https://www.ishares.com/us/products/239723/ishares-s-p-100-etf/latest-holdings.csv

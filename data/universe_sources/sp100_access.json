@@ -1,0 +1,20 @@
+{
+  "source_url": "https://www.spglobal.com/spdji/en/indices/equity/sp-100/#data",
+  "accessed": "2026-10-31",
+  "as_of": "2026-10-30",
+  "published_constituent_securities": 101,
+  "public_top_ten": [
+    "AAPL",
+    "NVDA",
+    "MSFT",
+    "AMZN",
+    "GOOGL",
+    "AVGO",
+    "META",
+    "GOOG",
+    "LLY",
+    "TSLA"
+  ],
+  "full_constituent_list_verified": false,
+  "limitation": "Public publisher page exposes only top-ten securities. No full list obtained from S&P. HTTP download returned 403. OEF holdings are a separately labeled fund-issuer proxy, not substituted as publisher verification."
+}

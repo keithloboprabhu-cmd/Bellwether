@@ -22,7 +22,10 @@ TARGETS = "F GM DE PCAR TXT O EQIX DLR ESS MAA EXR ULTA LOPE STRA DUOL COUR PRDO
 
 def fetch(ticker: str) -> dict:
     """Fetch an issuer's actual annual document and retain exact fact contexts."""
-    company = store.load_baselines()["companies"][ticker]
+    company = store.load_baselines()["companies"].get(ticker)
+    if company is None:
+        candidates = json.loads((ROOT / 'data/universe_sources/expansion_candidates.json').read_text())['candidates']
+        company = next(c for c in candidates if c['ticker'] == ticker)
     latest = company["years"][0]
     recent = edgar.submissions(company["cik"])["filings"]["recent"]
     index = recent["accessionNumber"].index(latest["source_accn"])

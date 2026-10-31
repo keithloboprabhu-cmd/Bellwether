@@ -1,0 +1,54 @@
+{
+  "name": "Galaxy Digital",
+  "rank": 76,
+  "source_url": "https://fortune.com/company/galaxy-digital/",
+  "accessed": "2026-10-31",
+  "companyInfo": {
+    "Updated": "7/28/26",
+    "Footnote": "Market value as of July 13, 2026.",
+    "Country/Territory": "U.S.",
+    "Headquarters": "New York City",
+    "Industry": "Diversified Financials",
+    "CEO": "Michael  Novogratz",
+    "Website": "https://www.galaxy.com/",
+    "Ticker": "GLXY",
+    "Company type": "Public",
+    "Revenues ($M)": "$61,356",
+    "Profits ($M)": "$-241",
+    "Market value ($M)": "$9,104",
+    "Number of employees": "700",
+    "StockQuote": "NASDAQ"
+  },
+  "companyRankingLists": [
+    {
+      "category": "Default",
+      "hideRanking": false,
+      "color": "#303cfc",
+      "description": "The companies on the Global 500 employ 70.2 million people, and their revenue represents more than one-third of the world\u2019s GDP.",
+      "permalink": "https://fortune.com/ranking/global500/",
+      "rank": 244,
+      "slug": "global500",
+      "title": "Fortune Global 500",
+      "year": 2026,
+      "image": null,
+      "itemDescription": "",
+      "uri": "/ranking/global500/",
+      "__typename": "_ItemRankingListsType"
+    },
+    {
+      "category": "Default",
+      "hideRanking": false,
+      "color": "#f01c24",
+      "description": "With a combined revenue of $21 trillion and $2.1 trillion in profits, the 2026 Fortune 500 is the definitive list of America's largest companies.",
+      "permalink": "https://fortune.com/ranking/fortune500/",
+      "rank": 76,
+      "slug": "fortune500",
+      "title": "Fortune 500",
+      "year": 2026,
+      "image": null,
+      "itemDescription": "",
+      "uri": "/ranking/fortune500/",
+      "__typename": "_ItemRankingListsType"
+    }
+  ]
+}
