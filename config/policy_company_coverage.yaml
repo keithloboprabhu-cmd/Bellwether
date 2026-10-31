@@ -1,7 +1,7 @@
 as_of: '2026-10-25'
-description: Explicit business/activity scope decisions for every current policy-company pair. Included means a
-  modeled channel exists, not that every selected input must change earnings. Unquantified means missing coverage,
-  not a measured zero or legal exclusion.
+description: Explicit business/activity scope decisions for every current policy-company pair. Included means
+  a modeled channel exists, not that every selected input must change earnings. Unquantified means missing
+  coverage, not a measured zero or legal exclusion.
 policies:
   consumer_retail/consumer_tax_rebate:
     references:
@@ -34,6 +34,16 @@ policies:
       default_direction:
         metric: dR
         sign: 1
+    - status: unquantified
+      tickers:
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   consumer_retail/import_tariffs:
     references:
     - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
@@ -65,6 +75,16 @@ policies:
       default_direction:
         metric: dNI
         sign: -1
+    - status: unquantified
+      tickers:
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   consumer_retail/minimum_wage_increase:
     references:
     - https://www.npr.org/2019/07/08/739607964/-15-minimum-wage-would-boost-17-million-workers-cut-1-3-million-jobs-cbo-says
@@ -99,6 +119,16 @@ policies:
       default_zero:
       - COST
       - AMZN
+    - status: unquantified
+      tickers:
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   consumer_retail/sales_tax_change:
     references:
     - https://comptroller.texas.gov/taxes/sales/faq/food.php
@@ -129,6 +159,16 @@ policies:
       default_direction:
         metric: dR
         sign: -1
+    - status: unquantified
+      tickers:
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   industrials/bonus_depreciation_rollback:
     references:
     - https://www.bdo.com/insights/tax/irs-issues-interim-guidance-on-bonus-depreciation-rules
@@ -160,6 +200,11 @@ policies:
       default_direction:
         metric: dValue_pv
         sign: -1
+    - status: unquantified
+      tickers:
+      - GEV
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   industrials/corporate_tax_rate_change:
     references:
     - https://www.law.cornell.edu/uscode/text/26/11
@@ -190,6 +235,13 @@ policies:
       default_direction:
         metric: tax_rate_change
         sign: 1
+    - status: included
+      tickers:
+      - GEV
+      reason: Reported US pretax-income share drives the statutory-rate channel.
+      default_direction:
+        metric: dNI
+        sign: -1
   industrials/rd_credit_expansion:
     references:
     - https://www.law.cornell.edu/uscode/text/26/41
@@ -220,6 +272,11 @@ policies:
       default_direction:
         metric: dNI
         sign: 1
+    - status: unquantified
+      tickers:
+      - GEV
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   industrials/steel_tariffs:
     references:
     - https://www.polsinelli.com/publications/usitc-releases-report-on-the-economic-impact-of-the-section-232-and-301-tariffs-on-u-s-industries
@@ -264,6 +321,11 @@ policies:
         CLF:
           metric: dNI
           sign: 1
+    - status: unquantified
+      tickers:
+      - GEV
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   energy_resources/carbon_price:
     references:
     - https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
@@ -525,6 +587,22 @@ policies:
       default_direction:
         metric: dNI
         sign: -1
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   tmt/semiconductor_tariffs:
     references:
     - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
@@ -557,6 +635,22 @@ policies:
       default_direction:
         metric: dNI
         sign: -1
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   consumer_retail/snap_benefit_change:
     references:
     - https://www.nber.org/papers/w23112
@@ -591,8 +685,18 @@ policies:
       - CL
       - ULTA
       - BBY
-      reason: This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects
-        and restaurant exceptions are not included.
+      reason: This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain
+        effects and restaurant exceptions are not included.
+    - status: unquantified
+      tickers:
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   consumer_retail/sweetened_beverage_tax:
     references:
     - https://doi.org/10.1001/jama.2019.4249
@@ -626,8 +730,18 @@ policies:
       - CL
       - ULTA
       - BBY
-      reason: No quantified sales of covered sweetened beverages in this company channel; unrelated products do
-        not inherit beverage taxes.
+      reason: No quantified sales of covered sweetened beverages in this company channel; unrelated products
+        do not inherit beverage taxes.
+    - status: unquantified
+      tickers:
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   industrials/defense_procurement_increase:
     references:
     - https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm
@@ -661,8 +775,13 @@ policies:
       - NUE
       - STLD
       - CLF
-      reason: No quantified defense/IC revenue share. Military demand through customer supply chains is not separately
-        modeled.
+      reason: No quantified defense/IC revenue share. Military demand through customer supply chains is not
+        separately modeled.
+    - status: unquantified
+      tickers:
+      - GEV
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   industrials/infrastructure_spending:
     references:
     - https://www.congress.gov/bill/117th-congress/house-bill/3684
@@ -696,6 +815,11 @@ policies:
       tickers:
       - BA
       reason: Boeing aerospace revenue is outside the domestic infrastructure equipment/materials allocation.
+    - status: unquantified
+      tickers:
+      - GEV
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   education/earnings_accountability_test:
     references:
     - https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
@@ -799,8 +923,8 @@ policies:
       - WLY
       - FC
       - SLM
-      reason: Pell enrollment exposure requires US Title IV undergraduate programs or an explicitly modeled service
-        partner.
+      reason: Pell enrollment exposure requires US Title IV undergraduate programs or an explicitly modeled
+        service partner.
   education/school_choice_esa:
     references:
     - https://www.edchoice.org/2026-edchoice-participation-rankings/
@@ -838,8 +962,8 @@ policies:
       - SCHL
       - KLC
       - BFAM
-      reason: No quantified central exposure. The high sensitivity case represents uncertain qualifying state ESA
-        services/materials capture; eligibility/provider approval and awards require verification.
+      reason: No quantified central exposure. The high sensitivity case represents uncertain qualifying state
+        ESA services/materials capture; eligibility/provider approval and awards require verification.
   education/student_loan_borrowing_caps:
     references:
     - https://www.nber.org/papers/w31291
@@ -908,8 +1032,8 @@ policies:
       tickers:
       - LAUR
       - SLM
-      reason: Laureate operates continuing institutions in Mexico/Peru. Sallie Mae earns private-loan revenue. Neither
-        is allocated US household education purchases in this scenario.
+      reason: Laureate operates continuing institutions in Mexico/Peru. Sallie Mae earns private-loan revenue.
+        Neither is allocated US household education purchases in this scenario.
   education/ninety_ten_rule_change:
     references:
     - https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm
@@ -931,8 +1055,8 @@ policies:
     - status: conditional
       tickers:
       - LOPE
-      reason: "The configured federal-aid share is 73%, below every selectable cap (75\u201390%). The rule does\
-        \ not bind at these settings."
+      reason: "The configured federal-aid share is 73%, below every selectable cap (75\u201390%). The rule\
+        \ does not bind at these settings."
     - status: outside_scope
       tickers:
       - LRN
@@ -981,8 +1105,8 @@ policies:
       - VLO
       - MPC
       - EXC
-      reason: No quantified qualifying generation/45X manufacturing credit or US solar-module demand in this model.
-        Exelon is a separated transmission/distribution company.
+      reason: No quantified qualifying generation/45X manufacturing credit or US solar-module demand in this
+        model. Exelon is a separated transmission/distribution company.
     - status: unquantified
       tickers:
       - FCX
@@ -1020,8 +1144,8 @@ policies:
       - AEP
       - EXC
       - CEG
-      reason: The channel requires qualifying domestic mineral production costs; fuel production, utilities and
-        imported solar materials do not automatically qualify.
+      reason: The channel requires qualifying domestic mineral production costs; fuel production, utilities
+        and imported solar materials do not automatically qualify.
   energy_resources/crude_export_restrictions:
     references:
     - https://www.eia.gov/analysis/requests/crude-exports
@@ -1099,8 +1223,8 @@ policies:
       - AEP
       - EXC
       - CEG
-      reason: Production revenue on federal oil/gas leases is required. Contractors, refiners and utilities do not
-        own this modeled upstream exposure.
+      reason: Production revenue on federal oil/gas leases is required. Contractors, refiners and utilities
+        do not own this modeled upstream exposure.
   energy_resources/methane_emissions_fee:
     references:
     - https://www.everycrsreport.com/reports/R48906.html
@@ -1135,7 +1259,8 @@ policies:
       - AEP
       - EXC
       - CEG
-      reason: Covered oil/gas-facility waste methane is distinct from combustion emissions or service-company footprints.
+      reason: Covered oil/gas-facility waste methane is distinct from combustion emissions or service-company
+        footprints.
   energy_resources/spr_release:
     references:
     - https://home.treasury.gov/news/featured-stories/the-price-impact-of-the-strategic-petroleum-reserve-release
@@ -1174,8 +1299,8 @@ policies:
       - AEP
       - EXC
       - CEG
-      reason: This temporary-price scenario holds refining margins constant. Oilfield-service orders, utility dispatch
-        and other lagged/indirect effects are not quantified.
+      reason: This temporary-price scenario holds refining margins constant. Oilfield-service orders, utility
+        dispatch and other lagged/indirect effects are not quantified.
   financial_services/fdic_assessment_increase:
     references:
     - https://www.fdic.gov/news/press-releases/2022/pr22073.html
@@ -1212,9 +1337,19 @@ policies:
       - AIG
       - PRU
       - PGR
-      reason: FDIC assessments apply to insured bank subsidiaries, not insurance-policy premiums. Insurers (including
-        AIG), asset managers and payment networks have no quantified insured-bank assessment base here; counterparty
-        spillovers are not modeled.
+      reason: FDIC assessments apply to insured bank subsidiaries, not insurance-policy premiums. Insurers
+        (including AIG), asset managers and payment networks have no quantified insured-bank assessment base
+        here; counterparty spillovers are not modeled.
+    - status: unquantified
+      tickers:
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   financial_services/bank_capital_requirement:
     references:
     - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
@@ -1252,8 +1387,18 @@ policies:
       - AIG
       - PRU
       - PGR
-      reason: CET1 is a bank capital standard. Insurance capital, asset-manager capital and payment-network regulation
-        need separate policy channels.
+      reason: CET1 is a bank capital standard. Insurance capital, asset-manager capital and payment-network
+        regulation need separate policy channels.
+    - status: unquantified
+      tickers:
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   financial_services/fed_rate_change:
     references:
     - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
@@ -1299,6 +1444,16 @@ policies:
       reason: This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager
         fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest
         rates cannot affect the business.
+    - status: unquantified
+      tickers:
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   financial_services/credit_card_interchange_cap:
     references:
     - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
@@ -1337,7 +1492,18 @@ policies:
       - PRU
       - PGR
       reason: The cap covers Visa/Mastercard credit-card issuer interchange. Amex is assumed exempt; Mastercard
-        is a network rather than an issuer. Non-issuers and Ally after its card sale have no direct issuer-fee loss.
+        is a network rather than an issuer. Non-issuers and Ally after its card sale have no direct issuer-fee
+        loss.
+    - status: unquantified
+      tickers:
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   financial_services/credit_card_late_fee_cap:
     references:
     - https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
@@ -1374,8 +1540,18 @@ policies:
       - AIG
       - PRU
       - PGR
-      reason: Non-issuers have no covered card late fees. Goldman's modeled Apple Card book charges no late fees;
-        Ally sold its card business.
+      reason: Non-issuers have no covered card late fees. Goldman's modeled Apple Card book charges no late
+        fees; Ally sold its card business.
+    - status: unquantified
+      tickers:
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   financial_services/financial_transaction_tax:
     references:
     - https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm
@@ -1412,8 +1588,18 @@ policies:
       - AIG
       - PRU
       - PGR
-      reason: This model covers dealer/trading revenue lost from lower securities volume. Investor portfolio taxes,
-        insurer portfolios, asset-manager AUM and payment-network fees are separate effects.
+      reason: This model covers dealer/trading revenue lost from lower securities volume. Investor portfolio
+        taxes, insurer portfolios, asset-manager AUM and payment-network fees are separate effects.
+    - status: unquantified
+      tickers:
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/aca_subsidy_change:
     references:
     - https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm
@@ -1448,6 +1634,14 @@ policies:
       - MDT
       reason: The channel requires ACA exchange premiums. Humana and Aetna/CVS have exited; provider and drug-demand
         spillovers are outside this premium model.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/medicaid_work_requirements:
     references:
     - https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf
@@ -1481,8 +1675,16 @@ policies:
       - TMO
       - ABT
       - MDT
-      reason: Only Medicaid plan premiums and an explicit hospital patient-volume proxy are modeled. Drugmaker prescriptions/rebates
-        and supplier demand are not capitated insurance revenue.
+      reason: Only Medicaid plan premiums and an explicit hospital patient-volume proxy are modeled. Drugmaker
+        prescriptions/rebates and supplier demand are not capitated insurance revenue.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/medicare_advantage_rate_change:
     references:
     - https://www.nber.org/papers/w20470
@@ -1520,6 +1722,14 @@ policies:
       - MDT
       reason: This is a Medicare Advantage premium-rate shock, not a hospital fee schedule or drug price. Cigna
         sold its Medicare businesses.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/medicare_drug_price_negotiation:
     references:
     - https://www.cms.gov/newsroom/press-releases/cms-delivers-savings-seniors-15-major-drugs-cancer-chronic-disease
@@ -1555,6 +1765,14 @@ policies:
       - MDT
       reason: The manufacturer net-price channel requires exposed Medicare drugs. Plan savings, pharmacy reimbursement,
         hospital billing and medical devices need separate models.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/pbm_rebate_pass_through:
     references:
     - https://www.sec.gov/Archives/edgar/data/64803/000006480326000009/cvs_ex99x1q4-25.htm
@@ -1588,8 +1806,16 @@ policies:
       - TMO
       - ABT
       - MDT
-      reason: Owned PBM retained rebates are modeled. Outsourced PBM contracts and manufacturer rebates are distinct
-        from retained PBM income.
+      reason: Owned PBM retained rebates are modeled. Outsourced PBM contracts and manufacturer rebates are
+        distinct from retained PBM income.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/pharma_tariffs:
     references:
     - https://www.aeaweb.org/articles?id=10.1257/aeri.20190536
@@ -1624,6 +1850,14 @@ policies:
       - MDT
       reason: This tariff covers branded drugs/API, not devices, diagnostics or instruments. Insurer supplier-cost
         spillovers are outside the direct importer channel.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   healthcare/site_neutral_payments:
     references:
     - https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/R28.htm
@@ -1670,6 +1904,14 @@ policies:
       - MDT
       reason: Only payer hospital-outpatient claims savings and provider Medicare outpatient losses are modeled;
         device and drug revenue is not a hospital payment.
+    - status: unquantified
+      tickers:
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   public_sector/consulting_contract_cancellations:
     references:
     - https://www.sec.gov/Archives/edgar/data/1443646/000162828026037521/bah-20260331.htm
@@ -1703,8 +1945,8 @@ policies:
       - TXT
       - MRCY
       - VSEC
-      reason: The selected policy cancels management-consulting/advisory scope; weapons, ship, drone, truck, aircraft
-        and nuclear-component purchases are not consulting task orders.
+      reason: The selected policy cancels management-consulting/advisory scope; weapons, ship, drone, truck,
+        aircraft and nuclear-component purchases are not consulting task orders.
   public_sector/it_modernization_funding:
     references:
     - https://www.gao.gov/podcast/which-critical-government-it-systems-are-most-need-modernization
@@ -1738,8 +1980,8 @@ policies:
       - TXT
       - MRCY
       - VSEC
-      reason: Agency IT/cyber-services allocation excludes defense hardware-only suppliers; a GD peer share is not
-        transferred to every manufacturer.
+      reason: Agency IT/cyber-services allocation excludes defense hardware-only suppliers; a GD peer share
+        is not transferred to every manufacturer.
   real_estate_hospitality/lihtc_expansion:
     references:
     - https://www.sec.gov/Archives/edgar/data/1063761/000110465926019419/
@@ -1766,8 +2008,8 @@ policies:
       - HST
       - RLJ
       - PK
-      reason: No qualifying LIHTC investment base has been quantified for this sample. This is missing model coverage,
-        not evidence that these companies are legally ineligible or cannot be affected.
+      reason: No qualifying LIHTC investment base has been quantified for this sample. This is missing model
+        coverage, not evidence that these companies are legally ineligible or cannot be affected.
   real_estate_hospitality/like_kind_exchange_limits:
     references:
     - https://www.ipx1031.com/wp-content/uploads/2016/07/Summary-Ling-Petrova-Study-5.2016.pdf
@@ -1912,8 +2154,8 @@ policies:
       - EXR
       - VICI
       - WY
-      reason: The modeled short-stay/hotel substitution channel excludes housing leases, storage, industrial, telecom,
-        healthcare, timber and gaming-lease properties.
+      reason: The modeled short-stay/hotel substitution channel excludes housing leases, storage, industrial,
+        telecom, healthcare, timber and gaming-lease properties.
   real_estate_hospitality/visa_fee_tourism_tax:
     references:
     - https://www.travelmole.com/news/economic-impact-overseas-visitors-usa/
@@ -1981,8 +2223,24 @@ policies:
       - CMCSA
       - NFLX
       - DIS
-      reason: Only the two modeled mobile app-store commission owners are covered. Customer fee savings and other
-        software stores need a separate channel.
+      reason: Only the two modeled mobile app-store commission owners are covered. Customer fee savings and
+        other software stores need a separate channel.
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   tmt/broadband_affordability_subsidy:
     references:
     - https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
@@ -2015,8 +2273,24 @@ policies:
       - CSCO
       - NFLX
       - DIS
-      reason: Household broadband subsidy payments reach retail access providers, not network-equipment or semiconductor
-        vendors directly.
+      reason: Household broadband subsidy payments reach retail access providers, not network-equipment or
+        semiconductor vendors directly.
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   tmt/chip_export_controls:
     references:
     - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
@@ -2052,6 +2326,22 @@ policies:
       - CMCSA
       reason: No quantified restricted-chip exports or China retaliation exposure in this channel. Equipment/software
         supplier effects need separately supported exposure.
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   tmt/chips_manufacturing_credit:
     references:
     - https://www.law.cornell.edu/uscode/text/26/48D
@@ -2086,6 +2376,22 @@ policies:
       - DIS
       reason: The credit requires qualifying US chip manufacturing investment. Fabless chip designers, software
         firms and device buyers do not inherit foundry capex.
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   tmt/digital_services_tax:
     references:
     - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
@@ -2120,8 +2426,24 @@ policies:
       - CSCO
       - T
       - CMCSA
-      reason: This scenario taxes modeled US digital advertising and mobile app-store commissions. Hardware sales,
-        telecom access and enterprise licenses are outside that defined tax base.
+      reason: This scenario taxes modeled US digital advertising and mobile app-store commissions. Hardware
+        sales, telecom access and enterprise licenses are outside that defined tax base.
+    - status: unquantified
+      tickers:
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
+        Missing exposure is not evidence of no impact.
   transportation_logistics/airline_bag_fee_cap:
     references:
     - https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
@@ -2295,8 +2617,8 @@ policies:
       - CHRW
       - UBER
       - LYFT
-      reason: The direct operating-fuel channel excludes independent-driver and brokered-carrier Scope 3 fuel. Fare,
-        demand and supplier feedback require separate channels.
+      reason: The direct operating-fuel channel excludes independent-driver and brokered-carrier Scope 3 fuel.
+        Fare, demand and supplier feedback require separate channels.
   transportation_logistics/vehicle_emissions_credit_rollback:
     references:
     - https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm
@@ -2339,3 +2661,244 @@ policies:
       - LYFT
       reason: Only separately identified manufacturer credit sales and purchases are covered; freight and travel
         companies do not sell these automotive compliance credits.
+  consumer_retail/us_corporate_tax_consumer_retail:
+    references:
+    - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+    groups:
+    - status: included
+      tickers:
+      - WMT
+      - COST
+      - AMZN
+      - NKE
+      - HD
+      - DLTR
+      - TJX
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - BBY
+      - MDLZ
+      - MO
+      - PFGC
+      - PM
+      - SYY
+      - TSN
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - TGT
+      - LOW
+      - KR
+      - DG
+      - ROST
+      - ULTA
+      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
+        treatment requires review.
+  healthcare/us_corporate_tax_healthcare:
+    references:
+    - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+    groups:
+    - status: included
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - PFE
+      - MOH
+      - JNJ
+      - AMGN
+      - GILD
+      - THC
+      - TMO
+      - ABT
+      - CAH
+      - COR
+      - ISRG
+      - MCK
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - LLY
+      - CI
+      - CNC
+      - MRK
+      - ABBV
+      - HCA
+      - UHS
+      - MDT
+      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
+        treatment requires review.
+  financial_services/us_corporate_tax_financial_services:
+    references:
+    - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+    groups:
+    - status: included
+      tickers:
+      - JPM
+      - WFC
+      - GS
+      - BNY
+      - USB
+      - PNC
+      - COF
+      - FITB
+      - HBAN
+      - ALLY
+      - MA
+      - AIG
+      - PRU
+      - ALL
+      - MET
+      - SNEX
+      - SPGI
+      - TRV
+      - V
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - BAC
+      - C
+      - AXP
+      - MS
+      - SCHW
+      - STT
+      - TFC
+      - KEY
+      - BLK
+      - PGR
+      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
+        treatment requires review.
+  tmt/us_corporate_tax_tmt:
+    references:
+    - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+    groups:
+    - status: included
+      tickers:
+      - MSFT
+      - GOOGL
+      - META
+      - NVDA
+      - VZ
+      - CRM
+      - ADBE
+      - AMD
+      - QCOM
+      - MU
+      - CSCO
+      - T
+      - CMCSA
+      - NFLX
+      - DIS
+      - AMAT
+      - ANET
+      - DELL
+      - HPQ
+      - INTU
+      - LRCX
+      - NOW
+      - PANW
+      - SNDK
+      - SNX
+      - TMUS
+      - TXN
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - AAPL
+      - IBM
+      - ORCL
+      - INTC
+      - AVGO
+      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
+        treatment requires review.
+  education/us_corporate_tax_education:
+    references:
+    - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+    groups:
+    - status: included
+      tickers:
+      - LRN
+      - CVSA
+      - DUOL
+      - PRDO
+      - LAUR
+      - LINC
+      - WLY
+      - FC
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - LOPE
+      - STRA
+      - COUR
+      - UTI
+      - APEI
+      - NRDY
+      - SKIL
+      - CHGG
+      - SCHL
+      - KLC
+      - BFAM
+      - SLM
+      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
+        treatment requires review.
+  transportation_logistics/us_corporate_tax_transportation_logistics:
+    references:
+    - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+    groups:
+    - status: included
+      tickers:
+      - UPS
+      - FDX
+      - TSLA
+      - CHRW
+      - UBER
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - UNP
+      - DAL
+      - GM
+      - F
+      - RIVN
+      - JBHT
+      - ODFL
+      - XPO
+      - SAIA
+      - CSX
+      - NSC
+      - UAL
+      - AAL
+      - LUV
+      - LYFT
+      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
+        treatment requires review.

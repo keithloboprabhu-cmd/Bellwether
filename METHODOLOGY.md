@@ -129,7 +129,7 @@ Check internal consistency and business scope, then compare selected historical 
 
 ### Policy checks
 
-Every configured industry policy has an explicit coverage decision for every company in its industry: 1,338 decisions across 203 companies and 66 policies. Covered firms have default-direction expectations; the audit also fails if an expected effect is missing across tested inputs. Excluded firms must stay unaffected at input limits and uncertainty endpoints. Checks cover valid zero shocks, attribution, accounting identities and scenario ranges. All 10 macro shocks are checked across the 203-company sample and at their input and driver endpoints. Passing an internal audit verifies these checks; it does not establish forecasting accuracy.
+Every configured industry policy has an explicit coverage decision for every company in its industry: 1,679 decisions across 232 companies and 72 policies. Covered firms have default-direction expectations; the audit also fails if an expected effect is missing across tested inputs. Excluded firms must stay unaffected at input limits and uncertainty endpoints. Checks cover valid zero shocks, attribution, accounting identities and scenario ranges. All 10 macro shocks are checked across the 232-company sample and at their input and driver endpoints. Passing an internal audit verifies these checks; it does not establish forecasting accuracy.
 
 ### Historical comparisons
 
@@ -142,3 +142,14 @@ These are retrospective replays using the current model, not forecasts saved bef
 ### Model boundaries
 
 The model estimates direct, first-order effects while holding other relationships broadly fixed. It does not fully capture competition, substitution, management responses, policy implementation timing or economy-wide feedback. Company exposures can be estimates; sparse disclosures and small earnings bases can make percentage results unstable. Unknown custom-company inputs require user-supplied values or an explicit choice of peer estimates. A missing qualifying exposure remains unquantified instead of receiving an invented impact.
+
+
+## Audit additions (31 October 2026)
+
+The active universe has 232 companies across ten industries, with 72 industry policies and ten macro shocks. The original roster and scenarios are preserved in the audit reports. Twenty-nine supported public companies were added from the publisher-verified Fortune ranking, separately labeled OEF holdings cross-check and requested candidate list. This does not certify full S&P 100 membership: the publisher's complete roster was not obtained. Private/mutual companies and Fannie/Freddie are listed separately; unsupported statements and ambiguous share bases remain outside the active sample.
+
+The insurer statement template uses incurred policy claims and loss-adjustment expenses rather than merchandise COGS. Visa uses class-A EPS and the filing's total class-A-equivalent diluted shares. Captive finance debt and operating leases are separated from industrial borrowings.
+
+Six rate-only corporate-tax scenarios use the submitted S.Amdt.2428 proposal (21% to 28%). They are explicitly proposed scenarios, not enacted law. Only positive, sourced US pretax book income from a US-incorporated issuer is quantified. Book income approximates taxable income; credits, minimum taxes, foreign-income provisions, tax losses and deferred-tax remeasurement are excluded. Income-history bounds are observed annual values, not confidence intervals. An Irish issuer's “domestic” income is not assumed to be US income.
+
+Current default coverage is 227 of 232 companies. BLK, PGR, SLM, LYFT and MDT remain explicit coverage failures pending the reconciliations in `reports/coverage_gaps.md`. Passing accounting and scope tests does not resolve those failures or validate unsourced exposures. Every default absolute EPS change above 50% is flagged for review; input limits are not represented as independently verified realistic ranges.

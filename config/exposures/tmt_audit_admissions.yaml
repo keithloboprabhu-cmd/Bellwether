@@ -1,0 +1,878 @@
+industry: tmt
+companies:
+  AMAT:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  ANET:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  DELL:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  HPQ:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  INTU:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  LRCX:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  NOW:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  PANW:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  SNDK:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  SNX:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  TMUS:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  TXN:
+    greater_china_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_digital_ad_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_semis_mfg_capex_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_users_m:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    us_app_store_fee_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    broadband_subsidy_capture_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'

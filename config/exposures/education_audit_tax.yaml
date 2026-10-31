@@ -1,0 +1,202 @@
+industry: education
+companies:
+  LRN:
+    audit_us_pretax_income_musd:
+      value: 435.108
+      low: 262.802
+      high: 435.108
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001157408.json
+      rationale: US-incorporated issuer; 2026-06-30 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  LOPE:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  CVSA:
+    audit_us_pretax_income_musd:
+      value: 254.316
+      low: 89.752
+      high: 254.316
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000730464.json
+      rationale: US-incorporated issuer; 2026-06-30 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  STRA:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  DUOL:
+    audit_us_pretax_income_musd:
+      value: 167.873
+      low: 16.501
+      high: 167.873
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001562088.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  COUR:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  UTI:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  PRDO:
+    audit_us_pretax_income_musd:
+      value: 216.836
+      low: 192.121
+      high: 216.836
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001046568.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  APEI:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  LAUR:
+    audit_us_pretax_income_musd:
+      value: 56.594
+      low: 56.128
+      high: 63.847
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000912766.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  NRDY:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  LINC:
+    audit_us_pretax_income_musd:
+      value: 26.118
+      low: 14.711
+      high: 35.639
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001286613.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  SKIL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  CHGG:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  SCHL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  KLC:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  BFAM:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  WLY:
+    audit_us_pretax_income_musd:
+      value: 22.277
+      low: 22.277
+      high: 22.277
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000107140.json
+      rationale: US-incorporated issuer; 2026-04-30 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  FC:
+    audit_us_pretax_income_musd:
+      value: 8.698
+      low: 8.698
+      high: 32.456
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000886206.json
+      rationale: US-incorporated issuer; 2025-08-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  SLM:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.

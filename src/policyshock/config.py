@@ -21,7 +21,7 @@ CACHE_DIR = (Path(tempfile.gettempdir()) / "bellwether" if os.environ.get("VERCE
 class Company(BaseModel):
     ticker: str
     name: str
-    kind: Literal["standard", "bank", "reit", "managed_care"] = "standard"
+    kind: Literal["standard", "bank", "reit", "managed_care", "insurer"] = "standard"
     subsector: str | None = None
     reported_share_unit: Literal["shares", "thousands", "millions"] = "shares"
     share_unit_source: str | None = None

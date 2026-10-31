@@ -1,0 +1,202 @@
+industry: transportation_logistics
+companies:
+  UPS:
+    audit_us_pretax_income_musd:
+      value: 5240.0
+      low: 5240.0
+      high: 6246.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001090727.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  FDX:
+    audit_us_pretax_income_musd:
+      value: 4287.0
+      low: 3614.0
+      high: 5289.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001048911.json
+      rationale: US-incorporated issuer; 2026-05-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  UNP:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  DAL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  TSLA:
+    audit_us_pretax_income_musd:
+      value: 4766.0
+      low: 2292.0
+      high: 4766.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  GM:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  F:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  RIVN:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  CHRW:
+    audit_us_pretax_income_musd:
+      value: 525.436
+      low: 287.524
+      high: 525.436
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001043277.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  JBHT:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  ODFL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  XPO:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  SAIA:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  CSX:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  NSC:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  UAL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  AAL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  LUV:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  UBER:
+    audit_us_pretax_income_musd:
+      value: 4620.0
+      low: 1525.0
+      high: 4620.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  LYFT:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.

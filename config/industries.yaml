@@ -70,6 +70,54 @@ industries:
     name: WALT DISNEY CO/
     kind: standard
     subsector: Media and entertainment
+  - ticker: AMAT
+    name: APPLIED MATERIALS INC /DE
+    kind: standard
+    subsector: Semiconductors & Related Devices
+  - ticker: ANET
+    name: Arista Networks, Inc.
+    kind: standard
+    subsector: Computer Communications Equipment
+  - ticker: DELL
+    name: Dell Technologies Inc.
+    kind: standard
+    subsector: Electronic Computers
+  - ticker: HPQ
+    name: HP INC
+    kind: standard
+    subsector: Computer & office Equipment
+  - ticker: INTU
+    name: INTUIT INC.
+    kind: standard
+    subsector: Services-Prepackaged Software
+  - ticker: LRCX
+    name: LAM RESEARCH CORP
+    kind: standard
+    subsector: Special Industry Machinery, NEC
+  - ticker: NOW
+    name: ServiceNow, Inc.
+    kind: standard
+    subsector: Services-Prepackaged Software
+  - ticker: PANW
+    name: Palo Alto Networks Inc
+    kind: standard
+    subsector: Computer Peripheral Equipment, NEC
+  - ticker: SNDK
+    name: Sandisk Corp
+    kind: standard
+    subsector: Computer Storage Devices
+  - ticker: SNX
+    name: TD SYNNEX CORP
+    kind: standard
+    subsector: Wholesale-Computers & Peripheral Equipment & Software
+  - ticker: TMUS
+    name: T-Mobile US, Inc.
+    kind: standard
+    subsector: Radiotelephone Communications
+  - ticker: TXN
+    name: TEXAS INSTRUMENTS INC
+    kind: standard
+    subsector: Semiconductors & Related Devices
 - slug: financial_services
   name: Financial Services
   companies:
@@ -159,6 +207,30 @@ industries:
     name: PROGRESSIVE CORP/OH/
     kind: standard
     subsector: Payments, asset management and insurance
+  - ticker: ALL
+    name: ALLSTATE CORP
+    kind: insurer
+    subsector: Fire, Marine & Casualty Insurance
+  - ticker: MET
+    name: METLIFE INC
+    kind: insurer
+    subsector: Life Insurance
+  - ticker: SNEX
+    name: StoneX Group Inc.
+    kind: standard
+    subsector: Security & Commodity Brokers, Dealers, Exchanges & Services
+  - ticker: SPGI
+    name: S&P Global Inc.
+    kind: standard
+    subsector: Services-Consumer Credit Reporting, Collection Agencies
+  - ticker: TRV
+    name: TRAVELERS COMPANIES, INC.
+    kind: insurer
+    subsector: Fire, Marine & Casualty Insurance
+  - ticker: V
+    name: VISA INC.
+    kind: standard
+    subsector: Services-Business Services, NEC
 - slug: consumer_retail
   name: Consumer & Retail
   companies:
@@ -233,6 +305,30 @@ industries:
     name: Best Buy Co., Inc.
     kind: standard
     subsector: Apparel and specialty retail
+  - ticker: MDLZ
+    name: Mondelez International, Inc.
+    kind: standard
+    subsector: Food and Kindred Products
+  - ticker: MO
+    name: ALTRIA GROUP, INC.
+    kind: standard
+    subsector: Cigarettes
+  - ticker: PFGC
+    name: Performance Food Group Co
+    kind: standard
+    subsector: Wholesale-Groceries, General Line
+  - ticker: PM
+    name: Philip Morris International Inc.
+    kind: standard
+    subsector: Cigarettes
+  - ticker: SYY
+    name: SYSCO CORP
+    kind: standard
+    subsector: Wholesale-Groceries & Related Products
+  - ticker: TSN
+    name: TYSON FOODS, INC.
+    kind: standard
+    subsector: Poultry Slaughtering and Processing
 - slug: healthcare
   name: Healthcare & Life Sciences
   companies:
@@ -308,6 +404,22 @@ industries:
     name: Medtronic plc
     kind: standard
     subsector: Medical devices and life science tools
+  - ticker: CAH
+    name: CARDINAL HEALTH INC
+    kind: standard
+    subsector: Wholesale-Drugs, Proprietaries & Druggists' Sundries
+  - ticker: COR
+    name: Cencora, Inc.
+    kind: standard
+    subsector: Wholesale-Drugs, Proprietaries & Druggists' Sundries
+  - ticker: ISRG
+    name: INTUITIVE SURGICAL INC
+    kind: standard
+    subsector: Orthopedic, Prosthetic & Surgical Appliances & Supplies
+  - ticker: MCK
+    name: MCKESSON CORP
+    kind: standard
+    subsector: Wholesale-Drugs, Proprietaries & Druggists' Sundries
 - slug: industrials
   name: Industrials & Manufacturing
   companies:
@@ -379,6 +491,10 @@ industries:
     name: Ingersoll Rand Inc.
     kind: standard
     subsector: Aerospace and diversified manufacturing
+  - ticker: GEV
+    name: GE Vernova Inc.
+    kind: standard
+    subsector: Electronic & Other Electrical Equipment (No Computer Equip)
 - slug: energy_resources
   name: Energy & Resources
   companies:
@@ -616,73 +732,59 @@ industries:
   - ticker: O
     name: REALTY INCOME CORPORATION
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: EQIX
     name: EQUINIX, INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: DLR
     name: DIGITAL REALTY TRUST, INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: WELL
     name: WELLTOWER INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: VTR
     name: "Ventas,\_Inc."
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: ESS
     name: ESSEX PROPERTY TRUST, INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: MAA
     name: MID-AMERICA APARTMENT COMMUNITIES, INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: PSA
     name: Public Storage
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: EXR
     name: EXTRA SPACE STORAGE INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: VICI
     name: VICI Properties Inc.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: WY
     name: WEYERHAEUSER COMPANY
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: HST
     name: HOST HOTELS & RESORTS, INC.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: RLJ
     name: RLJ LODGING TRUST
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
   - ticker: PK
     name: Park Hotels & Resorts Inc.
     kind: reit
-    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and
-      hospitality'
+    subsector: 'Property REITs: housing, storage, digital infrastructure, timber and hospitality'
 - slug: education
   name: Education
   companies:

@@ -1,0 +1,322 @@
+industry: tmt
+companies:
+  AAPL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  MSFT:
+    audit_us_pretax_income_musd:
+      value: 103591.0
+      low: 62886.0
+      high: 103591.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json
+      rationale: US-incorporated issuer; 2026-06-30 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  GOOGL:
+    audit_us_pretax_income_musd:
+      value: 143591.0
+      low: 73600.0
+      high: 143591.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  META:
+    audit_us_pretax_income_musd:
+      value: 79644.0
+      low: 43499.0
+      high: 79644.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  NVDA:
+    audit_us_pretax_income_musd:
+      value: 123181.0
+      low: 29495.0
+      high: 123181.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json
+      rationale: US-incorporated issuer; 2026-01-25 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  VZ:
+    audit_us_pretax_income_musd:
+      value: 20150.0
+      low: 15668.0
+      high: 21253.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000732712.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  IBM:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  ORCL:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  CRM:
+    audit_us_pretax_income_musd:
+      value: 6627.0
+      low: 4045.0
+      high: 6627.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.json
+      rationale: US-incorporated issuer; 2026-01-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  ADBE:
+    audit_us_pretax_income_musd:
+      value: 6721.0
+      low: 3465.0
+      high: 6721.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000796343.json
+      rationale: US-incorporated issuer; 2025-11-28 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  INTC:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  AMD:
+    audit_us_pretax_income_musd:
+      value: 4588.0
+      low: 454.0
+      high: 4588.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000002488.json
+      rationale: US-incorporated issuer; 2025-12-27 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  QCOM:
+    audit_us_pretax_income_musd:
+      value: 11174.0
+      low: 6400.0
+      high: 11174.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000804328.json
+      rationale: US-incorporated issuer; 2025-09-28 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  MU:
+    audit_us_pretax_income_musd:
+      value: 4819.0
+      low: 544.0
+      high: 4819.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000723125.json
+      rationale: US-incorporated issuer; 2026-09-03 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  AVGO:
+    audit_us_pretax_income_musd:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
+        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
+        are not modeled.
+  CSCO:
+    audit_us_pretax_income_musd:
+      value: 14062.0
+      low: 9500.0
+      high: 14062.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000858877.json
+      rationale: US-incorporated issuer; 2026-07-25 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  T:
+    audit_us_pretax_income_musd:
+      value: 26993.0
+      low: 16674.0
+      high: 26993.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  CMCSA:
+    audit_us_pretax_income_musd:
+      value: 26766.0
+      low: 19615.0
+      high: 26766.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001166691.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  NFLX:
+    audit_us_pretax_income_musd:
+      value: 12198.273
+      low: 5602.762
+      high: 12198.273
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  DIS:
+    audit_us_pretax_income_musd:
+      value: 9535.0
+      low: 3086.0
+      high: 9535.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001744489.json
+      rationale: US-incorporated issuer; 2025-09-27 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  AMAT:
+    audit_us_pretax_income_musd:
+      value: 56.0
+      low: 56.0
+      high: 1234.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000006951.json
+      rationale: US-incorporated issuer; 2025-10-26 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  ANET:
+    audit_us_pretax_income_musd:
+      value: 3369.6
+      low: 1977.7
+      high: 3369.6
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001596532.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  DELL:
+    audit_us_pretax_income_musd:
+      value: 986.0
+      low: 986.0
+      high: 986.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001571996.json
+      rationale: US-incorporated issuer; 2026-01-30 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  HPQ:
+    audit_us_pretax_income_musd:
+      value: 107.0
+      low: 107.0
+      high: 650.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000047217.json
+      rationale: US-incorporated issuer; 2025-10-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  INTU:
+    audit_us_pretax_income_musd:
+      value: 5875.0
+      low: 3449.0
+      high: 5875.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000896878.json
+      rationale: US-incorporated issuer; 2026-07-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  LRCX:
+    audit_us_pretax_income_musd:
+      value: 535.542
+      low: 219.435
+      high: 535.542
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000707549.json
+      rationale: US-incorporated issuer; 2026-06-28 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  NOW:
+    audit_us_pretax_income_musd:
+      value: 1302.0
+      low: 523.0
+      high: 1302.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001373715.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  PANW:
+    audit_us_pretax_income_musd:
+      value: 466.0
+      low: 466.0
+      high: 1125.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001327567.json
+      rationale: US-incorporated issuer; 2026-07-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  SNDK:
+    audit_us_pretax_income_musd:
+      value: 10874.0
+      low: 40.0
+      high: 10874.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0002023554.json
+      rationale: US-incorporated issuer; 2026-07-03 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  SNX:
+    audit_us_pretax_income_musd:
+      value: 557.284
+      low: 263.321
+      high: 557.284
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001177394.json
+      rationale: US-incorporated issuer; 2025-11-30 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  TMUS:
+    audit_us_pretax_income_musd:
+      value: 14018.0
+      low: 10943.0
+      high: 14607.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001283699.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.
+  TXN:
+    audit_us_pretax_income_musd:
+      value: 4503.0
+      low: 4438.0
+      high: 6445.0
+      source: verified SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000097476.json
+      rationale: US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed
+        available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
+        is a model proxy.

@@ -12,6 +12,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from policyshock.config import ROOT
 from policyshock.data import store
 
+TARGET_CURRENT_SHARES = set('F GM DE PCAR TXT O EQIX DLR ESS MAA EXR ULTA LOPE STRA DUOL COUR PRDO LINC CHGG FC MRCY PGR KR THC UHS NEE XPO SAIA CSX LUV CMCSA MA NKE SCHL'.split())
+
 
 def main() -> None:
     """Write period-bound source records for exact reviewed filing line items."""
@@ -94,6 +96,10 @@ def main() -> None:
     for ticker, e in evidence.items():
         if "facts" not in e:
             continue
+        # Expansion candidates are not automatically approved by fetching their
+        # facts. Reviewed additions merge below; never add raw A/B cover counts.
+        if ticker not in store.load_baselines()["companies"] or ticker not in TARGET_CURRENT_SHARES:
+            continue
         cik = str(store.load_baselines()["companies"][ticker]["cik"])
         # Keep lease obligations separate from borrowings.
         for key, concept in [("operating_lease_liabilities", "us-gaap:OperatingLeaseLiability"), ("finance_lease_liabilities", "us-gaap:FinanceLeaseLiability")]:
@@ -113,6 +119,13 @@ def main() -> None:
                     "date": date, "classes": len(selected), "accn": store.load_baselines()["companies"][ticker]["years"][0]["source_accn"],
                     "source_url": e["source_url"], "accessed": e["accessed"],
                     "document_location": "; ".join(f'{f["concept"]} context={f["context"]}' for f in selected)}
+    reviewed = ROOT / 'config/statement_audit_supplements.json'
+    if reviewed.exists():
+        for cik, entry in json.loads(reviewed.read_text()).items():
+            if cik in output:
+                output[cik]['items'].update(entry['items'])
+            else:
+                output[cik] = entry
     path = ROOT / "data/snapshots/statement_supplements.json"
     path.write_text(json.dumps(output, indent=2) + "\n")
     print(f"{len(output)} issuers; {sum(len(x['items']) for x in output.values())} sourced items")

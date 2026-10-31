@@ -340,6 +340,12 @@ def build_baseline(
                 fy.items["cost_of_revenue"] = (C or 0.0) + cl.value / M
                 fy.tags["cost_of_revenue"] = (f"{fy.tags['cost_of_revenue']} + " if C is not None else "") + cl.tag
                 C = fy.items["cost_of_revenue"]
+            if kind == "insurer" and cl is not None:
+                # Incurred claims/loss-adjustment expense is the relevant loss
+                # base, not merchandise COGS or the cash paid on old claims.
+                C = cl.value / M
+                fy.items["cost_of_revenue"] = C
+                fy.tags["cost_of_revenue"] = cl.tag
             # --- opt-in: variable costs = total costs less overhead (see docstring)
             ce_ = cae.get(end)
             if cost_basis == "total_costs_less_overhead" and ce_ is not None and R is not None:

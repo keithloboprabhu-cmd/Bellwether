@@ -93,7 +93,7 @@ class ChannelSpec(BaseModel):
     roles: list[Role] | None = None  # apply only to companies with these roles
     component: str | None = None  # optional, user-toggleable component (e.g. "second_round")
     persistence: str | None = None  # override the policy's persistence for this channel
-    company_kinds: list[Literal["standard", "bank", "reit", "managed_care"]] | None = None
+    company_kinds: list[Literal["standard", "bank", "reit", "managed_care", "insurer"]] | None = None
 
     @field_validator("type")
     @classmethod

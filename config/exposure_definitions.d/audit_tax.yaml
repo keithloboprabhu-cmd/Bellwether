@@ -1,0 +1,6 @@
+exposures:
+- key: audit_us_pretax_income_musd
+  label: US pretax book income (taxable-income proxy)
+  unit: usd_m
+  help: Positive reported US book pretax income; not reported taxable income. Historical bounds reflect available
+    annual observations, not statistical uncertainty.

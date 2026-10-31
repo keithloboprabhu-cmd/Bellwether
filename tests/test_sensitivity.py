@@ -11,7 +11,10 @@ def tariffs():
 
 
 def test_tariffs_hurt_every_importer(tariffs):
-    assert all(c.dNI < 0 for c in tariffs.base.companies)
+    from policyshock.policies.coverage import company_coverage
+    for c in tariffs.base.companies:
+        decision = company_coverage(tariffs.base.policy, c.ticker)
+        assert c.dNI < 0 if decision['status'] == 'included' else c.dNI == 0
 
 
 def test_tornado_sorted_by_swing(tariffs):
@@ -43,8 +46,10 @@ def test_long_is_least_hurt(tariffs):
 
 def test_rebate_is_one_time_and_positive():
     an = simulate("consumer_retail", "consumer_tax_rebate")
+    from policyshock.policies.coverage import company_coverage
     for c in an.base.companies:
-        assert c.dNI > 0
+        decision = company_coverage(an.base.policy, c.ticker)
+        assert c.dNI > 0 if decision['status'] == 'included' else c.dNI == 0
         assert c.dP == pytest.approx(c.dEPS)  # one-time: valued at its own size
 
 

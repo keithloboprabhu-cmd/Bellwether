@@ -1,0 +1,466 @@
+{
+  "before": 203,
+  "added": [
+    "ALL",
+    "AMAT",
+    "ANET",
+    "CAH",
+    "COR",
+    "DELL",
+    "GEV",
+    "HPQ",
+    "INTU",
+    "ISRG",
+    "LRCX",
+    "MCK",
+    "MDLZ",
+    "MET",
+    "MO",
+    "NOW",
+    "PANW",
+    "PFGC",
+    "PM",
+    "SNDK",
+    "SNEX",
+    "SNX",
+    "SPGI",
+    "SYY",
+    "TMUS",
+    "TRV",
+    "TSN",
+    "TXN",
+    "V"
+  ],
+  "after": 232,
+  "decisions": [
+    {
+      "ticker": "ACI",
+      "industry": "consumer_retail",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "ACN",
+      "industry": "tmt",
+      "status": "not_admitted",
+      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation; positive current US pretax exposure not verified",
+      "incorporation": "Ireland"
+    },
+    {
+      "ticker": "ADM",
+      "industry": "consumer_retail",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "ALL",
+      "industry": "financial_services",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "operating income derived from pretax income + interest",
+        "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments."
+      ],
+      "flag_explanations": {
+        "operating income derived from pretax income + interest": "Arithmetic derivation from disclosed statement lines; retained visibly.",
+        "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments.": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "AMAT",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DC",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "ANET",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)"
+      ],
+      "flag_explanations": {
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "BKNG",
+      "industry": "real_estate_hospitality",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified; no sourced policy for this industry",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "BMY",
+      "industry": "healthcare",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "BRK-A",
+      "industry": "financial_services",
+      "status": "not_admitted",
+      "reason": "Admission deferred: required statement/share/cost field missing; partnership/share-class basis requires review",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "CAH",
+      "industry": "healthcare",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "OH",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "CHTR",
+      "industry": "tmt",
+      "status": "not_admitted",
+      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation; positive current US pretax exposure not verified",
+      "incorporation": ""
+    },
+    {
+      "ticker": "COR",
+      "industry": "healthcare",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "DELL",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "TX",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "DHR",
+      "industry": "healthcare",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "EPD",
+      "industry": "energy_resources",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified; partnership/share-class basis requires review; no sourced policy for this industry",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "ET",
+      "industry": "energy_resources",
+      "status": "not_admitted",
+      "reason": "Admission deferred: required statement/share/cost field missing; positive current US pretax exposure not verified; partnership/share-class basis requires review; no sourced policy for this industry",
+      "incorporation": "OK"
+    },
+    {
+      "ticker": "GEV",
+      "industry": "industrials",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)",
+        "reported effective tax rate -72.5% requires forward tax normalization",
+        "normalized forward tax rate 37.6%: median of available ordinary reported rates in preceding three fiscal years"
+      ],
+      "flag_explanations": {
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero.",
+        "reported effective tax rate -72.5% requires forward tax normalization": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero.",
+        "normalized forward tax rate 37.6%: median of available ordinary reported rates in preceding three fiscal years": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "GLXY",
+      "industry": "financial_services",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "HPQ",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "INGM",
+      "industry": "tmt",
+      "status": "not_admitted",
+      "reason": "Admission deferred: positive current US pretax exposure not verified",
+      "incorporation": "DE"
+    },
+    {
+      "ticker": "INTU",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "cost of revenue derived (CostsAndExpenses \u2212 SG&A \u2212 R&D)"
+      ],
+      "flag_explanations": {
+        "cost of revenue derived (CostsAndExpenses \u2212 SG&A \u2212 R&D)": "Arithmetic derivation from disclosed statement lines; retained visibly."
+      }
+    },
+    {
+      "ticker": "ISRG",
+      "industry": "healthcare",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)"
+      ],
+      "flag_explanations": {
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "LIN",
+      "industry": "industrials",
+      "status": "not_admitted",
+      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation",
+      "incorporation": "Ireland"
+    },
+    {
+      "ticker": "LRCX",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "MCK",
+      "industry": "healthcare",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "MDLZ",
+      "industry": "consumer_retail",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "IL",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "MET",
+      "industry": "financial_services",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments."
+      ],
+      "flag_explanations": {
+        "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments.": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "MO",
+      "industry": "consumer_retail",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "VA",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "NOW",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)"
+      ],
+      "flag_explanations": {
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "PANW",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)",
+        "reported effective tax rate 42.7% requires forward tax normalization",
+        "normalized forward tax rate 25.7%: median of available ordinary reported rates in preceding three fiscal years"
+      ],
+      "flag_explanations": {
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero.",
+        "reported effective tax rate 42.7% requires forward tax normalization": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero.",
+        "normalized forward tax rate 25.7%: median of available ordinary reported rates in preceding three fiscal years": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "PFGC",
+      "industry": "consumer_retail",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "PLTR",
+      "industry": "tmt",
+      "status": "not_admitted",
+      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation",
+      "incorporation": ""
+    },
+    {
+      "ticker": "PM",
+      "industry": "consumer_retail",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "VA",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "PYPL",
+      "industry": "financial_services",
+      "status": "not_admitted",
+      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation",
+      "incorporation": ""
+    },
+    {
+      "ticker": "SNDK",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "SNEX",
+      "industry": "financial_services",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "operating income derived from pretax income + interest"
+      ],
+      "flag_explanations": {
+        "operating income derived from pretax income + interest": "Arithmetic derivation from disclosed statement lines; retained visibly."
+      }
+    },
+    {
+      "ticker": "SNX",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "SPGI",
+      "industry": "financial_services",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "NY",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "SYY",
+      "industry": "consumer_retail",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "TMUS",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "cost of revenue derived (CostsAndExpenses \u2212 SG&A \u2212 R&D)"
+      ],
+      "flag_explanations": {
+        "cost of revenue derived (CostsAndExpenses \u2212 SG&A \u2212 R&D)": "Arithmetic derivation from disclosed statement lines; retained visibly."
+      }
+    },
+    {
+      "ticker": "TRV",
+      "industry": "financial_services",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "MN",
+      "flags": [
+        "operating income derived from pretax income + interest",
+        "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments."
+      ],
+      "flag_explanations": {
+        "operating income derived from pretax income + interest": "Arithmetic derivation from disclosed statement lines; retained visibly.",
+        "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments.": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    },
+    {
+      "ticker": "TSN",
+      "industry": "consumer_retail",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "TXN",
+      "industry": "tmt",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [],
+      "flag_explanations": {}
+    },
+    {
+      "ticker": "V",
+      "industry": "financial_services",
+      "status": "admitted",
+      "reason": "Complete current statement and positive sourced US pretax income; other exposures remain explicitly unquantified. All parser flags explained in the admission ledger.",
+      "incorporation": "DE",
+      "flags": [
+        "cost of revenue derived (CostsAndExpenses \u2212 SG&A \u2212 R&D)",
+        "Class A EPS and total class-A-equivalent diluted shares. Other classes convert at the filing-disclosed equivalents; no raw A/B counts or prices are mixed.",
+        "Class A EPS and total class-A-equivalent diluted shares. Other classes convert at the filing-disclosed equivalents; no raw A/B counts or prices are mixed."
+      ],
+      "flag_explanations": {
+        "cost of revenue derived (CostsAndExpenses \u2212 SG&A \u2212 R&D)": "Arithmetic derivation from disclosed statement lines; retained visibly.",
+        "Class A EPS and total class-A-equivalent diluted shares. Other classes convert at the filing-disclosed equivalents; no raw A/B counts or prices are mixed.": "Missing or normalized field remains flagged; unrelated channels are unquantified, so it is not treated as a measured zero."
+      }
+    }
+  ]
+}

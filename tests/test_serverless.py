@@ -112,7 +112,7 @@ def test_serverless_http_uses_same_engine_and_validates_before_refresh(tmp_path,
         headers, response = output.getvalue().split(b"\r\n\r\n", 1)
         return headers.decode(), json.loads(response)
 
-    assert request("/api/catalog")[1]["company_count"] == 203
+    assert request("/api/catalog")[1]["company_count"] == len(load_universe().all_tickers)
     assert not calls
     assert "Reported financials" in request("/api/methodology")[1]["text"]
     payload = {"industry": "financial_services", "policy": "fdic_assessment_increase", "inputs": {"d_rate_bp": 2}}

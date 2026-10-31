@@ -1,0 +1,34 @@
+id: us_corporate_tax_education
+industry: education
+name: "US corporate tax rate increase \u2014 book-income proxy"
+description: Rate-only scenario based on S.Amdt.2428 (119th Congress), a submitted 21% to 28% proposal, not
+  enacted law. Uses positive reported US book pretax income as a labeled taxable-income proxy; excludes unverified
+  jurisdictions, loss carryforwards and deferred-tax remeasurement.
+persistence: permanent
+user_inputs:
+- key: d_rate_pts
+  label: Increase in federal rate
+  unit: percentage points
+  min: 0
+  max: 7
+  step: 1
+  default: 7
+  help: 0 leaves current law unchanged; +7 reproduces the submitted 21% to 28% proposal. The proposal was not
+    enacted.
+assumptions: []
+channels:
+- type: tax_credit
+  label: Rate increase on positive US pretax book income (proxy)
+  params:
+    credit_rate: -input.d_rate_pts / 100
+    base_musd: exposure.audit_us_pretax_income_musd
+exposure_keys:
+- audit_us_pretax_income_musd
+default_role: neutral
+references:
+- https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
+- https://uscode.house.gov/us/usc/119-121/t26/s11/
+narrative:
+  extra: Submitted proposal, not enacted law. Reported US book income is a taxable-income proxy. Historical
+    income variation forms the scenario range; credits, AMT, deferred taxes, GILTI and behavioral responses
+    are excluded.

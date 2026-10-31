@@ -70,7 +70,8 @@ def test_company_result_and_json_roundtrip(profile):
     expected = run_company(validated, pol.id, pol.default_inputs())
     actual = calculate({"industry": p["industry"], "policy": pol.id, "company": validated.model_dump(mode="json")})
     c = next(c for c in actual["companies"] if c["is_custom"])
-    assert len(actual["companies"]) == 21
+    from policyshock.config import load_universe
+    assert len(actual["companies"]) == len(load_universe().industry(p['industry']).tickers) + 1
     assert actual["mode"] == "company"
     assert actual["totals"]["d_ni"] == pytest.approx(expected.base.companies[0].dNI)
     assert actual["totals"]["d_eps_pct"] == pytest.approx(c["dEPS"] / 7.11)

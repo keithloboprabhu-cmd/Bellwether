@@ -364,35 +364,12 @@
     "period_end": "2025-12-31",
     "items": {
       "total_debt": {
-        "value": 12006.651,
+        "value": 13230.651,
         "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
         "accessed": "2026-10-31",
-        "document_location": "us-gaap:LongTermDebt context=c-289",
-        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
-      },
-      "operating_lease_liabilities": {
-        "value": 761.106,
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
-        "accessed": "2026-10-31",
-        "document_location": "us-gaap:OperatingLeaseLiability context=c-4",
-        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
-      },
-      "finance_lease_liabilities": {
-        "value": 140.535,
-        "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
-        "accessed": "2026-10-31",
-        "document_location": "us-gaap:FinanceLeaseLiability context=c-4",
-        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+        "document_location": "2025 balance sheet: term debt net 12,006,651 + revolving lines/commercial paper 1,224,000 ($thousands); us-gaap:LongTermDebt / TermDebtMember plus us-gaap:LineOfCredit c-4",
+        "rationale": "Complete carrying-value borrowing balance including commercial paper/revolver; the 1,494,659 unsecured term loan is already included in term debt, so it is not added twice. Operating leases excluded."
       }
-    },
-    "shares_outstanding": {
-      "value": 211.137672,
-      "date": "2026-02-13",
-      "classes": 1,
-      "accn": "0001289490-26-000011",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
-      "accessed": "2026-10-31",
-      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
     }
   },
   "1403568": {
@@ -1060,6 +1037,65 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/schl-20260531.htm",
       "accessed": "2026-10-31",
       "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3; dei:EntityCommonStockSharesOutstanding context=c-4"
+    }
+  },
+  "899051": {
+    "ticker": "ALL",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 37454.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000031/all-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet context=c-10",
+        "rationale": "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments."
+      }
+    }
+  },
+  "1099219": {
+    "ticker": "MET",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 49718.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1099219/000109921926000013/met-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet context=c-1",
+        "rationale": "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments."
+      }
+    }
+  },
+  "86312": {
+    "ticker": "TRV",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 27221.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/86312/000008631226000065/trv-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet context=c-1",
+        "rationale": "Reported incurred insurance claims/loss expense; not merchandise COGS or cash claim payments."
+      }
+    }
+  },
+  "1403161": {
+    "ticker": "V",
+    "period_end": "2025-09-30",
+    "items": {
+      "eps_diluted": {
+        "value": 10.2,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:EarningsPerShareDiluted / Class A / c-2",
+        "rationale": "Class A EPS and total class-A-equivalent diluted shares. Other classes convert at the filing-disclosed equivalents; no raw A/B counts or prices are mixed."
+      },
+      "diluted_shares": {
+        "value": 2216.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+        "accessed": "2026-10-31",
+        "document_location": "Class A diluted shares c-2 plus as-converted B1/B2/C/participating-security equivalents: c-10, c-11, c-12, c-326",
+        "rationale": "Class A EPS and total class-A-equivalent diluted shares. Other classes convert at the filing-disclosed equivalents; no raw A/B counts or prices are mixed."
+      }
     }
   }
 }

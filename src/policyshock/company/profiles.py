@@ -63,7 +63,7 @@ class CompanyProfile(BaseModel):
     name: str = Field(min_length=1, max_length=160)
     ticker: str = Field(default="", max_length=20)
     industry: str = Field(max_length=80)
-    kind: Literal["standard", "bank", "reit", "managed_care"] = "standard"
+    kind: Literal["standard", "bank", "reit", "managed_care", "insurer"] = "standard"
     role: Literal["importer", "domestic_producer", "neutral"] = "neutral"
     financials: Financials
     exposures: dict[str, ExposureValue] = Field(default_factory=dict, max_length=100)

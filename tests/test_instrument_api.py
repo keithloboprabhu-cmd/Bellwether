@@ -6,13 +6,14 @@ import pytest
 
 from policyshock.engine.simulate import simulate
 from policyshock.ui.api import calculate, catalog
+from policyshock.config import load_universe
 
 
 def test_catalog_uses_actual_configuration():
     """The catalog derives coverage and bounds rather than hardcoding UI data."""
     cat = catalog()
     assert sum(i["count"] for i in cat["industries"]) == cat["company_count"]
-    assert all(20 <= i["count"] <= 30 for i in cat["industries"])
+    assert {i['id']: i['count'] for i in cat['industries']} == {i.slug:len(i.tickers) for i in load_universe().industries}
     pol = next(p for i in cat["industries"] if i["id"] == "healthcare" for p in i["policies"] if p["id"] == "medicare_advantage_rate_change")
     assert pol["user_inputs"][0]["min"] == -10
 

@@ -1,0 +1,212 @@
+{
+  "source": "Yahoo Finance",
+  "accessed": "2026-10-31",
+  "requested": [
+    "ALL",
+    "AMAT",
+    "ANET",
+    "CAH",
+    "COR",
+    "DELL",
+    "GEV",
+    "HPQ",
+    "INTU",
+    "ISRG",
+    "LRCX",
+    "MCK",
+    "MDLZ",
+    "MET",
+    "MO",
+    "NOW",
+    "PANW",
+    "PFGC",
+    "PM",
+    "SNDK",
+    "SNEX",
+    "SNX",
+    "SPGI",
+    "SYY",
+    "TMUS",
+    "TRV",
+    "TSN",
+    "TXN",
+    "V"
+  ],
+  "observed": [
+    {
+      "ticker": "ALL",
+      "close": 259.87,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "AMAT",
+      "close": 390.09,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "ANET",
+      "close": 168.86,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "CAH",
+      "close": 250.48,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "COR",
+      "close": 330.84,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "DELL",
+      "close": 424.3,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "GEV",
+      "close": 857.87,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "HPQ",
+      "close": 28.78,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "INTU",
+      "close": 341.09,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "ISRG",
+      "close": 432.01,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "LRCX",
+      "close": 239.11,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "MCK",
+      "close": 994.58,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "MDLZ",
+      "close": 64.94,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "MET",
+      "close": 100.02,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "MO",
+      "close": 78.03,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "NOW",
+      "close": 105.12,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "PANW",
+      "close": 365.87,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "PFGC",
+      "close": 99.05,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "PM",
+      "close": 208.79,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "SNDK",
+      "close": 1150.89,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "SNEX",
+      "close": 52.83,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "SNX",
+      "close": 236.62,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "SPGI",
+      "close": 466.55,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "SYY",
+      "close": 82.9,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "TMUS",
+      "close": 156.44,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "TRV",
+      "close": 396.22,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "TSN",
+      "close": 57.04,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "TXN",
+      "close": 300.84,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    },
+    {
+      "ticker": "V",
+      "close": 413.59,
+      "date": "2026-10-30",
+      "source": "yfinance"
+    }
+  ],
+  "missing": []
+}

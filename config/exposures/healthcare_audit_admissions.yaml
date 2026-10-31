@@ -1,0 +1,326 @@
+industry: healthcare
+companies:
+  CAH:
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  COR:
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  ISRG:
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+  MCK:
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_cost_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicare_advantage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    aca_exchange_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pbm_retained_rebate_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    medicaid_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    hospital_outpatient_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    pharma_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    mx_us_pretax_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'
+    negotiated_drug_medicare_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
+        not been independently verified; no unrelated peer prior transferred.'

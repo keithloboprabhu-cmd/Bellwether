@@ -559,3 +559,107 @@ reviews:
     - ticker: RIVN
       metric: dNI
       sign: -1
+  consumer_retail/us_corporate_tax_consumer_retail:
+    rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
+      omitted explicitly.
+    expect:
+    - ticker: WMT
+      metric: dNI
+      sign: -1
+    unaffected:
+    - TGT
+    - LOW
+    - KR
+    - DG
+    - ROST
+    - ULTA
+  healthcare/us_corporate_tax_healthcare:
+    rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
+      omitted explicitly.
+    expect:
+    - ticker: UNH
+      metric: dNI
+      sign: -1
+    unaffected:
+    - LLY
+    - CI
+    - CNC
+    - MRK
+    - ABBV
+    - HCA
+    - UHS
+    - MDT
+  financial_services/us_corporate_tax_financial_services:
+    rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
+      omitted explicitly.
+    expect:
+    - ticker: JPM
+      metric: dNI
+      sign: -1
+    unaffected:
+    - BAC
+    - C
+    - AXP
+    - MS
+    - SCHW
+    - STT
+    - TFC
+    - KEY
+    - BLK
+    - PGR
+  tmt/us_corporate_tax_tmt:
+    rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
+      omitted explicitly.
+    expect:
+    - ticker: MSFT
+      metric: dNI
+      sign: -1
+    unaffected:
+    - AAPL
+    - IBM
+    - ORCL
+    - INTC
+    - AVGO
+  education/us_corporate_tax_education:
+    rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
+      omitted explicitly.
+    expect:
+    - ticker: LRN
+      metric: dNI
+      sign: -1
+    unaffected:
+    - LOPE
+    - STRA
+    - COUR
+    - UTI
+    - APEI
+    - NRDY
+    - SKIL
+    - CHGG
+    - SCHL
+    - KLC
+    - BFAM
+    - SLM
+  transportation_logistics/us_corporate_tax_transportation_logistics:
+    rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
+      omitted explicitly.
+    expect:
+    - ticker: UPS
+      metric: dNI
+      sign: -1
+    unaffected:
+    - UNP
+    - DAL
+    - GM
+    - F
+    - RIVN
+    - JBHT
+    - ODFL
+    - XPO
+    - SAIA
+    - CSX
+    - NSC
+    - UAL
+    - AAL
+    - LUV
+    - LYFT
