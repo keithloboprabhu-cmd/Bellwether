@@ -62,10 +62,12 @@ def test_concurrent_refresh_coalesces_and_failed_records_rotate(tmp_path, monkey
         release.set()
         pending.result()
     assert len(calls) == 3
-    first_quote_batch = set(dict(calls)["quotes"])
+    assert set(dict(calls)["quotes"]) == set(load_universe().all_tickers)
+    first_financial = dict(calls)["financials"]
     calls.clear()
     service.refresh_for_request()
-    assert not first_quote_batch.intersection(dict(calls)["quotes"])
+    assert "quotes" not in dict(calls)
+    assert dict(calls)["financials"] != first_financial
 
 
 def test_partial_provider_batch_does_not_claim_unrequested_firms_failed(tmp_path, monkeypatch):

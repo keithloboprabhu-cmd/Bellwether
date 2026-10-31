@@ -26,11 +26,17 @@ Filings and public APIs do not provide every policy-specific input. Domestic sal
 
 Annual statements, market quotes and economic releases keep their own observation dates. Refresh checks do not create new observations: markets close, filings arrive periodically and FRED series follow release schedules. Missing or incomplete updates retain the last usable record. Derived financials and defaults are flagged; unsupported percentages remain undefined. Each calculation uses one frozen capture of the available inputs.
 
-On Vercel, refreshes run during requests rather than continuously in the background. Scenarios prioritize quotes for their industry; each request checks at most one company's annual statements and two FRED series. The Data page rotates through companies in small batches. The intervals above are per-record minimum ages, not guaranteed publication or refresh times. Temporary caches belong to each running instance and can reset; committed snapshots provide the cold-start fallback. Historical backtests always use committed records.
+On Vercel, refreshes run during requests rather than continuously in the background. Scenarios prioritize quotes for their industry; each request checks at most one company's annual statements and two FRED series. The Data page requests all due company quotes through bounded Yahoo batches rather than stopping at twelve. The intervals above are per-record minimum ages, not guaranteed publication or refresh times. Temporary caches belong to each running instance and can reset; committed snapshots provide the cold-start fallback. Historical backtests always use committed records.
+
+Reviewed inline-XBRL supplements recover facts omitted from companyfacts, including dimensional industrial/finance-arm debt and class-specific cover-page shares. They apply only to the verified issuer and fiscal period, retain the filing concept/context, and expire when a new annual period arrives. Ford, GM, Deere, PACCAR and Textron keep finance-arm debt separate; the ordinary debt-repricing channel uses industrial borrowings. Operating lease liabilities stay separate from floating-rate borrowing exposure. Missing debt is unquantified, not a reported zero.
+
+Reported tax rates remain available. Rates outside the existing 0–40% anomaly screen use the median ordinary rate from the preceding three available annual periods, or the documented US federal statutory rate when history is insufficient. This replaces clipping to 0% or 40%; state and foreign adjustments are not fabricated. The screen and historical-median choice remain modeling conventions requiring judgment.
 
 ## 2. Policy transmission
 
 A company is affected through the business it actually operates. Exposure determines which part of its revenue, costs, financing or asset value a policy reaches.
+
+Steel tariffs distinguish average buyer prices from domestic mill selling prices. USITC Publication 5405, table 5.2 calibrates separate historical responses under 25% Section 232 tariffs: 2.39% for average steel prices and 0.74% for domestic producer prices. Observed company EPS growth includes tax, volume, mix and other changes, so it is not substituted for a causal tariff sensitivity.
 
 ### Transmission channels
 
@@ -80,7 +86,7 @@ This is an illustrative company, not a reported issuer or a forecast. It assumes
 
 | Duration | Valuation method |
 |---|---|
-| Permanent | Earnings-per-share change × current positive P/E |
+| Permanent | Earnings-per-share change × supported earnings multiple |
 | One-time | Approximately the one-time per-share earnings effect |
 | Fixed number of years | Present value of annual per-share effects, discounted at 9% |
 | Direct value effect | Separate capital, property-value or cash-tax-timing calculation |
@@ -88,6 +94,10 @@ This is an illustrative company, not a reported issuer or a forecast. It assumes
 ### Earnings can stay unchanged
 
 Higher bank capital requirements, tax-depreciation timing and property-liquidity effects can change equity value without changing current earnings. Conversely, a loss-making company can have a dollar earnings impact while its EPS percentage or P/E-based valuation is undefined. Implied price changes are scenario calculations, not price targets.
+
+If reported EPS is nonpositive or more than 40% below the median of the latest three complete annual EPS observations, permanent valuation uses price divided by a positive three-year median EPS. Reported EPS and its percentage-change denominator remain unchanged. The method and source periods are labeled. Special items are not removed without sourced amounts; if no supported positive normalized EPS exists, permanent valuation stays unavailable rather than inventing EV/EBITDA inputs.
+
+Projected traded-equity prices cannot fall below $0. A binding floor is labeled **equity wiped out**. Operating losses and EPS changes remain uncapped. The unconstrained price delta is retained, and a separate limited-liability reconciliation preserves channel attribution. This is a valuation boundary, not proof of a bankruptcy forecast.
 
 ### Accounting details
 

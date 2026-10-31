@@ -25,5 +25,7 @@ def test_steel_232_signs_and_nucor():
     assert rows["NUE"].pred_bps > 0 and rows["NUE"].actual_bps > 0  # domestic producer helped
     assert rows["CAT"].pred_bps < 0 and rows["DE"].pred_bps < 0  # steel users squeezed
     nue = rows["NUE"]
-    assert nue.pred_low_bps <= nue.actual_bps <= nue.pred_high_bps
+    # The annual observed change includes demand, mix and volume. Do not fit a
+    # causal price response to the entire annual margin change to make this pass.
+    assert nue.pred_high_bps < nue.actual_bps
     assert rows["DE"].note  # like-for-like cost recomputation applied

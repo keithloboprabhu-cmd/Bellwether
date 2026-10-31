@@ -16,6 +16,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import date
+import statistics
 
 # Tag chains, tried in order. All are us-gaap unless prefixed "dei:".
 REVENUE_TAGS = [
@@ -38,6 +39,8 @@ COST_TAGS = [
     "CostOfRevenue",
     "CostOfGoodsAndServicesSold",
     "CostOfGoodsSold",
+    "CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization",
+    "CostOfGoodsAndServicesSoldExcludingDepreciationDepletionAndAmortization",
     # REIT property operating costs
     "CostOfRealEstateRevenue",
     "DirectCostsOfLeasedAndRentedPropertyOrEquipment",
@@ -70,13 +73,14 @@ DA_TAGS = ["DepreciationDepletionAndAmortization", "DepreciationAndAmortization"
 NII_TAGS = ["InterestIncomeExpenseNet", "InterestIncomeExpenseAfterProvisionForLoanLoss"]
 ASSETS_TAGS = ["Assets"]
 # Debt is an instant (balance-sheet) item. LongTermDebt usually includes the current portion.
-DEBT_TAGS = ["LongTermDebt", "LongTermDebtAndCapitalLeaseObligations", "DebtLongtermAndShorttermCombinedAmount"]
-DEBT_NONCURRENT_TAGS = ["LongTermDebtNoncurrent", "LongTermDebtAndCapitalLeaseObligationsNoncurrent"]
-DEBT_CURRENT_TAGS = ["LongTermDebtCurrent", "LongTermDebtAndCapitalLeaseObligationsCurrent"]
+DEBT_TAGS = ["DebtLongtermAndShorttermCombinedAmount", "DebtAndCapitalLeaseObligations", "LongTermDebtAndCapitalLeaseObligationsIncludingCurrentMaturities", "LongTermDebt"]
+DEBT_NONCURRENT_TAGS = ["LongTermDebtNoncurrent", "LongTermDebtAndCapitalLeaseObligationsNoncurrent", "LongTermDebtAndCapitalLeaseObligations"]
+DEBT_CURRENT_TAGS = ["DebtCurrent", "LongTermDebtCurrent", "LongTermDebtAndCapitalLeaseObligationsCurrent"]
 
 ANNUAL_FORMS = {"10-K", "10-K/A", "10-KT"}
 DEFAULT_TAX_RATE = 0.21
 TAX_RATE_CLAMP = (0.0, 0.40)  # 40% (not 35%) so pre-TCJA years aren't distorted
+STATUTORY_TAX_SOURCE = "https://www.irs.gov/irm/part21/irm_21-007-004r"
 
 
 @dataclass
@@ -304,11 +308,6 @@ def build_baseline(
         nc, cur = _near(debt_nc, end), _near(debt_c, end)
         if nc is not None:
             candidates.append((nc.value + (cur.value if cur else 0.0), nc.tag + (f" + {cur.tag}" if cur else "")))
-        lt_cl = annual_series(facts, "LongTermDebtAndCapitalLeaseObligations", instant=True)
-        lt_cl_cur = annual_series(facts, "LongTermDebtAndCapitalLeaseObligationsCurrent", instant=True)
-        a, b = _near(lt_cl, end), _near(lt_cl_cur, end)
-        if a is not None:
-            candidates.append((a.value + (b.value if b else 0.0), a.tag + (f" + {b.tag}" if b else "")))
         if candidates:
             val, tag = max(candidates)
             fy.items["total_debt"] = val / M
@@ -316,7 +315,7 @@ def build_baseline(
         else:
             fy.items["total_debt"] = None
             if kind != "bank":  # banks use NII sensitivity, not debt × Δr
-                fy.flags.append("total debt not found; assumed 0 for financing shocks")
+                fy.flags.append("total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)")
 
         # --- bank template: NII, and pretax income stands in for EBIT
         if kind == "bank":
@@ -375,14 +374,15 @@ def build_baseline(
             fy.tags["pretax_income"] = "= NetIncome + IncomeTax"
             fy.flags.append("pretax income derived (NI + tax)")
 
-        # --- effective tax rate, clamped; default 21% if PTI ≤ 0 or tax missing
+        # Reported tax is preserved. Outliers are normalized after all years have
+        # been parsed, so no clipped endpoint is mistaken for an observed rate.
         if PTI is not None and PTI > 0 and T is not None:
             raw = T / PTI
             lo, hi = TAX_RATE_CLAMP
             fy.items["effective_tax_rate_raw"] = raw
-            fy.items["effective_tax_rate"] = min(max(raw, lo), hi)
+            fy.items["effective_tax_rate"] = raw if lo <= raw <= hi else None
             if not lo <= raw <= hi:
-                fy.flags.append(f"effective tax rate {raw:.1%} clamped to [{lo:.0%}, {hi:.0%}]")
+                fy.flags.append(f"reported effective tax rate {raw:.1%} requires forward tax normalization")
         else:
             fy.items["effective_tax_rate_raw"] = None
             fy.items["effective_tax_rate"] = DEFAULT_TAX_RATE
@@ -409,6 +409,19 @@ def build_baseline(
         if R is None:
             fy.flags.append("revenue not found")
         years.append(fy)
+    for index, fy in enumerate(years):
+        if fy.items["effective_tax_rate"] is None:
+            prior = [y.items["effective_tax_rate_raw"] for y in years[index + 1:index + 4]
+                     if y.items["effective_tax_rate_raw"] is not None
+                     and TAX_RATE_CLAMP[0] <= y.items["effective_tax_rate_raw"] <= TAX_RATE_CLAMP[1]]
+            rate = statistics.median(prior) if prior else (0.21 if fy.fiscal_year >= 2018 else 0.35)
+            fy.items["effective_tax_rate"] = rate
+            method = "median of available ordinary reported rates in preceding three fiscal years" if prior else "US federal statutory fallback; state/foreign tax effects not estimated"
+            fy.estimates["effective_tax_rate"] = {"source": "estimate", "source_url": STATUTORY_TAX_SOURCE,
+                "rationale": f"{method}; raw reported tax retained separately. Existing 0–40% anomaly screen retained, not a clamp."}
+            fy.flags.append(f"normalized forward tax rate {rate:.1%}: {method}")
+        from policyshock.data.supplements import supplement_year
+        supplement_year(facts, fy)
     return years
 
 
@@ -418,13 +431,20 @@ def shares_outstanding(facts: dict) -> dict | None:
     Multi-class issuers (GOOGL, META) report one fact per class in the same filing;
     those are summed. Returns {"value", "date", "accn", "classes"} or None.
     """
+    from policyshock.data.supplements import statement_supplements
+    verified = statement_supplements().get(str(facts.get("cik")), {}).get("shares_outstanding")
     rows = _facts_for(facts, "dei:EntityCommonStockSharesOutstanding", "shares")
+    if verified and (not rows or verified["date"] >= max(r["end"] for r in rows)):
+        return dict(verified)
     if not rows:
         return None
-    latest_filed = max(r["filed"] for r in rows)
-    same = [r for r in rows if r["filed"] == latest_filed]
-    latest_end = max(r["end"] for r in same)
-    same = [r for r in same if r["end"] == latest_end]
+    latest_end = max(r["end"] for r in rows)
+    latest_filed = max(r["filed"] for r in rows if r["end"] == latest_end)
+    same = [r for r in rows if r["filed"] == latest_filed and r["end"] == latest_end]
+    # A duplicate accession/frame is not an additional share class. Companyfacts
+    # may omit dimensional classes; the read-side stale/incomplete check then uses
+    # current diluted shares rather than inventing a missing class count.
+    same = list({(r.get("accn"), r.get("frame"), r["val"]): r for r in same}.values())
     return {
         "value": sum(float(r["val"]) for r in same) / 1e6,
         "date": latest_end,

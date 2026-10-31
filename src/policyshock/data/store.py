@@ -9,6 +9,7 @@ The app never calls SEC/FRED/Yahoo on a cold start; it reads data/snapshots/ and
 from __future__ import annotations
 
 import json
+import statistics
 from functools import lru_cache
 
 import pandas as pd
@@ -60,7 +61,9 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
     diluted = it.get("diluted_shares")
     shares_out, shares_src = diluted, "diluted weighted-average shares"
     if year is None:
-        if not so or not so["value"]:
+        if so and so.get("date", "") < fy["period_end"]:
+            flags.append(f"stale cover-page shares ({so.get('date')}); using current diluted weighted shares")
+        elif not so or not so["value"]:
             flags.append("shares outstanding not on cover page (multi-class); using diluted shares")
         elif diluted and not 0.8 <= so["value"] / diluted <= 1.25:
             # A >25% gap usually means a class is missing from the cover page (NKE), a tagging
@@ -76,6 +79,14 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
     eps = it.get("eps_diluted")
     mcap = price * shares_out if (price is not None and shares_out) else None
     pe = price / eps if (price is not None and eps and eps > 0) else None
+    history = [y for y in co["years"] if y["period_end"] <= fy["period_end"]][:3]
+    historical_eps = [y["items"].get("eps_diluted") for y in history]
+    median_eps = statistics.median(historical_eps) if len(historical_eps) == 3 and all(isinstance(v, (int, float)) for v in historical_eps) else None
+    valuation_eps, valuation_method = eps, "reported_eps"
+    if eps is None or eps <= 0 or (median_eps is not None and median_eps > 0 and eps < .6 * median_eps):
+        valuation_eps = median_eps if median_eps is not None and median_eps > 0 else None
+        valuation_method = "three_year_median_eps" if valuation_eps else "unavailable"
+        flags.append("P/E valuation uses three-year median reported EPS; special items are not independently adjusted" if valuation_eps else "No positive supported normalized earnings; permanent P/E valuation unavailable")
     R, C = it.get("revenue"), it.get("cost_of_revenue")
     return {
         "ticker": ticker,
@@ -99,6 +110,10 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
         "diluted_shares": it.get("diluted_shares"),
         "eps_diluted": eps,
         "total_debt": it.get("total_debt"),
+        "finance_arm_debt": it.get("finance_arm_debt"),
+        "debt_basis": "industrial_only" if it.get("finance_arm_debt") is not None else "reported_borrowings",
+        "operating_lease_liabilities": it.get("operating_lease_liabilities"),
+        "finance_lease_liabilities": it.get("finance_lease_liabilities"),
         "da": it.get("da"),
         "net_interest_income": it.get("net_interest_income"),
         "total_assets": it.get("total_assets"),
@@ -108,6 +123,10 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
         "price_date": price_date,
         "market_cap": mcap,
         "pe": pe,
+        "valuation_eps": valuation_eps,
+        "valuation_pe": price / valuation_eps if price is not None and valuation_eps and valuation_eps > 0 else None,
+        "valuation_method": valuation_method,
+        "valuation_history": [{"period_end": y["period_end"], "eps": y["items"].get("eps_diluted"), "filing_url": y.get("filing_url")} for y in history],
         "tags": fy["tags"],
         "flags": flags,
     }

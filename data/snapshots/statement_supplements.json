@@ -1,0 +1,1065 @@
+{
+  "37996": {
+    "ticker": "F",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 21919.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:DebtLongtermAndShorttermCombinedAmount context=c-21",
+        "rationale": "Financing channel uses Ford industrial debt, excluding Ford Credit; finance leases are included in the disclosed debt basis."
+      },
+      "finance_arm_debt": {
+        "value": 141417.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:DebtLongtermAndShorttermCombinedAmount context=c-23",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "operating_lease_liabilities": {
+        "value": 2402.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-19",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 890.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-19",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 3989.475225,
+      "date": "2026-02-06",
+      "classes": 2,
+      "accn": "0000037996-26-000015",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-7; dei:EntityCommonStockSharesOutstanding context=c-8"
+    }
+  },
+  "1467858": {
+    "ticker": "GM",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 16247.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "gm:DebtandFinanceLeaseLiabilities context=c-14",
+        "rationale": "Financing channel uses automotive debt and finance leases, excluding GM Financial asset-financing debt."
+      },
+      "finance_arm_debt": {
+        "value": 114031.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LongTermDebt context=c-16",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 903.967853,
+      "date": "2026-01-15",
+      "classes": 1,
+      "accn": "0001467858-26-000013",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "217346": {
+    "ticker": "TXT",
+    "period_end": "2026-01-03",
+    "items": {
+      "total_debt": {
+        "value": 3539.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/txt-20260103.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LongTermDebt context=c-21",
+        "rationale": "Financing channel uses Manufacturing Group debt; finance business debt is recorded separately."
+      },
+      "finance_arm_debt": {
+        "value": 339.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/txt-20260103.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LongTermDebt context=c-23",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 100.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/txt-20260103.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-25",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 174.162437,
+      "date": "2026-02-07",
+      "classes": 1,
+      "accn": "0000217346-26-000006",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/217346/000021734626000006/txt-20260103.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "75362": {
+    "ticker": "PCAR",
+    "period_end": "2025-12-31",
+    "items": {
+      "finance_arm_debt": {
+        "value": 15636.3,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/75362/000119312526057025/pcar-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "pcar:CommercialPaperBankLoansAndTermDebtAtCarryingValue context=C_c3c24a0b-d7ad-4356-b69b-9a348213c677",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "total_debt": {
+        "value": 0.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/75362/000119312526057025/pcar-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "2025 10-K MD&A, Cash Commitments, p.27; Note J, Borrowings and Credit Arrangements, pp.56\u201357",
+        "rationale": "The filing states all borrowing/term-debt commitments relate to Financial Services; industrial borrowings are zero on that disclosed basis. Finance leases remain separately disclosed."
+      },
+      "operating_lease_liabilities": {
+        "value": 62.9,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/75362/000119312526057025/pcar-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=C_8f2af4cd-14fc-47a5-b795-175d65387aef",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 0.9,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/75362/000119312526057025/pcar-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=C_8f2af4cd-14fc-47a5-b795-175d65387aef",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 525.894443,
+      "date": "2026-01-31",
+      "classes": 1,
+      "accn": "0001193125-26-057025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/75362/000119312526057025/pcar-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=C_31c42677-c06a-44b4-b5e8-b1106a24a916"
+    }
+  },
+  "315189": {
+    "ticker": "DE",
+    "period_end": "2025-11-02",
+    "items": {
+      "total_debt": {
+        "value": 9171,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "2025 10-K p.43, Supplemental Consolidating Data, 2025 column; Equipment Operations: short-term borrowings 414 + securitization 1 + long-term 8,756",
+        "rationale": "Industrial financing channel excludes financial-services funding; use the separate disclosed equipment-operations balance."
+      },
+      "finance_arm_debt": {
+        "value": 54765,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "2025 10-K p.43, Supplemental Consolidating Data, 2025 column; Financial Services: short-term borrowings 13,382 + securitization 6,595 + long-term 34,788",
+        "rationale": "Industrial financing channel excludes financial-services funding; use the separate disclosed equipment-operations balance."
+      },
+      "operating_lease_liabilities": {
+        "value": 314.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=As_Of_11_2_2025_8i5Xi3-L1Eeqvv-V12fRKw",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 112.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=As_Of_11_2_2025_8i5Xi3-L1Eeqvv-V12fRKw",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 270.445437,
+      "date": "2025-11-28",
+      "classes": 1,
+      "accn": "0001104659-25-122321",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=As_Of_11_28_2025_ZDDw0Y9wkEijSsAZ9t4w-w"
+    }
+  },
+  "726728": {
+    "ticker": "O",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 27093.122,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/o-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:NotesPayable context=c-18 + o:RevolvingCreditFacilityAndCommercialPaper context=c-18 + us-gaap:SecuredDebt context=c-18",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 429.675,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/o-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-18",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 121.434,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/o-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-18",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 932.440218,
+      "date": "2026-02-20",
+      "classes": 1,
+      "accn": "0000726728-26-000011",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/o-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-17"
+    }
+  },
+  "1101239": {
+    "ticker": "EQIX",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 19062.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:DebtInstrumentCarryingAmount context=c-14",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 1459.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-14",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 2355.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-14",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 98.254928,
+      "date": "2026-02-10",
+      "classes": 1,
+      "accn": "0001101239-26-000032",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-11"
+    }
+  },
+  "1297996": {
+    "ticker": "DLR",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 18556.77,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:DebtInstrumentCarryingAmount context=As_Of_12_31_2025_dei_LegalEntityAxis_dlr_DigitalRealtyTrustLPMember_t_Nys1RWREewHc_K5HeVIA",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 1253.217,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=As_Of_12_31_2025_66PkltaJFkKpd-3IiN7ZCg",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 340.63,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=As_Of_12_31_2025_66PkltaJFkKpd-3IiN7ZCg",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 343.615444,
+      "date": "2026-02-09",
+      "classes": 1,
+      "accn": "0001104659-26-015365",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=As_Of_2_9_2026_ep0-IleG4E-fVY1CwcI8Fg"
+    }
+  },
+  "920522": {
+    "ticker": "ESS",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 6800.269,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/920522/000092052226000003/ess-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:SecuredDebt context=c-6 + us-gaap:UnsecuredDebt context=c-6",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 51.487,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/920522/000092052226000003/ess-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-6",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 64.475506,
+      "date": "2026-02-13",
+      "classes": 1,
+      "accn": "0000920522-26-000003",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/920522/000092052226000003/ess-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-4"
+    }
+  },
+  "912595": {
+    "ticker": "MAA",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 5405.372,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/912595/000119312526041208/maa-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:SecuredDebt context=C_71b8dfe1-b93e-4290-aa9b-cb0ac112cbc5 + us-gaap:UnsecuredDebt context=C_71b8dfe1-b93e-4290-aa9b-cb0ac112cbc5",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 24.279,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/912595/000119312526041208/maa-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=C_71b8dfe1-b93e-4290-aa9b-cb0ac112cbc5",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 116.90102,
+      "date": "2026-02-03",
+      "classes": 1,
+      "accn": "0001193125-26-041208",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/912595/000119312526041208/maa-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=C_29a66ede-b0f6-4e94-8b74-4cf5f6db669a"
+    }
+  },
+  "1289490": {
+    "ticker": "EXR",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 12006.651,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LongTermDebt context=c-289",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 761.106,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 140.535,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 211.137672,
+      "date": "2026-02-13",
+      "classes": 1,
+      "accn": "0001289490-26-000011",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1289490/000128949026000011/exr-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1403568": {
+    "ticker": "ULTA",
+    "period_end": "2026-01-31",
+    "items": {
+      "total_debt": {
+        "value": 62.287,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926035243/ulta-20260131x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:ShortTermBorrowings context=As_Of_1_31_2026_Nfc__yKySEWcnmMw4tcInw",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 2119.774,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926035243/ulta-20260131x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=As_Of_1_31_2026_Nfc__yKySEWcnmMw4tcInw",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 43.73663,
+      "date": "2026-03-23",
+      "classes": 1,
+      "accn": "0001104659-26-035243",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926035243/ulta-20260131x10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=As_Of_3_23_2026_2rQ02Z1MzESd6T4NeakXLA"
+    }
+  },
+  "886206": {
+    "ticker": "FC",
+    "period_end": "2025-08-31",
+    "items": {
+      "total_debt": {
+        "value": 0.823,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/886206/000088620625000085/fc-20250831x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:NotesPayableCurrent context=As_Of_8_31_2025",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 6.996,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/886206/000088620625000085/fc-20250831x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=As_Of_8_31_2025",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 12.155832,
+      "date": "2025-10-31",
+      "classes": 1,
+      "accn": "0000886206-25-000085",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/886206/000088620625000085/fc-20250831x10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=As_Of_10_31_2025"
+    }
+  },
+  "1049521": {
+    "ticker": "MRCY",
+    "period_end": "2026-07-03",
+    "items": {
+      "total_debt": {
+        "value": 441.5,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1049521/000104952126000045/mrcy-20260703.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:SecuredLongTermDebt context=c-4",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 59.415,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1049521/000104952126000045/mrcy-20260703.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 60.136133,
+      "date": "2026-07-31",
+      "classes": 1,
+      "accn": "0001049521-26-000045",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1049521/000104952126000045/mrcy-20260703.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1286613": {
+    "ticker": "LINC",
+    "period_end": "2025-12-31",
+    "items": {
+      "total_debt": {
+        "value": 31.117,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/ef20060592_10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiabilityCurrent context=c3 + us-gaap:FinanceLeaseLiabilityNoncurrent context=c3",
+        "rationale": "Reviewed interest-bearing borrowing/finance-lease line(s); operating lease liabilities are disclosed separately and not repriced as floating-rate loans."
+      },
+      "operating_lease_liabilities": {
+        "value": 172.747,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/ef20060592_10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c3",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 31.117,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/ef20060592_10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c3",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 31.878966,
+      "date": "2026-03-02",
+      "classes": 1,
+      "accn": "0001140361-26-007380",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1286613/000114036126007380/ef20060592_10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c2"
+    }
+  },
+  "56873": {
+    "ticker": "KR",
+    "period_end": "2026-01-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 113240.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/kr-20260131x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization context=Duration_2_2_2025_To_1_31_2026_oeIm4LaUPkCZoKrgQ_uDyA",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 7126.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/kr-20260131x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=As_Of_1_31_2026_Vr_KV3wfoUOB1E7_ZJYAng",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 1691.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/kr-20260131x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=As_Of_1_31_2026_Vr_KV3wfoUOB1E7_ZJYAng",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 612.575611,
+      "date": "2026-03-25",
+      "classes": 1,
+      "accn": "0001104659-26-037723",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/kr-20260131x10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=As_Of_3_25_2026_koRAsGJ0QUu40pN8HmXMww"
+    }
+  },
+  "80661": {
+    "ticker": "PGR",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 53959.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:SupplementaryInsuranceInformationBenefitsClaimsLossesAndSettlementExpense context=c-1",
+        "rationale": "Insurer cost base is incurred policy losses and settlement expense, not merchandise COGS."
+      }
+    },
+    "shares_outstanding": {
+      "value": 585.906353,
+      "date": "2026-01-31",
+      "classes": 1,
+      "accn": "0000080661-26-000086",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "70318": {
+    "ticker": "THC",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 17008.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/thc-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LaborAndRelatedExpense context=c-1 + us-gaap:SuppliesExpense context=c-1 + us-gaap:OtherCostAndExpenseOperating context=c-1",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 1257.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/thc-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-7",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 452.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/thc-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-7",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 86.963,
+      "date": "2026-01-30",
+      "classes": 1,
+      "accn": "0000070318-26-000012",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/70318/000007031826000012/thc-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-5"
+    }
+  },
+  "352915": {
+    "ticker": "UHS",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 14603.837,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/uhs-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LaborAndRelatedExpense context=C_cdf048eb-84fd-4f20-91be-7d752d239037 + us-gaap:SuppliesExpense context=C_cdf048eb-84fd-4f20-91be-7d752d239037 + us-gaap:OtherCostAndExpenseOperating context=C_cdf048eb-84fd-4f20-91be-7d752d239037",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 413.952,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/uhs-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=C_8455ff1c-9877-4fb0-8f2d-3b6cc680906f",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 91.121,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/uhs-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=C_8455ff1c-9877-4fb0-8f2d-3b6cc680906f",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 61.08664,
+      "date": "2026-01-31",
+      "classes": 4,
+      "accn": "0001193125-26-071676",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/352915/000119312526071676/uhs-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=C_a3f4d03e-d656-4829-a13f-6fb9ddc82052; dei:EntityCommonStockSharesOutstanding context=C_1f4aa518-4049-4451-aef1-8b45dad2ee2a; dei:EntityCommonStockSharesOutstanding context=C_bb9ef035-a998-4f9a-84df-27d8312b5ceb; dei:EntityCommonStockSharesOutstanding context=C_a74055e3-aa7e-4a7b-8f94-03115c1ce2ff"
+    }
+  },
+  "753308": {
+    "ticker": "NEE",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 10343.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "nee:FuelPurchasedPowerAndInterchangeExpense context=c-1 + us-gaap:UtilitiesOperatingExpenseMaintenanceAndOperations context=c-1",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 458.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-12",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 1143.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-12",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 2083.521964,
+      "date": "2026-01-31",
+      "classes": 1,
+      "accn": "0000753308-26-000015",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-7"
+    }
+  },
+  "1166003": {
+    "ticker": "XPO",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 6657.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000016/xpo-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LaborAndRelatedExpense context=c-1 + xpo:PurchasedTransportation context=c-1 + us-gaap:OperatingCostsAndExpenses context=c-1",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 777.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000016/xpo-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 248.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000016/xpo-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 117.147357,
+      "date": "2026-01-30",
+      "classes": 1,
+      "accn": "0001166003-26-000016",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1166003/000116600326000016/xpo-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1177702": {
+    "ticker": "SAIA",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 2469.096,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526067030/saia-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LaborAndRelatedExpense context=C_62d2300d-ba3e-4efb-ad89-4aaa35ce8289 + saia:PurchasedTransportation context=C_62d2300d-ba3e-4efb-ad89-4aaa35ce8289 + saia:FuelOperatingExpensesAndSupplies context=C_62d2300d-ba3e-4efb-ad89-4aaa35ce8289",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 141.014,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526067030/saia-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=C_b482745f-5bbd-4ba8-82a1-32ef9c572676",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 0.98,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526067030/saia-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=C_b482745f-5bbd-4ba8-82a1-32ef9c572676",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 26.669522,
+      "date": "2026-02-18",
+      "classes": 1,
+      "accn": "0001193125-26-067030",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526067030/saia-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=C_0fb971a4-2d5d-4157-970d-9b24b977223f"
+    }
+  },
+  "277948": {
+    "ticker": "CSX",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 7370.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/csx-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LaborAndRelatedExpense context=c-1 + us-gaap:FuelCosts context=c-1 + us-gaap:OtherCostAndExpenseOperating context=c-1",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 546.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/csx-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-6",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 15.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/csx-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-6",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 1859.556799,
+      "date": "2026-01-31",
+      "classes": 1,
+      "accn": "0000277948-26-000006",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/csx-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "92380": {
+    "ticker": "LUV",
+    "period_end": "2025-12-31",
+    "items": {
+      "cost_of_revenue": {
+        "value": 22670.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/luv-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:LaborAndRelatedExpense context=c-1 + us-gaap:FuelCosts context=c-1 + us-gaap:OtherCostAndExpenseOperating context=c-1",
+        "rationale": "Reported direct operating-cost base; includes fixed costs, so demand-margin sensitivity remains an estimate requiring review."
+      },
+      "operating_lease_liabilities": {
+        "value": 1080.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/luv-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 78.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/luv-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 491.31799,
+      "date": "2026-02-03",
+      "classes": 1,
+      "accn": "0000092380-26-000004",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/luv-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1434588": {
+    "ticker": "LOPE",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 107.323,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1434588/000110465926017047/lope-20251231x10k.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=As_Of_12_31_2025_A1uWjRxdrUihwPC_ECbhDw",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 27.143454,
+      "date": "2026-02-13",
+      "classes": 1,
+      "accn": "0001104659-26-017047",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1434588/000110465926017047/lope-20251231x10k.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=As_Of_2_13_2026_DBKWOQ4HEk2Fa0ZMOvDg6g"
+    }
+  },
+  "1013934": {
+    "ticker": "STRA",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 109.121,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-7",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 22.730391,
+      "date": "2026-01-30",
+      "classes": 1,
+      "accn": "0001013934-26-000006",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1013934/000101393426000006/stra-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1562088": {
+    "ticker": "DUOL",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 100.983,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-5",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 46.950291,
+      "date": "2026-02-25",
+      "classes": 2,
+      "accn": "0001628280-26-012494",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3; dei:EntityCommonStockSharesOutstanding context=c-4"
+    }
+  },
+  "1651562": {
+    "ticker": "COUR",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 5.7,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1651562/000165156226000015/cour-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-6",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 168.2,
+      "date": "2026-02-13",
+      "classes": 1,
+      "accn": "0001651562-26-000015",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1651562/000165156226000015/cour-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1046568": {
+    "ticker": "PRDO",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 49.784,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1046568/000119312526059331/prdo-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=C_5a4ad5b8-8522-47a2-bf96-acaecdba0aba",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 11.555,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1046568/000119312526059331/prdo-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=C_5a4ad5b8-8522-47a2-bf96-acaecdba0aba",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 62.478373,
+      "date": "2026-02-16",
+      "classes": 1,
+      "accn": "0001193125-26-059331",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1046568/000119312526059331/prdo-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=C_176f536c-2a00-4ea4-8e83-390456504bc9"
+    }
+  },
+  "1364954": {
+    "ticker": "CHGG",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 19.5,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1364954/000136495426000021/chgg-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-4",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 111.798694,
+      "date": "2026-02-28",
+      "classes": 1,
+      "accn": "0001364954-26-000021",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1364954/000136495426000021/chgg-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3"
+    }
+  },
+  "1166691": {
+    "ticker": "CMCSA",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 6097.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-23",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 3597.845994,
+      "date": "2026-01-15",
+      "classes": 2,
+      "accn": "0001628280-26-004994",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/cmcsa-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-16; dei:EntityCommonStockSharesOutstanding context=c-17"
+    }
+  },
+  "1141391": {
+    "ticker": "MA",
+    "period_end": "2025-12-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 833.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-11",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 891.812311,
+      "date": "2026-02-06",
+      "classes": 2,
+      "accn": "0001141391-26-000013",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-7; dei:EntityCommonStockSharesOutstanding context=c-8"
+    }
+  },
+  "320187": {
+    "ticker": "NKE",
+    "period_end": "2026-05-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 3091.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-9",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 1483.498703,
+      "date": "2026-07-08",
+      "classes": 2,
+      "accn": "0000320187-26-000088",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-5; dei:EntityCommonStockSharesOutstanding context=c-6"
+    }
+  },
+  "866729": {
+    "ticker": "SCHL",
+    "period_end": "2026-05-31",
+    "items": {
+      "operating_lease_liabilities": {
+        "value": 307.0,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/schl-20260531.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:OperatingLeaseLiability context=c-7",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      },
+      "finance_lease_liabilities": {
+        "value": 14.9,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/schl-20260531.htm",
+        "accessed": "2026-10-31",
+        "document_location": "us-gaap:FinanceLeaseLiability context=c-7",
+        "rationale": "Reported annual filing line; normalized to USD millions without a peer estimate."
+      }
+    },
+    "shares_outstanding": {
+      "value": 18.862575,
+      "date": "2026-06-30",
+      "classes": 2,
+      "accn": "0000866729-26-000018",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/866729/000086672926000018/schl-20260531.htm",
+      "accessed": "2026-10-31",
+      "document_location": "dei:EntityCommonStockSharesOutstanding context=c-3; dei:EntityCommonStockSharesOutstanding context=c-4"
+    }
+  }
+}

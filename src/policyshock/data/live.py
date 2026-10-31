@@ -139,7 +139,7 @@ class LiveData:
         selected = [t for t in (tickers or universe) if t in universe]
         jobs = []
         with self.lock:
-            for provider, keys, limit in (("quotes", selected, 30 if tickers else 12),
+            for provider, keys, limit in (("quotes", selected, len(selected)),
                                           ("financials", selected, 1),
                                           ("fred", list(fred.SERIES), 2)):
                 if provider in self.running:

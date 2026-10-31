@@ -35,8 +35,9 @@ def test_industry_range_brackets_base(tariffs):
 
 def test_long_is_least_hurt(tariffs):
     ranked = sorted((c for c in tariffs.base.companies if abs(c.rank_value) > 1e-6), key=lambda c: c.rank_value)
-    assert tariffs.short.ticker == ranked[0].ticker
-    assert tariffs.long.ticker == ranked[-1].ticker
+    # Multiple firms can reach the equity floor; equal -100% values are tied.
+    assert tariffs.short.rank_value == pytest.approx(ranked[0].rank_value)
+    assert tariffs.long.rank_value == pytest.approx(ranked[-1].rank_value)
     assert any("least-hurt" in n for n in tariffs.notes)
 
 

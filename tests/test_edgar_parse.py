@@ -97,7 +97,7 @@ def test_source_filing_is_first_10k_for_period():
     assert fy.items["revenue"] == 390  # but the value is the restated one
 
 
-def test_tax_rate_clamped_and_defaulted():
+def test_tax_rate_normalized_and_defaulted():
     base = dict(
         Revenues=[_fact(1000e6, "2024-12-31", "2025-02-01", start="2024-01-01")],
         NetIncomeLoss=[_fact(100e6, "2024-12-31", "2025-02-01", start="2024-01-01")],
@@ -106,9 +106,9 @@ def test_tax_rate_clamped_and_defaulted():
     neg_tax = _facts(**base, **{pti: [_fact(100e6, "2024-12-31", "2025-02-01", start="2024-01-01")]},
                      IncomeTaxExpenseBenefit=[_fact(-20e6, "2024-12-31", "2025-02-01", start="2024-01-01")])
     fy = build_baseline(neg_tax)[0]
-    assert fy.items["effective_tax_rate"] == 0.0
+    assert fy.items["effective_tax_rate"] == 0.21
     assert fy.items["effective_tax_rate_raw"] == pytest.approx(-0.2)
-    assert any("clamped" in f for f in fy.flags)
+    assert any("normalized forward" in f for f in fy.flags)
 
     loss = _facts(**base, **{pti: [_fact(-50e6, "2024-12-31", "2025-02-01", start="2024-01-01")]},
                   IncomeTaxExpenseBenefit=[_fact(-10e6, "2024-12-31", "2025-02-01", start="2024-01-01")])

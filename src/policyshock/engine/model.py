@@ -81,6 +81,8 @@ class CompanyResult:
     d_margin_bps: float | None
     outcomes: list[ChannelOutcome] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+    equity_wiped_out: bool = False
+    unconstrained_dP: float | None = None
 
     @property
     def dominant(self) -> ChannelOutcome | None:
@@ -114,7 +116,8 @@ def aggregate(
     R, EBIT = b["revenue"], b["operating_income"]
     PTI, t = b["pretax_income"], b["effective_tax_rate"]
     S = b["diluted_shares"]
-    eps, price, pe = b.get("eps_diluted"), b.get("price"), b.get("pe")
+    eps, price = b.get("eps_diluted"), b.get("price")
+    pe = b.get("valuation_pe", b.get("pe"))
     shares_out = b.get("shares_outstanding") or S
 
     d = [o.delta for o in outcomes]
@@ -152,6 +155,17 @@ def aggregate(
     if price is None:
         dP = None
 
+    unconstrained_dP = dP
+    wiped_out = price is not None and dP is not None and price + dP <= 0
+    if wiped_out and dP < -price:
+        # Limited liability caps the equity loss without clipping operating losses
+        # or concealing the unconstrained model. A separate reconciliation piece
+        # preserves both NI and value attribution rather than rescaling channels.
+        correction = -price - dP
+        outcomes.append(ChannelOutcome("Equity limited-liability floor", "financing", "one_time",
+                                      Delta(dValue_pv=correction * shares_out), dP=correction))
+        dP = -price
+
     dEPS = dNI / S
     eps_pct = dEPS / eps if (eps is not None and eps > 0) else None
     dP_pct = dP / price if (dP is not None and price) else None
@@ -161,7 +175,11 @@ def aggregate(
 
     notes = [n for x in d for n in x.notes]
     if eps is not None and eps <= 0:
-        notes.append("baseline EPS ≤ 0: ΔEPS % and P/E-based value are not meaningful")
+        notes.append("baseline EPS ≤ 0: reported ΔEPS % is undefined; valuation requires supported normalized earnings")
+    if b.get("valuation_method") == "three_year_median_eps":
+        notes.append("Valuation uses three-year median reported EPS, not depressed current EPS; no unsourced special-item adjustment")
+    if wiped_out:
+        notes.append("Equity wiped out: implied share price floored at $0; unconstrained value change retained for review")
     return CompanyResult(
         ticker=b["ticker"],
         name=b["name"],
@@ -184,4 +202,6 @@ def aggregate(
         d_margin_bps=margin_bps,
         outcomes=outcomes,
         notes=notes,
+        equity_wiped_out=wiped_out,
+        unconstrained_dP=unconstrained_dP,
     )

@@ -105,6 +105,10 @@ class Runner:
 
 def _company_metric(c: CompanyResult) -> float:
     """Per-share value change, or ΔEPS when value isn't meaningful."""
+    # Use the economic value before the equity floor when orienting drivers:
+    # otherwise two wiped-out endpoints tie and hide their true ordering.
+    if c.unconstrained_dP is not None:
+        return c.unconstrained_dP
     return c.dP if c.dP is not None else c.dEPS
 
 

@@ -189,16 +189,27 @@ def audit_policy(key: str, *, ranges: bool = True) -> dict:
             lo, value, hi = (getattr(x, metric) for x in (e.low, c, e.high))
             if not lo - 1e-7 <= value <= hi + 1e-7:
                 errors.append(f'{key}/{c.ticker}: scenario range does not bracket base')
+    review_flags = []
+    # Flag defaults conservatively even when no independently verified realistic
+    # range is available. Input bounds are stress controls, not a realistic range.
     for c in base.companies:
-        if c.dEPS_pct is not None and abs(c.dEPS_pct) > 1:
-            warnings.append(f'{c.ticker}: >100% earnings change; small/loss baseline or linear approximation needs caution')
-        if c.dP_pct is not None and c.dP_pct < -1:
-            warnings.append(f'{c.ticker}: implied loss exceeds equity value; constant-multiple approximation outside useful range')
+        if c.dEPS_pct is not None and abs(c.dEPS_pct) > .5:
+            dominant = max(c.outcomes, key=lambda o: abs(o.dNI), default=None)
+            estimated = [k for k in p.exposure_keys if reg.exposure(c.ticker, k).is_estimate]
+            explanation = (f'Reported EPS denominator {c.baseline["eps_diluted"]}; '
+                           f'dominant NI channel: {dominant.label if dominant else "none"}; '
+                           f'estimated exposures: {", ".join(estimated) or "none labeled estimate"}. '
+                           'Review reported earnings, exposure denominator and linear transmission before use.')
+            review_flags.append(dict(ticker=c.ticker, eps_change=c.dEPS_pct, inputs=runner.inputs,
+                                     reason=explanation, range_basis='Default scenario; realistic range not independently verified'))
+            warnings.append(f'{c.ticker}: REVIEW |EPS change| >50% at default. {explanation}')
+        if c.equity_wiped_out:
+            warnings.append(f'{c.ticker}: equity wiped out; $0 floor binds, operating losses remain uncapped')
     return dict(policy=key, companies=len(base.companies), input_cases=len(cases), driver_cases=driver_runs,
                 affected=affected, neutral=[c.ticker for c in base.companies if not has_impact(c)],
                 value_only=bool(affected) and all(abs(c.dNI)<1e-8 for c in base.companies),
                 estimate_exposures=estimates, scope_checks=scope_count, references=p.references,
-                company_checks=company_checks,
+                company_checks=company_checks, review_flags=review_flags,
                 rationale=(review or {}).get('rationale'), warnings=warnings, errors=errors)
 
 
