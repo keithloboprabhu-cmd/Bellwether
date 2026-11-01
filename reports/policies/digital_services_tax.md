@@ -1,6 +1,6 @@
 # Digital services tax (hypothetical US DST)
 
-Policy `tmt/digital_services_tax` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `tmt/digital_services_tax` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

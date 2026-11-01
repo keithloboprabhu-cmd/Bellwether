@@ -711,6 +711,7 @@ industries:
     name: TETRA TECH INC
     kind: standard
     subsector: Government engineering and advisory
+    cost_basis: revenue_less_gross_profit
   - ticker: MRCY
     name: Mercury Systems, Inc.
     kind: standard

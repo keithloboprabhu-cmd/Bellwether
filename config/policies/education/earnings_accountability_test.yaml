@@ -1,7 +1,7 @@
 id: earnings_accountability_test
 industry: education
 name: Program earnings test ("do no harm" accountability)
-description: Under the 2025 reconciliation law, degree programs whose graduates earn less than a benchmark (high-school graduates for undergraduate programs, bachelor's holders for graduate programs) lose Direct Loan eligibility. The first test runs in early 2027. Online for-profit graduate programs in counseling, psychology and education are the most at risk (Covista's Walden, Strategic's Capella, Grand Canyon); Stride and Duolingo are outside the rule.
+description: Models a steady-state enrollment loss after a program loses Direct Loan eligibility under the earnings accountability framework. A program must fail in two of three consecutive measured years; a single weak earnings result does not automatically remove eligibility. The July 2026 final rule generally takes effect July 2027, with separate August 2026 loan-rule provisions. Company at-risk program shares and the timing of actual sanctions remain unverified.
 persistence: permanent
 user_inputs:
   - key: fail_share_pct
@@ -40,8 +40,9 @@ channels:
 exposure_keys: [earnings_test_at_risk_revenue_share]
 default_role: neutral
 references:
+  - https://www.federalregister.gov/documents/2026/07/01/2026-13286/accountability-in-higher-education-and-access-through-demand--driven-workforce-pell-student-tuition
   - https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
   - https://ticas.org/accountability/earnings-metric-final-rule-blog/
   - https://www.nasfaa.org/uploads/documents/Ppt3_ResultsofEarningsTestandGEChanges_v2.pdf
 narrative:
-  extra: "At-risk revenue shares are estimates; ED's program-level results arrive with the first official test in 2027."
+  extra: "The input means the share that ultimately loses loan access after the statutory process, not the share failing once. At-risk revenue, appeals, institution-wide interactions and implementation delays remain estimates; immediate permanent valuation does not model that transition."

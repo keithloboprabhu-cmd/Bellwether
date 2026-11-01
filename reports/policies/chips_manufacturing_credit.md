@@ -1,6 +1,6 @@
 # CHIPS-style chip-manufacturing investment credit
 
-Policy `tmt/chips_manufacturing_credit` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `tmt/chips_manufacturing_credit` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -18,6 +18,7 @@ Threshold expressions are shown literally so omissions are reviewable. Input bou
 
 Policy references (a citation is not numeric verification):
 
+- https://www.irs.gov/credits-deductions/advanced-manufacturing-investment-credit
 - https://www.law.cornell.edu/uscode/text/26/48D
 
 | Company | Configured status | Basis |

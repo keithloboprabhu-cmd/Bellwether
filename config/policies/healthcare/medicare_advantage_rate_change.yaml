@@ -22,6 +22,7 @@ assumptions:
     high: 0.83
     source: "Cabral, Geruso & Mahoney (AER 2018): MA insurers pass through 45% of payment changes in lower premiums plus 9% in richer benefits (54%); premium pass-through is 13% in the least and 74% in the most competitive markets (+9% benefits gives the 22%–83% range)"
     source_url: https://www.nber.org/papers/w20470
+    rationale: Historical payment-increase estimates, not a verified symmetric response to cuts at each current insurer. The range adds the same 9% benefit response to two market-specific premium estimates; it is not a joint confidence interval. Bid-year timing and member-premium versus CMS-payment exposure remain unresolved.
 channels:
   - type: price
     label: Medicare Advantage payment rates

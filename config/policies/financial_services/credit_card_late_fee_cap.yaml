@@ -39,6 +39,7 @@ channels:
       offset_share: assumption.offset_share
 exposure_keys: [card_late_fee_revenue_share]
 references:
+  - https://www.consumerfinance.gov/compliance/compliance-resources/consumer-cards-resources/credit-card-penalty-fees/
   - https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
   - https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court
 narrative:

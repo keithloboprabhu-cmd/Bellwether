@@ -1,6 +1,6 @@
 # Site-neutral payment rules
 
-Policy `healthcare/site_neutral_payments` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `healthcare/site_neutral_payments` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

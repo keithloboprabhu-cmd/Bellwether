@@ -1,6 +1,6 @@
 # Tariffs on imported semiconductors and electronics
 
-Policy `tmt/semiconductor_tariffs` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `tmt/semiconductor_tariffs` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

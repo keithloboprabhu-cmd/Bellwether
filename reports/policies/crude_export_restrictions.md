@@ -1,6 +1,6 @@
 # Crude oil export restrictions
 
-Policy `energy_resources/crude_export_restrictions` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/crude_export_restrictions` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

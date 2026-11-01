@@ -1,6 +1,6 @@
 # Credit card interchange cap
 
-Policy `financial_services/credit_card_interchange_cap` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `financial_services/credit_card_interchange_cap` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

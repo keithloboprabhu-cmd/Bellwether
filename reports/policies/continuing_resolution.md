@@ -1,6 +1,6 @@
 # Continuing resolution
 
-Policy `public_sector/continuing_resolution` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/continuing_resolution` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -89,8 +89,8 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.new_award_share | -0.018757949 | -0.075031796 | 0.056273847 |
-| exposure.govcon_us_gov_share | -0.034697087 | -0.038545283 | 0.0038481958 |
+| assumption.new_award_share | -0.01768469 | -0.070738759 | 0.053054069 |
+| exposure.govcon_us_gov_share | -0.033596884 | -0.036322424 | 0.0027255396 |
 
 Dominant configured driver: `new_award_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

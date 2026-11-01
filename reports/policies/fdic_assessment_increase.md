@@ -1,6 +1,6 @@
 # Higher FDIC deposit-insurance assessments
 
-Policy `financial_services/fdic_assessment_increase` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `financial_services/fdic_assessment_increase` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

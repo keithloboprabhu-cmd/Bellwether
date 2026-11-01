@@ -105,18 +105,24 @@ companies:
     tl_regulatory_credit_revenue_share: {value: 0, low: 0, high: 0, source: estimate, rationale: Delta does not sell vehicle emissions credits.}
     tl_regulatory_credit_purchases_musd: {value: 0, low: 0, high: 0, source: estimate, rationale: Airlines are not subject to automaker credit obligations.}
     tl_domestic_passenger_revenue_share:
-      value: 0.564
-      low: 0.564
-      high: 0.564
-      source: "Delta 2025 10-K: domestic passenger revenue $35,731M of $63,364M total operating revenue"
-      source_url: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+      value: 0.5639006375860109
+      low: 0.5639006375860109
+      high: 0.5639006375860109
+      source: 'DAL FY2025 Form 10-K, geographic passenger revenue: domestic $35731M / total $63364.0M'
+      source_url: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/0000027904-26-000013-index.htm
+      rationale: Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare
+        base. Statutory ticket-tax exclusions and US-border rules are not separately quantified.
+      applicable: true
     tl_checked_bag_fee_revenue_share:
-      value: 0.0167
-      low: 0.0158
-      high: 0.0182
-      source: estimate
-      rationale: "Delta's 10-K reports bag fees only inside travel-related services. BTS data reported in the press put Delta's 2024 checked-bag fees above $1B (~$1.06B); $1,000-1,150M of $63,364M 2025 revenue."
-      source_url: https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+      value: 0.017199545483239695
+      low: 0.017199545483239695
+      high: 0.017199545483239695
+      source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Delta row; annual sum $1089.832000M
+      source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
+      rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption.
+      applicable: true
   TSLA:
     tl_fuel_co2_mt:
       value: 0.3

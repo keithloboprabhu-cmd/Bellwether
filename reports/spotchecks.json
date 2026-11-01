@@ -92,10 +92,10 @@
       "inputs": {
         "fee_cut_pct": 50.0
       },
-      "independent_dNI": -167.21532725303294,
-      "engine_dNI": -167.21532725303294,
-      "independent_dEPS": -0.2529533641121015,
-      "engine_dEPS": -0.2529533641121015,
+      "independent_dNI": -268.56086577816296,
+      "engine_dNI": -268.56086577816296,
+      "independent_dEPS": -0.40626284434229526,
+      "engine_dEPS": -0.40626284434229526,
       "independent_dP": null,
       "engine_dP": null,
       "pass_arithmetic": true
@@ -106,12 +106,12 @@
       "inputs": {
         "months_delayed": 3.0
       },
-      "independent_dNI": -72.39493518166819,
-      "engine_dNI": -72.39493518166816,
-      "independent_dEPS": -0.27101722869864514,
-      "engine_dEPS": -0.27101722869864503,
-      "independent_dP": -0.27101722869864514,
-      "engine_dP": -0.27101722869864514,
+      "independent_dNI": -15.072776774452418,
+      "engine_dNI": -15.07277677445242,
+      "independent_dEPS": -0.056426353307099796,
+      "engine_dEPS": -0.0564263533070998,
+      "independent_dP": -0.056426353307099796,
+      "engine_dP": -0.056426353307099796,
       "pass_arithmetic": true
     },
     {

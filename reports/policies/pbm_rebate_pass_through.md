@@ -1,6 +1,6 @@
 # PBM rebate pass-through reform
 
-Policy `healthcare/pbm_rebate_pass_through` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `healthcare/pbm_rebate_pass_through` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

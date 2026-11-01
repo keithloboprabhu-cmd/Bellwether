@@ -1,6 +1,6 @@
 # Defense budget increase
 
-Policy `public_sector/defense_budget_increase` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/defense_budget_increase` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -89,8 +89,8 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.services_capture | 0.030724233 | 0.07373816 | 0.043013927 |
-| exposure.govcon_defense_intel_share | 0.051468483 | 0.060789734 | 0.0093212516 |
+| assumption.services_capture | 0.029130062 | 0.069912148 | 0.040782086 |
+| exposure.govcon_defense_intel_share | 0.05029643 | 0.057556485 | 0.0072600549 |
 
 Dominant configured driver: `services_capture` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

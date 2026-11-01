@@ -1,6 +1,6 @@
 # ACA premium subsidy change
 
-Policy `healthcare/aca_subsidy_change` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `healthcare/aca_subsidy_change` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -1,6 +1,6 @@
 # Federal data-privacy mandate (opt-in consent)
 
-Policy `tmt/data_privacy_mandate` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `tmt/data_privacy_mandate` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

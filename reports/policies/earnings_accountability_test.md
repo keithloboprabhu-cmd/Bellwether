@@ -1,12 +1,12 @@
 # Program earnings test ("do no harm" accountability)
 
-Policy `education/earnings_accountability_test` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `education/earnings_accountability_test` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
 Configured mechanics below are a model specification, not a certification of current law. Current legal thresholds, exemptions, effective dates and phase-ins have not all been independently verified. Treat unresolved legal scope as a failure, not an implicit approval.
 
-Under the 2025 reconciliation law, degree programs whose graduates earn less than a benchmark (high-school graduates for undergraduate programs, bachelor's holders for graduate programs) lose Direct Loan eligibility. The first test runs in early 2027. Online for-profit graduate programs in counseling, psychology and education are the most at risk (Covista's Walden, Strategic's Capella, Grand Canyon); Stride and Duolingo are outside the rule.
+Models a steady-state enrollment loss after a program loses Direct Loan eligibility under the earnings accountability framework. A program must fail in two of three consecutive measured years; a single weak earnings result does not automatically remove eligibility. The July 2026 final rule generally takes effect July 2027, with separate August 2026 loan-rule provisions. Company at-risk program shares and the timing of actual sanctions remain unverified.
 
 Duration: `permanent`. Default inputs: `{"fail_share_pct": 50.0}`.
 
@@ -18,6 +18,7 @@ Threshold expressions are shown literally so omissions are reviewable. Input bou
 
 Policy references (a citation is not numeric verification):
 
+- https://www.federalregister.gov/documents/2026/07/01/2026-13286/accountability-in-higher-education-and-access-through-demand--driven-workforce-pell-student-tuition
 - https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
 - https://ticas.org/accountability/earnings-metric-final-rule-blog/
 - https://www.nasfaa.org/uploads/documents/Ppt3_ResultsofEarningsTestandGEChanges_v2.pdf

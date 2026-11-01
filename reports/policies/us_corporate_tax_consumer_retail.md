@@ -1,6 +1,6 @@
 # US corporate tax rate increase — book-income proxy
 
-Policy `consumer_retail/us_corporate_tax_consumer_retail` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `consumer_retail/us_corporate_tax_consumer_retail` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

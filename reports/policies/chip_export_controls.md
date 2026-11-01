@@ -1,6 +1,6 @@
 # Tighter advanced-chip export controls on China
 
-Policy `tmt/chip_export_controls` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `tmt/chip_export_controls` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

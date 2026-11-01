@@ -1,7 +1,7 @@
 id: ev_tax_credit
 industry: transportation_logistics
 name: Restore a consumer EV tax credit
-description: Reinstates a point-of-sale federal credit for new electric vehicles, ended September 30, 2025 by the One Big Beautiful Bill Act. Tesla and GM, the two largest US EV sellers, gain volume and some price. The other four companies are unaffected.
+description: Hypothetically restores a federal new-EV purchase credit. Credits are unavailable for vehicles acquired after September 30, 2025; qualifying earlier acquisitions may be delivered later. Only firms with modeled qualifying US EV sales receive the direct volume and price channels. Vehicle, buyer, income and sourcing eligibility are not fully measured.
 persistence: permanent
 user_inputs:
   - key: credit_usd
@@ -65,6 +65,7 @@ channels:
 exposure_keys: [tl_us_ev_revenue_share]
 default_role: neutral
 references:
+  - https://www.irs.gov/clean-vehicle-tax-credits
   - https://www.nber.org/papers/w25359
   - https://www.coxautoinc.com/insights/dec-2025-atp-report/
   - https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/

@@ -1,6 +1,6 @@
 # Methane emissions fee
 
-Policy `energy_resources/methane_emissions_fee` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/methane_emissions_fee` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

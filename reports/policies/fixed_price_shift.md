@@ -1,6 +1,6 @@
 # Shift to fixed-price contracts
 
-Policy `public_sector/fixed_price_shift` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/fixed_price_shift` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

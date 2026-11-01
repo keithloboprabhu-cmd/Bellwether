@@ -51,7 +51,7 @@ def main() -> None:
     if result['errors']: lines += ['## Failures', '']+['- '+e for e in result['errors']]
     (out/'POLICY_AUDIT.md').write_text('\n'.join(lines)+'\n')
     with (out/'policy-company-coverage.csv').open('w', newline='') as handle:
-        writer = csv.DictWriter(handle, fieldnames=['policy', 'ticker', 'status', 'default_affected', 'any_input_affected', 'reason'])
+        writer = csv.DictWriter(handle, fieldnames=['policy', 'ticker', 'status', 'default_affected', 'any_input_affected', 'reason'], lineterminator='\n')
         writer.writeheader()
         writer.writerows(decisions)
     print(f'{len(ps)} policies, {len(ms)} macro shocks, {len(result["errors"])} failures')

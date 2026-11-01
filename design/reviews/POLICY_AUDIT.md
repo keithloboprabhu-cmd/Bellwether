@@ -1,8 +1,8 @@
 # Bellwether policy audit
 
-Checked 2026-11-01T19:45:22.413873+00:00; source/data fingerprint `c85f0117bf7f73f8`.
+Checked 2026-11-01T22:00:28.188070+00:00; source/data fingerprint `2c3c3291bd11d2fe`.
 
-72 industry policies and 10 macro shocks. 261 industry input cases; 394 coefficient/exposure endpoint cases; 42 macro input cases. 0 failures.
+72 industry policies and 10 macro shocks. 261 industry input cases; 392 coefficient/exposure endpoint cases; 42 macro input cases. 0 failures.
 
 1694 explicit industry-policy/company coverage decisions across 234 unique companies. Every decision is independently recorded in config/policy_company_coverage.yaml, including business rationale and default direction for covered firms. Missing/extra firms, missing expected impacts, wrong default directions and out-of-scope effects are failures. Scope checks also run at uncertainty endpoints, not only defaults. Macro shocks cover all 234 companies and their uncertain-driver endpoints.
 
@@ -77,7 +77,7 @@ This is an internal model audit, not independent assurance, causal policy attrib
 | tmt/digital_services_tax | 6/33 | 3 | 6 | PASS |
 | tmt/semiconductor_tariffs | 20/33 | 3 | 6 | PASS |
 | tmt/us_corporate_tax_tmt | 28/33 | 2 | 2 | PASS |
-| transportation_logistics/airline_bag_fee_cap | 4/20 | 3 | 4 | PASS |
+| transportation_logistics/airline_bag_fee_cap | 4/20 | 3 | 2 | PASS |
 | transportation_logistics/airline_ticket_tax_change | 4/20 | 4 | 4 | PASS |
 | transportation_logistics/auto_import_tariffs | 17/20 | 3 | 6 | PASS |
 | transportation_logistics/carbon_tax_transport_fuel | 17/20 | 3 | 8 | PASS |
@@ -182,6 +182,7 @@ Loss of aid eligibility reduces enrollment at exposed programs.
 Affected: LOPE, CVSA, STRA, COUR, UTI, PRDO, APEI, LINC.
 Neutral in direct channels: LRN, DUOL, LAUR, NRDY, SKIL, CHGG, SCHL, KLC, BFAM, WLY, FC, SLM.
 20 estimated company exposure inputs; 20 narrow-business scope checks.
+- Reference: https://www.federalregister.gov/documents/2026/07/01/2026-13286/accountability-in-higher-education-and-access-through-demand--driven-workforce-pell-student-tuition
 - Reference: https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
 - Reference: https://ticas.org/accountability/earnings-metric-final-rule-blog/
 - Reference: https://www.nasfaa.org/uploads/documents/Ppt3_ResultsofEarningsTestandGEChanges_v2.pdf
@@ -357,6 +358,7 @@ Binding late-fee cap lowers issuer fee revenue.
 Affected: JPM, BAC, WFC, C, AXP, USB, PNC, TFC, COF, FITB, HBAN, KEY.
 Neutral in direct channels: GS, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
 30 estimated company exposure inputs; 30 narrow-business scope checks.
+- Reference: https://www.consumerfinance.gov/compliance/compliance-resources/consumer-cards-resources/credit-card-penalty-fees/
 - Reference: https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
 - Reference: https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court
 
@@ -418,6 +420,7 @@ Eligibility loss reduces Medicaid premium and provider-volume revenue.
 Affected: UNH, ELV, HUM, CVS, CNC, MOH, HCA, THC, UHS.
 Neutral in direct channels: PFE, LLY, CI, JNJ, MRK, ABBV, AMGN, GILD, TMO, ABT, MDT, CAH, COR, ISRG, MCK.
 20 estimated company exposure inputs; 24 narrow-business scope checks.
+- Reference: https://www.cms.gov/newsroom/fact-sheets/medicaid-community-engagement-requirement-certain-individuals-interim-final-rule-comment-period-cms
 - Reference: https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf
 - Reference: https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
 
@@ -705,6 +708,7 @@ Broadband subsidies raise access-provider subscriber spending.
 Affected: VZ, T, CMCSA.
 Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
 33 estimated company exposure inputs; 33 narrow-business scope checks.
+- Reference: https://consumercomplaints.fcc.gov/hc/en-us/articles/32636130998420-CONSUMER-ADVISORY-FEDERAL-COMMUNICATIONS-COMMISSION-WARNS-CONSUMERS-ABOUT-WEBSITES-ADVERTISING-THE-AFFORDABLE-CONNECTIVITY-PROGRAM
 - Reference: https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
 
 ### tmt/chip_export_controls
@@ -724,6 +728,7 @@ Credit applies to qualifying estimated US manufacturing capex, including Intel/M
 Affected: INTC, MU.
 Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, AMD, QCOM, AVGO, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
 33 estimated company exposure inputs; 33 narrow-business scope checks.
+- Reference: https://www.irs.gov/credits-deductions/advanced-manufacturing-investment-credit
 - Reference: https://www.law.cornell.edu/uscode/text/26/48D
 
 ### tmt/data_privacy_mandate
@@ -774,9 +779,9 @@ Binding baggage cap reduces airline ancillary revenue.
 
 Affected: DAL, UAL, AAL, LUV.
 Neutral in direct channels: UPS, FDX, UNP, TSLA, GM, F, RIVN, CHRW, JBHT, ODFL, XPO, SAIA, CSX, NSC, UBER, LYFT.
-20 estimated company exposure inputs; 20 narrow-business scope checks.
-- AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: tl_checked_bag_fee_revenue_share. Review reported earnings, exposure denominator and linear transmission before use.
-- Reference: https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+16 estimated company exposure inputs; 20 narrow-business scope checks.
+- AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use.
+- Reference: https://www.bts.gov/topics/airlines-and-airports/baggage-fees-airline-2025
 - Reference: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
 
 ### transportation_logistics/airline_ticket_tax_change
@@ -785,8 +790,8 @@ Higher ticket tax reduces demand and modeled fare retention.
 
 Affected: DAL, UAL, AAL, LUV.
 Neutral in direct channels: UPS, FDX, UNP, TSLA, GM, F, RIVN, CHRW, JBHT, ODFL, XPO, SAIA, CSX, NSC, UBER, LYFT.
-19 estimated company exposure inputs; 20 narrow-business scope checks.
-- AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: tl_domestic_passenger_revenue_share. Review reported earnings, exposure denominator and linear transmission before use.
+18 estimated company exposure inputs; 20 narrow-business scope checks.
+- AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use.
 - Reference: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
 - Reference: https://WWW.CAA.CO.UK/media/qcrcutdj/annex-3-stansted-s-own-airport-charge-elasticity-a-summary-of-the-evidence-and-research.pdf
 
@@ -821,6 +826,7 @@ Buyer incentive increases covered US EV demand.
 Affected: TSLA, GM, F, RIVN.
 Neutral in direct channels: UPS, FDX, UNP, DAL, CHRW, JBHT, ODFL, XPO, SAIA, CSX, NSC, UAL, AAL, LUV, UBER, LYFT.
 20 estimated company exposure inputs; 0 narrow-business scope checks.
+- Reference: https://www.irs.gov/clean-vehicle-tax-credits
 - Reference: https://www.nber.org/papers/w25359
 - Reference: https://www.coxautoinc.com/insights/dec-2025-atp-report/
 - Reference: https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/

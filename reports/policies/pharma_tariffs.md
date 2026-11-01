@@ -1,6 +1,6 @@
 # Tariffs on imported pharmaceuticals
 
-Policy `healthcare/pharma_tariffs` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `healthcare/pharma_tariffs` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

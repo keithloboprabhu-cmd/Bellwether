@@ -1,6 +1,6 @@
 # Carbon price on transport fuel
 
-Policy `transportation_logistics/carbon_tax_transport_fuel` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `transportation_logistics/carbon_tax_transport_fuel` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -1,6 +1,6 @@
 # Visa fee / tourist entry tax
 
-Policy `real_estate_hospitality/visa_fee_tourism_tax` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `real_estate_hospitality/visa_fee_tourism_tax` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

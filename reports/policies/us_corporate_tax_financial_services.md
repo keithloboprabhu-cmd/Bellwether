@@ -1,6 +1,6 @@
 # US corporate tax rate increase — book-income proxy
 
-Policy `financial_services/us_corporate_tax_financial_services` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `financial_services/us_corporate_tax_financial_services` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

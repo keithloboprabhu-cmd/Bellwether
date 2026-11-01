@@ -1,12 +1,12 @@
 # Broadband affordability subsidy (ACP revival)
 
-Policy `tmt/broadband_affordability_subsidy` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `tmt/broadband_affordability_subsidy` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
 Configured mechanics below are a model specification, not a certification of current law. Current legal thresholds, exemptions, effective dates and phase-ins have not all been independently verified. Treat unresolved legal scope as a failure, not an implicit approval.
 
-A revived Affordable Connectivity Program pays low-income households a monthly discount on internet service. Verizon gains from subscribers it keeps or adds; the other five companies have no direct exposure.
+Hypothetically revives the Affordable Connectivity Program, which ended in June 2024. Providers with modeled subscriber exposure receive only the estimated incremental or retained revenue; the portion replacing existing customer payments is excluded. Current carrier shares and forward retention remain uncertain.
 
 Duration: `years:3`. Default inputs: `{"households_m": 23.0, "monthly_benefit": 30.0}`.
 
@@ -18,6 +18,7 @@ Threshold expressions are shown literally so omissions are reviewable. Input bou
 
 Policy references (a citation is not numeric verification):
 
+- https://consumercomplaints.fcc.gov/hc/en-us/articles/32636130998420-CONSUMER-ADVISORY-FEDERAL-COMMUNICATIONS-COMMISSION-WARNS-CONSUMERS-ABOUT-WEBSITES-ADVERTISING-THE-AFFORDABLE-CONNECTIVITY-PROGRAM
 - https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
 
 | Company | Configured status | Basis |

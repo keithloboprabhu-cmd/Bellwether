@@ -1,6 +1,6 @@
 # Critical-minerals production credit
 
-Policy `energy_resources/critical_minerals_credit` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/critical_minerals_credit` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

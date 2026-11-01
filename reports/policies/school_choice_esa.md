@@ -1,6 +1,6 @@
 # School choice expansion (ESAs, vouchers, tax-credit scholarships)
 
-Policy `education/school_choice_esa` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `education/school_choice_esa` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

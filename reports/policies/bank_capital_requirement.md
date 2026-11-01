@@ -1,6 +1,6 @@
 # Higher bank capital requirements (CET1)
 
-Policy `financial_services/bank_capital_requirement` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `financial_services/bank_capital_requirement` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -23,7 +23,7 @@ def main() -> None:
             rows.append(dict(company=c.ticker,industry=p.industry,policy=key,status=status,declared_status=declared,default_earnings_or_value_effect=effect,dNI=c.dNI,dEPS=c.dEPS,dP=c.dP,reason=d['reason']))
     path=ROOT/'reports/coverage_matrix.csv'
     with path.open('w',newline='') as h:
-        w=csv.DictWriter(h,fieldnames=list(rows[0]));w.writeheader();w.writerows(sorted(rows,key=lambda r:(r['company'],r['policy'])))
+        w=csv.DictWriter(h,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(sorted(rows,key=lambda r:(r['company'],r['policy'])))
     gaps=sorted(set(load_universe().all_tickers)-covered)
     reasons={
         'BLK':'Asset management is not principal trading. Domestic pretax source excludes noncontrolling interests, while the engine apportions minority income separately; reconciliation pending. No guessed investment-rate sensitivity.',

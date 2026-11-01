@@ -20,7 +20,7 @@ assumptions:
     base: 0.9
     high: 1.0
     source: estimate
-    rationale: Buildings and land used mainly for chip manufacturing qualify under 48D, but office and shared infrastructure do not.
+    rationale: Estimated qualifying share; section 48D requires depreciable or amortizable tangible manufacturing property placed in service. Land is not depreciable; office and unrelated administrative portions are excluded. Annual cash capex is not the same as the tax basis of eligible property placed in service.
 channels:
   - type: tax_credit
     label: Investment credit on US chip-manufacturing capex
@@ -29,6 +29,7 @@ channels:
       base_musd: exposure.us_semis_mfg_capex_musd * assumption.qualifying_share
 exposure_keys: [us_semis_mfg_capex_musd]
 references:
+  - https://www.irs.gov/credits-deductions/advanced-manufacturing-investment-credit
   - https://www.law.cornell.edu/uscode/text/26/48D
 narrative:
   extra: "Direct benefits apply to modeled Intel and Micron US manufacturing investment. Supplier-price spillovers and the timing of actual tax claims are not modeled."

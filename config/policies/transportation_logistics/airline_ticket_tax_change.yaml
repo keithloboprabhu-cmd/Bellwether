@@ -1,7 +1,7 @@
 id: airline_ticket_tax_change
 industry: transportation_logistics
 name: Change in the domestic airline ticket tax
-description: Raises or lowers the 7.5% federal excise tax on domestic airfares, which funds the Airport and Airway Trust Fund. Only Delta is exposed in this universe; the 6.25% air cargo waybill tax is not changed.
+description: Raises or lowers the federal percentage tax on taxable passenger air transportation from a 7.5% reference. American, Delta, United and Southwest have modeled passenger exposure; geographic passenger revenue is a proxy for the taxable fare base. The separate cargo and segment taxes are not changed.
 persistence: permanent
 user_inputs:
   - key: d_tax_pts

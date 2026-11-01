@@ -1,6 +1,6 @@
 # Limit 1031 like-kind exchanges
 
-Policy `real_estate_hospitality/like_kind_exchange_limits` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `real_estate_hospitality/like_kind_exchange_limits` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

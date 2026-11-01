@@ -1,6 +1,6 @@
 # Clean-energy tax credit change
 
-Policy `energy_resources/clean_energy_credits_change` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/clean_energy_credits_change` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

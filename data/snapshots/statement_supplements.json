@@ -1097,5 +1097,25 @@
         "rationale": "Class A EPS and total class-A-equivalent diluted shares. Other classes convert at the filing-disclosed equivalents; no raw A/B counts or prices are mixed."
       }
     }
+  },
+  "831641": {
+    "ticker": "TTEK",
+    "period_end": "2025-09-28",
+    "items": {
+      "cost_of_revenue": {
+        "value": 4481.246,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/ttek-20250928.htm",
+        "accessed": "2026-11-01",
+        "document_location": "Consolidated Statements of Income, FY2025: subcontractor costs 825.230M + other costs of revenue 3656.016M; equals revenue 5442.590M minus gross profit 961.344M",
+        "rationale": "Generic CostOfGoodsAndServicesSold tag is subcontractors only; both actual revenue cost lines are required. This reported gross-cost margin is not independently verified incremental contribution margin."
+      },
+      "sga": {
+        "value": 357.737,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/ttek-20250928.htm",
+        "accessed": "2026-11-01",
+        "document_location": "Consolidated Statements of Income FY2025 / Selling, general and administrative expenses",
+        "rationale": "Exact reported SG&A; not included in reported revenue costs."
+      }
+    }
   }
 }

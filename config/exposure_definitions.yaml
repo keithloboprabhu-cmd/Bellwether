@@ -507,6 +507,11 @@ exposures:
     min: 0
     max: 1
   # ---- transportation_logistics
+  - key: tl_global_fuel_gallons_m
+    label: Reviewed global fuel consumption (million gallons)
+    unit: number
+    help: Reported global annual fuel gallons. Zero means no reviewed measurement and selects the existing CO2-based oil-shock fallback; it does not assert zero fuel use. This is separate from US-only carbon-tax exposure.
+    min: 0
   - key: tl_fuel_co2_mt
     label: CO2 from fuel burned in the US (million tonnes)
     unit: number

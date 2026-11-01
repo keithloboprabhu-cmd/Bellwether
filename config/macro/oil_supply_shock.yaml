@@ -78,7 +78,7 @@ industry_effects:
       WMB: neutral
     default_role: domestic_producer
   transportation_logistics:
-    reason: Fuel is a large cost for airlines and truckers; surcharges recover part of it.
+    reason: Reviewed global gallons are used for the four passenger airlines. Other carriers retain the CO2-derived fuel proxy with unresolved geographic coverage. Fuel-price transmission and surcharge recovery remain estimates.
     assumptions:
     - key: gal_per_t_co2
       label: Gallons of fuel per tonne of CO2 emitted
@@ -104,11 +104,12 @@ industry_effects:
       params:
         exposed_cost_share: 0
         shock_pct: 0
-        dcost_musd: exposure.tl_fuel_co2_mt * assumption.gal_per_t_co2 * input.d_brent_usd / 42
+        dcost_musd: (exposure.tl_global_fuel_gallons_m if exposure.tl_global_fuel_gallons_m > 0 else exposure.tl_fuel_co2_mt * assumption.gal_per_t_co2) * input.d_brent_usd / 42
         pass_through: exposure.tl_fuel_cost_recovery_share
         elasticity: assumption.elasticity
         variable_cost_share: assumption.variable_cost_share
     exposure_keys:
+    - tl_global_fuel_gallons_m
     - tl_fuel_co2_mt
     - tl_fuel_cost_recovery_share
   industrials:

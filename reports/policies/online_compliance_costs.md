@@ -1,6 +1,6 @@
 # Online education compliance costs
 
-Policy `education/online_compliance_costs` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `education/online_compliance_costs` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

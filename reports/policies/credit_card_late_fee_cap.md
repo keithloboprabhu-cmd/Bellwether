@@ -1,6 +1,6 @@
 # Credit card late-fee cap
 
-Policy `financial_services/credit_card_late_fee_cap` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `financial_services/credit_card_late_fee_cap` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -18,6 +18,7 @@ Threshold expressions are shown literally so omissions are reviewable. Input bou
 
 Policy references (a citation is not numeric verification):
 
+- https://www.consumerfinance.gov/compliance/compliance-resources/consumer-cards-resources/credit-card-penalty-fees/
 - https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
 - https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court
 

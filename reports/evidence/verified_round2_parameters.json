@@ -1,0 +1,122 @@
+[
+  {
+    "parameter": "exposure.tl_checked_bag_fee_revenue_share",
+    "company": "DAL",
+    "value": 0.017199545483239695,
+    "low": 0.017199545483239695,
+    "high": 0.017199545483239695,
+    "source_url": "https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx",
+    "document_location": "BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Delta row; annual sum $1089.832000M; SEC FY2025 total revenue $63364.0M",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption."
+  },
+  {
+    "parameter": "exposure.tl_checked_bag_fee_revenue_share",
+    "company": "AAL",
+    "value": 0.02682150334047188,
+    "low": 0.02682150334047188,
+    "high": 0.02682150334047188,
+    "source_url": "https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx",
+    "document_location": "BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, American row; annual sum $1465.339192M; SEC FY2025 total revenue $54633.0M",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption."
+  },
+  {
+    "parameter": "exposure.tl_checked_bag_fee_revenue_share",
+    "company": "UAL",
+    "value": 0.022876284797697648,
+    "low": 0.022876284797697648,
+    "high": 0.022876284797697648,
+    "source_url": "https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx",
+    "document_location": "BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, United row; annual sum $1351.302143M; SEC FY2025 total revenue $59070.0M",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption."
+  },
+  {
+    "parameter": "exposure.tl_checked_bag_fee_revenue_share",
+    "company": "LUV",
+    "value": 0.020753875209350393,
+    "low": 0.020753875209350393,
+    "high": 0.020753875209350393,
+    "source_url": "https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx",
+    "document_location": "BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Southwest row; annual sum $582.416000M; SEC FY2025 total revenue $28063.0M",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption. Southwest introduced broad checked-bag charges during 2025; this partial-year observation is not an annualized steady-state forecast."
+  },
+  {
+    "parameter": "exposure.tl_domestic_passenger_revenue_share",
+    "company": "AAL",
+    "value": 0.6443175370197499,
+    "low": 0.6443175370197499,
+    "high": 0.6443175370197499,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/0000006201-26-000014-index.htm",
+    "document_location": "AAL FY2025 Form 10-K, geographic passenger revenue: domestic $35201M / total $54633.0M",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare base. Statutory ticket-tax exclusions and US-border rules are not separately quantified."
+  },
+  {
+    "parameter": "exposure.tl_domestic_passenger_revenue_share",
+    "company": "DAL",
+    "value": 0.5639006375860109,
+    "low": 0.5639006375860109,
+    "high": 0.5639006375860109,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/0000027904-26-000013-index.htm",
+    "document_location": "DAL FY2025 Form 10-K, geographic passenger revenue: domestic $35731M / total $63364.0M",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare base. Statutory ticket-tax exclusions and US-border rules are not separately quantified."
+  },
+  {
+    "parameter": "exposure.tl_global_fuel_gallons_m",
+    "company": "DAL",
+    "value": 4269,
+    "low": 4269,
+    "high": 4269,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm",
+    "document_location": "DAL FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption (millions of gallons)",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Reported historical global consumption, including contracted regional operations where disclosed. Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price change and future volume remain unverified."
+  },
+  {
+    "parameter": "exposure.tl_global_fuel_gallons_m",
+    "company": "UAL",
+    "value": 4663,
+    "low": 4663,
+    "high": 4663,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000023/ual-20251231.htm",
+    "document_location": "UAL FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption (millions of gallons)",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Reported historical global consumption, including contracted regional operations where disclosed. Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price change and future volume remain unverified."
+  },
+  {
+    "parameter": "exposure.tl_global_fuel_gallons_m",
+    "company": "AAL",
+    "value": 4488,
+    "low": 4488,
+    "high": 4488,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/aal-20251231.htm",
+    "document_location": "AAL FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption (millions of gallons)",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Reported historical global consumption, including contracted regional operations where disclosed. Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price change and future volume remain unverified."
+  },
+  {
+    "parameter": "exposure.tl_global_fuel_gallons_m",
+    "company": "LUV",
+    "value": 2169,
+    "low": 2169,
+    "high": 2169,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/luv-20251231.htm",
+    "document_location": "LUV FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption (millions of gallons)",
+    "date_accessed": "2026-11-01",
+    "verified": "Y",
+    "verification_basis": "Reported historical global consumption, including contracted regional operations where disclosed. Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price change and future volume remain unverified."
+  }
+]

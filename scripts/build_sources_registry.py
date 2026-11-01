@@ -73,7 +73,7 @@ def main() -> None:
             source_url=source, document_location=location, date_accessed="2026-10-31" if verified == "Y" else "",
             verified=verified, verification_basis="Statutory rule" if verified == "Y" else "UNVERIFIED empirical convention; explicitly documented, not a reported company rate."))
     checked = {}
-    for path in [ROOT / 'data/universe_sources/verified_tax_parameters.json', ROOT / 'reports/evidence/verified_bank_parameters.json']:
+    for path in [ROOT / 'data/universe_sources/verified_tax_parameters.json', ROOT / 'reports/evidence/verified_bank_parameters.json', ROOT / 'reports/evidence/verified_round2_parameters.json']:
         if path.exists():
             checked.update({(r['parameter'], r['company']): r for r in json.loads(path.read_text())})
     rows = [checked.pop((r['parameter'], r['company']), r) for r in rows]
@@ -100,7 +100,7 @@ def main() -> None:
             document_location='Award-year maximum annual Pell Grant, full-time schedule',date_accessed='2026-10-31',verified='Y',verification_basis='Published award maximum; not a company-specific revenue sensitivity.'))
     path = ROOT / "data/sources_registry.csv"
     with path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=FIELDS, lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
     print(f"{len(rows)} source rows; {sum(r['verified'] == 'Y' for r in rows)} verified exact facts/rules")

@@ -1,6 +1,6 @@
 # Carbon price on direct emissions
 
-Policy `energy_resources/carbon_price` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/carbon_price` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -1,6 +1,6 @@
 # Government shutdown
 
-Policy `public_sector/government_shutdown` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/government_shutdown` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -90,9 +90,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.affected_share | -0.0012700245 | -0.0047625919 | 0.0034925674 |
-| assumption.recovery_share | -0.0041981365 | -0.0017992014 | 0.0023989352 |
-| exposure.govcon_services_share | -0.0020883378 | -0.0031365833 | 0.0010482455 |
+| assumption.affected_share | -0.0011305076 | -0.0042394034 | 0.0031088958 |
+| assumption.recovery_share | -0.0037369556 | -0.0016015524 | 0.0021354032 |
+| exposure.govcon_services_share | -0.001940101 | -0.0028137566 | 0.0008736556 |
 
 Dominant configured driver: `affected_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

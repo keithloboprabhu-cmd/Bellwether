@@ -1,12 +1,12 @@
 # Change in the domestic airline ticket tax
 
-Policy `transportation_logistics/airline_ticket_tax_change` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `transportation_logistics/airline_ticket_tax_change` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
 Configured mechanics below are a model specification, not a certification of current law. Current legal thresholds, exemptions, effective dates and phase-ins have not all been independently verified. Treat unresolved legal scope as a failure, not an implicit approval.
 
-Raises or lowers the 7.5% federal excise tax on domestic airfares, which funds the Airport and Airway Trust Fund. Only Delta is exposed in this universe; the 6.25% air cargo waybill tax is not changed.
+Raises or lowers the federal percentage tax on taxable passenger air transportation from a 7.5% reference. American, Delta, United and Southwest have modeled passenger exposure; geographic passenger revenue is a proxy for the taxable fare base. The separate cargo and segment taxes are not changed.
 
 Duration: `permanent`. Default inputs: `{"d_tax_pts": 2.5}`.
 
@@ -51,9 +51,9 @@ Exact numeric checks are distinguished from filing links and estimates. UNVERIFI
 
 | Company | Exposure | Base | Low | High | Exact-source status | Primary source / location / rationale |
 |---|---|---:|---:|---:|---|---|
-| DAL | tl_domestic_passenger_revenue_share | 0.564 | 0.564 | 0.564 | UNVERIFIED | https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm · Delta 2025 10-K: domestic passenger revenue $35,731M of $63,364M total operating revenue;  · unavailable |
+| DAL | tl_domestic_passenger_revenue_share | 0.56390064 | 0.56390064 | 0.56390064 | VERIFIED observation; conversion limits retained | https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/0000027904-26-000013-index.htm · DAL FY2025 Form 10-K, geographic passenger revenue: domestic $35731M / total $63364.0M · Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare base. Statutory ticket-tax exclusions and US-border rules are not separately quantified. |
 | UAL | tl_domestic_passenger_revenue_share | 0.564 | 0.564 | 0.564 | UNVERIFIED | No source URL · estimate; Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. · Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. |
-| AAL | tl_domestic_passenger_revenue_share | 0.564 | 0.564 | 0.564 | UNVERIFIED | No source URL · estimate; Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. · Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. |
+| AAL | tl_domestic_passenger_revenue_share | 0.64431754 | 0.64431754 | 0.64431754 | VERIFIED observation; conversion limits retained | https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/0000006201-26-000014-index.htm · AAL FY2025 Form 10-K, geographic passenger revenue: domestic $35201M / total $54633.0M · Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare base. Statutory ticket-tax exclusions and US-border rules are not separately quantified. |
 | LUV | tl_domestic_passenger_revenue_share | 0.564 | 0.564 | 0.564 | UNVERIFIED | No source URL · estimate; Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. · Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. |
 
 ## C. Published sensitivity benchmark
@@ -74,16 +74,16 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.consumer_incidence | -0.03273055 | -0.0042084954 | 0.028522055 |
-| assumption.elasticity | -0.01768043 | -0.020836801 | 0.0031563715 |
+| assumption.consumer_incidence | -0.033848758 | -0.0042553498 | 0.029593408 |
+| assumption.elasticity | -0.018254176 | -0.021445688 | 0.0031915123 |
 
 Dominant configured driver: `consumer_incidence` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 
-- REVIEW AAL: EPS -124.4%; Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: tl_domestic_passenger_revenue_share. Review reported earnings, exposure denominator and linear transmission before use. Default scenario; realistic range not independently verified.
+- REVIEW AAL: EPS -142.1%; Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use. Default scenario; realistic range not independently verified.
 
 ## F. Verdict and parameter changes
 
-**FAIL-UNRESOLVED**. 4 unchecked in-scope exposure values; 2 unchecked assumptions; 0 matched numerical benchmark comparisons. Internal accounting/scope errors: 0.
+**FAIL-UNRESOLVED**. 2 unchecked in-scope exposure values; 2 unchecked assumptions; 0 matched numerical benchmark comparisons. Internal accounting/scope errors: 0.
 
 A recalibrated coefficient does not make the entire policy pass. Unchecked thresholds, realistic ranges, company coverage, duration or a missing matched benchmark remain open.
 

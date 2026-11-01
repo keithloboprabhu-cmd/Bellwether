@@ -157,41 +157,41 @@ Baseline R=54633; C=53166; PTI=190; tax=0.266897747; parent share=1; diluted sha
 
 **price**: configured expressions `{"d_price": "-input.fee_cut_pct / 100", "exposed_revenue_share": "exposure.tl_checked_bag_fee_revenue_share", "offset_share": "assumption.fare_recapture"}`.
 
-Evaluated parameters: `{"d_price": -0.5, "exposed_revenue_share": 0.0167, "offset_share": 0.5}`.
+Evaluated parameters: `{"d_price": -0.5, "exposed_revenue_share": 0.02682150334047188, "offset_share": 0.5}`.
 
-- ΔR = 54633 × 0.0167 × -0.5 = -456.18555; ΔEBIT = ΔR × (1−0.5) = -228.092775
+- ΔR = 54633 × 0.02682150334 × -0.5 = -732.669596; ΔEBIT = ΔR × (1−0.5) = -366.334798
 
 Combined forward tax rate = clip(0.266897747 + 0,0,1) = 0.266897747.
 
-ΔNI = sum[(ΔEBIT−Δinterest) × (1−tax new) + direct after-tax items + PTI × tax-rate change] × parent share = **-167.2153273M**.
+ΔNI = sum[(ΔEBIT−Δinterest) × (1−tax new) + direct after-tax items + PTI × tax-rate change] × parent share = **-268.5608658M**.
 
-ΔEPS = -167.2153273 / 661.052 = **$-0.2529533641** (engine $-0.2529533641).
+ΔEPS = -268.5608658 / 661.052 = **$-0.4062628443** (engine $-0.4062628443).
 
 Valuation: each channel uses its own duration (permanent: supported P/E; one-time: 1; fixed years: annual discount factors at 9%), plus direct value per economic share and direct value percentage × price. Raw Δprice=None; floor-adjusted Δprice=None; engine Δprice=None.
 
-Cent comparison: EPS -0.25 = -0.25; price both unavailable. **PASS arithmetic**.
+Cent comparison: EPS -0.41 = -0.41; price both unavailable. **PASS arithmetic**.
 
 ## 8. Public Sector (government contractors) / continuing_resolution / TTEK
 
 Inputs: `{"months_delayed": 3.0}`. Role: `neutral`. Annual source: https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/0000831641-25-000032-index.htm.
 
-Baseline R=5442.59; C=825.23; PTI=377.617; tax=0.3433849641; parent share=0.9990925553; diluted shares=267.123; price=36.98; valuation P/E=39.76344086021505 (reported_eps).
+Baseline R=5442.59; C=4481.246; PTI=377.617; tax=0.3433849641; parent share=0.9990925553; diluted shares=267.123; price=36.98; valuation P/E=39.76344086021505 (reported_eps).
 
 **gov_cr**: configured expressions `{"gov_revenue_share": "exposure.govcon_us_gov_share", "months_delayed": "input.months_delayed", "new_award_share": "assumption.new_award_share"}`.
 
 Evaluated parameters: `{"fixed_cost_absorption": 1.0, "gov_revenue_share": 0.956, "months_delayed": 3.0, "new_award_share": 0.1}`.
 
-- Government channel gov_cr, evaluated parameters below: ΔR=-130.077901; ΔEBIT=ΔR × margin 0.8483754977 × absorption 1 = -110.354904
+- Government channel gov_cr, evaluated parameters below: ΔR=-130.077901; ΔEBIT=ΔR × margin 0.1766335513 × absorption 1 = -22.9761216
 
 Combined forward tax rate = clip(0.3433849641 + 0,0,1) = 0.3433849641.
 
-ΔNI = sum[(ΔEBIT−Δinterest) × (1−tax new) + direct after-tax items + PTI × tax-rate change] × parent share = **-72.39493518M**.
+ΔNI = sum[(ΔEBIT−Δinterest) × (1−tax new) + direct after-tax items + PTI × tax-rate change] × parent share = **-15.07277677M**.
 
-ΔEPS = -72.39493518 / 267.123 = **$-0.2710172287** (engine $-0.2710172287).
+ΔEPS = -15.07277677 / 267.123 = **$-0.05642635331** (engine $-0.05642635331).
 
-Valuation: each channel uses its own duration (permanent: supported P/E; one-time: 1; fixed years: annual discount factors at 9%), plus direct value per economic share and direct value percentage × price. Raw Δprice=-0.27101722869864514; floor-adjusted Δprice=-0.27101722869864514; engine Δprice=-0.27101722869864514.
+Valuation: each channel uses its own duration (permanent: supported P/E; one-time: 1; fixed years: annual discount factors at 9%), plus direct value per economic share and direct value percentage × price. Raw Δprice=-0.056426353307099796; floor-adjusted Δprice=-0.056426353307099796; engine Δprice=-0.056426353307099796.
 
-Cent comparison: EPS -0.27 = -0.27; price -0.27 = -0.27. **PASS arithmetic**.
+Cent comparison: EPS -0.06 = -0.06; price -0.06 = -0.06. **PASS arithmetic**.
 
 ## 9. Real Estate & Hospitality / like_kind_exchange_limits / EXR
 

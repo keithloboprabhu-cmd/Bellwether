@@ -1,6 +1,6 @@
 # Higher tariffs on imported steel
 
-Policy `industrials/steel_tariffs` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `industrials/steel_tariffs` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

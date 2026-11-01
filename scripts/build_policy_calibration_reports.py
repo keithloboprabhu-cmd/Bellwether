@@ -54,6 +54,8 @@ def main() -> None:
     bench_path=ROOT/'reports/evidence/published_benchmarks.json'
     benchmarks=json.loads(bench_path.read_text()) if bench_path.exists() else []
     changes=json.loads((ROOT/'reports/evidence/bank_parameter_changes.json').read_text())
+    round2_changes=ROOT/'reports/evidence/round2_parameter_changes.json'
+    if round2_changes.exists():changes+=json.loads(round2_changes.read_text())
     audit=json.loads((ROOT/'design/reviews/policy-audit.json').read_text());internal={r['policy']:r for r in audit['policies']}
     all_checks=[];scorecard=[];ids=[p.id for p in reg.policies.values()]
     if len(ids)!=len(set(ids)):raise ValueError('Policy IDs collide; reports cannot be overwritten')
@@ -91,7 +93,7 @@ def main() -> None:
                 before=next((v['base'] for v in old.get('assumptions',[]) if v['key']==a.key),None)
                 if before!=a.base:changed.append(dict(ticker='ALL',parameter=a.key,before=before,after=a.base,source_url=a.source_url,location=a.source))
         if complete and changed:verdict='RECALIBRATED'
-        lines=[f'# {p.name}', '',f'Policy `{key}` · reviewed 2026-10-31 · **{verdict}**', '', '## A. Mechanics and scope', '',
+        lines=[f'# {p.name}', '',f'Policy `{key}` · evidence checkpoint 2026-11-01 · **{verdict}**', '', '## A. Mechanics and scope', '',
             ('Verified submitted text: S.Amdt.2428 (119th Congress), section 71117 proposed 21% → 28% for taxable years after 2025. This amendment was submitted, not enacted. The model covers only its rate provision using positive US book income as a taxable-income proxy. Credits, tax losses, AMT/GILTI and deferred-tax remeasurement are omitted. The direct after-tax channel does not remeasure the separately displayed effective tax-rate field.' if p.id.startswith('us_corporate_tax_') else 'Configured mechanics below are a model specification, not a certification of current law. Current legal thresholds, exemptions, effective dates and phase-ins have not all been independently verified. Treat unresolved legal scope as a failure, not an implicit approval.'), '',p.description,'',f'Duration: `{p.persistence}`. Default inputs: `{json.dumps(p.default_inputs(),sort_keys=True)}`.', '', '| Channel | Template/role limits | Parameters |','|---|---|---|']
         for c in p.channels:lines.append(f'| {c.type} | {safe(c.company_kinds)} / {safe(c.roles)} | {safe(json.dumps(c.params))} |')
         lines += ['', 'Threshold expressions are shown literally so omissions are reviewable. Input bounds alone do not establish a legal or realistic range.', '', 'Policy references (a citation is not numeric verification):','']
@@ -129,7 +131,7 @@ def main() -> None:
     (ROOT/'reports/policy_scorecard.json').write_text(json.dumps(scorecard,indent=2)+'\n')
     (ROOT/'reports/benchmark_checks.json').write_text(json.dumps(all_checks,indent=2)+'\n')
     with (ROOT/'reports/policy_scorecard.csv').open('w',newline='') as h:
-        w=csv.DictWriter(h,fieldnames=list(scorecard[0]));w.writeheader();w.writerows(scorecard)
+        w=csv.DictWriter(h,fieldnames=list(scorecard[0]),lineterminator='\n');w.writeheader();w.writerows(scorecard)
     print(f'{len(scorecard)} A–F reports; verdicts: {dict(Counter(s["verdict"] for s in scorecard))}; {len(all_checks)} published comparisons')
 
 

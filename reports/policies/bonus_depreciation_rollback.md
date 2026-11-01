@@ -1,6 +1,6 @@
 # Rolling back 100% bonus depreciation
 
-Policy `industrials/bonus_depreciation_rollback` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `industrials/bonus_depreciation_rollback` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

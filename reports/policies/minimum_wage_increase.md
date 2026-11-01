@@ -1,6 +1,6 @@
 # Federal minimum wage increase
 
-Policy `consumer_retail/minimum_wage_increase` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `consumer_retail/minimum_wage_increase` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -1,0 +1,190 @@
+industry: transportation_logistics
+companies:
+  UPS:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  FDX:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  UNP:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  DAL:
+    tl_global_fuel_gallons_m:
+      value: 4269
+      low: 4269
+      high: 4269
+      source: DAL FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption
+        (millions of gallons)
+      source_url: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
+      rationale: Reported historical global consumption, including contracted regional operations where disclosed.
+        Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price
+        change and future volume remain unverified.
+  TSLA:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  GM:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  F:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  RIVN:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  CHRW:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  JBHT:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  ODFL:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  XPO:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  SAIA:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  CSX:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  NSC:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  UAL:
+    tl_global_fuel_gallons_m:
+      value: 4663
+      low: 4663
+      high: 4663
+      source: UAL FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption
+        (millions of gallons)
+      source_url: https://www.sec.gov/Archives/edgar/data/100517/000010051726000023/ual-20251231.htm
+      rationale: Reported historical global consumption, including contracted regional operations where disclosed.
+        Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price
+        change and future volume remain unverified.
+  AAL:
+    tl_global_fuel_gallons_m:
+      value: 4488
+      low: 4488
+      high: 4488
+      source: AAL FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption
+        (millions of gallons)
+      source_url: https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/aal-20251231.htm
+      rationale: Reported historical global consumption, including contracted regional operations where disclosed.
+        Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price
+        change and future volume remain unverified.
+  LUV:
+    tl_global_fuel_gallons_m:
+      value: 2169
+      low: 2169
+      high: 2169
+      source: LUV FY2025 10-K fuel consumption / operating statistics; global mainline and regional fuel consumption
+        (millions of gallons)
+      source_url: https://www.sec.gov/Archives/edgar/data/92380/000009238026000004/luv-20251231.htm
+      rationale: Reported historical global consumption, including contracted regional operations where disclosed.
+        Not US-only taxable fuel. Fixed bounds identify the observation; a one-for-one Brent-to-jet/diesel price
+        change and future volume remain unverified.
+  UBER:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.
+  LYFT:
+    tl_global_fuel_gallons_m:
+      value: 0
+      low: 0
+      high: 0
+      source: estimate
+      rationale: No separately reviewed global gallon measurement in this audit. Zero selects the existing CO2-derived
+        fallback in the oil shock; it is not a claim of zero fuel consumption. That fallback retains US/geographic
+        and fuel-mix uncertainty.

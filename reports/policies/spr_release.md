@@ -1,6 +1,6 @@
 # Strategic Petroleum Reserve release
 
-Policy `energy_resources/spr_release` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/spr_release` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

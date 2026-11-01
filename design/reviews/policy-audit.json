@@ -1693,6 +1693,7 @@
       "estimate_exposures": 20,
       "scope_checks": 20,
       "references": [
+        "https://www.federalregister.gov/documents/2026/07/01/2026-13286/accountability-in-higher-education-and-access-through-demand--driven-workforce-pell-student-tuition",
         "https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/",
         "https://ticas.org/accountability/earnings-metric-final-rule-blog/",
         "https://www.nasfaa.org/uploads/documents/Ppt3_ResultsofEarningsTestandGEChanges_v2.pdf"
@@ -4977,6 +4978,7 @@
       "estimate_exposures": 30,
       "scope_checks": 30,
       "references": [
+        "https://www.consumerfinance.gov/compliance/compliance-resources/consumer-cards-resources/credit-card-penalty-fees/",
         "https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/",
         "https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court"
       ],
@@ -6502,6 +6504,7 @@
       "estimate_exposures": 20,
       "scope_checks": 24,
       "references": [
+        "https://www.cms.gov/newsroom/fact-sheets/medicaid-community-engagement-requirement-certain-individuals-interim-final-rule-comment-period-cms",
         "https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf",
         "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm"
       ],
@@ -12042,6 +12045,7 @@
       "estimate_exposures": 33,
       "scope_checks": 33,
       "references": [
+        "https://consumercomplaints.fcc.gov/hc/en-us/articles/32636130998420-CONSUMER-ADVISORY-FEDERAL-COMMUNICATIONS-COMMISSION-WARNS-CONSUMERS-ABOUT-WEBSITES-ADVERTISING-THE-AFFORDABLE-CONNECTIVITY-PROGRAM",
         "https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset"
       ],
       "company_checks": [
@@ -12615,6 +12619,7 @@
       "estimate_exposures": 33,
       "scope_checks": 33,
       "references": [
+        "https://www.irs.gov/credits-deductions/advanced-manufacturing-investment-credit",
         "https://www.law.cornell.edu/uscode/text/26/48D"
       ],
       "company_checks": [
@@ -14009,7 +14014,7 @@
       "policy": "transportation_logistics/airline_bag_fee_cap",
       "companies": 20,
       "input_cases": 3,
-      "driver_cases": 4,
+      "driver_cases": 2,
       "affected": [
         "DAL",
         "UAL",
@@ -14035,10 +14040,10 @@
         "LYFT"
       ],
       "value_only": false,
-      "estimate_exposures": 20,
+      "estimate_exposures": 16,
       "scope_checks": 20,
       "references": [
-        "https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html",
+        "https://www.bts.gov/topics/airlines-and-airports/baggage-fees-airline-2025",
         "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm"
       ],
       "company_checks": [
@@ -14186,17 +14191,17 @@
       "review_flags": [
         {
           "ticker": "AAL",
-          "eps_change": -1.487960965365303,
+          "eps_change": -2.389781437307619,
           "inputs": {
             "fee_cut_pct": 50.0
           },
-          "reason": "Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: tl_checked_bag_fee_revenue_share. Review reported earnings, exposure denominator and linear transmission before use.",
+          "reason": "Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use.",
           "range_basis": "Default scenario; realistic range not independently verified"
         }
       ],
       "rationale": "Binding baggage cap reduces airline ancillary revenue.",
       "warnings": [
-        "AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: tl_checked_bag_fee_revenue_share. Review reported earnings, exposure denominator and linear transmission before use."
+        "AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use."
       ],
       "errors": []
     },
@@ -14230,7 +14235,7 @@
         "LYFT"
       ],
       "value_only": false,
-      "estimate_exposures": 19,
+      "estimate_exposures": 18,
       "scope_checks": 20,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm",
@@ -14381,17 +14386,17 @@
       "review_flags": [
         {
           "ticker": "AAL",
-          "eps_change": -1.2439667289972471,
+          "eps_change": -1.4211162747553565,
           "inputs": {
             "d_tax_pts": 2.5
           },
-          "reason": "Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: tl_domestic_passenger_revenue_share. Review reported earnings, exposure denominator and linear transmission before use.",
+          "reason": "Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use.",
           "range_basis": "Default scenario; realistic range not independently verified"
         }
       ],
       "rationale": "Higher ticket tax reduces demand and modeled fare retention.",
       "warnings": [
-        "AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: tl_domestic_passenger_revenue_share. Review reported earnings, exposure denominator and linear transmission before use."
+        "AAL: REVIEW |EPS change| >50% at default. Reported EPS denominator 0.17; dominant NI channel: Base fares cut to absorb part of the tax; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use."
       ],
       "errors": []
     },
@@ -14829,6 +14834,7 @@
       "estimate_exposures": 20,
       "scope_checks": 0,
       "references": [
+        "https://www.irs.gov/clean-vehicle-tax-credits",
         "https://www.nber.org/papers/w25359",
         "https://www.coxautoinc.com/insights/dec-2025-atp-report/",
         "https://electrek.co/2026/01/06/gm-sold-twice-as-many-evs-as-ford-2025/"
@@ -15420,8 +15426,8 @@
     }
   ],
   "errors": [],
-  "fingerprint": "c85f0117bf7f73f8",
-  "checked_at": "2026-11-01T19:45:22.413873+00:00",
+  "fingerprint": "2c3c3291bd11d2fe",
+  "checked_at": "2026-11-01T22:00:28.188070+00:00",
   "company_policy_decisions": 1694,
   "unique_companies": 234
 }

@@ -1,6 +1,6 @@
 # US corporate tax rate increase — book-income proxy
 
-Policy `healthcare/us_corporate_tax_healthcare` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `healthcare/us_corporate_tax_healthcare` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

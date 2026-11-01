@@ -1,6 +1,6 @@
 # Return-to-office mandate
 
-Policy `real_estate_hospitality/return_to_office_mandate` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `real_estate_hospitality/return_to_office_mandate` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

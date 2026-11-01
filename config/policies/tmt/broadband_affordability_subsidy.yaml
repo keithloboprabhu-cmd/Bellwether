@@ -1,7 +1,7 @@
 id: broadband_affordability_subsidy
 industry: tmt
 name: Broadband affordability subsidy (ACP revival)
-description: A revived Affordable Connectivity Program pays low-income households a monthly discount on internet service. Verizon gains from subscribers it keeps or adds; the other five companies have no direct exposure.
+description: Hypothetically revives the Affordable Connectivity Program, which ended in June 2024. Providers with modeled subscriber exposure receive only the estimated incremental or retained revenue; the portion replacing existing customer payments is excluded. Current carrier shares and forward retention remain uncertain.
 persistence: "years: 3"
 user_inputs:
   - key: monthly_benefit
@@ -41,6 +41,7 @@ channels:
       capture_share: exposure.broadband_subsidy_capture_share
 exposure_keys: [broadband_subsidy_capture_share]
 references:
+  - https://consumercomplaints.fcc.gov/hc/en-us/articles/32636130998420-CONSUMER-ADVISORY-FEDERAL-COMMUNICATIONS-COMMISSION-WARNS-CONSUMERS-ABOUT-WEBSITES-ADVERTISING-THE-AFFORDABLE-CONNECTIVITY-PROGRAM
   - https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
 narrative:
   extra: "Even for Verizon the effect is small: the whole program is about $8B a year, against Verizon's $138B of revenue."

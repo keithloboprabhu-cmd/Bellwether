@@ -1,6 +1,6 @@
 # SNAP benefit cut or expansion
 
-Policy `consumer_retail/snap_benefit_change` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `consumer_retail/snap_benefit_change` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

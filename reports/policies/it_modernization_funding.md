@@ -1,6 +1,6 @@
 # Federal IT modernization funding
 
-Policy `public_sector/it_modernization_funding` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/it_modernization_funding` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -82,9 +82,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.outlay_share | 0.0022779358 | 0.0051253555 | 0.0028474197 |
-| exposure.govcon_fed_it_share | 0.0025934255 | 0.0053725706 | 0.0027791451 |
-| assumption.fed_it_market_musd | 0.0040718102 | 0.0031321617 | 0.00093964851 |
+| assumption.outlay_share | 0.0022583403 | 0.0050812657 | 0.0028229254 |
+| exposure.govcon_fed_it_share | 0.0025934255 | 0.0052770428 | 0.0026836173 |
+| assumption.fed_it_market_musd | 0.0040367833 | 0.0031052179 | 0.00093156538 |
 
 Dominant configured driver: `outlay_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

@@ -1,6 +1,6 @@
 # Financial transaction tax
 
-Policy `financial_services/financial_transaction_tax` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `financial_services/financial_transaction_tax` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

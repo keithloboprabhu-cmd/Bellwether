@@ -1,6 +1,6 @@
 # Tighter 90/10 rule (e.g. 85/15)
 
-Policy `education/ninety_ten_rule_change` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `education/ninety_ten_rule_change` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

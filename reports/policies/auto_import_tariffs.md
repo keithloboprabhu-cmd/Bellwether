@@ -1,6 +1,6 @@
 # Tariffs on imported vehicles and auto parts
 
-Policy `transportation_logistics/auto_import_tariffs` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `transportation_logistics/auto_import_tariffs` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

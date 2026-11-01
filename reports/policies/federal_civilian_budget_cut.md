@@ -1,6 +1,6 @@
 # Federal civilian budget cut
 
-Policy `public_sector/federal_civilian_budget_cut` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/federal_civilian_budget_cut` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -89,8 +89,8 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.contract_beta | -0.006969736 | -0.01742434 | 0.010454604 |
-| exposure.govcon_civilian_share | -0.0079614698 | -0.015054148 | 0.0070926778 |
+| assumption.contract_beta | -0.0063500299 | -0.015875075 | 0.0095250448 |
+| exposure.govcon_civilian_share | -0.0074225948 | -0.013302804 | 0.0058802092 |
 
 Dominant configured driver: `contract_beta` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

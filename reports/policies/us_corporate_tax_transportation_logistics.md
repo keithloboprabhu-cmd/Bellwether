@@ -1,6 +1,6 @@
 # US corporate tax rate increase — book-income proxy
 
-Policy `transportation_logistics/us_corporate_tax_transportation_logistics` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `transportation_logistics/us_corporate_tax_transportation_logistics` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

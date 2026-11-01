@@ -1,6 +1,6 @@
 # Bigger federal R&D tax credit
 
-Policy `industrials/rd_credit_expansion` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `industrials/rd_credit_expansion` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -209,7 +209,10 @@ def build_baseline(
     `cost_basis="total_costs_less_overhead"` sets cost of revenue = CostsAndExpenses − SG&A/G&A
     − R&D − D&A, for companies whose tagged cost of revenue omits large variable costs
     (Booz Allen reports subcontractor "billable expenses" on a separate, custom-tagged line). Values are
-    converted to $ millions / millions of shares. EPS stays in $ per share.
+    `cost_basis="revenue_less_gross_profit"` uses reported revenue minus gross profit
+    when the generic cost tag represents only a subcomponent (verified Tetra Tech
+    statement reconciliation). It must not be inferred for excise or premium-tax
+    gross-ups. Values are converted to $ millions / millions of shares. EPS stays in $ per share.
     """
     M = 1e6
     rev = _chain(facts, BANK_REVENUE_TAGS if kind == "bank" else REVENUE_TAGS)
@@ -354,6 +357,14 @@ def build_baseline(
                 fy.items["cost_of_revenue"] = ce_.value / M - overhead
                 fy.tags["cost_of_revenue"] = "= CostsAndExpenses − SG&A/G&A − R&D − D&A (config cost_basis)"
                 C = fy.items["cost_of_revenue"]
+            # Some issuers use a generic COGS tag for subcontractors only.
+            # Opt in only after reconciling the actual income statement. Do not
+            # apply this automatically to insurers or gross-up tax presentations.
+            if cost_basis == "revenue_less_gross_profit" and R is not None and gp.get(end) is not None:
+                C = R - gp[end].value / M
+                fy.items["cost_of_revenue"] = C
+                fy.tags["cost_of_revenue"] = "= Revenue − GrossProfit (verified full cost basis)"
+                fy.flags.append("full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent")
             # --- cost of revenue fallbacks
             if C is None and R is not None:
                 g, ce = gp.get(end), cae.get(end)

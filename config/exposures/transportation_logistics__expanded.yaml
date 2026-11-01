@@ -763,13 +763,14 @@ companies:
         Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     tl_checked_bag_fee_revenue_share:
-      value: 0.0167
-      low: 0.0158
-      high: 0.0182
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
-        median base and outer low/high from DAL in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      value: 0.022876284797697648
+      low: 0.022876284797697648
+      high: 0.022876284797697648
+      source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, United row; annual sum $1351.302143M
+      source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
+      rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption.
       applicable: true
     tl_domestic_passenger_revenue_share:
       value: 0.564
@@ -845,22 +846,23 @@ companies:
         Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     tl_checked_bag_fee_revenue_share:
-      value: 0.0167
-      low: 0.0158
-      high: 0.0182
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
-        median base and outer low/high from DAL in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      value: 0.02682150334047188
+      low: 0.02682150334047188
+      high: 0.02682150334047188
+      source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, American row; annual sum $1465.339192M
+      source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
+      rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption.
       applicable: true
     tl_domestic_passenger_revenue_share:
-      value: 0.564
-      low: 0.564
-      high: 0.564
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
-        median base and outer low/high from DAL in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      value: 0.6443175370197499
+      low: 0.6443175370197499
+      high: 0.6443175370197499
+      source: 'AAL FY2025 Form 10-K, geographic passenger revenue: domestic $35201M / total $54633.0M'
+      source_url: https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/0000006201-26-000014-index.htm
+      rationale: Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare
+        base. Statutory ticket-tax exclusions and US-border rules are not separately quantified.
       applicable: true
     tl_fuel_co2_mt:
       value: 28.02178681901395
@@ -927,13 +929,16 @@ companies:
         Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     tl_checked_bag_fee_revenue_share:
-      value: 0.0167
-      low: 0.0158
-      high: 0.0182
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
-        median base and outer low/high from DAL in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      value: 0.020753875209350393
+      low: 0.020753875209350393
+      high: 0.020753875209350393
+      source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Southwest row; annual sum $582.416000M
+      source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
+      rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption. Southwest introduced
+        broad checked-bag charges during 2025; this partial-year observation is not an annualized steady-state
+        forecast.
       applicable: true
     tl_domestic_passenger_revenue_share:
       value: 0.564

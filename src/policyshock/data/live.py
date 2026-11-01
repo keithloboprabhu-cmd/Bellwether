@@ -27,7 +27,7 @@ from policyshock.data.baseline import build_baseline, shares_outstanding
 
 CACHE = CACHE_DIR / "live/state.json"
 INTERVALS = {"quotes": 300, "fred": 3600, "financials": 21600}
-NORMALIZATION_VERSION = 'filing-audit-2026-10-31-v1'
+NORMALIZATION_VERSION = 'filing-audit-2026-11-01-v2'
 
 
 def _now() -> str:

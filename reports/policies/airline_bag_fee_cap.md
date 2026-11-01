@@ -1,12 +1,12 @@
 # Cap or ban on checked-bag fees
 
-Policy `transportation_logistics/airline_bag_fee_cap` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `transportation_logistics/airline_bag_fee_cap` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
 Configured mechanics below are a model specification, not a certification of current law. Current legal thresholds, exemptions, effective dates and phase-ins have not all been independently verified. Treat unresolved legal scope as a failure, not an implicit approval.
 
-A federal "junk fee" rule that cuts checked-bag fees, for example by making the first checked bag free. Delta is the only exposed company in this universe, and airlines would win back part of the lost revenue through higher base fares.
+A hypothetical federal restriction reduces reported airline baggage-fee revenue. American, Delta, United and Southwest use their own 2025 BTS observations. The input is a reduction in total baggage-fee revenue, not an exact mapping from a free-first-bag rule; fare recapture is an uncertain behavioral assumption.
 
 Duration: `permanent`. Default inputs: `{"fee_cut_pct": 50.0}`.
 
@@ -18,7 +18,7 @@ Threshold expressions are shown literally so omissions are reviewable. Input bou
 
 Policy references (a citation is not numeric verification):
 
-- https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+- https://www.bts.gov/topics/airlines-and-airports/baggage-fees-airline-2025
 - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
 
 | Company | Configured status | Basis |
@@ -50,10 +50,10 @@ Exact numeric checks are distinguished from filing links and estimates. UNVERIFI
 
 | Company | Exposure | Base | Low | High | Exact-source status | Primary source / location / rationale |
 |---|---|---:|---:|---:|---|---|
-| DAL | tl_checked_bag_fee_revenue_share | 0.0167 | 0.0158 | 0.0182 | UNVERIFIED | https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html · estimate; Delta's 10-K reports bag fees only inside travel-related services. BTS data reported in the press put Delta's 2024 checked-bag fees above $1B (~$1.06B); $1,000-1,150M of $63,364M 2025 revenue. · Delta's 10-K reports bag fees only inside travel-related services. BTS data reported in the press put Delta's 2024 checked-bag fees above $1B (~$1.06B); $1,000-1,150M of $63,364M 2025 revenue. |
-| UAL | tl_checked_bag_fee_revenue_share | 0.0167 | 0.0158 | 0.0182 | UNVERIFIED | No source URL · estimate; Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. · Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. |
-| AAL | tl_checked_bag_fee_revenue_share | 0.0167 | 0.0158 | 0.0182 | UNVERIFIED | No source URL · estimate; Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. · Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. |
-| LUV | tl_checked_bag_fee_revenue_share | 0.0167 | 0.0158 | 0.0182 | UNVERIFIED | No source URL · estimate; Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. · Explicit modeling prior, not an issuer disclosure. Passenger aviation; median base and outer low/high from DAL in committed exposure configuration. Dimensionless peer prior; review before relying on this company result. |
+| DAL | tl_checked_bag_fee_revenue_share | 0.017199545 | 0.017199545 | 0.017199545 | VERIFIED observation; conversion limits retained | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Delta row; annual sum $1089.832000M; SEC FY2025 total revenue $63364.0M · Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption. |
+| UAL | tl_checked_bag_fee_revenue_share | 0.022876285 | 0.022876285 | 0.022876285 | VERIFIED observation; conversion limits retained | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, United row; annual sum $1351.302143M; SEC FY2025 total revenue $59070.0M · Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption. |
+| AAL | tl_checked_bag_fee_revenue_share | 0.026821503 | 0.026821503 | 0.026821503 | VERIFIED observation; conversion limits retained | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, American row; annual sum $1465.339192M; SEC FY2025 total revenue $54633.0M · Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption. |
+| LUV | tl_checked_bag_fee_revenue_share | 0.020753875 | 0.020753875 | 0.020753875 | VERIFIED observation; conversion limits retained | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Southwest row; annual sum $582.416000M; SEC FY2025 total revenue $28063.0M · Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation, not certainty about future fees. Fare recapture remains an unverified assumption. Southwest introduced broad checked-bag charges during 2025; this partial-year observation is not an annualized steady-state forecast. |
 
 ## C. Published sensitivity benchmark
 
@@ -73,19 +73,21 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.fare_recapture | -0.027295964 | -0.01169827 | 0.015597693 |
-| exposure.tl_checked_bag_fee_revenue_share | -0.018446374 | -0.021248355 | 0.0028019809 |
+| assumption.fare_recapture | -0.035547107 | -0.015234474 | 0.020312633 |
 
 Dominant configured driver: `fare_recapture` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 
-- REVIEW AAL: EPS -148.8%; Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: tl_checked_bag_fee_revenue_share. Review reported earnings, exposure denominator and linear transmission before use. Default scenario; realistic range not independently verified.
+- REVIEW AAL: EPS -239.0%; Reported EPS denominator 0.17; dominant NI channel: Lower checked-bag fee revenue; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use. Default scenario; realistic range not independently verified.
 
 ## F. Verdict and parameter changes
 
-**FAIL-UNRESOLVED**. 4 unchecked in-scope exposure values; 1 unchecked assumptions; 0 matched numerical benchmark comparisons. Internal accounting/scope errors: 0.
+**FAIL-UNRESOLVED**. 0 unchecked in-scope exposure values; 1 unchecked assumptions; 0 matched numerical benchmark comparisons. Internal accounting/scope errors: 0.
 
 A recalibrated coefficient does not make the entire policy pass. Unchecked thresholds, realistic ranges, company coverage, duration or a missing matched benchmark remain open.
 
 | Company | Parameter | Before | After | Evidence |
 |---|---|---:|---:|---|
-| — | Existing values retained | — | — | No unsourced numeric recalibration performed. |
+| DAL | tl_checked_bag_fee_revenue_share | 0.0167 | 0.017199545 | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Delta row; annual sum $1089.832000M |
+| AAL | tl_checked_bag_fee_revenue_share | 0.0167 | 0.026821503 | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, American row; annual sum $1465.339192M |
+| UAL | tl_checked_bag_fee_revenue_share | 0.0167 | 0.022876285 | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, United row; annual sum $1351.302143M |
+| LUV | tl_checked_bag_fee_revenue_share | 0.0167 | 0.020753875 | https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx · BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Southwest row; annual sum $582.416000M |

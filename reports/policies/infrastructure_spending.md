@@ -1,6 +1,6 @@
 # New federal infrastructure program
 
-Policy `industrials/infrastructure_spending` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `industrials/infrastructure_spending` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

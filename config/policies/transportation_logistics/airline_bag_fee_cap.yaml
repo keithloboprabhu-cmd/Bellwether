@@ -1,7 +1,7 @@
 id: airline_bag_fee_cap
 industry: transportation_logistics
 name: Cap or ban on checked-bag fees
-description: A federal "junk fee" rule that cuts checked-bag fees, for example by making the first checked bag free. Delta is the only exposed company in this universe, and airlines would win back part of the lost revenue through higher base fares.
+description: A hypothetical federal restriction reduces reported airline baggage-fee revenue. American, Delta, United and Southwest use their own 2025 BTS observations. The input is a reduction in total baggage-fee revenue, not an exact mapping from a free-first-bag rule; fare recapture is an uncertain behavioral assumption.
 persistence: permanent
 user_inputs:
   - key: fee_cut_pct
@@ -11,7 +11,7 @@ user_inputs:
     max: 100
     step: 5
     default: 50
-    help: Percent reduction in checked-bag fee revenue. A free first bag would remove most of it, since first bags are the bulk of fees and many elite and cardholder flyers already check bags free.
+    help: Hypothetical percent reduction in reported baggage-fee revenue. A first-bag exemption cannot be translated into this percentage without a separately measured fee mix.
 assumptions:
   - key: fare_recapture
     label: Share recaptured through higher base fares
@@ -31,7 +31,7 @@ channels:
 exposure_keys: [tl_checked_bag_fee_revenue_share]
 default_role: neutral
 references:
-  - https://www.aol.com/airlines-raked-over-7b-revenue-152456333.html
+  - https://www.bts.gov/topics/airlines-and-airports/baggage-fees-airline-2025
   - https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm
 narrative:
-  extra: "Delta's checked-bag fees were about $1.06B in 2024 (BTS data via press reports), under 2% of revenue, so even a full ban moves EPS by single digits."
+  extra: "Historical carrier fees are measured; future fares and profit responses are not. Southwest's broad bag fees began during 2025, so its observation is a partial-year base. Small reported earnings can produce large EPS changes even when fees are a small revenue share."

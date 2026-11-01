@@ -1,6 +1,6 @@
 # Federal oil & gas leasing limits
 
-Policy `energy_resources/federal_leasing_limits` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `energy_resources/federal_leasing_limits` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

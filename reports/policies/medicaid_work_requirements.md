@@ -1,6 +1,6 @@
 # Medicaid funding cuts and work requirements
 
-Policy `healthcare/medicaid_work_requirements` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `healthcare/medicaid_work_requirements` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -18,6 +18,7 @@ Threshold expressions are shown literally so omissions are reviewable. Input bou
 
 Policy references (a citation is not numeric verification):
 
+- https://www.cms.gov/newsroom/fact-sheets/medicaid-community-engagement-requirement-certain-individuals-interim-final-rule-comment-period-cms
 - https://www.cbo.gov/system/files/2025-06/Wyden-Pallone-Neal_Letter_6-4-25.pdf
 - https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm
 

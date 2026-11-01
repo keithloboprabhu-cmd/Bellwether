@@ -1,6 +1,6 @@
 # Bellwether quantitative audit
 
-Evidence collected 31 October–1 November 2026. Changes are local phase commits; this audit has not been pushed to GitHub or deployed.
+Evidence collected 31 October–1 November 2026. This is an audit checkpoint; repository publication and deployment status are separate from economic certification. See the continuing review in [round-two findings](audit_round2/README.md).
 
 **The requested full empirical certification is not achieved.** All configured policies have A–F reports, but all 72 remain FAIL-UNRESOLVED under the requested full-cohort, legal-scope, matched-benchmark, totals and duration requirements. Passing software checks is not a policy-accuracy certification. No missing evidence was replaced with invented parameters.
 
@@ -160,7 +160,7 @@ Twenty-three exact bank sensitivity comparisons pass direction and size after tw
 | [tmt/digital_services_tax](policies/digital_services_tax.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
 | [tmt/semiconductor_tariffs](policies/semiconductor_tariffs.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
 | [tmt/us_corporate_tax_tmt](policies/us_corporate_tax_tmt.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
-| [transportation_logistics/airline_bag_fee_cap](policies/airline_bag_fee_cap.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
+| [transportation_logistics/airline_bag_fee_cap](policies/airline_bag_fee_cap.md) | FAIL-UNRESOLVED | 0 / 0 | 4 |
 | [transportation_logistics/airline_ticket_tax_change](policies/airline_ticket_tax_change.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
 | [transportation_logistics/auto_import_tariffs](policies/auto_import_tariffs.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
 | [transportation_logistics/carbon_tax_transport_fuel](policies/carbon_tax_transport_fuel.md) | FAIL-UNRESOLVED | 0 / 0 | 0 |
@@ -213,20 +213,20 @@ Three new non-TCJA cases are **2018 Fed tightening, 2020 Fed easing and the 2022
 
 The reproducible stratified random draw (seed 20261031, one affected default scenario per industry) independently recomputes channel effects, pretax-to-tax-to-parent income, diluted-share EPS and duration-specific value. It reuses the configured expression evaluator but not the engine channel/aggregation/valuation implementations. Ten calculations match EPS and price to the cent; unavailable price remains unavailable. Formulas and intermediate values are in [spotchecks.md](spotchecks.md).
 
-- **Python suite:** 610 passed, 5 skipped; 6 intentional extreme-EPS review warnings.
+- **Python suite:** 623 passed, 5 skipped; 6 intentional extreme-EPS review warnings (round two, 1 November 2026).
 - **Frontend suite:** 16 passed.
 - **Production frontend build:** Passed (TypeScript and Vite).
 - **Internal policy/macro audit:** 72 industry policies and 10 macro shocks; zero invariant failures.
 - **Published bank benchmark arithmetic:** 23 matched comparisons pass direction and size (in-sample calibration only).
 - **Independent arithmetic:** 10/10 stratified random scenarios match to the cent.
-- **Running local API audit:** 72 industry policies / 261 valid inputs and 10 macro shocks / 42 valid inputs; zero failures.
+- **Running local API audit:** Prior macro-console checkpoint: 72 industry policies / 261 valid inputs and 10 macro shocks / 42 valid inputs; zero failures. Current round-two changes additionally pass the full Python suite; this prior running-server check was not repeated.
 - **Macro console browser verification:** All-industries deep link restores policy/inputs; industry drilldown filters Financial Services to 30 firms; industry CSV has 10 rows/234 firms and reconciles net income; no browser console errors; phone layout fits at 375 px.
 
 Scenario URLs, original policy IDs, CSV export columns and schema-version-1 profile JSON remain compatible. Reference-company profile import/lookup follows the same sourced normalization guard when the financial basis matches; edited financials do not silently borrow another basis.
 
 ## Open items requiring judgment, ranked by impact
 
-1. **Large tariff/cost projections:** obtain company-specific import denominators, realized tariff cost and pass-through. KR/BBY/TGT and AMD values remain UNVERIFIED. Do not publish extreme EPS losses as calibrated forecasts. Operating costs can include fixed expenses; TTEK’s reported cost proxy implies an 84.8% contribution margin, which is not an independently supported incremental margin. Preserve reported facts and review the transmission model.
+1. **Large tariff/cost projections:** obtain company-specific import denominators, realized tariff cost and pass-through. KR/BBY/TGT and AMD values remain UNVERIFIED. Do not publish extreme EPS losses as calibrated forecasts. TTEK’s partial cost-tag error has been corrected to a 17.66% reported gross-margin proxy; incremental margins and fixed-versus-variable costs still require evidence. Excise and premium-tax presentations must be reconciled separately.
 2. **Full empirical and legal certification:** most policy cohorts lack matched published sensitivities, official comparable totals or independently checked thresholds, effective dates and horizons. Bank instantaneous annual NII sensitivity does not justify permanent valuation. All 72 full-policy verdicts therefore remain unresolved, even where a coefficient was repaired. Prioritize regulated-bank, MA and tariff scenarios with obtainable exact disclosures before broader claims.
 3. **Five mandatory coverage gaps:** BLK parent/minority tax-base reconciliation; PGR US taxable base; SLM insured-bank NII/assessment data in the education bucket; LYFT loss-year/nonbinding tax base and unquantified buyback excise tax; MDT Irish-versus-US geography. Do not infer FDIC insurance for insurer policyholders or tuition exposure for a lender.
 4. **Incomplete target universe:** obtain the full publisher S&P list, then resolve the deferred public issuers. Berkshire needs insurer/investment accounting and economically equivalent shares; ET/EPD partnership taxation differs from corporate tax; foreign domicile requires an explicit US base; negative or missing domestic income cannot be replaced with a guessed positive amount.

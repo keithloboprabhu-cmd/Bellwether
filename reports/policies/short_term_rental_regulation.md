@@ -1,6 +1,6 @@
 # Short-term rental restrictions
 
-Policy `real_estate_hospitality/short_term_rental_regulation` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `real_estate_hospitality/short_term_rental_regulation` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

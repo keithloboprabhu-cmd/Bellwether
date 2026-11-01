@@ -64,8 +64,8 @@ tmt/data_privacy_mandate,reports/policies/data_privacy_mandate.md,FAIL-UNRESOLVE
 tmt/digital_services_tax,reports/policies/digital_services_tax.md,FAIL-UNRESOLVED,12,1,0,0,0,13
 tmt/semiconductor_tariffs,reports/policies/semiconductor_tariffs.md,FAIL-UNRESOLVED,20,2,0,0,0,13
 tmt/us_corporate_tax_tmt,reports/policies/us_corporate_tax_tmt.md,FAIL-UNRESOLVED,0,0,0,0,0,5
-transportation_logistics/airline_bag_fee_cap,reports/policies/airline_bag_fee_cap.md,FAIL-UNRESOLVED,4,1,0,0,0,0
-transportation_logistics/airline_ticket_tax_change,reports/policies/airline_ticket_tax_change.md,FAIL-UNRESOLVED,4,2,0,0,0,0
+transportation_logistics/airline_bag_fee_cap,reports/policies/airline_bag_fee_cap.md,FAIL-UNRESOLVED,0,1,0,0,4,0
+transportation_logistics/airline_ticket_tax_change,reports/policies/airline_ticket_tax_change.md,FAIL-UNRESOLVED,2,2,0,0,0,0
 transportation_logistics/auto_import_tariffs,reports/policies/auto_import_tariffs.md,FAIL-UNRESOLVED,17,2,0,0,0,0
 transportation_logistics/carbon_tax_transport_fuel,reports/policies/carbon_tax_transport_fuel.md,FAIL-UNRESOLVED,34,2,0,0,0,0
 transportation_logistics/ev_tax_credit,reports/policies/ev_tax_credit.md,FAIL-UNRESOLVED,4,4,0,0,0,0

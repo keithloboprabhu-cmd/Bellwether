@@ -1,6 +1,6 @@
 # Consulting contract cancellations
 
-Policy `public_sector/consulting_contract_cancellations` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `public_sector/consulting_contract_cancellations` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 
@@ -78,8 +78,8 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.govcon_advisory_share | -0.0033235047 | -0.017274397 | 0.013950892 |
-| assumption.replacement_offset | -0.0079757579 | -0.0039878789 | 0.0039878789 |
+| exposure.govcon_advisory_share | -0.0031214266 | -0.012727639 | 0.0096062126 |
+| assumption.replacement_offset | -0.0073021642 | -0.0036510821 | 0.0036510821 |
 
 Dominant configured driver: `govcon_advisory_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

@@ -1,6 +1,6 @@
 # Graduate student loan caps (end of Grad PLUS)
 
-Policy `education/student_loan_borrowing_caps` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `education/student_loan_borrowing_caps` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

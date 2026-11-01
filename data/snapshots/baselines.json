@@ -145909,7 +145909,7 @@
       "da": 58.276,
       "total_assets": 4282.174,
       "costs_and_expenses": null,
-      "sga": null,
+      "sga": 357.737,
       "rnd": null,
       "gross_profit": 961.344,
       "pretax_domestic": 176.118,
@@ -145917,7 +145917,7 @@
       "pretax_income": 377.617,
       "income_tax": 129.668,
       "operating_income": 408.419,
-      "cost_of_revenue": 825.23,
+      "cost_of_revenue": 4481.246,
       "total_debt": 775.0,
       "effective_tax_rate_raw": 0.34338496413032255,
       "effective_tax_rate": 0.34338496413032255
@@ -145937,14 +145937,32 @@
       "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
-      "cost_of_revenue": "CostOfGoodsAndServicesSold",
-      "total_debt": "DebtLongtermAndShorttermCombinedAmount"
+      "cost_of_revenue": "Consolidated Statements of Income, FY2025: subcontractor costs 825.230M + other costs of revenue 3656.016M; equals revenue 5442.590M minus gross profit 961.344M",
+      "total_debt": "DebtLongtermAndShorttermCombinedAmount",
+      "sga": "Consolidated Statements of Income FY2025 / Selling, general and administrative expenses"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent",
+      "Generic CostOfGoodsAndServicesSold tag is subcontractors only; both actual revenue cost lines are required. This reported gross-cost margin is not independently verified incremental contribution margin.",
+      "Exact reported SG&A; not included in reported revenue costs."
+     ],
      "source_accn": "0000831641-25-000032",
      "source_filed": "2025-11-20",
-     "source_cik": 831641,
-     "estimates": {},
+     "source_cik": null,
+     "estimates": {
+      "cost_of_revenue": {
+       "source": "verified SEC filing",
+       "source_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/ttek-20250928.htm",
+       "rationale": "Generic CostOfGoodsAndServicesSold tag is subcontractors only; both actual revenue cost lines are required. This reported gross-cost margin is not independently verified incremental contribution margin.",
+       "accessed": "2026-11-01"
+      },
+      "sga": {
+       "source": "verified SEC filing",
+       "source_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/ttek-20250928.htm",
+       "rationale": "Exact reported SG&A; not included in reported revenue costs.",
+       "accessed": "2026-11-01"
+      }
+     },
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164125000032/0000831641-25-000032-index.htm"
     },
     {
@@ -145968,7 +145986,7 @@
       "pretax_income": 463.466,
       "income_tax": 130.023,
       "operating_income": 500.737,
-      "cost_of_revenue": 876.817,
+      "cost_of_revenue": 4332.239,
       "total_debt": 825.0,
       "effective_tax_rate_raw": 0.2805448511864948,
       "effective_tax_rate": 0.2805448511864948
@@ -145988,13 +146006,15 @@
       "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
-      "cost_of_revenue": "CostOfGoodsAndServicesSold",
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)",
       "total_debt": "DebtLongtermAndShorttermCombinedAmount"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-24-000063",
      "source_filed": "2024-11-19",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164124000063/0000831641-24-000063-index.htm"
     },
@@ -146019,7 +146039,7 @@
       "pretax_income": 400.978,
       "income_tax": 127.526,
       "operating_income": 358.113,
-      "cost_of_revenue": 771.461,
+      "cost_of_revenue": 3797.521,
       "total_debt": 895.0,
       "effective_tax_rate_raw": 0.3180373985605195,
       "effective_tax_rate": 0.3180373985605195
@@ -146039,13 +146059,15 @@
       "pretax_income": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
-      "cost_of_revenue": "CostOfGoodsAndServicesSold",
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)",
       "total_debt": "DebtLongtermAndShorttermCombinedAmount"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-23-000082",
      "source_filed": "2023-11-22",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164123000082/0000831641-23-000082-index.htm"
     },
@@ -146091,12 +146113,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtNoncurrent + DebtCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-22-000123",
      "source_filed": "2022-11-25",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164122000123/0000831641-22-000123-index.htm"
     },
@@ -146142,12 +146166,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtNoncurrent + DebtCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-21-000110",
      "source_filed": "2021-11-24",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164121000110/0000831641-21-000110-index.htm"
     },
@@ -146193,12 +146219,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtNoncurrent + DebtCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-20-000154",
      "source_filed": "2020-11-23",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164120000154/0000831641-20-000154-index.htm"
     },
@@ -146244,12 +146272,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtNoncurrent + DebtCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-19-000193",
      "source_filed": "2019-11-29",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164119000193/0000831641-19-000193-index.htm"
     },
@@ -146295,12 +146325,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-18-000097",
      "source_filed": "2018-11-16",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164118000097/0000831641-18-000097-index.htm"
     },
@@ -146346,12 +146378,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0000831641-17-000022",
      "source_filed": "2017-11-20",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000083164117000022/0000831641-17-000022-index.htm"
     },
@@ -146397,12 +146431,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0001047469-16-016906",
      "source_filed": "2016-11-22",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000104746916016906/0001047469-16-016906-index.htm"
     },
@@ -146448,15 +146484,16 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
      "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent",
       "reported effective tax rate 51.2% requires forward tax normalization",
       "normalized forward tax rate 29.8%: median of available ordinary reported rates in preceding three fiscal years"
      ],
      "source_accn": "0001047469-15-008864",
      "source_filed": "2015-11-20",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {
       "effective_tax_rate": {
        "source": "estimate",
@@ -146508,12 +146545,14 @@
       "income_tax": "IncomeTaxExpenseBenefit",
       "operating_income": "OperatingIncomeLoss",
       "total_debt": "LongTermDebtAndCapitalLeaseObligations + LongTermDebtAndCapitalLeaseObligationsCurrent",
-      "cost_of_revenue": "= Revenue \u2212 GrossProfit"
+      "cost_of_revenue": "= Revenue \u2212 GrossProfit (verified full cost basis)"
      },
-     "flags": [],
+     "flags": [
+      "full reported revenue cost derived from revenue less gross profit; generic cost tag is only a subcomponent"
+     ],
      "source_accn": "0001047469-14-009389",
      "source_filed": "2014-11-19",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000104746914009389/0001047469-14-009389-index.htm"
     },
@@ -146566,7 +146605,7 @@
      ],
      "source_accn": "0001047469-13-010692",
      "source_filed": "2013-11-20",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {
       "effective_tax_rate": {
        "source": "estimate",
@@ -146623,7 +146662,7 @@
      ],
      "source_accn": "0001047469-12-010616",
      "source_filed": "2012-11-15",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000104746912010616/0001047469-12-010616-index.htm"
     },
@@ -146676,7 +146715,7 @@
      ],
      "source_accn": "0001047469-11-009637",
      "source_filed": "2011-11-17",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000104746911009637/0001047469-11-009637-index.htm"
     },
@@ -146726,7 +146765,7 @@
      ],
      "source_accn": "0001047469-10-009822",
      "source_filed": "2010-11-16",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000104746910009822/0001047469-10-009822-index.htm"
     },
@@ -146776,7 +146815,7 @@
      ],
      "source_accn": "0001047469-10-009822",
      "source_filed": "2010-11-16",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {},
      "filing_url": "https://www.sec.gov/Archives/edgar/data/831641/000104746910009822/0001047469-10-009822-index.htm"
     },
@@ -146825,7 +146864,7 @@
      ],
      "source_accn": "0001047469-10-009822",
      "source_filed": "2010-11-16",
-     "source_cik": 831641,
+     "source_cik": null,
      "estimates": {
       "effective_tax_rate": {
        "source": "estimate",

@@ -1,6 +1,6 @@
 # Student loan forgiveness
 
-Policy `education/student_loan_forgiveness` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `education/student_loan_forgiveness` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

@@ -1,6 +1,6 @@
 # Property tax increase
 
-Policy `real_estate_hospitality/property_tax_change` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `real_estate_hospitality/property_tax_change` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

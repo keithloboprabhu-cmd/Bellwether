@@ -1,6 +1,6 @@
 # Weaker vehicle emissions standards (credit market shrinks)
 
-Policy `transportation_logistics/vehicle_emissions_credit_rollback` · reviewed 2026-10-31 · **FAIL-UNRESOLVED**
+Policy `transportation_logistics/vehicle_emissions_credit_rollback` · evidence checkpoint 2026-11-01 · **FAIL-UNRESOLVED**
 
 ## A. Mechanics and scope
 

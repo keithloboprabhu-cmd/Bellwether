@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-01 — continuing economic audit
+
+- Reconcile Tetra Tech's three-year full revenue costs; exclude the partial subcontractor tag as its full cost base and invalidate older live financial normalization caches.
+- Replace four copied airline baggage-fee shares with official BTS carrier observations; reconcile American and Delta domestic passenger revenue to their own filings.
+- Separate reported global airline fuel gallons from US-only carbon-tax volume in the macro oil shock.
+- Clarify hypothetical policy status, CHIPS property eligibility, education's two-of-three-year earnings test, and limits on extrapolating historical MA pass-through.
+- Archive primary evidence and regression checks. Whole-policy evidence certification remains unresolved; this checkpoint does not claim the economic audit is complete.
+
 ## 2026-11-01 — macro console
 
 - Add Macro · All industries to the industry selector, using the existing ten macro shocks.
@@ -34,4 +42,4 @@
   zero invariant failures. Empirical evidence gaps are separate from software tests.
 
 See [AUDIT_SUMMARY](reports/AUDIT_SUMMARY.md) for scope, sources and open decisions.
-This local audit has not been pushed or deployed.
+Audit findings and unresolved items are preserved with the code; deployment status is separate from economic certification.
