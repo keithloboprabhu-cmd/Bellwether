@@ -1426,13 +1426,18 @@ policies:
       - HBAN
       - KEY
       - ALLY
-      reason: Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ.
+      reason: Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally
+        benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from
+        a 100bp instantaneous cut under its own current sensitivity table.
       default_direction:
         metric: dR
         sign: -1
       direction_overrides:
         C:
           metric: dR
+          sign: 1
+        ALLY:
+          metric: dNI
           sign: 1
     - status: outside_scope
       tickers:

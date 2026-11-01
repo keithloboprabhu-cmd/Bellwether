@@ -72,11 +72,12 @@ def main() -> None:
         rows.append(dict(parameter=name, company="ALL", value=value, low=value, high=value,
             source_url=source, document_location=location, date_accessed="2026-10-31" if verified == "Y" else "",
             verified=verified, verification_basis="Statutory rule" if verified == "Y" else "UNVERIFIED empirical convention; explicitly documented, not a reported company rate."))
-    verified_tax = ROOT / 'data/universe_sources/verified_tax_parameters.json'
-    if verified_tax.exists():
-        checked = {(r['parameter'], r['company']): r for r in json.loads(verified_tax.read_text())}
-        rows = [checked.pop((r['parameter'], r['company']), r) for r in rows]
-        rows.extend(checked.values())
+    checked = {}
+    for path in [ROOT / 'data/universe_sources/verified_tax_parameters.json', ROOT / 'reports/evidence/verified_bank_parameters.json']:
+        if path.exists():
+            checked.update({(r['parameter'], r['company']): r for r in json.loads(path.read_text())})
+    rows = [checked.pop((r['parameter'], r['company']), r) for r in rows]
+    rows.extend(checked.values())
     path = ROOT / "data/sources_registry.csv"
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)

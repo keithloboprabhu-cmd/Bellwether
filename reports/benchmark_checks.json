@@ -1,0 +1,462 @@
+[
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "MS",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 209,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm",
+    "document_location": "2025 Form 10-K, Wealth Management Net Interest Income Sensitivity Analysis (quantified WM component only), December 2025 sensitivity table; +100 +$209M / -100 -$244M",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": 209.0,
+    "low": 209.0,
+    "high": 209.0,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "MS",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -244,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm",
+    "document_location": "2025 Form 10-K, Wealth Management Net Interest Income Sensitivity Analysis (quantified WM component only), December 2025 sensitivity table; +100 +$209M / -100 -$244M",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -244.0,
+    "low": -244.0,
+    "high": -244.0,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "STT",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 82,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm",
+    "document_location": "2025 Form 10-K Table 33; U.S. Dollar column, +100 +$82M / -100 -$84M; excludes other-currency sensitivities",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": 82.0,
+    "low": 82.0,
+    "high": 82.0,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "STT",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -84,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm",
+    "document_location": "2025 Form 10-K Table 33; U.S. Dollar column, +100 +$82M / -100 -$84M; excludes other-currency sensitivities",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -84.0,
+    "low": -84.0,
+    "high": -84.0,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "COF",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 257.26800000000003,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm",
+    "document_location": "2025 Form 10-K Table 32; estimated impact on projected baseline NII, +100 0.6% / -100 -0.7%; not the EVE table",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": 257.26800000000003,
+    "low": 257.26800000000003,
+    "high": 257.26800000000003,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "COF",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -300.146,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm",
+    "document_location": "2025 Form 10-K Table 32; estimated impact on projected baseline NII, +100 0.6% / -100 -0.7%; not the EVE table",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -300.146,
+    "low": -300.146,
+    "high": -300.146,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "ALLY",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": -106,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+    "document_location": "2025 Form 10-K Market Risk, NII sensitivity table; Instantaneous 2025 column, +100 -$106M / -100 +$22M; gradual scenarios excluded",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -106.0,
+    "low": -106.0,
+    "high": -106.0,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "ALLY",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": 22,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+    "document_location": "2025 Form 10-K Market Risk, NII sensitivity table; Instantaneous 2025 column, +100 -$106M / -100 +$22M; gradual scenarios excluded",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": 22.0,
+    "low": 22.0,
+    "high": 22.0,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "PNC",
+    "inputs": {
+      "d_rate_bps": 200
+    },
+    "metric": "dR",
+    "benchmark": 288.2,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm",
+    "document_location": "2025 Form 10-K Table 33; instantaneous +/-200bp NII 2.0% / -2.9%; footnote (a) explicitly states 100bp is approximately half",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": 288.2,
+    "low": 288.2,
+    "high": 288.2,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "PNC",
+    "inputs": {
+      "d_rate_bps": -200
+    },
+    "metric": "dR",
+    "benchmark": -417.89000000000004,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm",
+    "document_location": "2025 Form 10-K Table 33; instantaneous +/-200bp NII 2.0% / -2.9%; footnote (a) explicitly states 100bp is approximately half",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -417.8900000000001,
+    "low": -417.8900000000001,
+    "high": -417.8900000000001,
+    "relative_error": 1.3602483634642612e-16,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "TFC",
+    "inputs": {
+      "d_rate_bps": 50
+    },
+    "metric": "dR",
+    "benchmark": -14.423,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm",
+    "document_location": "2025 Form 10-K Table 30; instantaneous +/-50bp NII -0.1% / -0.2%; 200bp gradual rows excluded; linear interpolation beyond 50bp unverified",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -14.423,
+    "low": -14.423,
+    "high": -14.423,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "TFC",
+    "inputs": {
+      "d_rate_bps": -50
+    },
+    "metric": "dR",
+    "benchmark": -28.846,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm",
+    "document_location": "2025 Form 10-K Table 30; instantaneous +/-50bp NII -0.1% / -0.2%; 200bp gradual rows excluded; linear interpolation beyond 50bp unverified",
+    "publication_basis": "Forecast NII sensitivity, not realized causal outcome; exact published shock size",
+    "model": -28.846,
+    "low": -28.846,
+    "high": -28.846,
+    "relative_error": 0.0,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "JPM",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 2100,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": 2099.746,
+    "low": 1851.5942000000002,
+    "high": 2300.1763,
+    "relative_error": 0.00012095238095233591,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "JPM",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -2400,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": -2395.6193000000003,
+    "low": -2996.9102,
+    "high": -2395.6193000000003,
+    "relative_error": 0.0018252916666665442,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "BAC",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 700,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": 697.1135999999999,
+    "low": 402.6432000000001,
+    "high": 1099.7568,
+    "relative_error": 0.004123428571428706,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "BAC",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -2000,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": -2001.1968000000002,
+    "low": -2451.9168,
+    "high": -2001.1968000000002,
+    "relative_error": 0.0005984000000000833,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "WFC",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 1900,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": 1899.36,
+    "low": 1301.0616,
+    "high": 1899.36,
+    "relative_error": 0.00033684210526321054,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "WFC",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -2300,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": -2298.2255999999998,
+    "low": -2649.6072,
+    "high": -2298.2255999999998,
+    "relative_error": 0.0007714782608696703,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "GS",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 154,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": 154.5726,
+    "low": 107.11610000000002,
+    "high": 154.5726,
+    "relative_error": 0.0037181818181817807,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "GS",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -273,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": -272.53589999999997,
+    "low": -272.53589999999997,
+    "high": -242.7061,
+    "relative_error": 0.0017000000000001114,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "AXP",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": 19,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000080/axp-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": 19.1004,
+    "low": -237.8868,
+    "high": 19.1004,
+    "relative_error": 0.005284210526315815,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "AXP",
+    "inputs": {
+      "d_rate_bps": -100
+    },
+    "metric": "dR",
+    "benchmark": -11,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000080/axp-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": -10.418399999999998,
+    "low": -10.418399999999998,
+    "high": 248.3052,
+    "relative_error": 0.052872727272727425,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "C",
+    "inputs": {
+      "d_rate_bps": 100
+    },
+    "metric": "dR",
+    "benchmark": -33,
+    "unit": "USD millions NII",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm",
+    "document_location": "2025 Form 10-K current instantaneous sensitivity table, U.S. dollar component where separately disclosed; AXP Table 22 current assumptions",
+    "publication_basis": "Own disclosed 12-month NII sensitivity",
+    "model": -35.8752,
+    "low": -251.1264,
+    "high": -35.8752,
+    "relative_error": 0.08712727272727272,
+    "direction_pass": true,
+    "size_pass": true,
+    "pass": true
+  }
+]

@@ -15,10 +15,9 @@ companies:
       low: 0.143
       high: 0.143
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.0
@@ -27,8 +26,8 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/0000895421-26-000086-index.htm
       rationale: 'Company-specific scope estimate: Covered Visa/Mastercard credit-card issuers. Amex''s three-party
-        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do
-        not inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
+        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do not
+        inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
       applicable: true
     fdic_assessment_base_musd:
       value: 612007.0
@@ -36,32 +35,32 @@ companies:
       high: 673207.7000000001
       source: estimate
       source_url: https://api.fdic.gov/banks/financials?filters=CERT:32992%20AND%20REPDTE:20260630
-      rationale: "FDIC 20260630 bank reports: MORGAN STANLEY BANK NA (CERT 32992); MORGAN STANLEY PRIVATE\
-        \ BK NA (CERT 34221). Reported subsidiary ASSET minus RBCT1J (Tier 1 capital), converted from thousands\
+      rationale: "FDIC 20260630 bank reports: MORGAN STANLEY BANK NA (CERT 32992); MORGAN STANLEY PRIVATE BK\
+        \ NA (CERT 34221). Reported subsidiary ASSET minus RBCT1J (Tier 1 capital), converted from thousands\
         \ to millions = $612,007.000M. This is a quarter-end proxy for statutory average assets minus average\
         \ Tier 1 capital, not a reported assessment base. No holding-company or revenue-scaled peer assets\
         \ are used. Use \xB110% sensitivity for averaging/timing and remaining assessment adjustments."
       applicable: true
     nii_sens_down_per_100bp:
-      value: 0.0201
-      low: 0.0179
-      high: 0.0201
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
-      applicable: true
+      value: 0.024288273939876568
+      low: 0.024288273939876568
+      high: 0.024288273939876568
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm
+      rationale: 2025 Form 10-K, Wealth Management Net Interest Income Sensitivity Analysis (quantified WM
+        component only), December 2025 sensitivity table; +100 +$209M / -100 -$244M. Accessed 2026-10-31. Divided
+        by reported annual NII only when source is dollars. Point calibration does not validate long-run persistence
+        or other shock sizes.
     nii_sens_up_per_100bp:
-      value: 0.0114
-      low: 0.0079
-      high: 0.0114
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
-      applicable: true
+      value: 0.020804300218992634
+      low: 0.020804300218992634
+      high: 0.020804300218992634
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm
+      rationale: 2025 Form 10-K, Wealth Management Net Interest Income Sensitivity Analysis (quantified WM
+        component only), December 2025 sensitivity table; +100 +$209M / -100 -$244M. Accessed 2026-10-31. Divided
+        by reported annual NII only when source is dollars. Point calibration does not validate long-run persistence
+        or other shock sizes.
     trading_revenue_share:
       value: 0.27
       low: 0.2
@@ -69,9 +68,9 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/0000895421-26-000086-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   SCHW:
     card_late_fee_revenue_share:
       value: 0.0
@@ -87,10 +86,9 @@ companies:
       low: 0.143
       high: 0.143
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.0
@@ -99,8 +97,8 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/0000316709-26-000009-index.htm
       rationale: 'Company-specific scope estimate: Covered Visa/Mastercard credit-card issuers. Amex''s three-party
-        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do
-        not inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
+        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do not
+        inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
       applicable: true
     fdic_assessment_base_musd:
       value: 256611.577
@@ -120,20 +118,18 @@ companies:
       low: 0.0179
       high: 0.0201
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     nii_sens_up_per_100bp:
       value: 0.0114
       low: 0.0079
       high: 0.0114
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     trading_revenue_share:
       value: 0.14
@@ -142,9 +138,9 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/0000316709-26-000009-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   BNY:
     card_late_fee_revenue_share:
       value: 0.0
@@ -160,10 +156,9 @@ companies:
       low: 0.143
       high: 0.143
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.0
@@ -172,8 +167,8 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/1390777/000139077726000033/0001390777-26-000033-index.htm
       rationale: 'Company-specific scope estimate: Covered Visa/Mastercard credit-card issuers. Amex''s three-party
-        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do
-        not inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
+        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do not
+        inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
       applicable: true
     fdic_assessment_base_musd:
       value: 221439.90000000002
@@ -193,20 +188,18 @@ companies:
       low: 0.0179
       high: 0.0201
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     nii_sens_up_per_100bp:
       value: 0.0114
       low: 0.0079
       high: 0.0114
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     trading_revenue_share:
       value: 0.02
@@ -215,9 +208,9 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/1390777/000139077726000033/0001390777-26-000033-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   STT:
     card_late_fee_revenue_share:
       value: 0.0
@@ -233,10 +226,9 @@ companies:
       low: 0.143
       high: 0.143
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets and custody; median base
+        and outer low/high from GS in committed exposure configuration. Dimensionless peer prior; review before
+        relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.0
@@ -245,8 +237,8 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/0000093751-26-000124-index.htm
       rationale: 'Company-specific scope estimate: Covered Visa/Mastercard credit-card issuers. Amex''s three-party
-        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do
-        not inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
+        network is exempt in this scenario; custody/brokerage firms and Ally''s divested card business do not
+        inherit issuer interchange. This is a model boundary, not a reported zero measurement.'
       applicable: true
     fdic_assessment_base_musd:
       value: 215598.35
@@ -262,25 +254,23 @@ companies:
         \ and remains uncertain."
       applicable: true
     nii_sens_down_per_100bp:
-      value: 0.0201
-      low: 0.0179
-      high: 0.0201
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
-      applicable: true
+      value: 0.02837837837837838
+      low: 0.02837837837837838
+      high: 0.02837837837837838
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm
+      rationale: 2025 Form 10-K Table 33; U.S. Dollar column, +100 +$82M / -100 -$84M; excludes other-currency
+        sensitivities. Accessed 2026-10-31. Divided by reported annual NII only when source is dollars. Point
+        calibration does not validate long-run persistence or other shock sizes.
     nii_sens_up_per_100bp:
-      value: 0.0114
-      low: 0.0079
-      high: 0.0114
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Capital markets
-        and custody; median base and outer low/high from GS in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
-      applicable: true
+      value: 0.027702702702702704
+      low: 0.027702702702702704
+      high: 0.027702702702702704
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm
+      rationale: 2025 Form 10-K Table 33; U.S. Dollar column, +100 +$82M / -100 -$84M; excludes other-currency
+        sensitivities. Accessed 2026-10-31. Divided by reported annual NII only when source is dollars. Point
+        calibration does not validate long-run persistence or other shock sizes.
     trading_revenue_share:
       value: 0.015
       low: 0.005
@@ -288,39 +278,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/0000093751-26-000124-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   USB:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 642365.354
@@ -339,20 +326,18 @@ companies:
       low: -0.0143
       high: 0.0558
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     nii_sens_up_per_100bp:
       value: 0.0116
       low: -0.0137
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     trading_revenue_share:
       value: 0.025
@@ -361,39 +346,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/36104/000003610426000011/0000036104-26-000011-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   PNC:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 556246.882
@@ -408,25 +390,23 @@ companies:
         \ and remaining assessment adjustments."
       applicable: true
     nii_sens_down_per_100bp:
-      value: 0.0251
-      low: -0.0143
-      high: 0.0558
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: 0.0145
+      low: 0.0145
+      high: 0.0145
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm
+      rationale: 2025 Form 10-K Table 33; instantaneous +/-200bp NII 2.0% / -2.9%; footnote (a) explicitly
+        states 100bp is approximately half. Accessed 2026-10-31. Divided by reported annual NII only when source
+        is dollars. Point calibration does not validate long-run persistence or other shock sizes.
     nii_sens_up_per_100bp:
-      value: 0.0116
-      low: -0.0137
-      high: 0.04
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: 0.01
+      low: 0.01
+      high: 0.01
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm
+      rationale: 2025 Form 10-K Table 33; instantaneous +/-200bp NII 2.0% / -2.9%; footnote (a) explicitly
+        states 100bp is approximately half. Accessed 2026-10-31. Divided by reported annual NII only when source
+        is dollars. Point calibration does not validate long-run persistence or other shock sizes.
     trading_revenue_share:
       value: 0.025
       low: 0.01
@@ -434,39 +414,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/0000713676-26-000020-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   TFC:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 496311.0
@@ -481,25 +458,23 @@ companies:
         \ assessment adjustments."
       applicable: true
     nii_sens_down_per_100bp:
-      value: 0.0251
-      low: -0.0143
-      high: 0.0558
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: 0.004
+      low: 0.004
+      high: 0.004
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm
+      rationale: 2025 Form 10-K Table 30; instantaneous +/-50bp NII -0.1% / -0.2%; 200bp gradual rows excluded;
+        linear interpolation beyond 50bp unverified. Accessed 2026-10-31. Divided by reported annual NII only
+        when source is dollars. Point calibration does not validate long-run persistence or other shock sizes.
     nii_sens_up_per_100bp:
-      value: 0.0116
-      low: -0.0137
-      high: 0.04
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: -0.002
+      low: -0.002
+      high: -0.002
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm
+      rationale: 2025 Form 10-K Table 30; instantaneous +/-50bp NII -0.1% / -0.2%; 200bp gradual rows excluded;
+        linear interpolation beyond 50bp unverified. Accessed 2026-10-31. Divided by reported annual NII only
+        when source is dollars. Point calibration does not validate long-run persistence or other shock sizes.
     trading_revenue_share:
       value: 0.025
       low: 0.01
@@ -507,39 +482,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/0000092230-26-000030-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   COF:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 594681.0
@@ -554,25 +526,23 @@ companies:
         \ and remaining assessment adjustments."
       applicable: true
     nii_sens_down_per_100bp:
-      value: 0.0251
-      low: -0.0143
-      high: 0.0558
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: 0.007
+      low: 0.007
+      high: 0.007
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm
+      rationale: 2025 Form 10-K Table 32; estimated impact on projected baseline NII, +100 0.6% / -100 -0.7%;
+        not the EVE table. Accessed 2026-10-31. Divided by reported annual NII only when source is dollars.
+        Point calibration does not validate long-run persistence or other shock sizes.
     nii_sens_up_per_100bp:
-      value: 0.0116
-      low: -0.0137
-      high: 0.04
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: 0.006
+      low: 0.006
+      high: 0.006
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm
+      rationale: 2025 Form 10-K Table 32; estimated impact on projected baseline NII, +100 0.6% / -100 -0.7%;
+        not the EVE table. Accessed 2026-10-31. Divided by reported annual NII only when source is dollars.
+        Point calibration does not validate long-run persistence or other shock sizes.
     trading_revenue_share:
       value: 0.002
       low: 0
@@ -580,39 +550,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/0000927628-26-000024-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   FITB:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 270454.0
@@ -631,20 +598,18 @@ companies:
       low: -0.0143
       high: 0.0558
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     nii_sens_up_per_100bp:
       value: 0.0116
       low: -0.0137
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     trading_revenue_share:
       value: 0.03
@@ -653,39 +618,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/35527/000003552726000124/0000035527-26-000124-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   HBAN:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 257451.561
@@ -704,20 +666,18 @@ companies:
       low: -0.0143
       high: 0.0558
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     nii_sens_up_per_100bp:
       value: 0.0116
       low: -0.0137
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     trading_revenue_share:
       value: 0.01
@@ -726,39 +686,36 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/49196/000004919626000015/0000049196-26-000015-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   KEY:
     card_late_fee_revenue_share:
       value: 0.0126
       low: 0.006
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0.062
       low: 0.0
       high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     fdic_assessment_base_musd:
       value: 170125.276
@@ -777,20 +734,18 @@ companies:
       low: -0.0143
       high: 0.0558
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     nii_sens_up_per_100bp:
       value: 0.0116
       low: -0.0137
       high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     trading_revenue_share:
       value: 0.025
@@ -799,9 +754,9 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/91576/000162828026010546/0001628280-26-010546-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   ALLY:
     card_late_fee_revenue_share:
       value: 0
@@ -809,18 +764,17 @@ companies:
       high: 0
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072925000020/ally-20250630.htm
-      rationale: 'Company-specific estimate: Ally sold its credit-card business on April 1, 2025. Exclude
-        the divested card late-fee stream from the current-business policy scenario.'
+      rationale: 'Company-specific estimate: Ally sold its credit-card business on April 1, 2025. Exclude the
+        divested card late-fee stream from the current-business policy scenario.'
       applicable: true
     cet1_ratio_std:
       value: 0.114
       low: 0.105
       high: 0.146
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer banking; median base
+        and outer low/high from JPM/BAC/WFC/C/AXP in committed exposure configuration. Dimensionless peer prior;
+        review before relying on this company result.
       applicable: true
     credit_interchange_revenue_share:
       value: 0
@@ -844,25 +798,23 @@ companies:
         \ assessment adjustments."
       applicable: true
     nii_sens_down_per_100bp:
-      value: 0.0251
-      low: -0.0143
-      high: 0.0558
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: -0.004680851063829788
+      low: -0.004680851063829788
+      high: -0.004680851063829788
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm
+      rationale: 2025 Form 10-K Market Risk, NII sensitivity table; Instantaneous 2025 column, +100 -$106M
+        / -100 +$22M; gradual scenarios excluded. Accessed 2026-10-31. Divided by reported annual NII only
+        when source is dollars. Point calibration does not validate long-run persistence or other shock sizes.
     nii_sens_up_per_100bp:
-      value: 0.0116
-      low: -0.0137
-      high: 0.04
-      source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Regional and consumer
-        banking; median base and outer low/high from JPM/BAC/WFC/C/AXP in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
-      applicable: true
+      value: -0.0225531914893617
+      low: -0.0225531914893617
+      high: -0.0225531914893617
+      source: verified bank annual NII sensitivity
+      source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm
+      rationale: 2025 Form 10-K Market Risk, NII sensitivity table; Instantaneous 2025 column, +100 -$106M
+        / -100 +$22M; gradual scenarios excluded. Accessed 2026-10-31. Divided by reported annual NII only
+        when source is dollars. Point calibration does not validate long-run persistence or other shock sizes.
     trading_revenue_share:
       value: 0.002
       low: 0
@@ -870,72 +822,65 @@ companies:
       source: estimate
       source_url: https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/0000040729-26-000005-index.htm
       rationale: Company-specific estimate of revenue sensitive to covered securities trading volume. Separates
-        broker/dealer, custody, regional banking and card/auto lending business models instead of copying
-        Goldman/JPMorgan shares. Excludes unrelated custody fees, net interest, FX-only trading and asset
-        management. Wide range; not a disclosed US taxable-securities segment or transaction notional.
+        broker/dealer, custody, regional banking and card/auto lending business models instead of copying Goldman/JPMorgan
+        shares. Excludes unrelated custody fees, net interest, FX-only trading and asset management. Wide range;
+        not a disclosed US taxable-securities segment or transaction notional.
   MA:
     card_late_fee_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     cet1_ratio_std:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     credit_interchange_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     fdic_assessment_base_musd:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_down_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_up_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     trading_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
   BLK:
     card_late_fee_revenue_share:
@@ -943,63 +888,56 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     cet1_ratio_std:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     credit_interchange_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     fdic_assessment_base_musd:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_down_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_up_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     trading_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
   AIG:
     card_late_fee_revenue_share:
@@ -1007,63 +945,56 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     cet1_ratio_std:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     credit_interchange_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     fdic_assessment_base_musd:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_down_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_up_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     trading_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
   PRU:
     card_late_fee_revenue_share:
@@ -1071,63 +1002,56 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     cet1_ratio_std:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     credit_interchange_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     fdic_assessment_base_musd:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_down_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_up_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     trading_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
   PGR:
     card_late_fee_revenue_share:
@@ -1135,61 +1059,54 @@ companies:
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     cet1_ratio_std:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     credit_interchange_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     fdic_assessment_base_musd:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_down_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     nii_sens_up_per_100bp:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false
     trading_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
       source: estimate
-      rationale: Not applicable to this non-bank's modeled business. Stored zero is
-        a placeholder, not a reported bank measure; bank-only channels exclude this
-        statement template.
+      rationale: Not applicable to this non-bank's modeled business. Stored zero is a placeholder, not a reported
+        bank measure; bank-only channels exclude this statement template.
       applicable: false

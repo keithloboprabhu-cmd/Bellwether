@@ -1,0 +1,143 @@
+[
+  {
+    "ticker": "JPM",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | December 31,(in billions) | 2025(a) | | 2024(a) | | Parallel shift: | | | | | +100 bps shift in rates | $ | 2.1 | | | $ | 2.3 | | | -100 bps shift in rates | (2.4) | | | (2.5) | | | +200 bps shift in rates | 3.7 | | | 4.6 | | | -200 bps shift in rates | (6.0) | | | (4.9) | | | Steeper yield curve: | | | | | +100 bps shift in long-term rates | 1.4 | | | 1.0 | | | -100 bps shift in short-term rates | (1.0) | | | (1.4) | | | Flatter yield curve: | | | | | +100 bps shift in short-term rates | 0.7 | | | 1.2 | | | -100 bps shift in long-term rates | (1.4) | | | (1.1) | |",
+      "| | | | | | | | | | | | | December 31,(in millions, except rates) | 2025 | | 2024 | Weighted-average prepayment speed assumption (constant prepayment rate) | 6.77 | % | | 6.19 | % | Impact on fair value of 10% adverse change | $ | (181) | | | $ | (209) | | Impact on fair value of 20% adverse change | (353) | | | (406) | | Weighted-average option adjusted spread(a) | 6.14 | % | | 5.97 | % | Impact on fair value of 100 basis points adverse change | $ | (394) | | | $ | (391) | | Impact on fair value of 200 basis points adverse change | (757) | | | (751) |"
+    ]
+  },
+  {
+    "ticker": "BAC",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Table 45 | Estimated Banking Book Net Interest Income Sensitivity to Curve Changes | | | Short Rate (bps) | | Long Rate (bps) | | | | | | | | | | | | | | | December 31 | (Dollars in billions) | | | 2025 | | 2024 | | | | | | | | | Parallel Shifts | | | | | | | | +100 bps instantaneous shift | +100 | | +100 | | $ | 0.7 | | | $ | 1.1 | | | | | | | | | | -100 bps instantaneous shift | -100 | | -100 | | (2.0) | | | (2.3) | | +200 bps instantaneous shift | +200 | | +200 | | 0.8 | | | 2.0 | | -200 bps instantaneous shift | -200 | | -200 | | (4.9) | | | (5.4) | | Flatteners | | | | | | | | Short-end instantaneous change | +100 | | \u2014 | | | 0.5 | | | 1.1 | | | | | | | | | | Long-end instantaneous change | \u2014 | | | -100 | | (0.3) | | | (0.1) | | Steepeners | | | | | | | | | | | | | | | | Short-end instantaneous change | -100 | | | \u2014 | | | (1.7) | | | (2.1) | | Long-end instantaneous change | \u2014 | | | +100 | | 0.3 | | | 0.1 |"
+    ]
+  },
+  {
+    "ticker": "WFC",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | ($ in billions) | Dec 31, 2025 | | | | Dec 31, 2024 | Parallel shift (1): | | | | | | +100 bps shift in interest rates | $ | 1.9 | | | | | 1.3 | | -100 bps shift in interest rates | (2.3) | | | | | (2.2) | | -200 bps shift in interest rates | (5.3) | | | | | (4.4) | | | | | | | | Steeper yield curve (1): | | | | | | +100 bps shift in long-term interest rates | 0.5 | | | | | 0.4 | | -100 bps shift in short-term interest rates | (1.8) | | | | | (1.8) | | | | | | | | | | | | | | | | | | | | Flatter yield curve (1): | | | | | | +100 bps shift in short-term interest rates | 1.4 | | | | | 0.9 | | -100 bps shift in long-term interest rates | (0.4) | | | | | (0.4) | | | | | | | | | | | | |",
+      "| | | | | | | | | | | | | ($ in millions, except cost to service amounts) | Dec 31, 2025 | | Dec 31, 2024 | Fair value of interests held | $ | 5,696 | | | 6,844 | | Expected weighted-average life (in years) | 6.3 | | 6.4 | | | | | Key assumptions: | | | | Prepayment rate assumption (1) | 8.0 | % | | 8.1 | | Impact on fair value from 10% adverse change | $ | (163) | | | (191) | | Impact on fair value from 25% adverse change | (394) | | | (461) | | | | | | Discount rate assumption | 9.1 | % | | 10.1 | | Impact on fair value from 100 basis point increase | $ | (243) | | | (270) | | Impact on fair value from 200 basis point increase | (465) | | | (519) | | | | | | Cost to service assumption ($ per loan) | 96 | | | 103 | | Impact on fair value from 10% adverse change | (106) | | | (134) | | Impact on fair value from 25% adverse change | (266) | | | (334) |"
+    ]
+  },
+  {
+    "ticker": "GS",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | As of December | | | | | $ in millions | 2025 | | 2024 | +100 basis points parallel shift in rates | $ | 154 | | | $ | 140 | | -100 basis points parallel shift in rates | $ | (273) | | | $ | (270) | | +200 basis points parallel shift in rates | $ | 215 | | | $ | 196 | | -200 basis points parallel shift in rates | $ | (485) | | | $ | (525) |"
+    ]
+  },
+  {
+    "ticker": "C",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | In millions of dollars, except as otherwise noted | Dec. 31, 2025 | Sep. 30, 2025 | Dec. 31, 2024 | Parallel interest rate shock +100 bps | | | | Interest rate exposure(1)(2) | | | | U.S. dollar | $ | (33) | | $ | (252) | | $ | (93) | | All other currencies | 1,402 | | 1,529 | | 1,068 | | Total net interest income | $ | 1,369 | | $ | 1,277 | | $ | 975 | | As a percentage of average interest-earning assets | 0.05 | % | 0.05 | % | 0.04 | % | Estimated initial negative impact to AOCI (after-tax)(2) | $ | (2,597) | | $ | (2,381) | | $ | (1,111) | | Estimated initial impact on CET1 Capital ratio (bps) from AOCI scenario(3) | (19) | | (18) | | (13) |"
+    ]
+  },
+  {
+    "ticker": "AXP",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000080/axp-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | (Millions) | Instantaneous Parallel Rate Shocks (a) | | | +200bps | | +100bps | | -100bps | | -200bps | | | | $ | 5 | | $ | 19 | | | $ | (11) | | | $ | (23) | |",
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | (Millions) | Instantaneous Parallel Rate Shocks (a) | | | +200bps | | +100bps | | -100bps | | -200bps | | 2025 | $ | (506) | | | $ | (238) | | | $ | 248 | | | $ | 497 | | | 2024 | $ | (560) | | | $ | (224) | | | $ | 225 | | | $ | 457 | |"
+    ]
+  },
+  {
+    "ticker": "MS",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | $ in millions | AtDecember 31,2025 | AtDecember 31,2024 | Basis point change | | | +200 | $ | 410 | | $ | 699 | | +100 | 209 | | 350 | | -100 | (244) | | (371) | | -200 | (542) | | (803) |"
+    ]
+  },
+  {
+    "ticker": "SCHW",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | December 31, | 2025 | 2024 | Increase of 200 basis points | 8.6% | 8.6% | Increase of 100 basis points | 4.1% | 4.6% | Increase of 50 basis points | 1.7% | 2.5% | Decrease of 50 basis points | (2.2)% | (2.3)% | Decrease of 100 basis points | (4.4)% | (4.6)% | Decrease of 200 basis points | (8.8)% | (9.3)%"
+    ]
+  },
+  {
+    "ticker": "BNY",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1390777/000139077726000033/bk-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": []
+  },
+  {
+    "ticker": "STT",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | TABLE 33: NET INTEREST INCOME SENSITIVITY | | December 31, 2025 | | December 31, 2024 | (In millions) | U.S. Dollar | | All Other Currencies | | Total | | U.S. Dollar | | All Other Currencies | | Total | Rate change: | Benefit (Exposure) | | Benefit (Exposure) | Parallel shifts: | | | | | | | | | | | | +100 bps shock | $ | 82 | | | $ | 236 | | | $ | 318 | | | $ | 19 | | | $ | 292 | | | $ | 311 | | \u2013100 bps shock | (84) | | | (218) | | | (302) | | | (16) | | | (254) | | | (270) | | Steeper yield curve: | | | | | | | | | | | | +100 bps shift in long-end rates(1) | 12 | | | 16 | | | 28 | | | 28 | | | 22 | | | 50 | | -100 bps shift in short-end rates(1) | (67) | | | (202) | | | (269) | | | 13 | | | (233) | | | (220) | | Flatter yield curve: | | | | | | | | | | | | +100 bps shift in short-end rates(1) | 67 | | | 220 | | | 287 | | | (9) | | | 270 | | | 261 | | -100 bps shift in long-end rates(1) | (23) | | | (16) | | | (39) | | | (29) | | | (22) | | | (51) | | | | | | | | | | | | |"
+    ]
+  },
+  {
+    "ticker": "USB",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/36104/000003610426000011/usb-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": []
+  },
+  {
+    "ticker": "PNC",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": []
+  },
+  {
+    "ticker": "TFC",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": []
+  },
+  {
+    "ticker": "COF",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | December 31, 2025 | | December 31, 2024 | Estimated impact on projected baseline net interest income: | | | | | +200 basis points | | 1.0 | % | | 1.3 | % | +100 basis points | | 0.6 | | | 0.8 | | +50 basis points | | 0.3 | | | 0.4 | | \u201350 basis points | | (0.3) | | | (0.4) | | \u2013100 basis points | | (0.7) | | | (0.8) | | \u2013200 basis points | | (2.7) | | | (1.9) | | Estimated impact on economic value of equity: | | | | | +200 basis points | | (4.5) | | | (6.3) | | +100 basis points | | (2.0) | | | (3.0) | | +50 basis points | | (0.9) | | | (1.4) | | \u201350 basis points | | 0.7 | | | 1.3 | | \u2013100 basis points | | 1.2 | | | 2.5 | | \u2013200 basis points | | 1.1 | | | 3.9 |"
+    ]
+  },
+  {
+    "ticker": "FITB",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/35527/000003552726000124/fitb-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | TABLE 54: Estimated NII Sensitivity Profile and Policy Limits | | 2025 | | 2024 | | % Change in NII (FTE) | | Policy Limit | | % Change in NII (FTE) | | Policy Limit | Change in Interest Rates (bps) | 12 Months | | 13-24 Months | | 12 Months | | 13-24 Months | | 12 Months | | 13-24 Months | | 12 Months | | 13-24Months | +200 Ramp over 12 months | (3.09) | % | (2.28) | | (6.00) | | (7.00) | | (3.57) | | (4.00) | | (6.00) | | (7.00) | +100 Ramp over 12 months | (1.40) | | (0.57) | | N/A | | N/A | | (1.75) | | (1.84) | | N/A | | N/A | -100 Ramp over 12 months | 0.41 | | (1.81) | | N/A | | N/A | | 0.94 | | 0.24 | | N/A | | N/A | -200 Ramp over 12 months | (0.05) | | (6.56) | | (6.00) | | (7.00) | | 1.57 | | (0.27) | | (6.00) | | (7.00)",
+      "| | | | | | | | | | | | | | | | TABLE 55: Estimated NII Sensitivity Profile at December 31, 2025 with a $1 Billion Change in Demand Deposit Assumption | | % Change in NII (FTE) | | Immediate $1 Billion Balance Decrease | Immediate $1 Billion Balance Increase | Change in Interest Rates (bps) | 12 Months | 13-24 Months | 12 Months | 13-24 Months | +200 Ramp over 12 months | (3.87) | % | (3.16) | | (2.32) | | (1.40) | | +100 Ramp over 12 months | (2.09) | | (1.29) | | (0.71) | | 0.16 | | -100 Ramp over 12 months | (0.10) | | (2.22) | | 0.92 | | (1.40) | | -200 Ramp over 12 months | (0.47) | | (6.82) | | 0.37 | | (6.31) |",
+      "| | | | | | | | | | | | | | | | TABLE 56: Estimated NII Sensitivity Profile at December 31, 2025 with Deposit Beta Assumptions Changes | | % Change in NII (FTE) | | Betas 10% Higher(a) | Betas 10% Lower(a) | Change in Interest Rates (bps) | 12 Months | 13-24 Months | 12 Months | 13-24 Months | +200 Ramp over 12 months | (4.65) | % | (5.23) | | (1.56) | | 0.66 | | +100 Ramp over 12 months | (2.16) | | (2.00) | | (0.65) | | 0.86 | | -100 Ramp over 12 months | 1.09 | | (0.59) | | (0.26) | | (3.05) | | -200 Ramp over 12 months | 1.22 | | (4.40) | | (1.32) | | (8.77) |",
+      "| | | | | | | | | | | | | | | | | | | | | | | TABLE 57: Estimated EVE Sensitivity Profile | | 2025 | | 2024 | Change in Interest Rates (bps) | % Change in EVE | Policy Limit | | % Change in EVE | Policy Limit | +200 Shock | (5.12) | | % | (12.00) | | | (6.57) | | | (12.00) | | +100 Shock | (2.20) | | | N/A | | (3.04) | | | N/A | -100 Shock | 0.69 | | | N/A | | 1.79 | | | N/A | -200 Shock | (1.02) | | | (12.00) | | | 2.48 | | | (12.00) |"
+    ]
+  },
+  {
+    "ticker": "HBAN",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000015/hban-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | Table 18 - Net Interest Income at Risk | | At December 31, 2025 | | At December 31, 2024 | | Federal Funds Rate | | | | Federal Funds Rate | | | Basis point change scenario | Starting Point | | Month 12 (1) | | NII at Risk (%) | | Starting Point | | Month 12 (1) | | NII at Risk (%) | +200 | 3.75 | | | 5.25 | | | 2.5 | | | 4.50 | | | 6.00 | | | 2.0 | | +100 | 3.75 | | | 4.25 | | | 0.9 | | | 4.50 | | | 5.00 | | | 0.8 | | Base | 3.75 | | | 3.25 | | | \u2014 | | | 4.50 | | | 4.00 | | | \u2014 | | -100 | 3.75 | | | 2.25 | | | -0.6 | | | 4.50 | | | 3.00 | | | -0.5 | | -200 | 3.75 | | | 1.25 | | | -1.9 | | | 4.50 | | | 2.00 | | | -1.3 |",
+      "| | | | | | | | | | | | | | | | | | | | | | | | | Table 19 - Economic Value of Equity at Risk | | Economic Value of Equity at Risk (%) | Basis point change scenario | -200 | | -100 | | +100 | | +200 | | | | | | | | | At December 31, 2025 | 0.3 | | | 1.7 | | | -3.5 | | | -8.3 | | At December 31, 2024 | 5.9 | | | 4.3 | | | -5.8 | | | -12.6 |"
+    ]
+  },
+  {
+    "ticker": "KEY",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/91576/000162828026010546/key-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": []
+  },
+  {
+    "ticker": "ALLY",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+    "accessed": "2026-10-31",
+    "tables": [
+      "| | | | | | | | | | | | | | | | | | | | | | | | | | | Gradual (a) | | Instantaneous | | | | | Change in interest rates | | ($ in millions) | | | December 31, 2025 | | | | | | | | | +200 basis points | | $ | 18 | | | $ | (221) | | | | | | +100 basis points | | 9 | | | (106) | | | | | | -100 basis points | | (20) | | | 22 | | | | | | -200 basis points | | (44) | | | (31) | | | | | | December 31, 2024 | | | | | | | | | +200 basis points | | $ | 28 | | | $ | (184) | | | | | | +100 basis points | | 14 | | | (86) | | | | | | -100 basis points | | (23) | | | 4 | | | | |"
+    ]
+  }
+]

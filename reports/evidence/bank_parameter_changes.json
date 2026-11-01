@@ -1,0 +1,110 @@
+[
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "MS",
+    "parameter": "nii_sens_up_per_100bp",
+    "before": 0.0114,
+    "after": 0.020804300218992634,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm",
+    "location": "2025 Form 10-K, Wealth Management Net Interest Income Sensitivity Analysis (quantified WM component only), December 2025 sensitivity table; +100 +$209M / -100 -$244M"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "MS",
+    "parameter": "nii_sens_down_per_100bp",
+    "before": 0.0201,
+    "after": 0.024288273939876568,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/ms-20251231.htm",
+    "location": "2025 Form 10-K, Wealth Management Net Interest Income Sensitivity Analysis (quantified WM component only), December 2025 sensitivity table; +100 +$209M / -100 -$244M"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "STT",
+    "parameter": "nii_sens_up_per_100bp",
+    "before": 0.0114,
+    "after": 0.027702702702702704,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm",
+    "location": "2025 Form 10-K Table 33; U.S. Dollar column, +100 +$82M / -100 -$84M; excludes other-currency sensitivities"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "STT",
+    "parameter": "nii_sens_down_per_100bp",
+    "before": 0.0201,
+    "after": 0.02837837837837838,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000124/stt-20251231.htm",
+    "location": "2025 Form 10-K Table 33; U.S. Dollar column, +100 +$82M / -100 -$84M; excludes other-currency sensitivities"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "COF",
+    "parameter": "nii_sens_up_per_100bp",
+    "before": 0.0116,
+    "after": 0.006,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm",
+    "location": "2025 Form 10-K Table 32; estimated impact on projected baseline NII, +100 0.6% / -100 -0.7%; not the EVE table"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "COF",
+    "parameter": "nii_sens_down_per_100bp",
+    "before": 0.0251,
+    "after": 0.007,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm",
+    "location": "2025 Form 10-K Table 32; estimated impact on projected baseline NII, +100 0.6% / -100 -0.7%; not the EVE table"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "ALLY",
+    "parameter": "nii_sens_up_per_100bp",
+    "before": 0.0116,
+    "after": -0.0225531914893617,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+    "location": "2025 Form 10-K Market Risk, NII sensitivity table; Instantaneous 2025 column, +100 -$106M / -100 +$22M; gradual scenarios excluded"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "ALLY",
+    "parameter": "nii_sens_down_per_100bp",
+    "before": 0.0251,
+    "after": -0.004680851063829788,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+    "location": "2025 Form 10-K Market Risk, NII sensitivity table; Instantaneous 2025 column, +100 -$106M / -100 +$22M; gradual scenarios excluded"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "PNC",
+    "parameter": "nii_sens_up_per_100bp",
+    "before": 0.0116,
+    "after": 0.01,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm",
+    "location": "2025 Form 10-K Table 33; instantaneous +/-200bp NII 2.0% / -2.9%; footnote (a) explicitly states 100bp is approximately half"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "PNC",
+    "parameter": "nii_sens_down_per_100bp",
+    "before": 0.0251,
+    "after": 0.0145,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/713676/000071367626000020/pnc-20251231.htm",
+    "location": "2025 Form 10-K Table 33; instantaneous +/-200bp NII 2.0% / -2.9%; footnote (a) explicitly states 100bp is approximately half"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "TFC",
+    "parameter": "nii_sens_up_per_100bp",
+    "before": 0.0116,
+    "after": -0.002,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm",
+    "location": "2025 Form 10-K Table 30; instantaneous +/-50bp NII -0.1% / -0.2%; 200bp gradual rows excluded; linear interpolation beyond 50bp unverified"
+  },
+  {
+    "policy": "financial_services/fed_rate_change",
+    "ticker": "TFC",
+    "parameter": "nii_sens_down_per_100bp",
+    "before": 0.0251,
+    "after": 0.004,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm",
+    "location": "2025 Form 10-K Table 30; instantaneous +/-50bp NII -0.1% / -0.2%; 200bp gradual rows excluded; linear interpolation beyond 50bp unverified"
+  }
+]
