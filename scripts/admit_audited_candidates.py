@@ -63,6 +63,7 @@ def main() -> None:
                         # DEI A/B/C raw class counts are not additive economic shares.
                         so=None
                     snap['companies'][t]=dict(ticker=t,name=c['name'],entity_name=c['name'],cik=c['cik'],industry=slug,kind=c['kind'],shares_outstanding=so,years=years)
+                    if t=='V':snap['companies'][t]['share_basis']='class_a_equivalent'
                     keys=set().union(*(set(reg.exposures.get(x,{})) for x in original[slug]))
                     vals={k:missing_exposure('New issuer: exact policy-specific quantity has not been independently verified; no unrelated peer prior transferred.') for k in keys}
                     if slug=='industrials':

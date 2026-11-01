@@ -146,3 +146,14 @@ def test_documented_share_units(ticker, expected):
     f = store.fiscal_year(ticker)["items"]
     assert f["diluted_shares"] == pytest.approx(expected)
     assert f["net_income"] / (f["eps_diluted"] * f["diluted_shares"]) == pytest.approx(1, rel=.01)
+
+
+def test_reference_profile_does_not_bypass_earnings_normalization():
+    """Exported/imported Capital One keeps the guard without changing profile schema."""
+    from policyshock.company.profiles import lookup_company
+    p=CompanyProfile.model_validate(lookup_company('COF','financial_services'))
+    result=run_company(p,'fed_rate_change',{'d_rate_bps':-100})
+    b=result.base.companies[0].baseline
+    assert b['valuation_method']=='three_year_median_adjusted_eps'
+    assert b['valuation_eps']==13.96
+    assert p.schema_version==1

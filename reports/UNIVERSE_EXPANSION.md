@@ -63,3 +63,16 @@ The 44 public gap candidates are staged separately from runtime configuration. T
 ## Full membership ledger
 
 See `data/universe_sources/membership_decisions.csv` for all 100 Fortune decisions and 101 OEF securities, including private/mutual and conservatorship exclusions. `expansion_candidates.json` contains every original parser flag, SEC SIC, annual source link and financial series. Industry assignments above are model taxonomy judgments based on SEC business classifications and reviewed business descriptions; they are not S&P GICS assignments.
+
+
+## Final admission result — 1 November 2026
+
+The Phase 2 staged list above is preserved as a checkpoint. Thirty-one candidates
+are now active, bringing the roster to 234. The final per-issuer decision is in
+`data/universe_sources/admission_decisions.json`; 13 staged candidates remain
+deferred. Actual annual covers resolved blank incorporation metadata for PLTR
+and PYPL. CHTR is Delaware too, but its missing US pretax base remains unresolved.
+Fortune coverage is 81/100 (81/90 public ordinary-equity candidates); eight
+private/mutual exclusions and two conservatorships are listed individually in
+AUDIT_SUMMARY.md. The OEF cross-check is 94/100 unique issuers, explicitly not a
+certified full S&P publisher constituent list.

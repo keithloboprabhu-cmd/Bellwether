@@ -53,6 +53,7 @@ Policy references (a citation is not numeric verification):
 | SPGI | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TRV | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | V | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PYPL | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -96,10 +97,10 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.elasticity | -0.024253328 | -0.082703096 | 0.058449767 |
-| assumption.cost_bps | -0.07657694 | -0.02088462 | 0.05569232 |
-| exposure.trading_revenue_share | -0.033695345 | -0.059093775 | 0.025398431 |
-| assumption.variable_comp_ratio | -0.053498958 | -0.040910968 | 0.01258799 |
+| assumption.elasticity | -0.023835982 | -0.08127996 | 0.057443977 |
+| assumption.cost_bps | -0.075259222 | -0.020525242 | 0.05473398 |
+| exposure.trading_revenue_share | -0.033115523 | -0.058076903 | 0.02496138 |
+| assumption.variable_comp_ratio | -0.052578361 | -0.040206982 | 0.012371379 |
 
 Dominant configured driver: `elasticity` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

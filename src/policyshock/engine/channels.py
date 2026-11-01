@@ -212,7 +212,9 @@ def financing_debt(b, p) -> Delta:
     """
     D = b.get("total_debt") or 0.0
     share = min(1.0, p["floating_share"] + p["maturing_share"])
-    notes = [] if b.get("total_debt") else ["no debt in baseline; interest effect is zero"]
+    notes = (["Borrowing balance unquantified; zero calculated financing effect is not evidence of no debt"]
+             if b.get("total_debt") is None else
+             ["Reported borrowing balance is zero on the model's disclosed debt basis"] if b["total_debt"] == 0 else [])
     return Delta(dInt=D * share * p["d_rate_bps"] / 10_000, notes=notes)
 
 

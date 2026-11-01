@@ -37,3 +37,18 @@ Defaults above use the committed original quote snapshot for comparability; the 
 525 Python tests passed, 5 skipped; 16 frontend tests passed; production frontend build passed. Complete internal audit: 66 policies, 10 macro shocks, 0 failures. These checks establish arithmetic/scope consistency, not independent empirical calibration.
 
 The 2018 steel backtest now misses the observed Nucor annual margin magnitude by more. This is disclosed rather than widening the range to absorb demand, volume and mix. The official causal price metric is better evidence for the price channel than fitting a whole-year earnings outcome.
+
+
+## Final superseding resolutions — 1 November 2026
+
+The table above is the Phase 1 checkpoint, not the final valuation result. The
+final audit disables an unadjusted historical-median P/E fallback. Capital One's
+verified issuer-adjusted 2023/2024/2025 EPS is 12.52/13.96/19.61, so its valuation
+median is 13.96. Other depressed/negative-EPS firms without verified adjustments
+remain unavailable for permanent earnings valuation. COF bank sensitivities also
+use its own current table. Reported EPS remains the percentage denominator.
+
+EXR's complete term plus revolver/commercial-paper borrowing base is now verified
+at $13,230.651M; included unsecured term debt is not added twice. Visa is active
+with Class A-equivalent diluted shares. Insurer statement templates use claims.
+See AUDIT_SUMMARY.md for final counts, tests, remaining failures and backtests.

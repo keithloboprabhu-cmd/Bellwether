@@ -63,3 +63,17 @@ PYTHONPATH=src .venv/bin/python -m policyshock.ui.api
 ```
 
 After starting the console, `scripts/audit_running_console.py` exercises the HTTP calculation contract. Source verification and per-policy benchmark calibration remain a separate task from these invariant tests. Internet access to primary source pages was confirmed in Phase 0; inaccessible or restricted full constituent lists must be logged, never reconstructed from memory.
+
+
+## Final audit changes — 1 November 2026
+
+The starting inventory above remains the phase-0 baseline. The active inventory
+is now 234 companies, 72 industry policies and ten macro shocks, with 1,694 own-
+industry coverage decisions and five unresolved default-coverage gaps. An insurer
+template, exact filing supplements, raw tax-rate preservation/normalization,
+finance-arm debt separation, current class shares, sourced adjusted-EPS guards and
+a zero equity-price floor supersede the starting behaviors described above.
+Current paths are `config/macro/` (not `macro_shocks/`) and
+`src/policyshock/macro/aggregate.py`. See reports/AUDIT_SUMMARY.md for the evidence
+boundary: internal invariant checks pass, but none of the 72 policies has complete
+empirical certification.

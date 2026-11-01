@@ -250,7 +250,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 6
+    "coverage_gaps": 7
   },
   {
     "policy": "financial_services/credit_card_interchange_cap",
@@ -261,7 +261,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 6
+    "coverage_gaps": 7
   },
   {
     "policy": "financial_services/credit_card_late_fee_cap",
@@ -272,7 +272,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 6
+    "coverage_gaps": 7
   },
   {
     "policy": "financial_services/fdic_assessment_increase",
@@ -283,7 +283,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 6
+    "coverage_gaps": 7
   },
   {
     "policy": "financial_services/fed_rate_change",
@@ -294,7 +294,7 @@
     "matched_benchmarks": 23,
     "benchmark_passes": 23,
     "recalibrated_parameters": 12,
-    "coverage_gaps": 6
+    "coverage_gaps": 7
   },
   {
     "policy": "financial_services/financial_transaction_tax",
@@ -305,7 +305,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 6
+    "coverage_gaps": 7
   },
   {
     "policy": "financial_services/us_corporate_tax_financial_services",
@@ -635,7 +635,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/broadband_affordability_subsidy",
@@ -646,7 +646,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/chip_export_controls",
@@ -657,7 +657,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/chips_manufacturing_credit",
@@ -668,7 +668,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/data_privacy_mandate",
@@ -679,7 +679,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/digital_services_tax",
@@ -690,7 +690,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/semiconductor_tariffs",
@@ -701,7 +701,7 @@
     "matched_benchmarks": 0,
     "benchmark_passes": 0,
     "recalibrated_parameters": 0,
-    "coverage_gaps": 12
+    "coverage_gaps": 13
   },
   {
     "policy": "tmt/us_corporate_tax_tmt",

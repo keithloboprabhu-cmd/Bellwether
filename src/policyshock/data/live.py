@@ -27,6 +27,7 @@ from policyshock.data.baseline import build_baseline, shares_outstanding
 
 CACHE = CACHE_DIR / "live/state.json"
 INTERVALS = {"quotes": 300, "fred": 3600, "financials": 21600}
+NORMALIZATION_VERSION = 'filing-audit-2026-10-31-v1'
 
 
 def _now() -> str:
@@ -91,6 +92,13 @@ class LiveData:
             data = json.loads(cache.read_text())
             if isinstance(data, dict) and all(isinstance(data.get(k), dict) for k in self.state):
                 self.state = data
+                valid = {t: co for t, co in self.state['financials'].items()
+                         if co.get('normalization_version') == NORMALIZATION_VERSION}
+                if len(valid) != len(self.state['financials']):
+                    # Old parsed caches must not undo newly corrected debt/tax/
+                    # share normalization for another six hours after an upgrade.
+                    self.state['financials'] = valid
+                    self.state['status'].pop('financials', None)
         except (OSError, ValueError):
             pass
 
@@ -206,7 +214,7 @@ class LiveData:
                     if not all(_number(latest["items"].get(k)) is not None for k in ("revenue", "operating_income", "diluted_shares")) or latest["items"]["revenue"] <= 0 or latest["items"]["diluted_shares"] <= 0:
                         raise ValueError("Incomplete latest annual SEC statement")
                     years = [{**y.to_dict(), "filing_url": edgar.filing_url(y.source_cik or old["cik"], y.source_accn) if y.source_accn else None} for y in parsed]
-                    return ticker, {**old, "years": years, "shares_outstanding": shares_outstanding(facts), "checked_at": _now(), "source": "SEC EDGAR API"}
+                    return ticker, {**old, "years": years, "shares_outstanding": shares_outstanding(facts), "checked_at": _now(), "source": "SEC EDGAR API", 'normalization_version': NORMALIZATION_VERSION}
 
                 with ThreadPoolExecutor(max_workers=3) as pool:
                     futures = {t: pool.submit(fetch_one, t) for t in (keys if keys is not None else load_universe().all_tickers)}

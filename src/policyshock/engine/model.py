@@ -176,8 +176,10 @@ def aggregate(
     notes = [n for x in d for n in x.notes]
     if eps is not None and eps <= 0:
         notes.append("baseline EPS ≤ 0: reported ΔEPS % is undefined; valuation requires supported normalized earnings")
-    if b.get("valuation_method") == "three_year_median_eps":
-        notes.append("Valuation uses three-year median reported EPS, not depressed current EPS; no unsourced special-item adjustment")
+    if b.get("valuation_method") == "three_year_median_adjusted_eps":
+        notes.append("Valuation uses three-year median issuer-adjusted EPS; reported EPS and percentage-change denominators remain unchanged")
+    if b.get("valuation_method") == "unavailable_normalization_pending":
+        notes.append("Permanent valuation unavailable: adjusted earnings history or EV/EBITDA inputs have not been verified")
     if wiped_out:
         notes.append("Equity wiped out: implied share price floored at $0; unconstrained value change retained for review")
     return CompanyResult(

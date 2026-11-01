@@ -54,6 +54,7 @@ Scope finding: FDIC bank assessments do not directly insure AIG/PGR/PRU policyho
 | SPGI | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TRV | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | V | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PYPL | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -98,7 +99,7 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.fdic_assessment_base_musd | -0.0072178831 | -0.0090032523 | 0.0017853693 |
+| exposure.fdic_assessment_base_musd | -0.0070936794 | -0.0088483264 | 0.0017546471 |
 
 Dominant configured driver: `fdic_assessment_base_musd` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

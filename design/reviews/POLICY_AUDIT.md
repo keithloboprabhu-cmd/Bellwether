@@ -1,10 +1,10 @@
 # Bellwether policy audit
 
-Checked 2026-11-01T00:46:24.524953+00:00; source/data fingerprint `d2f1c14bb02041ad`.
+Checked 2026-11-01T19:45:22.413873+00:00; source/data fingerprint `c85f0117bf7f73f8`.
 
 72 industry policies and 10 macro shocks. 261 industry input cases; 394 coefficient/exposure endpoint cases; 42 macro input cases. 0 failures.
 
-1679 explicit industry-policy/company coverage decisions across 232 unique companies. Every decision is independently recorded in config/policy_company_coverage.yaml, including business rationale and default direction for covered firms. Missing/extra firms, missing expected impacts, wrong default directions and out-of-scope effects are failures. Scope checks also run at uncertainty endpoints, not only defaults. Macro shocks cover all 232 companies and their uncertain-driver endpoints.
+1694 explicit industry-policy/company coverage decisions across 234 unique companies. Every decision is independently recorded in config/policy_company_coverage.yaml, including business rationale and default direction for covered firms. Missing/extra firms, missing expected impacts, wrong default directions and out-of-scope effects are failures. Scope checks also run at uncertainty endpoints, not only defaults. Macro shocks cover all 234 companies and their uncertain-driver endpoints.
 
 Checks: defaults, every valid input endpoint and endpoint combination, legal all-zero settings, every uncertain driver endpoint, finite results, nonnegative revenue/cost levels, exact earnings and valuation attribution, EPS/share identity, tax bounds, per-company oriented scenario ranges, independent sign/scope expectations, exposure provenance and explicit no-coverage exceptions.
 
@@ -34,13 +34,13 @@ This is an internal model audit, not independent assurance, causal policy attrib
 | energy_resources/federal_leasing_limits | 6/20 | 3 | 4 | PASS |
 | energy_resources/methane_emissions_fee | 10/20 | 3 | 6 | PASS |
 | energy_resources/spr_release | 7/20 | 3 | 6 | PASS |
-| financial_services/bank_capital_requirement | 18/29 | 3 | 4 | PASS |
-| financial_services/credit_card_interchange_cap | 12/29 | 3 | 6 | PASS |
-| financial_services/credit_card_late_fee_cap | 12/29 | 3 | 6 | PASS |
-| financial_services/fdic_assessment_increase | 18/29 | 3 | 2 | PASS |
-| financial_services/fed_rate_change | 18/29 | 4 | 4 | PASS |
-| financial_services/financial_transaction_tax | 17/29 | 3 | 8 | PASS |
-| financial_services/us_corporate_tax_financial_services | 19/29 | 2 | 2 | PASS |
+| financial_services/bank_capital_requirement | 18/30 | 3 | 4 | PASS |
+| financial_services/credit_card_interchange_cap | 12/30 | 3 | 6 | PASS |
+| financial_services/credit_card_late_fee_cap | 12/30 | 3 | 6 | PASS |
+| financial_services/fdic_assessment_increase | 18/30 | 3 | 2 | PASS |
+| financial_services/fed_rate_change | 18/30 | 4 | 4 | PASS |
+| financial_services/financial_transaction_tax | 17/30 | 3 | 8 | PASS |
+| financial_services/us_corporate_tax_financial_services | 20/30 | 2 | 2 | PASS |
 | healthcare/aca_subsidy_change | 5/24 | 4 | 4 | PASS |
 | healthcare/medicaid_work_requirements | 9/24 | 4 | 4 | PASS |
 | healthcare/medicare_advantage_rate_change | 6/24 | 4 | 4 | PASS |
@@ -69,14 +69,14 @@ This is an internal model audit, not independent assurance, causal policy attrib
 | real_estate_hospitality/return_to_office_mandate | 7/20 | 4 | 4 | PASS |
 | real_estate_hospitality/short_term_rental_regulation | 6/20 | 3 | 8 | PASS |
 | real_estate_hospitality/visa_fee_tourism_tax | 7/20 | 3 | 8 | PASS |
-| tmt/app_store_commission_cap | 2/32 | 3 | 6 | PASS |
-| tmt/broadband_affordability_subsidy | 3/32 | 9 | 4 | PASS |
-| tmt/chip_export_controls | 17/32 | 9 | 6 | PASS |
-| tmt/chips_manufacturing_credit | 2/32 | 3 | 4 | PASS |
-| tmt/data_privacy_mandate | 20/32 | 9 | 6 | PASS |
-| tmt/digital_services_tax | 6/32 | 3 | 6 | PASS |
-| tmt/semiconductor_tariffs | 20/32 | 3 | 6 | PASS |
-| tmt/us_corporate_tax_tmt | 27/32 | 2 | 2 | PASS |
+| tmt/app_store_commission_cap | 2/33 | 3 | 6 | PASS |
+| tmt/broadband_affordability_subsidy | 3/33 | 9 | 4 | PASS |
+| tmt/chip_export_controls | 17/33 | 9 | 6 | PASS |
+| tmt/chips_manufacturing_credit | 2/33 | 3 | 4 | PASS |
+| tmt/data_privacy_mandate | 20/33 | 9 | 6 | PASS |
+| tmt/digital_services_tax | 6/33 | 3 | 6 | PASS |
+| tmt/semiconductor_tariffs | 20/33 | 3 | 6 | PASS |
+| tmt/us_corporate_tax_tmt | 28/33 | 2 | 2 | PASS |
 | transportation_logistics/airline_bag_fee_cap | 4/20 | 3 | 4 | PASS |
 | transportation_logistics/airline_ticket_tax_change | 4/20 | 4 | 4 | PASS |
 | transportation_logistics/auto_import_tariffs | 17/20 | 3 | 6 | PASS |
@@ -87,16 +87,16 @@ This is an internal model audit, not independent assurance, causal policy attrib
 
 ## Macro shocks
 
-- china_trade_war: 3 input cases + 18 driver endpoints × 232 firms; 0 failures.
-- corporate_tax_change: 4 input cases + 4 driver endpoints × 232 firms; 0 failures.
-- fed_rate_change: 4 input cases + 26 driver endpoints × 232 firms; 0 failures.
-- government_shutdown: 3 input cases + 8 driver endpoints × 232 firms; 0 failures.
-- household_stimulus: 9 input cases + 20 driver endpoints × 232 firms; 0 failures.
-- inflation_shock: 4 input cases + 24 driver endpoints × 232 firms; 0 failures.
-- oil_supply_shock: 4 input cases + 22 driver endpoints × 232 firms; 0 failures.
-- recession_gdp_shock: 4 input cases + 24 driver endpoints × 232 firms; 0 failures.
-- strong_dollar: 4 input cases + 8 driver endpoints × 232 firms; 0 failures.
-- universal_tariff: 3 input cases + 20 driver endpoints × 232 firms; 0 failures.
+- china_trade_war: 3 input cases + 18 driver endpoints × 234 firms; 0 failures.
+- corporate_tax_change: 4 input cases + 4 driver endpoints × 234 firms; 0 failures.
+- fed_rate_change: 4 input cases + 26 driver endpoints × 234 firms; 0 failures.
+- government_shutdown: 3 input cases + 8 driver endpoints × 234 firms; 0 failures.
+- household_stimulus: 9 input cases + 20 driver endpoints × 234 firms; 0 failures.
+- inflation_shock: 4 input cases + 24 driver endpoints × 234 firms; 0 failures.
+- oil_supply_shock: 4 input cases + 22 driver endpoints × 234 firms; 0 failures.
+- recession_gdp_shock: 4 input cases + 24 driver endpoints × 234 firms; 0 failures.
+- strong_dollar: 4 input cases + 8 driver endpoints × 234 firms; 0 failures.
+- universal_tariff: 3 input cases + 20 driver endpoints × 234 firms; 0 failures.
 
 ## Company scope and remaining limitations
 
@@ -120,7 +120,6 @@ Neutral in direct channels: MDLZ, MO, PFGC, PM, SYY, TSN.
 - WMT: REVIEW |EPS change| >50% at default. Reported EPS denominator 2.73; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.
 - TGT: REVIEW |EPS change| >50% at default. Reported EPS denominator 8.13; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.
 - KR: REVIEW |EPS change| >50% at default. Reported EPS denominator 1.54; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.
-- KR: equity wiped out; $0 floor binds, operating losses remain uncapped
 - BBY: REVIEW |EPS change| >50% at default. Reported EPS denominator 5.04; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.
 - BBY: equity wiped out; $0 floor binds, operating losses remain uncapped
 - Reference: https://www.aeaweb.org/doi/10.1257/jep.33.4.187
@@ -333,8 +332,8 @@ Neutral in direct channels: NEE, FSLR, SLB, HAL, WMB, PSX, VLO, MPC, DUK, SO, AE
 Higher CET1 lowers modeled ROE/value while EPS remains unchanged.
 
 Affected: JPM, BAC, WFC, GS, C, AXP, MS, SCHW, BNY, STT, USB, PNC, TFC, COF, FITB, HBAN, KEY, ALLY.
-Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V.
-23 estimated company exposure inputs; 0 narrow-business scope checks.
+Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
+24 estimated company exposure inputs; 0 narrow-business scope checks.
 Value-only impact: the console defaults to implied share-price change; zero EPS is intentional.
 - Reference: https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm
@@ -345,8 +344,8 @@ Value-only impact: the console defaults to implied share-price change; zero EPS 
 Credit issuer interchange declines after a binding cap.
 
 Affected: JPM, BAC, WFC, GS, C, USB, PNC, TFC, COF, FITB, HBAN, KEY.
-Neutral in direct channels: AXP, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V.
-29 estimated company exposure inputs; 29 narrow-business scope checks.
+Neutral in direct channels: AXP, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
+30 estimated company exposure inputs; 30 narrow-business scope checks.
 - Reference: https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm
 - Reference: https://www.federalreserve.gov/econres/feds/bank-profitability-and-debit-card-interchange-regulation-bank-responses-to-the-durbin-amendment.htm
@@ -356,8 +355,8 @@ Neutral in direct channels: AXP, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PG
 Binding late-fee cap lowers issuer fee revenue.
 
 Affected: JPM, BAC, WFC, C, AXP, USB, PNC, TFC, COF, FITB, HBAN, KEY.
-Neutral in direct channels: GS, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V.
-29 estimated company exposure inputs; 29 narrow-business scope checks.
+Neutral in direct channels: GS, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
+30 estimated company exposure inputs; 30 narrow-business scope checks.
 - Reference: https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/
 - Reference: https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court
 
@@ -366,8 +365,8 @@ Neutral in direct channels: GS, MS, SCHW, BNY, STT, ALLY, MA, BLK, AIG, PRU, PGR
 Higher assessment raises covered bank operating cost.
 
 Affected: JPM, BAC, WFC, GS, C, AXP, MS, SCHW, BNY, STT, USB, PNC, TFC, COF, FITB, HBAN, KEY, ALLY.
-Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V.
-29 estimated company exposure inputs; 29 narrow-business scope checks.
+Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
+30 estimated company exposure inputs; 30 narrow-business scope checks.
 - Reference: https://www.fdic.gov/news/press-releases/2022/pr22073.html
 - Reference: https://www.fdic.gov/resources/deposit-insurance/deposit-insurance-fund/dif-assessments.html
 
@@ -376,8 +375,8 @@ Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V
 Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ.
 
 Affected: JPM, BAC, WFC, GS, C, AXP, MS, SCHW, BNY, STT, USB, PNC, TFC, COF, FITB, HBAN, KEY, ALLY.
-Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V.
-35 estimated company exposure inputs; 0 narrow-business scope checks.
+Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
+37 estimated company exposure inputs; 0 narrow-business scope checks.
 - Reference: https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231.htm
@@ -388,8 +387,8 @@ Neutral in direct channels: MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V
 Transaction tax reduces trading volume and imposes modeled absorbed costs.
 
 Affected: JPM, BAC, WFC, GS, C, MS, SCHW, BNY, STT, USB, PNC, TFC, COF, FITB, HBAN, KEY, ALLY.
-Neutral in direct channels: AXP, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V.
-24 estimated company exposure inputs; 0 narrow-business scope checks.
+Neutral in direct channels: AXP, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
+25 estimated company exposure inputs; 0 narrow-business scope checks.
 - Reference: https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm
 - Reference: https://www.imf.org/en/Publications/WP/Issues/2016/12/31/Taxing-Financial-Transactions-Issues-and-Evidence-24702
 
@@ -397,7 +396,7 @@ Neutral in direct channels: AXP, MA, BLK, AIG, PRU, PGR, ALL, MET, SNEX, SPGI, T
 
 Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions omitted explicitly.
 
-Affected: JPM, WFC, GS, BNY, USB, PNC, COF, FITB, HBAN, ALLY, MA, AIG, PRU, ALL, MET, SNEX, SPGI, TRV, V.
+Affected: JPM, WFC, GS, BNY, USB, PNC, COF, FITB, HBAN, ALLY, MA, AIG, PRU, ALL, MET, SNEX, SPGI, TRV, V, PYPL.
 Neutral in direct channels: BAC, C, AXP, MS, SCHW, STT, TFC, KEY, BLK, PGR.
 10 estimated company exposure inputs; 0 narrow-business scope checks.
 - Reference: https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
@@ -694,8 +693,8 @@ Neutral in direct channels: PLD, AMT, O, EQIX, DLR, WELL, VTR, ESS, MAA, PSA, EX
 Binding app-store commission cap reduces platform fee revenue.
 
 Affected: AAPL, GOOGL.
-Neutral in direct channels: MSFT, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-32 estimated company exposure inputs; 32 narrow-business scope checks.
+Neutral in direct channels: MSFT, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+33 estimated company exposure inputs; 33 narrow-business scope checks.
 - Reference: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
 
@@ -704,8 +703,8 @@ Neutral in direct channels: MSFT, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AM
 Broadband subsidies raise access-provider subscriber spending.
 
 Affected: VZ, T, CMCSA.
-Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-32 estimated company exposure inputs; 32 narrow-business scope checks.
+Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+33 estimated company exposure inputs; 33 narrow-business scope checks.
 - Reference: https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset
 
 ### tmt/chip_export_controls
@@ -713,8 +712,8 @@ Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, IBM, ORCL, CRM, ADBE,
 Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
 
 Affected: AAPL, MSFT, GOOGL, META, NVDA, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, NFLX, DIS.
-Neutral in direct channels: VZ, T, CMCSA, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-62 estimated company exposure inputs; 64 narrow-business scope checks.
+Neutral in direct channels: VZ, T, CMCSA, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+64 estimated company exposure inputs; 66 narrow-business scope checks.
 - Reference: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R68.htm
 
@@ -723,8 +722,8 @@ Neutral in direct channels: VZ, T, CMCSA, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW
 Credit applies to qualifying estimated US manufacturing capex, including Intel/Micron.
 
 Affected: INTC, MU.
-Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, AMD, QCOM, AVGO, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-32 estimated company exposure inputs; 32 narrow-business scope checks.
+Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, AMD, QCOM, AVGO, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+33 estimated company exposure inputs; 33 narrow-business scope checks.
 - Reference: https://www.law.cornell.edu/uscode/text/26/48D
 
 ### tmt/data_privacy_mandate
@@ -732,8 +731,8 @@ Neutral in direct channels: AAPL, MSFT, GOOGL, META, NVDA, VZ, IBM, ORCL, CRM, A
 Ad-targeting loss and privacy compliance raise costs/reduce monetization.
 
 Affected: AAPL, MSFT, GOOGL, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, T, CMCSA, NFLX, DIS.
-Neutral in direct channels: AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-62 estimated company exposure inputs; 32 narrow-business scope checks.
+Neutral in direct channels: AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+64 estimated company exposure inputs; 33 narrow-business scope checks.
 - Reference: https://www.aeaweb.org/doi/10.1257/pol.20210309
 - Reference: https://itpro.com/security/privacy/362151/meta-says-apples-ios-privacy-changes-will-cost-it-10-billion-in-2022
 
@@ -742,8 +741,8 @@ Neutral in direct channels: AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, 
 Tax applies to US digital advertising and covered platform fees.
 
 Affected: AAPL, MSFT, GOOGL, META, NFLX, DIS.
-Neutral in direct channels: NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, T, CMCSA, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-62 estimated company exposure inputs; 64 narrow-business scope checks.
+Neutral in direct channels: NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, T, CMCSA, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+64 estimated company exposure inputs; 66 narrow-business scope checks.
 - Reference: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/R46.htm
 - Reference: https://ppc.land/google-ads-to-pass-cost-of-digital-taxes-to-advertisers-starting-in-november/
@@ -753,8 +752,8 @@ Neutral in direct channels: NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU,
 Tariffs raise imported semiconductor/hardware cost.
 
 Affected: AAPL, MSFT, GOOGL, META, NVDA, VZ, IBM, ORCL, CRM, ADBE, INTC, AMD, QCOM, MU, AVGO, CSCO, T, CMCSA, NFLX, DIS.
-Neutral in direct channels: AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
-32 estimated company exposure inputs; 0 narrow-business scope checks.
+Neutral in direct channels: AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
+33 estimated company exposure inputs; 0 narrow-business scope checks.
 - Reference: https://www.aeaweb.org/doi/10.1257/jep.33.4.187
 - Reference: https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm
 - Reference: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm
@@ -763,7 +762,7 @@ Neutral in direct channels: AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, 
 
 Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions omitted explicitly.
 
-Affected: MSFT, GOOGL, META, NVDA, VZ, CRM, ADBE, AMD, QCOM, MU, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN.
+Affected: MSFT, GOOGL, META, NVDA, VZ, CRM, ADBE, AMD, QCOM, MU, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR.
 Neutral in direct channels: AAPL, IBM, ORCL, INTC, AVGO.
 5 estimated company exposure inputs; 0 narrow-business scope checks.
 - Reference: https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text

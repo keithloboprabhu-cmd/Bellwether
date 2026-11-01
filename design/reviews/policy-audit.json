@@ -500,7 +500,6 @@
         "WMT: REVIEW |EPS change| >50% at default. Reported EPS denominator 2.73; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
         "TGT: REVIEW |EPS change| >50% at default. Reported EPS denominator 8.13; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
         "KR: REVIEW |EPS change| >50% at default. Reported EPS denominator 1.54; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
-        "KR: equity wiped out; $0 floor binds, operating losses remain uncapped",
         "BBY: REVIEW |EPS change| >50% at default. Reported EPS denominator 5.04; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
         "BBY: equity wiped out; $0 floor binds, operating losses remain uncapped"
       ],
@@ -4409,7 +4408,7 @@
     },
     {
       "policy": "financial_services/bank_capital_requirement",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 3,
       "driver_cases": 4,
       "affected": [
@@ -4443,10 +4442,11 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "value_only": true,
-      "estimate_exposures": 23,
+      "estimate_exposures": 24,
       "scope_checks": 0,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
@@ -4656,6 +4656,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PYPL",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -4665,7 +4672,7 @@
     },
     {
       "policy": "financial_services/credit_card_interchange_cap",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 3,
       "driver_cases": 6,
       "affected": [
@@ -4699,11 +4706,12 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "value_only": false,
-      "estimate_exposures": 29,
-      "scope_checks": 29,
+      "estimate_exposures": 30,
+      "scope_checks": 30,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
         "https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm",
@@ -4912,6 +4920,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PYPL",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -4921,7 +4936,7 @@
     },
     {
       "policy": "financial_services/credit_card_late_fee_cap",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 3,
       "driver_cases": 6,
       "affected": [
@@ -4955,11 +4970,12 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "value_only": false,
-      "estimate_exposures": 29,
-      "scope_checks": 29,
+      "estimate_exposures": 30,
+      "scope_checks": 30,
       "references": [
         "https://www.consumerfinance.gov/about-us/newsroom/cfpb-bans-excessive-credit-card-late-fees-lowers-typical-fee-from-32-to-8/",
         "https://www.hklaw.com/en/insights/publications/2025/04/cfpb-credit-card-late-fees-rule-vacated-by-texas-district-court"
@@ -5167,6 +5183,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PYPL",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -5176,7 +5199,7 @@
     },
     {
       "policy": "financial_services/fdic_assessment_increase",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 3,
       "driver_cases": 2,
       "affected": [
@@ -5210,11 +5233,12 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "value_only": false,
-      "estimate_exposures": 29,
-      "scope_checks": 29,
+      "estimate_exposures": 30,
+      "scope_checks": 30,
       "references": [
         "https://www.fdic.gov/news/press-releases/2022/pr22073.html",
         "https://www.fdic.gov/resources/deposit-insurance/deposit-insurance-fund/dif-assessments.html"
@@ -5422,6 +5446,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PYPL",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -5431,7 +5462,7 @@
     },
     {
       "policy": "financial_services/fed_rate_change",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 4,
       "driver_cases": 4,
       "affected": [
@@ -5465,10 +5496,11 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "value_only": false,
-      "estimate_exposures": 35,
+      "estimate_exposures": 37,
       "scope_checks": 0,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
@@ -5480,126 +5512,126 @@
         {
           "ticker": "JPM",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "BAC",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "WFC",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "GS",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "C",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "AXP",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "MS",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "SCHW",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "BNY",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "STT",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "USB",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "PNC",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "TFC",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "COF",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "FITB",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "HBAN",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "KEY",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
         {
           "ticker": "ALLY",
           "status": "included",
-          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
+          "reason": "Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.",
           "default_affected": true,
           "any_input_affected": true
         },
@@ -5679,6 +5711,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PYPL",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -5688,7 +5727,7 @@
     },
     {
       "policy": "financial_services/financial_transaction_tax",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 3,
       "driver_cases": 8,
       "affected": [
@@ -5722,10 +5761,11 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "value_only": false,
-      "estimate_exposures": 24,
+      "estimate_exposures": 25,
       "scope_checks": 0,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/gs-20251231.htm",
@@ -5934,6 +5974,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PYPL",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -5943,7 +5990,7 @@
     },
     {
       "policy": "financial_services/us_corporate_tax_financial_services",
-      "companies": 29,
+      "companies": 30,
       "input_cases": 2,
       "driver_cases": 2,
       "affected": [
@@ -5965,7 +6012,8 @@
         "SNEX",
         "SPGI",
         "TRV",
-        "V"
+        "V",
+        "PYPL"
       ],
       "neutral": [
         "BAC",
@@ -6185,6 +6233,13 @@
         },
         {
           "ticker": "V",
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "PYPL",
           "status": "included",
           "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
           "default_affected": true,
@@ -11656,7 +11711,7 @@
     },
     {
       "policy": "tmt/app_store_commission_cap",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 3,
       "driver_cases": 6,
       "affected": [
@@ -11693,11 +11748,12 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 32,
-      "scope_checks": 32,
+      "estimate_exposures": 33,
+      "scope_checks": 33,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R69.htm",
         "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm"
@@ -11926,6 +11982,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -11935,7 +11998,7 @@
     },
     {
       "policy": "tmt/broadband_affordability_subsidy",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 9,
       "driver_cases": 4,
       "affected": [
@@ -11972,11 +12035,12 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 32,
-      "scope_checks": 32,
+      "estimate_exposures": 33,
+      "scope_checks": 33,
       "references": [
         "https://broadbandbreakfast.com/verizon-reports-drop-in-prepaid-subscribers-after-acp-sunset"
       ],
@@ -12204,6 +12268,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -12213,7 +12284,7 @@
     },
     {
       "policy": "tmt/chip_export_controls",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 9,
       "driver_cases": 6,
       "affected": [
@@ -12250,11 +12321,12 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 62,
-      "scope_checks": 64,
+      "estimate_exposures": 64,
+      "scope_checks": 66,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm",
         "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R68.htm"
@@ -12483,6 +12555,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -12492,7 +12571,7 @@
     },
     {
       "policy": "tmt/chips_manufacturing_credit",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 3,
       "driver_cases": 4,
       "affected": [
@@ -12529,11 +12608,12 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 32,
-      "scope_checks": 32,
+      "estimate_exposures": 33,
+      "scope_checks": 33,
       "references": [
         "https://www.law.cornell.edu/uscode/text/26/48D"
       ],
@@ -12761,6 +12841,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -12770,7 +12857,7 @@
     },
     {
       "policy": "tmt/data_privacy_mandate",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 9,
       "driver_cases": 6,
       "affected": [
@@ -12807,11 +12894,12 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 62,
-      "scope_checks": 32,
+      "estimate_exposures": 64,
+      "scope_checks": 33,
       "references": [
         "https://www.aeaweb.org/doi/10.1257/pol.20210309",
         "https://itpro.com/security/privacy/362151/meta-says-apples-ios-privacy-changes-will-cost-it-10-billion-in-2022"
@@ -13040,6 +13128,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -13049,7 +13144,7 @@
     },
     {
       "policy": "tmt/digital_services_tax",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 3,
       "driver_cases": 6,
       "affected": [
@@ -13086,11 +13181,12 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 62,
-      "scope_checks": 64,
+      "estimate_exposures": 64,
+      "scope_checks": 66,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/R44.htm",
         "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/R46.htm",
@@ -13320,6 +13416,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -13329,7 +13432,7 @@
     },
     {
       "policy": "tmt/semiconductor_tariffs",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 3,
       "driver_cases": 6,
       "affected": [
@@ -13366,10 +13469,11 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 32,
+      "estimate_exposures": 33,
       "scope_checks": 0,
       "references": [
         "https://www.aeaweb.org/doi/10.1257/jep.33.4.187",
@@ -13600,6 +13704,13 @@
           "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
+        },
+        {
+          "ticker": "PLTR",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
         }
       ],
       "review_flags": [],
@@ -13609,7 +13720,7 @@
     },
     {
       "policy": "tmt/us_corporate_tax_tmt",
-      "companies": 32,
+      "companies": 33,
       "input_cases": 2,
       "driver_cases": 2,
       "affected": [
@@ -13639,7 +13750,8 @@
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN"
+        "TXN",
+        "PLTR"
       ],
       "neutral": [
         "AAPL",
@@ -13875,6 +13987,13 @@
         },
         {
           "ticker": "TXN",
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "PLTR",
           "status": "included",
           "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
           "default_affected": true,
@@ -15231,78 +15350,78 @@
   "macro_shocks": [
     {
       "shock": "china_trade_war",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 3,
       "driver_cases": 18,
       "errors": []
     },
     {
       "shock": "corporate_tax_change",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 4,
       "driver_cases": 4,
       "errors": []
     },
     {
       "shock": "fed_rate_change",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 4,
       "driver_cases": 26,
       "errors": []
     },
     {
       "shock": "government_shutdown",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 3,
       "driver_cases": 8,
       "errors": []
     },
     {
       "shock": "household_stimulus",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 9,
       "driver_cases": 20,
       "errors": []
     },
     {
       "shock": "inflation_shock",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 4,
       "driver_cases": 24,
       "errors": []
     },
     {
       "shock": "oil_supply_shock",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 4,
       "driver_cases": 22,
       "errors": []
     },
     {
       "shock": "recession_gdp_shock",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 4,
       "driver_cases": 24,
       "errors": []
     },
     {
       "shock": "strong_dollar",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 4,
       "driver_cases": 8,
       "errors": []
     },
     {
       "shock": "universal_tariff",
-      "companies": 232,
+      "companies": 234,
       "input_cases": 3,
       "driver_cases": 20,
       "errors": []
     }
   ],
   "errors": [],
-  "fingerprint": "d2f1c14bb02041ad",
-  "checked_at": "2026-11-01T00:46:24.524953+00:00",
-  "company_policy_decisions": 1679,
-  "unique_companies": 232
+  "fingerprint": "c85f0117bf7f73f8",
+  "checked_at": "2026-11-01T19:45:22.413873+00:00",
+  "company_policy_decisions": 1694,
+  "unique_companies": 234
 }

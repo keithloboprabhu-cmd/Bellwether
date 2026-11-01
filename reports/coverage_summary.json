@@ -1,6 +1,6 @@
 {
-  "companies": 232,
-  "covered": 227,
+  "companies": 234,
+  "covered": 229,
   "gaps": [
     "BLK",
     "LYFT",
@@ -8,5 +8,5 @@
     "PGR",
     "SLM"
   ],
-  "decisions": 1679
+  "decisions": 1694
 }

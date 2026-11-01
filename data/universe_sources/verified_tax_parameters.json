@@ -1210,5 +1210,29 @@
     "date_accessed": "2026-10-31",
     "verified": "Y",
     "verification_basis": "Exact proposed rate-only input. Not enacted; no claim that book income equals taxable income."
+  },
+  {
+    "parameter": "exposure.audit_us_pretax_income_musd",
+    "company": "PLTR",
+    "value": 1584.577,
+    "low": 174.637,
+    "high": 1584.577,
+    "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001321655.json",
+    "document_location": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / 2025-12-31",
+    "date_accessed": "2026-10-31",
+    "verified": "Y",
+    "verification_basis": "Exact book-income observation, US jurisdiction confirmed by actual annual cover. Book-to-tax conversion remains unverified."
+  },
+  {
+    "parameter": "exposure.audit_us_pretax_income_musd",
+    "company": "PYPL",
+    "value": 1453.0,
+    "low": 946.0,
+    "high": 1453.0,
+    "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001633917.json",
+    "document_location": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / 2025-12-31",
+    "date_accessed": "2026-10-31",
+    "verified": "Y",
+    "verification_basis": "Exact book-income observation, US jurisdiction confirmed by actual annual cover. Book-to-tax conversion remains unverified."
   }
 ]

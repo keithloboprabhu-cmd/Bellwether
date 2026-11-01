@@ -54,6 +54,7 @@ Policy references (a citation is not numeric verification):
 | SNX | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TMUS | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TXN | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PLTR | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -83,8 +84,8 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.incremental_share | 9.2848132e-05 | 0.0002785444 | 0.00018569626 |
-| exposure.broadband_subsidy_capture_share | 0.00012998738 | 0.00024372635 | 0.00011373896 |
+| assumption.incremental_share | 9.2675839e-05 | 0.00027802752 | 0.00018535168 |
+| exposure.broadband_subsidy_capture_share | 0.00012974617 | 0.00024327408 | 0.0001135279 |
 
 Dominant configured driver: `incremental_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

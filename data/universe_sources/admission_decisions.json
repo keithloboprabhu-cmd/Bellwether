@@ -29,9 +29,11 @@
     "TRV",
     "TSN",
     "TXN",
-    "V"
+    "V",
+    "PLTR",
+    "PYPL"
   ],
-  "after": 232,
+  "after": 234,
   "decisions": [
     {
       "ticker": "ACI",
@@ -125,8 +127,9 @@
       "ticker": "CHTR",
       "industry": "tmt",
       "status": "not_admitted",
-      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation; positive current US pretax exposure not verified",
-      "incorporation": ""
+      "reason": "Admission deferred: Delaware incorporation verified on actual 10-K cover, but positive current US pretax exposure not separately quantified. US revenue is not a US taxable-income measurement; no 100% share invented.",
+      "incorporation": "Delaware",
+      "incorporation_source": "https://www.sec.gov/Archives/edgar/data/1091667/000109166726000017/chtr-20251231.htm"
     },
     {
       "ticker": "COR",
@@ -331,9 +334,16 @@
     {
       "ticker": "PLTR",
       "industry": "tmt",
-      "status": "not_admitted",
-      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation",
-      "incorporation": ""
+      "status": "admitted",
+      "reason": "Actual annual cover resolves blank submissions metadata; positive reported US book pretax income supplies a labeled rate-only proxy. Other policies remain unquantified.",
+      "incorporation": "Delaware",
+      "incorporation_source": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+      "flags": [
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)"
+      ],
+      "flag_explanations": {
+        "total interest-bearing debt unavailable; financing exposure unquantified (not evidence of zero debt)": "Missing borrowing balance stays unknown; financing channels inactive, never a measured zero."
+      }
     },
     {
       "ticker": "PM",
@@ -347,9 +357,18 @@
     {
       "ticker": "PYPL",
       "industry": "financial_services",
-      "status": "not_admitted",
-      "reason": "Admission deferred: non-US incorporation: domestic tax geography requires explicit US jurisdiction reconciliation",
-      "incorporation": ""
+      "status": "admitted",
+      "reason": "Actual annual cover resolves blank submissions metadata; positive reported US book pretax income supplies a labeled rate-only proxy. Other policies remain unquantified.",
+      "incorporation": "Delaware",
+      "incorporation_source": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000024/pypl-20251231.htm",
+      "flags": [
+        "pretax income derived (NI + tax)",
+        "cost of revenue derived (Revenue \u2212 EBIT \u2212 SG&A \u2212 R&D)"
+      ],
+      "flag_explanations": {
+        "pretax income derived (NI + tax)": "Reported line arithmetic retained visibly; only the exact pretax book-income tax proxy is active.",
+        "cost of revenue derived (Revenue \u2212 EBIT \u2212 SG&A \u2212 R&D)": "Reported line arithmetic retained visibly; only the exact pretax book-income tax proxy is active."
+      }
     },
     {
       "ticker": "SNDK",

@@ -53,6 +53,7 @@ Policy references (a citation is not numeric verification):
 | SPGI | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TRV | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | V | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PYPL | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -97,8 +98,8 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.mm_offset | -0.042710662 | -0.010677665 | 0.032032996 |
-| exposure.cet1_ratio_std | -0.025947046 | -0.024785949 | 0.0011610968 |
+| assumption.mm_offset | -0.042340568 | -0.010585142 | 0.031755426 |
+| exposure.cet1_ratio_std | -0.025722211 | -0.024571176 | 0.0011510357 |
 
 Dominant configured driver: `mm_offset` using `d_mcap_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

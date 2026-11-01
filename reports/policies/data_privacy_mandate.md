@@ -56,6 +56,7 @@ Policy references (a citation is not numeric verification):
 | SNX | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TMUS | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TXN | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PLTR | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -122,9 +123,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.ad_loss_scale | -0.0049082012 | -0.0097863293 | 0.0048781281 |
-| exposure.us_digital_ad_revenue_share | -0.0064376121 | -0.0078281729 | 0.0013905607 |
-| exposure.us_users_m | -0.0067086796 | -0.0073028335 | 0.00059415389 |
+| assumption.ad_loss_scale | -0.0048990933 | -0.0097681694 | 0.004869076 |
+| exposure.us_digital_ad_revenue_share | -0.0064256662 | -0.0078136466 | 0.0013879803 |
+| exposure.us_users_m | -0.0066962307 | -0.007289282 | 0.00059305136 |
 
 Dominant configured driver: `ad_loss_scale` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

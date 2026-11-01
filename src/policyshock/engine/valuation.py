@@ -4,7 +4,8 @@
     one_time   → dP = dEPS                  (a one-off bump is worth roughly itself)
     years:N    → dP = dEPS × AF(N, r)       (PV of N years of the change, r = 9% default)
 
-When P/E isn't meaningful (EPS ≤ 0) a permanent change has no implied price ("n/m").
+When a supported valuation multiple is unavailable, a permanent earnings change
+has no implied price. Sourced adjusted-EPS normalization is selected upstream.
 """
 
 from __future__ import annotations

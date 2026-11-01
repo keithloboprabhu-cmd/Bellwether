@@ -68,3 +68,18 @@ def test_fiscal_year_start_respects_adjacent_fifty_two_week_period():
     prior = {"period_end": "2017-12-30"}
     following = {"period_end": "2018-12-29"}
     assert _start(following, [prior, following]) == date(2017, 12, 31)
+
+
+def test_three_additional_episodes_and_expanded_steel_are_not_outcome_selected(benchmark):
+    """New cohorts and dates are fixed before observing whether they fit."""
+    by_id={c['id']:c for c in benchmark['cases']}
+    assert {'fed-2018','fed-2020','pell-2022'}<=set(by_id)
+    assert len(by_id['steel-232']['rows'])>=5
+    assert benchmark['summary']['industries']==10
+
+
+def test_equal_industry_score_does_not_overweight_repeated_bank_episodes(benchmark):
+    """Several cases in one sector still contribute one industry score."""
+    from statistics import mean
+    per_industry=[score([r for c in benchmark['cases'] if c['industry']==i.slug for r in c['rows']])['accuracy_pct'] for i in load_universe().industries]
+    assert benchmark['summary']['industry_balanced_pct']==pytest.approx(mean(per_industry))

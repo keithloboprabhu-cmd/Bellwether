@@ -55,6 +55,7 @@ Policy references (a citation is not numeric verification):
 | SNX | included | US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast. |
 | TMUS | included | US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast. |
 | TXN | included | US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast. |
+| PLTR | included | US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast. |
 
 ## B. Every in-scope exposure
 
@@ -89,6 +90,7 @@ Exact numeric checks are distinguished from filing links and estimates. UNVERIFI
 | SNX | audit_us_pretax_income_musd | 557.284 | 263.321 | 557.284 | VERIFIED observation; conversion limits retained | https://data.sec.gov/api/xbrl/companyfacts/CIK0001177394.json · us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / annual period 2025-11-30 · US-incorporated issuer; 2025-11-30 us-gaap domestic pretax book income. Low/high are observed available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity is a model proxy. |
 | TMUS | audit_us_pretax_income_musd | 14,018 | 10,943 | 14,607 | VERIFIED observation; conversion limits retained | https://data.sec.gov/api/xbrl/companyfacts/CIK0001283699.json · us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / annual period 2025-12-31 · US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity is a model proxy. |
 | TXN | audit_us_pretax_income_musd | 4,503 | 4,438 | 6,445 | VERIFIED observation; conversion limits retained | https://data.sec.gov/api/xbrl/companyfacts/CIK0000097476.json · us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / annual period 2025-12-31 · US-incorporated issuer; 2025-12-31 us-gaap domestic pretax book income. Low/high are observed available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity is a model proxy. |
+| PLTR | audit_us_pretax_income_musd | 1,584.577 | 174.637 | 1,584.577 | VERIFIED observation; conversion limits retained | https://data.sec.gov/api/xbrl/companyfacts/CIK0001321655.json · IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic / 2025-12-31 · Delaware verified on annual cover (https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm); 2025-12-31 domestic pretax book income. Historical annual bounds are not forecast confidence intervals; book income is not taxable income. |
 
 ## C. Published sensitivity benchmark
 
@@ -108,7 +110,7 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.audit_us_pretax_income_musd | -0.025334755 | -0.051204465 | 0.02586971 |
+| exposure.audit_us_pretax_income_musd | -0.02530162 | -0.051235365 | 0.025933744 |
 
 Dominant configured driver: `audit_us_pretax_income_musd` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

@@ -118,6 +118,10 @@ industries:
     name: TEXAS INSTRUMENTS INC
     kind: standard
     subsector: Semiconductors & Related Devices
+  - ticker: PLTR
+    name: Palantir Technologies Inc.
+    kind: standard
+    subsector: Services-Prepackaged Software
 - slug: financial_services
   name: Financial Services
   companies:
@@ -229,6 +233,10 @@ industries:
     subsector: Fire, Marine & Casualty Insurance
   - ticker: V
     name: VISA INC.
+    kind: standard
+    subsector: Services-Business Services, NEC
+  - ticker: PYPL
+    name: PayPal Holdings, Inc.
     kind: standard
     subsector: Services-Business Services, NEC
 - slug: consumer_retail

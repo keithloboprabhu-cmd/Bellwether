@@ -56,6 +56,7 @@ Policy references (a citation is not numeric verification):
 | SNX | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TMUS | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TXN | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PLTR | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -116,9 +117,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.restricted_chip_china_share | -0.00886332 | -0.019282434 | 0.010419114 |
-| assumption.resale_share | -0.018841937 | -0.0091330123 | 0.0097089244 |
-| exposure.greater_china_revenue_share | -0.012679008 | -0.015690176 | 0.0030111678 |
+| exposure.restricted_chip_china_share | -0.0088468728 | -0.019246653 | 0.01039978 |
+| assumption.resale_share | -0.018806973 | -0.0091160647 | 0.0096909081 |
+| exposure.greater_china_revenue_share | -0.012655481 | -0.015661061 | 0.0030055802 |
 
 Dominant configured driver: `restricted_chip_china_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

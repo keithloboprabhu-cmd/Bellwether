@@ -52,6 +52,7 @@ Policy references (a citation is not numeric verification):
 | SPGI | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TRV | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | V | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PYPL | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -90,9 +91,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.card_late_fee_revenue_share | -0.009526952 | -0.024346712 | 0.01481976 |
-| assumption.offset_share | -0.021205526 | -0.0084822106 | 0.012723316 |
-| assumption.current_avg_fee | -0.01583346 | -0.013571537 | 0.0022619228 |
+| exposure.card_late_fee_revenue_share | -0.0093630144 | -0.023927759 | 0.014564745 |
+| assumption.offset_share | -0.020840627 | -0.0083362506 | 0.012504376 |
+| assumption.current_avg_fee | -0.015561001 | -0.013338001 | 0.0022230002 |
 
 Dominant configured driver: `card_late_fee_revenue_share` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

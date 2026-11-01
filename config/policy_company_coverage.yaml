@@ -601,6 +601,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   tmt/semiconductor_tariffs:
@@ -649,6 +650,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   consumer_retail/snap_benefit_change:
@@ -1348,6 +1350,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   financial_services/bank_capital_requirement:
@@ -1397,6 +1400,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   financial_services/fed_rate_change:
@@ -1427,8 +1431,7 @@ policies:
       - KEY
       - ALLY
       reason: Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally
-        benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from
-        a 100bp instantaneous cut under its own current sensitivity table.
+        benefits from a 100bp instantaneous cut under its own current sensitivity table.
       default_direction:
         metric: dR
         sign: -1
@@ -1457,6 +1460,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   financial_services/credit_card_interchange_cap:
@@ -1507,6 +1511,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   financial_services/credit_card_late_fee_cap:
@@ -1555,6 +1560,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   financial_services/financial_transaction_tax:
@@ -1603,6 +1609,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   healthcare/aca_subsidy_change:
@@ -2244,6 +2251,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   tmt/broadband_affordability_subsidy:
@@ -2294,6 +2302,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   tmt/chip_export_controls:
@@ -2345,6 +2354,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   tmt/chips_manufacturing_credit:
@@ -2395,6 +2405,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   tmt/digital_services_tax:
@@ -2447,6 +2458,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   transportation_logistics/airline_bag_fee_cap:
@@ -2771,6 +2783,7 @@ policies:
       - SPGI
       - TRV
       - V
+      - PYPL
       reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
         not a cash-tax forecast.
       default_direction:
@@ -2823,6 +2836,7 @@ policies:
       - SNX
       - TMUS
       - TXN
+      - PLTR
       reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
         not a cash-tax forecast.
       default_direction:

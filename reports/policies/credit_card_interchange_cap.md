@@ -55,6 +55,7 @@ Scope finding: this is a hypothetical US four-party credit-issuer fee cap. AmEx 
 | SPGI | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TRV | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | V | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PYPL | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -93,9 +94,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| assumption.rewards_offset | -0.053885239 | -0.017961746 | 0.035923492 |
-| exposure.credit_interchange_revenue_share | -0.022143491 | -0.052257841 | 0.03011435 |
-| assumption.current_rate_pct | -0.031931993 | -0.040609165 | 0.0086771721 |
+| assumption.rewards_offset | -0.052957994 | -0.017652665 | 0.035305329 |
+| exposure.credit_interchange_revenue_share | -0.021762451 | -0.0513586 | 0.029596149 |
+| assumption.current_rate_pct | -0.031382515 | -0.039910372 | 0.0085278573 |
 
 Dominant configured driver: `rewards_offset` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

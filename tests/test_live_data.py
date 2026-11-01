@@ -68,3 +68,15 @@ def test_metrics_rejects_unsafe_ticker_before_contacting_provider(tmp_path):
     for ticker in ["https://example.com", "../../AAPL", "AAPL?x=1"]:
         with pytest.raises(ValueError, match="valid ticker"):
             service.company_metrics(ticker)
+
+
+def test_old_parsed_financial_cache_cannot_override_corrected_normalization(tmp_path):
+    """A fresh quote remains usable while obsolete parsed statements are discarded."""
+    import json
+    from policyshock.data.live import LiveData
+    path=tmp_path/'old-state.json'
+    path.write_text(json.dumps({'quotes':{'AAPL':{'close':123}},'fred':{},'financials':{'F':{'ticker':'F','checked_at':'2026-10-31T12:00:00+00:00'}},'status':{'financials':{'success_epoch':9999999999}}}))
+    service=LiveData(path)
+    assert service.state['financials']=={}
+    assert 'financials' not in service.state['status']
+    assert service.state['quotes']['AAPL']['close']==123

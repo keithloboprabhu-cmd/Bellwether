@@ -78,6 +78,26 @@ def main() -> None:
             checked.update({(r['parameter'], r['company']): r for r in json.loads(path.read_text())})
     rows = [checked.pop((r['parameter'], r['company']), r) for r in rows]
     rows.extend(checked.values())
+    covers = ROOT / 'data/universe_sources/incorporation_cover_verifications.json'
+    if covers.exists():
+        for r in json.loads(covers.read_text()):
+            rows.append(dict(parameter='identity.incorporation', company=r['ticker'], value=r['value'], low='', high='',
+                source_url=r['source_url'], document_location=r['document_location'], date_accessed=r['date_accessed'],
+                verified='Y', verification_basis='Exact original annual cover; archived raw-document SHA-256 in incorporation_cover_verifications.json.'))
+    for ticker, annual in store.load_valuation_adjustments().items():
+        for period, record in annual.items():
+            value=record['adjusted_eps']
+            rows.append(dict(parameter='valuation.adjusted_eps.'+period,company=ticker,value=value,low=value,high=value,
+                source_url=record['source_url'],document_location=record['document_location'],date_accessed=record['accessed'],verified='Y',verification_basis=record['rationale']))
+    from policyshock.data import fred
+    rates=fred.load_snapshot();dff=rates[rates.series_id=='DFF']
+    for year in (2017,2018,2019,2020):
+        value=float(dff[dff.date.dt.year==year].value.mean())
+        rows.append(dict(parameter='backtest.dff_annual_mean.'+str(year),company='ALL',value=value,low=value,high=value,
+            source_url='https://fred.stlouisfed.org/series/DFF',document_location=f'Calendar {year}; arithmetic mean of committed daily observations',date_accessed='2026-10-31',verified='Y',verification_basis='Observed annual average, not an instantaneous rate-path shock or causal NII estimate.'))
+    for year,value,url in [('2021',6495,'https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2021-01-22/2021-2022-federal-pell-grant-payment-and-disbursement-schedules'),('2022',6895,'https://fsapartners.ed.gov/sites/default/files/attachments/2022-03/2223RevisedPaymentSchedule.pdf')]:
+        rows.append(dict(parameter='backtest.pell_maximum.'+year,company='ALL',value=value,low=value,high=value,source_url=url,
+            document_location='Award-year maximum annual Pell Grant, full-time schedule',date_accessed='2026-10-31',verified='Y',verification_basis='Published award maximum; not a company-specific revenue sensitivity.'))
     path = ROOT / "data/sources_registry.csv"
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)

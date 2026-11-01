@@ -46,7 +46,9 @@ def main() -> None:
     for g in groups:
         if 'ALLY' in g['tickers']:
             g.setdefault('direction_overrides',{})['ALLY']=dict(metric='dNI',sign=1)
-            g['reason']+=' Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.'
+            note='Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.'
+            if note not in g['reason']:
+                g['reason']+=' '+note
     coverage.write_text(yaml.safe_dump(doc,sort_keys=False,width=105))
     (ROOT/'reports/evidence/bank_parameter_changes.json').write_text(json.dumps(changes,indent=2)+'\n')
     (ROOT/'reports/evidence/verified_bank_parameters.json').write_text(json.dumps(records,indent=2)+'\n')

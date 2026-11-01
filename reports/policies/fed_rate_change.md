@@ -25,24 +25,24 @@ Policy references (a citation is not numeric verification):
 
 | Company | Configured status | Basis |
 |---|---|---|
-| JPM | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| BAC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| WFC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| GS | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| C | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| AXP | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| MS | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| SCHW | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| BNY | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| STT | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| USB | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| PNC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| TFC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| COF | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| FITB | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| HBAN | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| KEY | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
-| ALLY | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| JPM | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| BAC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| WFC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| GS | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| C | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| AXP | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| MS | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| SCHW | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| BNY | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| STT | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| USB | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| PNC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| TFC | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| COF | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| FITB | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| HBAN | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| KEY | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
+| ALLY | included | Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table. |
 | MA | outside_scope | This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business. |
 | BLK | outside_scope | This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business. |
 | AIG | outside_scope | This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business. |
@@ -54,6 +54,7 @@ Policy references (a citation is not numeric verification):
 | SPGI | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TRV | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | V | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PYPL | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -145,8 +146,8 @@ Totals: no like-for-like official score for this public-company sample and exact
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.nii_sens_down_per_100bp | -0.019562133 | -0.032489588 | 0.012927455 |
-| exposure.nii_sens_up_per_100bp | -0.024435203 | -0.024435203 | 0 |
+| exposure.nii_sens_down_per_100bp | -0.019225512 | -0.031930515 | 0.012705003 |
+| exposure.nii_sens_up_per_100bp | -0.024014728 | -0.024014728 | 0 |
 
 Dominant configured driver: `nii_sens_down_per_100bp` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

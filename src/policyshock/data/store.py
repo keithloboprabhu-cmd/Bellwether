@@ -26,6 +26,13 @@ def load_baselines() -> dict:
     return json.loads(BASELINES_FILE.read_text())
 
 
+@lru_cache(maxsize=1)
+def load_valuation_adjustments() -> dict:
+    """Only independently sourced, period-matched adjusted EPS can normalize valuation."""
+    path = SNAPSHOT_DIR / 'valuation_adjustments.json'
+    return json.loads(path.read_text()).get('companies', {}) if path.exists() else {}
+
+
 def load_meta() -> dict:
     return json.loads(META_FILE.read_text()) if META_FILE.exists() else {}
 
@@ -61,7 +68,10 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
     diluted = it.get("diluted_shares")
     shares_out, shares_src = diluted, "diluted weighted-average shares"
     if year is None:
-        if so and so.get("date", "") < fy["period_end"]:
+        if co.get('share_basis') == 'class_a_equivalent':
+            shares_src = 'annual class-A-equivalent diluted shares'
+            flags.append('Raw class cover counts are not economic A-equivalent shares; current equivalent outstanding shares unquantified, annual equivalent diluted count used')
+        elif so and so.get("date", "") < fy["period_end"]:
             flags.append(f"stale cover-page shares ({so.get('date')}); using current diluted weighted shares")
         elif not so or not so["value"]:
             flags.append("shares outstanding not on cover page (multi-class); using diluted shares")
@@ -83,10 +93,18 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
     historical_eps = [y["items"].get("eps_diluted") for y in history]
     median_eps = statistics.median(historical_eps) if len(historical_eps) == 3 and all(isinstance(v, (int, float)) for v in historical_eps) else None
     valuation_eps, valuation_method = eps, "reported_eps"
-    if eps is None or eps <= 0 or (median_eps is not None and median_eps > 0 and eps < .6 * median_eps):
-        valuation_eps = median_eps if median_eps is not None and median_eps > 0 else None
-        valuation_method = "three_year_median_eps" if valuation_eps else "unavailable"
-        flags.append("P/E valuation uses three-year median reported EPS; special items are not independently adjusted" if valuation_eps else "No positive supported normalized earnings; permanent P/E valuation unavailable")
+    adjustments = load_valuation_adjustments().get(ticker, {})
+    current_adjustment = adjustments.get(fy['period_end'])
+    special_items = current_adjustment and current_adjustment.get('adjusted_eps') != current_adjustment.get('reported_eps')
+    if eps is None or eps <= 0 or special_items or (median_eps is not None and median_eps > 0 and eps < .6 * median_eps):
+        normalized = [adjustments.get(y['period_end']) for y in history]
+        supported = len(normalized) == 3 and all(row and row.get('source_url') and row.get('adjusted_eps') is not None
+            and isinstance(y['items'].get('eps_diluted'), (int,float))
+            and round(y['items']['eps_diluted'],2) == row.get('reported_eps') for y,row in zip(history,normalized))
+        adjusted_median = statistics.median(row['adjusted_eps'] for row in normalized) if supported else None
+        valuation_eps = adjusted_median if adjusted_median is not None and adjusted_median > 0 else None
+        valuation_method = "three_year_median_adjusted_eps" if valuation_eps else "unavailable_normalization_pending"
+        flags.append("Valuation uses the median of three issuer-adjusted annual EPS figures; non-GAAP definitions and acquisition comparability remain disclosed limitations" if valuation_eps else "Negative/depressed EPS: no verified adjusted three-year earnings series or EV/EBITDA inputs; permanent valuation unavailable")
     R, C = it.get("revenue"), it.get("cost_of_revenue")
     return {
         "ticker": ticker,
@@ -127,6 +145,7 @@ def baseline_row(ticker: str, price: float | None, price_date: str | None = None
         "valuation_pe": price / valuation_eps if price is not None and valuation_eps and valuation_eps > 0 else None,
         "valuation_method": valuation_method,
         "valuation_history": [{"period_end": y["period_end"], "eps": y["items"].get("eps_diluted"), "filing_url": y.get("filing_url")} for y in history],
+        "valuation_adjustments": [load_valuation_adjustments().get(ticker, {}).get(y['period_end']) for y in history] if valuation_method == 'three_year_median_adjusted_eps' else [],
         "tags": fy["tags"],
         "flags": flags,
     }

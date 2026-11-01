@@ -290,3 +290,13 @@ companies:
       rationale: US-incorporated issuer; 2025-09-30 us-gaap domestic pretax book income. Low/high are observed
         available three-year values. Taxable income and future offsets are not disclosed; linear book-tax sensitivity
         is a model proxy.
+  PYPL:
+    audit_us_pretax_income_musd:
+      value: 1453.0
+      low: 946.0
+      high: 1453.0
+      source: verified SEC companyfacts and annual incorporation cover
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001633917.json
+      rationale: Delaware verified on annual cover (https://www.sec.gov/Archives/edgar/data/1633917/000163391726000024/pypl-20251231.htm);
+        2025-12-31 domestic pretax book income. Historical annual bounds are not forecast confidence intervals;
+        book income is not taxable income.

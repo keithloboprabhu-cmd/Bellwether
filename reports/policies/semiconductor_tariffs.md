@@ -56,6 +56,7 @@ Policy references (a citation is not numeric verification):
 | SNX | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TMUS | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 | TXN | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
+| PLTR | unquantified | Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact. |
 
 ## B. Every in-scope exposure
 
@@ -102,9 +103,9 @@ Spearman: unavailable; fewer than five matched published company observations. N
 
 | Driver | Industry metric at low | At high | Absolute swing |
 |---|---:|---:|---:|
-| exposure.us_import_share_of_cogs | -0.023249158 | -0.062415919 | 0.03916676 |
-| assumption.pass_through | -0.050123061 | -0.030837048 | 0.019286013 |
-| assumption.elasticity | -0.033969685 | -0.0484907 | 0.014521016 |
+| exposure.us_import_share_of_cogs | -0.023206016 | -0.062300097 | 0.039094081 |
+| assumption.pass_through | -0.05003005 | -0.030779825 | 0.019250225 |
+| assumption.elasticity | -0.033906649 | -0.048400719 | 0.01449407 |
 
 Dominant configured driver: `us_import_share_of_cogs` using `d_eps_pct`. This identifies the algebraic driver; economic plausibility is **not independently confirmed** when its numeric exposure or transmission coefficient is UNVERIFIED. Historical exposure ranges cannot substitute for forecast uncertainty.
 

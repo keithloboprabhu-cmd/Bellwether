@@ -1,0 +1,95 @@
+{
+  "common_original_cohort": [
+    {
+      "case": "tcja-tmt",
+      "n": 15,
+      "before_hits": 13,
+      "after_hits": 13,
+      "before_mae": 6.824190226110182,
+      "after_mae": 6.824190226110182
+    },
+    {
+      "case": "fed_rate_change",
+      "n": 18,
+      "before_hits": 16,
+      "after_hits": 16,
+      "before_mae": 19.258119064713966,
+      "after_mae": 18.907986335726083
+    },
+    {
+      "case": "tcja-consumer_retail",
+      "n": 19,
+      "before_hits": 16,
+      "after_hits": 16,
+      "before_mae": 3.296953969829395,
+      "after_mae": 3.296953969829395
+    },
+    {
+      "case": "tcja-healthcare",
+      "n": 16,
+      "before_hits": 13,
+      "after_hits": 13,
+      "before_mae": 13.476398237516932,
+      "after_mae": 13.476398237516932
+    },
+    {
+      "case": "steel-232",
+      "n": 3,
+      "before_hits": 2,
+      "after_hits": 2,
+      "before_mae": 0.8369518982252732,
+      "after_mae": 2.1046875597266035
+    },
+    {
+      "case": "tcja-energy_resources",
+      "n": 7,
+      "before_hits": 7,
+      "after_hits": 7,
+      "before_mae": 5.431660728375042,
+      "after_mae": 5.431660728375042
+    },
+    {
+      "case": "tcja-transportation_logistics",
+      "n": 14,
+      "before_hits": 14,
+      "after_hits": 14,
+      "before_mae": 1.2436684588590876,
+      "after_mae": 1.2436684588590876
+    },
+    {
+      "case": "defense_budget_increase",
+      "n": 20,
+      "before_hits": 16,
+      "after_hits": 16,
+      "before_mae": 21.280032610597083,
+      "after_mae": 21.280032610597083
+    },
+    {
+      "case": "tcja-real_estate_hospitality",
+      "n": 1,
+      "before_hits": 1,
+      "after_hits": 1,
+      "before_mae": 5.219329172634163,
+      "after_mae": 5.219329172634163
+    },
+    {
+      "case": "pell_grant_change",
+      "n": 7,
+      "before_hits": 6,
+      "after_hits": 6,
+      "before_mae": 20.278718381516192,
+      "after_mae": 20.278718381516192
+    }
+  ],
+  "after_original_hits": 104,
+  "after_original_n": 120,
+  "expanded_summary": {
+    "n": 190,
+    "hits": 155,
+    "accuracy_pct": 81.57894736842105,
+    "industries": 10,
+    "cases": 13,
+    "excluded": 124,
+    "industry_balanced_pct": 85.75454582359953
+  }
+}

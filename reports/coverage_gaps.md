@@ -4,10 +4,10 @@ Default-case coverage requires nonzero EPS or equity value, including explicit u
 
 | Item | Count |
 |---|---:|
-| Companies | 232 |
-| Default covered | 227 |
+| Companies | 234 |
+| Default covered | 229 |
 | Gaps | 5 |
-| Explicit company-policy decisions | 1679 |
+| Explicit company-policy decisions | 1694 |
 
 ## Unresolved rule failures
 
@@ -25,7 +25,7 @@ Six industry-specific `us_corporate_tax_<industry>` scenarios cover positive sou
 
 - `consumer_retail/us_corporate_tax_consumer_retail`: WMT, COST, AMZN, NKE, HD, DLTR, TJX, SBUX, MCD, KO, PEP, PG, CL, BBY, MDLZ, MO, PFGC, PM, SYY, TSN
 - `education/us_corporate_tax_education`: LRN, CVSA, DUOL, PRDO, LAUR, LINC, WLY, FC
-- `financial_services/us_corporate_tax_financial_services`: JPM, WFC, GS, BNY, USB, PNC, COF, FITB, HBAN, ALLY, MA, AIG, PRU, ALL, MET, SNEX, SPGI, TRV, V
+- `financial_services/us_corporate_tax_financial_services`: JPM, WFC, GS, BNY, USB, PNC, COF, FITB, HBAN, ALLY, MA, AIG, PRU, ALL, MET, SNEX, SPGI, TRV, V, PYPL
 - `healthcare/us_corporate_tax_healthcare`: UNH, ELV, HUM, CVS, PFE, MOH, JNJ, AMGN, GILD, THC, TMO, ABT, CAH, COR, ISRG, MCK
-- `tmt/us_corporate_tax_tmt`: MSFT, GOOGL, META, NVDA, VZ, CRM, ADBE, AMD, QCOM, MU, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN
+- `tmt/us_corporate_tax_tmt`: MSFT, GOOGL, META, NVDA, VZ, CRM, ADBE, AMD, QCOM, MU, CSCO, T, CMCSA, NFLX, DIS, AMAT, ANET, DELL, HPQ, INTU, LRCX, NOW, PANW, SNDK, SNX, TMUS, TXN, PLTR
 - `transportation_logistics/us_corporate_tax_transportation_logistics`: UPS, FDX, TSLA, CHRW, UBER

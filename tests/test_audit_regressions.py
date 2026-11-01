@@ -33,9 +33,18 @@ def test_depressed_eps_uses_supported_history_without_changing_reported_eps():
     company = store.load_baselines()["companies"]["COF"]
     b = store.baseline_row("COF", 100.)
     assert b["eps_diluted"] == company["years"][0]["items"]["eps_diluted"]
-    assert b["valuation_method"] == "three_year_median_eps"
+    assert b["valuation_method"] == "three_year_median_adjusted_eps"
+    assert b['valuation_eps'] == 13.96
     assert b["valuation_eps"] > b["eps_diluted"]
     assert b["valuation_pe"] < b["pe"]
+
+
+def test_unadjusted_history_never_masquerades_as_normalized_earnings():
+    """Depressed/negative earnings need sourced special-item adjustments before a P/E fallback."""
+    b=store.baseline_row('INTC',100.)
+    assert b['eps_diluted'] < 0
+    assert b['valuation_method']=='unavailable_normalization_pending'
+    assert b['valuation_eps'] is None and b['valuation_pe'] is None
 
 
 @pytest.mark.parametrize("ticker", ["CMCSA", "MA", "NKE", "SCHL"])
@@ -65,6 +74,9 @@ def test_unknown_debt_is_not_described_as_reported_zero():
     y = build_baseline(facts)[0]
     assert y.items["total_debt"] is None
     assert not any("assumed 0" in f for f in y.flags)
+    from policyshock.engine.channels import financing_debt
+    d=financing_debt({'total_debt':None},{'floating_share':.3,'maturing_share':0,'d_rate_bps':100})
+    assert any('unquantified' in n for n in d.notes)
 
 
 def test_steel_buyer_and_producer_prices_match_official_distinct_metrics():

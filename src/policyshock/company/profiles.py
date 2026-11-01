@@ -126,7 +126,7 @@ def lookup_company(ticker: str, industry: str) -> dict:
         facts = edgar.company_facts(cik)
         metadata = edgar.submissions(cik)
         sic = str(metadata.get("sic", ""))
-        kind = "bank" if sic.startswith(("602", "603", "609")) else "reit" if sic == "6798" else "managed_care" if sic == "6324" else "standard"
+        kind = "bank" if sic.startswith(("602", "603", "609")) else "reit" if sic == "6798" else "managed_care" if sic == "6324" else "insurer" if sic.startswith(('631','633','635','636','639')) else "standard"
         years = build_baseline(facts, kind)
         if not years:
             raise ValueError("No supported US-GAAP annual 10-K financials were found. Foreign-reporting or private companies can be entered manually.")
@@ -138,6 +138,11 @@ def lookup_company(ticker: str, industry: str) -> dict:
         row["price_date"] = str(quote.iloc[0]["date"]) if len(quote) else None
         cover = shares_outstanding(facts)
         row["shares_outstanding"] = cover["value"] if cover else None
+        # Use the same historical earnings screen as reference companies, while
+        # keeping the portable profile's existing fields and warnings unchanged.
+        row = store.baseline_row(ticker,row['price'],row['price_date'],company={
+            'ticker':ticker,'name':row['name'],'industry':industry,'kind':kind,
+            'shares_outstanding':cover,'years':[{**y.to_dict(),'filing_url':edgar.filing_url(y.source_cik or cik,y.source_accn) if y.source_accn else None} for y in years]})
     fields = {}
     sources = {}
     for key in Financials.model_fields:
@@ -231,6 +236,23 @@ def run_company(profile: CompanyProfile, policy_id: str, inputs: dict, *, macro:
            "filing_url": profile.filing_url, "pe": reference_price / eps if reference_price is not None and eps > 0 else None,
            "shares_outstanding": outstanding, "market_cap": reference_price * outstanding if reference_price is not None else None,
            "contribution_margin": (f["revenue"] - f["cost_of_revenue"]) / f["revenue"] if f["cost_of_revenue"] is not None else None}
+    row['valuation_method'] = 'reported_eps' if eps > 0 else 'unavailable_normalization_pending'
+    row['valuation_pe'] = row['pe']
+    # The portable schema stays unchanged. A reference lookup can reuse verified
+    # earnings history only while the supplied financial basis still matches it.
+    known = store.load_baselines()['companies'].get(profile.ticker)
+    if known:
+        try:
+            reference = store.baseline_row(profile.ticker, reference_price, year=profile.fiscal_year)
+            same_basis = profile.filing_url == reference['filing_url'] and all(
+                f.get(k) is not None and reference.get(k) is not None and math.isclose(f[k],reference[k],rel_tol=1e-9,abs_tol=1e-8)
+                for k in ('eps_diluted','diluted_shares','net_income','pretax_income'))
+            if same_basis:
+                row.update({k:reference[k] for k in ('valuation_method','valuation_eps','valuation_pe')})
+        except (KeyError, StopIteration):
+            pass
+    if any('Negative/depressed EPS:' in warning for warning in profile.warnings) and row['valuation_method'] == 'reported_eps':
+        row.update(valuation_pe=None,valuation_eps=None,valuation_method='unavailable_normalization_pending')
     policy = policy.model_copy(update={"roles": {ticker: profile.role}})
     prepared = prepare_baselines(pd.DataFrame([row]))
     prepared[0]["model_flags"] += profile.warnings

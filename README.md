@@ -1,15 +1,14 @@
 # Bellwether — Industry Policy Impact Simulator
 
 Simulate how a policy change (tariffs, tax changes, rate moves, Medicare rates…) hits the revenue, margins,
-EPS and implied value of 203 real US companies, using their latest SEC filings.
+EPS and implied value of 234 public companies, using their latest available SEC filings.
 
 **Live console:** https://duke-bellwether.vercel.app/ — hosted on Vercel Hobby.
 Pushes to `main` automatically deploy the tactical console.
 
 **Status:** Python engine, Streamlit interface (Industry simulator, Full Market with 10 macro shocks, Backtests,
 Methodology, Data, About) and tactical web console implemented. The Streamlit app is ready for Streamlit Community
-Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`). The tactical console also includes Vercel deployment configuration. The web console does not
-have a Full Market view yet.
+Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`). The tactical console also includes Vercel deployment configuration. The web console currently models industry and custom-company scenarios.
 
 ## Tactical console interface
 
@@ -82,8 +81,8 @@ the GitHub repository in Vercel to deploy subsequent commits automatically.
 
 ## Company coverage and user profiles
 
-Each industry has 20–30 selected public issuers (203 total: 20 in nine industries,
-23 in Financial Services), spanning documented business subsectors. SEC issuer names,
+The active sample has 234 public issuers across ten industries, including 31 supported
+audit additions to the original 203-company roster. SEC issuer names,
 CIKs, annual filings and public prices were fetched from APIs. This is a curated
 teaching sample, not a statistically representative or complete market index.
 See `data/snapshots/sample_coverage.json` for the added companies and sampling strata.
@@ -97,7 +96,7 @@ profile import/export preserves inputs; custom financials are excluded from shar
 Profiles remain in browser memory until exported and are not saved to the server.
 
 The APIs cannot supply every policy exposure or private-company financials.
-Expanded-sample exposures are labeled peer estimates with a rationale; structural
+Original expanded-sample exposures are labeled peer estimates with a rationale; structural
 scope exclusions are explicit. Unavailable values in new company lookups remain
 blank for review. Foreign issuers without supported US-GAAP annual 10-K facts and
 private companies can use manual entry. No paid APIs, new Python dependencies or
@@ -131,12 +130,12 @@ Backtests now cover all ten industries. The headline is a pooled **directional h
 rate**, with sample counts, all exclusions, sector scores and per-case magnitude
 errors. Six sector cases share the TCJA episode; these are retrospective replays
 with current exposures, not independent out-of-sample forecast validation. See
-METHODOLOGY §3 and §8 for selection rules, source provenance and refresh semantics.
+METHODOLOGY §5 for selection rules, source provenance and refresh semantics.
 
 ### Full policy audit
 
 Run `.venv/bin/python scripts/audit_policies.py` after policy/exposure changes.
-The generated [policy audit](design/reviews/POLICY_AUDIT.md) covers all 66 industry
+The generated [policy audit](design/reviews/POLICY_AUDIT.md) covers all 72 industry
 policies and 10 macro shocks, with company scope, valid input boundaries, accounting,
 scenario bounds and remaining estimate/coverage limitations. Economic review entries
 live in `config/policy_review.yaml` and are enforced by the normal test suite.
@@ -144,3 +143,38 @@ live in `config/policy_review.yaml` and are enforced by the normal test suite.
 With the local console running, `.venv/bin/python scripts/audit_running_console.py`
 also checks every policy/input boundary against API-fed baselines, including exact
 company coverage, independent scope/directions and attribution.
+
+
+### Quantitative audit — 1 November 2026
+
+Read [AUDIT_SUMMARY](reports/AUDIT_SUMMARY.md) before interpreting results. The
+234-company, 72-policy sample has 1,694 explicit company/policy decisions and
+229 companies with a nonzero default earnings/value effect. Five coverage gaps
+remain. All 72 whole-policy empirical verdicts are FAIL-UNRESOLVED; internal tests
+passing does not verify unsourced exposures or forecasting accuracy. The exact
+Fortune publisher list is archived; complete S&P publisher membership was not
+obtained, and OEF holdings are labeled only as a proxy.
+
+Audit additions do not copy peer exposures. Unverified quantities remain inactive
+and explicit. Six new tax entries represent one submitted, unenacted 21% to 28%
+proposal using reported US book income as a taxable-income proxy. Depressed or
+negative EPS needs a sourced adjusted three-year history for permanent valuation;
+otherwise value is unavailable. Projected equity prices cannot fall below zero.
+
+```bash
+.venv/bin/python scripts/build_sources_registry.py
+.venv/bin/python scripts/build_coverage_report.py
+.venv/bin/python scripts/audit_policies.py
+.venv/bin/python scripts/build_policy_calibration_reports.py
+.venv/bin/python scripts/spotcheck_arithmetic.py
+.venv/bin/python scripts/build_audit_summary.py
+# With the local server running:
+.venv/bin/python scripts/audit_running_console.py --base-url http://127.0.0.1:8787
+```
+
+The final audit reports 13 historical cases: 155/190 directional matches (81.6%).
+On the unchanged original 120 company-cases, 104 remain correct (86.7%). These are
+retrospective diagnostics with correlated episodes and current/restated inputs,
+not causal or independent forecast validation. The summary compares each case's
+MAE with no change and explains regressions. Admission scripts are guarded against
+repeated mutation; review the ledger before changing the roster.

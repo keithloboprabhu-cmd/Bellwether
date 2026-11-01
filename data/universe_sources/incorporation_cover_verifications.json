@@ -1,0 +1,20 @@
+[
+  {
+    "ticker": "PLTR",
+    "value": "Delaware",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+    "document_location": "10-K cover / dei:EntityIncorporationStateCountryCode",
+    "date_accessed": "2026-11-01",
+    "raw_sha256": "af344e79cb41eb6d87c5d87debb113ace541a26bb8fcf434f6d767a7ac3fedb5",
+    "verified": "Y"
+  },
+  {
+    "ticker": "PYPL",
+    "value": "Delaware",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000024/pypl-20251231.htm",
+    "document_location": "10-K cover / dei:EntityIncorporationStateCountryCode",
+    "date_accessed": "2026-11-01",
+    "raw_sha256": "281575baddcba802c707327ddb92689351b59985d66b9aeb42a52998b811f67f",
+    "verified": "Y"
+  }
+]

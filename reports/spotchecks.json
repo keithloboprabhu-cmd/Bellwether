@@ -1,0 +1,146 @@
+{
+  "seed": 20261031,
+  "checks": [
+    {
+      "policy": "tmt/semiconductor_tariffs",
+      "ticker": "IBM",
+      "inputs": {
+        "tariff_pct": 25.0
+      },
+      "independent_dNI": -446.0180032573714,
+      "engine_dNI": -446.0180032573717,
+      "independent_dEPS": -0.4701482552650478,
+      "engine_dEPS": -0.4701482552650481,
+      "independent_dP": -10.672407484781157,
+      "engine_dP": -10.672407484781157,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "financial_services/fed_rate_change",
+      "ticker": "MS",
+      "inputs": {
+        "d_rate_bps": -100.0
+      },
+      "independent_dNI": -189.21836567368135,
+      "engine_dNI": -189.21836567368155,
+      "independent_dEPS": -0.11885575733271442,
+      "engine_dEPS": -0.11885575733271454,
+      "independent_dP": -2.089463259906847,
+      "engine_dP": -2.089463259906847,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "consumer_retail/sweetened_beverage_tax",
+      "ticker": "PEP",
+      "inputs": {
+        "tax_cents_per_oz": 1.5,
+        "coverage_pct": 100.0
+      },
+      "independent_dNI": -577.5074865286995,
+      "engine_dNI": -577.5074865286997,
+      "independent_dEPS": -0.42061725165965,
+      "engine_dEPS": -0.4206172516596502,
+      "independent_dP": -9.517867376305114,
+      "engine_dP": -9.517867376305114,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "healthcare/pharma_tariffs",
+      "ticker": "GILD",
+      "inputs": {
+        "tariff_pct": 15.0
+      },
+      "independent_dNI": -121.56095612316282,
+      "engine_dNI": -121.56095612316312,
+      "independent_dEPS": -0.09686131962005005,
+      "engine_dEPS": -0.0968613196200503,
+      "independent_dP": -2.229238984293895,
+      "engine_dP": -2.229238984293895,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "industrials/steel_tariffs",
+      "ticker": "ITW",
+      "inputs": {
+        "tariff_pct": 25.0
+      },
+      "independent_dNI": -2.7586318029368306,
+      "engine_dNI": -2.7586318029370887,
+      "independent_dEPS": -0.009437672948808862,
+      "engine_dEPS": -0.009437672948809745,
+      "independent_dP": -0.24808754200515193,
+      "engine_dP": -0.24808754200515193,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "energy_resources/crude_export_restrictions",
+      "ticker": "DVN",
+      "inputs": {
+        "restricted_pct": 50.0
+      },
+      "independent_dNI": -60.46965599893471,
+      "engine_dNI": -60.469655998934975,
+      "independent_dEPS": -0.09552868246277206,
+      "engine_dEPS": -0.09552868246277248,
+      "independent_dP": -1.177270741429702,
+      "engine_dP": -1.177270741429702,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "transportation_logistics/airline_bag_fee_cap",
+      "ticker": "AAL",
+      "inputs": {
+        "fee_cut_pct": 50.0
+      },
+      "independent_dNI": -167.21532725303294,
+      "engine_dNI": -167.21532725303294,
+      "independent_dEPS": -0.2529533641121015,
+      "engine_dEPS": -0.2529533641121015,
+      "independent_dP": null,
+      "engine_dP": null,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "public_sector/continuing_resolution",
+      "ticker": "TTEK",
+      "inputs": {
+        "months_delayed": 3.0
+      },
+      "independent_dNI": -72.39493518166819,
+      "engine_dNI": -72.39493518166816,
+      "independent_dEPS": -0.27101722869864514,
+      "engine_dEPS": -0.27101722869864503,
+      "independent_dP": -0.27101722869864514,
+      "engine_dP": -0.27101722869864514,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "real_estate_hospitality/like_kind_exchange_limits",
+      "ticker": "EXR",
+      "inputs": {
+        "taxed_share_pct": 75.0
+      },
+      "independent_dNI": 0.0,
+      "engine_dNI": 0.0,
+      "independent_dEPS": 0.0,
+      "engine_dEPS": 0.0,
+      "independent_dP": -1.9555909090909092,
+      "engine_dP": -1.9555909090909092,
+      "pass_arithmetic": true
+    },
+    {
+      "policy": "education/ninety_ten_rule_change",
+      "ticker": "PRDO",
+      "inputs": {
+        "cap_pct": 85.0
+      },
+      "independent_dNI": -4.475985750613374,
+      "engine_dNI": -4.475985750613376,
+      "independent_dEPS": -0.06765804689844267,
+      "engine_dEPS": -0.0676580468984427,
+      "independent_dP": -0.9477718139905812,
+      "engine_dP": -0.9477718139905812,
+      "pass_arithmetic": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "accessed": "2026-10-31",
+  "retrieval": "Manually verified numerical rows in public primary issuer pages; direct HTTP archiver received 403, so no raw HTML was substituted.",
+  "annual_rows": {
+    "2025-12-31": {
+      "adjusted_eps": 19.61,
+      "reported_eps": 4.03,
+      "adjustment_eps": 15.58,
+      "source_url": "https://investor.capitalone.com/news-releases/news-release-details/capital-one-reports-fourth-quarter-2025-net-income-21-billion-or",
+      "accessed": "2026-10-31",
+      "document_location": "Reconciliation of Non-GAAP Measures, adjusted diluted EPS row, Year Ended December 31 2025 column",
+      "rationale": "Issuer-adjusted annual diluted EPS, including the release's disclosed adjusting items. Non-GAAP definition includes some recurring amortization; not pro-forma comparable acquired-company EPS."
+    },
+    "2024-12-31": {
+      "adjusted_eps": 13.96,
+      "reported_eps": 11.59,
+      "adjustment_eps": 2.37,
+      "source_url": "https://investor.capitalone.com/news-releases/news-release-details/capital-one-reports-fourth-quarter-2024-net-income-11-billion-or/",
+      "accessed": "2026-10-31",
+      "document_location": "Reconciliation of Non-GAAP Measures, adjusted diluted EPS row, Year Ended December 31 2024 column",
+      "rationale": "Issuer-adjusted annual diluted EPS, including the release's disclosed adjusting items. Non-GAAP definition includes some recurring amortization; not pro-forma comparable acquired-company EPS."
+    },
+    "2023-12-31": {
+      "adjusted_eps": 12.52,
+      "reported_eps": 11.95,
+      "adjustment_eps": 0.57,
+      "source_url": "https://investor.capitalone.com/news-releases/news-release-details/capital-one-reports-fourth-quarter-2024-net-income-11-billion-or/",
+      "accessed": "2026-10-31",
+      "document_location": "Reconciliation of Non-GAAP Measures, adjusted diluted EPS row, Year Ended December 31 2023 column",
+      "rationale": "Issuer-adjusted annual diluted EPS, including the release's disclosed adjusting items. Non-GAAP definition includes some recurring amortization; not pro-forma comparable acquired-company EPS."
+    }
+  }
+}

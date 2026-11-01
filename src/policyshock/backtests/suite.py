@@ -165,8 +165,58 @@ def _steel_case() -> dict:
             "excluded": [{"ticker": t, "reason": "Outside the existing producer/equipment benchmark cohort"} for t in load_universe().industry("industrials").tickers if t not in steel_232.TICKERS]}
 
 
+def expanded_steel_case() -> dict:
+    """Replay the entire configured industrial cohort without selecting outcome winners."""
+    ind=load_universe().industry('industrials');reg=registry();pol=reg.policy('industrials','steel_tariffs')
+    case=dict(id='steel-232',industry=ind.slug,industry_name=ind.name,title='2018 steel tariffs — expanded cohort',
+        event='Section 232 · 25% steel tariff · March 2018',metric='Gross-margin change',unit='pp',
+        context='FY2017 → FY2018. Full industry cohort subject to complete, comparable reported cost bases. Current exposures, acquisitions, demand and partial-year timing confound realized margins; this is not causal tariff attribution.',
+        cohort_rule='All configured industrial companies with comparable positive revenue/cost observations and nonzero steel exposure. Same rules applied regardless of observed direction.',
+        sources=[dict(label='Federal Register · Section 232 proclamation',url=STEEL_SOURCE),dict(label='USITC · sector price effects, table 5.2',url='https://www.usitc.gov/publications/332/pub5405.pdf')],rows=[],excluded=[])
+    for co in ind.companies:
+        try:
+            base,post=store.fiscal_year(co.ticker,2017),store.fiscal_year(co.ticker,2018)
+            cb,cp,note=steel_232.consistent_cost(base,post)
+            if note=='cost definition differs between years':raise ValueError('No verified like-for-like annual cost definition')
+            rb,rp=base['items'].get('revenue'),post['items'].get('revenue')
+            if any(v is None or not math.isfinite(v) or v<=0 for v in [rb,rp,cb,cp]):raise ValueError('Missing positive, comparable annual revenue/cost base')
+            b=store.baseline_row(co.ticker,None,year=2017);b['cost_of_revenue']=cb;b['contribution_margin']=(rb-cb)/rb
+            runner=Runner(pol,prepare_baselines(pd.DataFrame([b])),{'tariff_pct':25},{a.key:(a.low,a.base,a.high) for a in pol.assumptions},reg.exposures)
+            c=runner.run().company(co.ticker);pred=steel_232._gm_change_bps(c)/100
+            if abs(pred)<=EPSILON:raise ValueError('No quantified nonzero steel-channel exposure')
+            actual=((rp-cp)/rp-(rb-cb)/rb)*100
+            row=_row(co.ticker,base,[post],pred,actual,[note or 'Same reported cost definition','Historical outcome includes demand, mix and volume; current business scope may differ.'])
+            if co.ticker in steel_232.TICKERS:
+                original=next(r for r in steel_232.run() if r.ticker==co.ticker)
+                row.update(low=original.pred_low_bps/100,high=original.pred_high_bps/100)
+            case['rows'].append(row)
+        except (ValueError,KeyError,TypeError) as exc:case['excluded'].append(dict(ticker=co.ticker,reason=str(exc)))
+    return case
+
+
+def additional_cases() -> list[dict]:
+    """Three predeclared non-TCJA episodes with primary-source input values."""
+    rates=fred.load_snapshot();dff=rates[rates.series_id=='DFF']
+    cases=[]
+    for year,label in [(2018,'2018 Fed tightening'),(2020,'2020 emergency rate cuts')]:
+        values={y:float(dff[dff.date.dt.year==y].value.mean()) for y in (year-1,year)}
+        if not all(math.isfinite(v) for v in values.values()):raise ValueError('Missing daily FRED DFF observations')
+        shock=(values[year]-values[year-1])*100
+        case=_policy_case('financial_services','fed_rate_change',date(year,1,1),{'d_rate_bps':shock},label,
+            f'Annual-average DFF {values[year-1]:.6f}% → {values[year]:.6f}%',
+            'Current instantaneous sensitivities are scaled to the observed annual-average rate change, which approximates a different rate path. Balance-sheet growth, acquisitions, deposit betas and (in 2020) the pandemic confound the observed NII change. Retrospective diagnostic, not point-in-time forecast or causal validation.',
+            [dict(label='FRED · daily effective federal funds rate',url=FRED_SOURCE)],'Net interest income change')
+        case['id']=f'fed-{year}';cases.append(case)
+    case=_policy_case('education','pell_grant_change',date(2022,7,1),{'pell_change_pct':(6895/6495-1)*100},
+        '2022–23 Pell Grant increase','Maximum award · $6,495 → $6,895',
+        'First full fiscal year beginning after July 2022 compared with the last annual period ending beforehand. Maximum-award change is an aid-per-student proxy, not a matched company revenue sensitivity. Current Pell shares and loan substitution are unverified; enrollment, tuition, acquisitions and reopening confound observed revenue.',
+        [dict(label='Federal Student Aid · 2021–22 $6,495 maximum',url='https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2021-01-22/2021-2022-federal-pell-grant-payment-and-disbursement-schedules'),dict(label='Federal Student Aid · 2022–23 $6,895 schedule',url='https://fsapartners.ed.gov/sites/default/files/attachments/2022-03/2223RevisedPaymentSchedule.pdf')])
+    case['id']='pell-2022';cases.append(case)
+    return cases
+
+
 def report() -> dict:
-    """Return ten industry cases and a reproducible pooled directional hit rate."""
+    """Return all predeclared industry episodes and a reproducible pooled hit rate."""
     cases = [_tax_case(s) for s in ["tmt", "consumer_retail", "healthcare", "energy_resources", "transportation_logistics", "real_estate_hospitality"]]
     rates = fred.load_snapshot()
     dff = rates[rates.series_id == "DFF"]
@@ -178,7 +228,7 @@ def report() -> dict:
         "2022 Fed tightening", f"Annual-average DFF {annual[2021]:.3f}% → {annual[2022]:.3f}%",
         "FY2021 → FY2022 bank NII. Shock equals the change in annual-average effective federal funds rates, not the year-end target jump. Current bank sensitivities are scaled linearly; balance-sheet growth and deposit repricing remain confounders.",
         [{"label": "FRED · daily effective federal funds rate", "url": FRED_SOURCE}], "Net interest income change")
-    cases += [bank, _steel_case(), _policy_case("public_sector", "defense_budget_increase", date(2018, 10, 1), {"d_budget_pct": (716 / 700 - 1) * 100},
+    cases += [bank, expanded_steel_case(), _policy_case("public_sector", "defense_budget_increase", date(2018, 10, 1), {"d_budget_pct": (716 / 700 - 1) * 100},
         "FY2019 defense budget expansion", "National-defense budget agreement · $700B → $716B",
         "Last annual period before October 2018 versus the first full annual period starting thereafter. The budget-agreement topline is an allocation proxy, not contractor cash receipts. Fiscal lags, acquisitions and civilian contracts affect observed total revenue.",
         [{"label": "Congressional Record · FY2018/2019 defense toplines", "url": DEFENSE_SOURCE}]),
@@ -186,6 +236,7 @@ def report() -> dict:
         "2023–24 Pell Grant increase", "Maximum annual award · $6,895 → $7,395",
         "Last annual period before July 2023 versus the first full annual period beginning thereafter. Uses the maximum-award percentage as the model funding-per-student proxy. Enrollment mix, acquisitions and tuition changes confound total-revenue growth.",
         [{"label": "Federal Student Aid · enacted Pell award increase", "url": PELL_SOURCE}])]
+    cases += additional_cases()
     order = {i.slug: n for n, i in enumerate(load_universe().industries)}
     cases.sort(key=lambda c: order[c["industry"]])
     for case in cases:
@@ -193,7 +244,8 @@ def report() -> dict:
     pooled = score([r for c in cases for r in c["rows"]])
     # Do not pool magnitudes expressed in different metrics and units.
     pooled.pop("mae"); pooled.pop("no_change_mae")
-    per_industry = [c["summary"]["accuracy_pct"] for c in cases if c["summary"]["n"]]
+    per_industry = [score([r for c in cases if c['industry']==i.slug for r in c['rows']])['accuracy_pct'] for i in load_universe().industries]
+    per_industry = [value for value in per_industry if value is not None]
     pooled.update({"industries": len(per_industry), "cases": len(cases), "excluded": sum(len(c["excluded"]) for c in cases),
                    "industry_balanced_pct": mean(per_industry) if per_industry else None})
     return {"summary": pooled, "cases": cases,
