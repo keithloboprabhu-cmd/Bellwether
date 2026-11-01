@@ -101,6 +101,18 @@ reviews:
     - ticker: SLM
       metric: dR
       sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
     unaffected:
     - LAUR
     - UTI
@@ -234,6 +246,18 @@ reviews:
     - ticker: C
       metric: dR
       sign: 1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
     - ticker: MET
       metric: dR
       sign: -1

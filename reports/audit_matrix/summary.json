@@ -1,0 +1,138 @@
+{
+ "pairs": 1744,
+ "policies": 74,
+ "companies": 234,
+ "status_counts": {
+  "included": 978,
+  "unquantified": 210,
+  "outside_scope": 554,
+  "conditional": 2
+ },
+ "flag_counts": {
+  "extreme_price": 3,
+  "unquantified": 210,
+  "non-monotone": 1,
+  "extreme_eps": 4
+ },
+ "basis_of_pairs_with_effects": {
+  "sourced": 218,
+  "peer_prior": 382,
+  "company_estimate": 378
+ },
+ "companies_without_specific_policy_effect": [
+  "BLK",
+  "CHRW",
+  "DELL",
+  "HPQ",
+  "LAUR",
+  "LYFT",
+  "MA",
+  "NOW",
+  "PANW",
+  "PLTR",
+  "PYPL",
+  "SNDK",
+  "SNEX",
+  "SNX",
+  "SPGI",
+  "UBER"
+ ],
+ "flagged": [
+  {
+   "policy": "consumer_retail/import_tariffs",
+   "ticker": "BBY",
+   "status": "included",
+   "basis": "peer_prior",
+   "dEPS_pct": -0.55628,
+   "dP_pct": -0.55628,
+   "dNI_musd": -594.65,
+   "dR_musd": -19.084,
+   "effect_cases": 3,
+   "flags": "extreme_price"
+  },
+  {
+   "policy": "financial_services/fed_rate_change",
+   "ticker": "TFC",
+   "status": "included",
+   "basis": "sourced",
+   "dEPS_pct": -0.00969,
+   "dP_pct": -0.00969,
+   "dNI_musd": -48.224,
+   "dR_musd": -57.692,
+   "effect_cases": 3,
+   "flags": "non-monotone in d_rate_bps"
+  },
+  {
+   "policy": "healthcare/medicare_advantage_rate_change",
+   "ticker": "HUM",
+   "status": "included",
+   "basis": "sourced",
+   "dEPS_pct": -0.62785,
+   "dP_pct": -0.62785,
+   "dNI_musd": -746.468,
+   "dR_musd": -1989.046,
+   "effect_cases": 3,
+   "flags": "extreme_price"
+  },
+  {
+   "policy": "real_estate_hospitality/property_tax_change",
+   "ticker": "RLJ",
+   "status": "included",
+   "basis": "peer_prior",
+   "dEPS_pct": -6.13402,
+   "dP_pct": null,
+   "dNI_musd": -9.196,
+   "dR_musd": 0.0,
+   "effect_cases": 3,
+   "flags": "extreme_eps"
+  },
+  {
+   "policy": "transportation_logistics/airline_bag_fee_cap",
+   "ticker": "AAL",
+   "status": "included",
+   "basis": "sourced",
+   "dEPS_pct": -2.38978,
+   "dP_pct": null,
+   "dNI_musd": -268.561,
+   "dR_musd": -732.67,
+   "effect_cases": 2,
+   "flags": "extreme_eps"
+  },
+  {
+   "policy": "transportation_logistics/airline_ticket_tax_change",
+   "ticker": "AAL",
+   "status": "included",
+   "basis": "sourced",
+   "dEPS_pct": -1.42112,
+   "dP_pct": null,
+   "dNI_musd": -159.703,
+   "dR_musd": -695.834,
+   "effect_cases": 3,
+   "flags": "extreme_eps"
+  },
+  {
+   "policy": "transportation_logistics/carbon_tax_transport_fuel",
+   "ticker": "AAL",
+   "status": "included",
+   "basis": "peer_prior",
+   "dEPS_pct": -5.94265,
+   "dP_pct": null,
+   "dNI_musd": -667.828,
+   "dR_musd": 274.828,
+   "effect_cases": 2,
+   "flags": "extreme_eps"
+  },
+  {
+   "policy": "transportation_logistics/carbon_tax_transport_fuel",
+   "ticker": "LUV",
+   "status": "included",
+   "basis": "peer_prior",
+   "dEPS_pct": -0.86319,
+   "dP_pct": -0.86319,
+   "dNI_musd": -380.51,
+   "dR_musd": 141.169,
+   "effect_cases": 2,
+   "flags": "extreme_price"
+  }
+ ]
+}

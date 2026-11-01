@@ -1,12 +1,8 @@
 {
   "companies": 234,
-  "covered": 229,
+  "covered": 233,
   "gaps": [
-    "BLK",
-    "LYFT",
-    "MDT",
-    "PGR",
-    "SLM"
+    "LYFT"
   ],
-  "decisions": 1694
+  "decisions": 1744
 }

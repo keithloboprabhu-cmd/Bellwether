@@ -144,6 +144,33 @@ CORRECTIONS = {
         "us_users_m": est(100, 70, 140, "TurboTax, Credit Karma and QuickBooks serve on the order of 100M US consumers and small businesses."),
         "us_digital_ad_revenue_share": est(0.11, 0.06, 0.13, "Credit Karma's personalized credit and loan offers (about a ninth of revenue) depend on targeting with consumer data, so they are exposed like targeted advertising."),
     },
+    # --- industrials addition (were sentinels)
+    "GEV": {
+        "ind_steel_share_of_cogs": est(0.08, 0.04, 0.12, "Wind towers and nacelles, gas-turbine casings and forgings, and transformer cores (grain-oriented electrical steel) make GE Vernova a heavier steel user than aerospace peers (0.03) but lighter than Caterpillar (0.15)."),
+        "ind_infrastructure_capture_share": est(0.004, 0.001, 0.008, "Only the grid share of a broad infrastructure program reaches GE Vernova (transformers, switchgear, grid software); roughly a tenth of outlays are grid, a third of that is equipment, and GE Vernova is one of several large suppliers."),
+        "ind_us_qre_musd": est(600, 350, 900, "FY2025 R&D expense was $1,197M (XBRL ResearchAndDevelopmentExpense); about half is assumed US-performed and qualifying. Not a disclosed credit base."),
+        "ind_us_pretax_income_share": dict(value=0.271, low=0.028, high=0.514, source="SEC 10-K XBRL income-tax note (domestic/foreign pretax income)", source_url="https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/0001996810-26-000015-index.htm",
+                                           rationale="Average of tagged years used by the Full Market tax shock; FY2025 domestic pretax was $78M of $2,828M and FY2024 $1,285M of $2,498M, so the range is wide.", applicable=True),
+        "govcon_defense_intel_share": scope0("GE Vernova sells power-generation, wind and grid equipment; defense and intelligence sales are not a reported business."),
+    },
+    # --- public sector: shares copied from GD (primes) or a BAH/CACI median (services)
+    **{t: {"govcon_us_gov_share": est(g, *gr, why), "govcon_defense_intel_share": est(d, *dr, why), "govcon_civilian_share": est(c, *cr, why)}
+       for t, (g, gr, d, dr, c, cr, why) in {
+        "LMT": (0.73, (0.70, 0.76), 0.69, (0.65, 0.73), 0.04, (0.02, 0.06), "Lockheed Martin reports roughly three-quarters of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small. Replaces a GD prior."),
+        "NOC": (0.86, (0.83, 0.89), 0.82, (0.78, 0.86), 0.04, (0.02, 0.06), "Northrop Grumman reports about 85% of sales to the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD prior."),
+        "RTX": (0.45, (0.42, 0.48), 0.43, (0.40, 0.46), 0.02, (0.01, 0.03), "RTX reports a little under half of sales from the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest. Replaces a GD prior."),
+        "HII": (0.97, (0.95, 0.99), 0.94, (0.90, 0.97), 0.03, (0.01, 0.05), "Huntington Ingalls builds Navy and Coast Guard ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior."),
+        "OSK": (0.22, (0.15, 0.30), 0.12, (0.08, 0.18), 0.10, (0.05, 0.12), "Oshkosh's defense segment is a minority of sales and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational trucks are commercial. Replaces a GD prior."),
+        "KTOS": (0.70, (0.65, 0.75), 0.68, (0.63, 0.73), 0.02, (0.0, 0.04), "Kratos sells drones, satellites and hypersonics mainly to DoD; about seven-tenths of revenue is US government."),
+        "AVAV": (0.62, (0.55, 0.70), 0.60, (0.53, 0.68), 0.02, (0.0, 0.04), "AeroVironment sells small drones and loitering munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary."),
+        "BWXT": (0.75, (0.70, 0.80), 0.68, (0.62, 0.74), 0.07, (0.04, 0.10), "BWX Technologies' naval nuclear components (funded through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense civil."),
+        "TXT": (0.22, (0.18, 0.26), 0.21, (0.17, 0.25), 0.01, (0.0, 0.02), "Textron's US-government sales (Bell military, Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial. Replaces a GD prior."),
+        "MRCY": (0.75, (0.65, 0.85), 0.73, (0.63, 0.83), 0.02, (0.0, 0.04), "Mercury Systems sells defense electronics mostly as a subcontractor to US primes on DoD programs."),
+        "VSEC": (0.05, (0.02, 0.10), 0.04, (0.01, 0.08), 0.01, (0.0, 0.02), "VSE has sold most of its federal and defense services business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior (0.68)."),
+        "KBR": (0.55, (0.45, 0.62), 0.45, (0.35, 0.52), 0.10, (0.06, 0.14), "KBR's Mission Technology Solutions (about two-thirds of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces a BAH/CACI median."),
+        "ICFI": (0.50, (0.42, 0.56), 0.06, (0.03, 0.10), 0.44, (0.36, 0.50), "ICF earns about half its revenue from US federal agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense is small. Replaces a BAH/CACI median (0.71 defense)."),
+        "TTEK": (0.22, (0.15, 0.30), 0.06, (0.03, 0.10), 0.16, (0.10, 0.22), "Tetra Tech's US federal work (USAID, EPA, DoD environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial and international. Replaces a BAH/CACI median."),
+       }.items()},
     # --- transport
     "LUV": {"tl_domestic_passenger_revenue_share": est(0.93, 0.88, 0.97, "Southwest flies an almost entirely domestic network (near-international routes to Mexico and the Caribbean are a few percent of capacity); passenger revenue is most of total revenue. Replaces a Delta prior (0.564).")},
     # --- healthcare devices: import shares copied from PFE/LLY
@@ -276,6 +303,11 @@ def main() -> None:
     # TMT
     for k, ts in [("tmt/chip_export_controls", ["AMAT", "LRCX", "TXN"]), ("tmt/semiconductor_tariffs", ["ANET", "TMUS"]), ("tmt/data_privacy_mandate", ["INTU", "TMUS"]), ("tmt/digital_services_tax", ["INTU"])]:
         move(k, ts, "included", inc(k))
+    for k in ["industrials/steel_tariffs", "industrials/infrastructure_spending", "industrials/rd_credit_expansion", "industrials/corporate_tax_rate_change"]:
+        move(k, ["GEV"], "included", inc(k))
+    move("industrials/corporate_tax_rate_change", ["CLF"], "conditional",
+         "Baseline pretax loss: a statutory rate change has no current-tax effect until US income turns positive; deferred-tax remeasurement is not modeled.")
+    move("industrials/defense_procurement_increase", ["GEV"], "outside_scope", "No material defense or intelligence revenue.")
     move("tmt/semiconductor_tariffs", ["DELL", "HPQ"], "unquantified",
          "Thin-margin hardware OEM: results would be dominated by the generic pass-through assumption; an OEM-specific pass-through is not sourced. Missing exposure is not evidence of no impact.")
     # consumer demand-side policies for the six additions

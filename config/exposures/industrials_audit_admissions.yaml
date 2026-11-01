@@ -5,42 +5,50 @@ companies:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: GE Vernova sells power-generation, wind and grid equipment;
+        defense and intelligence sales are not a reported business. This is a model boundary, not a reported
+        zero measurement.'
     ind_infrastructure_capture_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.004
+      low: 0.001
+      high: 0.008
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Only the grid share of a broad infrastructure
+        program reaches GE Vernova (transformers, switchgear, grid software); roughly a tenth of outlays are
+        grid, a third of that is equipment, and GE Vernova is one of several large suppliers.'
+      applicable: true
     ind_us_pretax_income_share:
-      value: 0.027581329561527583
-      low: 0.027581329561527583
-      high: 0.5144115292233787
-      source: verified SEC companyfacts
-      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001996810.json
-      rationale: 'US-incorporated issuer: reported domestic pretax / reported total pretax. Bounds are available
-        three-year historical ratios, not confidence intervals.'
+      value: 0.271
+      low: 0.028
+      high: 0.514
+      source: SEC 10-K XBRL income-tax note (domestic/foreign pretax income)
+      source_url: https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/0001996810-26-000015-index.htm
+      rationale: Average of tagged years used by the Full Market tax shock; FY2025 domestic pretax was $78M
+        of $2,828M and FY2024 $1,285M of $2,498M, so the range is wide.
+      applicable: true
     ind_us_qre_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 600.0
+      low: 350.0
+      high: 900.0
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): FY2025 R&D expense was $1,197M (XBRL ResearchAndDevelopmentExpense);
+        about half is assumed US-performed and qualifying. Not a disclosed credit base.'
+      applicable: true
     ind_steel_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.08
+      low: 0.04
+      high: 0.12
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Wind towers and nacelles, gas-turbine casings
+        and forgings, and transformer cores (grain-oriented electrical steel) make GE Vernova a heavier steel
+        user than aerospace peers (0.03) but lighter than Caterpillar (0.15).'
+      applicable: true
     ind_domestic_steel_sales_share:
       value: 0.0
       low: 0.0

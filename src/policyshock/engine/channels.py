@@ -78,7 +78,13 @@ def tax_rate(b, p) -> Delta:
 
     Only the US-taxed share of income feels a US rate change. The NI effect,
     −PTI' × (t' − t), is applied in aggregation from dTaxRate.
+
+    A company with a baseline pretax loss pays no current tax, so a rate change
+    has no recurring earnings effect (applying Δτ to negative PTI would book a
+    spurious gain from a tax increase). Deferred-tax remeasurement is not modeled.
     """
+    if (b.get("pretax_income") or 0.0) <= 0:
+        return Delta(notes=["baseline pretax loss: statutory rate change has no current-tax effect (deferred-tax remeasurement not modeled)"])
     return Delta(dTaxRate=p["d_statutory_rate"] * p["domestic_income_share"])
 
 

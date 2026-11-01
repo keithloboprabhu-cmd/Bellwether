@@ -25,9 +25,7 @@
         "PG",
         "CL",
         "ULTA",
-        "BBY"
-      ],
-      "neutral": [
+        "BBY",
         "MDLZ",
         "MO",
         "PFGC",
@@ -35,6 +33,7 @@
         "SYY",
         "TSN"
       ],
+      "neutral": [],
       "value_only": false,
       "estimate_exposures": 20,
       "scope_checks": 0,
@@ -185,45 +184,45 @@
         },
         {
           "ticker": "MDLZ",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Consumer transfers raise captured retailer spending.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "MO",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Consumer transfers raise captured retailer spending.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PFGC",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Consumer transfers raise captured retailer spending.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PM",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Consumer transfers raise captured retailer spending.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "SYY",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Consumer transfers raise captured retailer spending.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "TSN",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Consumer transfers raise captured retailer spending.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -234,7 +233,7 @@
     {
       "policy": "consumer_retail/import_tariffs",
       "companies": 26,
-      "input_cases": 3,
+      "input_cases": 4,
       "driver_cases": 6,
       "affected": [
         "WMT",
@@ -459,37 +458,19 @@
       ],
       "review_flags": [
         {
-          "ticker": "WMT",
-          "eps_change": -0.5294442338494534,
-          "inputs": {
-            "tariff_pct": 20.0
-          },
-          "reason": "Reported EPS denominator 2.73; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
-          "range_basis": "Default scenario; realistic range not independently verified"
-        },
-        {
-          "ticker": "TGT",
-          "eps_change": -0.871934418645388,
-          "inputs": {
-            "tariff_pct": 20.0
-          },
-          "reason": "Reported EPS denominator 8.13; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
-          "range_basis": "Default scenario; realistic range not independently verified"
-        },
-        {
           "ticker": "KR",
-          "eps_change": -2.7196295171517684,
+          "eps_change": -0.5113335611475371,
           "inputs": {
-            "tariff_pct": 20.0
+            "tariff_pct": 10.0
           },
           "reason": "Reported EPS denominator 1.54; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
           "range_basis": "Default scenario; realistic range not independently verified"
         },
         {
           "ticker": "BBY",
-          "eps_change": -1.0944620719751799,
+          "eps_change": -0.5562758502457208,
           "inputs": {
-            "tariff_pct": 20.0
+            "tariff_pct": 10.0
           },
           "reason": "Reported EPS denominator 5.04; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
           "range_basis": "Default scenario; realistic range not independently verified"
@@ -497,11 +478,8 @@
       ],
       "rationale": "Import duties raise importer input costs after partial pass-through.",
       "warnings": [
-        "WMT: REVIEW |EPS change| >50% at default. Reported EPS denominator 2.73; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
-        "TGT: REVIEW |EPS change| >50% at default. Reported EPS denominator 8.13; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
         "KR: REVIEW |EPS change| >50% at default. Reported EPS denominator 1.54; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
-        "BBY: REVIEW |EPS change| >50% at default. Reported EPS denominator 5.04; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use.",
-        "BBY: equity wiped out; $0 floor binds, operating losses remain uncapped"
+        "BBY: REVIEW |EPS change| >50% at default. Reported EPS denominator 5.04; dominant NI channel: Tariff on imported merchandise; estimated exposures: us_import_share_of_cogs. Review reported earnings, exposure denominator and linear transmission before use."
       ],
       "errors": []
     },
@@ -761,9 +739,7 @@
         "PG",
         "CL",
         "ULTA",
-        "BBY"
-      ],
-      "neutral": [
+        "BBY",
         "MDLZ",
         "MO",
         "PFGC",
@@ -771,6 +747,7 @@
         "SYY",
         "TSN"
       ],
+      "neutral": [],
       "value_only": false,
       "estimate_exposures": 20,
       "scope_checks": 0,
@@ -920,45 +897,45 @@
         },
         {
           "ticker": "MDLZ",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Higher checkout tax reduces exposed consumer demand.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "MO",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Higher checkout tax reduces exposed consumer demand.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PFGC",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Higher checkout tax reduces exposed consumer demand.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PM",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Higher checkout tax reduces exposed consumer demand.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "SYY",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Higher checkout tax reduces exposed consumer demand.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "TSN",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Higher checkout tax reduces exposed consumer demand.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -1152,43 +1129,43 @@
         },
         {
           "ticker": "MDLZ",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "MO",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "PFGC",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "PM",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "SYY",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "TSN",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.",
           "default_affected": false,
           "any_input_affected": false
         }
@@ -1383,15 +1360,15 @@
         },
         {
           "ticker": "MDLZ",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "MO",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.",
           "default_affected": false,
           "any_input_affected": false
         },
@@ -1404,8 +1381,8 @@
         },
         {
           "ticker": "PM",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.",
           "default_affected": false,
           "any_input_affected": false
         },
@@ -1418,8 +1395,8 @@
         },
         {
           "ticker": "TSN",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.",
           "default_affected": false,
           "any_input_affected": false
         }
@@ -1430,24 +1407,260 @@
       "errors": []
     },
     {
-      "policy": "consumer_retail/us_corporate_tax_consumer_retail",
+      "policy": "consumer_retail/tobacco_excise_increase",
       "companies": 26,
-      "input_cases": 2,
-      "driver_cases": 2,
+      "input_cases": 6,
+      "driver_cases": 10,
       "affected": [
+        "MO",
+        "PM"
+      ],
+      "neutral": [
         "WMT",
+        "TGT",
         "COST",
         "AMZN",
         "NKE",
         "HD",
+        "LOW",
+        "KR",
+        "DG",
         "DLTR",
         "TJX",
+        "ROST",
         "SBUX",
         "MCD",
         "KO",
         "PEP",
         "PG",
         "CL",
+        "ULTA",
+        "BBY",
+        "MDLZ",
+        "PFGC",
+        "SYY",
+        "TSN"
+      ],
+      "value_only": false,
+      "estimate_exposures": 50,
+      "scope_checks": 0,
+      "references": [
+        "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section5701&num=0&edition=prelim"
+      ],
+      "company_checks": [
+        {
+          "ticker": "WMT",
+          "status": "unquantified",
+          "reason": "Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "TGT",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "COST",
+          "status": "unquantified",
+          "reason": "Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "AMZN",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "NKE",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "HD",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "LOW",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "KR",
+          "status": "unquantified",
+          "reason": "Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "DG",
+          "status": "unquantified",
+          "reason": "Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "DLTR",
+          "status": "unquantified",
+          "reason": "Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "TJX",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "ROST",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "SBUX",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "MCD",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "KO",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "PEP",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "PG",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "CL",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "ULTA",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "BBY",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "MDLZ",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "MO",
+          "status": "included",
+          "reason": "A higher excise raises shelf prices and cuts US tobacco volume.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "PFGC",
+          "status": "unquantified",
+          "reason": "Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "PM",
+          "status": "included",
+          "reason": "A higher excise raises shelf prices and cuts US tobacco volume.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "SYY",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "TSN",
+          "status": "outside_scope",
+          "reason": "Does not make or sell tobacco products.",
+          "default_affected": false,
+          "any_input_affected": false
+        }
+      ],
+      "review_flags": [],
+      "rationale": "A higher excise cuts US cigarette volume; non-tobacco firms are unaffected.",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "policy": "consumer_retail/us_corporate_tax_consumer_retail",
+      "companies": 26,
+      "input_cases": 2,
+      "driver_cases": 2,
+      "affected": [
+        "WMT",
+        "TGT",
+        "COST",
+        "AMZN",
+        "NKE",
+        "HD",
+        "LOW",
+        "KR",
+        "DG",
+        "DLTR",
+        "TJX",
+        "ROST",
+        "SBUX",
+        "MCD",
+        "KO",
+        "PEP",
+        "PG",
+        "CL",
+        "ULTA",
         "BBY",
         "MDLZ",
         "MO",
@@ -1456,16 +1669,9 @@
         "SYY",
         "TSN"
       ],
-      "neutral": [
-        "TGT",
-        "LOW",
-        "KR",
-        "DG",
-        "ROST",
-        "ULTA"
-      ],
+      "neutral": [],
       "value_only": false,
-      "estimate_exposures": 6,
+      "estimate_exposures": 5,
       "scope_checks": 0,
       "references": [
         "https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text",
@@ -1481,10 +1687,10 @@
         },
         {
           "ticker": "TGT",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "COST",
@@ -1516,24 +1722,24 @@
         },
         {
           "ticker": "LOW",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "KR",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "DG",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "DLTR",
@@ -1551,10 +1757,10 @@
         },
         {
           "ticker": "ROST",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "SBUX",
@@ -1600,10 +1806,10 @@
         },
         {
           "ticker": "ULTA",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "BBY",
@@ -2581,14 +2787,15 @@
       "policy": "education/student_loan_borrowing_caps",
       "companies": 20,
       "input_cases": 3,
-      "driver_cases": 6,
+      "driver_cases": 8,
       "affected": [
         "LOPE",
         "CVSA",
         "STRA",
         "COUR",
         "PRDO",
-        "APEI"
+        "APEI",
+        "SLM"
       ],
       "neutral": [
         "LRN",
@@ -2603,11 +2810,10 @@
         "KLC",
         "BFAM",
         "WLY",
-        "FC",
-        "SLM"
+        "FC"
       ],
       "value_only": false,
-      "estimate_exposures": 20,
+      "estimate_exposures": 40,
       "scope_checks": 20,
       "references": [
         "https://www.nber.org/papers/w31291",
@@ -2750,10 +2956,10 @@
         },
         {
           "ticker": "SLM",
-          "status": "outside_scope",
-          "reason": "Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational programs and private lenders do not inherit graduate tuition.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Private student lenders gain graduate borrowing displaced from capped federal loans.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -2950,30 +3156,30 @@
       "driver_cases": 2,
       "affected": [
         "LRN",
+        "LOPE",
         "CVSA",
+        "STRA",
         "DUOL",
+        "UTI",
         "PRDO",
+        "APEI",
         "LAUR",
         "LINC",
+        "SCHL",
+        "BFAM",
         "WLY",
-        "FC"
+        "FC",
+        "SLM"
       ],
       "neutral": [
-        "LOPE",
-        "STRA",
         "COUR",
-        "UTI",
-        "APEI",
         "NRDY",
         "SKIL",
         "CHGG",
-        "SCHL",
-        "KLC",
-        "BFAM",
-        "SLM"
+        "KLC"
       ],
       "value_only": false,
-      "estimate_exposures": 12,
+      "estimate_exposures": 11,
       "scope_checks": 0,
       "references": [
         "https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text",
@@ -2989,10 +3195,10 @@
         },
         {
           "ticker": "LOPE",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "CVSA",
@@ -3003,10 +3209,10 @@
         },
         {
           "ticker": "STRA",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "DUOL",
@@ -3024,10 +3230,10 @@
         },
         {
           "ticker": "UTI",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PRDO",
@@ -3038,10 +3244,10 @@
         },
         {
           "ticker": "APEI",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "LAUR",
@@ -3080,10 +3286,10 @@
         },
         {
           "ticker": "SCHL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "KLC",
@@ -3094,10 +3300,10 @@
         },
         {
           "ticker": "BFAM",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "WLY",
@@ -3115,10 +3321,10 @@
         },
         {
           "ticker": "SLM",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -5466,7 +5672,7 @@
       "policy": "financial_services/fed_rate_change",
       "companies": 30,
       "input_cases": 4,
-      "driver_cases": 4,
+      "driver_cases": 8,
       "affected": [
         "JPM",
         "BAC",
@@ -5485,24 +5691,24 @@
         "FITB",
         "HBAN",
         "KEY",
-        "ALLY"
-      ],
-      "neutral": [
-        "MA",
-        "BLK",
+        "ALLY",
         "AIG",
         "PRU",
         "PGR",
         "ALL",
         "MET",
+        "TRV",
+        "V"
+      ],
+      "neutral": [
+        "MA",
+        "BLK",
         "SNEX",
         "SPGI",
-        "TRV",
-        "V",
         "PYPL"
       ],
       "value_only": false,
-      "estimate_exposures": 37,
+      "estimate_exposures": 92,
       "scope_checks": 0,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
@@ -5639,52 +5845,52 @@
         },
         {
           "ticker": "MA",
-          "status": "outside_scope",
-          "reason": "This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business.",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "BLK",
-          "status": "outside_scope",
-          "reason": "This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business.",
+          "status": "unquantified",
+          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
           "default_affected": false,
           "any_input_affected": false
         },
         {
           "ticker": "AIG",
-          "status": "outside_scope",
-          "reason": "This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PRU",
-          "status": "outside_scope",
-          "reason": "This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PGR",
-          "status": "outside_scope",
-          "reason": "This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "ALL",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "MET",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "SNEX",
@@ -5702,17 +5908,17 @@
         },
         {
           "ticker": "TRV",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "V",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PYPL",
@@ -5997,18 +6203,28 @@
       "driver_cases": 2,
       "affected": [
         "JPM",
+        "BAC",
         "WFC",
         "GS",
+        "C",
+        "AXP",
+        "MS",
+        "SCHW",
         "BNY",
+        "STT",
         "USB",
         "PNC",
+        "TFC",
         "COF",
         "FITB",
         "HBAN",
+        "KEY",
         "ALLY",
         "MA",
+        "BLK",
         "AIG",
         "PRU",
+        "PGR",
         "ALL",
         "MET",
         "SNEX",
@@ -6017,20 +6233,9 @@
         "V",
         "PYPL"
       ],
-      "neutral": [
-        "BAC",
-        "C",
-        "AXP",
-        "MS",
-        "SCHW",
-        "STT",
-        "TFC",
-        "KEY",
-        "BLK",
-        "PGR"
-      ],
+      "neutral": [],
       "value_only": false,
-      "estimate_exposures": 10,
+      "estimate_exposures": 9,
       "scope_checks": 0,
       "references": [
         "https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text",
@@ -6046,10 +6251,10 @@
         },
         {
           "ticker": "BAC",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "WFC",
@@ -6067,31 +6272,31 @@
         },
         {
           "ticker": "C",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "AXP",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "MS",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "SCHW",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "BNY",
@@ -6102,10 +6307,10 @@
         },
         {
           "ticker": "STT",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "USB",
@@ -6123,10 +6328,10 @@
         },
         {
           "ticker": "TFC",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "COF",
@@ -6151,10 +6356,10 @@
         },
         {
           "ticker": "KEY",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "ALLY",
@@ -6172,10 +6377,10 @@
         },
         {
           "ticker": "BLK",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "AIG",
@@ -6193,10 +6398,10 @@
         },
         {
           "ticker": "PGR",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "ALL",
@@ -6680,6 +6885,220 @@
       ],
       "review_flags": [],
       "rationale": "Eligibility loss reduces Medicaid premium and provider-volume revenue.",
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "policy": "healthcare/medical_device_tariffs",
+      "companies": 24,
+      "input_cases": 3,
+      "driver_cases": 6,
+      "affected": [
+        "TMO",
+        "ABT",
+        "MDT",
+        "CAH",
+        "COR",
+        "ISRG",
+        "MCK"
+      ],
+      "neutral": [
+        "UNH",
+        "ELV",
+        "HUM",
+        "CVS",
+        "PFE",
+        "LLY",
+        "CI",
+        "CNC",
+        "MOH",
+        "JNJ",
+        "MRK",
+        "ABBV",
+        "AMGN",
+        "GILD",
+        "HCA",
+        "THC",
+        "UHS"
+      ],
+      "value_only": false,
+      "estimate_exposures": 24,
+      "scope_checks": 0,
+      "references": [
+        "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title19-section1862&num=0&edition=prelim"
+      ],
+      "company_checks": [
+        {
+          "ticker": "UNH",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "ELV",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "HUM",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "CVS",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "PFE",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "LLY",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "CI",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "CNC",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "MOH",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "JNJ",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "MRK",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "ABBV",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "AMGN",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "GILD",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "HCA",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "THC",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "UHS",
+          "status": "outside_scope",
+          "reason": "Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.",
+          "default_affected": false,
+          "any_input_affected": false
+        },
+        {
+          "ticker": "TMO",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "ABT",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "MDT",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "CAH",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "COR",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "ISRG",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        },
+        {
+          "ticker": "MCK",
+          "status": "included",
+          "reason": "Device makers and medical-products distributors pay tariffs on imported devices and supplies.",
+          "default_affected": true,
+          "any_input_affected": true
+        }
+      ],
+      "review_flags": [],
+      "rationale": "Device importers pay the tariff; drugmakers are covered elsewhere.",
       "warnings": [],
       "errors": []
     },
@@ -7783,11 +8202,15 @@
         "HUM",
         "CVS",
         "PFE",
+        "LLY",
+        "CI",
         "MOH",
         "JNJ",
         "AMGN",
         "GILD",
+        "HCA",
         "THC",
+        "UHS",
         "TMO",
         "ABT",
         "CAH",
@@ -7796,17 +8219,13 @@
         "MCK"
       ],
       "neutral": [
-        "LLY",
-        "CI",
         "CNC",
         "MRK",
         "ABBV",
-        "HCA",
-        "UHS",
         "MDT"
       ],
       "value_only": false,
-      "estimate_exposures": 8,
+      "estimate_exposures": 7,
       "scope_checks": 0,
       "references": [
         "https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text",
@@ -7850,17 +8269,17 @@
         },
         {
           "ticker": "LLY",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "CI",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "CNC",
@@ -7913,10 +8332,10 @@
         },
         {
           "ticker": "HCA",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "THC",
@@ -7927,10 +8346,10 @@
         },
         {
           "ticker": "UHS",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "TMO",
@@ -8200,13 +8619,14 @@
         "DOV",
         "ROK",
         "STLD",
-        "CLF",
         "CARR",
         "OTIS",
         "IR",
         "GEV"
       ],
-      "neutral": [],
+      "neutral": [
+        "CLF"
+      ],
       "value_only": false,
       "estimate_exposures": 14,
       "scope_checks": 0,
@@ -8328,10 +8748,10 @@
         },
         {
           "ticker": "CLF",
-          "status": "included",
-          "reason": "Default statutory tax increase lowers positive domestic pretax earnings after tax.",
-          "default_affected": true,
-          "any_input_affected": true
+          "status": "conditional",
+          "reason": "Baseline pretax loss: a statutory rate change has no current-tax effect until US income turns positive; deferred-tax remeasurement is not modeled.",
+          "default_affected": false,
+          "any_input_affected": false
         },
         {
           "ticker": "CARR",
@@ -8357,7 +8777,7 @@
         {
           "ticker": "GEV",
           "status": "included",
-          "reason": "Reported US pretax-income share drives the statutory-rate channel.",
+          "reason": "Default statutory tax increase lowers positive domestic pretax earnings after tax.",
           "default_affected": true,
           "any_input_affected": true
         }
@@ -8547,8 +8967,8 @@
         },
         {
           "ticker": "GEV",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
+          "status": "outside_scope",
+          "reason": "No quantified defense/IC revenue share. Military demand through customer supply chains is not separately modeled.",
           "default_affected": false,
           "any_input_affected": false
         }
@@ -8582,11 +9002,11 @@
         "CLF",
         "CARR",
         "OTIS",
-        "IR"
+        "IR",
+        "GEV"
       ],
       "neutral": [
-        "BA",
-        "GEV"
+        "BA"
       ],
       "value_only": false,
       "estimate_exposures": 21,
@@ -8737,10 +9157,10 @@
         },
         {
           "ticker": "GEV",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Public infrastructure purchases raise captured equipment/material demand.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -8773,11 +9193,10 @@
         "CLF",
         "CARR",
         "OTIS",
-        "IR"
-      ],
-      "neutral": [
+        "IR",
         "GEV"
       ],
+      "neutral": [],
       "value_only": false,
       "estimate_exposures": 21,
       "scope_checks": 0,
@@ -8927,10 +9346,10 @@
         },
         {
           "ticker": "GEV",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Incremental qualifying R&D credit is after-tax income.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -8963,11 +9382,10 @@
         "CLF",
         "CARR",
         "OTIS",
-        "IR"
-      ],
-      "neutral": [
+        "IR",
         "GEV"
       ],
+      "neutral": [],
       "value_only": false,
       "estimate_exposures": 41,
       "scope_checks": 0,
@@ -9121,10 +9539,10 @@
         },
         {
           "ticker": "GEV",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Domestic steel producer gains tariff pricing while equipment users face costs.",
+          "default_affected": true,
+          "any_input_affected": true
         }
       ],
       "review_flags": [],
@@ -12308,28 +12726,28 @@
         "AVGO",
         "CSCO",
         "NFLX",
-        "DIS"
+        "DIS",
+        "AMAT",
+        "LRCX",
+        "TXN"
       ],
       "neutral": [
         "VZ",
         "T",
         "CMCSA",
-        "AMAT",
         "ANET",
         "DELL",
         "HPQ",
         "INTU",
-        "LRCX",
         "NOW",
         "PANW",
         "SNDK",
         "SNX",
         "TMUS",
-        "TXN",
         "PLTR"
       ],
       "value_only": false,
-      "estimate_exposures": 64,
+      "estimate_exposures": 63,
       "scope_checks": 66,
       "references": [
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R84.htm",
@@ -12478,10 +12896,10 @@
         },
         {
           "ticker": "AMAT",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "ANET",
@@ -12513,10 +12931,10 @@
         },
         {
           "ticker": "LRCX",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "NOW",
@@ -12555,10 +12973,10 @@
         },
         {
           "ticker": "TXN",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "PLTR",
@@ -12885,20 +13303,20 @@
         "T",
         "CMCSA",
         "NFLX",
-        "DIS"
+        "DIS",
+        "INTU",
+        "TMUS"
       ],
       "neutral": [
         "AMAT",
         "ANET",
         "DELL",
         "HPQ",
-        "INTU",
         "LRCX",
         "NOW",
         "PANW",
         "SNDK",
         "SNX",
-        "TMUS",
         "TXN",
         "PLTR"
       ],
@@ -13080,10 +13498,10 @@
         },
         {
           "ticker": "INTU",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Ad-targeting loss and privacy compliance raise costs/reduce monetization.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "LRCX",
@@ -13122,10 +13540,10 @@
         },
         {
           "ticker": "TMUS",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Ad-targeting loss and privacy compliance raise costs/reduce monetization.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "TXN",
@@ -13158,7 +13576,8 @@
         "GOOGL",
         "META",
         "NFLX",
-        "DIS"
+        "DIS",
+        "INTU"
       ],
       "neutral": [
         "NVDA",
@@ -13179,7 +13598,6 @@
         "ANET",
         "DELL",
         "HPQ",
-        "INTU",
         "LRCX",
         "NOW",
         "PANW",
@@ -13368,10 +13786,10 @@
         },
         {
           "ticker": "INTU",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Tax applies to US digital advertising and covered platform fees.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "LRCX",
@@ -13460,11 +13878,12 @@
         "T",
         "CMCSA",
         "NFLX",
-        "DIS"
+        "DIS",
+        "ANET",
+        "TMUS"
       ],
       "neutral": [
         "AMAT",
-        "ANET",
         "DELL",
         "HPQ",
         "INTU",
@@ -13473,7 +13892,6 @@
         "PANW",
         "SNDK",
         "SNX",
-        "TMUS",
         "TXN",
         "PLTR"
       ],
@@ -13635,10 +14053,10 @@
         },
         {
           "ticker": "ANET",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Tariffs raise imported semiconductor/hardware cost.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "DELL",
@@ -13698,10 +14116,10 @@
         },
         {
           "ticker": "TMUS",
-          "status": "unquantified",
-          "reason": "Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "Tariffs raise imported semiconductor/hardware cost.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "TXN",
@@ -13729,16 +14147,19 @@
       "input_cases": 2,
       "driver_cases": 2,
       "affected": [
+        "AAPL",
         "MSFT",
         "GOOGL",
         "META",
         "NVDA",
         "VZ",
+        "ORCL",
         "CRM",
         "ADBE",
         "AMD",
         "QCOM",
         "MU",
+        "AVGO",
         "CSCO",
         "T",
         "CMCSA",
@@ -13759,14 +14180,11 @@
         "PLTR"
       ],
       "neutral": [
-        "AAPL",
         "IBM",
-        "ORCL",
-        "INTC",
-        "AVGO"
+        "INTC"
       ],
       "value_only": false,
-      "estimate_exposures": 5,
+      "estimate_exposures": 2,
       "scope_checks": 0,
       "references": [
         "https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text",
@@ -13775,10 +14193,10 @@
       "company_checks": [
         {
           "ticker": "AAPL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "MSFT",
@@ -13824,10 +14242,10 @@
         },
         {
           "ticker": "ORCL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "CRM",
@@ -13873,10 +14291,10 @@
         },
         {
           "ticker": "AVGO",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "CSCO",
@@ -14209,7 +14627,7 @@
       "policy": "transportation_logistics/airline_ticket_tax_change",
       "companies": 20,
       "input_cases": 4,
-      "driver_cases": 4,
+      "driver_cases": 6,
       "affected": [
         "DAL",
         "UAL",
@@ -14403,7 +14821,7 @@
     {
       "policy": "transportation_logistics/auto_import_tariffs",
       "companies": 20,
-      "input_cases": 3,
+      "input_cases": 4,
       "driver_cases": 6,
       "affected": [
         "UPS",
@@ -14578,21 +14996,9 @@
           "any_input_affected": false
         }
       ],
-      "review_flags": [
-        {
-          "ticker": "GM",
-          "eps_change": -0.6351693561211336,
-          "inputs": {
-            "tariff_pct": 25.0
-          },
-          "reason": "Reported EPS denominator 3.27; dominant NI channel: Tariff on imported vehicles and parts; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use.",
-          "range_basis": "Default scenario; realistic range not independently verified"
-        }
-      ],
+      "review_flags": [],
       "rationale": "Imported vehicles/parts and owned-fleet procurement face tariff costs.",
-      "warnings": [
-        "GM: REVIEW |EPS change| >50% at default. Reported EPS denominator 3.27; dominant NI channel: Tariff on imported vehicles and parts; estimated exposures: none labeled estimate. Review reported earnings, exposure denominator and linear transmission before use."
-      ],
+      "warnings": [],
       "errors": []
     },
     {
@@ -14994,16 +15400,11 @@
       "affected": [
         "UPS",
         "FDX",
-        "TSLA",
-        "CHRW",
-        "UBER"
-      ],
-      "neutral": [
         "UNP",
         "DAL",
+        "TSLA",
         "GM",
-        "F",
-        "RIVN",
+        "CHRW",
         "JBHT",
         "ODFL",
         "XPO",
@@ -15013,10 +15414,15 @@
         "UAL",
         "AAL",
         "LUV",
+        "UBER"
+      ],
+      "neutral": [
+        "F",
+        "RIVN",
         "LYFT"
       ],
       "value_only": false,
-      "estimate_exposures": 15,
+      "estimate_exposures": 14,
       "scope_checks": 0,
       "references": [
         "https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text",
@@ -15039,17 +15445,17 @@
         },
         {
           "ticker": "UNP",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "DAL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "TSLA",
@@ -15060,10 +15466,10 @@
         },
         {
           "ticker": "GM",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "F",
@@ -15088,66 +15494,66 @@
         },
         {
           "ticker": "JBHT",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "ODFL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "XPO",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "SAIA",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "CSX",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "NSC",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "UAL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "AAL",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "LUV",
-          "status": "unquantified",
-          "reason": "Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review.",
-          "default_affected": false,
-          "any_input_affected": false
+          "status": "included",
+          "reason": "US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast.",
+          "default_affected": true,
+          "any_input_affected": true
         },
         {
           "ticker": "UBER",
@@ -15372,21 +15778,21 @@
       "shock": "fed_rate_change",
       "companies": 234,
       "input_cases": 4,
-      "driver_cases": 26,
+      "driver_cases": 30,
       "errors": []
     },
     {
       "shock": "government_shutdown",
       "companies": 234,
       "input_cases": 3,
-      "driver_cases": 8,
+      "driver_cases": 10,
       "errors": []
     },
     {
       "shock": "household_stimulus",
       "companies": 234,
       "input_cases": 9,
-      "driver_cases": 20,
+      "driver_cases": 22,
       "errors": []
     },
     {
@@ -15426,8 +15832,8 @@
     }
   ],
   "errors": [],
-  "fingerprint": "2c3c3291bd11d2fe",
-  "checked_at": "2026-11-01T22:00:28.188070+00:00",
-  "company_policy_decisions": 1694,
+  "fingerprint": "e5e49f95678642b2",
+  "checked_at": "2026-11-01T22:51:59.930814+00:00",
+  "company_policy_decisions": 1744,
   "unique_companies": 234
 }

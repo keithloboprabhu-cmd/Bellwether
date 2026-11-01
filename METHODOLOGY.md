@@ -36,6 +36,8 @@ Reported tax rates remain available. Rates outside the existing 0–40% anomaly 
 
 A company is affected through the business it actually operates. Exposure determines which part of its revenue, costs, financing or asset value a policy reaches.
 
+Tariff inputs are increments over the duties already embedded in each company's latest fiscal-year costs. FY2025/26 baselines include most 2025 tariffs, including GM's roughly $3.1B Section 232 auto cost, so measuring a tariff level from zero would count that cost twice. Zero additional tariff means no change; negative values model a rollback. The small (1 + current duty) denominator effect is not netted out.
+
 Steel tariffs distinguish average buyer prices from domestic mill selling prices. USITC Publication 5405, table 5.2 calibrates separate historical responses under 25% Section 232 tariffs: 2.39% for average steel prices and 0.74% for domestic producer prices. Observed company EPS growth includes tax, volume, mix and other changes, so it is not substituted for a causal tariff sensitivity.
 
 ### Transmission channels
@@ -52,6 +54,10 @@ Steel tariffs distinguish average buyer prices from domestic mill selling prices
 ### Company scope
 
 Exposure follows the policy's direct business scope. A drug tariff excludes medical-device revenue; a card-fee cap affects covered issuers; a manufacturing credit requires qualifying investment. A firm can have no direct effect because it is outside scope, already above a wage floor, below a binding threshold, or lacks a quantified exposure. A zero is not automatically a model failure.
+
+A statutory tax-rate change has no recurring effect on a company with a baseline pretax loss: it pays no current tax, and applying the rate change to negative income would book a spurious gain from a tax increase. Deferred-tax remeasurement is not modeled.
+
+Rate changes reach banks only through their 10-K NII sensitivity tables. Insurers and payment networks reach a separate channel: investment income (net investment income, or interest on corporate cash) times an estimated first-year repricing sensitivity per 100bp. The sensitivity is a structural estimate from reinvestment share and portfolio yield, net of credited rates for life insurers, not an issuer disclosure.
 
 FDIC deposit-insurance assessments apply to insured bank subsidiaries, not insurance-company premiums. AIG therefore has no direct assessment in this channel. Bank-counterparty and insurance-guaranty-fund risks are separate effects. Bank assessment estimates use identified FDIC subsidiary reports; quarter-end assets less Tier 1 capital approximate the statutory quarterly-average base. Custodial deductions and timing remain explicit estimates.
 
@@ -146,7 +152,7 @@ The model estimates direct, first-order effects while holding other relationship
 
 ### Audit status (1 November 2026)
 
-The active universe has 234 companies across ten industries, with 72 industry policies and ten macro shocks. The original roster and scenarios are preserved in the audit reports. Thirty-one supported public companies were added from the publisher-verified Fortune ranking, separately labeled OEF holdings cross-check and requested candidate list. This does not certify full S&P 100 membership: the publisher's complete roster was not obtained. Private/mutual companies and Fannie/Freddie are listed separately; unsupported statements and ambiguous share bases remain outside the active sample.
+The active universe has 234 companies across ten industries, with 74 industry policies and ten macro shocks. The original roster and scenarios are preserved in the audit reports. Thirty-one supported public companies were added from the publisher-verified Fortune ranking, separately labeled OEF holdings cross-check and requested candidate list. This does not certify full S&P 100 membership: the publisher's complete roster was not obtained. Private/mutual companies and Fannie/Freddie are listed separately; unsupported statements and ambiguous share bases remain outside the active sample.
 
 The insurer statement template uses incurred policy claims and loss-adjustment expenses rather than merchandise COGS. Visa uses class-A EPS and the filing's total class-A-equivalent diluted shares. Captive finance debt and operating leases are separated from industrial borrowings.
 
@@ -156,9 +162,11 @@ The baggage-fee scenario uses each carrier's own FY2025 BTS observation for Amer
 
 The global oil-price scenario uses reported worldwide annual fuel consumption for those four airlines, separately from US-only carbon-charge exposure. Other carriers retain the existing CO2-derived fallback with geographic limitations. Converting barrels to gallons is a physical identity; one-for-one transmission from Brent to jet-fuel or diesel prices is an unverified model assumption.
 
-Six rate-only corporate-tax scenarios use the submitted S.Amdt.2428 proposal (21% to 28%). They are explicitly proposed scenarios, not enacted law. Only positive, sourced US pretax book income from a US-incorporated issuer is quantified. Book income approximates taxable income; credits, minimum taxes, foreign-income provisions, tax losses and deferred-tax remeasurement are excluded. Income-history bounds are observed annual values, not confidence intervals. An Irish issuer's “domestic” income is not assumed to be US income.
+Six rate-only corporate-tax scenarios use the submitted S.Amdt.2428 proposal (21% to 28%). They are explicitly proposed scenarios, not enacted law. Only positive US pretax book income of a US-incorporated issuer is quantified, in this order: tagged domestic pretax income; total less tagged foreign pretax income; or, where no split is tagged, total pretax income times the reviewed US-share estimate used by the Full Market tax shock (labeled `source: estimate`). Issuers with a latest-year US or total pretax loss remain explicit gaps. Book income approximates taxable income; credits, minimum taxes, foreign-income provisions, tax losses and deferred-tax remeasurement are excluded. Income-history bounds are observed annual values, not confidence intervals. An Irish issuer's “domestic” income is not assumed to be US income.
 
-Current default coverage is 229 of 234 companies. BLK, PGR, SLM, LYFT and MDT remain explicit coverage failures pending the reconciliations in `reports/coverage_gaps.md`. Passing accounting and scope tests does not resolve those failures or validate unsourced exposures. Every default absolute EPS change above 50% is flagged for review; input limits are not represented as independently verified realistic ranges.
+Current default coverage is 233 of 234 companies; LYFT (US pretax loss, no fitting policy) is the remaining explicit failure in `reports/coverage_gaps.md`. Fifteen companies are covered only by a corporate-tax scenario; they and their reasons are listed in `reports/AUDIT_ROUND3.md`.
+
+Audit round 3 (1 November 2026) runs every policy on every company in its industry at defaults, each input endpoint, zero and a seven-point sweep (`scripts/audit_matrix.py`, `reports/audit_matrix/`). Each result is labeled by its weakest exposure basis: sourced, company-specific estimate, or peer prior (a value copied from an unlike peer). Material unlike-peer priors were replaced, for example chipmakers' China shares, grocers' import shares, defense contractors' government shares and Southwest's domestic share. About two-fifths of nonzero results still rest at least partly on a peer prior; these are flagged, not verified. Passing accounting and scope tests does not resolve those failures or validate unsourced exposures. Every default absolute EPS change above 50% is flagged for review; input limits are not represented as independently verified realistic ranges.
 
 
 Capital One has a sourced adjusted annual EPS series: 2023 $12.52, 2024 $13.96, 2025 $19.61; the median is $13.96. These are the issuer's non-GAAP reconciliations, not invented removals. Some excluded amortization can recur, and pre-Discover years are not pro-forma comparable with the merged company. Other depressed/negative-EPS issuers without a verified adjusted series retain unavailable permanent valuation; direct equity-value channels can still be calculated independently of EPS.

@@ -118,6 +118,7 @@ rules:
   - CARR
   - OTIS
   - IR
+  - GEV
   rationale: Domestic equipment/materials/building-systems suppliers; Boeing's aerospace revenue is outside
     this infrastructure transfer channel.
 - industry: energy_resources

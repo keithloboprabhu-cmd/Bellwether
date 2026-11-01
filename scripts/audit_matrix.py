@@ -14,6 +14,11 @@ status from config/policy_company_coverage.yaml, and anomaly flags:
   included_but_zero    declared `included` yet no effect at defaults or any endpoint
   unquantified         declared coverage gap
 
+`basis` classifies the exposures behind each pair: sourced (filing/statute value),
+company_estimate (explained company-specific estimate), peer_prior (value copied
+from an unlike peer, "Explicit modeling prior"), scope_zero (reviewed boundary) or
+gap (inactive sentinel). The weakest basis among nonzero exposures is reported.
+
 It also reports companies that receive no economic effect from any policy other
 than the generic US corporate-tax policy. Outputs go to reports/audit_matrix/.
 Run: PYTHONPATH=src .venv/bin/python scripts/audit_matrix.py
@@ -57,6 +62,29 @@ def _endpoint_cases(p) -> list[tuple[str, dict]]:
     if nums and all((u.min is None or u.min <= 0) and (u.max is None or u.max >= 0) for u in nums):
         cases.append(("zero", d | {u.key: 0 for u in nums}))
     return cases
+
+
+def exposure_basis(reg, p, ticker: str) -> str:
+    """Weakest provenance among this pair's exposures (nonzero ones first)."""
+    order = ["peer_prior", "company_estimate", "sourced"]
+    seen = []
+    for k in p.exposure_keys:
+        e = reg.exposure(ticker, k)
+        r = e.rationale or ""
+        if not e.applicable:
+            seen.append("gap")
+        elif e.value == e.low == e.high == 0:
+            seen.append("scope_zero")
+        elif r.startswith("Explicit modeling prior"):
+            seen.append("peer_prior")
+        elif e.is_estimate:
+            seen.append("company_estimate")
+        else:
+            seen.append("sourced")
+    live = [b for b in seen if b in order]
+    if live:
+        return min(live, key=order.index)
+    return "gap" if "gap" in seen else ("scope_zero" if seen else "baseline_only")
 
 
 def _monotone_issue(runner, p, ticker: str) -> list[str]:
@@ -109,7 +137,7 @@ def main() -> None:
             if touched:
                 flags += _monotone_issue(runner, p, c.ticker)
             rows.append(dict(
-                policy=key, ticker=c.ticker, status=status,
+                policy=key, ticker=c.ticker, status=status, basis=exposure_basis(reg, p, c.ticker),
                 dEPS_pct=None if c.dEPS_pct is None else round(c.dEPS_pct, 5),
                 dP_pct=None if c.dP_pct is None else round(c.dP_pct, 5),
                 dNI_musd=round(c.dNI, 3), dR_musd=round(c.dR, 3),
@@ -122,9 +150,11 @@ def main() -> None:
     from collections import Counter
     flag_counts = Counter(fl.split(" in ")[0] for r in rows for fl in r["flags"].split(";") if fl)
     status_counts = Counter(r["status"] for r in rows)
+    basis_effect = Counter(r["basis"] for r in rows if r["effect_cases"])
     orphans = sorted(t for t, s in any_effect.items() if not s)
     summary = dict(pairs=len(rows), policies=len(reg.policies), companies=len(uni.all_tickers),
                    status_counts=status_counts, flag_counts=flag_counts,
+                   basis_of_pairs_with_effects=basis_effect,
                    companies_without_specific_policy_effect=orphans,
                    flagged=[r for r in rows if r["flags"] and r["flags"] != "unquantified"])
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, default=str))

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-01 — audit round 3: credibility matrix and corrections
+
+- Add `scripts/audit_matrix.py`: every policy × company pair at defaults, input endpoints, zero and a sweep, with anomaly flags and an exposure-basis label (sourced / company estimate / peer prior).
+- Consumer and auto tariff inputs are now additional duty above what FY2025/26 baselines already contain (the 2025 cost was previously counted twice).
+- A statutory rate increase no longer books a gain for loss-making companies (`tax_rate` channel).
+- Corporate-tax book-income proxy extended to 42 more issuers; audit additions get filing-based Full Market US pretax shares.
+- Replace material peer priors (chipmakers' China shares, grocers' import shares, defense contractors' government shares and others) with company-specific estimates or committed 10-K XBRL values.
+- Rate policy reaches insurer portfolios and corporate cash; borrowing caps credit Sallie Mae; new tobacco excise and medical device tariff policies.
+- Coverage: companies without an industry-specific effect fall from 44 to 16, and companies without any default effect from 5 to 1. See `reports/AUDIT_ROUND3.md` for limitations and judgment calls.
+
 ## 2026-11-01 — continuing economic audit
 
 - Reconcile Tetra Tech's three-year full revenue costs; exclude the partial subcontractor tag as its full cost base and invalidate older live financial normalization caches.

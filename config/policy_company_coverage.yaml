@@ -219,21 +219,19 @@ policies:
       - DOV
       - ROK
       - STLD
-      - CLF
       - CARR
       - OTIS
       - IR
+      - GEV
       reason: Default statutory tax increase lowers positive domestic pretax earnings after tax.
       default_direction:
         metric: tax_rate_change
         sign: 1
-    - status: included
+    - status: conditional
       tickers:
-      - GEV
-      reason: Reported US pretax-income share drives the statutory-rate channel.
-      default_direction:
-        metric: dNI
-        sign: -1
+      - CLF
+      reason: 'Baseline pretax loss: a statutory rate change has no current-tax effect until US income turns
+        positive; deferred-tax remeasurement is not modeled.'
   industrials/rd_credit_expansion:
     references:
     - https://www.law.cornell.edu/uscode/text/26/41
@@ -260,15 +258,11 @@ policies:
       - CARR
       - OTIS
       - IR
+      - GEV
       reason: Incremental qualifying R&D credit is after-tax income.
       default_direction:
         metric: dNI
         sign: 1
-    - status: unquantified
-      tickers:
-      - GEV
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
   industrials/steel_tariffs:
     references:
     - https://www.polsinelli.com/publications/usitc-releases-report-on-the-economic-impact-of-the-section-232-and-301-tariffs-on-u-s-industries
@@ -299,6 +293,7 @@ policies:
       - CARR
       - OTIS
       - IR
+      - GEV
       reason: Domestic steel producer gains tariff pricing while equipment users face costs.
       default_direction:
         metric: dNI
@@ -313,11 +308,6 @@ policies:
         CLF:
           metric: dNI
           sign: 1
-    - status: unquantified
-      tickers:
-      - GEV
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
   energy_resources/carbon_price:
     references:
     - https://corporate.exxonmobil.com/news/reporting-and-publications/sustainability-report/performance-data-table
@@ -765,13 +755,9 @@ policies:
       - NUE
       - STLD
       - CLF
+      - GEV
       reason: No quantified defense/IC revenue share. Military demand through customer supply chains is not
         separately modeled.
-    - status: unquantified
-      tickers:
-      - GEV
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
   industrials/infrastructure_spending:
     references:
     - https://www.congress.gov/bill/117th-congress/house-bill/3684
@@ -797,6 +783,7 @@ policies:
       - CARR
       - OTIS
       - IR
+      - GEV
       reason: Public infrastructure purchases raise captured equipment/material demand.
       default_direction:
         metric: dR
@@ -805,11 +792,6 @@ policies:
       tickers:
       - BA
       reason: Boeing aerospace revenue is outside the domestic infrastructure equipment/materials allocation.
-    - status: unquantified
-      tickers:
-      - GEV
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
   education/earnings_accountability_test:
     references:
     - https://edtrust.org/rti/federal-rulemaking-recap-for-postsecondary-program-accountability-what-changed-and-what-it-means-for-higher-education/
