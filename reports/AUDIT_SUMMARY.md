@@ -213,13 +213,14 @@ Three new non-TCJA cases are **2018 Fed tightening, 2020 Fed easing and the 2022
 
 The reproducible stratified random draw (seed 20261031, one affected default scenario per industry) independently recomputes channel effects, pretax-to-tax-to-parent income, diluted-share EPS and duration-specific value. It reuses the configured expression evaluator but not the engine channel/aggregation/valuation implementations. Ten calculations match EPS and price to the cent; unavailable price remains unavailable. Formulas and intermediate values are in [spotchecks.md](spotchecks.md).
 
-- **Python suite:** 596 passed, 5 skipped; 6 intentional extreme-EPS review warnings.
+- **Python suite:** 610 passed, 5 skipped; 6 intentional extreme-EPS review warnings.
 - **Frontend suite:** 16 passed.
 - **Production frontend build:** Passed (TypeScript and Vite).
 - **Internal policy/macro audit:** 72 industry policies and 10 macro shocks; zero invariant failures.
 - **Published bank benchmark arithmetic:** 23 matched comparisons pass direction and size (in-sample calibration only).
 - **Independent arithmetic:** 10/10 stratified random scenarios match to the cent.
-- **Running local API audit:** 72 policies / 261 valid input cases; zero failures on the 234-company preview.
+- **Running local API audit:** 72 industry policies / 261 valid inputs and 10 macro shocks / 42 valid inputs; zero failures.
+- **Macro console browser verification:** All-industries deep link restores policy/inputs; industry drilldown filters Financial Services to 30 firms; industry CSV has 10 rows/234 firms and reconciles net income; no browser console errors; phone layout fits at 375 px.
 
 Scenario URLs, original policy IDs, CSV export columns and schema-version-1 profile JSON remain compatible. Reference-company profile import/lookup follows the same sourced normalization guard when the financial basis matches; edited financials do not silently borrow another basis.
 

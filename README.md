@@ -8,7 +8,7 @@ Pushes to `main` automatically deploy the tactical console.
 
 **Status:** Python engine, Streamlit interface (Industry simulator, Full Market with 10 macro shocks, Backtests,
 Methodology, Data, About) and tactical web console implemented. The Streamlit app is ready for Streamlit Community
-Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`). The tactical console also includes Vercel deployment configuration. The web console currently models industry and custom-company scenarios.
+Cloud (`app.py`, `requirements.txt`, `.streamlit/config.toml`). The tactical console also includes Vercel deployment configuration. The web console models industry, custom-company and Macro · All industries scenarios.
 
 ## Tactical console interface
 
@@ -39,8 +39,9 @@ transitions, with reduced-motion support and a motion toggle. Company profiles u
 short editing stages and financial groups.
 
 See [design/TACTICAL_CONSOLE.md](design/TACTICAL_CONSOLE.md) for the current design
-contract. Historical checkpoint reports remain in `design/reviews/`. Full Market
-web UI and broadly editable policy assumptions remain separate product work.
+contract. Historical checkpoint reports remain in `design/reviews/`. The macro option applies one of ten shared shocks across all ten industries, with
+industry comparisons, company drilldown and industry/company CSV exports. Broadly
+editable policy assumptions remain separate product work.
 
 ```bash
 cd web && npm run build && npm test
@@ -169,7 +170,7 @@ otherwise value is unavailable. Projected equity prices cannot fall below zero.
 .venv/bin/python scripts/spotcheck_arithmetic.py
 .venv/bin/python scripts/build_audit_summary.py
 # With the local server running:
-.venv/bin/python scripts/audit_running_console.py --base-url http://127.0.0.1:8787
+.venv/bin/python scripts/audit_running_console.py --base-url http://127.0.0.1:8787 --include-macro
 ```
 
 The final audit reports 13 historical cases: 155/190 directional matches (81.6%).
@@ -178,3 +179,19 @@ retrospective diagnostics with correlated episodes and current/restated inputs,
 not causal or independent forecast validation. The summary compares each case's
 MAE with no change and explains regressions. Admission scripts are guarded against
 repeated mutation; review the ledger before changing the roster.
+
+
+### Macro · All industries
+
+Choose this option in the Industry selector to model Fed rates, oil supply,
+corporate taxes, shutdowns, stimulus, inflation, recession, the dollar, US–China
+trade or universal tariffs. The same command flow runs a shared shock across all
+ten industries. Ranked industry bars and a financial table show projected revenue,
+model net income and implied value alongside changes. Select an industry for its
+Field, company inspector and filtered telemetry, or retain the all-company grid.
+Industry CSV is a separate aggregate export; existing company CSV columns stay
+unchanged. Macro links use the existing scenario structure with `industry: macro`.
+
+Macro transmission remains a first-order scenario model with sourced facts and
+explicit estimated assumptions; exposing it in the console does not establish
+empirical forecast validation.

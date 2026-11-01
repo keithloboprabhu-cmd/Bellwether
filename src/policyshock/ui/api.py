@@ -21,7 +21,8 @@ import pandas as pd
 from policyshock.config import CONFIG_DIR, ROOT, SNAPSHOT_DIR, load_universe
 from policyshock.company.profiles import CompanyProfile, lookup_company, peer_exposures, run_company, search_companies
 from policyshock.data import fred, live, prices, store
-from policyshock.engine.scenarios import prepare_baselines
+from policyshock.engine.scenarios import IndustryResult, prepare_baselines
+from policyshock.macro.aggregate import build_market_runner, analyze_market
 from policyshock.engine.simulate import simulate
 from policyshock.narrative.templates import company_reason
 from policyshock.policies.loader import registry
@@ -53,7 +54,7 @@ def versions() -> dict:
         return h.hexdigest()[:16]
 
     return {
-        "model": digest([*CONFIG_DIR.rglob("*.yaml"), *(ROOT / "src/policyshock/engine").glob("*.py"), *(ROOT / "src/policyshock/company").glob("*.py"), *(ROOT / "src/policyshock/data").glob("*.py")]),
+        "model": digest([*CONFIG_DIR.rglob("*.yaml"), *(ROOT / "src/policyshock/engine").glob("*.py"), *(ROOT / "src/policyshock/macro").glob("*.py"), *(ROOT / "src/policyshock/company").glob("*.py"), *(ROOT / "src/policyshock/data").glob("*.py")]),
         "data": digest(SNAPSHOT_DIR.glob("*.*")),
     }
 
@@ -65,6 +66,8 @@ def catalog() -> dict:
         "industries": [{"id": i.slug, "name": i.name, "count": len(i.tickers),
                         "companies": [{"ticker": c.ticker, "name": c.name, "subsector": c.subsector} for c in i.companies],
                         "policies": [p.model_dump() for p in reg.industry_policies(i.slug)]} for i in u.industries],
+        "macro": {"id": "macro", "name": "Macro · All industries", "count": len(u.all_tickers),
+                  "companies": [], "policies": [macro_policy(shock) for shock in reg.macro_shocks()]},
         "company_count": len(u.all_tickers), "meta": store.load_meta(), "versions": versions(), "data_status": live.service.status(),
         "exposure_definitions": {k: v.model_dump() for k, v in reg.exposure_defs.items()},
     }
@@ -90,6 +93,124 @@ def projected_metrics(c) -> dict:
     }
 
 
+def macro_policy(shock) -> dict:
+    """Expose existing full-market shocks through the same progressive command controls."""
+    return {**shock.model_dump(), "industry": "macro", "assumptions": [a.model_dump() for a in shock.all_assumptions()],
+            "exposure_keys": sorted({k for e in shock.industry_effects.values() for k in e.exposure_keys}),
+            "channels": [c.model_dump() for e in shock.industry_effects.values() for c in e.channels],
+            "default_role": "neutral", "roles": {}}
+
+
+def macro_coverage(c, pol, exposures, reason: str) -> dict:
+    """Keep unmeasured macro exposure distinct from an explicit no-direct-channel mapping."""
+    if pol is None:
+        status = "outside_scope"
+    elif any(abs(v or 0) > 1e-8 for v in (c.dNI, c.dR, c.dP)):
+        status = "value_only" if abs(c.dNI) < 1e-8 and abs(c.dR) < 1e-8 else "modeled"
+    elif (pol.exposure_keys and all(not exposures[k].applicable for k in pol.exposure_keys)) or any('unquantified' in n.lower() for n in c.notes):
+        status = "unquantified"
+        reason = "No quantified direct effect for this company; missing exposure is not proof of no economic impact. " + reason
+    else:
+        status = "neutral"
+    return {"status": status, "reason": reason}
+
+
+def serialize_company(c, envelope, pol, inputs, captured, profile=None, subject_id=None, macro_reason=None) -> dict:
+    """Use one financial projection and provenance contract in all console modes."""
+    reg = registry()
+    keys = pol.exposure_keys if pol is not None else []
+    exposure_cfg = profile.exposures if profile and c.ticker == subject_id else reg.exposures[c.ticker]
+    reason = (c.dominant.label if c.dominant else "No directly modeled channel") if c.ticker == subject_id else company_reason(c, reg, skip_label=c.dominant.label if c.dominant else None)
+    if keys and all(not exposure_cfg[k].applicable for k in keys):
+        reason = "This policy has no directly modeled exposure for this company; other economic effects are not covered."
+    coverage = coverage_result(pol, c, inputs, exposure_cfg, custom=c.ticker == subject_id) if macro_reason is None else macro_coverage(c, pol, exposure_cfg, macro_reason)
+    if macro_reason is not None:
+        reason = macro_reason + (" " + reason if c.dominant else "")
+    if coverage['status'] != 'modeled':
+        reason = coverage['reason']
+    return {
+        "id": c.ticker, "name": c.name, "eps": c.dEPS_pct,
+        "is_custom": c.ticker == subject_id,
+        "display_ticker": (profile.ticker or "Custom") if c.ticker == subject_id else c.ticker,
+        "low": envelope.low.dEPS_pct, "high": envelope.high.dEPS_pct,
+        "value_low": envelope.low.dP_pct, "value_high": envelope.high.dP_pct,
+        "value": c.dP_pct, "revenue": c.dR, "margin": c.d_margin_bps,
+        "equity_wiped_out": c.equity_wiped_out,
+        "unconstrained_price_delta": c.unconstrained_dP,
+        "valuation_method": c.baseline.get("valuation_method", "reported_eps"),
+        "valuation_eps": c.baseline.get("valuation_eps", c.baseline.get("eps_diluted")),
+        "dEPS": c.dEPS, "dNI": c.dNI, "market_value": c.d_mcap,
+        "dEBIT": c.dEBIT, "dPTI": c.dPTI, "tax_rate": c.tax_rate, "tax_rate_new": c.tax_rate_new,
+        "reason": reason, "notes": c.notes, "coverage": coverage,
+        "baseline": c.baseline,
+        "metrics": projected_metrics(c),
+        "history": [] if c.ticker == subject_id else [
+            {"year": y["fiscal_year"], "eps": y["items"].get("eps_diluted")}
+            for y in reversed((captured["companies"].get(c.ticker, {}).get("years", store.company_years(c.ticker)) if captured else store.company_years(c.ticker))[:8])
+        ],
+        "channels": [{"label": o.label, "family": o.family, "dNI": o.dNI,
+                      "dValue": o.dP * (c.baseline.get("shares_outstanding") or c.baseline["diluted_shares"]) if o.dP is not None and c.baseline.get("price") is not None else None} for o in c.outcomes],
+        "exposures": [{"key": key, "label": reg.exposure_defs[key].label,
+                       "unit": reg.exposure_defs[key].unit, **exposure_cfg[key].model_dump()}
+                      for key in keys],
+    }
+
+
+def calculate_macro(shock, inputs: dict, supplied_versions: dict | None) -> dict:
+    """Run one shared macro shock across every industry using one data capture."""
+    universe = load_universe()
+    if live.service.request_driven:
+        live.service.refresh_for_request(universe.all_tickers)
+    captured = live.service.capture() if live.service.active else None
+    supplied = None
+    if captured:
+        rows = live.service.baseline_rows(universe.all_tickers, captured)
+        supplied = {i.slug: prepare_baselines(pd.DataFrame([r for r in rows if r['industry'] == i.slug])) for i in universe.industries}
+    runner = build_market_runner(shock.id, inputs=inputs, baselines=supplied,
+        prices_df=captured['prices'] if captured else prices.load_snapshot(),
+        macro=fred.macro_context(captured['macro']) if captured else None)
+    analysis = analyze_market(runner)
+    companies, industries = [], []
+    for ind in universe.industries:
+        sector = analysis.base.industries[ind.slug]
+        effect = shock.industry_effects[ind.slug]
+        reason = effect.reason or effect.rationale or 'Configured direct macro transmission.'
+        rows = [serialize_company(c, analysis.envelopes[c.ticker], sector.policy, inputs, captured, macro_reason=reason) for c in sector.companies]
+        companies.extend(rows)
+        lo, hi = analysis.industry_low[ind.slug].totals(), analysis.industry_high[ind.slug].totals()
+        industries.append(dict(id=ind.slug, name=ind.name, count=len(rows), reason=reason,
+            net_income_baseline=sum(c['metrics']['net_income']['baseline'] for c in rows),
+            net_income_projected=sum(c['metrics']['net_income']['projected'] for c in rows),
+            totals=sector.totals(), earnings_range=sorted([lo['d_eps_pct'], hi['d_eps_pct']], key=lambda v: (v is None, v or 0)),
+            value_range=sorted([lo['d_mcap_pct'], hi['d_mcap_pct']], key=lambda v: (v is None, v or 0)),
+            affected=sum(c['coverage']['status'] in ('modeled', 'value_only') for c in rows),
+            unquantified=sum(c['coverage']['status'] == 'unquantified' for c in rows),
+            valuation_unavailable=sum(c['value'] is None for c in rows)))
+    overall = IndustryResult(policy=None, inputs=inputs, assumptions={}, companies=analysis.base.companies).totals()
+    overall['pooled_earnings_change'] = overall['d_eps_pct']
+    overall['d_eps_pct'] = analysis.base.totals()['cw_d_eps_pct']
+    channels = {}
+    for company in companies:
+        for c in company['channels']:
+            row = channels.setdefault(c['label'], dict(label=c['label'], dNI=0., dValue=0.))
+            row['dNI'] += c['dNI']
+            row['dValue'] = row['dValue'] + c['dValue'] if row['dValue'] is not None and c['dValue'] is not None else None
+    return clean_json(dict(industry='macro', industry_name='Macro · All industries', mode='macro', subject_id=None, profile=None,
+        policy=macro_policy(shock), inputs=inputs, totals=overall,
+        range=[analysis.market_low.totals()['cw_d_eps_pct'], analysis.market_high.totals()['cw_d_eps_pct']],
+        value_range=[analysis.market_low.totals()['d_mcap_pct'], analysis.market_high.totals()['d_mcap_pct']],
+        industries=industries, companies=companies, long=None, short=None, low_conviction=False,
+        notes=[*analysis.notes, 'Configured-company sample, not the whole economy. Macro transmission includes unverified estimates; no empirical forecast certification.'],
+        exposure_estimates=any(a.source == 'estimate' for a in shock.all_assumptions()) or any(e['source'] == 'estimate' and e.get('applicable', True) for c in companies for e in c['exposures']),
+        coverage_notice=None, dominant=max(channels, key=lambda k: abs(channels[k]['dNI']), default=None), channels=list(channels.values()),
+        tornado=[dict(key=b.driver.key, label=b.driver.label, unit=b.driver.unit, input_low=b.driver.low, input_high=b.driver.high,
+                      result_low_input=b.low_value, result_high_input=b.high_value, span=b.swing) for b in analysis.tornado],
+        tornado_metric=analysis.metric, versions={**versions(), **({'data': captured['data_version']} if captured else {})},
+        meta=store.load_meta(), data_status=captured['status'] if captured else live.service.status(),
+        captured_at=captured['captured_at'] if captured else None,
+        data_update_notice='Scenario rerun with current data; shared data version differs.' if captured and supplied_versions and supplied_versions.get('data') != captured['data_version'] else None))
+
+
 def calculate(payload: dict) -> dict:
     """Validate an industry or company request and serialize one engine result."""
     if not isinstance(payload, dict) or set(payload) - {"industry", "policy", "inputs", "versions", "company"}:
@@ -98,7 +219,7 @@ def calculate(payload: dict) -> dict:
     if not isinstance(ind, str) or not isinstance(pid, str):
         raise ValueError("Choose an industry and a compatible policy.")
     try:
-        pol = registry().policy(ind, pid)
+        pol = registry().macro[pid] if ind == "macro" else registry().policy(ind, pid)
     except KeyError as exc:
         raise ValueError("This policy is unavailable for the selected industry. Choose another policy.") from exc
     supplied_versions = payload.get("versions")
@@ -116,6 +237,10 @@ def calculate(payload: dict) -> dict:
             raise ValueError(f"{item.label}: enter a finite number in {item.unit}.")
         if (item.min is not None and value < item.min) or (item.max is not None and value > item.max):
             raise ValueError(f"{item.label}: enter a value between {item.min:g} and {item.max:g} {item.unit}.")
+    if ind == "macro":
+        if "company" in payload:
+            raise ValueError("Macro scenarios model all industries; choose an industry to model a company profile.")
+        return calculate_macro(pol, inputs, supplied_versions)
     # A single immutable capture serves the entire calculation; historical tests
     # continue using committed records. User profiles retain their stated inputs.
     profile = CompanyProfile.model_validate(payload["company"]) if "company" in payload else None
@@ -133,40 +258,7 @@ def calculate(payload: dict) -> dict:
     reg = registry()
     companies = []
     for c in [*an.base.companies, *(reference.base.companies if profile else [])]:
-        envelope = an.envelopes[c.ticker]
-        exposure_cfg = profile.exposures if profile and c.ticker == subject_id else reg.exposures[c.ticker]
-        reason = (c.dominant.label if c.dominant else "No directly modeled channel") if c.ticker == subject_id else company_reason(c, reg, skip_label=c.dominant.label if c.dominant else None)
-        if pol.exposure_keys and all(not exposure_cfg[k].applicable for k in pol.exposure_keys):
-            reason = "This policy has no directly modeled exposure for this company; other economic effects are not covered."
-        coverage = coverage_result(pol, c, inputs, exposure_cfg, custom=c.ticker == subject_id)
-        if coverage['status'] != 'modeled':
-            reason = coverage['reason']
-        companies.append({
-            "id": c.ticker, "name": c.name, "eps": c.dEPS_pct,
-            "is_custom": c.ticker == subject_id,
-            "display_ticker": (profile.ticker or "Custom") if c.ticker == subject_id else c.ticker,
-            "low": envelope.low.dEPS_pct, "high": envelope.high.dEPS_pct,
-            "value_low": envelope.low.dP_pct, "value_high": envelope.high.dP_pct,
-            "value": c.dP_pct, "revenue": c.dR, "margin": c.d_margin_bps,
-            "equity_wiped_out": c.equity_wiped_out,
-            "unconstrained_price_delta": c.unconstrained_dP,
-            "valuation_method": c.baseline.get("valuation_method", "reported_eps"),
-            "valuation_eps": c.baseline.get("valuation_eps", c.baseline.get("eps_diluted")),
-            "dEPS": c.dEPS, "dNI": c.dNI, "market_value": c.d_mcap,
-            "dEBIT": c.dEBIT, "dPTI": c.dPTI, "tax_rate": c.tax_rate, "tax_rate_new": c.tax_rate_new,
-            "reason": reason, "notes": c.notes, "coverage": coverage,
-            "baseline": c.baseline,
-            "metrics": projected_metrics(c),
-            "history": [] if c.ticker == subject_id else [
-                {"year": y["fiscal_year"], "eps": y["items"].get("eps_diluted")}
-                for y in reversed((captured["companies"].get(c.ticker, {}).get("years", store.company_years(c.ticker)) if captured else store.company_years(c.ticker))[:8])
-            ],
-            "channels": [{"label": o.label, "family": o.family, "dNI": o.dNI,
-                          "dValue": o.dP * (c.baseline.get("shares_outstanding") or c.baseline["diluted_shares"]) if o.dP is not None and c.baseline.get("price") is not None else None} for o in c.outcomes],
-            "exposures": [{"key": key, "label": reg.exposure_defs[key].label,
-                           "unit": reg.exposure_defs[key].unit, **exposure_cfg[key].model_dump()}
-                          for key in pol.exposure_keys],
-        })
+        companies.append(serialize_company(c, an.envelopes[c.ticker], pol, inputs, captured, profile, subject_id))
     totals = an.base.totals()
     bounds = [an.industry_low.totals()["d_eps_pct"], an.industry_high.totals()["d_eps_pct"]]
     value_bounds = [an.industry_low.totals()["d_mcap_pct"], an.industry_high.totals()["d_mcap_pct"]]

@@ -59,7 +59,7 @@ Results distinguish an excluded business, a nonbinding setting, a zero shock, an
 
 ### Assumptions & responses
 
-Each policy defines the shock, company exposures and response assumptions. Pass-through describes how much cost reaches customers; elasticity describes how demand responds; offsets describe savings or replacement revenue. These assumptions vary by policy. Broad macro scenarios reuse the same financial channels across industries; additional spending or demand effects are included only when explicitly specified.
+Each policy defines the shock, company exposures and response assumptions. Pass-through describes how much cost reaches customers; elasticity describes how demand responds; offsets describe savings or replacement revenue. These assumptions vary by policy. Broad macro scenarios reuse the same financial channels across industries; additional spending or demand effects are included only when explicitly specified. All ten industries use a single captured set of statements, quotes and economic data. Industry earnings percentages divide summed net-income changes by model starting earnings. The cross-industry EPS headline is market-cap weighted across companies with meaningful EPS percentages and usable quotes. Industry/value totals include only supported valuations; missing effects are counted separately rather than asserted to be economic zeros.
 
 ### Consumer spending
 

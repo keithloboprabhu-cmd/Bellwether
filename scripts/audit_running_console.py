@@ -28,6 +28,7 @@ def main() -> None:
     """Audit live API policy outputs without changing company or scenario settings."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base-url', default='http://127.0.0.1:8787')
+    parser.add_argument('--include-macro', action='store_true', help='Also verify all macro input boundaries through the console API')
     args = parser.parse_args()
     rows, errors = [], []
     reviews = yaml.safe_load((ROOT/'config/policy_review.yaml').read_text())['reviews']
@@ -76,9 +77,29 @@ def main() -> None:
             if group['status'] == 'included' and ticker not in impact_seen:
                 errors.append(f'{key}/{ticker}: expected direct effect missing at every live API input case')
         rows.append(dict(policy=key, companies=len(decisions), passed=count, expected=len(input_cases(p)),versions=data.get('versions'),captured_at=data.get('captured_at')))
-    result = dict(checked_at=datetime.now(timezone.utc).isoformat(), policies=rows, errors=errors)
+    macro_rows = []
+    if args.include_macro:
+        for key, shock in sorted(registry().macro.items()):
+            count = 0
+            for inputs in input_cases(shock):
+                req = Request(args.base_url+'/api/scenario', data=json.dumps(dict(industry='macro', policy=key, inputs=inputs)).encode(), headers={'Content-Type':'application/json'})
+                try:
+                    with urlopen(req, timeout=60) as response:
+                        data = json.load(response)
+                    assert data['mode'] == 'macro' and len(data['industries']) == 10
+                    assert {c['id'] for c in data['companies']} == set(load_universe().all_tickers)
+                    assert math.isclose(sum(i['totals']['d_ni'] for i in data['industries']), data['totals']['d_ni'], rel_tol=1e-9, abs_tol=1e-7)
+                    assert math.isclose(sum(c['dNI'] for c in data['channels']), data['totals']['d_ni'], rel_tol=1e-9, abs_tol=1e-7)
+                    assert data['captured_at'] and all(c['coverage']['reason'] for c in data['companies'])
+                    assert all(c['metrics']['price']['projected'] is None or c['metrics']['price']['projected'] >= -1e-9 for c in data['companies'])
+                    count += 1
+                except Exception as exc:
+                    errors.append(f'macro/{key}/{inputs}: {exc}')
+            macro_rows.append(dict(shock=key, passed=count, expected=len(input_cases(shock))))
+    result = dict(checked_at=datetime.now(timezone.utc).isoformat(), policies=rows, macro_shocks=macro_rows, errors=errors)
     (ROOT/'design/reviews/live-policy-smoke.json').write_text(json.dumps(result,indent=2)+'\n')
     print(f'{len(rows)} policies / {sum(r["passed"] for r in rows)} live API input cases passed; {len(errors)} failures')
+    if macro_rows:print(f'{len(macro_rows)} macro shocks / {sum(r["passed"] for r in macro_rows)} macro API input cases passed')
     for error in errors: print(error)
     raise SystemExit(bool(errors))
 

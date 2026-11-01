@@ -119,7 +119,9 @@ def build_market_runner(
     prices_df=None,
     macro: dict | None = None,
     reg: Registry | None = None,
+    baselines: dict[str, list[dict]] | None = None,
 ) -> MarketRunner:
+    """Build all industry runners from snapshots or one supplied immutable data capture."""
     from policyshock.data import fred
 
     reg = reg or registry()
@@ -128,9 +130,10 @@ def build_market_runner(
     macro = macro if macro is not None else fred.macro_context()
     ranges = {a.key: (a.low, a.base, a.high) for a in shock.all_assumptions()} | (assumption_ranges or {})
     runners: dict[str, Runner | None] = {}
+    provided = baselines
     baselines = {}
     for ind in load_universe().industries:
-        baselines[ind.slug] = industry_baselines(ind.slug, prices_df)
+        baselines[ind.slug] = provided[ind.slug] if provided is not None else industry_baselines(ind.slug, prices_df)
         pol = shock.industry_policy(ind.slug)
         if pol is None:
             runners[ind.slug] = None

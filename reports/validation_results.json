@@ -1,9 +1,10 @@
 {
-  "Python suite": "596 passed, 5 skipped; 6 intentional extreme-EPS review warnings.",
+  "Python suite": "610 passed, 5 skipped; 6 intentional extreme-EPS review warnings.",
   "Frontend suite": "16 passed.",
   "Production frontend build": "Passed (TypeScript and Vite).",
   "Internal policy/macro audit": "72 industry policies and 10 macro shocks; zero invariant failures.",
   "Published bank benchmark arithmetic": "23 matched comparisons pass direction and size (in-sample calibration only).",
   "Independent arithmetic": "10/10 stratified random scenarios match to the cent.",
-  "Running local API audit": "72 policies / 261 valid input cases; zero failures on the 234-company preview."
+  "Running local API audit": "72 industry policies / 261 valid inputs and 10 macro shocks / 42 valid inputs; zero failures.",
+  "Macro console browser verification": "All-industries deep link restores policy/inputs; industry drilldown filters Financial Services to 30 firms; industry CSV has 10 rows/234 firms and reconciles net income; no browser console errors; phone layout fits at 375 px."
 }

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-01 — macro console
+
+- Add Macro · All industries to the industry selector, using the existing ten macro shocks.
+- Compare all ten industries with ranked signed bars, projected financials and dollar/percentage changes; drill into company Fields and telemetry.
+- Add a separate industry CSV export; retain company CSV columns, profile schema and industry scenario links.
+- Use one immutable live-data capture for every sector; show unquantified and unavailable valuation counts explicitly.
+- Verify all ten macro APIs, zero/invalid inputs, shared captures and unchanged legacy industry behavior. Final suite: 610 Python tests and 16 frontend tests passed; 303 local API input cases passed (261 industry + 42 macro); frontend production build passed.
+
+
 ## 2026-11-01 — quantitative audit
 
 - Preserve the original 203-company/66-policy baseline and architecture inventory.
