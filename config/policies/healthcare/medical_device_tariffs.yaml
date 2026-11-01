@@ -1,0 +1,60 @@
+id: medical_device_tariffs
+industry: healthcare
+name: Tariffs on imported medical devices and supplies
+description: A Section 232-style tariff on imported medical devices, equipment and consumables (Commerce announced a Section 232
+  investigation covering medical equipment and devices in 2025; no tariff is assumed to be in the baseline). Device makers that build US-sold products abroad pay it and pass part of it to
+  hospitals under multi-year purchasing contracts; Cardinal Health's imported medical products are also hit.
+  Drugmakers are covered by the separate pharmaceutical tariff policy.
+persistence: permanent
+user_inputs:
+  - key: tariff_pct
+    label: Additional tariff on imported medical devices
+    unit: percentage points
+    min: 0
+    max: 50
+    step: 1
+    default: 15
+    help: Added to the duties already in each company's latest fiscal-year costs. 15% matches the cap the 2025 US–EU
+      framework set for most EU goods, a reference point rather than a forecast.
+assumptions:
+  - key: pass_through
+    label: Share of the cost increase passed to hospitals and buyers
+    unit: fraction
+    low: 0.2
+    base: 0.4
+    high: 0.7
+    source: estimate
+    rationale: Hospitals buy devices under fixed-price group-purchasing and supply contracts that typically run several
+      years, so first-year pass-through is limited; pass-through rises as contracts reprice.
+  - key: elasticity
+    label: Demand elasticity (volume loss per 1% price rise)
+    unit: number
+    low: 0.1
+    base: 0.2
+    high: 0.4
+    source: estimate
+    rationale: Procedure-driven demand for implants, surgical systems and diagnostics is inelastic in the short run.
+channels:
+  - type: cost
+    label: Tariff on imported devices and medical products
+    roles: [importer]
+    params:
+      exposed_cost_share: exposure.us_import_share_of_cogs
+      shock_pct: input.tariff_pct / 100
+      pass_through: assumption.pass_through
+      elasticity: assumption.elasticity
+exposure_keys: [us_import_share_of_cogs]
+roles:
+  TMO: importer
+  ABT: importer
+  MDT: importer
+  ISRG: importer
+  CAH: importer
+  COR: importer
+  MCK: importer
+default_role: neutral
+references:
+  - https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title19-section1862&num=0&edition=prelim
+narrative:
+  extra: Exposure is each device maker's estimated imported share of cost of revenue. Johnson & Johnson's MedTech imports
+    are not separated from its pharmaceutical supply, so J&J is excluded rather than double counted with the drug tariff.

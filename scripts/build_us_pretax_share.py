@@ -37,6 +37,8 @@ ESTIMATES = {
     "LDOS": (0.95, 0.9, 1.0, "Untagged split; UK and Australia work is a small share of revenue."),
     "CI": (0.95, 0.9, 1.0, "Untagged split; international health is a small share after the 2022 divestiture."),
     "BAC": (0.9, 0.85, 0.97, "Untagged split; most income is US, with a modest international markets business."),
+    "STRA": (0.85, 0.7, 0.95, "Untagged split; the Australia/New Zealand university segment (Torrens) is a material non-US business, roughly a sixth of revenue."),
+    "SCHL": (0.85, 0.7, 1.0, "Untagged split; the International segment (UK, Canada, Australia, Asia) is roughly a sixth of revenue with thin, volatile margins."),
 }
 
 

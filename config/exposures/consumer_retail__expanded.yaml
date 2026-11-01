@@ -86,14 +86,15 @@ companies:
         exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_import_share_of_cogs:
-      value: 0.27
-      low: 0.18
-      high: 0.6
+      value: 0.1
+      low: 0.05
+      high: 0.16
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
-        discount retail; median base and outer low/high from WMT/COST/TGT in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kroger''s cost of sales is dominated by fresh
+        food, grocery and pharmacy; most US food spending is domestically produced (imports are roughly a
+        sixth of US food by value) and general merchandise is a small share of sales. Replaces a WMT/COST/TGT
+        general-merchandise prior.'
       applicable: true
     us_starting_wage:
       value: 15.0
@@ -146,14 +147,14 @@ companies:
         exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_import_share_of_cogs:
-      value: 0.27
-      low: 0.18
-      high: 0.6
+      value: 0.17
+      low: 0.1
+      high: 0.25
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Groceries and
-        discount retail; median base and outer low/high from WMT/COST/TGT in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Consumables (mostly US-made branded and private-label
+        staples) are about four-fifths of Dollar General sales; seasonal, home and apparel lines are largely
+        imported. Replaces a WMT/COST/TGT prior.'
       applicable: true
     us_starting_wage:
       value: 15.0
@@ -386,14 +387,14 @@ companies:
         exposure configuration. Absolute exposure intensity scaled by SEC annual revenue.
       applicable: true
     us_import_share_of_cogs:
-      value: 0.27
-      low: 0.18
-      high: 0.44
+      value: 0.07
+      low: 0.04
+      high: 0.12
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
-        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Starbucks'' modeled cost of revenue ($31.9B)
+        includes store labor and occupancy, so the imported share is small: green coffee for US stores plus
+        some merchandise and equipment. Replaces a 0.27 retailer prior that implied about $8.6B of imports.'
       applicable: true
     us_starting_wage:
       value: 16.0
@@ -487,14 +488,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_consumer_revenue_share:
-      value: 0.7
-      low: 0.4
-      high: 0.81
+      value: 0.35
+      low: 0.3
+      high: 0.4
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
-        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Coca-Cola''s North America operating segment
+        is roughly a third of net operating revenue; the rest is international bottling and concentrate sales.
+        Replaces a 0.70 retailer prior.'
       applicable: true
     us_hourly_workers_m:
       value: 0.0332095568588902
@@ -547,14 +548,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_consumer_revenue_share:
-      value: 0.7
-      low: 0.4
-      high: 0.81
+      value: 0.57
+      low: 0.52
+      high: 0.62
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
-        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): PepsiCo''s North America beverage and food divisions
+        are a little under three-fifths of net revenue (FY2025 segment reporting), slightly less for the US
+        alone. Replaces a 0.70 WMT/COST/NKE prior.'
       applicable: true
     us_hourly_workers_m:
       value: 0.06506346609314077
@@ -607,14 +608,13 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     us_consumer_revenue_share:
-      value: 0.7
-      low: 0.4
-      high: 0.81
+      value: 0.47
+      low: 0.43
+      high: 0.5
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Restaurants and
-        consumer staples; median base and outer low/high from WMT/COST/NKE in committed
-        exposure configuration. Dimensionless peer prior; review before relying on
-        this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Procter & Gamble reports US net sales at a little
+        under half of the total. Replaces a 0.70 retailer prior.'
       applicable: true
     us_hourly_workers_m:
       value: 0.06028856620727419

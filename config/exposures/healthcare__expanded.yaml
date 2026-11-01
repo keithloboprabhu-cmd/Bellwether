@@ -762,13 +762,14 @@ companies:
         is not a reported zero exposure.'
       applicable: true
     us_import_share_of_cogs:
-      value: 0.3
-      low: 0.2
-      high: 0.45
+      value: 0.12
+      low: 0.06
+      high: 0.2
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices and life science tools;
-        median base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer
-        prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): About half of Thermo Fisher''s revenue is North
+        American and much of it is made in large US plants; imports come from European and Asian sites. Replaces
+        a PFE/LLY drug prior (0.30).'
       applicable: true
   ABT:
     aca_exchange_revenue_share:
@@ -826,13 +827,14 @@ companies:
         is not a reported zero exposure.'
       applicable: true
     us_import_share_of_cogs:
-      value: 0.3
-      low: 0.2
-      high: 0.45
+      value: 0.15
+      low: 0.08
+      high: 0.25
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices and life science tools;
-        median base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer
-        prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): The US is about two-fifths of Abbott''s sales;
+        nutrition and diagnostics are largely US-made, while devices come from Ireland, Costa Rica and Asia.
+        Replaces a PFE/LLY prior (0.30).'
       applicable: true
   MDT:
     aca_exchange_revenue_share:
@@ -890,11 +892,12 @@ companies:
         is not a reported zero exposure.'
       applicable: true
     us_import_share_of_cogs:
-      value: 0.3
-      low: 0.2
-      high: 0.45
+      value: 0.2
+      low: 0.12
+      high: 0.3
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Medical devices and life science tools;
-        median base and outer low/high from PFE/LLY in committed exposure configuration. Dimensionless peer
-        prior; review before relying on this company result.
+      rationale: 'Company-specific estimate (audit round 3): FY2026 10-K: US revenue $18,103M of $36,364M
+        (49.8%); much US-sold product is made in Ireland, Mexico and other non-US plants (Puerto Rico is domestic).
+        Replaces a PFE/LLY prior (0.30).'
       applicable: true
+      source_url: https://www.sec.gov/Archives/edgar/data/1613103/000161310326000027/mdt-20260424.htm

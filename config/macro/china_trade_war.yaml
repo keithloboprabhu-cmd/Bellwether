@@ -11,7 +11,7 @@ user_inputs:
     max: 150
     step: 5
     default: 25
-    help: The 2018–19 Section 301 tariffs added 7.5–25% on most Chinese goods; rates briefly exceeded 100% in April 2025.
+    help: Added on top of the China tariffs already in each company's latest fiscal-year costs. The 2018–19 Section 301 tariffs added 7.5–25% on most Chinese goods; rates briefly exceeded 100% in April 2025.
 assumptions:
   - key: pass_through
     label: Share of the tariff cost passed to customers (φ)

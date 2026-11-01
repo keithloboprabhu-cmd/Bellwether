@@ -327,22 +327,23 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     greater_china_revenue_share:
-      value: 0.091
-      low: 0.06
-      high: 0.12
+      value: 0.28
+      low: 0.2
+      high: 0.3
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: "Company-specific estimate (audit round 3): Intel's 10-K reports China (by billing location)\
+        \ at roughly 27\u201329% of revenue in recent years, largely PC assemblers. Replaces an NVIDIA prior\
+        \ (0.091)."
       applicable: true
     restricted_chip_china_share:
-      value: 0.06
-      low: 0.03
-      high: 0.091
+      value: 0.01
+      low: 0.0
+      high: 0.03
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Only a small share (Gaudi and some data-center
+        parts) is subject to advanced-computing controls.'
       applicable: true
     us_app_store_fee_share:
       value: 0.0
@@ -402,22 +403,22 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     greater_china_revenue_share:
-      value: 0.091
-      low: 0.06
-      high: 0.12
+      value: 0.22
+      low: 0.15
+      high: 0.28
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AMD has reported China (incl. Hong Kong) at around
+        a fifth to a quarter of revenue, much of it to PC/ODM assemblers. Replaces an NVIDIA prior.'
       applicable: true
     restricted_chip_china_share:
-      value: 0.06
-      low: 0.03
-      high: 0.091
+      value: 0.03
+      low: 0.01
+      high: 0.06
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): MI308 sales to China required licences from 2025;
+        restricted data-center revenue is a low-single-digit share.'
       applicable: true
     us_app_store_fee_share:
       value: 0.0
@@ -438,13 +439,14 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     us_import_share_of_cogs:
-      value: 0.45
-      low: 0.25
-      high: 0.6
+      value: 0.25
+      low: 0.1
+      high: 0.4
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Data-center GPUs and CPUs sold to US cloud customers
+        are imported; client and gaming chips go mostly to Asian PC and console assemblers. Replaces an NVIDIA
+        prior (0.45).'
       applicable: true
     us_semis_mfg_capex_musd:
       value: 0.0
@@ -476,22 +478,22 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     greater_china_revenue_share:
-      value: 0.091
-      low: 0.06
-      high: 0.12
+      value: 0.45
+      low: 0.35
+      high: 0.5
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Qualcomm reports revenue by customer headquarters;
+        China (incl. Hong Kong) was roughly 45% in recent 10-Ks. Replaces an NVIDIA prior (0.091).'
       applicable: true
     restricted_chip_china_share:
-      value: 0.06
-      low: 0.03
-      high: 0.091
+      value: 0.0
+      low: 0.0
+      high: 0.02
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mobile SoCs are not covered by the advanced-computing
+        export rules; Huawei licences were already revoked before the baseline.'
       applicable: true
     us_app_store_fee_share:
       value: 0.0
@@ -512,13 +514,14 @@ companies:
         Dimensionless peer prior; review before relying on this company result.
       applicable: true
     us_import_share_of_cogs:
-      value: 0.45
-      low: 0.25
-      high: 0.6
+      value: 0.05
+      low: 0.02
+      high: 0.15
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Semiconductors;
-        median base and outer low/high from NVDA in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Qualcomm is fabless and ships mostly to handset
+        and device makers that assemble in Asia, so little of its product is imported into the US by Qualcomm;
+        device-level tariffs reach it only through demand. Replaces an NVIDIA prior (0.45).'
       applicable: true
     us_semis_mfg_capex_musd:
       value: 0.0

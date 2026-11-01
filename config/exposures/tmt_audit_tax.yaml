@@ -2,14 +2,13 @@ industry: tmt
 companies:
   AAPL:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      value: 50729.0
+      low: 40836.0
+      high: 50729.0
+      source: derived SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json
+      rationale: US-incorporated issuer; FY2025 total pretax income less tagged foreign pretax income (IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign).
+        Low/high are the same derivation over up to three recent years.
   MSFT:
     audit_us_pretax_income_musd:
       value: 103591.0
@@ -67,19 +66,18 @@ companies:
       high: 0.0
       applicable: false
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      rationale: UNQUANTIFIED sentinel, not a measured zero. FY2025 tagged US pretax book loss (-236 $M) despite
+        positive total income; the positive-income proxy does not apply and US taxable income is not disclosed.
   ORCL:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      value: 8693.0
+      low: 3023.0
+      high: 8693.0
+      source: tagged SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json
+      rationale: US-incorporated issuer; FY2026 us-gaap IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic.
+        Low/high are observed positive values in up to three recent years; book income is a taxable-income
+        proxy.
   CRM:
     audit_us_pretax_income_musd:
       value: 6627.0
@@ -107,9 +105,9 @@ companies:
       high: 0.0
       applicable: false
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      rationale: UNQUANTIFIED sentinel, not a measured zero. FY2025 tagged US pretax book loss (-3,231 $M)
+        despite positive total income; the positive-income proxy does not apply and US taxable income is not
+        disclosed.
   AMD:
     audit_us_pretax_income_musd:
       value: 4588.0
@@ -142,14 +140,14 @@ companies:
         is a model proxy.
   AVGO:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      value: 2507.0
+      low: 2507.0
+      high: 2507.0
+      source: tagged SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001730168.json
+      rationale: US-incorporated issuer; FY2025 us-gaap IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic.
+        Low/high are observed positive values in up to three recent years; book income is a taxable-income
+        proxy.
   CSCO:
     audit_us_pretax_income_musd:
       value: 14062.0

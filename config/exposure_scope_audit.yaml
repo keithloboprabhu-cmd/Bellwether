@@ -23,6 +23,7 @@ rules:
   - META
   - NFLX
   - DIS
+  - INTU
   rationale: Direct digital advertising and ad-supported media sales; enterprise software license and consulting
     revenue is not media advertising revenue.
 - industry: financial_services
@@ -356,6 +357,8 @@ rules:
   - QCOM
   - MU
   - AVGO
+  - AMAT
+  - LRCX
   rationale: Direct restricted merchant semiconductor sales; customer consumption of chips and software revenue
     are not chip export sales.
 - industry: tmt
@@ -568,5 +571,8 @@ rules:
   - CSCO
   - NFLX
   - DIS
+  - AMAT
+  - LRCX
+  - TXN
   rationale: Current China sales/advertiser exposure, not inherited hypothetical China subscriber sales at
     US cable/telecom access providers.

@@ -1,7 +1,7 @@
 id: fed_rate_change
 industry: financial_services
 name: Fed policy rate change
-description: The Federal Reserve moves short-term US rates and the curve shifts in parallel. Rate cuts squeeze net interest income at asset-sensitive deposit banks (Wells Fargo, Bank of America, JPMorgan); Citi's US dollar book and Amex barely move.
+description: The Federal Reserve moves short-term US rates and the curve shifts in parallel. Rate cuts squeeze net interest income at asset-sensitive deposit banks (Wells Fargo, Bank of America, JPMorgan); Citi's US dollar book and Amex barely move. Insurers and payment networks earn more (or less) on invested assets and cash as they reinvest at the new rates.
 persistence: permanent
 user_inputs:
   - key: d_rate_bps
@@ -21,7 +21,12 @@ channels:
     params:
       d_rate_bps: input.d_rate_bps
       nii_sensitivity_per_100bp: derived.sensitivity
-exposure_keys: [nii_sens_up_per_100bp, nii_sens_down_per_100bp]
+  - type: price
+    label: Investment income on insurer portfolios and corporate cash
+    params:
+      d_price: input.d_rate_bps / 100 * exposure.fs_investment_income_sens_per_100bp
+      exposed_revenue_share: exposure.fs_investment_income_revenue_share
+exposure_keys: [nii_sens_up_per_100bp, nii_sens_down_per_100bp, fs_investment_income_revenue_share, fs_investment_income_sens_per_100bp]
 references:
   - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
   - https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm

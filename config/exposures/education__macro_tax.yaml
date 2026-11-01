@@ -25,12 +25,12 @@ companies:
       source_url: https://www.sec.gov/Archives/edgar/data/730464/000110465926092044/0001104659-26-092044-index.htm
   STRA:
     mx_us_pretax_share:
-      value: 1.0
-      low: 0.9
-      high: 1.0
+      value: 0.85
+      low: 0.7
+      high: 0.95
       source: estimate
-      rationale: No domestic/foreign pretax split tagged in recent 10-Ks and no material foreign business, so assumed US-only;
-        the low end allows for small untagged foreign income.
+      rationale: Untagged split; the Australia/New Zealand university segment (Torrens) is a material non-US business, roughly
+        a sixth of revenue.
   DUOL:
     mx_us_pretax_share:
       value: 0.932
@@ -108,12 +108,12 @@ companies:
       source_url: https://www.sec.gov/Archives/edgar/data/1364954/000136495424000009/0001364954-24-000009-index.htm
   SCHL:
     mx_us_pretax_share:
-      value: 1.0
-      low: 0.9
+      value: 0.85
+      low: 0.7
       high: 1.0
       source: estimate
-      rationale: No domestic/foreign pretax split tagged in recent 10-Ks and no material foreign business, so assumed US-only;
-        the low end allows for small untagged foreign income.
+      rationale: Untagged split; the International segment (UK, Canada, Australia, Asia) is roughly a sixth of revenue with
+        thin, volatile margins.
   KLC:
     mx_us_pretax_share:
       value: 1.0

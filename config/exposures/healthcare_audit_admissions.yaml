@@ -2,13 +2,15 @@ industry: healthcare
 companies:
   CAH:
     us_import_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.012
+      low: 0.006
+      high: 0.02
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Cardinal Health''s medical products and distribution
+        segment (about 5% of revenue) sources Cardinal-brand gloves, gowns and consumables largely from Asia,
+        roughly $3B of cost; pharmaceutical distribution purchases domestically at manufacturer prices.'
+      applicable: true
     hospital_outpatient_cost_share:
       value: 0.0
       low: 0.0
@@ -58,14 +60,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     pharma_import_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -83,13 +77,14 @@ companies:
         not been independently verified; no unrelated peer prior transferred.'
   COR:
     us_import_share_of_cogs:
-      value: 0.0
+      value: 0.003
       low: 0.0
-      high: 0.0
-      applicable: false
+      high: 0.008
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Cencora is overwhelmingly pharmaceutical distribution
+        bought domestically; only small specialty and animal-health products are imported.'
+      applicable: true
     hospital_outpatient_cost_share:
       value: 0.0
       low: 0.0
@@ -139,14 +134,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     pharma_import_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -164,13 +151,15 @@ companies:
         not been independently verified; no unrelated peer prior transferred.'
   ISRG:
     us_import_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.25
+      low: 0.15
+      high: 0.35
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      rationale: 'Company-specific estimate (audit round 3): FY2025 10-K: US revenue $6,816M of $10,065M (67.7%).
+        Systems are built in California but instruments and accessories (about 60% of revenue) are largely
+        made in Mexicali, Mexico; USMCA exemptions are ignored in this hypothetical.'
+      applicable: true
+      source_url: https://www.sec.gov/Archives/edgar/data/1035267/000103526726000011/isrg-20251231.htm
     hospital_outpatient_cost_share:
       value: 0.0
       low: 0.0
@@ -220,14 +209,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     pharma_import_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -245,13 +226,14 @@ companies:
         not been independently verified; no unrelated peer prior transferred.'
   MCK:
     us_import_share_of_cogs:
-      value: 0.0
+      value: 0.005
       low: 0.0
-      high: 0.0
-      applicable: false
+      high: 0.01
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): McKesson''s medical-surgical business distributes
+        some imported supplies; pharmaceutical distribution is domestic purchasing.'
+      applicable: true
     hospital_outpatient_cost_share:
       value: 0.0
       low: 0.0
@@ -301,14 +283,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     pharma_import_share_of_cogs:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0

@@ -42,7 +42,7 @@ component_labels:
   second_round: Rate-sensitive demand (cars, home improvement)
 industry_effects:
   financial_services:
-    reason: Bank net interest income moves with short-term rates.
+    reason: Bank net interest income moves with short-term rates; insurer portfolios and corporate cash reinvest at the new yields.
     derived:
       sensitivity: "exposure.nii_sens_up_per_100bp if input.d_ff_bps > 0 else exposure.nii_sens_down_per_100bp"
     channels:
@@ -52,7 +52,12 @@ industry_effects:
         params:
           d_rate_bps: input.d_ff_bps
           nii_sensitivity_per_100bp: derived.sensitivity
-    exposure_keys: [nii_sens_up_per_100bp, nii_sens_down_per_100bp]
+      - type: price
+        label: Investment income on insurer portfolios and corporate cash
+        params:
+          d_price: input.d_ff_bps / 100 * exposure.fs_investment_income_sens_per_100bp
+          exposed_revenue_share: exposure.fs_investment_income_revenue_share
+    exposure_keys: [nii_sens_up_per_100bp, nii_sens_down_per_100bp, fs_investment_income_revenue_share, fs_investment_income_sens_per_100bp]
   real_estate_hospitality:
     reason: REIT property values move inversely with long yields; floating debt reprices.
     assumptions:

@@ -30,20 +30,16 @@ policies:
       - CL
       - ULTA
       - BBY
+      - MDLZ
+      - MO
+      - PM
+      - TSN
+      - SYY
+      - PFGC
       reason: Consumer transfers raise captured retailer spending.
       default_direction:
         metric: dR
         sign: 1
-    - status: unquantified
-      tickers:
-      - MDLZ
-      - MO
-      - PFGC
-      - PM
-      - SYY
-      - TSN
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
   consumer_retail/import_tariffs:
     references:
     - https://www.aeaweb.org/doi/10.1257/jep.33.4.187
@@ -155,20 +151,16 @@ policies:
       - CL
       - ULTA
       - BBY
+      - MDLZ
+      - MO
+      - PM
+      - TSN
+      - SYY
+      - PFGC
       reason: Higher checkout tax reduces exposed consumer demand.
       default_direction:
         metric: dR
         sign: -1
-    - status: unquantified
-      tickers:
-      - MDLZ
-      - MO
-      - PFGC
-      - PM
-      - SYY
-      - TSN
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
   industrials/bonus_depreciation_rollback:
     references:
     - https://www.bdo.com/insights/tax/irs-issues-interim-guidance-on-bonus-depreciation-rules
@@ -583,6 +575,8 @@ policies:
       - CMCSA
       - NFLX
       - DIS
+      - INTU
+      - TMUS
       reason: Ad-targeting loss and privacy compliance raise costs/reduce monetization.
       default_direction:
         metric: dNI
@@ -593,13 +587,11 @@ policies:
       - ANET
       - DELL
       - HPQ
-      - INTU
       - LRCX
       - NOW
       - PANW
       - SNDK
       - SNX
-      - TMUS
       - TXN
       - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
@@ -632,6 +624,8 @@ policies:
       - CMCSA
       - NFLX
       - DIS
+      - ANET
+      - TMUS
       reason: Tariffs raise imported semiconductor/hardware cost.
       default_direction:
         metric: dNI
@@ -639,18 +633,16 @@ policies:
     - status: unquantified
       tickers:
       - AMAT
-      - ANET
-      - DELL
-      - HPQ
       - INTU
       - LRCX
       - NOW
       - PANW
       - SNDK
       - SNX
-      - TMUS
       - TXN
       - PLTR
+      - DELL
+      - HPQ
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   consumer_retail/snap_benefit_change:
@@ -687,18 +679,14 @@ policies:
       - CL
       - ULTA
       - BBY
-      reason: This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain
-        effects and restaurant exceptions are not included.
-    - status: unquantified
-      tickers:
       - MDLZ
       - MO
-      - PFGC
       - PM
-      - SYY
       - TSN
-      reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
-        Missing exposure is not evidence of no impact.
+      - SYY
+      - PFGC
+      reason: This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain
+        effects and restaurant exceptions are not included.
   consumer_retail/sweetened_beverage_tax:
     references:
     - https://doi.org/10.1001/jama.2019.4249
@@ -732,16 +720,16 @@ policies:
       - CL
       - ULTA
       - BBY
+      - MDLZ
+      - MO
+      - PM
+      - TSN
       reason: No quantified sales of covered sweetened beverages in this company channel; unrelated products
         do not inherit beverage taxes.
     - status: unquantified
       tickers:
-      - MDLZ
-      - MO
       - PFGC
-      - PM
       - SYY
-      - TSN
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
   industrials/defense_procurement_increase:
@@ -999,9 +987,15 @@ policies:
       - BFAM
       - WLY
       - FC
-      - SLM
       reason: Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational
         programs and private lenders do not inherit graduate tuition.
+    - status: included
+      tickers:
+      - SLM
+      reason: Private student lenders gain graduate borrowing displaced from capped federal loans.
+      default_direction:
+        metric: dR
+        sign: 1
   education/student_loan_forgiveness:
     references:
     - https://www.nber.org/papers/w31291
@@ -1442,27 +1436,29 @@ policies:
         ALLY:
           metric: dNI
           sign: 1
-    - status: outside_scope
-      tickers:
-      - MA
-      - BLK
-      - AIG
-      - PRU
-      - PGR
-      reason: This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager
-        fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest
-        rates cannot affect the business.
     - status: unquantified
       tickers:
-      - ALL
-      - MET
-      - SNEX
-      - SPGI
-      - TRV
-      - V
+      - MA
       - PYPL
+      - SNEX
+      - BLK
+      - SPGI
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
+    - status: included
+      tickers:
+      - ALL
+      - TRV
+      - PGR
+      - MET
+      - PRU
+      - AIG
+      - V
+      reason: Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment
+        income.
+      default_direction:
+        metric: dR
+        sign: -1
   financial_services/credit_card_interchange_cap:
     references:
     - https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm
@@ -2329,6 +2325,9 @@ policies:
       - NFLX
       - DIS
       - CSCO
+      - AMAT
+      - LRCX
+      - TXN
       reason: Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
       default_direction:
         metric: dR
@@ -2342,18 +2341,15 @@ policies:
         supplier effects need separately supported exposure.
     - status: unquantified
       tickers:
-      - AMAT
       - ANET
       - DELL
       - HPQ
       - INTU
-      - LRCX
       - NOW
       - PANW
       - SNDK
       - SNX
       - TMUS
-      - TXN
       - PLTR
       reason: Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer.
         Missing exposure is not evidence of no impact.
@@ -2422,6 +2418,7 @@ policies:
       - META
       - NFLX
       - DIS
+      - INTU
       reason: Tax applies to US digital advertising and covered platform fees.
       default_direction:
         metric: dNI
@@ -2450,7 +2447,6 @@ policies:
       - ANET
       - DELL
       - HPQ
-      - INTU
       - LRCX
       - NOW
       - PANW
@@ -2704,21 +2700,17 @@ policies:
       - PM
       - SYY
       - TSN
-      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
-        not a cash-tax forecast.
-      default_direction:
-        metric: dNI
-        sign: -1
-    - status: unquantified
-      tickers:
       - TGT
       - LOW
       - KR
       - DG
       - ROST
       - ULTA
-      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
-        treatment requires review.
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
   healthcare/us_corporate_tax_healthcare:
     references:
     - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
@@ -2741,6 +2733,10 @@ policies:
       - COR
       - ISRG
       - MCK
+      - LLY
+      - CI
+      - HCA
+      - UHS
       reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
         not a cash-tax forecast.
       default_direction:
@@ -2748,13 +2744,9 @@ policies:
         sign: -1
     - status: unquantified
       tickers:
-      - LLY
-      - CI
       - CNC
       - MRK
       - ABBV
-      - HCA
-      - UHS
       - MDT
       reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
         treatment requires review.
@@ -2784,13 +2776,6 @@ policies:
       - TRV
       - V
       - PYPL
-      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
-        not a cash-tax forecast.
-      default_direction:
-        metric: dNI
-        sign: -1
-    - status: unquantified
-      tickers:
       - BAC
       - C
       - AXP
@@ -2801,8 +2786,11 @@ policies:
       - KEY
       - BLK
       - PGR
-      reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
-        treatment requires review.
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
   tmt/us_corporate_tax_tmt:
     references:
     - https://www.congress.gov/amendment/119th-congress/senate-amendment/2428/text
@@ -2837,6 +2825,9 @@ policies:
       - TMUS
       - TXN
       - PLTR
+      - AAPL
+      - ORCL
+      - AVGO
       reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
         not a cash-tax forecast.
       default_direction:
@@ -2844,11 +2835,8 @@ policies:
         sign: -1
     - status: unquantified
       tickers:
-      - AAPL
       - IBM
-      - ORCL
       - INTC
-      - AVGO
       reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
         treatment requires review.
   education/us_corporate_tax_education:
@@ -2865,6 +2853,13 @@ policies:
       - LINC
       - WLY
       - FC
+      - LOPE
+      - STRA
+      - UTI
+      - APEI
+      - SCHL
+      - BFAM
+      - SLM
       reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
         not a cash-tax forecast.
       default_direction:
@@ -2872,18 +2867,11 @@ policies:
         sign: -1
     - status: unquantified
       tickers:
-      - LOPE
-      - STRA
       - COUR
-      - UTI
-      - APEI
       - NRDY
       - SKIL
       - CHGG
-      - SCHL
       - KLC
-      - BFAM
-      - SLM
       reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
         treatment requires review.
   transportation_logistics/us_corporate_tax_transportation_logistics:
@@ -2897,18 +2885,9 @@ policies:
       - TSLA
       - CHRW
       - UBER
-      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
-        not a cash-tax forecast.
-      default_direction:
-        metric: dNI
-        sign: -1
-    - status: unquantified
-      tickers:
       - UNP
       - DAL
       - GM
-      - F
-      - RIVN
       - JBHT
       - ODFL
       - XPO
@@ -2918,6 +2897,96 @@ policies:
       - UAL
       - AAL
       - LUV
+      reason: US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy,
+        not a cash-tax forecast.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: unquantified
+      tickers:
+      - F
+      - RIVN
       - LYFT
       reason: Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax
         treatment requires review.
+  consumer_retail/tobacco_excise_increase:
+    references:
+    - https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section5701&num=0&edition=prelim
+    groups:
+    - status: included
+      tickers:
+      - MO
+      - PM
+      reason: A higher excise raises shelf prices and cuts US tobacco volume.
+      default_direction:
+        metric: dR
+        sign: -1
+    - status: unquantified
+      tickers:
+      - WMT
+      - COST
+      - KR
+      - DG
+      - DLTR
+      - PFGC
+      reason: Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing
+        exposure is not evidence of no impact.
+    - status: outside_scope
+      tickers:
+      - TGT
+      - AMZN
+      - NKE
+      - HD
+      - LOW
+      - TJX
+      - ROST
+      - SBUX
+      - MCD
+      - KO
+      - PEP
+      - PG
+      - CL
+      - ULTA
+      - BBY
+      - MDLZ
+      - SYY
+      - TSN
+      reason: Does not make or sell tobacco products.
+  healthcare/medical_device_tariffs:
+    references:
+    - https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title19-section1862&num=0&edition=prelim
+    groups:
+    - status: included
+      tickers:
+      - TMO
+      - ABT
+      - MDT
+      - ISRG
+      - CAH
+      - COR
+      - MCK
+      reason: Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+      default_direction:
+        metric: dNI
+        sign: -1
+    - status: outside_scope
+      tickers:
+      - UNH
+      - ELV
+      - HUM
+      - CVS
+      - PFE
+      - LLY
+      - CI
+      - CNC
+      - MOH
+      - JNJ
+      - MRK
+      - ABBV
+      - AMGN
+      - GILD
+      - HCA
+      - THC
+      - UHS
+      reason: 'Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals'' higher
+        supply costs are not modeled. J&J MedTech imports are not separated from its drug supply.'

@@ -1,0 +1,76 @@
+id: tobacco_excise_increase
+industry: consumer_retail
+name: Federal tobacco excise tax increase
+description: Congress raises the federal cigarette excise tax (currently $1.01 per pack of 20) and can optionally
+  tax oral nicotine products. Higher shelf prices cut volume; Altria, the largest US cigarette maker, is the most
+  exposed. Philip Morris International's US business is mainly ZYN oral nicotine, so it is hit mainly through the
+  oral-nicotine option.
+persistence: permanent
+user_inputs:
+  - key: d_cigarette_tax_per_pack
+    label: Increase in federal cigarette tax per pack
+    unit: USD per pack
+    min: 0
+    max: 3
+    step: 0.25
+    default: 1.01
+    help: Added to the current federal rate of $1.01 per pack (26 U.S.C. 5701(b), in force since 2009). +$1.01 doubles
+      it, as several bills have proposed; cigars are assumed to rise in parity.
+  - key: oral_nicotine_tax_pct
+    label: New tax on oral nicotine and smokeless products
+    unit: percent of retail price
+    min: 0
+    max: 50
+    step: 5
+    default: 0
+    help: Optional ad valorem tax on pouches and moist snuff. Nicotine pouches carry no federal excise today; 0 leaves
+      oral products untaxed.
+assumptions:
+  - key: avg_pack_price
+    label: Average US retail price per pack, including taxes
+    unit: USD per pack
+    low: 7.5
+    base: 8.5
+    high: 9.5
+    source: estimate
+    rationale: State-weighted US retail prices including federal and state excise have been in the high-$7 to $9 range
+      in recent years (Orzechowski & Walker, The Tax Burden on Tobacco); a higher price means a smaller percentage
+      shock.
+  - key: tax_pass_through
+    label: Pass-through of the tax to shelf prices
+    unit: fraction
+    low: 0.9
+    base: 1.0
+    high: 1.3
+    source: estimate
+    rationale: Studies of US cigarette excise changes generally find full or more than full pass-through to retail
+      prices, because manufacturers often raise prices alongside tax increases.
+  - key: price_elasticity
+    label: Price elasticity of demand for tobacco
+    unit: number
+    low: 0.3
+    base: 0.4
+    high: 0.5
+    source: estimate
+    rationale: The consensus range for high-income countries is about -0.3 to -0.5 (US Surgeon General 2014; IARC Handbook
+      14, 2011). Oral nicotine is assumed to respond similarly; youth demand responds more.
+channels:
+  - type: demand_price
+    label: Lower cigarette and cigar volume
+    params:
+      dp_consumer: input.d_cigarette_tax_per_pack * assumption.tax_pass_through / assumption.avg_pack_price
+      elasticity: assumption.price_elasticity
+      exposed_revenue_share: exposure.us_combustible_tobacco_revenue_share
+  - type: demand_price
+    label: Lower oral nicotine and smokeless volume
+    params:
+      dp_consumer: input.oral_nicotine_tax_pct / 100 * assumption.tax_pass_through
+      elasticity: assumption.price_elasticity
+      exposed_revenue_share: exposure.us_oral_nicotine_revenue_share
+exposure_keys: [us_combustible_tobacco_revenue_share, us_oral_nicotine_revenue_share]
+default_role: neutral
+references:
+  - https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section5701&num=0&edition=prelim
+narrative:
+  extra: Only the lost volume is modeled; manufacturers' own price increases (which historically offset part of the
+    volume loss) and retailers' lost tobacco sales are not.

@@ -1,18 +1,21 @@
 id: import_tariffs
 industry: consumer_retail
 name: Import tariffs on consumer goods
-description: A tariff on imported goods raises retailers' merchandise costs; they pass part of it to shoppers, who buy a little less.
+description: An additional tariff on imported goods, on top of the duties already in the latest fiscal-year baseline, raises retailers' merchandise costs; they pass part of it to shoppers, who buy a little less.
 persistence: permanent
 showcase: true
 user_inputs:
   - key: tariff_pct
-    label: Tariff rate
-    unit: percent
-    min: 0
-    max: 100
+    label: Additional tariff above current duties
+    unit: percentage points
+    min: -15
+    max: 80
     step: 1
-    default: 20
-    help: Ad valorem duty on the customs value of imported goods.
+    default: 10
+    help: Change in the ad valorem duty on the customs value of imported goods, measured from the duties already
+      embedded in each retailer's latest fiscal-year costs (FY2025/26 baselines include most 2025 tariffs). Negative
+      values model a rollback; about -15 points would roughly undo the 2025 rise in the average effective US tariff
+      rate (estimate). The model does not net out the small (1 + current duty) denominator effect.
 assumptions:
   - key: pass_through
     label: Share of the cost increase passed to shoppers (φ)

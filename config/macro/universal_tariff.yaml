@@ -11,7 +11,7 @@ user_inputs:
     max: 50
     step: 1
     default: 10
-    help: The 10% baseline tariff announced in April 2025 is a reference point; the average US tariff on imports was under 3% before 2018.
+    help: Added on top of the duties already in each company's latest fiscal-year costs (FY2025/26 baselines include most 2025 tariffs, including the April 2025 10% baseline tariff). For reference, the average US tariff on imports was under 3% before 2018.
 assumptions:
   - key: pass_through
     label: Share of the tariff cost passed to customers (φ)
