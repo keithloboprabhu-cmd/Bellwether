@@ -12,14 +12,13 @@ companies:
         is a model proxy.
   BAC:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 33925.5
+      low: 27650.5
+      high: 36564.15
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000070858.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.90 (0.85-0.97)\
+        \ from mx_us_pretax_share: Untagged split; most income is US, with a modest international markets business."
   WFC:
     audit_us_pretax_income_musd:
       value: 23644.0
@@ -42,44 +41,42 @@ companies:
         is a model proxy.
   C:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      value: 4028.0
+      low: 4028.0
+      high: 4028.0
+      source: derived SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000831001.json
+      rationale: US-incorporated issuer; FY2025 total pretax income less tagged foreign pretax income (IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign).
+        Low/high are the same derivation over up to three recent years.
   AXP:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 11036.0
+      low: 7359.1
+      high: 12415.5
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000004962.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.80 (0.70-0.90)\
+        \ from mx_us_pretax_share: Untagged split; international card services and network are roughly a fifth\
+        \ of revenue."
   MS:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 16465.5
+      low: 7678.45
+      high: 18660.9
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000895421.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.75 (0.65-0.85)\
+        \ from mx_us_pretax_share: Untagged split; international regions are about a quarter of net revenues."
   SCHW:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 11459.0
+      low: 5740.2
+      high: 11459.0
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000316709.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 1.00 (0.90-1.00)\
+        \ from mx_us_pretax_share: No domestic/foreign pretax split tagged in recent 10-Ks and no material\
+        \ foreign business, so assumed US-only; the low end allows for small untagged foreign income."
   BNY:
     audit_us_pretax_income_musd:
       value: 4431.0
@@ -92,14 +89,13 @@ companies:
         is a model proxy.
   STT:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 2052.05
+      low: 1042.2
+      high: 2611.7
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000093751.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.55 (0.45-0.70)\
+        \ from mx_us_pretax_share: Untagged split; roughly 40% of revenue is earned outside the US."
   USB:
     audit_us_pretax_income_musd:
       value: 9330.0
@@ -122,14 +118,14 @@ companies:
         is a model proxy.
   TFC:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 6349.0
+      low: 5714.1
+      high: 6349.0
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000092230.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 1.00 (0.90-1.00)\
+        \ from mx_us_pretax_share: No domestic/foreign pretax split tagged in recent 10-Ks and no material\
+        \ foreign business, so assumed US-only; the low end allows for small untagged foreign income."
   COF:
     audit_us_pretax_income_musd:
       value: 1918.0
@@ -162,14 +158,14 @@ companies:
         is a model proxy.
   KEY:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 2304.0
+      low: 1044.0
+      high: 2304.0
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000091576.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 1.00 (0.90-1.00)\
+        \ from mx_us_pretax_share: No domestic/foreign pretax split tagged in recent 10-Ks and no material\
+        \ foreign business, so assumed US-only; the low end allows for small untagged foreign income."
   ALLY:
     audit_us_pretax_income_musd:
       value: 1031.0
@@ -192,14 +188,14 @@ companies:
         is a model proxy.
   BLK:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 4571.4
+      low: 3577.5
+      high: 5806.5
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0002012383.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.60 (0.50-0.70)\
+        \ from mx_us_pretax_share: Untagged split; about two-fifths of revenue comes from clients outside the\
+        \ Americas."
   AIG:
     audit_us_pretax_income_musd:
       value: 1503.0
@@ -222,14 +218,14 @@ companies:
         is a model proxy.
   PGR:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 14223.0
+      low: 4413.6
+      high: 14223.0
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 1.00 (0.90-1.00)\
+        \ from mx_us_pretax_share: No domestic/foreign pretax split tagged in recent 10-Ks and no material\
+        \ foreign business, so assumed US-only; the low end allows for small untagged foreign income."
   ALL:
     audit_us_pretax_income_musd:
       value: 12722.0

@@ -89,12 +89,35 @@ reviews:
     - ticker: CVSA
       metric: dR
       sign: -1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
+    - ticker: SLM
+      metric: dR
+      sign: 1
     unaffected:
     - LAUR
     - UTI
     - LINC
     - DUOL
-    - SLM
   education/student_loan_forgiveness:
     rationale: Household transfer proxy increases discretionary education demand; not lender debt cancellation.
     expect:
@@ -223,6 +246,30 @@ reviews:
     - ticker: C
       metric: dR
       sign: 1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
+    - ticker: MET
+      metric: dR
+      sign: -1
   financial_services/financial_transaction_tax:
     rationale: Transaction tax reduces trading volume and imposes modeled absorbed costs.
     expect:
@@ -566,13 +613,7 @@ reviews:
     - ticker: WMT
       metric: dNI
       sign: -1
-    unaffected:
-    - TGT
-    - LOW
-    - KR
-    - DG
-    - ROST
-    - ULTA
+    unaffected: []
   healthcare/us_corporate_tax_healthcare:
     rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
       omitted explicitly.
@@ -581,13 +622,9 @@ reviews:
       metric: dNI
       sign: -1
     unaffected:
-    - LLY
-    - CI
     - CNC
     - MRK
     - ABBV
-    - HCA
-    - UHS
     - MDT
   financial_services/us_corporate_tax_financial_services:
     rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
@@ -596,17 +633,7 @@ reviews:
     - ticker: JPM
       metric: dNI
       sign: -1
-    unaffected:
-    - BAC
-    - C
-    - AXP
-    - MS
-    - SCHW
-    - STT
-    - TFC
-    - KEY
-    - BLK
-    - PGR
+    unaffected: []
   tmt/us_corporate_tax_tmt:
     rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
       omitted explicitly.
@@ -615,11 +642,8 @@ reviews:
       metric: dNI
       sign: -1
     unaffected:
-    - AAPL
     - IBM
-    - ORCL
     - INTC
-    - AVGO
   education/us_corporate_tax_education:
     rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
       omitted explicitly.
@@ -628,18 +652,11 @@ reviews:
       metric: dNI
       sign: -1
     unaffected:
-    - LOPE
-    - STRA
     - COUR
-    - UTI
-    - APEI
     - NRDY
     - SKIL
     - CHGG
-    - SCHL
     - KLC
-    - BFAM
-    - SLM
   transportation_logistics/us_corporate_tax_transportation_logistics:
     rationale: Submitted rate increase, modeled only on positive sourced US pretax book income; other provisions
       omitted explicitly.
@@ -648,18 +665,29 @@ reviews:
       metric: dNI
       sign: -1
     unaffected:
-    - UNP
-    - DAL
-    - GM
     - F
     - RIVN
-    - JBHT
-    - ODFL
-    - XPO
-    - SAIA
-    - CSX
-    - NSC
-    - UAL
-    - AAL
-    - LUV
     - LYFT
+  consumer_retail/tobacco_excise_increase:
+    rationale: A higher excise cuts US cigarette volume; non-tobacco firms are unaffected.
+    expect:
+    - ticker: MO
+      metric: dR
+      sign: -1
+    unaffected:
+    - TGT
+    - NKE
+    - KO
+  healthcare/medical_device_tariffs:
+    rationale: Device importers pay the tariff; drugmakers are covered elsewhere.
+    expect:
+    - ticker: MDT
+      metric: dNI
+      sign: -1
+    - ticker: ISRG
+      metric: dNI
+      sign: -1
+    unaffected:
+    - PFE
+    - UNH
+    - HCA

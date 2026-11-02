@@ -136,7 +136,7 @@ METHODOLOGY §5 for selection rules, source provenance and refresh semantics.
 ### Full policy audit
 
 Run `.venv/bin/python scripts/audit_policies.py` after policy/exposure changes.
-The generated [policy audit](design/reviews/POLICY_AUDIT.md) covers all 72 industry
+The generated [policy audit](design/reviews/POLICY_AUDIT.md) covers all 74 industry
 policies and 10 macro shocks, with company scope, valid input boundaries, accounting,
 scenario bounds and remaining estimate/coverage limitations. Economic review entries
 live in `config/policy_review.yaml` and are enforced by the normal test suite.

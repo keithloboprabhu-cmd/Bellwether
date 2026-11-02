@@ -12,14 +12,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.04
+      low: 0.02
+      high: 0.06
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Lockheed Martin reports roughly three-quarters
+        of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small.
+        Replaces a GD prior.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -32,14 +32,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.69
+      low: 0.65
+      high: 0.73
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Lockheed Martin reports roughly three-quarters
+        of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small.
+        Replaces a GD prior.'
       applicable: true
     govcon_fed_it_share:
       value: 0.02
@@ -63,14 +63,14 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.73
+      low: 0.7
+      high: 0.76
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Lockheed Martin reports roughly three-quarters
+        of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small.
+        Replaces a GD prior.'
       applicable: true
   NOC:
     govcon_advisory_share:
@@ -84,14 +84,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.04
+      low: 0.02
+      high: 0.06
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Northrop Grumman reports about 85% of sales to
+        the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD
+        prior.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -104,14 +104,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.82
+      low: 0.78
+      high: 0.86
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Northrop Grumman reports about 85% of sales to
+        the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD
+        prior.'
       applicable: true
     govcon_fed_it_share:
       value: 0.03
@@ -135,14 +135,14 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.86
+      low: 0.83
+      high: 0.89
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Northrop Grumman reports about 85% of sales to
+        the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD
+        prior.'
       applicable: true
   RTX:
     govcon_advisory_share:
@@ -156,14 +156,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.02
+      low: 0.01
+      high: 0.03
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): RTX reports a little under half of sales from
+        the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest.
+        Replaces a GD prior.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -176,14 +176,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.43
+      low: 0.4
+      high: 0.46
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): RTX reports a little under half of sales from
+        the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest.
+        Replaces a GD prior.'
       applicable: true
     govcon_fed_it_share:
       value: 0.01
@@ -207,14 +207,14 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.45
+      low: 0.42
+      high: 0.48
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): RTX reports a little under half of sales from
+        the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest.
+        Replaces a GD prior.'
       applicable: true
   HII:
     govcon_advisory_share:
@@ -228,14 +228,13 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.03
+      low: 0.01
+      high: 0.05
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Huntington Ingalls builds Navy and Coast Guard
+        ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -248,14 +247,13 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.94
+      low: 0.9
+      high: 0.97
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Huntington Ingalls builds Navy and Coast Guard
+        ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior.'
       applicable: true
     govcon_fed_it_share:
       value: 0.05
@@ -279,14 +277,13 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.97
+      low: 0.95
+      high: 0.99
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Huntington Ingalls builds Navy and Coast Guard
+        ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior.'
       applicable: true
   OSK:
     govcon_advisory_share:
@@ -300,14 +297,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.1
+      low: 0.05
+      high: 0.12
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Oshkosh''s defense segment is a minority of sales
+        and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational
+        trucks are commercial. Replaces a GD prior.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -320,14 +317,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.12
+      low: 0.08
+      high: 0.18
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Oshkosh''s defense segment is a minority of sales
+        and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational
+        trucks are commercial. Replaces a GD prior.'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -351,14 +348,14 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.22
+      low: 0.15
+      high: 0.3
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Oshkosh''s defense segment is a minority of sales
+        and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational
+        trucks are commercial. Replaces a GD prior.'
       applicable: true
   KBR:
     govcon_advisory_share:
@@ -372,14 +369,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_civilian_share:
-      value: 0.23
-      low: 0.12
-      high: 0.39
+      value: 0.1
+      low: 0.06
+      high: 0.14
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): KBR''s Mission Technology Solutions (about two-thirds
+        of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces
+        a BAH/CACI median.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.56
@@ -392,14 +389,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.71
-      low: 0.29
-      high: 0.8
+      value: 0.45
+      low: 0.35
+      high: 0.52
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): KBR''s Mission Technology Solutions (about two-thirds
+        of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces
+        a BAH/CACI median.'
       applicable: true
     govcon_fed_it_share:
       value: 0.05
@@ -423,14 +420,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.956
-      low: 0.49
-      high: 0.99
+      value: 0.55
+      low: 0.45
+      high: 0.62
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): KBR''s Mission Technology Solutions (about two-thirds
+        of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces
+        a BAH/CACI median.'
       applicable: true
   KTOS:
     govcon_advisory_share:
@@ -444,14 +441,13 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.02
+      low: 0.0
+      high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kratos sells drones, satellites and hypersonics
+        mainly to DoD; about seven-tenths of revenue is US government.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -464,14 +460,13 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.68
+      low: 0.63
+      high: 0.73
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kratos sells drones, satellites and hypersonics
+        mainly to DoD; about seven-tenths of revenue is US government.'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -495,14 +490,13 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.7
+      low: 0.65
+      high: 0.75
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kratos sells drones, satellites and hypersonics
+        mainly to DoD; about seven-tenths of revenue is US government.'
       applicable: true
   AVAV:
     govcon_advisory_share:
@@ -516,14 +510,13 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.02
+      low: 0.0
+      high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AeroVironment sells small drones and loitering
+        munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -536,14 +529,13 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.6
+      low: 0.53
+      high: 0.68
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AeroVironment sells small drones and loitering
+        munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary.'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -567,14 +559,13 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
+      value: 0.62
+      low: 0.55
       high: 0.7
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AeroVironment sells small drones and loitering
+        munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary.'
       applicable: true
   BWXT:
     govcon_advisory_share:
@@ -590,12 +581,12 @@ companies:
     govcon_civilian_share:
       value: 0.07
       low: 0.04
-      high: 0.094
+      high: 0.1
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): BWX Technologies'' naval nuclear components (funded
+        through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense
+        civil.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -608,14 +599,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.68
+      low: 0.62
+      high: 0.74
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): BWX Technologies'' naval nuclear components (funded
+        through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense
+        civil.'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -639,14 +630,14 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.75
+      low: 0.7
+      high: 0.8
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): BWX Technologies'' naval nuclear components (funded
+        through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense
+        civil.'
       applicable: true
   TXT:
     govcon_advisory_share:
@@ -660,14 +651,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.01
+      low: 0.0
+      high: 0.02
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Textron''s US-government sales (Bell military,
+        Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial.
+        Replaces a GD prior.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -680,14 +671,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.21
+      low: 0.17
+      high: 0.25
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Textron''s US-government sales (Bell military,
+        Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial.
+        Replaces a GD prior.'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -711,14 +702,14 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.22
+      low: 0.18
+      high: 0.26
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Textron''s US-government sales (Bell military,
+        Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial.
+        Replaces a GD prior.'
       applicable: true
   ICFI:
     govcon_advisory_share:
@@ -732,14 +723,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_civilian_share:
-      value: 0.23
-      low: 0.12
-      high: 0.39
+      value: 0.44
+      low: 0.36
+      high: 0.5
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): ICF earns about half its revenue from US federal
+        agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense
+        is small. Replaces a BAH/CACI median (0.71 defense).'
       applicable: true
     govcon_cost_plus_share:
       value: 0.56
@@ -752,14 +743,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.71
-      low: 0.29
-      high: 0.8
+      value: 0.06
+      low: 0.03
+      high: 0.1
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): ICF earns about half its revenue from US federal
+        agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense
+        is small. Replaces a BAH/CACI median (0.71 defense).'
       applicable: true
     govcon_fed_it_share:
       value: 0.2
@@ -783,14 +774,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.956
-      low: 0.49
-      high: 0.99
+      value: 0.5
+      low: 0.42
+      high: 0.56
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): ICF earns about half its revenue from US federal
+        agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense
+        is small. Replaces a BAH/CACI median (0.71 defense).'
       applicable: true
   TTEK:
     govcon_advisory_share:
@@ -804,14 +795,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_civilian_share:
-      value: 0.23
-      low: 0.12
-      high: 0.39
+      value: 0.16
+      low: 0.1
+      high: 0.22
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tetra Tech''s US federal work (USAID, EPA, DoD
+        environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial
+        and international. Replaces a BAH/CACI median.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.56
@@ -824,14 +815,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.71
-      low: 0.29
-      high: 0.8
+      value: 0.06
+      low: 0.03
+      high: 0.1
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tetra Tech''s US federal work (USAID, EPA, DoD
+        environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial
+        and international. Replaces a BAH/CACI median.'
       applicable: true
     govcon_fed_it_share:
       value: 0.02
@@ -855,14 +846,14 @@ companies:
         relying on this company result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.956
-      low: 0.49
-      high: 0.99
+      value: 0.22
+      low: 0.15
+      high: 0.3
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Government engineering
-        and advisory; median base and outer low/high from BAH/LDOS/SAIC/CACI/PSN in
-        committed exposure configuration. Dimensionless peer prior; review before
-        relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tetra Tech''s US federal work (USAID, EPA, DoD
+        environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial
+        and international. Replaces a BAH/CACI median.'
       applicable: true
   MRCY:
     govcon_advisory_share:
@@ -876,14 +867,13 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.02
+      low: 0.0
+      high: 0.04
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mercury Systems sells defense electronics mostly
+        as a subcontractor to US primes on DoD programs.'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -896,14 +886,13 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.73
+      low: 0.63
+      high: 0.83
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mercury Systems sells defense electronics mostly
+        as a subcontractor to US primes on DoD programs.'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -927,14 +916,13 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.75
+      low: 0.65
+      high: 0.85
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mercury Systems sells defense electronics mostly
+        as a subcontractor to US primes on DoD programs.'
       applicable: true
   VSEC:
     govcon_advisory_share:
@@ -948,14 +936,14 @@ companies:
         This is a model boundary, not a reported zero measurement.'
       applicable: true
     govcon_civilian_share:
-      value: 0.07
-      low: 0.04
-      high: 0.094
+      value: 0.01
+      low: 0.0
+      high: 0.02
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): VSE has sold most of its federal and defense
+        services business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior
+        (0.68).'
       applicable: true
     govcon_cost_plus_share:
       value: 0.298
@@ -968,14 +956,14 @@ companies:
         result.
       applicable: true
     govcon_defense_intel_share:
-      value: 0.586
-      low: 0.58
-      high: 0.65
+      value: 0.04
+      low: 0.01
+      high: 0.08
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): VSE has sold most of its federal and defense
+        services business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior
+        (0.68).'
       applicable: true
     govcon_fed_it_share:
       value: 0.0
@@ -999,12 +987,12 @@ companies:
         result.
       applicable: true
     govcon_us_gov_share:
-      value: 0.68
-      low: 0.66
-      high: 0.7
+      value: 0.05
+      low: 0.02
+      high: 0.1
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Defense platforms
-        and equipment; median base and outer low/high from GD in committed exposure
-        configuration. Dimensionless peer prior; review before relying on this company
-        result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): VSE has sold most of its federal and defense
+        services business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior
+        (0.68).'
       applicable: true

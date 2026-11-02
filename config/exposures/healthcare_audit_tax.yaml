@@ -52,24 +52,23 @@ companies:
         is a model proxy.
   LLY:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 11578.95
+      low: 1966.2
+      high: 16725.15
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000059478.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.45 (0.30-0.65)\
+        \ from mx_us_pretax_share: Untagged split; roughly a third of revenue is ex-US and much manufacturing\
+        \ profit is booked in Ireland and Puerto Rico."
   CI:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 7391.95
+      low: 4742.1
+      high: 7781.0
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001739940.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.95 (0.90-1.00)\
+        \ from mx_us_pretax_share: Untagged split; international health is a small share after the 2022 divestiture."
   CNC:
     audit_us_pretax_income_musd:
       value: 0.0
@@ -77,9 +76,8 @@ companies:
       high: 0.0
       applicable: false
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      rationale: UNQUANTIFIED sentinel, not a measured zero. FY2025 total pretax book loss; the positive-income
+        proxy gives no current-tax effect and NOL/deferred-tax value is not modeled.
   MOH:
     audit_us_pretax_income_musd:
       value: 589.0
@@ -107,9 +105,9 @@ companies:
       high: 0.0
       applicable: false
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      rationale: UNQUANTIFIED sentinel, not a measured zero. FY2025 tagged US pretax book loss (-4,948 $M)
+        despite positive total income; the positive-income proxy does not apply and US taxable income is not
+        disclosed.
   ABBV:
     audit_us_pretax_income_musd:
       value: 0.0
@@ -117,9 +115,9 @@ companies:
       high: 0.0
       applicable: false
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      rationale: UNQUANTIFIED sentinel, not a measured zero. FY2025 tagged US pretax book loss (-3,540 $M)
+        despite positive total income; the positive-income proxy does not apply and US taxable income is not
+        disclosed.
   AMGN:
     audit_us_pretax_income_musd:
       value: 8220.0
@@ -142,14 +140,13 @@ companies:
         is a model proxy.
   HCA:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 9743.512
+      low: 7390.054
+      high: 9832.0
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000860730.json
+      rationale: "No domestic/foreign split tagged. FY2025 total pretax income \xD7 US share 0.99 (0.96-1.00)\
+        \ from mx_us_pretax_share: None"
   THC:
     audit_us_pretax_income_musd:
       value: 2805.0
@@ -162,14 +159,13 @@ companies:
         is a model proxy.
   UHS:
     audit_us_pretax_income_musd:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      value: 1881.141
+      low: 860.426
+      high: 1881.141
+      source: derived SEC companyfacts
+      source_url: https://data.sec.gov/api/xbrl/companyfacts/CIK0000352915.json
+      rationale: US-incorporated issuer; FY2025 total pretax income less tagged foreign pretax income (IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign).
+        Low/high are the same derivation over up to three recent years.
   TMO:
     audit_us_pretax_income_musd:
       value: 2608.0
@@ -197,9 +193,8 @@ companies:
       high: 0.0
       applicable: false
       source: estimate
-      rationale: UNQUANTIFIED sentinel, not a measured zero. US jurisdiction, positive taxable-income proxy
-        or pass-through tax status not established. Deferred tax assets/valuation allowances and foreign income
-        are not modeled.
+      rationale: UNQUANTIFIED sentinel, not a measured zero. Irish-incorporated (Medtronic plc); 'domestic'
+        in its tax note is not US federal income.
   CAH:
     audit_us_pretax_income_musd:
       value: 1753.0

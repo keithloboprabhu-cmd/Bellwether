@@ -146,3 +146,45 @@ companies:
       high: 0.901
       source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2024, FY2025, FY2026
       source_url: https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/0000764478-26-000009-index.htm
+  MDLZ:
+    mx_us_pretax_share:
+      value: 0.258
+      low: 0.219
+      high: 0.3
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/1103982/000162828026005345/0001628280-26-005345-index.htm
+  MO:
+    mx_us_pretax_share:
+      value: 1.0
+      low: 0.969
+      high: 1.0
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/0000764180-26-000017-index.htm
+  PFGC:
+    mx_us_pretax_share:
+      value: 0.986
+      low: 0.941
+      high: 1.0
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2024, FY2025, FY2026
+      source_url: https://www.sec.gov/Archives/edgar/data/1618673/000119312526346886/0001193125-26-346886-index.htm
+  PM:
+    mx_us_pretax_share:
+      value: 0.063
+      low: 0.033
+      high: 0.093
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/0001628280-26-005939-index.htm
+  SYY:
+    mx_us_pretax_share:
+      value: 0.88
+      low: 0.825
+      high: 0.933
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2024, FY2025, FY2026
+      source_url: https://www.sec.gov/Archives/edgar/data/96021/000009602126000033/0000096021-26-000033-index.htm
+  TSN:
+    mx_us_pretax_share:
+      value: 0.708
+      low: 0.332
+      high: 1.0
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2022, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/100493/000010049325000095/0000100493-25-000095-index.htm

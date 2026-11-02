@@ -166,3 +166,52 @@ companies:
       source: estimate
       rationale: No domestic/foreign pretax split tagged in recent 10-Ks and no material foreign business, so assumed US-only;
         the low end allows for small untagged foreign income.
+  ALL:
+    mx_us_pretax_share:
+      value: 0.967
+      low: 0.937
+      high: 0.997
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/899051/000089905126000031/0000899051-26-000031-index.htm
+  MET:
+    mx_us_pretax_share:
+      value: 0.277
+      low: 0.0
+      high: 0.733
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/1099219/000109921926000013/0001099219-26-000013-index.htm
+  SNEX:
+    mx_us_pretax_share:
+      value: 0.353
+      low: 0.246
+      high: 0.448
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/913760/000091376025000196/0000913760-25-000196-index.htm
+  SPGI:
+    mx_us_pretax_share:
+      value: 0.568
+      low: 0.487
+      high: 0.677
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/0000064040-26-000013-index.htm
+  TRV:
+    mx_us_pretax_share:
+      value: 0.945
+      low: 0.896
+      high: 0.992
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/86312/000008631226000065/0000086312-26-000065-index.htm
+  V:
+    mx_us_pretax_share:
+      value: 0.618
+      low: 0.578
+      high: 0.664
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/0001403161-25-000089-index.htm
+  PYPL:
+    mx_us_pretax_share:
+      value: 0.197
+      low: 0.148
+      high: 0.261
+      source: SEC EDGAR XBRL income-tax note (domestic/foreign pretax income), average of FY2023, FY2024, FY2025
+      source_url: https://www.sec.gov/Archives/edgar/data/1633917/000163391726000024/0001633917-26-000024-index.htm

@@ -941,13 +941,14 @@ companies:
         forecast.
       applicable: true
     tl_domestic_passenger_revenue_share:
-      value: 0.564
-      low: 0.564
-      high: 0.564
+      value: 0.93
+      low: 0.88
+      high: 0.97
       source: estimate
-      rationale: Explicit modeling prior, not an issuer disclosure. Passenger aviation;
-        median base and outer low/high from DAL in committed exposure configuration.
-        Dimensionless peer prior; review before relying on this company result.
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Southwest flies an almost entirely domestic network
+        (near-international routes to Mexico and the Caribbean are a few percent of capacity); passenger revenue
+        is most of total revenue. Replaces a Delta prior (0.564).'
       applicable: true
     tl_fuel_co2_mt:
       value: 14.393780380026515

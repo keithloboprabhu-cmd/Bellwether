@@ -12,6 +12,25 @@ companies:
         \ US capex amount. Includes US fabs; geographic allocation and placed-in-service eligibility require\
         \ review. The policy applies its separate qualifying-share assumption."
       applicable: true
+    greater_china_revenue_share:
+      value: 0.28
+      low: 0.2
+      high: 0.3
+      source: estimate
+      source_url: null
+      rationale: "Company-specific estimate (audit round 3): Intel's 10-K reports China (by billing location)\
+        \ at roughly 27\u201329% of revenue in recent years, largely PC assemblers. Replaces an NVIDIA prior\
+        \ (0.091)."
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.01
+      low: 0.0
+      high: 0.03
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Only a small share (Gaudi and some data-center
+        parts) is subject to advanced-computing controls.'
+      applicable: true
   MU:
     us_semis_mfg_capex_musd:
       value: 7678.0
@@ -79,6 +98,16 @@ companies:
         producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
         coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
       applicable: true
+    us_consumer_revenue_share:
+      value: 0.35
+      low: 0.3
+      high: 0.4
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Coca-Cola''s North America operating segment is
+        roughly a third of net operating revenue; the rest is international bottling and concentrate sales.
+        Replaces a 0.70 retailer prior.'
+      applicable: true
   PEP:
     us_sweetened_beverage_revenue_share:
       value: 0.1
@@ -90,6 +119,16 @@ companies:
         producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
         coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
       applicable: true
+    us_consumer_revenue_share:
+      value: 0.57
+      low: 0.52
+      high: 0.62
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): PepsiCo''s North America beverage and food divisions
+        are a little under three-fifths of net revenue (FY2025 segment reporting), slightly less for the US
+        alone. Replaces a 0.70 WMT/COST/NKE prior.'
+      applicable: true
   SBUX:
     us_sweetened_beverage_revenue_share:
       value: 0.15
@@ -100,6 +139,16 @@ companies:
       rationale: 'Company-specific estimate: Company-specific US covered-beverage revenue proxy separating
         producer/restaurant exposure from grocery retailers. Geographic mix, drink mix and the tax''s product
         coverage are not separately disclosed; use a wide sensitivity range, not a measured share.'
+      applicable: true
+    us_import_share_of_cogs:
+      value: 0.07
+      low: 0.04
+      high: 0.12
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Starbucks'' modeled cost of revenue ($31.9B) includes
+        store labor and occupancy, so the imported share is small: green coffee for US stores plus some merchandise
+        and equipment. Replaces a 0.27 retailer prior that implied about $8.6B of imports.'
       applicable: true
   MCD:
     us_sweetened_beverage_revenue_share:
@@ -858,6 +907,36 @@ companies:
         share for all revenue. The filing supplies business context; the 2.0% share is an estimate with a wide
         range, not disclosed eligible modernization revenue.'
       applicable: true
+    govcon_us_gov_share:
+      value: 0.73
+      low: 0.7
+      high: 0.76
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Lockheed Martin reports roughly three-quarters
+        of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small.
+        Replaces a GD prior.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.69
+      low: 0.65
+      high: 0.73
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Lockheed Martin reports roughly three-quarters
+        of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small.
+        Replaces a GD prior.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.04
+      low: 0.02
+      high: 0.06
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Lockheed Martin reports roughly three-quarters
+        of sales from the US government (FMS included), almost all DoD; NASA and other civil work is small.
+        Replaces a GD prior.'
+      applicable: true
   NOC:
     govcon_fed_it_share:
       value: 0.03
@@ -869,6 +948,36 @@ companies:
         from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
         share for all revenue. The filing supplies business context; the 3.0% share is an estimate with a wide
         range, not disclosed eligible modernization revenue.'
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.86
+      low: 0.83
+      high: 0.89
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Northrop Grumman reports about 85% of sales to
+        the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD
+        prior.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.82
+      low: 0.78
+      high: 0.86
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Northrop Grumman reports about 85% of sales to
+        the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD
+        prior.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.04
+      low: 0.02
+      high: 0.06
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Northrop Grumman reports about 85% of sales to
+        the US government, overwhelmingly DoD and intelligence; NASA is a small civil share. Replaces a GD
+        prior.'
       applicable: true
   RTX:
     govcon_fed_it_share:
@@ -882,6 +991,36 @@ companies:
         share for all revenue. The filing supplies business context; the 1.0% share is an estimate with a wide
         range, not disclosed eligible modernization revenue.'
       applicable: true
+    govcon_us_gov_share:
+      value: 0.45
+      low: 0.42
+      high: 0.48
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): RTX reports a little under half of sales from
+        the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest.
+        Replaces a GD prior.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.43
+      low: 0.4
+      high: 0.46
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): RTX reports a little under half of sales from
+        the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest.
+        Replaces a GD prior.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.02
+      low: 0.01
+      high: 0.03
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): RTX reports a little under half of sales from
+        the US government (Raytheon, military engines, Collins defense); commercial aerospace is the rest.
+        Replaces a GD prior.'
+      applicable: true
   HII:
     govcon_fed_it_share:
       value: 0.05
@@ -893,6 +1032,33 @@ companies:
         from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
         share for all revenue. The filing supplies business context; the 5.0% share is an estimate with a wide
         range, not disclosed eligible modernization revenue.'
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.97
+      low: 0.95
+      high: 0.99
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Huntington Ingalls builds Navy and Coast Guard
+        ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.94
+      low: 0.9
+      high: 0.97
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Huntington Ingalls builds Navy and Coast Guard
+        ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.03
+      low: 0.01
+      high: 0.05
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Huntington Ingalls builds Navy and Coast Guard
+        ships; nearly all revenue is US government, mostly the Navy. Replaces a GD prior.'
       applicable: true
   KBR:
     govcon_fed_it_share:
@@ -906,6 +1072,36 @@ companies:
         share for all revenue. The filing supplies business context; the 5.0% share is an estimate with a wide
         range, not disclosed eligible modernization revenue.'
       applicable: true
+    govcon_us_gov_share:
+      value: 0.55
+      low: 0.45
+      high: 0.62
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): KBR''s Mission Technology Solutions (about two-thirds
+        of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces
+        a BAH/CACI median.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.45
+      low: 0.35
+      high: 0.52
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): KBR''s Mission Technology Solutions (about two-thirds
+        of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces
+        a BAH/CACI median.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.1
+      low: 0.06
+      high: 0.14
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): KBR''s Mission Technology Solutions (about two-thirds
+        of revenue) serves DoD, NASA and UK defence; Sustainable Technology Solutions is commercial. Replaces
+        a BAH/CACI median.'
+      applicable: true
   ICFI:
     govcon_fed_it_share:
       value: 0.2
@@ -918,6 +1114,36 @@ companies:
         share for all revenue. The filing supplies business context; the 20.0% share is an estimate with a
         wide range, not disclosed eligible modernization revenue.'
       applicable: true
+    govcon_us_gov_share:
+      value: 0.5
+      low: 0.42
+      high: 0.56
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): ICF earns about half its revenue from US federal
+        agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense
+        is small. Replaces a BAH/CACI median (0.71 defense).'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.06
+      low: 0.03
+      high: 0.1
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): ICF earns about half its revenue from US federal
+        agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense
+        is small. Replaces a BAH/CACI median (0.71 defense).'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.44
+      low: 0.36
+      high: 0.5
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): ICF earns about half its revenue from US federal
+        agencies, mostly civilian (HHS, USAID, EPA, DOE), plus state/local and commercial clients; defense
+        is small. Replaces a BAH/CACI median (0.71 defense).'
+      applicable: true
   TTEK:
     govcon_fed_it_share:
       value: 0.02
@@ -929,6 +1155,36 @@ companies:
         from weapons platforms, engineering and environmental work. Do not inherit a 17% GD or 45% services-peer
         share for all revenue. The filing supplies business context; the 2.0% share is an estimate with a wide
         range, not disclosed eligible modernization revenue.'
+      applicable: true
+    govcon_us_gov_share:
+      value: 0.22
+      low: 0.15
+      high: 0.3
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tetra Tech''s US federal work (USAID, EPA, DoD
+        environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial
+        and international. Replaces a BAH/CACI median.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.06
+      low: 0.03
+      high: 0.1
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tetra Tech''s US federal work (USAID, EPA, DoD
+        environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial
+        and international. Replaces a BAH/CACI median.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.16
+      low: 0.1
+      high: 0.22
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tetra Tech''s US federal work (USAID, EPA, DoD
+        environmental) is about a fifth of revenue after 2025 USAID cuts; most revenue is state/local, commercial
+        and international. Replaces a BAH/CACI median.'
       applicable: true
   CSCO:
     greater_china_revenue_share:
@@ -1061,8 +1317,8 @@ companies:
       source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Delta row; annual sum $1089.832000M
       source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
       rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
-        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical
-        observation, not certainty about future fees. Fare recapture remains an unverified assumption.
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption.
       applicable: true
     tl_domestic_passenger_revenue_share:
       value: 0.5639006375860109
@@ -1070,8 +1326,8 @@ companies:
       high: 0.5639006375860109
       source: 'DAL FY2025 Form 10-K, geographic passenger revenue: domestic $35731M / total $63364.0M'
       source_url: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/0000027904-26-000013-index.htm
-      rationale: Reported domestic passenger revenue / consolidated total revenue, not a fully measured
-        taxable-fare base. Statutory ticket-tax exclusions and US-border rules are not separately quantified.
+      rationale: Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare
+        base. Statutory ticket-tax exclusions and US-border rules are not separately quantified.
       applicable: true
   AAL:
     tl_checked_bag_fee_revenue_share:
@@ -1081,8 +1337,8 @@ companies:
       source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, American row; annual sum $1465.339192M
       source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
       rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
-        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical
-        observation, not certainty about future fees. Fare recapture remains an unverified assumption.
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption.
       applicable: true
     tl_domestic_passenger_revenue_share:
       value: 0.6443175370197499
@@ -1090,8 +1346,8 @@ companies:
       high: 0.6443175370197499
       source: 'AAL FY2025 Form 10-K, geographic passenger revenue: domestic $35201M / total $54633.0M'
       source_url: https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/0000006201-26-000014-index.htm
-      rationale: Reported domestic passenger revenue / consolidated total revenue, not a fully measured
-        taxable-fare base. Statutory ticket-tax exclusions and US-border rules are not separately quantified.
+      rationale: Reported domestic passenger revenue / consolidated total revenue, not a fully measured taxable-fare
+        base. Statutory ticket-tax exclusions and US-border rules are not separately quantified.
       applicable: true
   UAL:
     tl_checked_bag_fee_revenue_share:
@@ -1101,8 +1357,8 @@ companies:
       source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, United row; annual sum $1351.302143M
       source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
       rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
-        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical
-        observation, not certainty about future fees. Fare recapture remains an unverified assumption.
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption.
       applicable: true
   LUV:
     tl_checked_bag_fee_revenue_share:
@@ -1112,8 +1368,719 @@ companies:
       source: BTS Baggage Fees 2007-2025 4Q.xlsx, 2025 sheet, Southwest row; annual sum $582.416000M
       source_url: https://www.bts.gov/sites/bts.dot.gov/files/2026-05/Baggage%20Fees%202007-2025%204Q.xlsx
       rationale: Observed FY2025 BTS carrier baggage fees / consolidated FY2025 operating revenue. BTS reporting-carrier
-        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical
-        observation, not certainty about future fees. Fare recapture remains an unverified assumption. Southwest
-        introduced broad checked-bag charges during 2025; this partial-year observation is not an annualized
-        steady-state forecast.
+        perimeter can differ from consolidated regional operations. Fixed bounds identify the historical observation,
+        not certainty about future fees. Fare recapture remains an unverified assumption. Southwest introduced
+        broad checked-bag charges during 2025; this partial-year observation is not an annualized steady-state
+        forecast.
+      applicable: true
+    tl_domestic_passenger_revenue_share:
+      value: 0.93
+      low: 0.88
+      high: 0.97
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Southwest flies an almost entirely domestic network
+        (near-international routes to Mexico and the Caribbean are a few percent of capacity); passenger revenue
+        is most of total revenue. Replaces a Delta prior (0.564).'
+      applicable: true
+  KR:
+    us_import_share_of_cogs:
+      value: 0.1
+      low: 0.05
+      high: 0.16
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kroger''s cost of sales is dominated by fresh
+        food, grocery and pharmacy; most US food spending is domestically produced (imports are roughly a sixth
+        of US food by value) and general merchandise is a small share of sales. Replaces a WMT/COST/TGT general-merchandise
+        prior.'
+      applicable: true
+  DG:
+    us_import_share_of_cogs:
+      value: 0.17
+      low: 0.1
+      high: 0.25
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Consumables (mostly US-made branded and private-label
+        staples) are about four-fifths of Dollar General sales; seasonal, home and apparel lines are largely
+        imported. Replaces a WMT/COST/TGT prior.'
+      applicable: true
+  PG:
+    us_consumer_revenue_share:
+      value: 0.47
+      low: 0.43
+      high: 0.5
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Procter & Gamble reports US net sales at a little
+        under half of the total. Replaces a 0.70 retailer prior.'
+      applicable: true
+  MO:
+    us_consumer_revenue_share:
+      value: 0.95
+      low: 0.9
+      high: 1.0
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm
+      rationale: 'Company-specific estimate (audit round 3): Altria sells only in the US; revenue reaches consumers
+        through wholesalers and retailers. Low end allows for excise collected in revenue.'
+      applicable: true
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: SNAP benefits cannot buy tobacco (7 U.S.C. 2012(k) eligible
+        foods). This is a model boundary, not a reported zero measurement.'
+    us_sweetened_beverage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Altria sells no beverages. This is a model boundary, not
+        a reported zero measurement.'
+  PM:
+    us_consumer_revenue_share:
+      value: 0.08
+      low: 0.06
+      high: 0.11
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): PMI''s US business (Swedish Match ZYN, cigars
+        and IQOS) is a high-single-digit share of net revenue; the rest is international.'
+      applicable: true
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: SNAP benefits cannot buy tobacco. This is a model boundary,
+        not a reported zero measurement.'
+    us_sweetened_beverage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: PMI sells no beverages. This is a model boundary, not a
+        reported zero measurement.'
+  MDLZ:
+    us_consumer_revenue_share:
+      value: 0.25
+      low: 0.22
+      high: 0.28
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mondelez''s North America segment (mostly the
+        US) is about a quarter of net revenue.'
+      applicable: true
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Manufacturer: SNAP redemptions are captured by grocery retailers,
+        consistent with PEP/KO/PG. This is a model boundary, not a reported zero measurement.'
+    us_sweetened_beverage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Mondelez sells no US beverages. This is a model boundary,
+        not a reported zero measurement.'
+  TSN:
+    us_consumer_revenue_share:
+      value: 0.85
+      low: 0.75
+      high: 0.92
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tyson''s sales are overwhelmingly US retail and
+        foodservice demand; international is a small share. Foodservice sales still reach US consumers through
+        restaurants.'
+      applicable: true
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Manufacturer: SNAP redemptions are captured by grocery retailers.
+        This is a model boundary, not a reported zero measurement.'
+    us_sweetened_beverage_revenue_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Tyson sells no beverages. This is a model boundary, not
+        a reported zero measurement.'
+  SYY:
+    us_consumer_revenue_share:
+      value: 0.78
+      low: 0.7
+      high: 0.82
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Sysco''s US Foodservice and SYGMA segments are
+        roughly four-fifths of sales; international is the rest. Restaurant demand follows consumer spending.'
+      applicable: true
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: SNAP benefits cannot buy restaurant meals (outside the limited
+        Restaurant Meals Program). This is a model boundary, not a reported zero measurement.'
+  PFGC:
+    us_consumer_revenue_share:
+      value: 0.97
+      low: 0.9
+      high: 1.0
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Performance Food Group operates in the US (foodservice,
+        Vistar and Core-Mark convenience); small Canadian convenience operations.'
+      applicable: true
+    snap_grocery_spend_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Distributor: SNAP redemptions are captured by retailers.
+        This is a model boundary, not a reported zero measurement.'
+  QCOM:
+    us_import_share_of_cogs:
+      value: 0.05
+      low: 0.02
+      high: 0.15
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Qualcomm is fabless and ships mostly to handset
+        and device makers that assemble in Asia, so little of its product is imported into the US by Qualcomm;
+        device-level tariffs reach it only through demand. Replaces an NVIDIA prior (0.45).'
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.45
+      low: 0.35
+      high: 0.5
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Qualcomm reports revenue by customer headquarters;
+        China (incl. Hong Kong) was roughly 45% in recent 10-Ks. Replaces an NVIDIA prior (0.091).'
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.02
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mobile SoCs are not covered by the advanced-computing
+        export rules; Huawei licences were already revoked before the baseline.'
+      applicable: true
+  AMD:
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.1
+      high: 0.4
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Data-center GPUs and CPUs sold to US cloud customers
+        are imported; client and gaming chips go mostly to Asian PC and console assemblers. Replaces an NVIDIA
+        prior (0.45).'
+      applicable: true
+    greater_china_revenue_share:
+      value: 0.22
+      low: 0.15
+      high: 0.28
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AMD has reported China (incl. Hong Kong) at around
+        a fifth to a quarter of revenue, much of it to PC/ODM assemblers. Replaces an NVIDIA prior.'
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.03
+      low: 0.01
+      high: 0.06
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): MI308 sales to China required licences from 2025;
+        restricted data-center revenue is a low-single-digit share.'
+      applicable: true
+  LRCX:
+    greater_china_revenue_share:
+      value: 0.3383
+      low: 0.27
+      high: 0.42
+      source: SEC 10-K XBRL (reports/evidence/filings.json)
+      source_url: https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm
+      rationale: "FY2026 10-K revenue by region: China $7,860M of $23,232M total (33.8%); range covers FY2024\u2013\
+        26 and end-customer vs ship-to differences."
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.03
+      low: 0.01
+      high: 0.06
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm
+      rationale: 'Company-specific estimate (audit round 3): Advanced-node equipment sales to listed Chinese
+        fabs already need licences; a further tightening (e.g. affiliate rules) is estimated at a low-single-digit
+        share of revenue.'
+      applicable: true
+  AMAT:
+    greater_china_revenue_share:
+      value: 0.3
+      low: 0.25
+      high: 0.37
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Applied Materials reported China at about 37%
+        of FY2024 revenue and lower since; equipment export controls are the relevant restriction.'
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.03
+      low: 0.01
+      high: 0.06
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Sales to restricted Chinese fabs beyond existing
+        licences; management has sized further rule changes at a low-single-digit share of revenue.'
+      applicable: true
+  TXN:
+    greater_china_revenue_share:
+      value: 0.2
+      low: 0.15
+      high: 0.25
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Texas Instruments sells broadly to Chinese industrial
+        and automotive customers (around a fifth of revenue); China opened an anti-dumping probe into US analog
+        chips in 2025.'
+      applicable: true
+    restricted_chip_china_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Analog and embedded chips are not covered by advanced-computing
+        export controls. This is a model boundary, not a reported zero measurement.'
+  DELL:
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      source_url: null
+      rationale: UNQUANTIFIED sentinel, not a measured zero. Dell imports most US-sold hardware, but it is
+        a thin-margin OEM facing an industry-wide cost; the policy's single pass-through range (calibrated
+        for chip designers and platforms) would dominate the result (about -80% EPS at defaults), so no number
+        is published until an OEM-specific pass-through is sourced.
+  HPQ:
+    us_import_share_of_cogs:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      applicable: false
+      source: estimate
+      source_url: null
+      rationale: UNQUANTIFIED sentinel, not a measured zero. HP imports nearly all US-sold PCs and printers,
+        but as a thin-margin OEM its result would be driven by the generic pass-through assumption (about -70%
+        EPS at defaults); left unquantified until an OEM-specific pass-through is sourced.
+  ANET:
+    us_import_share_of_cogs:
+      value: 0.55
+      low: 0.3
+      high: 0.75
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): The Americas are roughly four-fifths of Arista''s
+        revenue; switches are contract-manufactured outside the US. Low end allows for USMCA-qualifying Mexican
+        production if exempted.'
+      applicable: true
+  TMUS:
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.15
+      high: 0.35
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Like Verizon, handset purchases (all imported)
+        are about a third of T-Mobile''s cost of revenue, and customs value is below the carrier''s handset
+        cost.'
+      applicable: true
+    us_users_m:
+      value: 110.0
+      low: 90.0
+      high: 135.0
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): T-Mobile serves about 140M connections; unique
+        US people are fewer (tablets, IoT, second lines), following the Verizon convention.'
+      applicable: true
+  INTU:
+    us_users_m:
+      value: 100.0
+      low: 70.0
+      high: 140.0
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): TurboTax, Credit Karma and QuickBooks serve on
+        the order of 100M US consumers and small businesses.'
+      applicable: true
+    us_digital_ad_revenue_share:
+      value: 0.11
+      low: 0.06
+      high: 0.13
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Credit Karma''s personalized credit and loan offers
+        (about a ninth of revenue) depend on targeting with consumer data, so they are exposed like targeted
+        advertising.'
+      applicable: true
+  TMO:
+    us_import_share_of_cogs:
+      value: 0.12
+      low: 0.06
+      high: 0.2
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): About half of Thermo Fisher''s revenue is North
+        American and much of it is made in large US plants; imports come from European and Asian sites. Replaces
+        a PFE/LLY drug prior (0.30).'
+      applicable: true
+  ABT:
+    us_import_share_of_cogs:
+      value: 0.15
+      low: 0.08
+      high: 0.25
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): The US is about two-fifths of Abbott''s sales;
+        nutrition and diagnostics are largely US-made, while devices come from Ireland, Costa Rica and Asia.
+        Replaces a PFE/LLY prior (0.30).'
+      applicable: true
+  MDT:
+    us_import_share_of_cogs:
+      value: 0.2
+      low: 0.12
+      high: 0.3
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1613103/000161310326000027/mdt-20260424.htm
+      rationale: 'Company-specific estimate (audit round 3): FY2026 10-K: US revenue $18,103M of $36,364M (49.8%);
+        much US-sold product is made in Ireland, Mexico and other non-US plants (Puerto Rico is domestic).
+        Replaces a PFE/LLY prior (0.30).'
+      applicable: true
+  ISRG:
+    us_import_share_of_cogs:
+      value: 0.25
+      low: 0.15
+      high: 0.35
+      source: estimate
+      source_url: https://www.sec.gov/Archives/edgar/data/1035267/000103526726000011/isrg-20251231.htm
+      rationale: 'Company-specific estimate (audit round 3): FY2025 10-K: US revenue $6,816M of $10,065M (67.7%).
+        Systems are built in California but instruments and accessories (about 60% of revenue) are largely
+        made in Mexicali, Mexico; USMCA exemptions are ignored in this hypothetical.'
+      applicable: true
+  CAH:
+    us_import_share_of_cogs:
+      value: 0.012
+      low: 0.006
+      high: 0.02
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Cardinal Health''s medical products and distribution
+        segment (about 5% of revenue) sources Cardinal-brand gloves, gowns and consumables largely from Asia,
+        roughly $3B of cost; pharmaceutical distribution purchases domestically at manufacturer prices.'
+      applicable: true
+  COR:
+    us_import_share_of_cogs:
+      value: 0.003
+      low: 0.0
+      high: 0.008
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Cencora is overwhelmingly pharmaceutical distribution
+        bought domestically; only small specialty and animal-health products are imported.'
+      applicable: true
+  MCK:
+    us_import_share_of_cogs:
+      value: 0.005
+      low: 0.0
+      high: 0.01
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): McKesson''s medical-surgical business distributes
+        some imported supplies; pharmaceutical distribution is domestic purchasing.'
+      applicable: true
+  GEV:
+    ind_steel_share_of_cogs:
+      value: 0.08
+      low: 0.04
+      high: 0.12
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Wind towers and nacelles, gas-turbine casings
+        and forgings, and transformer cores (grain-oriented electrical steel) make GE Vernova a heavier steel
+        user than aerospace peers (0.03) but lighter than Caterpillar (0.15).'
+      applicable: true
+    ind_infrastructure_capture_share:
+      value: 0.004
+      low: 0.001
+      high: 0.008
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Only the grid share of a broad infrastructure
+        program reaches GE Vernova (transformers, switchgear, grid software); roughly a tenth of outlays are
+        grid, a third of that is equipment, and GE Vernova is one of several large suppliers.'
+      applicable: true
+    ind_us_qre_musd:
+      value: 600.0
+      low: 350.0
+      high: 900.0
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): FY2025 R&D expense was $1,197M (XBRL ResearchAndDevelopmentExpense);
+        about half is assumed US-performed and qualifying. Not a disclosed credit base.'
+      applicable: true
+    ind_us_pretax_income_share:
+      value: 0.271
+      low: 0.028
+      high: 0.514
+      source: SEC 10-K XBRL income-tax note (domestic/foreign pretax income)
+      source_url: https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/0001996810-26-000015-index.htm
+      rationale: Average of tagged years used by the Full Market tax shock; FY2025 domestic pretax was $78M
+        of $2,828M and FY2024 $1,285M of $2,498M, so the range is wide.
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.0
+      low: 0.0
+      high: 0.0
+      source: estimate
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: GE Vernova sells power-generation, wind and grid equipment;
+        defense and intelligence sales are not a reported business. This is a model boundary, not a reported
+        zero measurement.'
+  OSK:
+    govcon_us_gov_share:
+      value: 0.22
+      low: 0.15
+      high: 0.3
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Oshkosh''s defense segment is a minority of sales
+        and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational
+        trucks are commercial. Replaces a GD prior.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.12
+      low: 0.08
+      high: 0.18
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Oshkosh''s defense segment is a minority of sales
+        and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational
+        trucks are commercial. Replaces a GD prior.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.1
+      low: 0.05
+      high: 0.12
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Oshkosh''s defense segment is a minority of sales
+        and its USPS delivery-vehicle contract is federal but non-defense; access equipment and vocational
+        trucks are commercial. Replaces a GD prior.'
+      applicable: true
+  KTOS:
+    govcon_us_gov_share:
+      value: 0.7
+      low: 0.65
+      high: 0.75
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kratos sells drones, satellites and hypersonics
+        mainly to DoD; about seven-tenths of revenue is US government.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.68
+      low: 0.63
+      high: 0.73
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kratos sells drones, satellites and hypersonics
+        mainly to DoD; about seven-tenths of revenue is US government.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.02
+      low: 0.0
+      high: 0.04
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Kratos sells drones, satellites and hypersonics
+        mainly to DoD; about seven-tenths of revenue is US government.'
+      applicable: true
+  AVAV:
+    govcon_us_gov_share:
+      value: 0.62
+      low: 0.55
+      high: 0.7
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AeroVironment sells small drones and loitering
+        munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.6
+      low: 0.53
+      high: 0.68
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AeroVironment sells small drones and loitering
+        munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.02
+      low: 0.0
+      high: 0.04
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): AeroVironment sells small drones and loitering
+        munitions mostly to DoD; international sales (incl. Ukraine aid via FMS) vary.'
+      applicable: true
+  BWXT:
+    govcon_us_gov_share:
+      value: 0.75
+      low: 0.7
+      high: 0.8
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): BWX Technologies'' naval nuclear components (funded
+        through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense civil.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.68
+      low: 0.62
+      high: 0.74
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): BWX Technologies'' naval nuclear components (funded
+        through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense civil.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.07
+      low: 0.04
+      high: 0.1
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): BWX Technologies'' naval nuclear components (funded
+        through DOE Naval Reactors for the Navy) dominate; DOE environmental and NNSA work is non-defense civil.'
+      applicable: true
+  TXT:
+    govcon_us_gov_share:
+      value: 0.22
+      low: 0.18
+      high: 0.26
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Textron''s US-government sales (Bell military,
+        Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial.
+        Replaces a GD prior.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.21
+      low: 0.17
+      high: 0.25
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Textron''s US-government sales (Bell military,
+        Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial.
+        Replaces a GD prior.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.01
+      low: 0.0
+      high: 0.02
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Textron''s US-government sales (Bell military,
+        Textron Systems) are about a fifth of revenue; Textron Aviation and industrial products are commercial.
+        Replaces a GD prior.'
+      applicable: true
+  MRCY:
+    govcon_us_gov_share:
+      value: 0.75
+      low: 0.65
+      high: 0.85
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mercury Systems sells defense electronics mostly
+        as a subcontractor to US primes on DoD programs.'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.73
+      low: 0.63
+      high: 0.83
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mercury Systems sells defense electronics mostly
+        as a subcontractor to US primes on DoD programs.'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.02
+      low: 0.0
+      high: 0.04
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mercury Systems sells defense electronics mostly
+        as a subcontractor to US primes on DoD programs.'
+      applicable: true
+  VSEC:
+    govcon_us_gov_share:
+      value: 0.05
+      low: 0.02
+      high: 0.1
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): VSE has sold most of its federal and defense services
+        business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior (0.68).'
+      applicable: true
+    govcon_defense_intel_share:
+      value: 0.04
+      low: 0.01
+      high: 0.08
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): VSE has sold most of its federal and defense services
+        business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior (0.68).'
+      applicable: true
+    govcon_civilian_share:
+      value: 0.01
+      low: 0.0
+      high: 0.02
+      source: estimate
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): VSE has sold most of its federal and defense services
+        business and is now mainly an aviation and fleet aftermarket distributor. Replaces a GD prior (0.68).'
       applicable: true

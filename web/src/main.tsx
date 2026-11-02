@@ -115,7 +115,7 @@ function Secondary({path,catalog}:{path:string;catalog:Catalog}){
   useEffect(()=>{setData(null);setError('');const controller=new AbortController();if(['/methodology','/backtests'].includes(path))fetchJSON('/api'+path,{signal:controller.signal}).then(setData).catch(e=>{if(e.name!=='AbortError')setError(e.message);});return()=>controller.abort();},[path]);
   if(path==='/styleguide')return <Styleguide/>;
   if(path==='/data')return <DataView/>;
-  if(path==='/about')return <article className="prose"><p className="eyebrow">About</p><h1>Bellwether</h1><p>Built by Keith LoboPrabhu.</p></article>;
+  if(path==='/about')return <article className="prose"><p className="eyebrow">About</p><h1>Bellwether</h1><p>Built by Keith LoboPrabhu, Prubgeet Singh, Payton Seldomridge and Tony Liu.</p></article>;
   if(!['/methodology','/data','/backtests'].includes(path))return <article><h1>Page not found</h1><p>Return home to choose a policy scenario.</p><a href="/">Return home</a></article>;
   if(path==='/methodology')return <article className="methodology-page">{error?<div className="error" role="alert">{error}<p>Reload this page to retry.</p></div>:!data?<p role="status">Loading methodology…</p>:<MethodologyDocument text={data.text}/>}</article>;
   return <article><h1>Historical backtests</h1>{error?<div className="error" role="alert">{error}<p>Reload this page to retry.</p></div>:!data?<p role="status">Loading records…</p>:<BacktestsView data={data}/>}</article>;

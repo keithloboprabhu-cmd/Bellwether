@@ -2,21 +2,23 @@ industry: consumer_retail
 companies:
   MDLZ:
     us_consumer_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.25
+      low: 0.22
+      high: 0.28
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Mondelez''s North America segment (mostly the
+        US) is about a quarter of net revenue.'
+      applicable: true
     snap_grocery_spend_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Manufacturer: SNAP redemptions are captured by grocery
+        retailers, consistent with PEP/KO/PG. This is a model boundary, not a reported zero measurement.'
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
@@ -41,39 +43,34 @@ companies:
       source: estimate
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
     us_sweetened_beverage_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Mondelez sells no US beverages. This is a model boundary,
+        not a reported zero measurement.'
   MO:
     us_consumer_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.95
+      low: 0.9
+      high: 1.0
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      rationale: 'Company-specific estimate (audit round 3): Altria sells only in the US; revenue reaches
+        consumers through wholesalers and retailers. Low end allows for excise collected in revenue.'
+      applicable: true
+      source_url: https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm
     snap_grocery_spend_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: SNAP benefits cannot buy tobacco (7 U.S.C. 2012(k) eligible
+        foods). This is a model boundary, not a reported zero measurement.'
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
@@ -91,14 +88,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     us_starting_wage:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -110,27 +99,30 @@ companies:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Altria sells no beverages. This is a model boundary, not
+        a reported zero measurement.'
   PFGC:
     us_consumer_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.97
+      low: 0.9
+      high: 1.0
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Performance Food Group operates in the US (foodservice,
+        Vistar and Core-Mark convenience); small Canadian convenience operations.'
+      applicable: true
     snap_grocery_spend_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Distributor: SNAP redemptions are captured by retailers.
+        This is a model boundary, not a reported zero measurement.'
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
@@ -148,14 +140,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     us_starting_wage:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -173,21 +157,23 @@ companies:
         not been independently verified; no unrelated peer prior transferred.'
   PM:
     us_consumer_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.08
+      low: 0.06
+      high: 0.11
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): PMI''s US business (Swedish Match ZYN, cigars
+        and IQOS) is a high-single-digit share of net revenue; the rest is international.'
+      applicable: true
     snap_grocery_spend_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: SNAP benefits cannot buy tobacco. This is a model boundary,
+        not a reported zero measurement.'
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
@@ -205,14 +191,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     us_starting_wage:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -224,27 +202,30 @@ companies:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: PMI sells no beverages. This is a model boundary, not a
+        reported zero measurement.'
   SYY:
     us_consumer_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.78
+      low: 0.7
+      high: 0.82
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Sysco''s US Foodservice and SYGMA segments are
+        roughly four-fifths of sales; international is the rest. Restaurant demand follows consumer spending.'
+      applicable: true
     snap_grocery_spend_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: SNAP benefits cannot buy restaurant meals (outside the
+        limited Restaurant Meals Program). This is a model boundary, not a reported zero measurement.'
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
@@ -262,14 +243,6 @@ companies:
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
     us_starting_wage:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
       value: 0.0
       low: 0.0
       high: 0.0
@@ -287,21 +260,24 @@ companies:
         not been independently verified; no unrelated peer prior transferred.'
   TSN:
     us_consumer_revenue_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
+      value: 0.85
+      low: 0.75
+      high: 0.92
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      rationale: 'Company-specific estimate (audit round 3): Tyson''s sales are overwhelmingly US retail and
+        foodservice demand; international is a small share. Foodservice sales still reach US consumers through
+        restaurants.'
+      applicable: true
     snap_grocery_spend_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Manufacturer: SNAP redemptions are captured by grocery
+        retailers. This is a model boundary, not a reported zero measurement.'
     us_import_share_of_cogs:
       value: 0.0
       low: 0.0
@@ -326,19 +302,12 @@ companies:
       source: estimate
       rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
         not been independently verified; no unrelated peer prior transferred.'
-    mx_us_pretax_share:
-      value: 0.0
-      low: 0.0
-      high: 0.0
-      applicable: false
-      source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
     us_sweetened_beverage_revenue_share:
       value: 0.0
       low: 0.0
       high: 0.0
-      applicable: false
       source: estimate
-      rationale: 'UNQUANTIFIED sentinel, not a measured zero. New issuer: exact policy-specific quantity has
-        not been independently verified; no unrelated peer prior transferred.'
+      source_url: null
+      applicable: true
+      rationale: 'Company-specific scope estimate: Tyson sells no beverages. This is a model boundary, not
+        a reported zero measurement.'

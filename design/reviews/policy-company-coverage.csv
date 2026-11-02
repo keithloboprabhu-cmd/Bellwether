@@ -19,12 +19,12 @@ consumer_retail/consumer_tax_rebate,PG,included,True,True,Consumer transfers rai
 consumer_retail/consumer_tax_rebate,CL,included,True,True,Consumer transfers raise captured retailer spending.
 consumer_retail/consumer_tax_rebate,ULTA,included,True,True,Consumer transfers raise captured retailer spending.
 consumer_retail/consumer_tax_rebate,BBY,included,True,True,Consumer transfers raise captured retailer spending.
-consumer_retail/consumer_tax_rebate,MDLZ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/consumer_tax_rebate,MO,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/consumer_tax_rebate,PFGC,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/consumer_tax_rebate,PM,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/consumer_tax_rebate,SYY,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/consumer_tax_rebate,TSN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+consumer_retail/consumer_tax_rebate,MDLZ,included,True,True,Consumer transfers raise captured retailer spending.
+consumer_retail/consumer_tax_rebate,MO,included,True,True,Consumer transfers raise captured retailer spending.
+consumer_retail/consumer_tax_rebate,PFGC,included,True,True,Consumer transfers raise captured retailer spending.
+consumer_retail/consumer_tax_rebate,PM,included,True,True,Consumer transfers raise captured retailer spending.
+consumer_retail/consumer_tax_rebate,SYY,included,True,True,Consumer transfers raise captured retailer spending.
+consumer_retail/consumer_tax_rebate,TSN,included,True,True,Consumer transfers raise captured retailer spending.
 consumer_retail/import_tariffs,WMT,included,True,True,Import duties raise importer input costs after partial pass-through.
 consumer_retail/import_tariffs,TGT,included,True,True,Import duties raise importer input costs after partial pass-through.
 consumer_retail/import_tariffs,COST,included,True,True,Import duties raise importer input costs after partial pass-through.
@@ -97,12 +97,12 @@ consumer_retail/sales_tax_change,PG,included,True,True,Higher checkout tax reduc
 consumer_retail/sales_tax_change,CL,included,True,True,Higher checkout tax reduces exposed consumer demand.
 consumer_retail/sales_tax_change,ULTA,included,True,True,Higher checkout tax reduces exposed consumer demand.
 consumer_retail/sales_tax_change,BBY,included,True,True,Higher checkout tax reduces exposed consumer demand.
-consumer_retail/sales_tax_change,MDLZ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sales_tax_change,MO,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sales_tax_change,PFGC,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sales_tax_change,PM,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sales_tax_change,SYY,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sales_tax_change,TSN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+consumer_retail/sales_tax_change,MDLZ,included,True,True,Higher checkout tax reduces exposed consumer demand.
+consumer_retail/sales_tax_change,MO,included,True,True,Higher checkout tax reduces exposed consumer demand.
+consumer_retail/sales_tax_change,PFGC,included,True,True,Higher checkout tax reduces exposed consumer demand.
+consumer_retail/sales_tax_change,PM,included,True,True,Higher checkout tax reduces exposed consumer demand.
+consumer_retail/sales_tax_change,SYY,included,True,True,Higher checkout tax reduces exposed consumer demand.
+consumer_retail/sales_tax_change,TSN,included,True,True,Higher checkout tax reduces exposed consumer demand.
 consumer_retail/snap_benefit_change,WMT,included,True,True,Default SNAP reduction lowers grocery spending.
 consumer_retail/snap_benefit_change,TGT,included,True,True,Default SNAP reduction lowers grocery spending.
 consumer_retail/snap_benefit_change,COST,included,True,True,Default SNAP reduction lowers grocery spending.
@@ -123,12 +123,12 @@ consumer_retail/snap_benefit_change,PG,outside_scope,False,False,This model allo
 consumer_retail/snap_benefit_change,CL,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
 consumer_retail/snap_benefit_change,ULTA,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
 consumer_retail/snap_benefit_change,BBY,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
-consumer_retail/snap_benefit_change,MDLZ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/snap_benefit_change,MO,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/snap_benefit_change,PFGC,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/snap_benefit_change,PM,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/snap_benefit_change,SYY,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/snap_benefit_change,TSN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+consumer_retail/snap_benefit_change,MDLZ,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
+consumer_retail/snap_benefit_change,MO,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
+consumer_retail/snap_benefit_change,PFGC,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
+consumer_retail/snap_benefit_change,PM,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
+consumer_retail/snap_benefit_change,SYY,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
+consumer_retail/snap_benefit_change,TSN,outside_scope,False,False,This model allocates SNAP redemptions to eligible grocery retailers. Manufacturer supply-chain effects and restaurant exceptions are not included.
 consumer_retail/sweetened_beverage_tax,WMT,included,True,True,Covered beverage demand declines under a consumer tax.
 consumer_retail/sweetened_beverage_tax,TGT,included,True,True,Covered beverage demand declines under a consumer tax.
 consumer_retail/sweetened_beverage_tax,COST,included,True,True,Covered beverage demand declines under a consumer tax.
@@ -149,31 +149,57 @@ consumer_retail/sweetened_beverage_tax,PG,outside_scope,False,False,No quantifie
 consumer_retail/sweetened_beverage_tax,CL,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
 consumer_retail/sweetened_beverage_tax,ULTA,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
 consumer_retail/sweetened_beverage_tax,BBY,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
-consumer_retail/sweetened_beverage_tax,MDLZ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sweetened_beverage_tax,MO,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+consumer_retail/sweetened_beverage_tax,MDLZ,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
+consumer_retail/sweetened_beverage_tax,MO,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
 consumer_retail/sweetened_beverage_tax,PFGC,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sweetened_beverage_tax,PM,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+consumer_retail/sweetened_beverage_tax,PM,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
 consumer_retail/sweetened_beverage_tax,SYY,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-consumer_retail/sweetened_beverage_tax,TSN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+consumer_retail/sweetened_beverage_tax,TSN,outside_scope,False,False,No quantified sales of covered sweetened beverages in this company channel; unrelated products do not inherit beverage taxes.
+consumer_retail/tobacco_excise_increase,WMT,unquantified,False,False,"Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact."
+consumer_retail/tobacco_excise_increase,TGT,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,COST,unquantified,False,False,"Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact."
+consumer_retail/tobacco_excise_increase,AMZN,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,NKE,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,HD,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,LOW,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,KR,unquantified,False,False,"Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact."
+consumer_retail/tobacco_excise_increase,DG,unquantified,False,False,"Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact."
+consumer_retail/tobacco_excise_increase,DLTR,unquantified,False,False,"Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact."
+consumer_retail/tobacco_excise_increase,TJX,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,ROST,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,SBUX,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,MCD,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,KO,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,PEP,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,PG,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,CL,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,ULTA,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,BBY,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,MDLZ,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,MO,included,True,True,A higher excise raises shelf prices and cuts US tobacco volume.
+consumer_retail/tobacco_excise_increase,PFGC,unquantified,False,False,"Sells or distributes tobacco, but the tobacco share is not disclosed in the committed data. Missing exposure is not evidence of no impact."
+consumer_retail/tobacco_excise_increase,PM,included,True,True,A higher excise raises shelf prices and cuts US tobacco volume.
+consumer_retail/tobacco_excise_increase,SYY,outside_scope,False,False,Does not make or sell tobacco products.
+consumer_retail/tobacco_excise_increase,TSN,outside_scope,False,False,Does not make or sell tobacco products.
 consumer_retail/us_corporate_tax_consumer_retail,WMT,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-consumer_retail/us_corporate_tax_consumer_retail,TGT,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+consumer_retail/us_corporate_tax_consumer_retail,TGT,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,COST,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,AMZN,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,NKE,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,HD,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-consumer_retail/us_corporate_tax_consumer_retail,LOW,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-consumer_retail/us_corporate_tax_consumer_retail,KR,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-consumer_retail/us_corporate_tax_consumer_retail,DG,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+consumer_retail/us_corporate_tax_consumer_retail,LOW,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+consumer_retail/us_corporate_tax_consumer_retail,KR,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+consumer_retail/us_corporate_tax_consumer_retail,DG,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,DLTR,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,TJX,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-consumer_retail/us_corporate_tax_consumer_retail,ROST,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+consumer_retail/us_corporate_tax_consumer_retail,ROST,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,SBUX,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,MCD,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,KO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,PEP,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,PG,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,CL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-consumer_retail/us_corporate_tax_consumer_retail,ULTA,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+consumer_retail/us_corporate_tax_consumer_retail,ULTA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,BBY,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,MDLZ,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 consumer_retail/us_corporate_tax_consumer_retail,MO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
@@ -300,7 +326,7 @@ education/student_loan_borrowing_caps,KLC,outside_scope,False,False,Grad PLUS li
 education/student_loan_borrowing_caps,BFAM,outside_scope,False,False,Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational programs and private lenders do not inherit graduate tuition.
 education/student_loan_borrowing_caps,WLY,outside_scope,False,False,Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational programs and private lenders do not inherit graduate tuition.
 education/student_loan_borrowing_caps,FC,outside_scope,False,False,Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational programs and private lenders do not inherit graduate tuition.
-education/student_loan_borrowing_caps,SLM,outside_scope,False,False,Grad PLUS limits cover US graduate/professional programs or service partners; undergraduate vocational programs and private lenders do not inherit graduate tuition.
+education/student_loan_borrowing_caps,SLM,included,True,True,Private student lenders gain graduate borrowing displaced from capped federal loans.
 education/student_loan_forgiveness,LRN,included,True,True,Household transfer proxy increases discretionary education demand; not lender debt cancellation.
 education/student_loan_forgiveness,LOPE,included,True,True,Household transfer proxy increases discretionary education demand; not lender debt cancellation.
 education/student_loan_forgiveness,CVSA,included,True,True,Household transfer proxy increases discretionary education demand; not lender debt cancellation.
@@ -322,25 +348,25 @@ education/student_loan_forgiveness,WLY,included,True,True,Household transfer pro
 education/student_loan_forgiveness,FC,included,True,True,Household transfer proxy increases discretionary education demand; not lender debt cancellation.
 education/student_loan_forgiveness,SLM,outside_scope,False,False,Laureate operates continuing institutions in Mexico/Peru. Sallie Mae earns private-loan revenue. Neither is allocated US household education purchases in this scenario.
 education/us_corporate_tax_education,LRN,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-education/us_corporate_tax_education,LOPE,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,LOPE,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,CVSA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-education/us_corporate_tax_education,STRA,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,STRA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,DUOL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,COUR,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-education/us_corporate_tax_education,UTI,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,UTI,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,PRDO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-education/us_corporate_tax_education,APEI,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,APEI,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,LAUR,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,NRDY,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 education/us_corporate_tax_education,LINC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,SKIL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 education/us_corporate_tax_education,CHGG,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-education/us_corporate_tax_education,SCHL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,SCHL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,KLC,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-education/us_corporate_tax_education,BFAM,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,BFAM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,WLY,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 education/us_corporate_tax_education,FC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-education/us_corporate_tax_education,SLM,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+education/us_corporate_tax_education,SLM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 energy_resources/carbon_price,XOM,included,True,True,Covered emissions raise direct compliance cost.
 energy_resources/carbon_price,CVX,included,True,True,Covered emissions raise direct compliance cost.
 energy_resources/carbon_price,COP,included,True,True,Covered emissions raise direct compliance cost.
@@ -619,17 +645,17 @@ financial_services/fed_rate_change,FITB,included,True,True,Default rate cut redu
 financial_services/fed_rate_change,HBAN,included,True,True,Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.
 financial_services/fed_rate_change,KEY,included,True,True,Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.
 financial_services/fed_rate_change,ALLY,included,True,True,Default rate cut reduces asset-sensitive bank NII; liability-sensitive banks may differ. Ally benefits from a 100bp instantaneous cut under its own current sensitivity table.
-financial_services/fed_rate_change,MA,outside_scope,False,False,"This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business."
-financial_services/fed_rate_change,BLK,outside_scope,False,False,"This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business."
-financial_services/fed_rate_change,AIG,outside_scope,False,False,"This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business."
-financial_services/fed_rate_change,PRU,outside_scope,False,False,"This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business."
-financial_services/fed_rate_change,PGR,outside_scope,False,False,"This scenario estimates bank net-interest-income repricing. Insurer investment yields, asset-manager fee/AUM effects and payment-volume responses require separate channels; zero here does not mean interest rates cannot affect the business."
-financial_services/fed_rate_change,ALL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-financial_services/fed_rate_change,MET,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+financial_services/fed_rate_change,MA,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+financial_services/fed_rate_change,BLK,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+financial_services/fed_rate_change,AIG,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
+financial_services/fed_rate_change,PRU,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
+financial_services/fed_rate_change,PGR,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
+financial_services/fed_rate_change,ALL,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
+financial_services/fed_rate_change,MET,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
 financial_services/fed_rate_change,SNEX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 financial_services/fed_rate_change,SPGI,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-financial_services/fed_rate_change,TRV,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-financial_services/fed_rate_change,V,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+financial_services/fed_rate_change,TRV,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
+financial_services/fed_rate_change,V,included,True,True,Rate moves reprice insurer portfolios and corporate cash; a default rate cut lowers investment income.
 financial_services/fed_rate_change,PYPL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 financial_services/financial_transaction_tax,JPM,included,True,True,Transaction tax reduces trading volume and imposes modeled absorbed costs.
 financial_services/financial_transaction_tax,BAC,included,True,True,Transaction tax reduces trading volume and imposes modeled absorbed costs.
@@ -662,28 +688,28 @@ financial_services/financial_transaction_tax,TRV,unquantified,False,False,Activi
 financial_services/financial_transaction_tax,V,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 financial_services/financial_transaction_tax,PYPL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 financial_services/us_corporate_tax_financial_services,JPM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,BAC,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,BAC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,WFC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,GS,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,C,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-financial_services/us_corporate_tax_financial_services,AXP,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-financial_services/us_corporate_tax_financial_services,MS,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-financial_services/us_corporate_tax_financial_services,SCHW,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,C,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+financial_services/us_corporate_tax_financial_services,AXP,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+financial_services/us_corporate_tax_financial_services,MS,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+financial_services/us_corporate_tax_financial_services,SCHW,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,BNY,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,STT,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,STT,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,USB,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,PNC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,TFC,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,TFC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,COF,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,FITB,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,HBAN,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,KEY,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,KEY,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,ALLY,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,MA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,BLK,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,BLK,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,AIG,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,PRU,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-financial_services/us_corporate_tax_financial_services,PGR,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+financial_services/us_corporate_tax_financial_services,PGR,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,ALL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,MET,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 financial_services/us_corporate_tax_financial_services,SNEX,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
@@ -739,6 +765,30 @@ healthcare/medicaid_work_requirements,CAH,unquantified,False,False,Activity scop
 healthcare/medicaid_work_requirements,COR,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 healthcare/medicaid_work_requirements,ISRG,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 healthcare/medicaid_work_requirements,MCK,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+healthcare/medical_device_tariffs,UNH,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,ELV,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,HUM,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,CVS,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,PFE,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,LLY,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,CI,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,CNC,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,MOH,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,JNJ,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,MRK,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,ABBV,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,AMGN,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,GILD,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,HCA,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,THC,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,UHS,outside_scope,False,False,"Drugmakers, insurers and hospitals: drug tariffs are a separate policy and hospitals' higher supply costs are not modeled. J&J MedTech imports are not separated from its drug supply."
+healthcare/medical_device_tariffs,TMO,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+healthcare/medical_device_tariffs,ABT,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+healthcare/medical_device_tariffs,MDT,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+healthcare/medical_device_tariffs,CAH,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+healthcare/medical_device_tariffs,COR,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+healthcare/medical_device_tariffs,ISRG,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
+healthcare/medical_device_tariffs,MCK,included,True,True,Device makers and medical-products distributors pay tariffs on imported devices and supplies.
 healthcare/medicare_advantage_rate_change,UNH,included,True,True,Default MA payment cut lowers premium revenue.
 healthcare/medicare_advantage_rate_change,ELV,included,True,True,Default MA payment cut lowers premium revenue.
 healthcare/medicare_advantage_rate_change,HUM,included,True,True,Default MA payment cut lowers premium revenue.
@@ -864,8 +914,8 @@ healthcare/us_corporate_tax_healthcare,ELV,included,True,True,"US-incorporated i
 healthcare/us_corporate_tax_healthcare,HUM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,CVS,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,PFE,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-healthcare/us_corporate_tax_healthcare,LLY,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-healthcare/us_corporate_tax_healthcare,CI,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+healthcare/us_corporate_tax_healthcare,LLY,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+healthcare/us_corporate_tax_healthcare,CI,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,CNC,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 healthcare/us_corporate_tax_healthcare,MOH,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,JNJ,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
@@ -873,9 +923,9 @@ healthcare/us_corporate_tax_healthcare,MRK,unquantified,False,False,"Positive US
 healthcare/us_corporate_tax_healthcare,ABBV,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 healthcare/us_corporate_tax_healthcare,AMGN,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,GILD,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-healthcare/us_corporate_tax_healthcare,HCA,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+healthcare/us_corporate_tax_healthcare,HCA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,THC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-healthcare/us_corporate_tax_healthcare,UHS,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+healthcare/us_corporate_tax_healthcare,UHS,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,TMO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,ABT,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 healthcare/us_corporate_tax_healthcare,MDT,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
@@ -920,11 +970,11 @@ industrials/corporate_tax_rate_change,PCAR,included,True,True,Default statutory 
 industrials/corporate_tax_rate_change,DOV,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
 industrials/corporate_tax_rate_change,ROK,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
 industrials/corporate_tax_rate_change,STLD,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
-industrials/corporate_tax_rate_change,CLF,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
+industrials/corporate_tax_rate_change,CLF,conditional,False,False,Baseline pretax loss: a statutory rate change has no current-tax effect until US income turns positive; deferred-tax remeasurement is not modeled.
 industrials/corporate_tax_rate_change,CARR,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
 industrials/corporate_tax_rate_change,OTIS,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
 industrials/corporate_tax_rate_change,IR,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
-industrials/corporate_tax_rate_change,GEV,included,True,True,Reported US pretax-income share drives the statutory-rate channel.
+industrials/corporate_tax_rate_change,GEV,included,True,True,Default statutory tax increase lowers positive domestic pretax earnings after tax.
 industrials/defense_procurement_increase,CAT,included,True,True,Higher defense procurement raises exposed suppliers revenue.
 industrials/defense_procurement_increase,DE,outside_scope,False,False,No quantified defense/IC revenue share. Military demand through customer supply chains is not separately modeled.
 industrials/defense_procurement_increase,GE,included,True,True,Higher defense procurement raises exposed suppliers revenue.
@@ -945,7 +995,7 @@ industrials/defense_procurement_increase,CLF,outside_scope,False,False,No quanti
 industrials/defense_procurement_increase,CARR,included,True,True,Higher defense procurement raises exposed suppliers revenue.
 industrials/defense_procurement_increase,OTIS,included,True,True,Higher defense procurement raises exposed suppliers revenue.
 industrials/defense_procurement_increase,IR,included,True,True,Higher defense procurement raises exposed suppliers revenue.
-industrials/defense_procurement_increase,GEV,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+industrials/defense_procurement_increase,GEV,outside_scope,False,False,No quantified defense/IC revenue share. Military demand through customer supply chains is not separately modeled.
 industrials/infrastructure_spending,CAT,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
 industrials/infrastructure_spending,DE,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
 industrials/infrastructure_spending,GE,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
@@ -966,7 +1016,7 @@ industrials/infrastructure_spending,CLF,included,True,True,Public infrastructure
 industrials/infrastructure_spending,CARR,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
 industrials/infrastructure_spending,OTIS,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
 industrials/infrastructure_spending,IR,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
-industrials/infrastructure_spending,GEV,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+industrials/infrastructure_spending,GEV,included,True,True,Public infrastructure purchases raise captured equipment/material demand.
 industrials/rd_credit_expansion,CAT,included,True,True,Incremental qualifying R&D credit is after-tax income.
 industrials/rd_credit_expansion,DE,included,True,True,Incremental qualifying R&D credit is after-tax income.
 industrials/rd_credit_expansion,GE,included,True,True,Incremental qualifying R&D credit is after-tax income.
@@ -987,7 +1037,7 @@ industrials/rd_credit_expansion,CLF,included,True,True,Incremental qualifying R&
 industrials/rd_credit_expansion,CARR,included,True,True,Incremental qualifying R&D credit is after-tax income.
 industrials/rd_credit_expansion,OTIS,included,True,True,Incremental qualifying R&D credit is after-tax income.
 industrials/rd_credit_expansion,IR,included,True,True,Incremental qualifying R&D credit is after-tax income.
-industrials/rd_credit_expansion,GEV,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+industrials/rd_credit_expansion,GEV,included,True,True,Incremental qualifying R&D credit is after-tax income.
 industrials/steel_tariffs,CAT,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
 industrials/steel_tariffs,DE,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
 industrials/steel_tariffs,GE,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
@@ -1008,7 +1058,7 @@ industrials/steel_tariffs,CLF,included,True,True,Domestic steel producer gains t
 industrials/steel_tariffs,CARR,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
 industrials/steel_tariffs,OTIS,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
 industrials/steel_tariffs,IR,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
-industrials/steel_tariffs,GEV,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+industrials/steel_tariffs,GEV,included,True,True,Domestic steel producer gains tariff pricing while equipment users face costs.
 public_sector/consulting_contract_cancellations,BAH,included,True,True,Canceled federal advisory contracts reduce exposed revenue.
 public_sector/consulting_contract_cancellations,LDOS,included,True,True,Canceled federal advisory contracts reduce exposed revenue.
 public_sector/consulting_contract_cancellations,SAIC,included,True,True,Canceled federal advisory contracts reduce exposed revenue.
@@ -1375,18 +1425,18 @@ tmt/chip_export_controls,T,outside_scope,False,False,No quantified restricted-ch
 tmt/chip_export_controls,CMCSA,outside_scope,False,False,No quantified restricted-chip exports or China retaliation exposure in this channel. Equipment/software supplier effects need separately supported exposure.
 tmt/chip_export_controls,NFLX,included,True,True,Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
 tmt/chip_export_controls,DIS,included,True,True,Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
-tmt/chip_export_controls,AMAT,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/chip_export_controls,AMAT,included,True,True,Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
 tmt/chip_export_controls,ANET,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,DELL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,HPQ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,INTU,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/chip_export_controls,LRCX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/chip_export_controls,LRCX,included,True,True,Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
 tmt/chip_export_controls,NOW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,PANW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,SNDK,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,SNX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chip_export_controls,TMUS,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/chip_export_controls,TXN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/chip_export_controls,TXN,included,True,True,Restricted chip exports reduce merchant chip sales; retaliation is a separate channel.
 tmt/chip_export_controls,PLTR,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/chips_manufacturing_credit,AAPL,outside_scope,False,False,"The credit requires qualifying US chip manufacturing investment. Fabless chip designers, software firms and device buyers do not inherit foundry capex."
 tmt/chips_manufacturing_credit,MSFT,outside_scope,False,False,"The credit requires qualifying US chip manufacturing investment. Fabless chip designers, software firms and device buyers do not inherit foundry capex."
@@ -1445,13 +1495,13 @@ tmt/data_privacy_mandate,AMAT,unquantified,False,False,Activity scope and numeri
 tmt/data_privacy_mandate,ANET,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,DELL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,HPQ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/data_privacy_mandate,INTU,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/data_privacy_mandate,INTU,included,True,True,Ad-targeting loss and privacy compliance raise costs/reduce monetization.
 tmt/data_privacy_mandate,LRCX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,NOW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,PANW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,SNDK,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,SNX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/data_privacy_mandate,TMUS,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/data_privacy_mandate,TMUS,included,True,True,Ad-targeting loss and privacy compliance raise costs/reduce monetization.
 tmt/data_privacy_mandate,TXN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/data_privacy_mandate,PLTR,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/digital_services_tax,AAPL,included,True,True,Tax applies to US digital advertising and covered platform fees.
@@ -1478,7 +1528,7 @@ tmt/digital_services_tax,AMAT,unquantified,False,False,Activity scope and numeri
 tmt/digital_services_tax,ANET,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/digital_services_tax,DELL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/digital_services_tax,HPQ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/digital_services_tax,INTU,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/digital_services_tax,INTU,included,True,True,Tax applies to US digital advertising and covered platform fees.
 tmt/digital_services_tax,LRCX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/digital_services_tax,NOW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/digital_services_tax,PANW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
@@ -1508,7 +1558,7 @@ tmt/semiconductor_tariffs,CMCSA,included,True,True,Tariffs raise imported semico
 tmt/semiconductor_tariffs,NFLX,included,True,True,Tariffs raise imported semiconductor/hardware cost.
 tmt/semiconductor_tariffs,DIS,included,True,True,Tariffs raise imported semiconductor/hardware cost.
 tmt/semiconductor_tariffs,AMAT,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/semiconductor_tariffs,ANET,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/semiconductor_tariffs,ANET,included,True,True,Tariffs raise imported semiconductor/hardware cost.
 tmt/semiconductor_tariffs,DELL,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/semiconductor_tariffs,HPQ,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/semiconductor_tariffs,INTU,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
@@ -1517,24 +1567,24 @@ tmt/semiconductor_tariffs,NOW,unquantified,False,False,Activity scope and numeri
 tmt/semiconductor_tariffs,PANW,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/semiconductor_tariffs,SNDK,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/semiconductor_tariffs,SNX,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/semiconductor_tariffs,TMUS,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
+tmt/semiconductor_tariffs,TMUS,included,True,True,Tariffs raise imported semiconductor/hardware cost.
 tmt/semiconductor_tariffs,TXN,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
 tmt/semiconductor_tariffs,PLTR,unquantified,False,False,Activity scope and numeric sensitivity have not been fully verified for this newly admitted issuer. Missing exposure is not evidence of no impact.
-tmt/us_corporate_tax_tmt,AAPL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+tmt/us_corporate_tax_tmt,AAPL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,MSFT,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,GOOGL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,META,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,NVDA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,VZ,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,IBM,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-tmt/us_corporate_tax_tmt,ORCL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+tmt/us_corporate_tax_tmt,ORCL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,CRM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,ADBE,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,INTC,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 tmt/us_corporate_tax_tmt,AMD,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,QCOM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,MU,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-tmt/us_corporate_tax_tmt,AVGO,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+tmt/us_corporate_tax_tmt,AVGO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,CSCO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,T,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 tmt/us_corporate_tax_tmt,CMCSA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
@@ -1655,22 +1705,22 @@ transportation_logistics/ev_tax_credit,UBER,outside_scope,False,False,"The model
 transportation_logistics/ev_tax_credit,LYFT,outside_scope,False,False,"The modeled demand channel covers qualifying US EV sales. Fleet buyers, airlines and mobility-platform drivers are outside this manufacturer-sales channel."
 transportation_logistics/us_corporate_tax_transportation_logistics,UPS,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 transportation_logistics/us_corporate_tax_transportation_logistics,FDX,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-transportation_logistics/us_corporate_tax_transportation_logistics,UNP,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,DAL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+transportation_logistics/us_corporate_tax_transportation_logistics,UNP,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,DAL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 transportation_logistics/us_corporate_tax_transportation_logistics,TSLA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-transportation_logistics/us_corporate_tax_transportation_logistics,GM,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+transportation_logistics/us_corporate_tax_transportation_logistics,GM,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 transportation_logistics/us_corporate_tax_transportation_logistics,F,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 transportation_logistics/us_corporate_tax_transportation_logistics,RIVN,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 transportation_logistics/us_corporate_tax_transportation_logistics,CHRW,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
-transportation_logistics/us_corporate_tax_transportation_logistics,JBHT,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,ODFL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,XPO,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,SAIA,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,CSX,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,NSC,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,UAL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,AAL,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
-transportation_logistics/us_corporate_tax_transportation_logistics,LUV,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
+transportation_logistics/us_corporate_tax_transportation_logistics,JBHT,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,ODFL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,XPO,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,SAIA,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,CSX,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,NSC,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,UAL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,AAL,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
+transportation_logistics/us_corporate_tax_transportation_logistics,LUV,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 transportation_logistics/us_corporate_tax_transportation_logistics,UBER,included,True,True,"US-incorporated issuer with positive reported domestic pretax book income; rate-only linear proxy, not a cash-tax forecast."
 transportation_logistics/us_corporate_tax_transportation_logistics,LYFT,unquantified,False,False,"Positive US taxable-income proxy not verified; jurisdiction, pass-through status or loss-tax treatment requires review."
 transportation_logistics/vehicle_emissions_credit_rollback,UPS,outside_scope,False,False,Only separately identified manufacturer credit sales and purchases are covered; freight and travel companies do not sell these automotive compliance credits.

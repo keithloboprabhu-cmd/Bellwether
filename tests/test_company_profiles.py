@@ -131,13 +131,19 @@ def test_known_lookup_preserves_missing_values():
 
 def test_nonbank_scope_is_not_a_bank_exposure():
     """Payments/insurers/assets managers cannot receive bank-only mechanical effects."""
+    from policyshock.engine.simulate import build_runner
     actual = calculate({"industry": "financial_services", "policy": "fed_rate_change"})
-    for c in actual["companies"]:
-        if c["id"] in {"MA", "BLK", "AIG", "PRU", "PGR"}:
-            assert c["dNI"] == 0
-            assert all(not e["applicable"] for e in c["exposures"])
-            assert c['coverage']['status'] == 'outside_scope'
-            assert 'separate channels' in c['reason']
+    by_id = {c["id"]: c for c in actual["companies"]}
+    for t in ("MA", "BLK"):
+        assert by_id[t]["dNI"] == 0
+        assert all(not e["applicable"] for e in by_id[t]["exposures"])
+        assert by_id[t]['coverage']['status'] == 'unquantified'
+    base = build_runner("financial_services", "fed_rate_change").run()
+    for t in ("AIG", "PRU", "PGR", "MET", "ALL", "TRV", "V"):
+        c = base.company(t)
+        # only the portfolio/cash repricing channel moves; the bank NII channel never applies
+        assert all(o.family == "price" for o in c.outcomes if o.dNI)
+        assert c.dR < 0 and by_id[t]['coverage']['status'] == 'modeled'
 
 
 @pytest.mark.parametrize("ticker,expected", [("MCD", 716.4), ("LINC", 31.26)])
