@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;background:#000;}
+svg text{font-family:'DejaVu Sans',Arial,sans-serif}
+</style></head><body><svg id="c" width="1020" height="810" xmlns="http://www.w3.org/2000/svg"></svg>
+<script>
+const rows=[
+["2017 tax cut · Energy",7,7],["2017 tax cut · Transportation",14,14],["2017 tax cut · Real estate",1,1],
+["2022–23 Pell increase · Education",7,7],["2022 Fed tightening · Banks",16,18],["2023–24 Pell increase · Education",6,7],
+["2018 Fed tightening · Banks",15,18],["2017 tax cut · Consumer",19,23],["2017 tax cut · TMT",18,22],
+["FY2019 defense budget · Contractors",16,20],["2017 tax cut · Healthcare",14,18],["2018 steel tariffs · Industrials",11,17],
+["2020 rate cuts · Banks",11,18]];
+const W=1000,L=350,R=90,T=128,rowH=46,bar=22,x0=L,x1=W-R,sx=v=>x0+(x1-x0)*v/100;
+const s=document.getElementById('c');let h='';
+h+=`<g transform="translate(16,0)">`;h+=`<text x="0" y="34" fill="#E8E5DC" font-size="26" font-weight="600">Directional accuracy by backtest case</text>`;
+h+=`<text x="0" y="66" fill="#A39D8F" font-size="17">Share of companies whose modeled change had the observed sign · 13 cases, 190 company tests</text>`;
+[0,25,50,75,100].forEach(v=>{h+=`<line x1="${sx(v)}" x2="${sx(v)}" y1="${T-8}" y2="${T+rows.length*rowH}" stroke="rgba(213,166,75,.16)"/><text x="${sx(v)}" y="${T+rows.length*rowH+24}" fill="#A39D8F" font-size="15" text-anchor="middle">${v}%</text>`});
+const pv=81.6,yb=T+rows.length*rowH;
+h+=`<line x1="${sx(pv)}" x2="${sx(pv)}" y1="${T-14}" y2="${yb}" stroke="#E8E5DC" stroke-width="2" stroke-dasharray="6 5"/>`;
+h+=`<text x="${sx(pv)}" y="${T-20}" fill="#E8E5DC" font-size="15" text-anchor="middle">Overall 81.6%</text>`;
+rows.forEach(([lab,hit,n],i)=>{const y=T+i*rowH,p=100*hit/n,w=sx(p)-x0;
+ h+=`<text x="${L-14}" y="${y+bar/2+6}" fill="#E8E5DC" font-size="17" text-anchor="end">${lab}</text>`;
+ h+=`<path d="M${x0},${y} h${w-4} a4,4 0 0 1 4,4 v${bar-8} a4,4 0 0 1 -4,4 h-${w-4} z" fill="#D5A64B"/>`;
+ h+=`<text x="${sx(p)+10}" y="${y+bar/2+6}" fill="#A39D8F" font-size="15" stroke="#000" stroke-width="5" paint-order="stroke">${hit}/${n}</text>`;});
+h+=`<text x="0" y="${yb+62}" fill="#A39D8F" font-size="14">Small cases (Real estate n=1, Education n=7, Energy n=7) are noisy. Industry-weighted accuracy: 85.8%.</text>`;
+h+='</g>';s.innerHTML=h;
+</script></body></html>
